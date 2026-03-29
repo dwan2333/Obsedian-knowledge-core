@@ -1,0 +1,113 @@
+{
+  "is_obsidian_vault": true,
+  "smart_blocks": {
+    "embed_blocks": true,
+    "min_chars": 200
+  },
+  "smart_sources": {
+    "min_chars": 200,
+    "embed_model": {
+      "adapter": "transformers",
+      "transformers": {
+        "model_key": "TaylorAI/bge-micro-v2"
+      }
+    },
+    "excluded_headings": "",
+    "file_exclusions": "Untitled",
+    "folder_exclusions": ""
+  },
+  "language": "en",
+  "re_import_wait_time": 13,
+  "smart_chat_threads": {
+    "chat_model": {
+      "adapter": "ollama",
+      "ollama": {}
+    }
+  },
+  "smart_notices": {
+    "muted": {
+      "done_import": true,
+      "Failed_to_load_embed_model": true,
+      "embedding_complete": true
+    }
+  },
+  "smart_view_filter": {
+    "expanded_view": false,
+    "render_markdown": true,
+    "show_full_path": false
+  },
+  "version": "",
+  "new_user": true,
+  "models": {
+    "embedding_platform": "transformers",
+    "chat_completion_platform": "open_router"
+  },
+  "connections_lists": {
+    "results_collection_key": "smart_sources",
+    "score_algo_key": "similarity",
+    "connections_post_process": "none",
+    "results_limit": 20,
+    "exclude_frontmatter_blocks": true,
+    "connections_list_item_component_key": "connections_list_item_v3",
+    "components": {
+      "connections_list_item_v3": {
+        "render_markdown": true,
+        "show_full_path": false
+      }
+    },
+    "connections_view_location": "right",
+    "inline_connections": true,
+    "inline_connections_score_threshold": "0.77",
+    "footer_connections": false,
+    "connections_list_component_key": "connections_list_v4",
+    "actions": {}
+  },
+  "context_items": {
+    "template_preset": "xml_structured",
+    "template_before": "<item loc=\"{{KEY}}\" at=\"{{TIME_AGO}}\">",
+    "template_after": "</item>",
+    "headings": {}
+  },
+  "smart_contexts": {
+    "template_preset": "xml_structured",
+    "template_before": "<context>\n{{FILE_TREE}}",
+    "template_after": "</context>",
+    "actions": {
+      "context_suggest_external": {
+        "max_search_depth": 5,
+        "max_search_items": 10000,
+        "ignore_patterns": ""
+      }
+    }
+  },
+  "lookup_lists": {
+    "results_collection_key": "smart_blocks",
+    "score_algo_key": "similarity",
+    "results_limit": 20
+  },
+  "embedding_models": {
+    "default_model_key": "transformers#1774721146691"
+  },
+  "chat_threads": {
+    "stream": true,
+    "max_agency": 1,
+    "unlimited_agency": false,
+    "chat_completion_model_key": "chat_completion#default",
+    "think": true,
+    "language": "en",
+    "modifier_key_to_send": "shift",
+    "actions": {
+      "lookup_context": {
+        "limit": 5,
+        "results_collection_key": "smart_sources"
+      }
+    }
+  },
+  "chat_completion_models": {
+    "default_model_key": "google#1774722505164"
+  },
+  "ranking_models": {
+    "default_model_key": "cohere#1774722106499"
+  },
+  "active_chat_thread_key": "seq-2026-03-29-02-33-30"
+}

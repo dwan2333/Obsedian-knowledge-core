@@ -1,0 +1,263 @@
+{
+  "main": {
+    "id": "3949001255f99a55",
+    "type": "split",
+    "children": [
+      {
+        "id": "48dc6c6a3f28f777",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a9c5b5f703704d2b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Stablecoin.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Stablecoin"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f712844538846b6a",
+    "type": "split",
+    "children": [
+      {
+        "id": "41566c789e965abd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "328aa9c891b22c6e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c882ddf3676bdf9d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "65f8b3bcb84eb75a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "223b27babdb4a280",
+    "type": "split",
+    "children": [
+      {
+        "id": "2116f485414f83db",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "09af861bbbb17c13",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Python/Automate boring stuff with python/Debugging/Assertion.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Assertion"
+            }
+          },
+          {
+            "id": "0839b28ae1fcc4fc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Python/Automate boring stuff with python/Debugging/Assertion.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Assertion"
+            }
+          },
+          {
+            "id": "9d460d500f550387",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "6e634525b1e2b583",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Top to Bottom approach of learning AI/API what is it/What Upgrading an AI Model Means.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of What Upgrading an AI Model Means"
+            }
+          },
+          {
+            "id": "deb17b1c60ed4aad",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "smart-connections",
+              "title": "Connections"
+            }
+          },
+          {
+            "id": "aadd0fe9bb58a974",
+            "type": "leaf",
+            "state": {
+              "type": "smart-chat-view",
+              "state": {},
+              "icon": "smart-chat",
+              "title": "Smart Chat"
+            }
+          },
+          {
+            "id": "7fc4f012ff346225",
+            "type": "leaf",
+            "state": {
+              "type": "smart-lookup-view",
+              "state": {},
+              "icon": "smart-lookup",
+              "title": "Lookup"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 289.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "smart-connections:Smart Connections: Open random connection": false,
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "smart-connections:Smart Connections: Open connections view": false,
+      "smart-connections:Smart Lookup: Open lookup view": false,
+      "smart-connections:Toggle Inline Connections": false,
+      "smart-connections:Toggle Footer Connections": false,
+      "smart-connections:Smart Duplicate Detector": false,
+      "smart-context:Smart Context: Open Builder": false,
+      "smart-context:Smart Context: Copy to Clipboard (select depth)": false,
+      "smart-chat:Open: Smart Chat": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-textgenerator-plugin:Generate Text!": false,
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
+    }
+  },
+  "active": "a9c5b5f703704d2b",
+  "lastOpenFiles": [
+    "Pasted image 20251213225326.png",
+    "Stablecoin.md",
+    "stablecoin.md",
+    "Top to Bottom approach of learning AI/API what is it/What Upgrading an AI Model Means.md",
+    "Stable Coin/Untitled.md",
+    "Stable Coin",
+    "Top to Bottom approach of learning AI/API what is it/The Role of APIs in AI Applications.md",
+    "Top to Bottom approach of learning AI/API what is it/Multimodality and Logical Reasoning.md",
+    "Top to Bottom approach of learning AI/API what is it/How Data is Translated - JSON & Tokens.md",
+    "Top to Bottom approach of learning AI/API what is it/FastAPI vs. AI Company APIs.md",
+    "Python/Python For Data Analysis/Python language Basics, IPython, and Jupyter Notebook/reversed function.md",
+    "Python/Python For Data Analysis/Python language Basics, IPython, and Jupyter Notebook/Itertools module.md",
+    "Python/Python For Data Analysis/Python language Basics, IPython, and Jupyter Notebook/Generators () and yeild.md",
+    "Python/Python For Data Analysis/Python language Basics, IPython, and Jupyter Notebook/Files and operating system.md",
+    "Python/Python For Data Analysis/Python language Basics, IPython, and Jupyter Notebook/Errors and Exception Handling.md",
+    "Python/Python For Data Analysis/Python language Basics, IPython, and Jupyter Notebook/Anonymous(Lamba) Functions.md",
+    "Python/Python For Data Analysis/Preliminaries/Basic Conda commands.md",
+    "Python/Python Crash Course/Class/Import class.md",
+    "Python/Automate boring stuff with python/CSV file/The CSV format.md",
+    "Python/Automate boring stuff with python/Copy libary/Normal copy and Deep Copy.md",
+    "Enconomic/NAHB Housing Market Index.md",
+    "Enconomic/Producer Price Index (PPI).md",
+    "Company research/Import metrics too look at for balance sheet/Cash generation.md",
+    "Company research/Import metrics too look at for balance sheet/Efficiency & operating metrics.md",
+    "Company research/Import metrics too look at for balance sheet/Valuation.md",
+    "Company research/Import metrics too look at for balance sheet/Profitability.md",
+    "Company research/Import metrics too look at for balance sheet/Growth.md",
+    "Pasted image 20251210233307.png",
+    "Top to Bottom approach of learning AI/API what is it",
+    "Top to Bottom approach of learning AI/Demo for tutor website",
+    "Top to Bottom approach of learning AI",
+    "Live streaming platform/Legal problem",
+    "Live streaming platform/Company structure",
+    "Live streaming platform/Startups",
+    "Live streaming platform/Financial regulations/Untitled",
+    "Live streaming platform/Financial regulations",
+    "Live streaming platform",
+    "Pasted image 20251213225317.png",
+    "Pasted image 20251213225254.png",
+    "Pasted image 20251213224040.png",
+    "Pasted image 20251213161911.png",
+    "Pasted image 20251213154017.png",
+    "Pasted image 20251213154006.png",
+    "Pasted image 20251213153113.png",
+    "Pasted image 20251213152847.png",
+    "Untitled.canvas"
+  ]
+}

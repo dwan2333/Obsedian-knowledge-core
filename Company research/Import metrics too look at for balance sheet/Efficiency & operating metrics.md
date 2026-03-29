@@ -1,0 +1,4 @@
+- Asset Turnover (Revenue/ Average total assets)
+- Inventory turn over (COGS/ Average Inventory)
+- R&D/Revenue --- how aggressively they are investing
+- SG&A/Revenue  ---- how aggressively on sales and marketing

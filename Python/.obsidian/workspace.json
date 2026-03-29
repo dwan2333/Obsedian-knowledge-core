@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "accf82190c62fd42",
+    "type": "split",
+    "children": [
+      {
+        "id": "a0873b51b1116547",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d4e8387e75ff98bb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Automate boring stuff with python/Organizing Files/Compressing files with zipflle module/Creating and Adding to ZIP files.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Creating and Adding to ZIP files"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "cd3341f609a48a28",
+    "type": "split",
+    "children": [
+      {
+        "id": "bc93620266ced438",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8ee29450626b18d7",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c4c76a176b8c5e79",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "enumerat",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "282b7839da6b5813",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6c65d5b607b019bd",
+    "type": "split",
+    "children": [
+      {
+        "id": "5aaa5fd08e61bf30",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "152181993ada7c10",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Python import libraries and object specific functions/PrettyPrinting library/Pprint.pprint(object, indent, width, depth, compact, sort_dicts).md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Pprint.pprint(object, indent, width, depth, compact, sort_dicts)"
+            }
+          },
+          {
+            "id": "26a5ad4460104e31",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Python import libraries and object specific functions/PrettyPrinting library/Pprint.pprint(object, indent, width, depth, compact, sort_dicts).md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Pprint.pprint(object, indent, width, depth, compact, sort_dicts)"
+            }
+          },
+          {
+            "id": "73e1bdda7246fd41",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "88a57c5b65ad5b9b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Python import libraries and object specific functions/PrettyPrinting library/Pprint.pprint(object, indent, width, depth, compact, sort_dicts).md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Pprint.pprint(object, indent, width, depth, compact, sort_dicts)"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:New drawing": false
+    }
+  },
+  "active": "d4e8387e75ff98bb",
+  "lastOpenFiles": [
+    "Automate boring stuff with python/Organizing Files/Compressing files with zipflle module/Reading Zip files.md",
+    "Automate boring stuff with python/Organizing Files/Compressing files with zipflle module/Extracting form zip file.md",
+    "Automate boring stuff with python/Organizing Files/Compressing files with zipflle module/Creating and Adding to ZIP files.md",
+    "Automate boring stuff with python/Organizing Files/The Shutil module/Copying File and Folders.md",
+    "Automate boring stuff with python/Organizing Files/The Shutil module/Moving and Renaming Files  and Folders.md",
+    "Automate boring stuff with python/Organizing Files/Walking a Directory Tree.md",
+    "Automate boring stuff with python/Organizing Files/Compressing files with zipflle module",
+    "Automate boring stuff with python/Reading and writing files/Making new folders.md",
+    "Automate boring stuff with python/Reading and writing files/Checking path validity.md",
+    "Automate boring stuff with python/Reading and writing files/Files and Filepaths.md",
+    "Automate boring stuff with python/Organizing Files/Permently Deleting Files and Folders.md",
+    "Automate boring stuff with python/Pyperclip/Pyperclip module.md",
+    "Automate boring stuff with python/Pyperclip",
+    "Automate boring stuff with python/Organizing Files/Untitled.md",
+    "Automate boring stuff with python/Organizing Files/The Shutil module",
+    "Automate boring stuff with python/Reading and writing files/File reading and writing process/Using with statements.md",
+    "Automate boring stuff with python/Reading and writing files/File reading and writing process/Writing to files.md",
+    "Automate boring stuff with python/Reading and writing files/Accessing directories.md",
+    "Automate boring stuff with python/Reading and writing files/Finding File Size and Timestamps.md",
+    "Automate boring stuff with python/Reading and writing files/Finding Files Using Glob Patterns.md",
+    "Automate boring stuff with python/Reading and writing files/Getting the Parts of a Filepath.md",
+    "Automate boring stuff with python/Reading and writing files/Handling absolute and relative Path.md",
+    "Automate boring stuff with python/Reading and writing files/Joining Path.md",
+    "Automate boring stuff with python/Reading and writing files/Shelve module.md",
+    "Automate boring stuff with python/Organizing Files",
+    "Automate boring stuff with python/Reading and writing files/File reading and writing process/Reading the contents of file.md",
+    "Automate boring stuff with python/Reading and writing files/File reading and writing process/Opening files.md",
+    "Automate boring stuff with python/Reading and writing files/File reading and writing process/File reading and writing process.md",
+    "Automate boring stuff with python/Escape characters/Escape characters.md",
+    "Automate boring stuff with python/String functions/Build in string functions.md",
+    "Automate boring stuff with python/Reading and writing files/File reading and writing process",
+    "Automate boring stuff with python/Debugging",
+    "Debugging",
+    "Stocks/Stocks to buy",
+    "Stocks",
+    "Stock/How do you know a stock is overvalued"
+  ]
+}

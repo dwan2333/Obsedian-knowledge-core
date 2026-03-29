@@ -1,0 +1,3 @@
+- all programs gave a set of string variables called ==environment variables==. One of these is the ==PATH== environment
+	- windows first check CWD for a program then folders in PATH (echo %PATH%)
+	- Linux and macOS check only the folders in PATH (echo $PATH)

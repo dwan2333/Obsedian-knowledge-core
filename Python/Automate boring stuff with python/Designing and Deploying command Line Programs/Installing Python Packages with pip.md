@@ -1,0 +1,4 @@
+- third party packages are module py files containing py codes
+- ==python -m pip install== package name
+- ==python -m pip install -U package name== upgrade the module
+- python -m pip uninstall package name 

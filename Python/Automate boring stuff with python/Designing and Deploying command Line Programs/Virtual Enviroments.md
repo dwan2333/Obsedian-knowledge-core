@@ -1,0 +1,7 @@
+- A Python virtual environment is essentially a self-contained Python “sandbox” that isolates one project’s dependencies from others. Here’s what it actually does and why it’s useful 
+- To create a virtual environment  .cd to your selected folder and run ==python - m venv .venv==![[Pasted image 20250531204559.png]] like this
+- python is now running inside the .venv folder instead of the original one
+- all of your installed third party libaries will be gone you can confirm this by ==python -m pip list==
+- standard practice is to create a virtual environment for each Python project you're working on, since every project could have its own unique package  dependencies. 
+- installing packages on the original system python could have slight chance of introducing incompatibilities.
+- to deactivate virtual environment run ==deactivate.bat==
