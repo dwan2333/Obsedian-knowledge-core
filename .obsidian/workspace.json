@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a9c5b5f703704d2b",
+            "id": "29fa8d71d72d725a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -142,47 +142,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Top to Bottom approach of learning AI/API what is it/What Upgrading an AI Model Means.md",
+                "file": "Stablecoin.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of What Upgrading an AI Model Means"
-            }
-          },
-          {
-            "id": "deb17b1c60ed4aad",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {},
-              "icon": "smart-connections",
-              "title": "Connections"
-            }
-          },
-          {
-            "id": "aadd0fe9bb58a974",
-            "type": "leaf",
-            "state": {
-              "type": "smart-chat-view",
-              "state": {},
-              "icon": "smart-chat",
-              "title": "Smart Chat"
-            }
-          },
-          {
-            "id": "7fc4f012ff346225",
-            "type": "leaf",
-            "state": {
-              "type": "smart-lookup-view",
-              "state": {},
-              "icon": "smart-lookup",
-              "title": "Lookup"
+              "title": "Outline of Stablecoin"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -203,19 +173,23 @@
       "smart-connections:Toggle Inline Connections": false,
       "smart-connections:Toggle Footer Connections": false,
       "smart-connections:Smart Duplicate Detector": false,
-      "smart-context:Smart Context: Open Builder": false,
-      "smart-context:Smart Context: Copy to Clipboard (select depth)": false,
-      "smart-chat:Open: Smart Chat": false,
       "templater-obsidian:Templater": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "smart-chat:Open: Smart Chat": false,
+      "smart-context:Smart Context: Open Builder": false,
+      "smart-context:Smart Context: Copy to Clipboard (select depth)": false
     }
   },
-  "active": "a9c5b5f703704d2b",
+  "active": "29fa8d71d72d725a",
   "lastOpenFiles": [
-    "Pasted image 20251213225326.png",
+    "Python/Automate boring stuff with python/Copy libary/Normal copy and Deep Copy.md",
+    "Live streaming platform/Startups/Different routine for startups to raise money.md",
     "Stablecoin.md",
+    "Untitled",
+    "Live streaming platform/Financial regulations/Accredited investor VS non credited investor.md",
+    "Pasted image 20251213225326.png",
     "stablecoin.md",
     "Top to Bottom approach of learning AI/API what is it/What Upgrading an AI Model Means.md",
     "Stable Coin/Untitled.md",
@@ -233,14 +207,11 @@
     "Python/Python For Data Analysis/Preliminaries/Basic Conda commands.md",
     "Python/Python Crash Course/Class/Import class.md",
     "Python/Automate boring stuff with python/CSV file/The CSV format.md",
-    "Python/Automate boring stuff with python/Copy libary/Normal copy and Deep Copy.md",
     "Enconomic/NAHB Housing Market Index.md",
     "Enconomic/Producer Price Index (PPI).md",
     "Company research/Import metrics too look at for balance sheet/Cash generation.md",
     "Company research/Import metrics too look at for balance sheet/Efficiency & operating metrics.md",
     "Company research/Import metrics too look at for balance sheet/Valuation.md",
-    "Company research/Import metrics too look at for balance sheet/Profitability.md",
-    "Company research/Import metrics too look at for balance sheet/Growth.md",
     "Pasted image 20251210233307.png",
     "Top to Bottom approach of learning AI/API what is it",
     "Top to Bottom approach of learning AI/Demo for tutor website",
@@ -250,7 +221,6 @@
     "Live streaming platform/Startups",
     "Live streaming platform/Financial regulations/Untitled",
     "Live streaming platform/Financial regulations",
-    "Live streaming platform",
     "Pasted image 20251213225317.png",
     "Pasted image 20251213225254.png",
     "Pasted image 20251213224040.png",

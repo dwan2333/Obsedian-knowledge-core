@@ -129,7 +129,8 @@
   },
   "LLMProviderOptionsKeysHashed": {
     "whisper.api_key": "__@#key_prefix#@__",
-    "Chat Anthropic (Langchain).api_key": "__@#key_prefix#@__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"
+    "Chat Anthropic (Langchain).api_key": "__@#key_prefix#@__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",
+    "Chat Anthropic (Langchain) 1.api_key": "__@#key_prefix#@__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"
   },
   "api_key_encrypted": "__@#key_prefix#@__"
 }
