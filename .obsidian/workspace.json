@@ -8,17 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "29fa8d71d72d725a",
+            "id": "33fb44b13525001f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Stablecoin.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Stablecoin"
+              "title": "New tab"
             }
           }
         ]
@@ -142,17 +138,26 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Stablecoin.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Stablecoin"
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "961dea74bf50958d",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -182,11 +187,11 @@
       "smart-context:Smart Context: Copy to Clipboard (select depth)": false
     }
   },
-  "active": "29fa8d71d72d725a",
+  "active": "33fb44b13525001f",
   "lastOpenFiles": [
+    "Stablecoin.md",
     "Python/Automate boring stuff with python/Copy libary/Normal copy and Deep Copy.md",
     "Live streaming platform/Startups/Different routine for startups to raise money.md",
-    "Stablecoin.md",
     "Untitled",
     "Live streaming platform/Financial regulations/Accredited investor VS non credited investor.md",
     "Pasted image 20251213225326.png",
