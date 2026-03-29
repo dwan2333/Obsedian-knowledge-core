@@ -208,7 +208,8 @@
       "smart-chat:Open: Smart Chat": false,
       "templater-obsidian:Templater": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "a9c5b5f703704d2b",
