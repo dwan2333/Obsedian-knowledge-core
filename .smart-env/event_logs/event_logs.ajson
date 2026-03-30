@@ -120,3 +120,8 @@
 "event_logs:sources:opened": {"key":"sources:opened","ct":126,"first_at":1774721194944,"last_at":1774891859833,"class_name":"EventLog","event_sources":{"active-leaf-change":110,"open_source method":11,"file-open":5}},
 "event_logs:inline_connections:open_result": {"key":"inline_connections:open_result","ct":5,"first_at":1774891850511,"last_at":1774891859818,"class_name":"EventLog","event_sources":{"inline-connections-popover":5}},
 "event_logs:inline_connections:show": {"key":"inline_connections:show","ct":7,"first_at":1774885499693,"last_at":1774891885822,"class_name":"EventLog"},
+"event_logs:inline_connections:show": {"key":"inline_connections:show","ct":8,"first_at":1774885499693,"last_at":1774892149482,"class_name":"EventLog"},
+"event_logs:inline_connections:show": {"key":"inline_connections:show","ct":9,"first_at":1774885499693,"last_at":1774892177871,"class_name":"EventLog"},
+"event_logs:inline_connections:show": {"key":"inline_connections:show","ct":10,"first_at":1774885499693,"last_at":1774892201771,"class_name":"EventLog"},
+"event_logs:settings:changed": {"key":"settings:changed","ct":46,"first_at":1774722034506,"last_at":1774892209816,"class_name":"EventLog"},
+"event_logs:settings:changed": {"key":"settings:changed","ct":47,"first_at":1774722034506,"last_at":1774892210812,"class_name":"EventLog"},

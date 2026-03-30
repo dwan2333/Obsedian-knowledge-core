@@ -170,9 +170,19 @@
               "icon": "smart-connections",
               "title": "Connections"
             }
+          },
+          {
+            "id": "5f15fd7d704c2152",
+            "type": "leaf",
+            "state": {
+              "type": "smart-lookup-view",
+              "state": {},
+              "icon": "smart-lookup",
+              "title": "Lookup"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -202,7 +212,7 @@
       "smart-context:Smart Context: Copy to Clipboard (select depth)": false
     }
   },
-  "active": "33fb44b13525001f",
+  "active": "5f15fd7d704c2152",
   "lastOpenFiles": [
     "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
     "Finance/Stablecoin/ai_agent_payment_infrastructure.md",

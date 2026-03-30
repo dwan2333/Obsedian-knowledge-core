@@ -56,9 +56,9 @@
       }
     },
     "connections_view_location": "right",
-    "inline_connections": true,
+    "inline_connections": false,
     "inline_connections_score_threshold": "0.77",
-    "footer_connections": false,
+    "footer_connections": true,
     "connections_list_component_key": "connections_list_v4",
     "actions": {}
   },
