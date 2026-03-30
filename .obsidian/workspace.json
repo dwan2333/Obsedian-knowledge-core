@@ -138,12 +138,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Finance/Untitled.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Untitled"
             }
           },
           {
@@ -157,7 +158,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -187,45 +188,46 @@
       "smart-context:Smart Context: Copy to Clipboard (select depth)": false
     }
   },
-  "active": "33fb44b13525001f",
+  "active": "328aa9c891b22c6e",
   "lastOpenFiles": [
-    "Stablecoin.md",
-    "Python/Automate boring stuff with python/Copy libary/Normal copy and Deep Copy.md",
-    "Live streaming platform/Startups/Different routine for startups to raise money.md",
+    "Finance/Futures",
+    "Finance/Treasury bond",
+    "Top to Bottom approach of learning AI/API what is it/What Upgrading an AI Model Means.md",
+    "Finance/Untitled.md",
+    "Finance/Stablecoin",
     "Untitled",
+    "Finance",
+    "Top to Bottom approach of learning AI/API what is it/How Data is Translated - JSON & Tokens.md",
+    "Top to Bottom approach of learning AI/API what is it/FastAPI vs. AI Company APIs.md",
+    "Python/Automate boring stuff with python/Debugging/Logging.md",
+    "Python/Automate boring stuff with python/Debugging/Assertion.md",
+    "Python/Automate boring stuff with python/CSV file/The CSV format.md",
+    "Python/Automate boring stuff with python/Copy libary/Normal copy and Deep Copy.md",
+    "Company research/Import metrics too look at for balance sheet/Cash generation.md",
+    "Company research/Import metrics too look at for balance sheet/Efficiency & operating metrics.md",
+    "Company research/Import metrics too look at for balance sheet/Growth.md",
+    "Company research/Import metrics too look at for balance sheet/Profitability.md",
+    "Company research/Import metrics too look at for balance sheet/Valuation.md",
+    "Live streaming platform/Company structure/Shares plan.md",
+    "Top to Bottom approach of learning AI/API what is it/The Role of APIs in AI Applications.md",
+    "Top to Bottom approach of learning AI/API what is it/Multimodality and Logical Reasoning.md",
+    "Stablecoin.md",
+    "Live streaming platform/Startups/Different routine for startups to raise money.md",
     "Live streaming platform/Financial regulations/Accredited investor VS non credited investor.md",
     "Pasted image 20251213225326.png",
     "stablecoin.md",
-    "Top to Bottom approach of learning AI/API what is it/What Upgrading an AI Model Means.md",
     "Stable Coin/Untitled.md",
     "Stable Coin",
-    "Top to Bottom approach of learning AI/API what is it/The Role of APIs in AI Applications.md",
-    "Top to Bottom approach of learning AI/API what is it/Multimodality and Logical Reasoning.md",
-    "Top to Bottom approach of learning AI/API what is it/How Data is Translated - JSON & Tokens.md",
-    "Top to Bottom approach of learning AI/API what is it/FastAPI vs. AI Company APIs.md",
     "Python/Python For Data Analysis/Python language Basics, IPython, and Jupyter Notebook/reversed function.md",
     "Python/Python For Data Analysis/Python language Basics, IPython, and Jupyter Notebook/Itertools module.md",
     "Python/Python For Data Analysis/Python language Basics, IPython, and Jupyter Notebook/Generators () and yeild.md",
     "Python/Python For Data Analysis/Python language Basics, IPython, and Jupyter Notebook/Files and operating system.md",
-    "Python/Python For Data Analysis/Python language Basics, IPython, and Jupyter Notebook/Errors and Exception Handling.md",
-    "Python/Python For Data Analysis/Python language Basics, IPython, and Jupyter Notebook/Anonymous(Lamba) Functions.md",
-    "Python/Python For Data Analysis/Preliminaries/Basic Conda commands.md",
-    "Python/Python Crash Course/Class/Import class.md",
-    "Python/Automate boring stuff with python/CSV file/The CSV format.md",
-    "Enconomic/NAHB Housing Market Index.md",
-    "Enconomic/Producer Price Index (PPI).md",
-    "Company research/Import metrics too look at for balance sheet/Cash generation.md",
-    "Company research/Import metrics too look at for balance sheet/Efficiency & operating metrics.md",
-    "Company research/Import metrics too look at for balance sheet/Valuation.md",
     "Pasted image 20251210233307.png",
     "Top to Bottom approach of learning AI/API what is it",
     "Top to Bottom approach of learning AI/Demo for tutor website",
     "Top to Bottom approach of learning AI",
     "Live streaming platform/Legal problem",
     "Live streaming platform/Company structure",
-    "Live streaming platform/Startups",
-    "Live streaming platform/Financial regulations/Untitled",
-    "Live streaming platform/Financial regulations",
     "Pasted image 20251213225317.png",
     "Pasted image 20251213225254.png",
     "Pasted image 20251213224040.png",

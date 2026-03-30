@@ -1,5 +1,0 @@
-- @call Path location of your enviromental \ activate.bat
-- @ path location of your py file \ something.py
-- @pause
-- @deactivate 
-- this batch file contains terminal commands that can be run together by running the batch file. You just need the batch to be in a Path environment variable then could be runned using win +r.

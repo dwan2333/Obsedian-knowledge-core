@@ -1,2 +1,0 @@
-- Run py file from command line you can use ==Python Scriptname.py== at destined folders
-- 

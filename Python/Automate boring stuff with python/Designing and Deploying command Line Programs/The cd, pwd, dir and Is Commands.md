@@ -1,4 +1,0 @@
-- ==os.chdir()== function allow you to change your current working directory for Python
-- ==cd== and be directly used in command line prompt but only for the current drive, if you want to switch drive type just type (driver name such as D:) after >.
-- ==dir== command on Windows and ==ls== commands on macOS and Linux will list the file and subfolder contents for CWD
-- on Windows once you are in a folder with a program, you can run it by entering the program name with or with out: ==.exe==. On mac or Linus , enter ==./== followed by the program name  ./example

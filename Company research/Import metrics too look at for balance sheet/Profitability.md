@@ -1,8 +1,0 @@
--  EPS
-- Gross Margin
-- Operating Income
-- EBITDA
-- EV/EBITDA
-- Net Profit Margin
-- ROE
-- ROA

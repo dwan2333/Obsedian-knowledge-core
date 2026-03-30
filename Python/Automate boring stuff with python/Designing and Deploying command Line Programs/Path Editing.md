@@ -1,2 +1,0 @@
-- for Windows:
-	- click the ==Start== menu and then enter ==Edit environment variables for your account==, select ==Path== from the User variable list on the top of the screen, click ==Edit==, add the new folder name and click ==OK==
