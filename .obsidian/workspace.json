@@ -11,10 +11,14 @@
             "id": "33fb44b13525001f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Finance/Stablecoin/Untitled.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Untitled"
             }
           }
         ]
@@ -138,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Finance/Untitled.md",
+                "file": "Finance/Stablecoin/Untitled.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -188,12 +192,15 @@
       "smart-context:Smart Context: Copy to Clipboard (select depth)": false
     }
   },
-  "active": "328aa9c891b22c6e",
+  "active": "33fb44b13525001f",
   "lastOpenFiles": [
+    "Finance/Stablecoin/Main.md",
+    "Finance/Stablecoin/Untitled.md",
+    "Finance/Stablecoin/jasdj.md",
+    "Finance/Untitled.md",
     "Finance/Futures",
     "Finance/Treasury bond",
     "Top to Bottom approach of learning AI/API what is it/What Upgrading an AI Model Means.md",
-    "Finance/Untitled.md",
     "Finance/Stablecoin",
     "Untitled",
     "Finance",
@@ -220,14 +227,11 @@
     "Stable Coin",
     "Python/Python For Data Analysis/Python language Basics, IPython, and Jupyter Notebook/reversed function.md",
     "Python/Python For Data Analysis/Python language Basics, IPython, and Jupyter Notebook/Itertools module.md",
-    "Python/Python For Data Analysis/Python language Basics, IPython, and Jupyter Notebook/Generators () and yeild.md",
-    "Python/Python For Data Analysis/Python language Basics, IPython, and Jupyter Notebook/Files and operating system.md",
     "Pasted image 20251210233307.png",
     "Top to Bottom approach of learning AI/API what is it",
     "Top to Bottom approach of learning AI/Demo for tutor website",
     "Top to Bottom approach of learning AI",
     "Live streaming platform/Legal problem",
-    "Live streaming platform/Company structure",
     "Pasted image 20251213225317.png",
     "Pasted image 20251213225254.png",
     "Pasted image 20251213224040.png",
