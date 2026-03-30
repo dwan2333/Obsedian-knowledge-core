@@ -1,6 +1,6 @@
 # Hybrid Stablecoins: FRAX & the Fractional-Algorithmic Experiment
 
-*Companion document to [Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](stablecoin_deep_dive.md)*
+*Companion document to [Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Main.md)*
 
 ---
 
@@ -80,7 +80,7 @@ FRAX didn't abandon its algorithmic tools — it **repurposed** them:
 | Component | Before (Fractional) | After (Fully Collateralized) |
 |---|---|---|
 | **Backing** | Partial USDC + partial FXS burns | 100% real assets |
-| **Reserve composition** | USDC only | USDC + tokenized [U.S. Treasuries](../treasury_bonds/treasury_bonds_guide.md) (via BlackRock, Superstate) |
+| **Reserve composition** | USDC only | USDC + tokenized [U.S. Treasuries](<../Treasury Bonds/treasury_bonds_guide.md>) (via BlackRock, Superstate) |
 | **Algorithmic tools (AMOs)** | Determined collateral ratio | Manage how collateral is *deployed* (lending, liquidity, yield) |
 | **FXS token role** | Burned to absorb under-collateralization | Governance + fee capture |
 
@@ -91,7 +91,7 @@ FRAX didn't abandon its algorithmic tools — it **repurposed** them:
 FRAX now backs its stablecoin with a diversified reserve including:
 
 - **USDC** (Circle's fiat-backed stablecoin)
-- **Tokenized [U.S. Treasuries](../treasury_bonds/treasury_bonds_guide.md)** via partnerships with BlackRock and Superstate
+- **Tokenized [U.S. Treasuries](<../Treasury Bonds/treasury_bonds_guide.md>)** via partnerships with BlackRock and Superstate
 - **On-chain lending positions** managed by AMOs
 
 This positions FRAX closer to USDC in terms of backing quality while retaining the DeFi-native, protocol-governed structure that distinguishes it from centralized issuers.
@@ -136,7 +136,7 @@ The industry arrived at a clear consensus: **algorithms and AI are powerful tool
 
 | Dimension | USDC | DAI | UST | USDe | FRAX (current) |
 |---|---|---|---|---|---|
-| **Backed by** | Cash + [Treasuries](../treasury_bonds/treasury_bonds_guide.md) | Over-collateralized crypto | Nothing (collapsed) | Crypto + derivatives hedge | USDC + tokenized [Treasuries](../treasury_bonds/treasury_bonds_guide.md) |
+| **Backed by** | Cash + [Treasuries](<../Treasury Bonds/treasury_bonds_guide.md>) | Over-collateralized crypto | Nothing (collapsed) | Crypto + derivatives hedge | USDC + tokenized [Treasuries](<../Treasury Bonds/treasury_bonds_guide.md>) |
 | **Capital efficiency** | 1:1 | ~1.5:1 | 1:1 | 1:1 | 1:1 |
 | **Key dependency** | Circle + banks | Smart contract code | Market confidence | Centralized exchanges | DeFi protocols + asset partners |
 | **Algorithmic role** | None | Liquidation mechanics | Entire backing (fatal) | Hedge management | Treasury/collateral optimization (AMOs) |
@@ -147,7 +147,7 @@ The industry arrived at a clear consensus: **algorithms and AI are powerful tool
 
 ## Related Documents
 
-- **[Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](stablecoin_deep_dive.md)** — Covers all stablecoin types, the dollar dominance feedback loop, ECB sovereignty concerns, and the emerging AI agent payment infrastructure.
+- **[Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Main.md)** — Covers all stablecoin types, the dollar dominance feedback loop, ECB sovereignty concerns, and the emerging AI agent payment infrastructure.
 - **[Crypto-Collateralized Stablecoins: MakerDAO's DAI](crypto_collateralized_stablecoins_dai.md)** — The on-chain over-collateralization model. FRAX originally aimed to improve on DAI's capital inefficiency through fractional reserves.
 - **[Algorithmic Stablecoins: The TerraUSD / LUNA Collapse](algorithmic_stablecoins_terra_luna.md)** — The event that killed the fractional-algorithmic model. Terra proved that the algorithmic portion of FRAX's design was the liability, not the innovation.
 - **[Synthetic / Hedged Stablecoins: Ethena's USDe](synthetic_stablecoins_ethena_usde.md)** — A parallel approach to capital efficiency that uses derivatives hedging instead of algorithmic supply management.

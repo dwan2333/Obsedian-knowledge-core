@@ -134,5 +134,5 @@ Sophisticated traders exploit tiny price differences between related instruments
 
 ## Related Documents
 
-- **[Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](../stablecoin/stablecoin_deep_dive.md)** — Fiat-backed stablecoins (USDT, USDC) hold U.S. Treasuries as their primary reserve asset, directly linking stablecoin supply to Treasury demand.
-- **[Hybrid Stablecoins: FRAX](../stablecoin/hybrid_stablecoins_frax.md)** — FRAX now backs its stablecoin with tokenized U.S. Treasuries via BlackRock and Superstate.
+- **[Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](../Stablecoin/Main.md)** — Fiat-backed stablecoins (USDT, USDC) hold U.S. Treasuries as their primary reserve asset, directly linking stablecoin supply to Treasury demand.
+- **[Hybrid Stablecoins: FRAX](../Stablecoin/hybrid_stablecoins_frax.md)** — FRAX now backs its stablecoin with tokenized U.S. Treasuries via BlackRock and Superstate.
