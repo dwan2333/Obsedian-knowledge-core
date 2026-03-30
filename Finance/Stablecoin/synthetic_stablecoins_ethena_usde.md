@@ -1,6 +1,6 @@
 # Synthetic / Hedged Stablecoins: Ethena's USDe
 
-*Companion document to [Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Main.md)*
+*Companion document to [Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Stable%20Coin%20(Main).md)*
 
 ---
 
@@ -118,7 +118,7 @@ Bank Independence:     USDC (needs banks) ✗  ←——→  DAI (on-chain only)
 
 | Dimension | USDC | DAI | UST | USDe |
 |---|---|---|---|---|
-| **Backed by** | Cash + [Treasuries](<../Treasury Bonds/treasury_bonds_guide.md>) | Over-collateralized crypto | Nothing (confidence) | Crypto + derivatives hedge |
+| **Backed by** | Cash + [Treasuries](<Treasury Bonds Guide.md>) | Over-collateralized crypto | Nothing (confidence) | Crypto + derivatives hedge |
 | **Capital efficiency** | 1:1 | ~1.5:1 | 1:1 | 1:1 |
 | **Key dependency** | Circle (company) + banks | Smart contract code | Market confidence | Centralized exchanges |
 | **Censorship resistance** | Low (can freeze wallets) | High | N/A (collapsed) | Medium |
@@ -129,7 +129,7 @@ Bank Independence:     USDC (needs banks) ✗  ←——→  DAI (on-chain only)
 
 ## Related Documents
 
-- **[Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Main.md)** — Covers all stablecoin types, the dollar dominance feedback loop, ECB sovereignty concerns, and the emerging AI agent payment infrastructure.
+- **[Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Stable%20Coin%20(Main).md)** — Covers all stablecoin types, the dollar dominance feedback loop, ECB sovereignty concerns, and the emerging AI agent payment infrastructure.
 - **[Crypto-Collateralized Stablecoins: MakerDAO's DAI](crypto_collateralized_stablecoins_dai.md)** — The on-chain collateral model, three-actor liquidation system, and four-stage defense cascade. USDe solves DAI's capital inefficiency problem but introduces exchange dependency.
 - **[Algorithmic Stablecoins: The TerraUSD / LUNA Collapse](algorithmic_stablecoins_terra_luna.md)** — The cautionary tale. USDe shares Terra's 1:1 capital efficiency but avoids its fatal flaw by holding real collateral + a hedge, rather than relying on confidence alone.
 - **[Hybrid Stablecoins: FRAX & the Fractional-Algorithmic Experiment](hybrid_stablecoins_frax.md)** — A parallel approach to blending collateral with algorithmic tools. FRAX uses AMOs for treasury management; USDe uses derivatives for hedging.

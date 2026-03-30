@@ -1,6 +1,6 @@
 # Stablecoin AI Agent Payment Infrastructure — Complete Summary
 
-*Companion document to [Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Main.md)*
+*Companion document to [Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Stable%20Coin%20(Main).md)*
 
 ---
 
@@ -237,7 +237,7 @@ Both are racing toward the same destination: an autonomous internet economy wher
 
 ## Related Documents
 
-- **[Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Main.md)** — Hub document covering all stablecoin types and the AI agent market overview. This document expands on the "Key Protocols & Infrastructure" section.
+- **[Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Stable%20Coin%20(Main).md)** — Hub document covering all stablecoin types and the AI agent market overview. This document expands on the "Key Protocols & Infrastructure" section.
 - **[Crypto-Collateralized Stablecoins: MakerDAO's DAI](crypto_collateralized_stablecoins_dai.md)** — The on-chain collateral model. DAI circulates within the DeFi layer that these agent payment protocols transact on.
 - **[Algorithmic Stablecoins: The TerraUSD / LUNA Collapse](algorithmic_stablecoins_terra_luna.md)** — Why reserve-backed stablecoins (USDC, USDT) became the settlement asset of choice for agent payments, not algorithmic ones.
 - **[Synthetic / Hedged Stablecoins: Ethena's USDe](synthetic_stablecoins_ethena_usde.md)** — Delta-neutral hedging model. USDe's exchange dependency parallels the centralized exchange risks in the agentic wallet infrastructure.

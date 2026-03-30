@@ -1,6 +1,6 @@
 # Crypto-Collateralized Stablecoins: MakerDAO's DAI — A Deep Dive
 
-*Companion document to [Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Main.md)*
+*Companion document to [Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Stable%20Coin%20(Main).md)*
 
 ---
 
@@ -118,7 +118,7 @@ Normal Operation
 
 ## Related Documents
 
-- **[Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Main.md)** — Covers all stablecoin types, the dollar dominance feedback loop, ECB sovereignty concerns, and the emerging AI agent payment infrastructure (x402, AP2, Tempo, Agentic Wallets).
+- **[Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Stable%20Coin%20(Main).md)** — Covers all stablecoin types, the dollar dominance feedback loop, ECB sovereignty concerns, and the emerging AI agent payment infrastructure (x402, AP2, Tempo, Agentic Wallets).
 - **[Algorithmic Stablecoins: The TerraUSD / LUNA Collapse](algorithmic_stablecoins_terra_luna.md)** — The no-reserves model, the death spiral mechanics, and why confidence alone couldn't substitute for real backing.
 - **[Synthetic / Hedged Stablecoins: Ethena's USDe](synthetic_stablecoins_ethena_usde.md)** — Delta-neutral hedging, funding rate mechanics, and how USDe solves DAI's capital inefficiency at the cost of exchange dependency.
 - **[Hybrid Stablecoins: FRAX & the Fractional-Algorithmic Experiment](hybrid_stablecoins_frax.md)** — Originally aimed to improve on DAI's capital inefficiency through fractional reserves, but ultimately pivoted to full collateralization.

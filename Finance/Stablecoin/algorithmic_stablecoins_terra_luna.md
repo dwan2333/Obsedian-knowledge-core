@@ -1,6 +1,6 @@
 # Algorithmic Stablecoins: The TerraUSD / LUNA Collapse
 
-*Companion document to [Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Main.md)*
+*Companion document to [Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Stable%20Coin%20(Main).md)*
 
 ---
 
@@ -91,7 +91,7 @@ The mechanism that was supposed to *restore* the peg became the mechanism that *
 
 | Stablecoin | What You Trust | What Backs It | Failure Mode |
 |---|---|---|---|
-| **USDC** | A company (Circle) holding real dollars | Cash, [U.S. Treasuries](<../Treasury Bonds/treasury_bonds_guide.md>), repos | Circle goes bankrupt or commits fraud |
+| **USDC** | A company (Circle) holding real dollars | Cash, [U.S. Treasuries](<Treasury Bonds Guide.md>), repos | Circle goes bankrupt or commits fraud |
 | **DAI** | Code (smart contracts) holding real crypto | Over-collateralized ETH + other assets | Catastrophic multi-asset crash overwhelming all four defense stages |
 | **UST** | Confidence alone — that people will keep valuing LUNA | Nothing tangible — only the swap mechanism | Confidence breaks → death spiral → total collapse |
 
@@ -112,7 +112,7 @@ The critical distinction: USDC and DAI have something *outside the system* backi
 
 ## Related Documents
 
-- **[Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Main.md)** — Covers all stablecoin types, the dollar dominance feedback loop, ECB sovereignty concerns, and the emerging AI agent payment infrastructure.
+- **[Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Stable%20Coin%20(Main).md)** — Covers all stablecoin types, the dollar dominance feedback loop, ECB sovereignty concerns, and the emerging AI agent payment infrastructure.
 - **[Crypto-Collateralized Stablecoins: MakerDAO's DAI](crypto_collateralized_stablecoins_dai.md)** — Deep dive into the on-chain collateral model, the three-actor liquidation system, and the four-stage defense cascade.
 - **[Synthetic / Hedged Stablecoins: Ethena's USDe](synthetic_stablecoins_ethena_usde.md)** — Shares Terra's 1:1 capital efficiency but avoids the death spiral by holding real collateral + a derivatives hedge.
 - **[Hybrid Stablecoins: FRAX & the Fractional-Algorithmic Experiment](hybrid_stablecoins_frax.md)** — Terra's collapse directly caused FRAX to abandon its fractional-algorithmic model and move to 100% collateralization.
