@@ -205,18 +205,18 @@ Step 5 — Money exits (Bridge again):
 
 ## The Strategic Difference
 
-| Dimension | Coinbase Stack | Stripe Stack |
-|---|---|---|
-| **Philosophy** | Crypto-native — built for the crypto world expanding outward | Fintech-native — built for traditional finance absorbing crypto |
-| **Assumption** | Users already hold stablecoins or are willing to adopt them | Businesses start in regular dollars; conversion happens invisibly |
-| **Access model** | Fully permissionless — any wallet-holding agent pays immediately | Meets businesses where they are — in regular dollars |
-| **User experience** | Users interact with crypto directly | Users never need to understand stablecoins, wallets, or blockchains |
-| **Bet** | Crypto becomes the default internet money | Stablecoins become invisible backend infrastructure (like TCP/IP) |
-| **Authorization** | AP2 (shared) | AP2 (shared) |
-| **Payment protocol** | x402 | MPP |
-| **Wallet** | Agentic Wallets | Privy |
-| **Settlement** | Base (L2) | Tempo (L1) |
-| **Fiat bridge** | ❌ None | ✅ Bridge ($1.1B acquisition) |
+| Dimension            | Coinbase Stack                                                   | Stripe Stack                                                        |
+| -------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------- |
+| **Philosophy**       | Crypto-native — built for the crypto world expanding outward     | Fintech-native — built for traditional finance absorbing crypto     |
+| **Assumption**       | Users already hold stablecoins or are willing to adopt them      | Businesses start in regular dollars; conversion happens invisibly   |
+| **Access model**     | Fully permissionless — any wallet-holding agent pays immediately | Meets businesses where they are — in regular dollars                |
+| **User experience**  | Users interact with crypto directly                              | Users never need to understand stablecoins, wallets, or blockchains |
+| **Bet**              | Crypto becomes the default internet money                        | Stablecoins become invisible backend infrastructure (like TCP/IP)   |
+| **Authorization**    | AP2 (shared)                                                     | AP2 (shared)                                                        |
+| **Payment protocol** | x402                                                             | MPP                                                                 |
+| **Wallet**           | Agentic Wallets                                                  | Privy                                                               |
+| **Settlement**       | Base (L2)                                                        | Tempo (L1)                                                          |
+| **Fiat bridge**      | ❌ None                                                           | ✅ Bridge ($1.1B acquisition)                                        |
 
 Both are racing toward the same destination: an autonomous internet economy where AI agents transact freely using stablecoins.
 

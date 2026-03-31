@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finance/Stablecoin/Stable Coin (Main).md",
+                "file": "Finance/Treasury Bonds/Treasury Bonds Guide.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Stable Coin (Main)"
+              "title": "Treasury Bonds Guide"
             }
           },
           {
@@ -35,8 +35,7 @@
               "title": "ai_agent_payment_infrastructure"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -157,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
+                "file": "Finance/Treasury Bonds/Treasury Bonds Guide.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ai_agent_payment_infrastructure"
+              "title": "Outline of Treasury Bonds Guide"
             }
           },
           {
@@ -228,15 +227,15 @@
       "smart-chat:Open: Smart Chat": false
     }
   },
-  "active": "b61a48106103327c",
+  "active": "dd5225127d267b16",
   "lastOpenFiles": [
+    "Finance/Futures/SOFR Future.md",
     "Finance/Stablecoin/Stable Coin (Main).md",
+    "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
     "Finance/Stablecoin/hybrid_stablecoins_frax.md",
     "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
     "Finance/Stablecoin/crypto_collateralized_stablecoins_dai.md",
     "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
-    "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
-    "Finance/Futures/SOFR Future.md",
     "Finance/Treasury Bonds/Treasury Bonds Guide.md",
     "Finance/Treasury Bonds",
     "Finance/Stablecoin/jasdj.md",
