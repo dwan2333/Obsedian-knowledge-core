@@ -26,13 +26,13 @@ DAI takes a fundamentally different approach from fiat-backed stablecoins like U
 
 ## Key Differences from USDC / USDT
 
-| Dimension | USDC / USDT | DAI |
-|---|---|---|
-| **Trust model** | Trust the issuing company (Circle, Tether) | Trust that the smart contract code works correctly |
-| **Censorship resistance** | Issuers can freeze wallets (Circle has done so under government order) | Nobody can freeze your tokens — fully decentralized |
-| **Capital efficiency** | 1:1 backing — deposit $1, get $1 | Capital inefficient — need ~$1.50 locked to get $1 out |
-| **Transparency** | Periodic attestation reports | Real-time, on-chain, auditable by anyone at any time |
-| **Core tradeoff** | Simplicity and efficiency | Decentralization and transparency |
+| Dimension                 | USDC / USDT                                                            | DAI                                                    |
+| ------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------ |
+| **Trust model**           | Trust the issuing company (Circle, Tether)                             | Trust that the smart contract code works correctly     |
+| **Censorship resistance** | Issuers can freeze wallets (Circle has done so under government order) | Nobody can freeze your tokens — fully decentralized    |
+| **Capital efficiency**    | 1:1 backing — deposit $1, get $1                                       | Capital inefficient — need ~$1.50 locked to get $1 out |
+| **Transparency**          | Periodic attestation reports                                           | Real-time, on-chain, auditable by anyone at any time   |
+| **Core tradeoff**         | Simplicity and efficiency                                              | Decentralization and transparency                      |
 
 ---
 
