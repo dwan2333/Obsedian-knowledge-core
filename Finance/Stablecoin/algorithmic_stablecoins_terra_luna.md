@@ -91,7 +91,7 @@ The mechanism that was supposed to *restore* the peg became the mechanism that *
 
 | Stablecoin | What You Trust | What Backs It | Failure Mode |
 |---|---|---|---|
-| **USDC** | A company (Circle) holding real dollars | Cash, [U.S. Treasuries](<Treasury Bonds Guide.md>), repos | Circle goes bankrupt or commits fraud |
+| **USDC** | A company (Circle) holding real dollars | Cash, [U.S. Treasuries](<Treasury Bonds (main).md>), repos | Circle goes bankrupt or commits fraud |
 | **DAI** | Code (smart contracts) holding real crypto | Over-collateralized ETH + other assets | Catastrophic multi-asset crash overwhelming all four defense stages |
 | **UST** | Confidence alone — that people will keep valuing LUNA | Nothing tangible — only the swap mechanism | Confidence breaks → death spiral → total collapse |
 

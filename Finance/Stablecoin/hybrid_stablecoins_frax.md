@@ -80,7 +80,7 @@ FRAX didn't abandon its algorithmic tools — it **repurposed** them:
 | Component | Before (Fractional) | After (Fully Collateralized) |
 |---|---|---|
 | **Backing** | Partial USDC + partial FXS burns | 100% real assets |
-| **Reserve composition** | USDC only | USDC + tokenized [U.S. Treasuries](<Treasury Bonds Guide.md>) (via BlackRock, Superstate) |
+| **Reserve composition** | USDC only | USDC + tokenized [U.S. Treasuries](<Treasury Bonds (main).md>) (via BlackRock, Superstate) |
 | **Algorithmic tools (AMOs)** | Determined collateral ratio | Manage how collateral is *deployed* (lending, liquidity, yield) |
 | **FXS token role** | Burned to absorb under-collateralization | Governance + fee capture |
 
@@ -91,7 +91,7 @@ FRAX didn't abandon its algorithmic tools — it **repurposed** them:
 FRAX now backs its stablecoin with a diversified reserve including:
 
 - **USDC** (Circle's fiat-backed stablecoin)
-- **Tokenized [U.S. Treasuries](<Treasury Bonds Guide.md>)** via partnerships with BlackRock and Superstate
+- **Tokenized [U.S. Treasuries](<Treasury Bonds (main).md>)** via partnerships with BlackRock and Superstate
 - **On-chain lending positions** managed by AMOs
 
 This positions FRAX closer to USDC in terms of backing quality while retaining the DeFi-native, protocol-governed structure that distinguishes it from centralized issuers.
@@ -136,7 +136,7 @@ The industry arrived at a clear consensus: **algorithms and AI are powerful tool
 
 | Dimension | USDC | DAI | UST | USDe | FRAX (current) |
 |---|---|---|---|---|---|
-| **Backed by** | Cash + [Treasuries](<Treasury Bonds Guide.md>) | Over-collateralized crypto | Nothing (collapsed) | Crypto + derivatives hedge | USDC + tokenized [Treasuries](<Treasury Bonds Guide.md>) |
+| **Backed by** | Cash + [Treasuries](<Treasury Bonds (main).md>) | Over-collateralized crypto | Nothing (collapsed) | Crypto + derivatives hedge | USDC + tokenized [Treasuries](<Treasury Bonds (main).md>) |
 | **Capital efficiency** | 1:1 | ~1.5:1 | 1:1 | 1:1 | 1:1 |
 | **Key dependency** | Circle + banks | Smart contract code | Market confidence | Centralized exchanges | DeFi protocols + asset partners |
 | **Algorithmic role** | None | Liquidation mechanics | Entire backing (fatal) | Hedge management | Treasury/collateral optimization (AMOs) |

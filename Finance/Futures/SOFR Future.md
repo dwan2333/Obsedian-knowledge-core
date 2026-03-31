@@ -4,7 +4,7 @@
 
 SOFR stands for **Secured Overnight Financing Rate**. It is the benchmark interest rate for U.S. dollar-denominated loans, derivatives, and other financial products. It is published daily by the Federal Reserve Bank of New York.
 
-SOFR measures the cost of borrowing cash overnight through **repurchase agreements (repos)**, where borrowers put up [U.S. Treasury bonds](<Treasury Bonds Guide.md>) as collateral. It replaced LIBOR, which was phased out after manipulation scandals.
+SOFR measures the cost of borrowing cash overnight through **repurchase agreements (repos)**, where borrowers put up [U.S. Treasury bonds](<Treasury Bonds (main).md>) as collateral. It replaced LIBOR, which was phased out after manipulation scandals.
 
 ---
 
@@ -12,13 +12,13 @@ SOFR measures the cost of borrowing cash overnight through **repurchase agreemen
 
 1. **Bank A** needs cash overnight.
 2. **Bank B** has extra cash and is willing to lend.
-3. Bank A hands over [U.S. Treasury bonds](<Treasury Bonds Guide.md>) to Bank B as **collateral** — a security deposit.
+3. Bank A hands over [U.S. Treasury bonds](<Treasury Bonds (main).md>) to Bank B as **collateral** — a security deposit.
 4. If Bank A fails to repay the next day, Bank B keeps the bonds.
 5. The small cost Bank A pays for this overnight loan is the **repo rate**.
 
 SOFR is the **volume-weighted average** of all such overnight repo transactions across the market (over $1 trillion in daily volume).
 
-### Why [Treasury Bonds](<Treasury Bonds Guide.md>)?
+### Why [Treasury Bonds](<Treasury Bonds (main).md>)?
 
 - Backed by the U.S. government — considered the safest financial asset in the world.
 - Easy to value and easy to sell.
@@ -77,7 +77,7 @@ Between Fed meetings, SOFR still fluctuates slightly day to day. This is because
 |---|---|---|
 | **Normal day, plenty of cash** | Lenders compete to lend → accept lower rates | SOFR ticks down slightly |
 | **End of month/quarter** | Banks need cash for regulatory reporting | SOFR ticks up slightly |
-| **[Treasury](<Treasury Bonds Guide.md>) auction settlement** | Buyers drain cash to pay for new bonds | SOFR ticks up slightly |
+| **[Treasury](<Treasury Bonds (main).md>) auction settlement** | Buyers drain cash to pay for new bonds | SOFR ticks up slightly |
 | **Tax payment deadlines** | Cash flows out of banking system to government | SOFR ticks up slightly |
 
 **Analogy:** Think of SOFR as the price of apples. When there are too many sellers and few buyers, the price drops. When apples are scarce, the price goes up. The Fed decides how many apple trees exist (the general level), but daily weather and demand create small price fluctuations.
@@ -86,7 +86,7 @@ Between Fed meetings, SOFR still fluctuates slightly day to day. This is because
 
 ## Summary
 
-- **SOFR** = the average cost of borrowing cash overnight, secured by [U.S. Treasury bonds](<Treasury Bonds Guide.md>).
+- **SOFR** = the average cost of borrowing cash overnight, secured by [U.S. Treasury bonds](<Treasury Bonds (main).md>).
 - **Repos** = the mechanism — borrowers hand over Treasuries as collateral for short-term cash.
 - **SOFR Futures** = bets on where the average overnight rate will be in a future month or quarter.
 - **Fed policy** drives the big moves; **daily cash supply/demand** drives the small wiggles.
@@ -94,7 +94,3 @@ Between Fed meetings, SOFR still fluctuates slightly day to day. This is because
 
 ---
 
-## Related Documents
-
-- **[Treasury Bonds — A Beginner's Guide](<Treasury Bonds Guide.md>)** — The underlying collateral asset in every repo transaction that SOFR measures.
-- **[Stablecoin Deep Dive](Stable%20Coin%20(Main).md)** — Fiat-backed stablecoins hold U.S. Treasuries as reserves; SOFR reflects the overnight cost of borrowing against those same Treasuries.

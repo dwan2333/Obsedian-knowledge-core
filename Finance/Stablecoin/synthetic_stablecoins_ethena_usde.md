@@ -118,7 +118,7 @@ Bank Independence:     USDC (needs banks) ✗  ←——→  DAI (on-chain only)
 
 | Dimension | USDC | DAI | UST | USDe |
 |---|---|---|---|---|
-| **Backed by** | Cash + [Treasuries](<Treasury Bonds Guide.md>) | Over-collateralized crypto | Nothing (confidence) | Crypto + derivatives hedge |
+| **Backed by** | Cash + [Treasuries](<Treasury Bonds (main).md>) | Over-collateralized crypto | Nothing (confidence) | Crypto + derivatives hedge |
 | **Capital efficiency** | 1:1 | ~1.5:1 | 1:1 | 1:1 |
 | **Key dependency** | Circle (company) + banks | Smart contract code | Market confidence | Centralized exchanges |
 | **Censorship resistance** | Low (can freeze wallets) | High | N/A (collapsed) | Medium |
