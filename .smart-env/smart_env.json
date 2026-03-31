@@ -104,7 +104,7 @@
     }
   },
   "chat_completion_models": {
-    "default_model_key": "google#1774722505164"
+    "default_model_key": "anthropic#1774952051975"
   },
   "ranking_models": {
     "default_model_key": "cohere#1774722106499"
