@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finance/Stablecoin/crypto_collateralized_stablecoins_dai.md",
+                "file": "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "crypto_collateralized_stablecoins_dai"
+              "title": "synthetic_stablecoins_ethena_usde"
             }
           }
         ],
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Finance/Stablecoin/crypto_collateralized_stablecoins_dai.md",
+                "file": "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of crypto_collateralized_stablecoins_dai"
+              "title": "Outline of synthetic_stablecoins_ethena_usde"
             }
           },
           {
@@ -241,14 +241,14 @@
       "smart-chat:Open: Smart Chat": false
     }
   },
-  "active": "0441c6ee21bc0f80",
+  "active": "328aa9c891b22c6e",
   "lastOpenFiles": [
+    "Finance/Stablecoin/hybrid_stablecoins_frax.md",
+    "Finance/Stablecoin/crypto_collateralized_stablecoins_dai.md",
     "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
     "Finance/Stablecoin/Stable Coin (Main).md",
-    "Finance/Stablecoin/crypto_collateralized_stablecoins_dai.md",
     "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
     "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
-    "Finance/Stablecoin/hybrid_stablecoins_frax.md",
     "Finance/Futures/SOFR Future.md",
     "Finance/Treasury Bonds/Treasury Bonds Guide.md",
     "Finance/Treasury Bonds",

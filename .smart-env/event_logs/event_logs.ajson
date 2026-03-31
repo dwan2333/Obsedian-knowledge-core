@@ -59,3 +59,4 @@
 "event_logs:sources:opened": {"key":"sources:opened","ct":175,"first_at":1774721194944,"last_at":1774950760114,"class_name":"EventLog","event_sources":{"active-leaf-change":159,"open_source method":11,"file-open":5}},
 "event_logs:sources:opened": {"key":"sources:opened","ct":176,"first_at":1774721194944,"last_at":1774950768018,"class_name":"EventLog","event_sources":{"active-leaf-change":160,"open_source method":11,"file-open":5}},
 "event_logs:sources:opened": {"key":"sources:opened","ct":177,"first_at":1774721194944,"last_at":1774950775971,"class_name":"EventLog","event_sources":{"active-leaf-change":161,"open_source method":11,"file-open":5}},
+"event_logs:sources:opened": {"key":"sources:opened","ct":179,"first_at":1774721194944,"last_at":1774951271826,"class_name":"EventLog","event_sources":{"active-leaf-change":163,"open_source method":11,"file-open":5}},
