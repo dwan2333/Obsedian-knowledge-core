@@ -197,7 +197,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -227,7 +227,7 @@
       "smart-chat:Open: Smart Chat": false
     }
   },
-  "active": "53b17156b8827b5f",
+  "active": "6e634525b1e2b583",
   "lastOpenFiles": [
     "Finance/Stablecoin/Stable Coin (Main).md",
     "Finance/Stablecoin/crypto_collateralized_stablecoins_dai.md",
