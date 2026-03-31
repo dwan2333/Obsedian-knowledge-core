@@ -22,21 +22,21 @@
             }
           },
           {
-            "id": "289c767244bff38c",
+            "id": "da65774fe9899933",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
+                "file": "Finance/Stablecoin/crypto_collateralized_stablecoins_dai.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "synthetic_stablecoins_ethena_usde"
+              "title": "crypto_collateralized_stablecoins_dai"
             }
           },
           {
-            "id": "0441c6ee21bc0f80",
+            "id": "289c767244bff38c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
+                "file": "Finance/Stablecoin/crypto_collateralized_stablecoins_dai.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of synthetic_stablecoins_ethena_usde"
+              "title": "Outline of crypto_collateralized_stablecoins_dai"
             }
           },
           {
@@ -211,11 +211,12 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 289.5
+    "width": 289.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -241,12 +242,12 @@
       "smart-chat:Open: Smart Chat": false
     }
   },
-  "active": "328aa9c891b22c6e",
+  "active": "da65774fe9899933",
   "lastOpenFiles": [
+    "Finance/Stablecoin/Stable Coin (Main).md",
+    "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
     "Finance/Stablecoin/hybrid_stablecoins_frax.md",
     "Finance/Stablecoin/crypto_collateralized_stablecoins_dai.md",
-    "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
-    "Finance/Stablecoin/Stable Coin (Main).md",
     "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
     "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
     "Finance/Futures/SOFR Future.md",

@@ -52,7 +52,7 @@ When a keeper pays DAI to buy liquidated ETH, that DAI returns to the smart cont
 
 **What if you already spent your DAI?** It doesn't matter. The system doesn't need *your* specific tokens back. DAI is fungible. The keeper bots supply their own DAI to buy your collateral. You simply lose your locked ETH and keep whatever you did with the DAI you minted. Effectively you sold $150 of ETH for $100 — a bad deal, but the system stays whole.
 
-### 4. Interest Rates: DSR and Stability Fees (The Long-Term Levers)
+### 4. Interest Rates: DSR and Stability Fees (The Long-Term Levers) and How to trade DAI tokens
 
 Just like the Federal Reserve raises or lowers interest rates to control the US economy, the MakerDAO community votes to adjust internal interest rates to manage the supply and demand of DAI.
 
@@ -63,6 +63,10 @@ Just like the Federal Reserve raises or lowers interest rates to control the US 
 - **The Stability Fee:** This is the interest rate users must pay to borrow DAI from a Vault.
     
     - If the price of DAI is _above_ $1, MakerDAO will **lower** the Stability Fee. This makes borrowing extremely cheap, encouraging users to mint massive amounts of new DAI, which increases the supply and pushes the price down.
+
+- **Selling (The Safe Play):** You trade your Ethereum for cash. You have zero debt and pay zero interest. However, you no longer own the asset. If Ethereum's price triples next month, you completely miss out on all that profit.
+    
+- **Borrowing (The Leverage Play):** You lock up your Ethereum as collateral and borrow cash against it. You have to pay an interest rate on that loan, but you _still own the Ethereum_. If the price triples next month, you capture 100% of those massive gains, pay off your small loan, and walk away with a huge profit.
 
 ### 5. The Peg Stability Module (The Short-Term Fix)
 
