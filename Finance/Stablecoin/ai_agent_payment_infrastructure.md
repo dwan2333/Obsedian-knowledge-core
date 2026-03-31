@@ -14,12 +14,12 @@ Traditional payment infrastructure was built for humans clicking "buy" buttons. 
 
 Every AI agent payment requires four layers working together:
 
-| Layer | Function | Question It Answers |
-|---|---|---|
-| **1. Authorization** | Who approved this? | Did a real user give the agent permission? |
-| **2. Payment Protocol** | How is the payment message transmitted? | What format does the payment request take? |
-| **3. Wallet** | Where does the agent hold its money? | How does the agent access and manage funds? |
-| **4. Settlement** | Which blockchain processes the transaction? | Where does the transaction actually finalize? |
+| Layer                   | Function                                    | Question It Answers                           |
+| ----------------------- | ------------------------------------------- | --------------------------------------------- |
+| **1. Authorization**    | Who approved this?                          | Did a real user give the agent permission?    |
+| **2. Payment Protocol** | How is the payment message transmitted?     | What format does the payment request take?    |
+| **3. Wallet**           | Where does the agent hold its money?        | How does the agent access and manage funds?   |
+| **4. Settlement**       | Which blockchain processes the transaction? | Where does the transaction actually finalize? |
 
 Two competing ecosystems — **Coinbase** and **Stripe** — are building complete stacks covering all four layers.
 
