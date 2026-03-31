@@ -1,5 +1,26 @@
 
+## Problem
 
+[](https://github.com/shareAI-lab/learn-claude-code/blob/main/docs/en/s01-the-agent-loop.md#problem)
+
+A language model can reason about code, but it can't _touch_ the real world -- can't read files, run tests, or check errors. Without a loop, every tool call requires you to manually copy-paste results back. You become the loop.
+
+## Solution
+
+[](https://github.com/shareAI-lab/learn-claude-code/blob/main/docs/en/s01-the-agent-loop.md#solution)
+
+```
++--------+      +-------+      +---------+
+|  User  | ---> |  LLM  | ---> |  Tool   |
+| prompt |      |       |      | execute |
++--------+      +---+---+      +----+----+
+                    ^                |
+                    |   tool_result  |
+                    +----------------+
+                    (loop until stop_reason != "tool_use")
+```
+
+One exit condition controls the entire flow. The loop runs until the model stops calling tools.
 ## Core Python Logic
 This is the `test_run_1.py` code that allows the AI to think, act, and remember:
 
@@ -62,3 +83,14 @@ Unlike a standard chatbot (which only remembers what the human said), an AI Agen
 - **The Execution Phase**: The code runs the command on the computer.
 - **The Injection Phase (The Magic)**: The result of that command is "injected" back into the chat history (Line 49). The user doesn't see this yet!
 - **The Reaction Phase**: The AI reads the new tool result, "learns" from it, and either runs another command or finally answers the user.
+
+## What Changed
+
+[](https://github.com/shareAI-lab/learn-claude-code/blob/main/docs/en/s01-the-agent-loop.md#what-changed)
+
+| Component    | Before | After                       |
+| ------------ | ------ | --------------------------- |
+| Agent loop   | (none) | `while True` + stop_reason  |
+| Tools        | (none) | `bash` (one tool)           |
+| Messages     | (none) | Accumulating list           |
+| Control flow | (none) | `stop_reason != "tool_use"` |
