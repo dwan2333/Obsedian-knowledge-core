@@ -52,6 +52,31 @@ When a keeper pays DAI to buy liquidated ETH, that DAI returns to the smart cont
 
 **What if you already spent your DAI?** It doesn't matter. The system doesn't need *your* specific tokens back. DAI is fungible. The keeper bots supply their own DAI to buy your collateral. You simply lose your locked ETH and keep whatever you did with the DAI you minted. Effectively you sold $150 of ETH for $100 — a bad deal, but the system stays whole.
 
+### 4. Interest Rates: DSR and Stability Fees (The Long-Term Levers)
+
+Just like the Federal Reserve raises or lowers interest rates to control the US economy, the MakerDAO community votes to adjust internal interest rates to manage the supply and demand of DAI.
+
+- **The DAI Savings Rate (DSR):** This is the interest rate paid to users who simply hold DAI in a specific savings contract.
+    
+    - If the price of DAI is _below_ $1, MakerDAO will **raise** the DSR. This makes holding DAI very attractive, which increases demand, decreases the circulating supply, and pushes the price up.
+        
+- **The Stability Fee:** This is the interest rate users must pay to borrow DAI from a Vault.
+    
+    - If the price of DAI is _above_ $1, MakerDAO will **lower** the Stability Fee. This makes borrowing extremely cheap, encouraging users to mint massive amounts of new DAI, which increases the supply and pushes the price down.
+
+### 5. The Peg Stability Module (The Short-Term Fix)
+
+This is the most direct and effective tool MakerDAO uses to maintain the peg day-to-day. The Peg Stability Module (PSM) is a special vault that allows anyone to instantly swap DAI for centralized stablecoins (like USDC) at exactly a 1:1 ratio.
+
+This creates an immediate, risk-free **arbitrage** opportunity that forces the price back to $1:
+
+- **If DAI drops to $0.99:** Arbitrageurs will buy the cheap DAI on the open market, take it to the PSM, and swap it for $1.00 of USDC. They make a 1-cent profit per coin, and their buying pressure pushes the open-market price of DAI back up to $1.00.
+    
+- **If DAI rises to $1.01:** Arbitrageurs will take USDC, put it in the PSM to mint DAI at exactly $1.00, and immediately sell that DAI on the open market for $1.01. This floods the market with new DAI supply, pushing the price back down to $1.00.
+        
+
+
+
 ---
 
 ## MakerDAO's Backup Plan — Four Stages of Defense
