@@ -6,7 +6,6 @@
       {
         "id": "48dc6c6a3f28f777",
         "type": "tabs",
-        "dimension": 72.78368794326241,
         "children": [
           {
             "id": "dd5225127d267b16",
@@ -38,23 +37,6 @@
           }
         ],
         "currentTab": 1
-      },
-      {
-        "id": "85fa4883ab0bdabf",
-        "type": "tabs",
-        "dimension": 27.21631205673759,
-        "children": [
-          {
-            "id": "5e36cde97f559dd6",
-            "type": "leaf",
-            "state": {
-              "type": "smart-chat-view",
-              "state": {},
-              "icon": "smart-chat",
-              "title": "Smart Chat"
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
