@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git and Github/Git Commands.md",
+                "file": "Git and Github/Index and Object Store.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Git Commands"
+              "title": "Index and Object Store"
             }
           },
           {
@@ -229,11 +229,11 @@
   },
   "active": "dd5225127d267b16",
   "lastOpenFiles": [
+    "Git and Github/Git Commands.md",
+    "Git and Github/Index and Object Store.md",
     "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
     "Git and Github/Main.md",
-    "Git and Github/Git Commands.md",
     "Git and Github/Git Commands.md.tmp.11032.1775102151720",
-    "Git and Github/Index and Object Store.md",
     "Git and Github/Index and Object Store.md.tmp.11032.1775102150789",
     "Git and Github/What is Git and GitHub.md",
     "Git and Github/What is Git and GitHub.md.tmp.11032.1775102143501",
