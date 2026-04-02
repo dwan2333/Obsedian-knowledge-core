@@ -227,8 +227,10 @@
       "smart-context:Smart Context: Copy to Clipboard (select depth)": false
     }
   },
-  "active": "328aa9c891b22c6e",
+  "active": "dd5225127d267b16",
   "lastOpenFiles": [
+    "Git and Github/Main.md",
+    "Git and Github/Main.md.tmp.11032.1775102044188",
     "Git and Github",
     "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
     "Finance/Stablecoin/Stable Coin (Main).md",
@@ -248,10 +250,8 @@
     "Finance/Treasury Bonds/Treasury Bonds (main).md",
     "Finance/Stablecoin/crypto_collateralized_stablecoins_dai.md",
     "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
-    "Finance/Treasury Bonds",
     "Finance/Stablecoin/jasdj.md",
     "Finance/Untitled.md",
-    "Finance/Futures",
     "Top to Bottom approach of learning AI/API what is it/What Upgrading an AI Model Means.md",
     "Top to Bottom approach of learning AI/API what is it/How Data is Translated - JSON & Tokens.md",
     "Top to Bottom approach of learning AI/API what is it/FastAPI vs. AI Company APIs.md",
