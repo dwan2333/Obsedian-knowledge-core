@@ -70,3 +70,4 @@
 "event_logs:sources:deleted": {"key":"sources:deleted","ct":199,"first_at":1774722977273,"last_at":1775102160069,"class_name":"EventLog","event_sources":{"obsidian:vault.delete":199}},
 "event_logs:sources:imported": {"key":"sources:imported","ct":1512,"first_at":1774721146691,"last_at":1775102165059,"class_name":"EventLog"},
 "event_logs:item:embedded": {"key":"item:embedded","ct":904,"first_at":1774722094169,"last_at":1775102168138,"class_name":"EventLog"},
+"event_logs:sources:opened": {"key":"sources:opened","ct":214,"first_at":1774721194944,"last_at":1775106487499,"class_name":"EventLog","event_sources":{"active-leaf-change":198,"open_source method":11,"file-open":5}},
