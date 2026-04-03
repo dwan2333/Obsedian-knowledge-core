@@ -53,6 +53,12 @@
       "connections_list_item_v3": {
         "render_markdown": true,
         "show_full_path": false
+      },
+      "connections_list_v4": {
+        "show_graph": true
+      },
+      "connections_list_v4_2": {
+        "show_graph": true
       }
     },
     "connections_view_location": "right",
@@ -77,6 +83,9 @@
         "max_search_depth": 5,
         "max_search_items": 10000,
         "ignore_patterns": ""
+      },
+      "context_copy_to_clipboard": {
+        "copy_with_media": false
       }
     }
   },
@@ -109,5 +118,12 @@
   "ranking_models": {
     "default_model_key": "cohere#1774722106499"
   },
-  "active_chat_thread_key": "seq-2026-03-31-16-25-03"
+  "active_chat_thread_key": "seq-2026-03-31-16-25-03",
+  "event_logs": {
+    "native_notice_info": false,
+    "native_notice_warning": true,
+    "native_notice_error": true,
+    "native_notice_attention": false,
+    "native_notice_milestone": true
+  }
 }
