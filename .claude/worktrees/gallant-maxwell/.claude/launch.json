@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Obsidian Local REST API",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [],
+      "port": 27124
+    }
+  ]
+}
