@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git and Github/gitignore.md",
+                "file": "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "gitignore"
+              "title": "the agent logic loop"
             }
           }
         ]
@@ -216,9 +216,9 @@
   },
   "active": "dd5225127d267b16",
   "lastOpenFiles": [
+    "Git and Github/gitignore.md",
     "Git and Github/gitignore.md.tmp.3272.1775444584320",
     "Git and Github/Git Commands.md",
-    "Git and Github/gitignore.md",
     "Git and Github/Index and Object Store.md",
     "Git and Github/What is Git and GitHub.md",
     " (2).gitignore",
@@ -235,7 +235,6 @@
     "Git and Github",
     "Finance/Stablecoin/Stable Coin (Main).md",
     "Learning AI from TOP to Bottom/AI agent",
-    "Learning AI from TOP to Bottom/Operating System/Bash",
     "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
     "Finance/Stablecoin/hybrid_stablecoins_frax.md",
     "Finance/Futures/SOFR Future.md",
