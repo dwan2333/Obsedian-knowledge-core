@@ -207,11 +207,17 @@
       "templater-obsidian:Templater": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "smart-chat:Open: Smart Chat": false,
+      "smart-context:Smart Context: Open Builder": false,
+      "smart-context:Smart Context: Copy to Clipboard (select depth)": false,
+      "smart-context:Smart Context: List Named Contexts": false
     }
   },
   "active": "dd5225127d267b16",
   "lastOpenFiles": [
+    "Learning AI from TOP to Bottom/Operating System/Bash/Bash(Main).md",
+    "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
     "Git and Github/gitignore.md",
     "Git and Github/gitignore.md.tmp.3272.1775444584320",
     "Git and Github/Git Commands.md",
@@ -221,12 +227,10 @@
     "New Text Document.txt",
     "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
     "Git and Github/Git Commands.md.tmp.11032.1775109647755",
-    "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
     "Git and Github/Main.md",
     "Git and Github/Git Commands.md.tmp.11032.1775102151720",
     "Git and Github/Index and Object Store.md.tmp.11032.1775102150789",
     "Git and Github/What is Git and GitHub.md.tmp.11032.1775102143501",
-    "Learning AI from TOP to Bottom/Operating System/Bash/Bash(Main).md",
     "Git and Github/Main.md.tmp.11032.1775102044188",
     "Git and Github",
     "Finance/Stablecoin/Stable Coin (Main).md",
