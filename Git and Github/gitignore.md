@@ -29,14 +29,14 @@ You can add rules without opening an editor by using `echo "rule" >> .gitignore`
 
 Git reads the `.gitignore` file **top-to-bottom**. Here is the exact syntax for how to write highly precise filtering rules:
 
-### Exact Match (The Sniper)
-`passwords.txt` — Blocks only this specific file.
+### Name Match (The Shotgun)
+`passwords.txt` — Blocks **any** file with this name **anywhere** in the project. So it catches `passwords.txt`, `src/passwords.txt`, `deep/nested/passwords.txt`, etc.
 
 ### The Folder Blocker (`/` at the end)
 `logs/` — Blocks the entire folder and everything inside it, no matter where it is in the project.
 
 ### Location Anchors (`/` at the start & `**`)
-- `/data.csv` — Blocks the file **ONLY** if it is in the main project folder. It will keep tracking it if it is buried in a subfolder.
+- `/passwords.txt` — The leading `/` **anchors** the rule to the project root. This blocks `passwords.txt` at the root but **not** `src/passwords.txt`. This is the true "sniper" — use it when you only want to block a file in one specific location.
 - `logs/**/*.txt` — The double asterisk means "any number of folders." This blocks text files buried deep inside logs, like `logs/2026/April/error.txt`.
 
 ### Wildcards (`*` and `?`)
