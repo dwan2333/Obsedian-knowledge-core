@@ -207,11 +207,17 @@
       "templater-obsidian:Templater": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "smart-context:Smart Context: Open Builder": false,
+      "smart-context:Smart Context: Copy to Clipboard (select depth)": false,
+      "smart-context:Smart Context: List Named Contexts": false,
+      "smart-chat:Open: Smart Chat": false
     }
   },
   "active": "dd5225127d267b16",
   "lastOpenFiles": [
+    "Poker/the_course_part1_mindmap.json",
+    "Poker",
     "Git and Github/What is Git and GitHub.md",
     "Git and Github/Git Commands.md",
     "Git and Github/gitignore.md",
@@ -230,7 +236,6 @@
     "Git and Github/Main.md.tmp.11032.1775102044188",
     "Git and Github",
     "Finance/Stablecoin/Stable Coin (Main).md",
-    "Learning AI from TOP to Bottom/AI agent",
     "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
     "Finance/Stablecoin/hybrid_stablecoins_frax.md",
     "Finance/Futures/SOFR Future.md",

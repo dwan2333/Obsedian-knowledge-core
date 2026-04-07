@@ -1,0 +1,156 @@
+{
+  "name": "The Course: Serious Hold 'Em Strategy",
+  "children": [
+    {
+      "name": "The Poker Ecosystem",
+      "children": [
+        {
+          "name": "Live Cash Games",
+          "children": [
+            {
+              "name": "1-2/1-3 Stakes: Entry Level"
+            },
+            {
+              "name": "2-5/5-10 Stakes: Professional Level"
+            },
+            {
+              "name": "Recreational Player Habitat"
+            }
+          ]
+        },
+        {
+          "name": "Online Cash Games",
+          "children": [
+            {
+              "name": "Hyper-Competitive"
+            },
+            {
+              "name": "High Volume/Speed"
+            },
+            {
+              "name": "Unlimited Upside"
+            }
+          ]
+        },
+        {
+          "name": "Tournaments",
+          "children": [
+            {
+              "name": "Live: Social/High Variance"
+            },
+            {
+              "name": "Online: Forgiving/Volume-based"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Core Strategy Philosophy",
+      "children": [
+        {
+          "name": "Play the Course, Not the Players"
+        },
+        {
+          "name": "Attack Weakness (Too Many Hands)"
+        },
+        {
+          "name": "Avoid Strength (Narrow Ranges)"
+        },
+        {
+          "name": "Focus on Intentional Actions"
+        }
+      ]
+    },
+    {
+      "name": "Skill #1: Pre-Flop Strategy",
+      "children": [
+        {
+          "name": "Hand Selection Criteria",
+          "children": [
+            {
+              "name": "Suitedness (Equity-when-called)"
+            },
+            {
+              "name": "Big Card Value"
+            },
+            {
+              "name": "Connectedness"
+            },
+            {
+              "name": "Pocket Pairs"
+            }
+          ]
+        },
+        {
+          "name": "Positional Frequencies",
+          "children": [
+            {
+              "name": "Early Position: ~14%"
+            },
+            {
+              "name": "Cutoff: ~22%"
+            },
+            {
+              "name": "Button: ~33%"
+            },
+            {
+              "name": "Blinds: Defend vs Steals"
+            }
+          ]
+        },
+        {
+          "name": "Always Raise if Entering Unopened"
+        }
+      ]
+    },
+    {
+      "name": "Skill #2: Don't Pay People Off",
+      "children": [
+        {
+          "name": "Believe Large Turn/River Bets"
+        },
+        {
+          "name": "Small Stakes Players Rarely Bluff"
+        },
+        {
+          "name": "Fold if You Only Beat a Bluff"
+        },
+        {
+          "name": "Avoid 'Pot-Committed' Fallacy"
+        }
+      ]
+    },
+    {
+      "name": "Skill #3: Assess Hand Value",
+      "children": [
+        {
+          "name": "Good Hands Love Showdowns"
+        },
+        {
+          "name": "Don't 'Protect' Hands by Over-Betting"
+        },
+        {
+          "name": "Extract Value From Weak Ranges"
+        }
+      ]
+    },
+    {
+      "name": "The Poker Pyramid",
+      "children": [
+        {
+          "name": "Pre-flop (Widest)"
+        },
+        {
+          "name": "Flop"
+        },
+        {
+          "name": "Turn"
+        },
+        {
+          "name": "River (Narrowest/Strongest)"
+        }
+      ]
+    }
+  ]
+}
