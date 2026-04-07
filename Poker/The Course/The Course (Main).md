@@ -14,12 +14,12 @@ The book is organized by stake level. Each section introduces the key skill need
 
 ## Parts
 
-| Part | Title | Focus |
-|---|---|---|
+| Part                                                                            | Title                | Focus                                                       |
+| ------------------------------------------------------------------------------- | -------------------- | ----------------------------------------------------------- |
 | **[Part 1](<Part 1 The 30000 Foot View/Part 1 The 30000 Foot View (Main).md>)** | The 30,000-Foot View | The poker ecosystem, core philosophy, and the pyramid model |
-| Part 2 *(future notes)* | Beating $1-2 | Skills for the entry-level live game |
-| Part 3 *(future notes)* | Beating $2-5 | Moving up and adjusting |
-| Part 4 *(future notes)* | Beating $5-10 | Semi-professional play |
+| Part 2 *(future notes)*                                                         | Beating $1-2         | Skills for the entry-level live game                        |
+| Part 3 *(future notes)*                                                         | Beating $2-5         | Moving up and adjusting                                     |
+| Part 4 *(future notes)*                                                         | Beating $5-10        | Semi-professional play                                      |
 
 ---
 

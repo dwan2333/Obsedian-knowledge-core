@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Poker/Part 1 The 30000 Foot View/the_poker_pyramid.md",
+                "file": "Poker/The Course/Part 1 The 30000 Foot View/the_poker_ecosystem.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "the_poker_pyramid"
+              "title": "the_poker_ecosystem"
             }
           }
         ]
@@ -216,10 +216,18 @@
   },
   "active": "dd5225127d267b16",
   "lastOpenFiles": [
+    "Poker/The Course/Part 1 The 30000 Foot View/Part 1 The 30000 Foot View (Main).md",
+    "Poker/The Course/Part 1 The 30000 Foot View/core_strategy_philosophy.md",
+    "Poker/The Course/Part 1 The 30000 Foot View/the_poker_ecosystem.md",
+    "Poker/The Course/Part 1 The 30000 Foot View/the_course_part1_infographic.png",
+    "Poker/The Course/The Course (Main).md",
+    "Poker/Part 1 The 30000 Foot View/the_poker_pyramid.md",
+    "Poker/The Course/Part 1 The 30000 Foot View/the_poker_pyramid.md",
+    "Poker/The Course/Part 1 The 30000 Foot View",
+    "Poker/The Course",
     "Poker/Part 1 The 30000 Foot View/the_poker_ecosystem.md",
     "Poker/Part 1 The 30000 Foot View/Part 1 The 30000 Foot View (Main).md",
     "Poker/Part 1 The 30000 Foot View/core_strategy_philosophy.md",
-    "Poker/Part 1 The 30000 Foot View/the_poker_pyramid.md",
     "Poker/Part 1 The 30000 Foot View/the_course_part1_infographic.png",
     "Poker/Part 1 The 30000 Foot View/the_poker_pyramid.md.tmp.21904.1775543305939",
     "Poker/The Course (Main).md",
@@ -232,8 +240,6 @@
     "Git and Github/gitignore.md",
     "Poker/The Course (Main).md.tmp.21904.1775542813522",
     "Poker/the_course_part1_infographic.png.tmp",
-    "Poker/the_course_part1_mindmap.json",
-    "Poker",
     "Git and Github/What is Git and GitHub.md",
     "Git and Github/Git Commands.md",
     "Git and Github/Index and Object Store.md",
@@ -248,11 +254,6 @@
     "Finance/Treasury Bonds/Treasury Bonds (main).md",
     "Finance/Stablecoin/crypto_collateralized_stablecoins_dai.md",
     "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
-    "Finance/Stablecoin/jasdj.md",
-    "Finance/Untitled.md",
-    "Top to Bottom approach of learning AI/API what is it/What Upgrading an AI Model Means.md",
-    "Top to Bottom approach of learning AI/API what is it/How Data is Translated - JSON & Tokens.md",
-    "Top to Bottom approach of learning AI/API what is it/FastAPI vs. AI Company APIs.md",
     "Pasted image 20251213225326.png",
     "Pasted image 20251210233307.png",
     "Pasted image 20251213225317.png",
@@ -260,7 +261,6 @@
     "Pasted image 20251213224040.png",
     "Pasted image 20251213161911.png",
     "Pasted image 20251213154017.png",
-    "Pasted image 20251213154006.png",
     "Untitled.canvas"
   ]
 }
