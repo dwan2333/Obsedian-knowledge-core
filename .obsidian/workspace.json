@@ -11,14 +11,10 @@
             "id": "dd5225127d267b16",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Poker/The Course/Part 1 The 30000 Foot View/Part 1 The 30000 Foot View (Main).md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Part 1 The 30000 Foot View (Main)"
+              "title": "New tab"
             }
           }
         ]
@@ -210,11 +206,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dd5225127d267b16",
+  "active": "328aa9c891b22c6e",
   "lastOpenFiles": [
+    "Projects/AI Habit Breaking Headband/sensor_input_detection.md",
+    "Projects/AI Habit Breaking Headband/safety_design_principles.md",
+    "Projects/AI Habit Breaking Headband/output_interventions.md",
+    "Projects/AI Habit Breaking Headband/headband_infographic.png",
+    "Projects/AI Habit Breaking Headband/core_hardware.md",
+    "Projects/AI Habit Breaking Headband/AI Habit Breaking Headband (Main).md",
+    "Poker/The Course/Part 1 The 30000 Foot View/Part 1 The 30000 Foot View (Main).md",
     "Poker/The Course/Part 1 The 30000 Foot View/the_poker_ecosystem.md",
     "Poker/The Course/Part 1 The 30000 Foot View/the_course_part1_infographic.png",
-    "Poker/The Course/Part 1 The 30000 Foot View/Part 1 The 30000 Foot View (Main).md",
     "Poker/The Course/Part 1 The 30000 Foot View/core_strategy_philosophy.md",
     "Poker/The Course/Part 1 The 30000 Foot View/the_poker_pyramid.md",
     "Poker/The Course/Part 1 The 30000 Foot View/the_course_part1_infographic (2).png",
@@ -247,16 +249,11 @@
     "Finance/Stablecoin/Stable Coin (Main).md",
     "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
     "Finance/Stablecoin/hybrid_stablecoins_frax.md",
-    "Finance/Futures/SOFR Future.md",
-    "Finance/Treasury Bonds/Treasury Bonds (main).md",
-    "Finance/Stablecoin/crypto_collateralized_stablecoins_dai.md",
-    "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
     "Pasted image 20251213225326.png",
     "Pasted image 20251210233307.png",
     "Pasted image 20251213225317.png",
     "Pasted image 20251213225254.png",
     "Pasted image 20251213224040.png",
-    "Pasted image 20251213161911.png",
     "Untitled.canvas"
   ]
 }
