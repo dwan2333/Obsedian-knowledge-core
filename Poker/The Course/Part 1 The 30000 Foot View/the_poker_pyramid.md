@@ -29,12 +29,12 @@ The **Poker Pyramid** is Miller's visual model for how hand ranges narrow as a h
 
 The pyramid has direct consequences for how you should respond to bets at each street:
 
-| Street | Range of Bettor | Your Response to a Large Bet |
-|---|---|---|
-| Pre-Flop | Very wide | Can re-raise or call with a broader range |
-| Flop | Still wide; many draws and weak pairs | Can call with draws, pairs |
-| Turn | Narrowing; draws or strong made hands | Start giving more credit |
-| **River** | **Narrow: strong made hands dominate** | **Fold if you only beat a bluff** |
+| Street    | Range of Bettor                        | Your Response to a Large Bet              |
+| --------- | -------------------------------------- | ----------------------------------------- |
+| Pre-Flop  | Very wide                              | Can re-raise or call with a broader range |
+| Flop      | Still wide; many draws and weak pairs  | Can call with draws, pairs                |
+| Turn      | Narrowing; draws or strong made hands  | Start giving more credit                  |
+| **River** | **Narrow: strong made hands dominate** | **Fold if you only beat a bluff**         |
 
 ---
 

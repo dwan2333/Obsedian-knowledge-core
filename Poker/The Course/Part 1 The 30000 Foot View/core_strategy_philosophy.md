@@ -31,10 +31,10 @@ Miller calls the core strategy "**playing the course**" — executing a sound, s
 
 ### The Two Rules
 
-| Rule | What It Means |
-|---|---|
-| **Attack weakness** | Target pots where opponents likely hold mediocre hands (wide pre-flop ranges → weak post-flop holdings) |
-| **Avoid strength** | When opponents show narrow, aggressive action (raise → 3-bet → large turn bet), they have a strong hand — fold |
+| Rule                | What It Means                                                                                                  |
+| ------------------- | -------------------------------------------------------------------------------------------------------------- |
+| **Attack weakness** | Target pots where opponents likely hold mediocre hands (wide pre-flop ranges → weak post-flop holdings)        |
+| **Avoid strength**  | When opponents show narrow, aggressive action (raise → 3-bet → large turn bet), they have a strong hand — fold |
 
 ---
 
