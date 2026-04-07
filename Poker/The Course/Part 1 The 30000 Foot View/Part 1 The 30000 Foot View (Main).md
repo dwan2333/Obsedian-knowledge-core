@@ -6,7 +6,7 @@ _Research compiled 2026-04-07 — sourced from Ed Miller, "The Course" (PDF, Par
 
 ---
 
-![Infographic](the_course_part1_infographic.png)
+![Infographic|697](the_course_part1_infographic.png)
 
 ---
 
