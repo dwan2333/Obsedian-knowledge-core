@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Poker/The Course (Main).md",
+                "file": "Poker/Part 1 The 30000 Foot View/the_poker_pyramid.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The Course (Main)"
+              "title": "the_poker_pyramid"
             }
           }
         ]
@@ -216,8 +216,19 @@
   },
   "active": "dd5225127d267b16",
   "lastOpenFiles": [
-    "Poker/the_course_part1_infographic.png",
+    "Poker/Part 1 The 30000 Foot View/the_poker_ecosystem.md",
+    "Poker/Part 1 The 30000 Foot View/Part 1 The 30000 Foot View (Main).md",
+    "Poker/Part 1 The 30000 Foot View/core_strategy_philosophy.md",
+    "Poker/Part 1 The 30000 Foot View/the_poker_pyramid.md",
+    "Poker/Part 1 The 30000 Foot View/the_course_part1_infographic.png",
+    "Poker/Part 1 The 30000 Foot View/the_poker_pyramid.md.tmp.21904.1775543305939",
     "Poker/The Course (Main).md",
+    "Poker/Part 1 The 30000 Foot View/core_strategy_philosophy.md.tmp.21904.1775543287167",
+    "Poker/Part 1 The 30000 Foot View/the_poker_ecosystem.md.tmp.21904.1775543267500",
+    "Poker/Part 1 The 30000 Foot View/Part 1 The 30000 Foot View (Main).md.tmp.21904.1775543246073",
+    "Poker/The Course (Main).md.tmp.21904.1775543235260",
+    "Poker/Part 1 The 30000 Foot View",
+    "Poker/the_course_part1_infographic.png",
     "Git and Github/gitignore.md",
     "Poker/The Course (Main).md.tmp.21904.1775542813522",
     "Poker/the_course_part1_infographic.png.tmp",
@@ -228,14 +239,8 @@
     "Git and Github/Index and Object Store.md",
     "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
     "Learning AI from TOP to Bottom/Operating System/Bash/Bash(Main).md",
-    "Git and Github/gitignore.md.tmp.3272.1775444584320",
-    " (2).gitignore",
-    "New Text Document.txt",
     "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
-    "Git and Github/Git Commands.md.tmp.11032.1775109647755",
     "Git and Github/Main.md",
-    "Git and Github/Git Commands.md.tmp.11032.1775102151720",
-    "Git and Github/Index and Object Store.md.tmp.11032.1775102150789",
     "Finance/Stablecoin/Stable Coin (Main).md",
     "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
     "Finance/Stablecoin/hybrid_stablecoins_frax.md",
@@ -248,10 +253,6 @@
     "Top to Bottom approach of learning AI/API what is it/What Upgrading an AI Model Means.md",
     "Top to Bottom approach of learning AI/API what is it/How Data is Translated - JSON & Tokens.md",
     "Top to Bottom approach of learning AI/API what is it/FastAPI vs. AI Company APIs.md",
-    "Python/Automate boring stuff with python/Debugging/Logging.md",
-    "Python/Automate boring stuff with python/Debugging/Assertion.md",
-    "Python/Automate boring stuff with python/CSV file/The CSV format.md",
-    "Python/Automate boring stuff with python/Copy libary/Normal copy and Deep Copy.md",
     "Pasted image 20251213225326.png",
     "Pasted image 20251210233307.png",
     "Pasted image 20251213225317.png",
@@ -260,7 +261,6 @@
     "Pasted image 20251213161911.png",
     "Pasted image 20251213154017.png",
     "Pasted image 20251213154006.png",
-    "Pasted image 20251213153113.png",
     "Untitled.canvas"
   ]
 }
