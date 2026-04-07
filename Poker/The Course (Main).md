@@ -159,7 +159,8 @@ A strong hand's goal is to **reach showdown without scaring opponents off**. Ove
 
 ### Sources
 
-| Source | Date | Type |
-|---|---|---|
-| Ed Miller, *The Course: Serious Hold 'Em Strategy for Smart Players* | 2015 | Book (PDF, Part I) |
-| Web research sources (×10) via NotebookLM | 2026 | Mixed (articles, forums, analyses) |
+| Source                                                               | Date | Type                               |
+| -------------------------------------------------------------------- | ---- | ---------------------------------- |
+| Ed Miller, *The Course: Serious Hold 'Em Strategy for Smart Players* | 2015 | Book (PDF, Part I)                 |
+| Web research sources (×10) via NotebookLM                            | 2026 | Mixed (articles, forums, analyses) |
+|                                                                      |      |                                    |
