@@ -11,12 +11,14 @@
             "id": "d15221a00f88b988",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Projects/AI Habit Breaking Headband/infographic_direct_wiring_no_breadboard.png"
+                "file": "Projects/AI Habit Breaking Headband/wiring_plan_a_breadboard.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "infographic_direct_wiring_no_breadboard"
+              "icon": "lucide-file",
+              "title": "wiring_plan_a_breadboard"
             }
           }
         ]
@@ -214,8 +216,12 @@
   },
   "active": "d15221a00f88b988",
   "lastOpenFiles": [
-    "Projects/AI Habit Breaking Headband/infographic_gpio_pin_allocation.png",
     "Projects/AI Habit Breaking Headband/infographic_stereo_wiring_plan.png",
+    "Projects/AI Habit Breaking Headband/wiring_plan_b_direct.md",
+    "Projects/AI Habit Breaking Headband/wiring_plan_b_direct.md.tmp.19392.1775630843289",
+    "Projects/AI Habit Breaking Headband/wiring_plan_a_breadboard.md",
+    "Projects/AI Habit Breaking Headband/wiring_plan_a_breadboard.md.tmp.19392.1775630826321",
+    "Projects/AI Habit Breaking Headband/infographic_gpio_pin_allocation.png",
     "Projects/AI Habit Breaking Headband/infographic_direct_wiring_no_breadboard.png",
     "Projects/AI Habit Breaking Headband/hardware_shopping_list.md",
     "Projects/AI Habit Breaking Headband/infographic_audio_stereo_wiring.png",
@@ -229,8 +235,6 @@
     "Projects/AI Habit Breaking Headband/tykoo_build_guide_slides.pdf.tmp",
     "Projects/AI Habit Breaking Headband/tykoo_build_guide_video (2).mp4",
     "Projects/AI Habit Breaking Headband/tykoo_build_guide_video.mp4",
-    "Projects/AI Habit Breaking Headband/tykoo_build_guide_video (2).mp4.tmp",
-    "Projects/AI Habit Breaking Headband/tykoo_build_guide_video_dl.mp4",
     "AI Habit Breaking Headband (Main).md",
     "Git and Github/Git Commands.md",
     "Git and Github/Index and Object Store.md",
@@ -257,8 +261,6 @@
     "Poker/The Course (Main).md",
     "Git and Github/What is Git and GitHub.md",
     "Learning AI from TOP to Bottom/Operating System/Bash/Bash(Main).md",
-    "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
-    "Git and Github/Main.md",
     "Untitled.canvas"
   ]
 }
