@@ -11,14 +11,12 @@
             "id": "d15221a00f88b988",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Projects/AI Habit Breaking Headband/hardware_shopping_list.md",
-                "mode": "source",
-                "source": false
+                "file": "Projects/AI Habit Breaking Headband/infographic_gpio_pin_allocation.png"
               },
-              "icon": "lucide-file",
-              "title": "hardware_shopping_list"
+              "icon": "lucide-image",
+              "title": "infographic_gpio_pin_allocation"
             }
           }
         ]
@@ -207,14 +205,20 @@
       "templater-obsidian:Templater": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "smart-context:Smart Context: Open Builder": false,
+      "smart-context:Smart Context: Copy to Clipboard (select depth)": false,
+      "smart-context:Smart Context: List Named Contexts": false,
+      "smart-chat:Open: Smart Chat": false
     }
   },
-  "active": "328aa9c891b22c6e",
+  "active": "d15221a00f88b988",
   "lastOpenFiles": [
+    "Projects/AI Habit Breaking Headband/infographic_audio_stereo_wiring.png",
+    "Projects/AI Habit Breaking Headband/hardware_shopping_list.md",
+    "Projects/AI Habit Breaking Headband/infographic_gpio_pin_allocation.png",
     "Projects/AI Habit Breaking Headband/tykoo_build_guide_video (2).mp4",
     "Projects/AI Habit Breaking Headband/tykoo_build_guide_video.mp4",
-    "Projects/AI Habit Breaking Headband/hardware_shopping_list.md",
     "Projects/AI Habit Breaking Headband/tykoo_build_guide_video (2).mp4.tmp",
     "Projects/AI Habit Breaking Headband/tykoo_build_guide_video_dl.mp4",
     "Projects/AI Habit Breaking Headband/tykoo_build_guide_video_dl.mp4.tmp",
@@ -255,8 +259,6 @@
     "Pasted image 20251213225326.png",
     "Pasted image 20251210233307.png",
     "Pasted image 20251213225317.png",
-    "Pasted image 20251213225254.png",
-    "Pasted image 20251213224040.png",
     "Untitled.canvas"
   ]
 }
