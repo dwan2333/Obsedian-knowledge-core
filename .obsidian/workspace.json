@@ -11,14 +11,12 @@
             "id": "d15221a00f88b988",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Projects/AI Habit Breaking Headband/wiring_plan_a_breadboard.md",
-                "mode": "source",
-                "source": false
+                "file": "Projects/AI Habit Breaking Headband/infographic_stereo_wiring_plan.png"
               },
-              "icon": "lucide-file",
-              "title": "wiring_plan_a_breadboard"
+              "icon": "lucide-image",
+              "title": "infographic_stereo_wiring_plan"
             }
           }
         ]
@@ -216,10 +214,10 @@
   },
   "active": "d15221a00f88b988",
   "lastOpenFiles": [
-    "Projects/AI Habit Breaking Headband/wiring_plan_b_direct.md",
-    "Projects/AI Habit Breaking Headband/wiring_plan_a_breadboard.md",
-    "Projects/AI Habit Breaking Headband/infographic_stereo_wiring_plan.png",
     "Projects/AI Habit Breaking Headband/infographic_gpio_pin_allocation.png",
+    "Projects/AI Habit Breaking Headband/infographic_stereo_wiring_plan.png",
+    "Projects/AI Habit Breaking Headband/wiring_plan_a_breadboard.md",
+    "Projects/AI Habit Breaking Headband/wiring_plan_b_direct.md",
     "Projects/AI Habit Breaking Headband/wiring_plan_a_breadboard.md.tmp.19392.1775631105689",
     "Projects/AI Habit Breaking Headband/wiring_plan_b_direct.md.tmp.19392.1775630843289",
     "Projects/AI Habit Breaking Headband/wiring_plan_a_breadboard.md.tmp.19392.1775630826321",
