@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/AI Habit Breaking Headband/wiring_plan_a_breadboard.md",
+                "file": "Projects/AI Habit Breaking Headband/wiring_plan_b_direct.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "wiring_plan_a_breadboard"
+              "title": "wiring_plan_b_direct"
             }
           }
         ]
@@ -207,14 +207,18 @@
       "templater-obsidian:Templater": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "smart-chat:Open: Smart Chat": false,
+      "smart-context:Smart Context: Open Builder": false,
+      "smart-context:Smart Context: Copy to Clipboard (select depth)": false,
+      "smart-context:Smart Context: List Named Contexts": false
     }
   },
   "active": "d15221a00f88b988",
   "lastOpenFiles": [
+    "Projects/AI Habit Breaking Headband/wiring_plan_a_breadboard.md",
     "Projects/AI Habit Breaking Headband/infographic_stereo_wiring_plan.png",
     "Projects/AI Habit Breaking Headband/infographic_gpio_pin_allocation.png",
-    "Projects/AI Habit Breaking Headband/wiring_plan_a_breadboard.md",
     "Projects/AI Habit Breaking Headband/wiring_plan_b_direct.md",
     "Projects/AI Habit Breaking Headband/wiring_plan_a_breadboard.md.tmp.19392.1775631105689",
     "Projects/AI Habit Breaking Headband/wiring_plan_b_direct.md.tmp.19392.1775630843289",
