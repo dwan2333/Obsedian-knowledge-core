@@ -13,10 +13,10 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "Projects/AI Habit Breaking Headband/infographic_gpio_pin_allocation.png"
+                "file": "Projects/AI Habit Breaking Headband/infographic_audio_stereo_wiring.png"
               },
               "icon": "lucide-image",
-              "title": "infographic_gpio_pin_allocation"
+              "title": "infographic_audio_stereo_wiring"
             }
           }
         ]
@@ -214,9 +214,9 @@
   },
   "active": "d15221a00f88b988",
   "lastOpenFiles": [
+    "Projects/AI Habit Breaking Headband/infographic_gpio_pin_allocation.png",
     "Projects/AI Habit Breaking Headband/infographic_audio_stereo_wiring.png",
     "Projects/AI Habit Breaking Headband/hardware_shopping_list.md",
-    "Projects/AI Habit Breaking Headband/infographic_gpio_pin_allocation.png",
     "Projects/AI Habit Breaking Headband/tykoo_build_guide_video (2).mp4",
     "Projects/AI Habit Breaking Headband/tykoo_build_guide_video.mp4",
     "Projects/AI Habit Breaking Headband/tykoo_build_guide_video (2).mp4.tmp",
