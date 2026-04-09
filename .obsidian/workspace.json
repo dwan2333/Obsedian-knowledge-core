@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finance/Stablecoin/crypto_collateralized_stablecoins_dai.md",
+                "file": "Git and Github/Git Commands.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "crypto_collateralized_stablecoins_dai"
+              "title": "Git Commands"
             }
           }
         ]
@@ -207,11 +207,18 @@
       "templater-obsidian:Templater": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "smart-chat:Open: Smart Chat": false,
+      "smart-context:Smart Context: Open Builder": false,
+      "smart-context:Smart Context: Copy to Clipboard (select depth)": false,
+      "smart-context:Smart Context: List Named Contexts": false
     }
   },
   "active": "d15221a00f88b988",
   "lastOpenFiles": [
+    "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
+    "Learning AI from TOP to Bottom/Operating System/Bash/Bash(Main).md",
+    "Finance/Stablecoin/crypto_collateralized_stablecoins_dai.md",
     "Finance/Stablecoin/hybrid_stablecoins_frax.md",
     "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
     "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
@@ -220,8 +227,6 @@
     "Git and Github/gitignore.md",
     "Git and Github/What is Git and GitHub.md",
     "Git and Github/Index and Object Store.md",
-    "Learning AI from TOP to Bottom/Operating System/Bash/Bash(Main).md",
-    "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
     "Poker/The Course/Part 1 The 30000 Foot View/the_poker_pyramid.md",
     "Poker/The Course/Part 1 The 30000 Foot View/the_poker_ecosystem.md",
     "Poker/The Course/Part 1 The 30000 Foot View/the_course_part1_infographic.png",
@@ -256,7 +261,6 @@
     "Projects/AI Habit Breaking Headband/AI Habit Breaking Headband (Main).md",
     "Poker/The Course/Part 1 The 30000 Foot View/the_course_part1_infographic (2).png",
     "Poker/Part 1 The 30000 Foot View/the_poker_pyramid.md",
-    "Poker/Part 1 The 30000 Foot View/the_poker_ecosystem.md",
     "Poker/Part 1 The 30000 Foot View/the_course_part1_infographic.png",
     "Untitled.canvas"
   ]
