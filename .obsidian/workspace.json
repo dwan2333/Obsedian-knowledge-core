@@ -11,13 +11,14 @@
             "id": "d15221a00f88b988",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "Untitled.base",
-                "viewName": "Table"
+                "file": "Finance/Futures/SOFR Future.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "Untitled"
+              "icon": "lucide-file",
+              "title": "SOFR Future"
             }
           }
         ]
@@ -215,8 +216,8 @@
   },
   "active": "d15221a00f88b988",
   "lastOpenFiles": [
-    "Finance/Futures/SOFR Future.md",
     "Untitled.base",
+    "Finance/Futures/SOFR Future.md",
     "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
     "Git and Github/What is Git and GitHub.md",
     "Git and Github/Index and Object Store.md",
