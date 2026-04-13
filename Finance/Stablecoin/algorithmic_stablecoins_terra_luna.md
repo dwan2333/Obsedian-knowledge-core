@@ -113,7 +113,7 @@ The critical distinction: USDC and DAI have something *outside the system* backi
 ## Related Documents
 
 - **[Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Stable%20Coin%20(Main).md)** — Covers all stablecoin types, the dollar dominance feedback loop, ECB sovereignty concerns, and the emerging AI agent payment infrastructure.
-- **[Crypto-Collateralized Stablecoins: MakerDAO's DAI](crypto_collateralized_stablecoins_dai.md)** — Deep dive into the on-chain collateral model, the three-actor liquidation system, and the four-stage defense cascade.
+- **[Crypto-Collateralized Stablecoins: MakerDAO's DAI](Crypto-Collateralized%20Stablecoins.md)** — Deep dive into the on-chain collateral model, the three-actor liquidation system, and the four-stage defense cascade.
 - **[Synthetic / Hedged Stablecoins: Ethena's USDe](synthetic_stablecoins_ethena_usde.md)** — Shares Terra's 1:1 capital efficiency but avoids the death spiral by holding real collateral + a derivatives hedge.
-- **[Hybrid Stablecoins: FRAX & the Fractional-Algorithmic Experiment](hybrid_stablecoins_frax.md)** — Terra's collapse directly caused FRAX to abandon its fractional-algorithmic model and move to 100% collateralization.
+- **[Hybrid Stablecoins: FRAX & the Fractional-Algorithmic Experiment](Hybrid%20Stablecoins%20Frax.md)** — Terra's collapse directly caused FRAX to abandon its fractional-algorithmic model and move to 100% collateralization.
 - **[Stablecoin AI Agent Payment Infrastructure](ai_agent_payment_infrastructure.md)** — The four-layer agentic payment stack. Terra's collapse is why reserve-backed stablecoins (USDC, USDT) — not algorithmic ones — became the settlement asset of choice.

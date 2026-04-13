@@ -148,7 +148,7 @@ The industry arrived at a clear consensus: **algorithms and AI are powerful tool
 ## Related Documents
 
 - **[Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Stable%20Coin%20(Main).md)** — Covers all stablecoin types, the dollar dominance feedback loop, ECB sovereignty concerns, and the emerging AI agent payment infrastructure.
-- **[Crypto-Collateralized Stablecoins: MakerDAO's DAI](crypto_collateralized_stablecoins_dai.md)** — The on-chain over-collateralization model. FRAX originally aimed to improve on DAI's capital inefficiency through fractional reserves.
+- **[Crypto-Collateralized Stablecoins: MakerDAO's DAI](Crypto-Collateralized%20Stablecoins.md)** — The on-chain over-collateralization model. FRAX originally aimed to improve on DAI's capital inefficiency through fractional reserves.
 - **[Algorithmic Stablecoins: The TerraUSD / LUNA Collapse](algorithmic_stablecoins_terra_luna.md)** — The event that killed the fractional-algorithmic model. Terra proved that the algorithmic portion of FRAX's design was the liability, not the innovation.
 - **[Synthetic / Hedged Stablecoins: Ethena's USDe](synthetic_stablecoins_ethena_usde.md)** — A parallel approach to capital efficiency that uses derivatives hedging instead of algorithmic supply management.
 - **[Stablecoin AI Agent Payment Infrastructure](ai_agent_payment_infrastructure.md)** — The four-layer agentic payment stack. FRAX's AMO-managed collateral deployment shares design philosophy with programmable spending controls in agentic wallets.

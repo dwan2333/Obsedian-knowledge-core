@@ -130,7 +130,7 @@ Bank Independence:     USDC (needs banks) ✗  ←——→  DAI (on-chain only)
 ## Related Documents
 
 - **[Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Stable%20Coin%20(Main).md)** — Covers all stablecoin types, the dollar dominance feedback loop, ECB sovereignty concerns, and the emerging AI agent payment infrastructure.
-- **[Crypto-Collateralized Stablecoins: MakerDAO's DAI](crypto_collateralized_stablecoins_dai.md)** — The on-chain collateral model, three-actor liquidation system, and four-stage defense cascade. USDe solves DAI's capital inefficiency problem but introduces exchange dependency.
+- **[Crypto-Collateralized Stablecoins: MakerDAO's DAI](Crypto-Collateralized%20Stablecoins.md)** — The on-chain collateral model, three-actor liquidation system, and four-stage defense cascade. USDe solves DAI's capital inefficiency problem but introduces exchange dependency.
 - **[Algorithmic Stablecoins: The TerraUSD / LUNA Collapse](algorithmic_stablecoins_terra_luna.md)** — The cautionary tale. USDe shares Terra's 1:1 capital efficiency but avoids its fatal flaw by holding real collateral + a hedge, rather than relying on confidence alone.
-- **[Hybrid Stablecoins: FRAX & the Fractional-Algorithmic Experiment](hybrid_stablecoins_frax.md)** — A parallel approach to blending collateral with algorithmic tools. FRAX uses AMOs for treasury management; USDe uses derivatives for hedging.
+- **[Hybrid Stablecoins: FRAX & the Fractional-Algorithmic Experiment](Hybrid%20Stablecoins%20Frax.md)** — A parallel approach to blending collateral with algorithmic tools. FRAX uses AMOs for treasury management; USDe uses derivatives for hedging.
 - **[Stablecoin AI Agent Payment Infrastructure](ai_agent_payment_infrastructure.md)** — The four-layer agentic payment stack. USDe's centralized exchange dependency mirrors the exchange risks in the agent wallet infrastructure.
