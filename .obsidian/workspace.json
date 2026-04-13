@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Finance/Stablecoin/crypto_collateralized_stablecoins_dai.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -186,7 +186,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 289.5
+    "width": 289.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -209,7 +210,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a3f3b5b62d0f9b55",
+  "active": "d15221a00f88b988",
   "lastOpenFiles": [
     "Finance/Stablecoin/Stable Coin (Main).md",
     "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
