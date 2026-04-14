@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
+                "file": "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of the agent logic loop"
+              "title": "Outline of Crypto-Collateralized Stablecoins"
             }
           },
           {
@@ -182,7 +182,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -216,13 +216,13 @@
   },
   "active": "d15221a00f88b988",
   "lastOpenFiles": [
+    "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
     "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
     "Finance/Stablecoin/Stable Coin (Main).md",
-    "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
-    "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24000.1776176021536",
     "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
     "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
+    "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24000.1776176021536",
     "Finance/Futures/SOFR Future.md",
     "Finance/Treasury Bonds/Treasury Bonds (main).md",
     "Untitled.base",
