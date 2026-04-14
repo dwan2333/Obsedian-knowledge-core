@@ -137,11 +137,12 @@ Karen walks away with 1 ETH (worth $2,400) for 2,300 DAI — about $100 profit. 
 
 ## Where MakerDAO's Money Comes From
 
-| Revenue Source | Share | How It Works |
-|---|---|---|
-| **U.S. Treasury bills** | ~80% | PSM USDC deployed into T-bills via Monetalis, BlockTower |
-| **Stability Fees** | ~15% | Borrower interest from all active vaults |
-| **Liquidation penalties** | ~5% | 13% penalty on each liquidated vault |
+| Revenue Source            | Share | How It Works                                             |
+| ------------------------- | ----- | -------------------------------------------------------- |
+| **U.S. Treasury bills**   | ~80%  | PSM USDC deployed into T-bills via Monetalis, BlockTower |
+| **Stability Fees**        | ~15%  | Borrower interest from all active vaults                 |
+| **Liquidation penalties** | ~5%   | 13% penalty on each liquidated vault                     |
+|                           |       |                                                          |
 
 The T-bill number surprises most people. Starting in 2022, MakerDAO voted to take billions in USDC from the PSM and deploy it into short-term U.S. government bonds. Those bonds pay ~5% per year in real dollars, which gets converted to DAI and flows into the Surplus Buffer. In 2023, this single source generated over $13 million — roughly 80% of all MakerDAO revenue that year.
 
@@ -165,10 +166,10 @@ Both directions are automatic, profitable, and open to anyone. The result is tha
 
 All decisions — setting the DSR, adjusting Stability Fees, approving T-bill investments, adding collateral types — are made by **MKR holders**. The more MKR you hold, the more votes you have.
 
-| Vote Type | Purpose | Duration | Effect |
-|---|---|---|---|
-| **Governance Poll** | Temperature check — does the community support this direction? | 2-3 days | No contract changes; signals consensus |
-| **Executive Vote** | The change that actually happens on-chain | Ongoing | Whichever proposal has the most MKR locked wins |
+| Vote Type           | Purpose                                                        | Duration | Effect                                          |
+| ------------------- | -------------------------------------------------------------- | -------- | ----------------------------------------------- |
+| **Governance Poll** | Temperature check — does the community support this direction? | 2-3 days | No contract changes; signals consensus          |
+| **Executive Vote**  | The change that actually happens on-chain                      | Ongoing  | Whichever proposal has the most MKR locked wins |
 
 The Executive Vote mechanic is unusual: proposals compete continuously, and whichever has the most MKR tokens locked behind it becomes the active state of the system. A new proposal has to gather more MKR support than the current winner to flip the protocol to the new state.
 
@@ -178,12 +179,12 @@ MKR holders take voting seriously because they have skin in the game. If everyth
 
 ## The Four Stages of Defense
 
-| Stage | Trigger | Mechanism | Cost |
-|---|---|---|---|
-| **Over-collateralization** | Normal volatility | 150% ratio absorbs small drops | None — borrower manages their own ratio |
-| **Keeper Auctions** | Vault falls below 150% | Bots liquidate + collect 13% penalty | Borrower loses collateral at a discount |
-| **MKR Dilution** | Bad debt exceeds Surplus Buffer | New MKR minted and sold for DAI | All MKR holders diluted |
-| **Emergency Shutdown** | System-level failure | Everything freezes; DAI redeemable for proportional collateral share | Protocol effectively ends |
+| Stage                      | Trigger                         | Mechanism                                                            | Cost                                    |
+| -------------------------- | ------------------------------- | -------------------------------------------------------------------- | --------------------------------------- |
+| **Over-collateralization** | Normal volatility               | 150% ratio absorbs small drops                                       | None — borrower manages their own ratio |
+| **Keeper Auctions**        | Vault falls below 150%          | Bots liquidate + collect 13% penalty                                 | Borrower loses collateral at a discount |
+| **MKR Dilution**           | Bad debt exceeds Surplus Buffer | New MKR minted and sold for DAI                                      | All MKR holders diluted                 |
+| **Emergency Shutdown**     | System-level failure            | Everything freezes; DAI redeemable for proportional collateral share | Protocol effectively ends               |
 
 Stage 3 — MKR Dilution — was triggered exactly once in MakerDAO's history. On **Black Thursday, March 2020**, ETH crashed so fast that liquidation auctions failed to find enough buyers. About $6 million in bad debt accumulated, and the protocol covered it by minting and auctioning new MKR tokens.
 
