@@ -69,13 +69,13 @@ The basic rule: **USDC is a receipt for cash you already own — no interest eit
 
 ## Key Differences from USDC and USDT
 
-| Dimension | USDC / USDT | DAI |
-|---|---|---|
-| Trust model | Trust the issuing company | Trust the smart contract code |
-| Censorship resistance | Issuers can freeze wallets | Nobody can freeze your tokens |
-| Capital efficiency | 1:1 backing | ~1.5:1 needed to borrow $1 |
-| Transparency | Periodic audit reports | Real-time, on-chain, auditable always |
-| Built-in yield | None | DSR savings rate (~5% APY) |
+| Dimension             | USDC / USDT                | DAI                                   |
+| --------------------- | -------------------------- | ------------------------------------- |
+| Trust model           | Trust the issuing company  | Trust the smart contract code         |
+| Censorship resistance | Issuers can freeze wallets | Nobody can freeze your tokens         |
+| Capital efficiency    | 1:1 backing                | ~1.5:1 needed to borrow $1            |
+| Transparency          | Periodic audit reports     | Real-time, on-chain, auditable always |
+| Built-in yield        | None                       | DSR savings rate (~5% APY)            |
 
 ---
 
