@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
+                "file": "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hybrid Stablecoins Frax"
+              "title": "Crypto-Collateralized Stablecoins"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
+                "file": "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Hybrid Stablecoins Frax"
+              "title": "Outline of Crypto-Collateralized Stablecoins"
             }
           },
           {
@@ -216,8 +216,9 @@
   },
   "active": "d15221a00f88b988",
   "lastOpenFiles": [
-    "Finance/Stablecoin/Stable Coin (Main).md",
     "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
+    "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24432.1776178609544",
+    "Finance/Stablecoin/Stable Coin (Main).md",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24000.1776176855669",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24000.1776176849946",
@@ -233,7 +234,6 @@
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24000.1776176021536",
     "Finance/Futures/SOFR Future.md",
     "Finance/Treasury Bonds/Treasury Bonds (main).md",
-    "Untitled.base",
     "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
     "Git and Github/What is Git and GitHub.md",
     "Git and Github/Index and Object Store.md",

@@ -14,12 +14,12 @@ DAI is a stablecoin that lives on Ethereum and tries to stay worth exactly $1, j
 
 The whole MakerDAO system makes more sense when you imagine it as four characters interacting with one giant smart contract.
 
-| Role | Who They Are | What They Do |
-|---|---|---|
-| **Alice the Borrower** | ETH holder who wants cash without selling | Locks ETH, mints DAI, pays Stability Fee |
-| **Bob the Saver** | DAI holder looking for yield | Deposits DAI into DSR, earns ~5% APY |
-| **Mike the Borrower** | Borrower who gets too close to the edge | Gets liquidated when ETH price drops |
-| **Karen the Keeper** | Bot operator | Scans for unsafe vaults, buys discounted collateral |
+| Role                   | Who They Are                              | What They Do                                        |
+| ---------------------- | ----------------------------------------- | --------------------------------------------------- |
+| **Alice the Borrower** | ETH holder who wants cash without selling | Locks ETH, mints DAI, pays Stability Fee            |
+| **Bob the Saver**      | DAI holder looking for yield              | Deposits DAI into DSR, earns ~5% APY                |
+| **Mike the Borrower**  | Borrower who gets too close to the edge   | Gets liquidated when ETH price drops                |
+| **Karen the Keeper**   | Bot operator                              | Scans for unsafe vaults, buys discounted collateral |
 
 Alice owns 1 ETH worth $3,000 and she's bullish on Ethereum's future. She doesn't want to sell, but she needs cash for a vacation. So she locks her ETH in MakerDAO and borrows 2,000 DAI against it. If Ethereum triples while her loan is open, all that appreciation stays with her ETH — the DAI loan amount is fixed.
 
@@ -45,11 +45,11 @@ To get her ETH back, Alice returns the original 2,000 DAI plus a small **Stabili
 
 MakerDAO is not limited to ETH. It accepts a range of crypto assets, each with its own stability fee and liquidation ratio set by MKR governance based on that asset's risk profile.
 
-| Collateral Type | How It Enters | Stability Fee Logic |
-|---|---|---|
-| **ETH, wBTC, stETH** | Standard vault (overcollateralized) | Higher risk = higher fee |
-| **USDC, stablecoins** | Peg Stability Module — 1:1 swap | No ongoing fee; one-time swap fee only |
-| **RWA (T-bills, bonds)** | Off-chain via institutional partners | Yield flows back to MakerDAO |
+| Collateral Type          | How It Enters                        | Stability Fee Logic                    |
+| ------------------------ | ------------------------------------ | -------------------------------------- |
+| **ETH, wBTC, stETH**     | Standard vault (overcollateralized)  | Higher risk = higher fee               |
+| **USDC, stablecoins**    | Peg Stability Module — 1:1 swap      | No ongoing fee; one-time swap fee only |
+| **RWA (T-bills, bonds)** | Off-chain via institutional partners | Yield flows back to MakerDAO           |
 
 For volatile crypto assets, the vault mechanism works as described above — you overcollateralize, pay a stability fee, and get liquidated if you fall below the ratio. Riskier assets like wBTC carry higher fees than ETH because they depend on a bridge and carry additional counterparty risk. stETH may carry a slightly lower fee because it's yield-bearing.
 
