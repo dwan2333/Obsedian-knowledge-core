@@ -207,16 +207,20 @@
       "templater-obsidian:Templater": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "smart-chat:Open: Smart Chat": false,
+      "smart-context:Smart Context: Open Builder": false,
+      "smart-context:Smart Context: Copy to Clipboard (select depth)": false,
+      "smart-context:Smart Context: List Named Contexts": false
     }
   },
   "active": "d15221a00f88b988",
   "lastOpenFiles": [
     "Finance/Stablecoin/Stable Coin (Main).md",
-    "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
     "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
-    "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
     "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
+    "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
+    "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
     "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
     "Finance/Futures/SOFR Future.md",
     "Finance/Treasury Bonds/Treasury Bonds (main).md",
