@@ -192,6 +192,30 @@ Stage 4 — Emergency Shutdown — has never been triggered. It exists as the ul
 
 ---
 
+## The Sky Rebrand: MakerDAO in 2024
+
+In August 2024, MakerDAO rebranded itself to **Sky Protocol** and introduced new versions of its core tokens.
+
+| Old | New | Conversion |
+|---|---|---|
+| **MKR** | SKY | 1 MKR = 24,000 SKY |
+| **DAI** | USDS (Sky Dollar) | 1:1 |
+| **DSR** | SSR (Sky Savings Rate) | Same mechanism, renamed |
+
+The conversion is voluntary — DAI and MKR still exist and continue to work. The rebrand was partly a marketing move (smaller SKY unit price feels more accessible) and partly a signal that the protocol is positioning itself for regulatory compliance.
+
+### The Controversial Part: USDS Can Be Frozen
+
+The one meaningful difference between DAI and USDS is that **USDS introduced a wallet blacklisting function**. A designated group of administrators can freeze specific USDS wallets without going through a community governance vote. The justification is that when a government demands a wallet be frozen, you can't wait three days for a governance poll — you have to act immediately or face legal consequences.
+
+This creates a two-tier system. Routine decisions (savings rates, collateral types, fees) still go through normal SKY governance voting. Emergency compliance actions bypass that entirely.
+
+For people who chose DAI specifically because no one could touch their tokens, this was a fundamental betrayal of the original promise. Many DeFi users intentionally stayed on DAI rather than migrating to USDS for exactly this reason. DAI has no blacklist function — the code is the only authority, and that hasn't changed.
+
+The deeper reality is that the entity most likely to trigger a freeze isn't the Sky community — it's a government applying legal pressure on the Sky team. The "decentralized governance" aspect becomes theoretical the moment a regulator sends a demand letter. This is the unavoidable tension every DeFi protocol faces as it grows large enough to attract regulatory attention: stay purely decentralized and risk being shut down, or add compliance features and survive but compromise the original promise.
+
+---
+
 ## Why It All Matters
 
 MakerDAO is a decentralized protocol that lets people borrow stablecoins against their crypto, charges interest on those loans, invests its reserves in U.S. Treasury bills, collects 13% penalty fees from liquidated borrowers, and shares most of that combined income with DAI savers — all without any company in the middle.
