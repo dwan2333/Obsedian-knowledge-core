@@ -4,13 +4,13 @@
 
 ---
 
-**What DAI Is in One Paragraph**
+## What DAI Is in One Paragraph
 
 DAI is a stablecoin that lives on Ethereum and tries to stay worth exactly $1, just like USDC or USDT. The big difference is how it's created. USDC is issued by a company called Circle who holds real dollars in a bank for every USDC token. DAI has no company behind it — it's created entirely by smart contracts on Ethereum. Anyone can mint new DAI by locking up cryptocurrency (usually ETH) as collateral and borrowing DAI against it, kind of like a digital pawn shop. The whole system is run by code and governed by people who hold a token called MKR. There's no CEO, no headquarters, no bank account. Everything happens transparently on the blockchain, and anyone can audit the system in real time.
 
 ---
 
-**Meet the People in Our Story**
+## Meet the People in Our Story
 
 The whole MakerDAO system makes a lot more sense when you imagine it as a handful of characters interacting with one giant smart contract. There are four roles worth knowing.
 
@@ -26,7 +26,7 @@ These four roles are the entire ecosystem. Everyone else just trades DAI on exch
 
 ---
 
-**How Minting Actually Works (Alice's Story)**
+## How Minting Actually Works (Alice's Story)
 
 When Alice deposits her 1 ETH and wants to borrow DAI, she can't just take the full $3,000 worth. MakerDAO requires what's called a 150% collateralization ratio, meaning her ETH must always be worth at least 1.5 times the size of her loan. So $3,000 divided by 1.5 equals $2,000 — that's the maximum she can borrow. That extra $1,000 cushion is the safety buffer against crypto price volatility.
 
@@ -38,7 +38,7 @@ To get her ETH back, Alice has to return the original 2,000 DAI plus a small Sta
 
 ---
 
-**Why DAI Charges Interest But USDC Doesn't**
+## Why DAI Charges Interest But USDC Doesn't
 
 This is one of the most important conceptual differences between stablecoins and worth understanding clearly.
 
@@ -52,7 +52,7 @@ So the basic rule is: USDC is a receipt for cash you already own, no interest ch
 
 ---
 
-**Key Differences from USDC and USDT**
+## Key Differences from USDC and USDT
 
 | Dimension | USDC / USDT | DAI |
 |---|---|---|
@@ -64,7 +64,7 @@ So the basic rule is: USDC is a receipt for cash you already own, no interest ch
 
 ---
 
-**When Things Go Wrong: Mike Gets Liquidated**
+## When Things Go Wrong: Mike Gets Liquidated
 
 Now let's watch what happens when a borrower can't keep their loan safe.
 
@@ -84,7 +84,7 @@ One detail worth understanding is that MakerDAO doesn't need Mike's specific DAI
 
 ---
 
-**Where MakerDAO's Huge Pile of Money Actually Comes From**
+## Where MakerDAO's Huge Pile of Money Actually Comes From
 
 A natural question is: if MakerDAO is decentralized with no company, where does its giant reserve of money come from? The answer is that it came from three real revenue sources, accumulated automatically by the smart contracts over many years.
 
@@ -98,7 +98,7 @@ Put all three sources together and MakerDAO has a self-sustaining revenue machin
 
 ---
 
-**How Bob Earns Yield From the DSR**
+## How Bob Earns Yield From the DSR
 
 Now we can answer where Bob's 5% savings yield actually comes from. When Bob deposits 1,000 DAI into the savings contract and watches it grow to 1,050 DAI over the year, that extra $50 isn't created out of thin air. It comes directly from the Surplus Buffer. Roughly $40 of his $50 in yield originated as interest from U.S. Treasury bills that MakerDAO holds in reserves. The other $10 or so came from borrowers like Alice paying their Stability Fees. A small amount came from liquidation penalties on unlucky borrowers like Mike.
 
@@ -110,7 +110,7 @@ There is a catch: the DSR rate isn't fixed. It moves up and down based on what t
 
 ---
 
-**The Peg Stability Module: Keeping DAI Exactly at $1**
+## The Peg Stability Module: Keeping DAI Exactly at $1
 
 Long-term, interest rates (the Stability Fee and the DSR) adjust supply and demand for DAI to keep it near $1. But day-to-day, a different mechanism does the real work of holding the peg. It's called the Peg Stability Module, or PSM.
 
@@ -120,7 +120,7 @@ Here's how it plays out. If DAI ever drops to $0.99 on a regular exchange, arbit
 
 ---
 
-**How the Community Actually Votes**
+## How the Community Actually Votes
 
 All of these decisions — setting the DSR, adjusting Stability Fees, approving T-bill investments, deciding collateral types — are made by people who hold a token called MKR. If you own MKR, you get a vote. The more MKR you hold, the more votes you have. MKR holders are essentially the shareholders of MakerDAO.
 
@@ -136,7 +136,7 @@ MKR holders take all of this seriously because they have skin in the game. If ev
 
 ---
 
-**The Four Stages of Defense**
+## The Four Stages of Defense
 
 MakerDAO has a four-stage defense system designed to handle increasingly bad situations. Each stage is more painful than the last.
 
@@ -150,7 +150,7 @@ The fourth stage is Emergency Shutdown, which is the nuclear option. If nobody w
 
 ---
 
-**Why It All Matters**
+## Why It All Matters
 
 If you only remember one thing about MakerDAO, it's this: it's a decentralized protocol that lets people borrow stablecoins against their crypto, charges them interest on those loans, invests its reserves in U.S. Treasury bills for safe yield, collects 13% penalty fees from liquidated borrowers, and shares most of that combined income with people who park their DAI in the savings contract — all without any company in the middle, governed by a community of MKR token holders who vote on every important decision.
 
