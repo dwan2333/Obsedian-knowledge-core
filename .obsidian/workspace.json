@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
+                "file": "Finance/Stablecoin/Stable Coin (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "synthetic_stablecoins_ethena_usde"
+              "title": "Stable Coin (Main)"
             }
           }
         ]
@@ -216,12 +216,12 @@
   },
   "active": "d15221a00f88b988",
   "lastOpenFiles": [
-    "Finance/Stablecoin/Stable Coin (Main).md",
     "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
+    "Finance/Stablecoin/Stable Coin (Main).md",
+    "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
     "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
     "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
-    "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
     "Finance/Futures/SOFR Future.md",
     "Finance/Treasury Bonds/Treasury Bonds (main).md",
     "Untitled.base",
