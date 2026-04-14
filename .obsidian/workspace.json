@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finance/Stablecoin/Stable Coin (Main).md",
+                "file": "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Stable Coin (Main)"
+              "title": "Hybrid Stablecoins Frax"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Finance/Stablecoin/Stable Coin (Main).md",
+                "file": "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Stable Coin (Main)"
+              "title": "Outline of Hybrid Stablecoins Frax"
             }
           },
           {
@@ -216,9 +216,9 @@
   },
   "active": "d15221a00f88b988",
   "lastOpenFiles": [
+    "Finance/Stablecoin/Stable Coin (Main).md",
     "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
-    "Finance/Stablecoin/Stable Coin (Main).md",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24000.1776176855669",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24000.1776176849946",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24000.1776176843398",
