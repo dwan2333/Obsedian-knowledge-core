@@ -6,49 +6,64 @@
 
 ## What DAI Is in One Paragraph
 
-DAI is a stablecoin that lives on Ethereum and tries to stay worth exactly $1, just like USDC or USDT. The big difference is how it's created. USDC is issued by a company called Circle who holds real dollars in a bank for every USDC token. DAI has no company behind it — it's created entirely by smart contracts on Ethereum. Anyone can mint new DAI by locking up cryptocurrency (usually ETH) as collateral and borrowing DAI against it, kind of like a digital pawn shop. The whole system is run by code and governed by people who hold a token called MKR. There's no CEO, no headquarters, no bank account. Everything happens transparently on the blockchain, and anyone can audit the system in real time.
+DAI is a stablecoin that lives on Ethereum and tries to stay worth exactly $1, just like USDC or USDT. The big difference is how it's created. USDC is issued by a company called Circle who holds real dollars in a bank for every USDC token. DAI has no company behind it — it's created entirely by smart contracts on Ethereum. Anyone can mint new DAI by locking up cryptocurrency as collateral and borrowing DAI against it, kind of like a digital pawn shop. The whole system is run by code and governed by people who hold a token called MKR. There's no CEO, no headquarters, no bank account. Everything happens transparently on the blockchain, and anyone can audit the system in real time.
 
 ---
 
-## Meet the People in Our Story
+## The Four Roles in MakerDAO
 
-The whole MakerDAO system makes a lot more sense when you imagine it as a handful of characters interacting with one giant smart contract. There are four roles worth knowing.
+The whole MakerDAO system makes more sense when you imagine it as four characters interacting with one giant smart contract.
 
-The first is Alice the Borrower. Alice owns 1 ETH worth $3,000 and she's bullish on Ethereum's future. She doesn't want to sell her ETH because she thinks the price will go up, but she needs cash for a vacation. So she goes to MakerDAO, locks up her ETH, and borrows 2,000 DAI against it. She agrees to pay back the loan plus a Stability Fee every year. Now she has $2,000 in cash to spend, and her ETH stays safely locked up until she pays back the loan. If Ethereum triples in price while her loan is open, she still only owes back the original 2,000 DAI plus interest — so all that appreciation stays with her ETH, which is the whole reason she borrowed instead of selling.
+| Role | Who They Are | What They Do |
+|---|---|---|
+| **Alice the Borrower** | ETH holder who wants cash without selling | Locks ETH, mints DAI, pays Stability Fee |
+| **Bob the Saver** | DAI holder looking for yield | Deposits DAI into DSR, earns ~5% APY |
+| **Mike the Borrower** | Borrower who gets too close to the edge | Gets liquidated when ETH price drops |
+| **Karen the Keeper** | Bot operator | Scans for unsafe vaults, buys discounted collateral |
 
-The second is Bob the Saver. Bob already has 1,000 DAI sitting in his wallet doing nothing. Instead of letting it sit there, he deposits it into MakerDAO's savings contract (called the DSR) and earns roughly 5% per year just for holding it there. At the end of one year, his balance has automatically grown to 1,050 DAI. He didn't do anything — the yield just appeared.
+Alice owns 1 ETH worth $3,000 and she's bullish on Ethereum's future. She doesn't want to sell, but she needs cash for a vacation. So she locks her ETH in MakerDAO and borrows 2,000 DAI against it. If Ethereum triples while her loan is open, all that appreciation stays with her ETH — the DAI loan amount is fixed.
 
-The third is Mike the Borrower. Mike does the same thing Alice did, but his story goes wrong when the market crashes. We'll follow Mike later to see what happens when a borrower can't keep their loan safe.
+Bob already has 1,000 DAI sitting idle. He deposits it into MakerDAO's savings contract (the DSR) and earns roughly 5% per year. By the end of one year, his balance has grown to 1,050 DAI automatically.
 
-The fourth is Karen the Keeper. Karen runs an automated bot that scans MakerDAO 24/7 looking for borrowers whose collateral has dropped below the safety threshold. When she finds one, her bot jumps in and buys the discounted ETH from the system, making a small profit on each liquidation. Anyone can run a keeper bot — there's no permission needed.
+Mike does the same thing as Alice but cuts it too close, and his story goes wrong when the market crashes — we'll follow him through the liquidation section.
 
-These four roles are the entire ecosystem. Everyone else just trades DAI on exchanges or uses it in DeFi apps.
+Karen runs an automated bot that scans MakerDAO 24/7 looking for vaults below the safety threshold. When she finds one, her bot jumps in and buys the discounted collateral. Anyone can run a keeper bot — no permission needed.
 
 ---
 
 ## How Minting Actually Works (Alice's Story)
 
-When Alice deposits her 1 ETH and wants to borrow DAI, she can't just take the full $3,000 worth. MakerDAO requires what's called a 150% collateralization ratio, meaning her ETH must always be worth at least 1.5 times the size of her loan. So $3,000 divided by 1.5 equals $2,000 — that's the maximum she can borrow. That extra $1,000 cushion is the safety buffer against crypto price volatility.
+When Alice deposits her 1 ETH, she can't take the full $3,000 worth of DAI. MakerDAO requires a **150% collateralization ratio** — her ETH must always be worth at least 1.5× the size of her loan. So $3,000 ÷ 1.5 = $2,000 maximum. That extra $1,000 cushion is the safety buffer against volatility.
 
-The moment Alice confirms the transaction, the smart contract does two things at once. It locks her ETH in a vault that nobody (including Alice) can touch while the loan is open. And it creates 2,000 brand-new DAI out of thin air and sends them to her wallet. That DAI didn't exist before Alice took the loan. It was literally invented by the smart contract the moment she borrowed it.
+The smart contract does two things at once: it locks her ETH (nobody, including Alice, can touch it while the loan is open), and it creates 2,000 brand-new DAI out of thin air and sends it to her wallet. That DAI didn't exist before — it was minted by the contract the moment she borrowed.
 
-Alice takes her 2,000 DAI and uses it however she wants — swapping it for dollars, paying a contractor, buying NFTs, whatever. The DAI is fungible with all other DAI in existence, so it doesn't matter what she does with her specific tokens.
+To get her ETH back, Alice returns the original 2,000 DAI plus a small **Stability Fee** (the interest on her loan). The contract burns the returned DAI — destroying it permanently — and unlocks her ETH.
 
-To get her ETH back, Alice has to return the original 2,000 DAI plus a small Stability Fee (the interest on her loan). The smart contract burns the DAI she returns — destroying it permanently and removing it from circulation — and unlocks her ETH. If ETH appreciated while the loan was open, she benefits from that appreciation on her ETH, not on the DAI itself. DAI is a borrowing tool, not an investment.
+---
+
+## What Collateral MakerDAO Accepts
+
+MakerDAO is not limited to ETH. It accepts a range of crypto assets, each with its own stability fee and liquidation ratio set by MKR governance based on that asset's risk profile.
+
+| Collateral Type | How It Enters | Stability Fee Logic |
+|---|---|---|
+| **ETH, wBTC, stETH** | Standard vault (overcollateralized) | Higher risk = higher fee |
+| **USDC, stablecoins** | Peg Stability Module — 1:1 swap | No ongoing fee; one-time swap fee only |
+| **RWA (T-bills, bonds)** | Off-chain via institutional partners | Yield flows back to MakerDAO |
+
+For volatile crypto assets, the vault mechanism works as described above — you overcollateralize, pay a stability fee, and get liquidated if you fall below the ratio. Riskier assets like wBTC carry higher fees than ETH because they depend on a bridge and carry additional counterparty risk. stETH may carry a slightly lower fee because it's yield-bearing.
+
+For stablecoins like USDC, the vault model doesn't apply. Charging ongoing interest on something already pegged to $1 makes no sense — there's no risk premium to justify it. Instead, USDC enters through the **Peg Stability Module**, explained in its own section below.
 
 ---
 
 ## Why DAI Charges Interest But USDC Doesn't
 
-This is one of the most important conceptual differences between stablecoins and worth understanding clearly.
+When you want USDC, you don't borrow it — you buy it. You give Circle one real dollar and they give you one USDC. There's no loan, no interest, no monthly payment. When you want your dollar back, Circle sends it. They hold your dollar the whole time and earn interest on it themselves. That's Circle's entire business model — in 2024 they earned about $1.6 billion this way, 99% of their total revenue. None of that goes to USDC holders.
 
-When you want USDC, you don't borrow it. You buy it. You give Circle one real U.S. dollar and they give you one USDC token in exchange. There's no loan, no interest, no monthly payment. You simply swapped one form of dollar (paper) for another form of dollar (a token on Ethereum). When you want your dollar back, you give Circle the USDC and they send you a dollar. Circle holds your dollar in their reserves the entire time you have the USDC. That's why they can earn interest on it themselves. But you, as the USDC holder, never owe anyone anything.
+DAI is fundamentally different. You can't buy DAI from MakerDAO — you have to borrow it into existence. You lock up ETH, the contract creates fresh DAI, and you owe interest on that loan for as long as it's open. MakerDAO then shares most of that income with savers through the DSR, which is what makes DAI more attractive if you're just parking stablecoins long-term.
 
-DAI is fundamentally different. You can't buy DAI directly from MakerDAO. You have to borrow it into existence. You lock up your ETH as collateral, the smart contract creates brand-new DAI for you, and you owe interest on that loan for as long as it's open. If you want to get your ETH back, you have to return the DAI plus the Stability Fee. That's why Alice pays interest and a USDC buyer doesn't.
-
-This also explains why USDC doesn't have a built-in savings rate. Circle's business model is to keep the interest earned on their reserves as profit. In 2024 they earned about $1.6 billion from this — 99% of their total revenue. None of that goes to USDC holders. MakerDAO does the opposite: they share most of their income with savers through the DSR, which is what makes DAI more attractive if you're just parking stablecoins long-term.
-
-So the basic rule is: USDC is a receipt for cash you already own, no interest charged either way. DAI is a loan you took out against your crypto, you pay interest to keep it open, and MakerDAO turns around and uses that fee revenue to pay savers a yield.
+The basic rule: **USDC is a receipt for cash you already own — no interest either way. DAI is a loan you took out against your crypto — you pay to keep it open, and MakerDAO pays that forward to savers.**
 
 ---
 
@@ -56,105 +71,131 @@ So the basic rule is: USDC is a receipt for cash you already own, no interest ch
 
 | Dimension | USDC / USDT | DAI |
 |---|---|---|
-| Trust model | Trust the issuing company (Circle, Tether) | Trust that the smart contract code works correctly |
-| Censorship resistance | Issuers can freeze wallets (Circle has done so under government order) | Nobody can freeze your tokens — fully decentralized |
-| Capital efficiency | 1:1 backing — deposit $1, get $1 | Capital inefficient — need ~$1.50 locked to get $1 out |
-| Transparency | Periodic attestation reports | Real-time, on-chain, auditable by anyone at any time |
-| Core tradeoff | Simplicity and efficiency | Decentralization and transparency |
+| Trust model | Trust the issuing company | Trust the smart contract code |
+| Censorship resistance | Issuers can freeze wallets | Nobody can freeze your tokens |
+| Capital efficiency | 1:1 backing | ~1.5:1 needed to borrow $1 |
+| Transparency | Periodic audit reports | Real-time, on-chain, auditable always |
+| Built-in yield | None | DSR savings rate (~5% APY) |
+
+---
+
+## How Bob Earns Yield: The DAI Savings Rate
+
+When Bob deposits 1,000 DAI into the savings contract and watches it grow to 1,050 DAI, that $50 isn't created from nothing. About $40 of it originated as yield from U.S. Treasury bills that MakerDAO holds in reserves. The other $10 came from borrowers like Alice paying their Stability Fees, with a small amount from liquidation penalties on borrowers like Mike.
+
+Bob is effectively earning U.S. Treasury bond yield through a crypto wrapper. He never opens a brokerage account, never signs up with the Treasury. He just holds a token and the yield appears. MakerDAO does all the work of buying real bonds, collecting real interest, and converting it into more DAI for him.
+
+The DSR rate isn't fixed — it moves with the U.S. Federal Reserve. When the Fed raised rates in 2023, T-bills paid more and the DSR hit 8%. When the Fed started cutting in 2025, T-bill income shrank and the DSR dropped to around 4.5%. MakerDAO can't pay savers more than they earn.
+
+### How Often Does the Yield Compound?
+
+The DSR does not compound monthly or daily. It compounds **continuously — every Ethereum block, roughly every 12 seconds.**
+
+The smart contract stores a tiny per-second multiplier (approximately 1.0000000015851 at 5% APY) rather than an annual figure. Every block, the rate ticks forward by that sliver. There are no payout events or settlement dates. If you deposit at 9am and withdraw at 9pm the same day, you've earned exactly twelve hours of yield, calculated to the second. The "5% APY" figure is just the human-readable label for this continuously running mechanism.
+
+---
+
+## sDAI: The Tradeable Version
+
+The standard DSR locks your DAI inside the savings contract while it earns yield. That works fine — but while it's locked, you can't trade it, post it as collateral elsewhere in DeFi, or send it to anyone without withdrawing first.
+
+**sDAI** solves this. When you deposit DAI into the sDAI contract, you receive sDAI tokens in return. Those tokens are fully transferable ERC-20 tokens — you can trade them, use them as collateral on other protocols, or send them to a hardware wallet. The yield keeps compounding regardless of where the token sits, because it's embedded in the **exchange rate between sDAI and DAI**, which ticks upward every block.
+
+```
+Standard DSR:
+  Deposit 1,000 DAI → balance grows to 1,050 DAI after 1 year
+  Your DAI is locked — cannot be moved or used elsewhere
+
+sDAI:
+  Deposit 1,000 DAI → receive 1,000 sDAI (exchange rate = 1.00)
+  After 1 year at 5% APY → exchange rate is now 1.05
+  Your 1,000 sDAI redeems for 1,050 DAI
+  But you could have traded, lent, or transferred it the entire time
+```
+
+Think of it like a savings bond you can hand to someone else mid-term. The new holder picks up the yield from that point forward. The previous holder walks away with whatever it was worth at the moment of transfer. This makes sDAI composable across all of DeFi in a way plain DSR never was.
 
 ---
 
 ## When Things Go Wrong: Mike Gets Liquidated
 
-Now let's watch what happens when a borrower can't keep their loan safe.
+Mike does exactly what Alice did — locks 1 ETH worth $3,000 and borrows the maximum 2,000 DAI. His collateralization ratio starts at exactly 150%, cutting it close.
 
-Mike does exactly what Alice did. He locks his 1 ETH worth $3,000 into MakerDAO and borrows the maximum of 2,000 DAI to renovate his kitchen. His collateralization ratio starts at exactly 150%, which is the absolute minimum allowed. He's cutting it close.
+Two months later, ETH falls from $3,000 to $2,400. Mike's vault now has 1 ETH worth $2,400 backing a 2,000 DAI debt — a 120% ratio, well below the required 150%. The smart contract flags his vault immediately. Mike gets no warning. The contract just marks his vault visible to every keeper bot on the planet.
 
-Two months later, the crypto market crashes. ETH falls from $3,000 to $2,400 per coin. Mike's vault now has 1 ETH worth $2,400 backing a 2,000 DAI debt, which is a 120% ratio — well below the required 150%. The smart contract notices this immediately and flags his vault as eligible for liquidation. Mike doesn't get a warning email or a phone call. The contract just marks his vault and makes it visible to every keeper bot on the planet.
+Karen's bot sees the flag and calculates: Mike owes 2,000 DAI plus a **13% liquidation penalty** (260 DAI), so his ETH must sell for at least 2,260 DAI. His ETH is worth $2,400 on the open market, leaving room for a small profit.
 
-Karen the Keeper's bot sees the flag instantly and does the math. "Mike owes 2,000 DAI plus a 13% liquidation penalty (260 DAI), so whoever wants his ETH has to pay at least 2,260 DAI. His ETH is worth $2,400 on the open market, so there's $140 of room for profit." Her bot decides to bid.
+MakerDAO runs a **Dutch auction** — price starts high and drops gradually over minutes. Karen's bot waits for the right moment and buys 1 ETH for 2,300 DAI in a single atomic transaction. The contract splits that 2,300 DAI automatically:
 
-MakerDAO uses a Dutch auction format where the price starts high and drops gradually over a few minutes. Karen's bot waits for the right moment and buys when the price reaches roughly 2,300 DAI for the entire 1 ETH. She pays 2,300 DAI to the contract and receives 1 ETH in return. All of this happens in a single atomic transaction on the blockchain.
+- **2,000 DAI burned** → Mike's debt closed
+- **260 DAI → Surplus Buffer** → MakerDAO's 13% penalty revenue
+- **40 DAI → back to Mike** → the auction surplus
 
-Now the smart contract automatically splits up that 2,300 DAI into three destinations. The first 2,000 DAI gets burned, which destroys Mike's outstanding debt — his loan is officially closed. The next 260 DAI flows into MakerDAO's Surplus Buffer as the 13% liquidation penalty. The remaining 40 DAI is sent back to Mike's wallet as the leftover from the auction (since Karen paid more than the strict minimum).
-
-Let me total up where everyone ends up. Karen walks away with 1 ETH worth $2,400 for which she paid 2,300 DAI — a profit of about $100 on this single transaction. She runs this bot 24/7 and catches dozens of liquidations per week, so this is a real business. MakerDAO collected 260 DAI in pure protocol revenue, which gets added to the same Surplus Buffer that funds the DSR. Mike is the loser. He came in with 1 ETH worth $3,000, and after liquidation he's left with the 2,000 DAI he already spent on his kitchen plus the 40 DAI of auction leftover. Effectively he sold his ETH at a steep discount and paid a 13% penalty for the privilege.
-
-One detail worth understanding is that MakerDAO doesn't need Mike's specific DAI back to close his loan. DAI is fungible — all DAI tokens are interchangeable. Karen supplied her own DAI to buy Mike's ETH. Mike is free to keep or spend whatever DAI he originally borrowed. What he loses is the ETH, not the DAI. He walked away with cash and lost the underlying asset. This is why getting liquidated is so painful — you effectively sold your ETH for a price well below market value, with a 13% tax on top.
+Karen walks away with 1 ETH (worth $2,400) for 2,300 DAI — about $100 profit. MakerDAO collected 260 DAI in protocol revenue. Mike came in with 1 ETH worth $3,000 and left with the 2,000 DAI he already spent plus 40 DAI — effectively selling his ETH at a steep discount with a 13% penalty on top.
 
 ---
 
-## Where MakerDAO's Huge Pile of Money Actually Comes From
+## Where MakerDAO's Money Comes From
 
-A natural question is: if MakerDAO is decentralized with no company, where does its giant reserve of money come from? The answer is that it came from three real revenue sources, accumulated automatically by the smart contracts over many years.
+| Revenue Source | Share | How It Works |
+|---|---|---|
+| **U.S. Treasury bills** | ~80% | PSM USDC deployed into T-bills via Monetalis, BlockTower |
+| **Stability Fees** | ~15% | Borrower interest from all active vaults |
+| **Liquidation penalties** | ~5% | 13% penalty on each liquidated vault |
 
-The first source is borrower interest (Stability Fees). Every time someone like Alice borrows DAI, she pays interest on the loan. Multiply this by hundreds of thousands of borrowers over many years and you get a massive accumulated pile. All of it flows into a treasury called the Surplus Buffer through the smart contracts — no human collects it, no company invoices anyone, the code just routes the payments automatically.
+The T-bill number surprises most people. Starting in 2022, MakerDAO voted to take billions in USDC from the PSM and deploy it into short-term U.S. government bonds. Those bonds pay ~5% per year in real dollars, which gets converted to DAI and flows into the Surplus Buffer. In 2023, this single source generated over $13 million — roughly 80% of all MakerDAO revenue that year.
 
-The second source, and this is the surprising one, is U.S. Treasury bills. Starting in 2022, the MakerDAO community voted to take billions of dollars from their reserves and use it to buy short-term U.S. government bonds through partnerships with companies like Monetalis and BlockTower. Those T-bills pay roughly 5% per year in interest, paid by the U.S. government in real dollars. That interest gets converted into DAI and flows back into the Surplus Buffer. In 2023, this single source generated about 80% of all of MakerDAO's revenue — over $13 million. So MakerDAO is basically a U.S. Treasury bond fund wearing a crypto costume. Most of their income comes from being a creditor to the U.S. government.
-
-The third source is liquidation penalties. As we just saw with Mike, every time a borrower gets wiped out, MakerDAO collects a 13% penalty on top of recovering the debt. This isn't a constant flow — it spikes during market crashes — but over time it adds millions of dollars to the Surplus Buffer. In fact, when you hear about a "wave of liquidations" during a crypto crash, that's actually good for DAI savers, because every liquidation pumps more revenue into the pile that funds their yield.
-
-Put all three sources together and MakerDAO has a self-sustaining revenue machine. Borrowers pay fees, T-bills generate interest, and liquidations collect penalties. Every dollar of this flows into one big pool controlled by the smart contract, ready to be deployed wherever the community votes to send it.
-
----
-
-## How Bob Earns Yield From the DSR
-
-Now we can answer where Bob's 5% savings yield actually comes from. When Bob deposits 1,000 DAI into the savings contract and watches it grow to 1,050 DAI over the year, that extra $50 isn't created out of thin air. It comes directly from the Surplus Buffer. Roughly $40 of his $50 in yield originated as interest from U.S. Treasury bills that MakerDAO holds in reserves. The other $10 or so came from borrowers like Alice paying their Stability Fees. A small amount came from liquidation penalties on unlucky borrowers like Mike.
-
-The really interesting insight is that Bob is effectively earning U.S. Treasury bond yield through a crypto wrapper. He never opens a brokerage account, never signs up with the U.S. Treasury, never deals with tax forms tied to bond purchases. He just holds a token in his wallet and the yield appears automatically. MakerDAO is doing all the work of buying real bonds, collecting real interest, and converting it into more DAI for him.
-
-Bob's month-by-month balance during his year in the DSR looks like this. In January he deposits 1,000 DAI. By June he has 1,025 DAI — the first half of his yield. By December he has 1,050 DAI — the full year's yield. Of that $50 gain, about $40 originated from U.S. Treasury interest and the rest from crypto borrowers. All of it flowed through MakerDAO's Surplus Buffer before landing in his wallet.
-
-There is a catch: the DSR rate isn't fixed. It moves up and down based on what the U.S. Federal Reserve is doing with interest rates. When the Fed raises rates, T-bills pay more, MakerDAO's income goes up, and the community can vote to raise the DSR. When the Fed cuts rates, T-bills pay less, MakerDAO's income drops, and the DSR has to come down to match. In 2023 the DSR was as high as 8% because the Fed had pushed rates above 5%. By 2025 the Fed started cutting, MakerDAO's T-bill income shrunk, and the DSR dropped to around 4.5%. MakerDAO can't pay savers more than they earn, so the math has to balance.
+All three sources flow automatically into one treasury controlled by the smart contract. No human collects it, no company invoices anyone, and that treasury is what funds Bob's savings yield.
 
 ---
 
-## The Peg Stability Module: Keeping DAI Exactly at $1
+## The Peg Stability Module: Keeping DAI at $1
 
-Long-term, interest rates (the Stability Fee and the DSR) adjust supply and demand for DAI to keep it near $1. But day-to-day, a different mechanism does the real work of holding the peg. It's called the Peg Stability Module, or PSM.
+Day-to-day, a mechanism called the **Peg Stability Module (PSM)** does the real work of holding DAI's price. It lets anyone instantly swap DAI for USDC at exactly 1:1, creating an immediate arbitrage that forces the price back to $1.
 
-The PSM is a special vault that lets anyone instantly swap DAI for centralized stablecoins like USDC at exactly a 1:1 ratio. This creates an immediate, risk-free arbitrage opportunity that forces the price back to $1.
+If DAI drops to $0.99 → arbitrageurs buy cheap DAI, swap it at the PSM for USDC at 1:1, pocket the 1-cent profit, and their buying pushes DAI back up.
 
-Here's how it plays out. If DAI ever drops to $0.99 on a regular exchange, arbitrageurs rush in to buy the cheap DAI, bring it to the PSM, and swap it for USDC at 1:1. They make a 1-cent profit per coin, and their buying pressure on the open market pushes DAI back up toward $1.00. In the opposite direction, if DAI rises to $1.01, arbitrageurs take USDC, use the PSM to mint fresh DAI at exactly $1.00, and immediately sell that DAI on the open market for $1.01. This floods the market with new DAI and pushes the price back down. The beauty of the PSM is that both of these are automatic and profitable, so anyone with capital can do it, and the result is that DAI almost never strays more than a cent or two from $1 for very long.
+If DAI rises to $1.01 → arbitrageurs bring USDC to the PSM, mint fresh DAI at exactly $1.00, sell it on the open market for $1.01, and the flood of new DAI pushes the price back down.
+
+Both directions are automatic, profitable, and open to anyone. The result is that DAI almost never strays more than a cent or two from $1 for long. The trade-off is that DAI's reserves include large amounts of USDC — a centralized stablecoin — which makes DAI less "purely decentralized" than its original design intended.
 
 ---
 
-## How the Community Actually Votes
+## How the Community Votes
 
-All of these decisions — setting the DSR, adjusting Stability Fees, approving T-bill investments, deciding collateral types — are made by people who hold a token called MKR. If you own MKR, you get a vote. The more MKR you hold, the more votes you have. MKR holders are essentially the shareholders of MakerDAO.
+All decisions — setting the DSR, adjusting Stability Fees, approving T-bill investments, adding collateral types — are made by **MKR holders**. The more MKR you hold, the more votes you have.
 
-Voting happens in two stages. The first is a Governance Poll, which is basically a community temperature check. Someone proposes an idea, people discuss it on the MakerDAO forum, and everyone votes on whether they like the direction. Polls usually run for 2-3 days. Nothing happens to the actual smart contracts at this stage — it's just to see if there's enough consensus to move forward.
+| Vote Type | Purpose | Duration | Effect |
+|---|---|---|---|
+| **Governance Poll** | Temperature check — does the community support this direction? | 2-3 days | No contract changes; signals consensus |
+| **Executive Vote** | The change that actually happens on-chain | Ongoing | Whichever proposal has the most MKR locked wins |
 
-If the poll passes, the proposal moves to an Executive Vote, which is the one that actually changes the protocol. The way Executive Votes work is unusual: instead of a yes/no on a single proposal, all proposals compete continuously, and whichever has the most MKR locked behind it becomes the active state of the system. It's like a tug-of-war that never officially ends — a new proposal has to gather more MKR support than the current winning one in order to flip the system to its new state.
+The Executive Vote mechanic is unusual: proposals compete continuously, and whichever has the most MKR tokens locked behind it becomes the active state of the system. A new proposal has to gather more MKR support than the current winner to flip the protocol to the new state.
 
-To actually vote, MKR holders have to lock their tokens into a special voting contract. While the tokens are locked, they count toward whatever proposal you're supporting. You can withdraw them anytime, but while they're locked they're tied up in your vote.
-
-So when you read a headline like "MakerDAO raised the DSR from 4% to 5%," the real sequence is this. Someone (often a core contributor or risk team) wrote up a proposal explaining why the rate should change. The community discussed it on the forum. A Governance Poll ran for a few days and passed. Someone wrote the actual code change and submitted it as an Executive Vote. MKR holders locked their tokens behind the new proposal, and once enough MKR voted in favor, the smart contract automatically updated the DSR rate. Anyone holding DAI in the savings contract started earning the new rate immediately.
-
-MKR holders take all of this seriously because they have skin in the game. If everything goes well, MKR captures protocol profits. But if MakerDAO ever has bad debt that can't be covered, the smart contract mints new MKR tokens and sells them to fill the hole — which dilutes everyone who holds MKR. So they have a direct financial incentive to vote responsibly: set rates that bring in enough revenue, manage risk carefully, and keep the system solvent.
+MKR holders take voting seriously because they have skin in the game. If everything goes well, MKR captures protocol profits. If the system ever runs a bad-debt deficit, new MKR gets minted and sold to cover it — diluting every MKR holder. So they have a direct financial incentive to vote conservatively.
 
 ---
 
 ## The Four Stages of Defense
 
-MakerDAO has a four-stage defense system designed to handle increasingly bad situations. Each stage is more painful than the last.
+| Stage | Trigger | Mechanism | Cost |
+|---|---|---|---|
+| **Over-collateralization** | Normal volatility | 150% ratio absorbs small drops | None — borrower manages their own ratio |
+| **Keeper Auctions** | Vault falls below 150% | Bots liquidate + collect 13% penalty | Borrower loses collateral at a discount |
+| **MKR Dilution** | Bad debt exceeds Surplus Buffer | New MKR minted and sold for DAI | All MKR holders diluted |
+| **Emergency Shutdown** | System-level failure | Everything freezes; DAI redeemable for proportional collateral share | Protocol effectively ends |
 
-The first stage is over-collateralization. The 150% requirement means borrowers always have a buffer between their loan and their collateral. This handles normal everyday volatility without any drama at all. Most borrowers never see any of the later stages because their positions stay healthy.
+Stage 3 — MKR Dilution — was triggered exactly once in MakerDAO's history. On **Black Thursday, March 2020**, ETH crashed so fast that liquidation auctions failed to find enough buyers. About $6 million in bad debt accumulated, and the protocol covered it by minting and auctioning new MKR tokens.
 
-The second stage is keeper auctions, which is what happened to Mike. When ETH falls enough to eat through the buffer, keeper bots like Karen step in and liquidate the vault. They pay off the debt, collect their profit, and MakerDAO collects the 13% penalty. This works fine under moderate stress and is the normal way the system handles crashes.
-
-The third stage is MKR dilution. When a crash is so violent that auctions fail to recover enough DAI — because ETH is falling so fast that even discounted auctions can't find buyers — MakerDAO accumulates what's called bad debt, meaning DAI in circulation that isn't backed by enough collateral. The smart contract then mints brand-new MKR tokens and auctions them for DAI to fill the hole. MKR holders absorb the loss through dilution. This was triggered exactly once in MakerDAO's history, during Black Thursday in March 2020, when about $6 million in bad debt accumulated and was covered through MKR minting.
-
-The fourth stage is Emergency Shutdown, which is the nuclear option. If nobody will buy MKR either, the entire system freezes. No more minting, no more liquidations, no more auctions. Every DAI holder claims a proportional share of whatever collateral remains. If there's only $0.80 of backing per DAI, everyone gets $0.80. The system effectively dies in an orderly wind-down rather than a chaotic collapse. This has never been triggered.
+Stage 4 — Emergency Shutdown — has never been triggered. It exists as the ultimate guarantee that DAI is always redeemable for something real, even if everything else fails.
 
 ---
 
 ## Why It All Matters
 
-If you only remember one thing about MakerDAO, it's this: it's a decentralized protocol that lets people borrow stablecoins against their crypto, charges them interest on those loans, invests its reserves in U.S. Treasury bills for safe yield, collects 13% penalty fees from liquidated borrowers, and shares most of that combined income with people who park their DAI in the savings contract — all without any company in the middle, governed by a community of MKR token holders who vote on every important decision.
+MakerDAO is a decentralized protocol that lets people borrow stablecoins against their crypto, charges interest on those loans, invests its reserves in U.S. Treasury bills, collects 13% penalty fees from liquidated borrowers, and shares most of that combined income with DAI savers — all without any company in the middle.
 
-The genius of the system is that every role contributes something real. Borrowers pay interest in exchange for keeping their crypto exposure. Savers earn yield that's mostly backed by real U.S. Treasury bonds. Keepers profit from liquidating risky positions. MKR holders earn protocol profits in good times and absorb losses in bad times. And because everything runs on smart contracts, nobody can freeze your tokens, change the rules on you unilaterally, or stop the system from functioning. The only way MakerDAO dies is if enough people stop believing in it that nobody will buy MKR — at which point the Emergency Shutdown kicks in and everyone gets a fair share of whatever's left.
+Every role contributes something real. Borrowers pay interest in exchange for keeping their crypto exposure. Savers earn yield backed by real U.S. Treasury bonds. Keepers profit from liquidating risky positions. MKR holders earn protocol profits in good times and absorb losses in bad times. And because everything runs on smart contracts, nobody can freeze your tokens, change the rules on you unilaterally, or stop the system from functioning.
 
 ---
 
