@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
+                "file": "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ai_agent_payment_infrastructure"
+              "title": "the agent logic loop"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
+                "file": "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ai_agent_payment_infrastructure"
+              "title": "Outline of the agent logic loop"
             }
           },
           {
@@ -216,12 +216,16 @@
   },
   "active": "d15221a00f88b988",
   "lastOpenFiles": [
+    "Git and Github/Index and Object Store.md",
+    "Git and Github/What is Git and GitHub.md",
+    "Git and Github/gitignore.md",
+    "Git and Github/Git Commands.md",
+    "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
     "Finance/Stablecoin/Stable Coin (Main).md",
     "Finance/Treasury Bonds/Treasury Bonds (main).md",
     "Finance/Futures/SOFR Future.md",
     "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
     "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
-    "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
     "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24432.1776180684777",
@@ -235,10 +239,6 @@
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24000.1776176796626",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24000.1776176790750",
     "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
-    "Git and Github/What is Git and GitHub.md",
-    "Git and Github/Index and Object Store.md",
-    "Git and Github/gitignore.md",
-    "Git and Github/Git Commands.md",
     "Learning AI from TOP to Bottom/Operating System/Bash/Bash(Main).md",
     "Poker/The Course/Part 1 The 30000 Foot View/the_poker_pyramid.md",
     "Poker/The Course/Part 1 The 30000 Foot View/the_poker_ecosystem.md",
