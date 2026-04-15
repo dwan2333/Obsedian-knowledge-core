@@ -127,6 +127,31 @@ Bank Independence:     USDC (needs banks) ✗  ←——→  DAI (on-chain only)
 
 ---
 
+## ENA: Ethena's Governance Token
+
+ENA launched in April 2024 via airdrop as the governance token for the Ethena protocol. Like MKR in MakerDAO, ENA holders vote on the protocol's key decisions — revenue splits, collateral types, yield distribution to USDe savers, and fee structures.
+
+### Where the Revenue Comes From
+
+Ethena earns from two sources, and ENA governance decides how that income gets distributed.
+
+| Revenue Source | How It Works |
+|---|---|
+| **ETH staking yield** | Collateral deposited as ETH earns staking rewards passively |
+| **Funding rate payments** | Ethena shorts perpetual futures; when funding rates are positive, it collects payments from long traders |
+
+A portion of that combined yield flows to **sUSDe** holders (the savings wrapper, equivalent to sDAI). The remainder goes into the protocol treasury, which ENA governance controls.
+
+### sENA: Staked Governance
+
+ENA holders can stake into **sENA** to gain stronger governance weight and access to protocol revenue distributions — similar to locking MKR to vote, but with an explicit staking wrapper around it.
+
+### The Centralization Concern
+
+The main criticism at launch was token distribution. A significant portion of ENA was allocated to venture capital investors and early insiders, raising questions about whether governance is genuinely decentralized or effectively controlled by a small group of early backers. This is a common tension across DeFi governance tokens, but it was particularly visible with ENA given the scale of institutional involvement in Ethena from day one.
+
+---
+
 ## Related Documents
 
 - **[Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Stable%20Coin%20(Main).md)** — Covers all stablecoin types, the dollar dominance feedback loop, ECB sovereignty concerns, and the emerging AI agent payment infrastructure.
