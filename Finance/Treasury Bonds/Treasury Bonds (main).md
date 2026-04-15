@@ -15,11 +15,11 @@ They are considered one of the **safest investments in the world** because they 
 
 ## 2. The Three Types of Treasury Securities
 
-| Type        | Maturity         | How It Pays You                                      |
-|-------------|------------------|------------------------------------------------------|
-| **T-Bills** | Under 1 year     | No coupon. Sold at a **discount** to face value.     |
-| **T-Notes** | 2 – 10 years     | Pays a **fixed coupon** every year.                   |
-| **T-Bonds** | 20 – 30 years    | Pays a **fixed coupon** every year (longest term).    |
+| Type        | Maturity      | How It Pays You                                    |
+| ----------- | ------------- | -------------------------------------------------- |
+| **T-Bills** | Under 1 year  | No coupon. Sold at a **discount** to face value.   |
+| **T-Notes** | 2 – 10 years  | Pays a **fixed coupon** every year.                |
+| **T-Bonds** | 20 – 30 years | Pays a **fixed coupon** every year (longest term). |
 
 ---
 
