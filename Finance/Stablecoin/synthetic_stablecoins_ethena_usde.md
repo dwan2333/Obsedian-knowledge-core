@@ -49,11 +49,11 @@ Holding USDe alone earns nothing. You must **stake it into sUSDe** to earn yield
 
 ### How This Differs from Terra's Anchor
 
-| Dimension | Terra / Anchor (20% yield) | Ethena / sUSDe |
-|---|---|---|
-| **Yield source** | Subsidized — funded by the Luna Foundation Guard treasury | Real cash flows — funding rates, staking, interest |
-| **Sustainability** | Unsustainable — burned through reserves to maintain 20% | Fluctuates with market conditions — transparent and variable |
-| **Backing** | Nothing tangible — confidence only | Real collateral + derivatives hedge |
+| Dimension                      | Terra / Anchor (20% yield)                                                     | Ethena / sUSDe                                                            |
+| ------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
+| **Yield source**               | Subsidized — funded by the Luna Foundation Guard treasury                      | Real cash flows — funding rates, staking, interest                        |
+| **Sustainability**             | Unsustainable — burned through reserves to maintain 20%                        | Fluctuates with market conditions — transparent and variable              |
+| **Backing**                    | Nothing tangible — confidence only                                             | Real collateral + derivatives hedge                                       |
 | **What happens in a downturn** | Death spiral — yield disappears, confidence collapses, everything goes to zero | Yield may compress or turn negative, but collateral + hedge remain intact |
 
 ---

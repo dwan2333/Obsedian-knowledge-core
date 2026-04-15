@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
+                "file": "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "algorithmic_stablecoins_terra_luna"
+              "title": "synthetic_stablecoins_ethena_usde"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
+                "file": "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of algorithmic_stablecoins_terra_luna"
+              "title": "Outline of synthetic_stablecoins_ethena_usde"
             }
           },
           {
@@ -216,10 +216,10 @@
   },
   "active": "d15221a00f88b988",
   "lastOpenFiles": [
-    "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
-    "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
     "Finance/Stablecoin/Stable Coin (Main).md",
+    "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
     "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
+    "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
     "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
     "Finance/Treasury Bonds/Treasury Bonds (main).md",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24432.1776180684777",
