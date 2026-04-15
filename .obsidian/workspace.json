@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
+                "file": "Git and Github/What is Git and GitHub.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hybrid Stablecoins Frax"
+              "title": "What is Git and GitHub"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
+                "file": "Git and Github/What is Git and GitHub.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Hybrid Stablecoins Frax"
+              "title": "Outline of What is Git and GitHub"
             }
           },
           {
@@ -216,19 +216,19 @@
   },
   "active": "d15221a00f88b988",
   "lastOpenFiles": [
+    "Git and Github/Index and Object Store.md",
+    "Git and Github/gitignore.md",
+    "Git and Github/Git Commands.md",
+    "Finance/Treasury Bonds/Treasury Bonds (main).md",
+    "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
     "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
     "Finance/Stablecoin/Stable Coin (Main).md",
-    "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
     "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
     "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
     "Finance/Futures/SOFR Future.md",
-    "Git and Github/Git Commands.md",
-    "Git and Github/gitignore.md",
     "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
-    "Git and Github/Index and Object Store.md",
     "Git and Github/What is Git and GitHub.md",
-    "Finance/Treasury Bonds/Treasury Bonds (main).md",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24432.1776180684777",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24432.1776178609544",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24000.1776176855669",
