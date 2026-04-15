@@ -39,10 +39,10 @@ Minting 1 FRAX:
 
 ### The Self-Adjusting Mechanism
 
-| Market Signal | System Response | Rationale |
-|---|---|---|
-| FRAX trades **above** $1 | Collateral ratio **decreases** (more algorithmic) | Confidence is high → the market trusts less backing |
-| FRAX trades **below** $1 | Collateral ratio **increases** (more collateral) | Confidence is low → add more real backing for safety |
+| Market Signal            | System Response                                   | Rationale                                            |
+| ------------------------ | ------------------------------------------------- | ---------------------------------------------------- |
+| FRAX trades **above** $1 | Collateral ratio **decreases** (more algorithmic) | Confidence is high → the market trusts less backing  |
+| FRAX trades **below** $1 | Collateral ratio **increases** (more collateral)  | Confidence is low → add more real backing for safety |
 
 This created a feedback loop: the system became more capital-efficient when things were going well, and more conservative when stress appeared.
 
@@ -77,12 +77,12 @@ After watching Terra's $40–50 billion collapse in May 2022, the FRAX community
 
 FRAX didn't abandon its algorithmic tools — it **repurposed** them:
 
-| Component | Before (Fractional) | After (Fully Collateralized) |
-|---|---|---|
-| **Backing** | Partial USDC + partial FXS burns | 100% real assets |
-| **Reserve composition** | USDC only | USDC + tokenized [U.S. Treasuries](<Treasury Bonds (main).md>) (via BlackRock, Superstate) |
-| **Algorithmic tools (AMOs)** | Determined collateral ratio | Manage how collateral is *deployed* (lending, liquidity, yield) |
-| **FXS token role** | Burned to absorb under-collateralization | Governance + fee capture |
+| Component                    | Before (Fractional)                      | After (Fully Collateralized)                                                               |
+| ---------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------ |
+| **Backing**                  | Partial USDC + partial FXS burns         | 100% real assets                                                                           |
+| **Reserve composition**      | USDC only                                | USDC + tokenized [U.S. Treasuries](<Treasury Bonds (main).md>) (via BlackRock, Superstate) |
+| **Algorithmic tools (AMOs)** | Determined collateral ratio              | Manage how collateral is *deployed* (lending, liquidity, yield)                            |
+| **FXS token role**           | Burned to absorb under-collateralization | Governance + fee capture                                                                   |
 
 **AMOs (Algorithmic Market Operations)** are the surviving algorithmic component. They don't determine *whether* FRAX is backed — it always is, 100%. Instead, they optimize *how* the collateral works: deploying reserves into lending protocols, managing liquidity pools, and generating yield on idle capital. The algorithm became a treasury manager, not a backing mechanism.
 
