@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
+                "file": "Finance/Treasury Bonds/Treasury Bonds (main).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Crypto-Collateralized Stablecoins"
+              "title": "Treasury Bonds (main)"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
+                "file": "Finance/Treasury Bonds/Treasury Bonds (main).md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Crypto-Collateralized Stablecoins"
+              "title": "Outline of Treasury Bonds (main)"
             }
           },
           {
@@ -215,10 +215,10 @@
   },
   "active": "d15221a00f88b988",
   "lastOpenFiles": [
+    "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
     "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
     "Finance/Stablecoin/Stable Coin (Main).md",
     "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
-    "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
     "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24432.1776180684777",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24432.1776178609544",
