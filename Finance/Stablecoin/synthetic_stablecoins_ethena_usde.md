@@ -135,9 +135,9 @@ ENA launched in April 2024 via airdrop as the governance token for the Ethena pr
 
 Ethena earns from two sources, and ENA governance decides how that income gets distributed.
 
-| Revenue Source | How It Works |
-|---|---|
-| **ETH staking yield** | Collateral deposited as ETH earns staking rewards passively |
+| Revenue Source            | How It Works                                                                                             |
+| ------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **ETH staking yield**     | Collateral deposited as ETH earns staking rewards passively                                              |
 | **Funding rate payments** | Ethena shorts perpetual futures; when funding rates are positive, it collects payments from long traders |
 
 A portion of that combined yield flows to **sUSDe** holders (the savings wrapper, equivalent to sDAI). The remainder goes into the protocol treasury, which ENA governance controls.
