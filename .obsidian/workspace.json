@@ -214,8 +214,16 @@
       "smart-context:Smart Context: List Named Contexts": false
     }
   },
-  "active": "d15221a00f88b988",
+  "active": "328aa9c891b22c6e",
   "lastOpenFiles": [
+    "Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
+    "Mathematics/Introduction to Probability/Introduction to Probability (Main).md.tmp.15792.1776418690524",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.15792.1776418683874",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting",
+    "Mathematics/Introduction to Probability",
+    "Mathematics",
     "Git and Github/Git Essential Commands.md.tmp.4772.1776412597030",
     "Git and Github/gitignore.md",
     "Git and Github/What is Git and GitHub.md",
@@ -234,12 +242,6 @@
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24432.1776180684777",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24432.1776178609544",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24000.1776176855669",
-    "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24000.1776176849946",
-    "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24000.1776176843398",
-    "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24000.1776176828377",
-    "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24000.1776176812430",
-    "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24000.1776176803800",
-    "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24000.1776176796626",
     "Learning AI from TOP to Bottom/Operating System/Bash/Bash(Main).md",
     "Poker/The Course/Part 1 The 30000 Foot View/the_poker_pyramid.md",
     "Poker/The Course/Part 1 The 30000 Foot View/the_poker_ecosystem.md",
@@ -258,10 +260,8 @@
     "Projects/AI Habit Breaking Headband/infographic_system_overview.png",
     "AI Habit Breaking Headband (Main).md",
     "Projects/AI Habit Breaking Headband/sensor_input_detection.md",
-    "Projects/AI Habit Breaking Headband/safety_design_principles.md",
     "Projects/AI Habit Breaking Headband/headband_infographic.png",
     "Poker/The Course/Part 1 The 30000 Foot View/the_course_part1_infographic (2).png",
-    "Poker/Part 1 The 30000 Foot View/the_course_part1_infographic.png",
     "Untitled.canvas"
   ]
 }
