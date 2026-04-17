@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git and Github/Git Commands.md",
+                "file": "Finance/Stablecoin/Stable Coin (Main).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Git Commands"
+              "title": "Stable Coin (Main)"
             }
           }
         ]
@@ -216,18 +216,18 @@
   },
   "active": "d15221a00f88b988",
   "lastOpenFiles": [
-    "Git and Github/What is Git and GitHub.md",
-    "Git and Github/Index and Object Store.md",
-    "Git and Github/gitignore.md",
-    "Git and Github/Git Commands.md",
-    "Finance/Treasury Bonds/Treasury Bonds (main).md",
     "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
-    "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
-    "Finance/Stablecoin/Stable Coin (Main).md",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
     "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
+    "Finance/Stablecoin/Stable Coin (Main).md",
+    "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
     "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
     "Finance/Futures/SOFR Future.md",
+    "Git and Github/Git Commands.md",
+    "Git and Github/Index and Object Store.md",
+    "Git and Github/gitignore.md",
+    "Git and Github/What is Git and GitHub.md",
+    "Finance/Treasury Bonds/Treasury Bonds (main).md",
     "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24432.1776180684777",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24432.1776178609544",
