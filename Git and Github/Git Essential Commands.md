@@ -33,12 +33,12 @@ Renames or moves a file and automatically stages the change — equivalent to re
 git mv old_name.md new_name.md
 ```
 
-## `git rm <file>`
+## `git rm -f <file>`
 
 Removes a file from both your working directory **and** the index. The deletion is staged and will be recorded in the next commit.
 
 ```bash
-git rm filename.md
+git rm -f filename.md
 ```
 
 ## `git rm --cached <file>`
