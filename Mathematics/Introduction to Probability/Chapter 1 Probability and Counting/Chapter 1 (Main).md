@@ -27,10 +27,10 @@ Probability is a principled, logical framework for quantifying uncertainty and r
 
 ### Probability Axioms
 
-| Axiom | Statement |
-|---|---|
-| Non-negativity | 0 ≤ P(A) ≤ 1 for all events A |
-| Total probability | P(S) = 1 |
+| Axiom                | Statement                                               |
+| -------------------- | ------------------------------------------------------- |
+| Non-negativity       | 0 ≤ P(A) ≤ 1 for all events A                           |
+| Total probability    | P(S) = 1                                                |
 | Countable additivity | For disjoint events: P(A₁ ∪ A₂ ∪ …) = P(A₁) + P(A₂) + … |
 
 ---
@@ -112,9 +112,9 @@ $$\binom{n+k-1}{k}$$
 
 ### Sources
 
-| Source | Date | Type |
-|---|---|---|
-| Blitzstein & Hwang, *Introduction to Probability* (Chapter 1) | 2019 | Textbook |
-| MIT OpenCourseWare — Probability Theory: Sample Spaces and Events | 2024 | Academic |
-| Wikipedia — Birthday Problem, Stars and Bars, Twelvefold Way | 2024 | Reference |
-| Statistics by Jim — Permutation vs Combination | 2024 | Web |
+| Source                                                            | Date | Type      |
+| ----------------------------------------------------------------- | ---- | --------- |
+| Blitzstein & Hwang, *Introduction to Probability* (Chapter 1)     | 2019 | Textbook  |
+| MIT OpenCourseWare — Probability Theory: Sample Spaces and Events | 2024 | Academic  |
+| Wikipedia — Birthday Problem, Stars and Bars, Twelvefold Way      | 2024 | Reference |
+| Statistics by Jim — Permutation vs Combination                    | 2024 | Web       |
