@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git and Github/Git Commands.md",
+                "file": "Git and Github/Git Essential Commands.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Git Commands"
+              "title": "Git Essential Commands"
             }
           }
         ]
@@ -216,7 +216,9 @@
   },
   "active": "d15221a00f88b988",
   "lastOpenFiles": [
+    "Git and Github/Git Commands.md.tmp.4772.1776407707309",
     "Git and Github/gitignore.md",
+    "Git and Github/Git Essential Commands.md",
     "Git and Github/What is Git and GitHub.md",
     "Git and Github/Index and Object Store.md",
     "Finance/Stablecoin/Stable Coin (Main).md",
@@ -226,7 +228,6 @@
     "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
     "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
     "Finance/Futures/SOFR Future.md",
-    "Git and Github/Git Commands.md",
     "Finance/Treasury Bonds/Treasury Bonds (main).md",
     "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md.tmp.24432.1776180684777",
