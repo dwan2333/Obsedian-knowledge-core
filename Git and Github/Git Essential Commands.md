@@ -53,11 +53,11 @@ git rm --cached secret.env
 
 Shows the current state of your working directory and index. It reports three zones:
 
-| Section | What it means |
-|---|---|
-| **Changes to be committed** | Files in the index, staged and ready for the next commit |
+| Section                           | What it means                                                     |
+| --------------------------------- | ----------------------------------------------------------------- |
+| **Changes to be committed**       | Files in the index, staged and ready for the next commit          |
 | **Changes not staged for commit** | Files Git tracks but that have been modified since the last stage |
-| **Untracked files** | Files Git has never seen before — not in the index or history |
+| **Untracked files**               | Files Git has never seen before — not in the index or history     |
 
 ```bash
 git status
@@ -212,8 +212,8 @@ git switch -c feature-x        # create a new branch AND switch to it in one ste
 git switch -                   # switch back to the previous branch (like `cd -`)
 ```
 
-| Command | What it does |
-|---|---|
-| `git branch feature-x` | Creates the branch, stays where you are |
-| `git switch feature-x` | Switches to an existing branch |
+| Command                   | What it does                                   |
+| ------------------------- | ---------------------------------------------- |
+| `git branch feature-x`    | Creates the branch, stays where you are        |
+| `git switch feature-x`    | Switches to an existing branch                 |
 | `git switch -c feature-x` | Creates AND switches in one step (most common) |
