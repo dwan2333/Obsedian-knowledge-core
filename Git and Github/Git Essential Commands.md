@@ -189,6 +189,41 @@ Compare to `git rm --cached`, which stops tracking the file entirely. `git resto
 
 ---
 
+## `git clone`
+
+Copies an entire existing repository from a remote source (usually GitHub) onto your local machine. Downloads the full history, all branches, and all files, and automatically sets up the remote connection so you can `git pull` and `git push` later. This is typically the first command you run when starting work on someone else's project or setting up an existing repo on a new computer.
+
+```bash
+git clone https://github.com/user/repo.git              # clone into a folder named "repo"
+git clone https://github.com/user/repo.git my-folder    # clone into a custom folder name
+git clone --depth 1 https://github.com/user/repo.git    # shallow clone — only latest commit (faster, smaller)
+git clone -b dev https://github.com/user/repo.git       # clone and check out a specific branch
+git clone git@github.com:user/repo.git                  # clone via SSH (needs SSH key set up)
+```
+
+### HTTPS vs SSH
+
+| Protocol | URL format | When to use |
+|---|---|---|
+| **HTTPS** | `https://github.com/user/repo.git` | Simpler — works anywhere, asks for username/password (or token) |
+| **SSH** | `git@github.com:user/repo.git` | Requires SSH key setup, but no password prompts after that |
+
+### What `git clone` Actually Does Under the Hood
+
+It runs several steps in one: creates a new folder, runs `git init` inside it, adds the remote URL as `origin`, and then fetches and checks out the default branch. So cloning is equivalent to:
+
+```bash
+mkdir repo && cd repo
+git init
+git remote add origin <url>
+git fetch origin
+git switch main
+```
+
+You almost never need to do it that way — `git clone` exists precisely to collapse all those steps into one.
+
+---
+
 
 
 
