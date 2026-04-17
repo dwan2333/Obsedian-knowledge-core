@@ -189,31 +189,6 @@ Compare to `git rm --cached`, which stops tracking the file entirely. `git resto
 
 ---
 
-## `git branch`
 
-Lists, creates, or deletes branches. With no arguments, it lists all local branches and marks the current one with an asterisk. Creating a branch with `git branch <name>` makes the branch but does **not** switch to it — use `git switch` for that.
 
-```bash
-git branch                     # list all local branches (* marks current)
-git branch -a                  # list local + remote branches
-git branch feature-x           # create a new branch called feature-x
-git branch -d feature-x        # delete a branch (safe — refuses if unmerged)
-git branch -D feature-x        # force-delete a branch (even if unmerged)
-git branch -m old-name new     # rename a branch
-```
 
-## `git switch`
-
-Switches from your current branch to a different one. Replaces the branch-switching role of the older `git checkout` command, which was overloaded with too many unrelated jobs. Safer and more explicit.
-
-```bash
-git switch main                # switch to an existing branch
-git switch -c feature-x        # create a new branch AND switch to it in one step
-git switch -                   # switch back to the previous branch (like `cd -`)
-```
-
-| Command                   | What it does                                   |
-| ------------------------- | ---------------------------------------------- |
-| `git branch feature-x`    | Creates the branch, stays where you are        |
-| `git switch feature-x`    | Switches to an existing branch                 |
-| `git switch -c feature-x` | Creates AND switches in one step (most common) |
