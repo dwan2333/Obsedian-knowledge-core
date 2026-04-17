@@ -11,14 +11,12 @@
             "id": "d15221a00f88b988",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
-                "mode": "source",
-                "source": false
+                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png"
               },
-              "icon": "lucide-file",
-              "title": "Chapter 1 (Main)"
+              "icon": "lucide-image",
+              "title": "chapter1_infographic"
             }
           }
         ]
@@ -207,18 +205,14 @@
       "templater-obsidian:Templater": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "obsidian-git:Open Git source control": false,
-      "smart-chat:Open: Smart Chat": false,
-      "smart-context:Smart Context: Open Builder": false,
-      "smart-context:Smart Context: Copy to Clipboard (select depth)": false,
-      "smart-context:Smart Context: List Named Contexts": false
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "d15221a00f88b988",
   "lastOpenFiles": [
-    "Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png",
+    "Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
     "Git and Github/Git Essential Commands.md",
     "Mathematics/Introduction to Probability/Introduction to Probability (Main).md.tmp.15792.1776418690524",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.15792.1776418683874",

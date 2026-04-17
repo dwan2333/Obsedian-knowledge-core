@@ -1,4 +1,5 @@
 {
+  "use_vec_index": true,
   "is_obsidian_vault": true,
   "smart_blocks": {
     "embed_blocks": true,
