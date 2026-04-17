@@ -90,13 +90,13 @@ $$\binom{n+k-1}{k}$$
 
 ## Branch 6 — Classic Examples
 
-| Problem | Core Idea | Result |
-|---|---|---|
-| **Birthday Problem** | Probability ≥2 people share a birthday | >50% with just 23 people |
-| **Leibniz's Mistake** | Treating distinguishable dice as indistinguishable | Wrong naive probability |
-| **Newton-Pepys Problem** | Comparing probabilities of dice outcomes | P(≥1 six in 6) > P(≥2 sixes in 12) > P(≥3 sixes in 18) |
-| **de Montmort's Matching** | Card game: at least one card matches its position | Approaches 1 − 1/e ≈ 0.632 as deck grows |
-| **Bose-Einstein** | Indistinguishable particles in boxes | Stars and bars formula |
+| Problem                    | Core Idea                                          | Result                                                 |
+| -------------------------- | -------------------------------------------------- | ------------------------------------------------------ |
+| **Birthday Problem**       | Probability ≥2 people share a birthday             | >50% with just 23 people                               |
+| **Leibniz's Mistake**      | Treating distinguishable dice as indistinguishable | Wrong naive probability                                |
+| **Newton-Pepys Problem**   | Comparing probabilities of dice outcomes           | P(≥1 six in 6) > P(≥2 sixes in 12) > P(≥3 sixes in 18) |
+| **de Montmort's Matching** | Card game: at least one card matches its position  | Approaches 1 − 1/e ≈ 0.632 as deck grows               |
+| **Bose-Einstein**          | Indistinguishable particles in boxes               | Stars and bars formula                                 |
 
 ---
 
