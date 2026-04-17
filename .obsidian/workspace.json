@@ -8,15 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d15221a00f88b988",
+            "id": "0c620b8a84d10e50",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png"
+                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "chapter1_infographic"
+              "icon": "lucide-file",
+              "title": "Chapter 1 (Main)"
             }
           }
         ]
@@ -205,13 +207,17 @@
       "templater-obsidian:Templater": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "smart-chat:Open: Smart Chat": false,
+      "smart-context:Smart Context: Open Builder": false,
+      "smart-context:Smart Context: Copy to Clipboard (select depth)": false,
+      "smart-context:Smart Context: List Named Contexts": false
     }
   },
-  "active": "d15221a00f88b988",
+  "active": "0c620b8a84d10e50",
   "lastOpenFiles": [
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
     "Git and Github/Git Essential Commands.md",
     "Mathematics/Introduction to Probability/Introduction to Probability (Main).md.tmp.15792.1776418690524",
