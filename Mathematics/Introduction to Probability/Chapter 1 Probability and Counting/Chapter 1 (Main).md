@@ -54,11 +54,29 @@ For finite sample spaces, the textbook introduces **Pebble World** — a visuali
 
 Set theory gives us the language for combining events: union $A \cup B$ ("at least one occurs"), intersection $A \cap B$ ("both occur"), complement $A^c$ ("does not occur").
 
-> [!example] Example — Coin Flips
-> Flip a coin 10 times. The sample space is all length-10 strings of H's and T's. Let $A_j$ = "the $j$th flip is H." Then "at least one Heads" is $\bigcup_{j=1}^{10} A_j$, and "all Heads" is $\bigcap_{j=1}^{10} A_j$.
+> [!example] Example 1.2.2 — Coin Flips
+> **Problem.** A coin is flipped 10 times. Writing Heads as $H$ and Tails as $T$, a possible outcome (pebble) is $HHHTHHTTHT$, and the sample space is the set of all possible strings of length 10 of $H$'s and $T$'s. Define and express the following events in set notation: $A_1$ — the first flip is Heads; $B$ — at least one flip was Heads; $C$ — all the flips were Heads; $D$ — there were at least two consecutive Heads.
+> **Setup.** Encode $H$ as $1$ and $T$ as $0$, so the sample space is $S = \{(s_1, s_2, \dots, s_{10}) : s_j \in \{0,1\}\}$. For $j = 1, 2, \dots, 10$, define base events $A_j$ = "the $j$th flip is Heads" $= \{(s_1, \dots, s_{10}) \in S : s_j = 1\}$. The compound events $B, C, D$ will be built from these $A_j$.
+> **Solution.** Translate each English description into set operations over $S$. For $A_1$, fix $s_1 = 1$ and let the other coordinates range freely over $\{0,1\}$. "At least one flip is Heads" means the outcome lies in *some* $A_j$, so it belongs to the **union** $\bigcup_j A_j$. "All flips are Heads" means the outcome lies in *every* $A_j$ simultaneously, so it belongs to the **intersection** $\bigcap_j A_j$. "At least two consecutive Heads" means there exists some index $j$ where flips $j$ and $j+1$ are *both* Heads — this is the intersection $A_j \cap A_{j+1}$ — and since this can occur at any valid position $j = 1, \dots, 9$, we take the union over all such positions.
+> **Answer.**
+> - $A_1 = \{(1, s_2, \dots, s_{10}) : s_j \in \{0,1\} \text{ for } 2 \le j \le 10\}$
+> - $B = \bigcup_{j=1}^{10} A_j$
+> - $C = \bigcap_{j=1}^{10} A_j$
+> - $D = \bigcup_{j=1}^{9} (A_j \cap A_{j+1})$
+>
+> **Insight.** Compound English phrases like *"at least one"*, *"all"*, and *"consecutive"* translate mechanically into unions, intersections, and unions-of-intersections over base events.
 
-> [!example] Example — Pick a Card
-> Drawing one card from a standard deck gives $|S| = 52$. With events $A$ (ace), $B$ (black), $D$ (diamond), $H$ (heart), the event "red non-ace" can be written as $(A \cup B)^c = A^c \cap B^c$. If a joker turned up, it would mean we picked the wrong sample space.
+> [!example] Example 1.2.3 — Pick a Card, Any Card
+> **Problem.** Pick a card from a standard deck of 52 cards. The sample space $S$ is the set of all 52 cards (so there are 52 pebbles, one for each card). Consider the four events $A$: card is an ace; $B$: card has a black suit; $D$: card is a diamond; $H$: card is a heart. Express the following events in terms of $A$, $B$, $D$, $H$: the **Ace of Hearts**; the set $\{$Ace of Spades, Ace of Clubs$\}$; **red or an ace**; **red non-ace**.
+> **Setup.** Sample space $S$ = the 52 cards of a standard deck. Base events: $A$ (card is an ace, $|A| = 4$), $B$ (card is black — spade or club, $|B| = 26$), $D$ (card is a diamond, $|D| = 13$), $H$ (card is a heart, $|H| = 13$). Note that $D$ and $H$ together comprise the red cards, and $B^c = D \cup H$.
+> **Solution.** Combine the base events using unions, intersections, and complements. The **Ace of Hearts** must be both an ace *and* a heart, so it lies in $A \cap H$. The set $\{$Ace of Spades, Ace of Clubs$\}$ consists of cards that are aces *and* black, so it is $A \cap B$. **Red or an ace** means the card satisfies "ace, *or* diamond, *or* heart" — a union $A \cup D \cup H$. **Red non-ace** means the card is *not* black *and* *not* an ace, i.e., $A^c \cap B^c$; by **De Morgan's laws** this is equivalent to $(A \cup B)^c$ — the complement of "ace or black."
+> **Answer.**
+> - Ace of Hearts: $A \cap H$
+> - $\{$Ace of Spades, Ace of Clubs$\}$: $A \cap B$
+> - Red or an ace: $A \cup D \cup H$
+> - Red non-ace: $(A \cup B)^c = A^c \cap B^c$
+>
+> **Insight.** Set logic — unions, intersections, complements, and De Morgan's laws — is a precise vocabulary for assembling complex events out of a few simple base events.
 
 The English ↔ set-notation translation goes both ways: "something must happen" ↔ $S$; "not $A$" ↔ $A^c$; "$A$ and $B$ are mutually exclusive" ↔ $A \cap B = \emptyset$.
 
@@ -100,15 +118,36 @@ Since most naive probabilities reduce to ratios of counts, the chapter spends se
 
 ![Figure 1.2 — Tree diagram for the multiplication rule](chapter1_fig_1.2_multiplication_rule_tree.png)
 
-> [!example] Example — Runners, Chessboard, Subsets
-> - Choosing 1st/2nd/3rd from 10 runners: $10 \cdot 9 \cdot 8 = 720$
-> - Specifying a row and column on an $8 \times 8$ chessboard: $8 \cdot 8 = 64$
-> - Number of subsets of an $n$-element set: $2^n$ (each element is in or out)
+> [!example] Example 1.4.3-6 — Runners, Chessboard, and Subsets (Multiplication Rule)
+> **(i) Runners.**
+> **Problem.** Suppose 10 people are running a race. Assume ties are not possible and that all 10 will complete the race, so there will be well-defined first, second, and third place winners. How many possibilities are there for the first, second, and third place winners?
+> **Setup.** A compound experiment with three sub-experiments: choose 1st, then 2nd, then 3rd. Sampling is without replacement (a runner cannot win twice).
+> **Solution.** Once 1st place is fixed, exactly 9 runners remain eligible for 2nd, and then exactly 8 remain for 3rd. Crucially, the *number* of choices at each stage (9, then 8) is the same regardless of *which* runner won the prior stage, so the multiplication rule applies cleanly.
+> **Answer.** $10 \cdot 9 \cdot 8 = 720$ possibilities.
+> **Insight.** The multiplication rule needs only that the *count* of options at each stage be fixed — not that the *identities* of those options be the same.
+>
+> **(ii) Chessboard.**
+> **Problem.** How many squares are there in an $8 \times 8$ chessboard?
+> **Setup.** Specify a square by a (row, column) coordinate. Two sub-experiments: pick a row, then pick a column.
+> **Solution.** There are 8 choices for the row. For *every* row chosen, there are exactly 8 choices for the column — the column count does not depend on the row. The multiplication rule then traverses the entire grid.
+> **Answer.** $8 \cdot 8 = 64$ squares.
+> **Insight.** Any rectangular grid is the prototypical multiplication-rule structure: rows $\times$ columns.
+>
+> **(iii) Subsets.**
+> **Problem.** A set with $n$ elements has $2^n$ subsets, including the empty set $\emptyset$ and the set itself.
+> **Setup.** Build a subset by walking through the $n$ elements one at a time and deciding *include* or *exclude*. Each element gives one independent sub-experiment with 2 outcomes.
+> **Solution.** The decision for one element places no constraint on any other, so the number of choices is exactly 2 at every step. Multiplying $n$ factors of 2 enumerates every possible inclusion pattern, and each pattern corresponds to a unique subset.
+> **Answer.** $\underbrace{2 \cdot 2 \cdots 2}_{n} = 2^n$ subsets.
+> **Insight.** Encoding objects as binary include/exclude strings is one of the most powerful counting moves in combinatorics.
 
 ![Figure 1.3 — Chessboard and crossword grid](chapter1_fig_1.3_chessboard_crossword.png)
 
-> [!example] Example — Ice Cream Cones
-> 2 cones, 3 flavors → $2 \cdot 3 = 6$ combinations. Order two cones in a day → $6^2 = 36$ ordered pairs (or 21 if order doesn't matter).
+> [!example] Example 1.4.5 — Ice Cream Cones
+> **Problem.** You are buying an ice cream cone: choose a cake or waffle cone, and chocolate, vanilla, or strawberry flavor. Now suppose you buy two cones on a certain day, one in the afternoon and one in the evening, written e.g. $(\text{cakeC}, \text{waffleV})$. If you only care *which kinds* you had that day and not the order, are there $36/2 = 18$ possibilities?
+> **Setup.** A single cone has 2 cone-types $\times$ 3 flavors $= 6$ possibilities by the multiplication rule. Two cones in order give $6 \times 6 = 36$ ordered outcomes. We must then ask whether dividing by 2 correctly removes order.
+> **Solution.** Naive division by 2 fails because not every ordered pair has a distinct mirror image: pairs like $(\text{cakeC}, \text{cakeC})$ are their own reverses, so dividing them by 2 *undercounts* them. Of the 36 ordered pairs, 6 are "same-cone-twice" (afternoon = evening) and the other 30 split into 15 distinct unordered pairs. Adding gives $15 + 6 = 21$ unordered outcomes — *not* 18.
+> **Answer.** 36 ordered possibilities; 21 unordered possibilities.
+> **Insight.** Dividing by an overcounting factor only works when the factor applies *uniformly* to every outcome — symmetric (repeated) cases are their own warning sign.
 
 ![Figure 1.4 — Ice cream cone tree diagram](chapter1_fig_1.4_ice_cream_cone_tree.png)
 
@@ -121,20 +160,32 @@ Two specializations follow immediately:
 
 Arranging all $n$ distinct objects in order: $n!$ permutations.
 
-> [!example] Example — Birthday Problem
-> Among $k$ people with uniformly random birthdays, $P(\text{at least one match}) = 1 - \dfrac{365 \cdot 364 \cdots (365-k+1)}{365^k}$. This crosses 0.5 at $k = 23$ — far smaller than most people's intuition.
+> [!example] Example 1.4.10 — Birthday Problem
+> **Problem.** There are $k$ people in a room. Assume each person's birthday is equally likely to be any of the 365 days of the year (excluding February 29) and that birthdays are independent. What is the probability that at least one pair of people share a birthday?
+> **Setup.** Sample space: each person independently has 365 possible birthdays, so $|S| = 365^k$ (sampling with replacement). Let $A$ = "at least one shared birthday." It is easier to count $A^c$ = "all birthdays distinct."
+> **Solution.** For $A^c$, assign birthdays one person at a time *without* repeating any used day. Person 1 has 365 choices; person 2 has 364 (any day except person 1's); person 3 has 363; and so on down to person $k$, who has $365 - k + 1$ choices. Because the count at each step is fixed (decreasing by exactly one) regardless of which prior days were used, the multiplication rule gives $|A^c| = 365 \cdot 364 \cdots (365 - k + 1)$. Then take the complement.
+> **Answer.** $$P(A) \;=\; 1 \;-\; \frac{365 \cdot 364 \cdots (365 - k + 1)}{365^k}.$$ At $k = 23$ this already exceeds $1/2$.
+> **Insight.** Counting "no match" via the complement is dramatically easier than counting matches directly — and the threshold $k=23$ is famously much smaller than people's intuition suggests.
 
 ![Figure 1.5 — Birthday problem probability vs k](chapter1_fig_1.5_birthday_problem.png)
 
-> [!example] Example — Leibniz's Mistake
-> Leibniz argued sums of 11 and 12 on two dice were equally likely by treating the dice as indistinguishable. The correct approach **labels** the dice — then 11 has 2 ways ((5,6),(6,5)) and 12 has only 1 way ((6,6)).
+> [!example] Example 1.4.12 — Leibniz's Mistake
+> **Problem.** If we roll two fair dice, which is more likely: a sum of 11 or a sum of 12?
+> **Setup.** Label the dice as Die A and Die B. Each die has 6 outcomes; by the multiplication rule the sample space has $6 \cdot 6 = 36$ equally likely ordered pairs.
+> **Solution.** Leibniz reasoned that since 11 = 5+6 and 12 = 6+6 are each "one combination," the two sums are equally likely. The error is treating the dice as indistinguishable. With labeled dice, sum 11 arises from the *two* ordered pairs $(5,6)$ and $(6,5)$, while sum 12 arises from only the single ordered pair $(6,6)$. The multiplication rule's labeling automatically respects this asymmetry.
+> **Answer.** $P(\text{sum}=11) = 2/36 = 1/18$, while $P(\text{sum}=12) = 1/36$. Sum 11 is twice as likely.
+> **Insight.** When outcomes are equally likely, you must enumerate the *labeled* sample space; merging physically distinct outcomes into one "combination" silently distorts the probabilities.
 
 ### 1.4.2 Adjusting for Overcounting
 
 When each possibility is counted exactly $c$ times, divide by $c$.
 
-> [!example] Example — Committees and Teams
-> Choosing 2 people from 4 as an ordered list: $4 \cdot 3 = 12$. As an unordered committee: $12/2 = 6$. Splitting 4 into two unordered teams of 2: $6/2 = 3$.
+> [!example] Example 1.4.14 — Committees and Teams
+> **Problem.** Consider a group of four people. (a) How many ways are there to choose a two-person committee? (b) How many ways are there to break the people into two teams of two?
+> **Setup.** Naive multiplication-rule counts will overcount because a *committee* and a *team-split* are unordered structures. We must identify and divide by the appropriate overcounting factor in each case.
+> **Solution.** *(a)* By the multiplication rule there are $4 \cdot 3 = 12$ ordered ways to pick the first then second committee member. But $\{P_1, P_2\}$ chosen in either order is the same committee, so each committee is counted $2! = 2$ times. Divide by 2: $12/2 = 6$. *(b)* Use part (a): 6 ways to pick the first team, which automatically determines the second. But the two teams are unlabeled — choosing $\{1,2\}$ first (leaving $\{3,4\}$) yields the same split as choosing $\{3,4\}$ first (leaving $\{1,2\}$). Each split is counted twice, so divide by 2: $6/2 = 3$.
+> **Answer.** (a) $\dbinom{4}{2} = 6$ committees. (b) $3$ team-splits.
+> **Insight.** The overcounting factor is exactly the size of the symmetry group acting on the structure: $2!$ for the order *within* a committee, $2$ for swapping the *labels of two indistinguishable teams*.
 
 > [!definition] Definition — Binomial Coefficient
 > $\binom{n}{k}$ ("$n$ choose $k$") is the number of size-$k$ subsets of an $n$-element set. The closed form:
@@ -143,17 +194,36 @@ When each possibility is counted exactly $c$ times, divide by $c$.
 
 The denominator $k!$ corrects for overcounting: each unordered subset corresponds to $k!$ ordered ones.
 
-> [!example] Example — Permutations of a Word
-> LALALAAA: $\binom{8}{5} = 56$ arrangements (choose positions for the A's). STATISTICS: $\dfrac{10!}{3!\,3!\,2!} = 50{,}400$.
+> [!example] Example 1.4.20 — Permutations of a Word
+> **Problem.** How many ways are there to permute the letters in the word LALALAAA? How many ways are there to permute the letters in the word STATISTICS?
+> **Setup.** When letters repeat, treating positions as distinguishable overcounts each visible arrangement by the number of internal swaps among identical letters. We must divide by the product of factorials of the repeated-letter counts.
+> **Solution.** *LALALAAA* has 8 positions with 5 A's and 3 L's. Picking which 3 of the 8 positions hold the L's (the rest are A's) determines the word, giving $\binom{8}{3} = \binom{8}{5} = 56$. Equivalently, $8!$ permutations of distinct labels divided by $5!$ (rearrangements among the A's) and $3!$ (rearrangements among the L's). *STATISTICS* has 10 letters with three S's, three T's, two I's, one A, one C. Pretending all 10 are distinct gives $10!$. Each visible word is then counted $3!$ times for the S-swaps, $3!$ times for the T-swaps, and $2!$ times for the I-swaps, so divide by $3! \cdot 3! \cdot 2!$.
+> **Answer.** LALALAAA: $\dbinom{8}{5} = 56$. STATISTICS: $\dfrac{10!}{3!\,3!\,2!} = 50{,}400$.
+> **Insight.** The general "permutations with repetitions" formula $\frac{n!}{n_1!\,n_2!\,\cdots\,n_k!}$ is just the multiplication rule (treating items as distinct) followed by quotienting out each indistinguishable swap-group.
 
-> [!example] Example — Full House in Poker
-> $$P(\text{full house}) = \frac{13 \cdot \binom{4}{3} \cdot 12 \cdot \binom{4}{2}}{\binom{52}{5}} \approx 0.00144$$
+> [!example] Example 1.4.22 — Full House in Poker
+> **Problem.** A 5-card hand is dealt from a standard, well-shuffled 52-card deck. The hand is a *full house* if it consists of three cards of some rank and two cards of another rank (e.g., three 7's and two 10's, in any order). What is the probability of a full house?
+> **Setup.** Order in a hand is irrelevant, so by symmetry every 5-card hand is equally likely. Sample space: $\binom{52}{5}$ unordered hands. Count full houses by sequentially choosing the triple's rank, the triple's suits, the pair's rank, then the pair's suits.
+> **Solution.** *Triple's rank:* 13 choices. *Which 3 of the 4 suits hold that rank:* $\binom{4}{3} = 4$ — this divides $4 \cdot 3 \cdot 2$ ordered suit-picks by $3!$ since the three triple-cards are unordered within the hand. *Pair's rank:* 12 remaining choices (must differ from the triple's rank). *Which 2 of the 4 suits for the pair:* $\binom{4}{2} = 6$ — dividing $4 \cdot 3$ by $2!$ for the unordered pair-cards. By the multiplication rule, the count of full houses is $13 \cdot \binom{4}{3} \cdot 12 \cdot \binom{4}{2}$.
+> **Answer.** $$P(\text{full house}) \;=\; \frac{13 \cdot \binom{4}{3} \cdot 12 \cdot \binom{4}{2}}{\binom{52}{5}} \;=\; \frac{3744}{2{,}598{,}960} \;\approx\; 0.00144.$$
+> **Insight.** Order-of-operations matters: choose ranks *before* suits, and treat the triple and pair as distinguishable (one is "the threes," the other is "the pair") so you don't accidentally divide by an extra 2.
 
-> [!example] Example — Newton-Pepys Problem
-> $P(\geq 1\text{ six in 6 dice}) = 1 - (5/6)^6 \approx 0.665$ is the *most* likely of the three Newton-Pepys scenarios — beating $\geq 2$ in 12 and $\geq 3$ in 18.
+> [!example] Example 1.4.23 — Newton-Pepys Problem
+> **Problem.** Isaac Newton was consulted by Samuel Pepys (for gambling purposes) on which event has the highest probability. $A$: at least one 6 appears when 6 fair dice are rolled. $B$: at least two 6's appear when 12 fair dice are rolled. $C$: at least three 6's appear when 18 fair dice are rolled.
+> **Setup.** The sample spaces have sizes $6^6$, $6^{12}$, $6^{18}$ respectively. Direct counting of "at least $j$ sixes" is hard, so use the complement: count outcomes with *fewer* than the required number of 6's. To count "exactly $j$ sixes in $n$ rolls," choose which $j$ of the $n$ dice show a 6 — that's $\binom{n}{j}$, dividing $n(n-1)\cdots(n-j+1)$ ordered selections by the $j!$ permutations among the indistinguishable "six" outcomes — and multiply by $5^{n-j}$ for the remaining non-6 dice.
+> **Solution.** Pepys (and intuition) suggested these probabilities should grow with the number of dice; in fact they decrease.
+> $$P(A) = 1 - \frac{5^6}{6^6} \approx 0.665.$$
+> $$P(B) = 1 - \frac{5^{12} + \binom{12}{1}\,5^{11}}{6^{12}} \approx 0.619.$$
+> $$P(C) = 1 - \frac{5^{18} + \binom{18}{1}\,5^{17} + \binom{18}{2}\,5^{16}}{6^{18}} \approx 0.597.$$
+> **Answer.** $A$ has the highest probability. (Newton got it right; Pepys did not.)
+> **Insight.** Increasing the number of trials *and* the success threshold proportionally does not preserve the probability — the threshold scales linearly while typical fluctuations scale only as $\sqrt{n}$, so demanding "three sixes in 18" is strictly harder than "one six in 6."
 
-> [!example] Example — Bose-Einstein
-> Placing $k$ indistinguishable particles into $n$ distinguishable boxes: $\binom{n+k-1}{k}$ (stars-and-bars encoding).
+> [!example] Example 1.4.24 — Bose-Einstein
+> **Problem.** How many ways are there to choose $k$ times from a set of $n$ objects with replacement, if order doesn't matter (we only care how many times each object was chosen, not the order)? Equivalently: how many ways to place $k$ indistinguishable particles into $n$ distinguishable boxes?
+> **Setup.** Encode an arrangement as a *stars-and-bars* sequence: $k$ stars (particles) and $n-1$ bars (interior walls between adjacent boxes). For example, $\star\star\,|\,\star\,|\,|\,\star$ represents 2 particles in box 1, 1 in box 2, 0 in box 3, and 1 in box 4. The total length of the sequence is $n + k - 1$ symbols.
+> **Solution.** Each valid sequence of $n+k-1$ symbols, with exactly $k$ of them stars and $n-1$ bars, corresponds bijectively to one arrangement. So we just choose which $k$ of the $n+k-1$ positions are stars, giving $\binom{n+k-1}{k}$. From the formula $\frac{(n+k-1)!}{k!\,(n-1)!}$, the $k!$ divides out the indistinguishable star-permutations and the $(n-1)!$ divides out the indistinguishable bar-permutations.
+> **Answer.** $\dbinom{n+k-1}{k}$ ways.
+> **Insight.** "Stars and bars" turns an unordered-sample-with-replacement problem into a single binomial coefficient by re-encoding it as a sequence; the two factorials in the denominator track the two flavors of indistinguishability (identical particles, identical walls).
 
 ![Figure 1.6 — Bose-Einstein stars-and-bars encoding](chapter1_fig_1.6_bose_einstein_encoding.png)
 
@@ -167,21 +237,37 @@ The denominator $k!$ corrects for overcounting: each unordered subset correspond
 
 A **story proof** proves an identity by *interpretation* — typically by counting the same thing two different ways. Often easier and more illuminating than algebra.
 
-> [!example] Example — Choosing the Complement
-> $$\binom{n}{k} = \binom{n}{n-k}$$
-> *Story:* Choosing a $k$-committee from $n$ people is equivalent to choosing the $n-k$ people *not* on the committee.
+> [!example] Example 1.5.1 — Choosing the Complement
+> **Identity.** $$\binom{n}{k} = \binom{n}{n-k}$$
+> **Problem.** Show that the number of ways to choose a $k$-person committee from $n$ people equals the number of ways to choose an $(n-k)$-person group from those same $n$ people.
+> **Setup.** A pool of $n$ distinguishable people. The left side counts size-$k$ subsets; the right side counts size-$(n-k)$ subsets.
+> **Story (Solution).** **Left side counts** the number of ways to pick exactly $k$ people *to include* on the committee. **Right side counts the same committees** by instead picking the $n-k$ people *to exclude*. Every choice of who is in uniquely determines who is out, and vice versa — the two acts are a perfect bijection between size-$k$ subsets and size-$(n-k)$ subsets. **Therefore the counts are equal.**
+> **Answer.** $\binom{n}{k} = \binom{n}{n-k}$.
+> **Insight.** The algebraic proof cancels factorials mechanically; the story reveals *why* — choosing a subset is the same act as choosing its complement.
 
-> [!example] Example — Team Captain
-> $$n \binom{n-1}{k-1} = k \binom{n}{k}$$
-> *Story:* Both sides count $k$-person teams with a designated captain. Left: pick captain ($n$ ways), then $k-1$ teammates from the rest. Right: pick the team first ($\binom{n}{k}$), then promote one member to captain ($k$ ways).
+> [!example] Example 1.5.2 — Team Captain
+> **Identity.** $$n\binom{n-1}{k-1} = k\binom{n}{k}$$
+> **Problem.** Show that the number of ways to form a $k$-person team with a designated captain, drawn from a pool of $n$ people, can be counted in two equivalent ways.
+> **Setup.** We are counting ordered structures of the form (team of $k$, one captain $\in$ team) drawn from $n$ people.
+> **Story (Solution).** **Left side counts** by *choosing the captain first*: pick one of the $n$ people to be captain ($n$ ways), then pick the remaining $k-1$ teammates from the leftover $n-1$ people ($\binom{n-1}{k-1}$ ways). **Right side counts the same captained teams** by *choosing the team first*: pick the full $k$-person team from $n$ people ($\binom{n}{k}$ ways), then pick one of those $k$ teammates to wear the captain's badge ($k$ ways). Both procedures produce the identical end-object — a $k$-team with a captain — so they must enumerate the same number of outcomes. **Therefore equal.**
+> **Answer.** $n\binom{n-1}{k-1} = k\binom{n}{k}$.
+> **Insight.** Switching the *order* in which we make choices (captain-first vs team-first) gives two different formulas for the same count, exposing a structural identity that algebra alone hides.
 
-> [!example] Example — Vandermonde's Identity
-> $$\binom{m+n}{k} = \sum_{j=0}^{k} \binom{m}{j} \binom{n}{k-j}$$
-> *Story:* Pick a $k$-committee from $m$ juniors and $n$ seniors. Partition by exactly how many juniors $j$ end up on the committee.
+> [!example] Example 1.5.3 — Vandermonde's Identity
+> **Identity.** $$\binom{m+n}{k} = \sum_{j=0}^{k}\binom{m}{j}\binom{n}{k-j}$$
+> **Problem.** Show that choosing a $k$-person committee from a combined group of $m$ juniors and $n$ seniors can be counted directly *or* by partitioning over how many juniors are chosen.
+> **Setup.** An organization with $m$ juniors and $n$ seniors, totalling $m+n$ people. We form a committee of size $k$.
+> **Story (Solution).** **Left side counts** size-$k$ committees drawn from the full pool of $m+n$ people, ignoring the junior/senior distinction. **Right side counts the same committees** by *conditioning on the number of juniors* $j$. For each fixed $j$ (where $0 \le j \le k$), choose $j$ juniors from $m$ in $\binom{m}{j}$ ways and the remaining $k-j$ seniors from $n$ in $\binom{n}{k-j}$ ways; multiply, then sum over all possible $j$. Every committee falls into exactly one such case (it has a definite junior count), so the cases form a partition of all size-$k$ committees. **Therefore equal.**
+> **Answer.** $\binom{m+n}{k} = \displaystyle\sum_{j=0}^{k}\binom{m}{j}\binom{n}{k-j}$.
+> **Insight.** Vandermonde is the combinatorial law of total counting: split the universe by a natural attribute (junior count), tally each case, and the pieces reconstruct the whole — far more transparent than expanding $(1+x)^{m+n} = (1+x)^m(1+x)^n$.
 
-> [!example] Example — Partnerships
-> $$\frac{(2n)!}{2^n \cdot n!} = (2n-1)(2n-3) \cdots 3 \cdot 1$$
-> *Story:* Both sides count pairings of $2n$ people. Left: line them up $(2n)!$ ways and pair sequentially, then divide out the $n!$ pair orderings and $2^n$ within-pair orderings. Right: pick a partner for person 1 ($2n-1$ choices), then for the next unpaired person ($2n-3$), and so on.
+> [!example] Example 1.5.4 — Partnerships
+> **Identity.** $$\frac{(2n)!}{2^n \cdot n!} = (2n-1)(2n-3)\cdots 3 \cdot 1$$
+> **Problem.** Show that the number of ways to partition $2n$ people into $n$ unordered pairs can be counted both by *line-up-and-divide* and by *sequential pairing*.
+> **Setup.** A set of $2n$ distinguishable people; we want to count perfect matchings — partitions into $n$ pairs where neither the order of the pairs nor the order within each pair matters.
+> **Story (Solution).** **Left side counts** matchings by *lining everyone up*: arrange all $2n$ people in a row in $(2n)!$ ways and declare positions $(1,2), (3,4), \ldots, (2n-1, 2n)$ to be the pairs. This overcounts: the $n$ pairs could be listed in any of $n!$ orders (divide by $n!$), and within each pair the two members could be swapped in $2$ ways for a total of $2^n$ swaps (divide by $2^n$), giving $\frac{(2n)!}{2^n n!}$. **Right side counts the same matchings** by *sequential pairing*: take person 1 — they have $2n-1$ possible partners; take the next unpaired person — they have $2n-3$ remaining choices; continue until the last two are forced together with $1$ choice. Multiplying gives $(2n-1)(2n-3)\cdots 3\cdot 1$. Both algorithms enumerate the exact same set of perfect matchings. **Therefore equal.**
+> **Answer.** $\dfrac{(2n)!}{2^n \cdot n!} = (2n-1)(2n-3)\cdots 3 \cdot 1$.
+> **Insight.** A messy quotient of factorials and a clean product of odd numbers turn out to be the *same count* viewed from two algorithms — story proof shows the equality is structural, not a coincidence of cancellation.
 
 ---
 
@@ -206,12 +292,36 @@ The inclusion-exclusion formula generalizes to $n$ events:
 
 $$P\!\left(\bigcup_{i=1}^{n} A_i\right) = \sum_{i} P(A_i) - \sum_{i<j} P(A_i \cap A_j) + \cdots + (-1)^{n+1} P(A_1 \cap \cdots \cap A_n)$$
 
-> [!example] Example — de Montmort's Matching Problem (1708)
-> Shuffle a deck of $n$ numbered cards. Flip them one by one, calling out $1, 2, \ldots, n$. You win if any flip's number ever matches the count.
+> [!example] Example 1.6.4 — de Montmort's Matching Problem (1708)
+> **Problem.** Consider a well-shuffled deck of $n$ cards, labeled $1$ through $n$. You flip over the cards one by one, saying the numbers $1, 2, \ldots, n$ aloud as you do so. You **win** if, at some point, the number you say aloud equals the number written on the card being flipped (e.g., the 7th card flipped is the card labeled $7$). What is the probability of winning?
 >
-> Let $A_i$ be the event of a match on the $i$th card. Symmetry collapses inclusion-exclusion to
-> $$P(\text{win}) = 1 - \frac{1}{2!} + \frac{1}{3!} - \cdots + (-1)^{n+1} \frac{1}{n!}$$
-> Comparing with the Taylor series for $e^{-1}$, this approaches $1 - 1/e \approx 0.632$ as $n \to \infty$ — strikingly **independent of deck size** for any reasonably large $n$.
+> **Setup.** The sample space is the set of all $n!$ equally likely orderings of the deck. Let $A_i$ be the event that the $i$th card flipped is the card numbered $i$ (a *match* in position $i$). We want
+> $$P(\text{win}) = P\!\left(\bigcup_{i=1}^{n} A_i\right).$$
+> Since the $A_i$ are *not* disjoint (multiple matches can occur simultaneously), the naive sum $\sum P(A_i)$ overcounts and we must use **inclusion-exclusion**.
+>
+> **Solution.**
+> - **Single event $P(A_i)$.** Fixing card $i$ in position $i$ leaves $(n-1)!$ ways to arrange the remaining $n-1$ cards, so
+>   $$P(A_i) = \frac{(n-1)!}{n!} = \frac{1}{n}.$$
+>   (Equivalently, by symmetry card $i$ is equally likely to land in any of the $n$ positions.)
+> - **Pairwise intersection $P(A_i \cap A_j)$.** Fixing two cards in their matching positions leaves $(n-2)!$ arrangements:
+>   $$P(A_i \cap A_j) = \frac{(n-2)!}{n!} = \frac{1}{n(n-1)}.$$
+> - **General $k$-fold intersection.** For any specific $k$ indices $i_1 < \cdots < i_k$, fixing those $k$ cards in place leaves $(n-k)!$ arrangements:
+>   $$P(A_{i_1} \cap \cdots \cap A_{i_k}) = \frac{(n-k)!}{n!}.$$
+> - **Apply inclusion-exclusion.** With $\binom{n}{k}$ choices of $k$ indices, and each $k$-fold intersection having the *same* probability by symmetry:
+>   $$P\!\left(\bigcup_{i=1}^{n} A_i\right) = \sum_{k=1}^{n} (-1)^{k+1} \binom{n}{k} \cdot \frac{(n-k)!}{n!}.$$
+> - **Symmetry collapse.** Each term simplifies beautifully:
+>   $$\binom{n}{k} \cdot \frac{(n-k)!}{n!} = \frac{n!}{k!\,(n-k)!} \cdot \frac{(n-k)!}{n!} = \frac{1}{k!}.$$
+>   The $n!$ and $(n-k)!$ factors cancel completely, leaving only $1/k!$.
+> - **Final series.** Substituting back:
+>   $$P(\text{win}) = 1 - \frac{1}{2!} + \frac{1}{3!} - \cdots + (-1)^{n+1}\frac{1}{n!}.$$
+> - **Connect to $e^{-1}$.** The Taylor series gives $e^{-1} = 1 - \frac{1}{1!} + \frac{1}{2!} - \frac{1}{3!} + \cdots$, so
+>   $$1 - e^{-1} = 1 - \left(1 - 1 + \tfrac{1}{2!} - \tfrac{1}{3!} + \cdots\right) = 1 - \tfrac{1}{2!} + \tfrac{1}{3!} - \cdots,$$
+>   which matches our partial sum exactly as $n \to \infty$.
+>
+> **Answer.**
+> $$P(\text{win}) = 1 - \frac{1}{2!} + \frac{1}{3!} - \cdots + (-1)^{n+1}\frac{1}{n!} \;\longrightarrow\; 1 - \frac{1}{e} \approx 0.632 \quad \text{as } n \to \infty.$$
+>
+> **Insight.** The convergence is *astonishingly* fast — by $n = 7$ the answer already matches $1 - 1/e$ to three decimals, so the win probability is essentially independent of deck size. This is the signature payoff of inclusion-exclusion: messy overlaps among $n$ symmetric events collapse, via $\binom{n}{k} \cdot (n-k)!/n! = 1/k!$, into a clean alternating series whose terms know nothing about $n$.
 
 ---
 
@@ -241,5 +351,5 @@ $$P\!\left(\bigcup_{i=1}^{n} A_i\right) = \sum_{i} P(A_i) - \sum_{i<j} P(A_i \ca
 | Source | Date | Type |
 | --- | --- | --- |
 | Blitzstein & Hwang, *Introduction to Probability* (Chapter 1) | 2019 | Textbook (PDF, NotebookLM-ingested) |
-| NotebookLM (per-section sub-agent summaries + exercise solutions) | 2026-04-19 | AI synthesis (verified) |
+| NotebookLM (per-section sub-agent summaries + exercise solutions, with example-completeness contract enforced) | 2026-04-19 | AI synthesis (verified) |
 | Main-agent independent verification of all 62 exercises | 2026-04-19 | Manual cross-check |
