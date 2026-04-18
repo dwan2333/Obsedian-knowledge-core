@@ -133,43 +133,50 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > [!example] Exercise 15 — Sum of Binomial Coefficients
 > **Identity.** $\sum_{k=0}^{n} \binom{n}{k} = 2^n$
 >
-> **Story.** Both sides count subsets of an $n$-element set. Right: each element is in or out, giving $2^n$. Left: tally subsets by size $k$, with $\binom{n}{k}$ subsets of each size. ✓
+> > [!success]- Click to reveal solution
+> > **Story.** Both sides count subsets of an $n$-element set. Right: each element is in or out, giving $2^n$. Left: tally subsets by size $k$, with $\binom{n}{k}$ subsets of each size. ✓
 
 > [!example] Exercise 16 — Pascal's Identity
 > **Identity.** $\binom{n}{k} + \binom{n}{k-1} = \binom{n+1}{k}$
 >
-> **Story.** Choose a $k$-committee from $n+1$ people. Distinguish one specific person ("Alice"). If Alice is on it: pick $k-1$ from the other $n$ → $\binom{n}{k-1}$. If Alice is off it: pick $k$ from the other $n$ → $\binom{n}{k}$. ✓ (Algebraic proof: combine over common denominator $(n-k+1)!\,k!$.)
+> > [!success]- Click to reveal solution
+> > **Story.** Choose a $k$-committee from $n+1$ people. Distinguish one specific person ("Alice"). If Alice is on it: pick $k-1$ from the other $n$ → $\binom{n}{k-1}$. If Alice is off it: pick $k$ from the other $n$ → $\binom{n}{k}$. ✓ (Algebraic proof: combine over common denominator $(n-k+1)!\,k!$.)
 
 > [!example] Exercise 17 — Sum of Squared Binomials (Vandermonde with $m=n$)
 > **Identity.** $\sum_{k=0}^{n} \binom{n}{k}^2 = \binom{2n}{n}$
 >
-> **Story.** Choose an $n$-person committee from $n$ juniors and $n$ seniors. Right: $\binom{2n}{n}$. Left: partition by exactly $k$ juniors on the committee — $\binom{n}{k}$ ways for juniors and $\binom{n}{n-k} = \binom{n}{k}$ for seniors. ✓
+> > [!success]- Click to reveal solution
+> > **Story.** Choose an $n$-person committee from $n$ juniors and $n$ seniors. Right: $\binom{2n}{n}$. Left: partition by exactly $k$ juniors on the committee — $\binom{n}{k}$ ways for juniors and $\binom{n}{n-k} = \binom{n}{k}$ for seniors. ✓
 
 > [!example] Exercise 18 — Weighted Vandermonde
 > **Identity.** $\sum_{k=1}^{n} k \binom{n}{k}^2 = n \binom{2n-1}{n-1}$
 >
-> **Story.** Form an $n$-committee with chair from Group A (size $n$) drawn from a $2n$ pool (A + B, sizes $n$ each). Right: pick the chair from A ($n$), fill remaining $n-1$ from $2n-1$. Left: condition on $k$ A-members, $\binom{n}{k}\binom{n}{n-k} = \binom{n}{k}^2$ choices, then pick chair from the $k$ A-members. ✓
+> > [!success]- Click to reveal solution
+> > **Story.** Form an $n$-committee with chair from Group A (size $n$) drawn from a $2n$ pool (A + B, sizes $n$ each). Right: pick the chair from A ($n$), fill remaining $n-1$ from $2n-1$. Left: condition on $k$ A-members, $\binom{n}{k}\binom{n}{n-k} = \binom{n}{k}^2$ choices, then pick chair from the $k$ A-members. ✓
 
 > [!example] Exercise 19 — 5-Subsets via Middle Element
 > **Identity.** $\sum_{k=2}^{n} \binom{k}{2}\binom{n-k+2}{2} = \binom{n+3}{5}$
 >
-> **Story.** Count 5-subsets of $\{1, \ldots, n+3\}$ by the middle (3rd-smallest) element $c = k+1$, ranging over $\{3, \ldots, n+1\}$. Below $c$: pick 2 of $k$ smaller values → $\binom{k}{2}$. Above $c$: pick 2 of $n+3-(k+1) = n-k+2$ larger values. ✓
+> > [!success]- Click to reveal solution
+> > **Story.** Count 5-subsets of $\{1, \ldots, n+3\}$ by the middle (3rd-smallest) element $c = k+1$, ranging over $\{3, \ldots, n+1\}$. Below $c$: pick 2 of $k$ smaller values → $\binom{k}{2}$. Above $c$: pick 2 of $n+3-(k+1) = n-k+2$ larger values. ✓
 
 > [!example] Exercise 20 — Hockey Stick & Gummi Bears
 > **(a) Identity.** $\binom{k}{k} + \binom{k+1}{k} + \cdots + \binom{n}{k} = \binom{n+1}{k+1}$
 >
-> **Story.** Line up $n+1$ people by age. Count $(k+1)$-subsets by age-rank $j+1$ of the oldest member ($j \in \{k, \ldots, n\}$): $\binom{j}{k}$ ways for the younger $k$. ✓
->
-> **(b) Gummi bears.** Pack of 30-50 bears, 5 flavors. Compositions of size $N$: $\binom{N+4}{4}$ by stars-and-bars. Total $= \sum_{N=30}^{50} \binom{N+4}{4} = \sum_{j=34}^{54} \binom{j}{4} = \binom{55}{5} - \binom{34}{5}$ via hockey stick. ✓
+> > [!success]- Click to reveal solution
+> > **Story.** Line up $n+1$ people by age. Count $(k+1)$-subsets by age-rank $j+1$ of the oldest member ($j \in \{k, \ldots, n\}$): $\binom{j}{k}$ ways for the younger $k$. ✓
+> >
+> > **(b) Gummi bears.** Pack of 30-50 bears, 5 flavors. Compositions of size $N$: $\binom{N+4}{4}$ by stars-and-bars. Total $= \sum_{N=30}^{50} \binom{N+4}{4} = \sum_{j=34}^{54} \binom{j}{4} = \binom{55}{5} - \binom{34}{5}$ via hockey stick. ✓
 
 > [!example] Exercise 21 — Stirling Numbers Recurrences
 > **(a) Identity.** $\left\{{n+1 \atop k}\right\} = \left\{{n \atop k-1}\right\} + k\left\{{n \atop k}\right\}$
 >
-> **Story.** Partition $n+1$ students into $k$ nonempty groups. Distinguish "me." If I'm alone: partition the other $n$ into $k-1$ groups. If not alone: partition the other $n$ into $k$ groups, then I join one of the $k$ groups. ✓
->
-> **(b) Identity.** $\sum_{j=k}^{n} \binom{n}{j} \left\{{j \atop k}\right\} = \left\{{n+1 \atop k+1}\right\}$
->
-> **Story.** Partition $n+1$ students into $k+1$ groups. Let $j$ = number of the other $n$ students NOT in my group ($j \in \{k, \ldots, n\}$). Pick those $j$ ($\binom{n}{j}$), partition them into $k$ groups ($\left\{{j \atop k}\right\}$), the rest join my group. ✓
+> > [!success]- Click to reveal solution
+> > **Story.** Partition $n+1$ students into $k$ nonempty groups. Distinguish "me." If I'm alone: partition the other $n$ into $k-1$ groups. If not alone: partition the other $n$ into $k$ groups, then I join one of the $k$ groups. ✓
+> >
+> > **(b) Identity.** $\sum_{j=k}^{n} \binom{n}{j} \left\{{j \atop k}\right\} = \left\{{n+1 \atop k+1}\right\}$
+> >
+> > **Story.** Partition $n+1$ students into $k+1$ groups. Let $j$ = number of the other $n$ students NOT in my group ($j \in \{k, \ldots, n\}$). Pick those $j$ ($\binom{n}{j}$), partition them into $k$ groups ($\left\{{j \atop k}\right\}$), the rest join my group. ✓
 
 > [!example] Exercise 22 — Sums of Powers
 > **(a) Identity.** $1+2+\cdots+n = \binom{n+1}{2}$
@@ -178,7 +185,8 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 >
 > **(b) Identity.** $1^3 + 2^3 + \cdots + n^3 = 6\binom{n+1}{4} + 6\binom{n+1}{3} + \binom{n+1}{2}$
 >
-> **Story.** Count 4-tuples $(x,y,z,w)$ with $w \in \{1, \ldots, n\}$ and $x,y,z \in \{0, \ldots, w-1\}$ (with replacement). Fixing $w = k$ gives $k^3$ tuples; sum gives $\sum k^3$. Alternatively, case on the number of distinct values among $\{x,y,z,w\}$ where $w$ is the strict max: 4 distinct → $6\binom{n+1}{4}$, 3 distinct → $6\binom{n+1}{3}$, 2 distinct → $\binom{n+1}{2}$. ✓
+> > [!success]- Click to reveal solution
+> > **Story.** Count 4-tuples $(x,y,z,w)$ with $w \in \{1, \ldots, n\}$ and $x,y,z \in \{0, \ldots, w-1\}$ (with replacement). Fixing $w = k$ gives $k^3$ tuples; sum gives $\sum k^3$. Alternatively, case on the number of distinct values among $\{x,y,z,w\}$ where $w$ is the strict max: 4 distinct → $6\binom{n+1}{4}$, 3 distinct → $6\binom{n+1}{3}$, 2 distinct → $\binom{n+1}{2}$. ✓
 
 ---
 
@@ -233,9 +241,14 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > > **Answer.** $7/25$ ✓
 
 > [!example] Exercise 29 — Comparison Fills
-> **(a)** $P$(4 dice sum to 21) vs $P$(sum to 22)? Sum 21: partitions $\{3,6,6,6\}, \{4,5,6,6\}, \{5,5,5,6\}$ giving $4 + 12 + 4 = 20$. Sum 22: $\{4,6,6,6\}, \{5,5,6,6\}$ giving $4 + 6 = 10$. **>**
+> **Problem.** Fill in $<$, $>$, or $=$ comparing each pair of probabilities.
+> **(a)** $P$(4 dice sum to 21) ___ $P$(4 dice sum to 22)
+> **(b)** $P$(2-letter palindrome) ___ $P$(3-letter palindrome)
 >
-> **(b)** $P$(2-letter palindrome) $= 26/26^2 = 1/26$. $P$(3-letter palindrome) $= 26^2/26^3 = 1/26$. **=** ✓
+> > [!success]- Click to reveal solutions
+> > **(a)** Sum 21: partitions $\{3,6,6,6\}, \{4,5,6,6\}, \{5,5,5,6\}$ giving $4 + 12 + 4 = 20$. Sum 22: $\{4,6,6,6\}, \{5,5,6,6\}$ giving $4 + 6 = 10$. **Answer: $>$**
+> >
+> > **(b)** $P$(2-letter palindrome) $= 26/26^2 = 1/26$. $P$(3-letter palindrome) $= 26^2/26^3 = 1/26$. **Answer: $=$** ✓
 
 > [!example] Exercise 30 — n-letter Palindromes
 > **Problem.** $P$(palindrome) for $n = 7$ and $n = 8$?
@@ -447,13 +460,20 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 ## Mixed Practice (Exercises 56–62)
 
 > [!example] Exercise 56 — Comparison Fills
-> **(a)** $\binom{10}{5} = 252 > \binom{10}{6} = 210$. **>**
+> **Problem.** Fill in $<$, $>$, or $=$ comparing each pair of quantities.
+> **(a)** $\binom{10}{5}$ ___ $\binom{10}{6}$
+> **(b)** Number of ways to split 10 people into two teams of 5 ___ Number of ways to split 10 people into a team of 6 and a team of 4
+> **(c)** $P$(all 3 people share Jan 1 birthday) ___ $P$(3 people each born on a different specific day among three given days)
+> **(d)** $P$(Martin wins HH-vs-TH Penney's coin game) ___ $1/2$
 >
-> **(b)** Two teams of 5: $\binom{10}{5}/2 = 126$. Team of 6 and team of 4: $\binom{10}{4} = 210$. **<**
->
-> **(c)** $P$(all on Jan 1) $= (1/365)^3 < P$(one each on three specific days) $= 6 \cdot (1/365)^3$. **<**
->
-> **(d)** Penney's coin game (HH vs TH): Martin (HH) wins only if first two flips are HH = $1/4$. $1/4 < 1/2$. **<** ✓
+> > [!success]- Click to reveal solutions
+> > **(a)** $\binom{10}{5} = 252$ vs $\binom{10}{6} = 210$. **Answer: $>$**
+> >
+> > **(b)** Two teams of 5: $\binom{10}{5}/2 = 126$. Team of 6 and team of 4: $\binom{10}{4} = 210$. **Answer: $<$**
+> >
+> > **(c)** $P$(all on Jan 1) $= (1/365)^3$ vs $P$(one each on three specific days) $= 6 \cdot (1/365)^3$. **Answer: $<$**
+> >
+> > **(d)** Penney's coin game (HH vs TH): Martin (HH) wins only if first two flips are HH $= 1/4$, so $1/4 < 1/2$. **Answer: $<$** ✓
 
 > [!example] Exercise 57 — Caesar's Last Breath
 > **Problem.** $10^{22}$ molecules per breath, $10^{44}$ in atmosphere. $P$(at least one of your inhaled molecules was Caesar's)?
