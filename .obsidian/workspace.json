@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -207,13 +207,21 @@
       "templater-obsidian:Templater": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "smart-chat:Open: Smart Chat": false,
+      "smart-context:Smart Context: Open Builder": false,
+      "smart-context:Smart Context: Copy to Clipboard (select depth)": false,
+      "smart-context:Smart Context: List Named Contexts": false
     }
   },
   "active": "0c620b8a84d10e50",
   "lastOpenFiles": [
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.3_chessboard_crossword.png",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.2_multiplication_rule_tree.png",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png",
     "Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
     "Git and Github/Git Essential Commands.md",
     "Mathematics/Introduction to Probability/Introduction to Probability (Main).md.tmp.15792.1776418690524",
@@ -254,9 +262,6 @@
     "Projects/AI Habit Breaking Headband/infographic_audio_stereo_wiring.png",
     "Projects/AI Habit Breaking Headband/infographic_motor_buzzer_circuit.png",
     "Projects/AI Habit Breaking Headband/infographic_system_overview.png",
-    "AI Habit Breaking Headband (Main).md",
-    "Projects/AI Habit Breaking Headband/headband_infographic.png",
-    "Poker/The Course/Part 1 The 30000 Foot View/the_course_part1_infographic (2).png",
     "Untitled.canvas"
   ]
 }
