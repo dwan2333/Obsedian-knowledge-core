@@ -11,14 +11,12 @@
             "id": "0c620b8a84d10e50",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Git and Github/Git Essential Commands.md",
-                "mode": "source",
-                "source": false
+                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.4_ice_cream_cone_tree.png"
               },
-              "icon": "lucide-file",
-              "title": "Git Essential Commands"
+              "icon": "lucide-image",
+              "title": "chapter1_fig_1.4_ice_cream_cone_tree"
             }
           }
         ]
@@ -216,10 +214,17 @@
   },
   "active": "0c620b8a84d10e50",
   "lastOpenFiles": [
-    "Git and Github/gitignore.md",
-    "Git and Github/Git Essential Commands.md",
-    "Git and Github/Index and Object Store.md",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.3_chessboard_crossword.png",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.2_multiplication_rule_tree.png",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+    "Git and Github/What is Git and GitHub.md",
+    "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.6_bose_einstein_encoding.png",
+    "Git and Github/Git Essential Commands.md",
+    "Git and Github/gitignore.md",
+    "Git and Github/Index and Object Store.md",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises_raw.txt",
     "_chapter1_exercises_raw.txt",
     "_extract_exercises.py",
@@ -228,16 +233,11 @@
     "_extract_pdf.py.tmp.22140.1776540448226",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.5_birthday_problem.png",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.2_multiplication_rule_tree.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "_findpdf2.py",
     "_findpdf2.py.tmp.22140.1776540417780",
     "_findpdf.py",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.22140.1776540236357",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.3_chessboard_crossword.png",
-    "Git and Github/What is Git and GitHub.md",
     "Finance/Stablecoin/Stable Coin (Main).md",
     "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
@@ -246,7 +246,6 @@
     "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
     "Finance/Futures/SOFR Future.md",
     "Finance/Treasury Bonds/Treasury Bonds (main).md",
-    "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
     "Learning AI from TOP to Bottom/Operating System/Bash/Bash(Main).md",
     "Poker/The Course/Part 1 The 30000 Foot View/the_poker_pyramid.md",
     "Poker/The Course/Part 1 The 30000 Foot View/the_poker_ecosystem.md",
@@ -260,7 +259,6 @@
     "Projects/AI Habit Breaking Headband/infographic_gpio_pin_allocation.png",
     "Projects/AI Habit Breaking Headband/hardware_shopping_list.md",
     "Projects/AI Habit Breaking Headband/infographic_direct_wiring_no_breadboard.png",
-    "Projects/AI Habit Breaking Headband/infographic_audio_stereo_wiring.png",
     "Untitled.canvas"
   ]
 }
