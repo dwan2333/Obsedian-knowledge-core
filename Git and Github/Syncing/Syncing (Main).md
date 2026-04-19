@@ -9,12 +9,12 @@ Syncing is how Git repositories communicate. Unlike centralized VCS tools (SVN, 
 
 ## The Four Commands at a Glance
 
-| Command | Direction | What It Does |
-|---|---|---|
-| [[git remote]] | — | Manages the list of remote repositories (bookmarks) |
-| [[git fetch]] | ⬇ Download | Downloads remote commits without touching your working directory |
-| [[git pull]] | ⬇ Download + merge | Fetches **and** merges into your current branch |
-| [[git push]] | ⬆ Upload | Uploads your local commits to a remote branch |
+| Command        | Direction          | What It Does                                                     |
+| -------------- | ------------------ | ---------------------------------------------------------------- |
+| [[git remote]] | —                  | Manages the list of remote repositories (bookmarks)              |
+| [[git fetch]]  | ⬇ Download         | Downloads remote commits without touching your working directory |
+| [[git pull]]   | ⬇ Download + merge | Fetches **and** merges into your current branch                  |
+| [[git push]]   | ⬆ Upload           | Uploads your local commits to a remote branch                    |
 
 ---
 
