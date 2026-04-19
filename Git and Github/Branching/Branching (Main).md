@@ -9,11 +9,11 @@ A **branch** in Git is a lightweight pointer to a specific commit. Branches let 
 
 ## The Three Core Commands
 
-| Command | Purpose |
-|---|---|
-| `git branch` *(covered below)* | Create, list, rename, delete branches |
-| [[git checkout]] | Switch between branches (or restore files) |
-| [[git merge]] | Integrate one branch into another |
+| Command                        | Purpose                                    |
+| ------------------------------ | ------------------------------------------ |
+| `git branch` *(covered below)* | Create, list, rename, delete branches      |
+| [[git checkout]]               | Switch between branches (or restore files) |
+| [[git merge]]                  | Integrate one branch into another          |
 
 Conflicts that arise during merging are covered separately in [[Merge Conflicts]].
 

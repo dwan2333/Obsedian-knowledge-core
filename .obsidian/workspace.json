@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git and Github/Git Essential Commands.md",
+                "file": "Git and Github/Branching/Branching (Main).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Git Essential Commands"
+              "title": "Branching (Main)"
             }
           }
         ]
@@ -216,8 +216,23 @@
   },
   "active": "0c620b8a84d10e50",
   "lastOpenFiles": [
-    "Git and Github/gitignore.md",
+    "Git and Github/Branching/git checkout.md",
+    "Git and Github/Branching/git merge.md",
+    "Git and Github/Branching/Branching (Main).md",
+    "Finance/Futures/SOFR Future.md",
+    "Git and Github/Git Essential Commands.md.tmp.13848.1776590087241",
+    "Git and Github/Branching/Merge Conflicts.md",
+    "Git and Github/Branching/Merge Conflicts.md.tmp.13848.1776590067630",
+    "Git and Github/Branching/git checkout.md.tmp.13848.1776590029707",
+    "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
+    "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
+    "Finance/Stablecoin/Stable Coin (Main).md",
+    "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
+    "Git and Github/Branching",
+    "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
+    "Finance/Treasury Bonds/Treasury Bonds (main).md",
     "Git and Github/Git Essential Commands.md",
+    "Git and Github/gitignore.md",
     "Git and Github/Syncing/git remote.md",
     "Git and Github/Syncing/Syncing (Main).md",
     "Git and Github/Syncing/git fetch.md",
@@ -239,26 +254,11 @@
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.6_bose_einstein_encoding.png",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises_raw.txt",
-    "_chapter1_exercises_raw.txt",
-    "_extract_exercises.py",
-    "_extract_exercises.py.tmp.22140.1776540462288",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.5_birthday_problem.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
-    "Finance/Stablecoin/Stable Coin (Main).md",
     "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
-    "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
-    "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
-    "Finance/Stablecoin/synthetic_stablecoins_ethena_usde.md",
-    "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
-    "Finance/Futures/SOFR Future.md",
-    "Finance/Treasury Bonds/Treasury Bonds (main).md",
-    "Learning AI from TOP to Bottom/Operating System/Bash/Bash(Main).md",
-    "Poker/The Course/Part 1 The 30000 Foot View/the_poker_pyramid.md",
-    "Poker/The Course/Part 1 The 30000 Foot View/the_poker_ecosystem.md",
     "Poker/The Course/Part 1 The 30000 Foot View/the_course_part1_infographic.png",
-    "Poker/The Course/Part 1 The 30000 Foot View/Part 1 The 30000 Foot View (Main).md",
     "Projects/AI Habit Breaking Headband/infographic_stereo_wiring_plan.png",
     "Projects/AI Habit Breaking Headband/infographic_gpio_pin_allocation.png",
     "Untitled.canvas"
