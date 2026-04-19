@@ -224,6 +224,66 @@ You almost never need to do it that way — `git clone` exists precisely to coll
 
 ---
 
+## Syncing with Remotes
+
+These four commands connect your local repo to remote repositories. Brief summaries here — see [[Syncing (Main)]] for the full overview and the linked deep-dive notes for each command.
+
+### `git remote`
+
+Manages the list of remote repositories your local repo knows about. Each remote is a name (like `origin`) mapped to a URL.
+
+```bash
+git remote -v                               # list remotes with URLs
+git remote add upstream <url>               # register a new remote
+git remote rename origin upstream           # rename
+git remote set-url origin <new-url>         # change a remote's URL
+git remote rm <name>                        # delete a remote
+```
+
+See [[git remote]] for every subcommand and examples.
+
+### `git fetch`
+
+Downloads new commits and refs from a remote **without** modifying your working directory. The safe way to preview what's upstream before integrating.
+
+```bash
+git fetch origin                            # download all branches from origin
+git fetch origin main                       # just one branch
+git fetch --all                             # every registered remote
+git fetch --prune                           # also delete stale remote-tracking refs
+```
+
+After fetching, remote commits live under `refs/remotes/origin/` — inspect with `git log origin/main` before merging. See [[git fetch]].
+
+### `git push`
+
+Uploads local commits to a remote branch. Only pushes what's already committed.
+
+```bash
+git push origin main                        # push main to origin
+git push -u origin feature-x                # first push — set upstream
+git push --tags                             # include tags (not pushed by default)
+git push origin --delete feature-x          # delete remote branch
+git push --force-with-lease origin main     # safer force push
+```
+
+> [!warning] `--force` overwrites remote history
+> Use `--force-with-lease` instead — it aborts if someone else pushed since your last fetch. See [[git push]] for full detail.
+
+### `git pull`
+
+Fetches from a remote and immediately merges into your current branch. Equivalent to `git fetch` + `git merge`.
+
+```bash
+git pull                                    # pull current branch from its upstream
+git pull origin main                        # explicit remote + branch
+git pull --rebase origin main               # rebase instead of merge for linear history
+```
+
+See [[git pull]] for the merge-vs-rebase trade-off and safety notes.
+
+---
+
 
 
 
