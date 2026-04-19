@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git and Github/Branching/Branching (Main).md",
+                "file": "Git and Github/Branching/git checkout.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Branching (Main)"
+              "title": "git checkout"
             }
           }
         ]
@@ -216,15 +216,16 @@
   },
   "active": "0c620b8a84d10e50",
   "lastOpenFiles": [
-    "Git and Github/Branching/git checkout.md",
     "Git and Github/Branching/Branching (Main).md",
+    "Git and Github/Syncing/git fetch.md",
+    "Git and Github/Branching/Merge Conflicts.md",
+    "Git and Github/Branching/git merge.md",
+    "Git and Github/Branching/git checkout.md",
+    "Git and Github/Git Essential Commands.md",
     "Git and Github/Syncing/Syncing (Main).md",
     "Git and Github/Syncing/git remote.md",
     "Git and Github/Syncing/git push.md",
     "Git and Github/Syncing/git pull.md",
-    "Git and Github/Syncing/git fetch.md",
-    "Git and Github/Branching/Merge Conflicts.md",
-    "Git and Github/Branching/git merge.md",
     "Finance/Futures/SOFR Future.md",
     "Git and Github/Git Essential Commands.md.tmp.13848.1776590087241",
     "Git and Github/Branching/Merge Conflicts.md.tmp.13848.1776590067630",
@@ -236,7 +237,6 @@
     "Git and Github/Branching",
     "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
     "Finance/Treasury Bonds/Treasury Bonds (main).md",
-    "Git and Github/Git Essential Commands.md",
     "Git and Github/gitignore.md",
     "Git and Github/Git Essential Commands.md.tmp.13848.1776586098451",
     "Git and Github/Syncing/git pull.md.tmp.13848.1776586073451",
