@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git and Github/Branching/Branching (Main).md",
+                "file": "Git and Github/Branching/Merge Conflicts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Branching (Main)"
+              "title": "Merge Conflicts"
             }
           }
         ]
@@ -216,9 +216,9 @@
   },
   "active": "0c620b8a84d10e50",
   "lastOpenFiles": [
-    "Git and Github/Branching/git checkout.md",
     "Git and Github/Branching/git merge.md",
     "Git and Github/Branching/Branching (Main).md",
+    "Git and Github/Branching/git checkout.md",
     "Finance/Futures/SOFR Future.md",
     "Git and Github/Git Essential Commands.md.tmp.13848.1776590087241",
     "Git and Github/Branching/Merge Conflicts.md",

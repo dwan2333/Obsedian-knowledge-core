@@ -9,10 +9,10 @@ A **merge conflict** happens when two branches make incompatible changes to the 
 
 ## Two Moments a Conflict Can Hit
 
-| Timing | Cause | Error message |
-|---|---|---|
-| **At merge start** | Uncommitted changes in your working tree or index | `error: Entry '<file>' not uptodate. Cannot merge.` |
-| **During merge** | Branches edited the same lines differently | `error: Entry '<file>' would be overwritten by merge.` |
+| Timing             | Cause                                             | Error message                                          |
+| ------------------ | ------------------------------------------------- | ------------------------------------------------------ |
+| **At merge start** | Uncommitted changes in your working tree or index | `error: Entry '<file>' not uptodate. Cannot merge.`    |
+| **During merge**   | Branches edited the same lines differently        | `error: Entry '<file>' would be overwritten by merge.` |
 
 The first kind is fixed by committing or stashing first. The second kind is the "classic" merge conflict.
 
