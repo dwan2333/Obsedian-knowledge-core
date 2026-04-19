@@ -284,6 +284,67 @@ See [[git pull]] for the merge-vs-rebase trade-off and safety notes.
 
 ---
 
+## Branching & Merging
+
+Four commands for working with independent lines of development. See [[Branching (Main)]] for the overview.
+
+### `git branch`
+
+Creates, lists, renames, or deletes branches — without switching to them.
+
+```bash
+git branch                       # list local branches
+git branch -a                    # list local + remote
+git branch feature-x             # create (doesn't switch)
+git branch -d feature-x          # delete merged branch
+git branch -D feature-x          # force-delete unmerged branch
+git branch -m old new            # rename
+```
+
+Covered in [[Branching (Main)]].
+
+### `git checkout`
+
+Switches branches or restores files.
+
+```bash
+git checkout feature-x           # switch branches
+git checkout -b feature-y        # create + switch
+git checkout -- file.md          # discard unstaged changes in file.md
+git checkout HEAD~2 -- file.md   # grab file from 2 commits ago
+```
+
+> [!warning] Checking out a commit hash creates a detached HEAD
+> Commits made there aren't anchored to a branch — save them with `git checkout -b rescue-branch` before switching away. See [[git checkout]].
+
+### `git merge`
+
+Combines another branch into the current one.
+
+```bash
+git merge feature-x              # merge feature-x into current branch
+git merge --no-ff feature-x      # force a merge commit (preserve branch history)
+git merge --squash feature-x     # flatten feature into one commit
+git merge --abort                # cancel a merge in progress
+```
+
+See [[git merge]] for fast-forward vs three-way merge.
+
+### Merge Conflicts
+
+When the same lines change in both branches, Git halts and marks the conflict with `<<<<<<<`, `=======`, `>>>>>>>` in the affected files. Resolve by editing, then:
+
+```bash
+git add <resolved-file>
+git commit
+# or to bail out entirely:
+git merge --abort
+```
+
+Full resolution guide: [[Merge Conflicts]].
+
+---
+
 
 
 
