@@ -11,12 +11,14 @@
             "id": "0c620b8a84d10e50",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.4_ice_cream_cone_tree.png"
+                "file": "Git and Github/Git Essential Commands.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "chapter1_fig_1.4_ice_cream_cone_tree"
+              "icon": "lucide-file",
+              "title": "Git Essential Commands"
             }
           }
         ]
@@ -214,17 +216,22 @@
   },
   "active": "0c620b8a84d10e50",
   "lastOpenFiles": [
+    "Git and Github/Syncing/git remote.md",
+    "Git and Github/Syncing/git remote.md.tmp.13848.1776586023325",
+    "Git and Github/Syncing/Syncing (Main).md",
+    "Git and Github/Syncing",
+    "Git and Github/What is Git and GitHub.md",
+    "Git and Github/Index and Object Store.md",
+    "Git and Github/gitignore.md",
+    "Git and Github/Git Essential Commands.md",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.4_ice_cream_cone_tree.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.3_chessboard_crossword.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.2_multiplication_rule_tree.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
-    "Git and Github/What is Git and GitHub.md",
     "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.6_bose_einstein_encoding.png",
-    "Git and Github/Git Essential Commands.md",
-    "Git and Github/gitignore.md",
-    "Git and Github/Index and Object Store.md",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises_raw.txt",
     "_chapter1_exercises_raw.txt",
     "_extract_exercises.py",
@@ -236,8 +243,6 @@
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
     "_findpdf2.py",
     "_findpdf2.py.tmp.22140.1776540417780",
-    "_findpdf.py",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.22140.1776540236357",
     "Finance/Stablecoin/Stable Coin (Main).md",
     "Finance/Stablecoin/Hybrid Stablecoins Frax.md",
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
@@ -257,8 +262,6 @@
     "Projects/AI Habit Breaking Headband/wiring_plan_a_breadboard.md",
     "Projects/AI Habit Breaking Headband/infographic_stereo_wiring_plan.png",
     "Projects/AI Habit Breaking Headband/infographic_gpio_pin_allocation.png",
-    "Projects/AI Habit Breaking Headband/hardware_shopping_list.md",
-    "Projects/AI Habit Breaking Headband/infographic_direct_wiring_no_breadboard.png",
     "Untitled.canvas"
   ]
 }
