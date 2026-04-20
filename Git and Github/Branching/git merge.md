@@ -56,13 +56,13 @@ gitGraph
 
 ## Common Flags
 
-| Flag | Purpose |
-|---|---|
-| `--no-ff` | Force a merge commit even if a fast-forward is possible (preserves branch history) |
-| `--ff-only` | Refuse the merge unless it can be a fast-forward (rejects diverging branches) |
-| `--squash` | Combine all branch commits into a single new commit on the current branch (no merge commit, no link) |
-| `--abort` | Cancel a merge in progress and return to pre-merge state |
-| `--continue` | Finish a merge after resolving conflicts |
+| Flag         | Purpose                                                                                              |
+| ------------ | ---------------------------------------------------------------------------------------------------- |
+| `--no-ff`    | Force a merge commit even if a fast-forward is possible (preserves branch history)                   |
+| `--ff-only`  | Refuse the merge unless it can be a fast-forward (rejects diverging branches)                        |
+| `--squash`   | Combine all branch commits into a single new commit on the current branch (no merge commit, no link) |
+| `--abort`    | Cancel a merge in progress and return to pre-merge state                                             |
+| `--continue` | Finish a merge after resolving conflicts                                                             |
 
 ---
 
