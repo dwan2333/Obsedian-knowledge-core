@@ -117,4 +117,5 @@ git pull --rebase origin main
 - [[git fetch]] — the non-merging version
 - [[git push]] — the upload counterpart
 - [[git remote]] — managing remote connections
+- [[git rebase]] — what `pull --rebase` does under the hood
 - [[Git Essential Commands]] — local-side commands like `git commit` and `git stash`

@@ -330,6 +330,21 @@ git merge --abort                # cancel a merge in progress
 
 See [[git merge]] for fast-forward vs three-way merge.
 
+### `git rebase`
+
+Replays your branch's commits on top of a new base — producing a linear history instead of a merge commit. Use on local branches only.
+
+```bash
+git rebase main                  # replay current branch onto latest main
+git rebase -i HEAD~3             # interactive — squash, reword, reorder last 3
+git rebase --continue            # after resolving conflicts
+git rebase --abort               # cancel and restore pre-rebase state
+git pull --rebase                # pull that rebases instead of merging
+```
+
+> [!warning] The golden rule — never rebase public history
+> Rebasing rewrites commits with new SHA-1s. If others have based work on those commits, rebasing forces them to reconcile duplicate histories. Safe on private branches only. See [[git rebase]] for the full rules and recipes.
+
 ### Merge Conflicts
 
 When the same lines change in both branches, Git halts and marks the conflict with `<<<<<<<`, `=======`, `>>>>>>>` in the affected files. Resolve by editing, then:

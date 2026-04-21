@@ -121,6 +121,7 @@ $ git commit -m "Merge feature-x into main"
 ## See Also
 
 - [[git merge]] — the command that triggers conflicts
+- [[git rebase]] — conflicts during rebase resolve the same way (per-commit)
 - [[git checkout]] — `--ours` and `--theirs` shortcuts
 - [[Branching (Main)]] — why we have branches in the first place
 - [[git pull]] — pull conflicts resolve the same way

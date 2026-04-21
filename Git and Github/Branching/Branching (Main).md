@@ -7,15 +7,16 @@ A **branch** in Git is a lightweight pointer to a specific commit. Branches let 
 
 ---
 
-## The Three Core Commands
+## The Four Core Commands
 
-| Command                        | Purpose                                    |
-| ------------------------------ | ------------------------------------------ |
-| `git branch` *(covered below)* | Create, list, rename, delete branches      |
-| [[git checkout]]               | Switch between branches (or restore files) |
-| [[git merge]]                  | Integrate one branch into another          |
+| Command                        | Purpose                                                               |
+| ------------------------------ | --------------------------------------------------------------------- |
+| `git branch` *(covered below)* | Create, list, rename, delete branches                                 |
+| [[git checkout]]               | Switch between branches (or restore files)                            |
+| [[git merge]]                  | Integrate one branch into another (adds a merge commit)               |
+| [[git rebase]]                 | Integrate by replaying commits onto a new base (rewrites history)     |
 
-Conflicts that arise during merging are covered separately in [[Merge Conflicts]].
+Conflicts that arise during merging or rebasing are covered separately in [[Merge Conflicts]].
 
 ---
 
