@@ -232,6 +232,51 @@ Two specializations follow immediately:
 | **With replacement** | $n^k$ | Each draw is independent; values can repeat |
 | **Without replacement** | $n(n-1)(n-2)\cdots(n-k+1) = \dfrac{n!}{(n-k)!}$ | Each draw removes the item; order matters |
 
+> [!tip] Aside — Unpacking the algebra: $n(n-1)(n-2)\cdots(n-k+1) = \dfrac{n!}{(n-k)!}$
+> The two expressions are the same number, just packaged differently. The left side counts the draws directly; the right side is an algebraic repackaging via factorials.
+
+#### The direct product — counting draw by draw
+
+On draw number $j$, we have already removed $j-1$ items, so $n - (j-1) = n - j + 1$ remain. Multiplying across all $k$ draws:
+
+| Draw # | Items already removed | Items remaining (= choices) |
+|---|---|---|
+| 1 | 0 | $n$ |
+| 2 | 1 | $n-1$ |
+| 3 | 2 | $n-2$ |
+| $\vdots$ | $\vdots$ | $\vdots$ |
+| $k$ | $k-1$ | $n-k+1$ |
+
+By the multiplication rule, total $= n(n-1)(n-2)\cdots(n-k+1)$ — exactly $k$ factors, one per draw.
+
+> [!tip] Why $(n-k+1)$ and not $(n-k)$?
+> On draw $k$, only $k-1$ items have been removed (the $k$-th draw hasn't happened yet when you count the remaining pool). Sanity check: if $k = n$, the last draw has $n - n + 1 = 1$ choice — the single leftover item. If the formula said $n-k$, we'd get $0$ choices on the last draw, which is impossible.
+
+#### The factorial rewrite — multiply top and bottom by $(n-k)!$
+
+Recall $n! = n(n-1)(n-2)\cdots 2 \cdot 1$ (a full countdown from $n$ to $1$). Expand the ratio in full and look for the "tail":
+
+$$\frac{n!}{(n-k)!} \;=\; \frac{\overbrace{n(n-1)\cdots(n-k+1)}^{\text{first } k \text{ factors}} \;\cdot\; \overbrace{(n-k)(n-k-1)\cdots 2 \cdot 1}^{(n-k)!}}{(n-k)(n-k-1)\cdots 2 \cdot 1}$$
+
+The denominator is **identical** to the tail of the numerator's factorial, so it cancels:
+
+$$\frac{n!}{(n-k)!} \;=\; \frac{n(n-1)\cdots(n-k+1) \cdot \cancel{(n-k)!}}{\cancel{(n-k)!}} \;=\; n(n-1)\cdots(n-k+1)$$
+
+That is the whole algebraic trick: multiplying top and bottom by $(n-k)!$ turns a truncated product into a clean ratio of two complete factorials, and the tail cancels.
+
+#### Concrete check ($n=5$, $k=3$)
+
+- **Draw-by-draw:** $5 \cdot 4 \cdot 3 = 60$  (three factors; last is $n-k+1 = 5-3+1 = 3$)
+- **Factorial form:** $\dfrac{5!}{(5-3)!} = \dfrac{5!}{2!} = \dfrac{5 \cdot 4 \cdot 3 \cdot \cancel{2 \cdot 1}}{\cancel{2 \cdot 1}} = 60$  ✓
+
+#### Why keep both forms around?
+
+| Reason | Benefit |
+|---|---|
+| **Compactness** | $\frac{n!}{(n-k)!}$ is one clean expression — no trailing "..." whose length depends on $k$ |
+| **Plays well with $\binom{n}{k}$** | $\binom{n}{k} = \dfrac{n!}{k!\,(n-k)!}$ — the ordered count is literally the first step of that derivation (§1.4.3) |
+| **Edge cases are automatic** | $k=0$: $\dfrac{n!}{n!}=1$ (one way to pick nothing); $k=n$: $\dfrac{n!}{0!}=n!$ (full permutations of the whole set) |
+
 Arranging all $n$ distinct objects in order: $n!$ permutations.
 
 > [!example] Example 1.4.10 — Birthday Problem
