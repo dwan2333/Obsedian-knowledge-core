@@ -101,7 +101,7 @@ This is what GitHub's **"Squash and merge"** PR button does under the hood.
 A shortcut when you just want to flatten the last N commits into one, no editor dance:
 
 ```bash
-git reset --soft HEAD~5     # rewind 5 commits, keep all changes staged
+git reset --soft HEAD~5     # rewind 5 commits, keep all changes staged --mixed (changes the index) and --hard (changes your working directory and index )
 git commit -m "Your combined message"
 ```
 
@@ -152,12 +152,12 @@ git reset --hard HEAD@{N}
 
 ## When NOT to Squash
 
-| Situation | Why keep the commits |
-|---|---|
-| Each commit is a **separate logical change** | Reviewer benefits from seeing them step-by-step |
-| You want accurate `git blame` for sub-features | A collapsed commit blurs authorship |
-| The branch is already shared | Don't rewrite public history |
-| You're using `git bisect` | Bisecting through small commits narrows bugs faster than one huge commit |
+| Situation                                      | Why keep the commits                                                     |
+| ---------------------------------------------- | ------------------------------------------------------------------------ |
+| Each commit is a **separate logical change**   | Reviewer benefits from seeing them step-by-step                          |
+| You want accurate `git blame` for sub-features | A collapsed commit blurs authorship                                      |
+| The branch is already shared                   | Don't rewrite public history                                             |
+| You're using `git bisect`                      | Bisecting through small commits narrows bugs faster than one huge commit |
 
 Squashing is a tool for **story-telling**, not automation. If each commit already tells a clean story, leave them alone.
 
