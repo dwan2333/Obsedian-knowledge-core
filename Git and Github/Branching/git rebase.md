@@ -138,16 +138,16 @@ pick a5f4a0d Add cat-file
 
 ### Command Reference
 
-| Command | Effect |
-|---|---|
-| `pick` (p) | Use the commit unchanged |
-| `reword` (r) | Keep the commit but edit its message |
-| `edit` (e) | Pause to amend content, then `git rebase --continue` |
+| Command      | Effect                                                  |
+| ------------ | ------------------------------------------------------- |
+| `pick` (p)   | Use the commit unchanged                                |
+| `reword` (r) | Keep the commit but edit its message                    |
+| `edit` (e)   | Pause to amend content, then `git rebase --continue`    |
 | `squash` (s) | Merge into previous commit, prompt for combined message |
-| `fixup` (f) | Like squash but drop this commit's message entirely |
-| `exec` (x) | Run a shell command (e.g., tests) at this point |
-| `drop` (d) | Delete the commit outright |
-| `break` (b) | Stop here so you can work manually |
+| `fixup` (f)  | Like squash but drop this commit's message entirely     |
+| `exec` (x)   | Run a shell command (e.g., tests) at this point         |
+| `drop` (d)   | Delete the commit outright                              |
+| `break` (b)  | Stop here so you can work manually                      |
 
 **Reordering:** just swap the lines in the editor — Git replays them in the order shown.
 
