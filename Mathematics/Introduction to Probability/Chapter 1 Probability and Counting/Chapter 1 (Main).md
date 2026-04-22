@@ -303,6 +303,96 @@ The denominator $k!$ corrects for overcounting: each unordered subset correspond
 > **Answer.** LALALAAA: $\dbinom{8}{5} = 56$. STATISTICS: $\dfrac{10!}{3!\,3!\,2!} = 50{,}400$.
 > **Insight.** The general "permutations with repetitions" formula $\frac{n!}{n_1!\,n_2!\,\cdots\,n_k!}$ is just the multiplication rule (treating items as distinct) followed by quotienting out each indistinguishable swap-group.
 
+> [!tip] Aside — Unpacking Example 1.4.20: *visible* vs *labeled* arrangements
+> The entire idea hinges on a distinction the example skips past. When you arrange the letters of LALALAAA, "how many arrangements are there?" depends on whether you can **tell the A's apart**.
+>
+> - **Labeled arrangement.** Every letter has a secret tag ($A_1, A_2, A_3, A_4, A_5, L_1, L_2, L_3$). Two arrangements differ if any tag is in a different slot. There are $8!$ of these.
+> - **Visible arrangement.** The tags are invisible. Two arrangements are "the same word" if they look identical once the tags are stripped off. Many of the $8!$ labeled arrangements collapse onto the same visible word — and the question is asking for *visible* words only.
+>
+> The task is to figure out how many labeled arrangements collapse onto each visible word, then divide.
+
+#### Tiny worked example — the word **AAB**
+
+Imagine the A's carry secret tags $A_1, A_2$. The $3! = 6$ labeled arrangements strip down as follows:
+
+| Labeled | Visible (tags stripped) |
+|---|---|
+| $A_1\,A_2\,B$ | **AAB** |
+| $A_2\,A_1\,B$ | **AAB** |
+| $A_1\,B\,A_2$ | **ABA** |
+| $A_2\,B\,A_1$ | **ABA** |
+| $B\,A_1\,A_2$ | **BAA** |
+| $B\,A_2\,A_1$ | **BAA** |
+
+Only **3 distinct visible words**. Each visible word appears **exactly twice** — once per way to secretly order the two A's. That $2$ is $2!$, so:
+
+$$\text{visible} \;=\; \frac{\text{labeled}}{\text{swaps that leave the word unchanged}} \;=\; \frac{3!}{2!} \;=\; 3 \;\checkmark$$
+
+#### Two repeated groups — **AABB**
+
+Label everything: $A_1, A_2, B_1, B_2$. Labeled count: $4! = 24$. For any visible word like "AABB", how many labeled arrangements look identical to it?
+
+- The two A's can be in either secret order → $2$ ways
+- The two B's can *independently* be in either secret order → $2$ ways
+- Total: $2 \times 2 \;=\; 2! \times 2! \;=\; 4$ labeled versions per visible word
+
+Visible count: $\dfrac{4!}{2!\,2!} = \dfrac{24}{4} = 6$. Enumerating verifies it:
+
+> **AABB, ABAB, ABBA, BAAB, BABA, BBAA** — six ✓
+
+#### The critical subtlety — why **multiply** the divisors, not add
+
+For LALALAAA we divide by $5! \cdot 3!$, not $5! + 3!$. Why? Because the two swap-groups are **independent**:
+
+- *Whatever* order the A's are labeled in, the L's can still be shuffled $3! = 6$ ways without changing the visible word.
+- *Whatever* order the L's are labeled in, the A's can still be shuffled $5! = 120$ ways without changing the visible word.
+
+Both shuffles happen simultaneously and independently — so by the multiplication rule, each visible word is counted $5! \cdot 3! = 720$ times in the labeled $8!$. This is the same multiplication rule we use everywhere in counting; it just happens to apply to the overcount itself.
+
+$$\text{visible words of LALALAAA} \;=\; \frac{8!}{5! \cdot 3!} \;=\; \frac{40{,}320}{720} \;=\; 56$$
+
+#### Two viewpoints — same formula
+
+The example offers two solutions; they look different but are literally the same equation:
+
+| Approach | Reasoning | Calculation |
+|---|---|---|
+| **Positions (top-down)** | Choose 3 of the 8 slots to hold L's; A's fill the rest automatically | $\binom{8}{3} = 56$ |
+| **Overcount (bottom-up)** | Arrange 8 labeled letters → $8!$; divide by each type's internal swaps | $\dfrac{8!}{5!\,3!} = 56$ |
+
+These are the same formula because the binomial coefficient is *defined* as
+$$\binom{8}{3} = \frac{8!}{3!\,(8-3)!} = \frac{8!}{3!\,5!}.$$
+The "positions" story and the "overcount" story are two English readings of the same algebra.
+
+#### Applying the recipe to STATISTICS
+
+Letters: 3 S's, 3 T's, 2 I's, 1 A, 1 C (total 10).
+
+| Letter | Count | Invisible-swap factor |
+|---|---|---|
+| S | 3 | $3! = 6$ |
+| T | 3 | $3! = 6$ |
+| I | 2 | $2! = 2$ |
+| A | 1 | $1! = 1$ (trivial) |
+| C | 1 | $1! = 1$ (trivial) |
+
+Each visible word is counted $3! \cdot 3! \cdot 2! \cdot 1! \cdot 1! \;=\; 6 \cdot 6 \cdot 2 \;=\; 72$ times inside the labeled $10!$. So:
+
+$$\text{visible words} \;=\; \frac{10!}{3!\,3!\,2!\,1!\,1!} \;=\; \frac{3{,}628{,}800}{72} \;=\; 50{,}400$$
+
+The $1!$ terms are harmless — writing them keeps the pattern uniform (every letter type contributes its factorial) without changing the value.
+
+#### The general formula — *multinomial coefficient*
+
+If you have $n$ total items split into $k$ groups of sizes $n_1, n_2, \ldots, n_k$ (with $n_1 + n_2 + \cdots + n_k = n$):
+
+$$\binom{n}{n_1,\,n_2,\,\ldots,\,n_k} \;=\; \frac{n!}{n_1!\,n_2!\,\cdots\,n_k!}$$
+
+This is the direct generalization of $\binom{n}{k}$ from 2 groups to any number.
+
+> [!tip] The essence, one sentence
+> Treat all items as distinct ($n!$ labeled arrangements), then divide by the product of factorials of each identical group. Swaps **within** a group don't make new visible words (→ divide). Swaps **across** different groups happen independently (→ multiply the divisors, by the multiplication rule). The rest is arithmetic.
+
 > [!example] Example 1.4.22 — Full House in Poker
 > **Problem.** A 5-card hand is dealt from a standard, well-shuffled 52-card deck. The hand is a *full house* if it consists of three cards of some rank and two cards of another rank (e.g., three 7's and two 10's, in any order). What is the probability of a full house?
 > **Setup.** Order in a hand is irrelevant, so by symmetry every 5-card hand is equally likely. Sample space: $\binom{52}{5}$ unordered hands. Count full houses by sequentially choosing the triple's rank, the triple's suits, the pair's rank, then the pair's suits.
