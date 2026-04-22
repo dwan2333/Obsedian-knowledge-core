@@ -29,12 +29,12 @@ Miller's rule of thumb: **aside from pocket pairs, a hand must be suited, and it
 ## Pre-Flop Frequencies
 Miller collapses all pre-button seats into a single "early position" bucket and gives a simple frequency ladder.
 
-| Position | % of hands played (unopened) |
-|---|---|
-| Early Position (UTG through 2-off) | ~14% |
-| Cutoff | ~22% |
-| Button | ~33% |
-| Blinds vs. steal-raise | Defend ~36% (with ~16% as 3-bets) |
+| Position                           | % of hands played (unopened)      |
+| ---------------------------------- | --------------------------------- |
+| Early Position (UTG through 2-off) | ~14%                              |
+| Cutoff                             | ~22%                              |
+| Button                             | ~33%                              |
+| Blinds vs. steal-raise             | Defend ~36% (with ~16% as 3-bets) |
 
 **Fundamental rule, all positions:** if you play, you raise. No limping.
 
