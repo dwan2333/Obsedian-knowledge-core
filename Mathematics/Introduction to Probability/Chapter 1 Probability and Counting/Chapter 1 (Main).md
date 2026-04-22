@@ -66,6 +66,80 @@ Set theory gives us the language for combining events: union $A \cup B$ ("at lea
 >
 > **Insight.** Compound English phrases like *"at least one"*, *"all"*, and *"consecutive"* translate mechanically into unions, intersections, and unions-of-intersections over base events.
 
+> [!tip] Aside — De Morgan's Laws
+> The coin-flip example relies on two identities that will return throughout the book. In set notation:
+> $$(A \cup B)^c = A^c \cap B^c \qquad\text{and}\qquad (A \cap B)^c = A^c \cup B^c$$
+> In English:
+> - **"Not (A or B)"** = **"not A AND not B"**
+> - **"Not (A and B)"** = **"not A OR not B"**
+>
+> The rule in one phrase: **distribute the complement, and flip the operator.** Union becomes intersection; intersection becomes union.
+
+#### Venn diagram — the 4-region view
+
+Every 2-set Venn diagram has exactly four regions. Labeling them lets us verify each law by checking which regions get shaded on each side.
+
+![Figure — Four regions of a 2-set Venn diagram](chapter1_fig_demorgan_venn.png)
+
+| Region | Description | In $A$? | In $B$? |
+|---|---|---|---|
+| (1) | Only $A$ | ✓ | ✗ |
+| (2) | Only $B$ | ✗ | ✓ |
+| (3) | $A \cap B$ (overlap) | ✓ | ✓ |
+| (4) | Neither (outside both) | ✗ | ✗ |
+
+**Law 1 — $(A \cup B)^c = A^c \cap B^c$:** both sides shade only region (4).
+
+| Region | $A \cup B$ | $(A \cup B)^c$ | $A^c$ | $B^c$ | $A^c \cap B^c$ |
+|---|:---:|:---:|:---:|:---:|:---:|
+| (1) Only $A$ | shaded | — | — | shaded | — |
+| (2) Only $B$ | shaded | — | shaded | — | — |
+| (3) $A \cap B$ | shaded | — | — | — | — |
+| (4) Neither | — | **shaded** | shaded | shaded | **shaded** |
+
+**Law 2 — $(A \cap B)^c = A^c \cup B^c$:** both sides shade regions (1), (2), and (4).
+
+| Region | $A \cap B$ | $(A \cap B)^c$ | $A^c$ | $B^c$ | $A^c \cup B^c$ |
+|---|:---:|:---:|:---:|:---:|:---:|
+| (1) Only $A$ | — | **shaded** | — | shaded | **shaded** |
+| (2) Only $B$ | — | **shaded** | shaded | — | **shaded** |
+| (3) $A \cap B$ | shaded | — | — | — | — |
+| (4) Neither | — | **shaded** | shaded | shaded | **shaded** |
+
+> [!tip] Reading Venn diagrams without getting confused
+> Don't try to "see" the whole picture at once. Treat the four regions as four separate boxes, and for each box ask: *is this box shaded on the left side? What about the right side?* If every box matches on both sides, the two expressions are equal. The table is literally doing this box-by-box.
+
+#### Tie-back to the coin flips
+
+From Example 1.2.2, recall $B = \bigcup_{j=1}^{10} A_j$ = "at least one Heads" and $C = \bigcap_{j=1}^{10} A_j$ = "all Heads." Taking complements flips each quantifier:
+- $B^c = \left(\bigcup_j A_j\right)^c = \bigcap_j A_j^c$ = **"every flip is Tails"** — a single outcome, the all-Tails string
+- $C^c = \left(\bigcap_j A_j\right)^c = \bigcup_j A_j^c$ = **"at least one flip is Tails"** — everything except the all-Heads string
+
+So "not (at least one H)" = "all T", and "not (all H)" = "at least one T." Both are De Morgan's laws extended to 10 sets.
+
+#### Parallel example — traffic lights (ternary analog)
+
+Suppose you observe 4 traffic lights in sequence, each Green, Yellow, or Red. Let $R_j$ = "light $j$ is Red", $G_j$ = "light $j$ is Green", $Y_j$ = "light $j$ is Yellow". Then:
+
+$$E_1 = \bigcup_{j=1}^{4} R_j \;=\; \text{``at least one Red''}$$
+
+Its complement — "no Red anywhere" — admits two equivalent forms by De Morgan:
+
+$$E_1^c = \bigcap_{j=1}^{4} R_j^c = \bigcap_{j=1}^{4} (G_j \cup Y_j)$$
+
+Each light independently avoids Red. Sanity check: $|E_1^c| = 2^4 = 16$ (two non-Red choices per light), and $|S| = 3^4 = 81$, so $|E_1| = 81 - 16 = 65$. The complement is far easier to count than the union directly — a recurring theme from §1.3.
+
+> [!tip] The English ↔ set-operation dictionary
+> | English phrase | Set operation |
+> |---|---|
+> | "at least one" | $\cup$ (union) |
+> | "all" / "every" / "simultaneously" | $\cap$ (intersection) |
+> | "none" / "no" | complement of a union = $\bigcap$ of complements |
+> | "A and B" | $\cap$ |
+> | "A or B" | $\cup$ |
+>
+> De Morgan's laws are what let you switch between these forms freely — for instance, "none" can be written either as $(\bigcup \text{something})^c$ or as $\bigcap (\text{not something})$, and computing the complement is often the easier route.
+
 > [!example] Example 1.2.3 — Pick a Card, Any Card
 > **Problem.** Pick a card from a standard deck of 52 cards. The sample space $S$ is the set of all 52 cards (so there are 52 pebbles, one for each card). Consider the four events $A$: card is an ace; $B$: card has a black suit; $D$: card is a diamond; $H$: card is a heart. Express the following events in terms of $A$, $B$, $D$, $H$: the **Ace of Hearts**; the set $\{$Ace of Spades, Ace of Clubs$\}$; **red or an ace**; **red non-ace**.
 > **Setup.** Sample space $S$ = the 52 cards of a standard deck. Base events: $A$ (card is an ace, $|A| = 4$), $B$ (card is black — spade or club, $|B| = 26$), $D$ (card is a diamond, $|D| = 13$), $H$ (card is a heart, $|H| = 13$). Note that $D$ and $H$ together comprise the red cards, and $B^c = D \cup H$.
