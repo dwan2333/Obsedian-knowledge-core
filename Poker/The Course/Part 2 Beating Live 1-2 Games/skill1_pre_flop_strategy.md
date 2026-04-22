@@ -42,24 +42,82 @@ Miller collapses all pre-button seats into a single "early position" bucket and 
 
 ## Position-Based Opening Ranges
 
-### Early Position
-Open-raise ~14%: **22+, A2s+, KTs+, QTs+, JTs–76s, AKo, AQo.**
-Facing a tight raiser: 3-bet AA–KK (and A5s as a bluff); flat QQ–22, ATs+, broadways suited, AKo.
-Facing a loose raiser: widen 3-bets to AA–QQ, AKs, A5s–A2s, T9s, 87s, AKo.
+Think of the four positions as a **color-coded heat map** — as you move from early position to the button, the range heats up (tight → wide). The blinds are a separate blue zone because you're defending, not initiating.
 
-### The Cutoff
-Open-raise ~22%: **22+, A2s+, K7s+, Q9s+, JTs–43s, J9s–53s, ATo+, KJo+.**
-Against a tight raise, collapse back to your EP range. Against a loose raise, 3-bet JJ+, AKs, and suited wheel-aces (A5s–A2s) plus select suited connectors as bluffs.
+> [!tip] Position cheat sheet — tight to wide
+> | Position                   | Heat          | Frequency                      | Mindset                                          |
+> | -------------------------- | ------------- | ------------------------------ | ------------------------------------------------ |
+> | 🔴 **Early (EP)**          | Cold / tight  | **~14%**                       | Many players left to act — only premium hands    |
+> | 🟠 **Cutoff (CO)**         | Warming up    | **~22%**                       | One seat from the button — widen, but stay aware |
+> | 🟢 **Button (BTN)**        | Hot / wide    | **~33%**                       | Best seat in poker — steal liberally             |
+> | 🔵 **Blinds (SB/BB)**      | Reactive      | Defend ~36% vs steals          | React based on the raiser; do not initiate       |
 
-### The Button
-Open-raise ~33%: **22+, A2s+, K2s+, Q5s+, J7s+, T9s–43s, T8s–53s, T7s–96s, A7o+, K9o+, QTo+, JTo.**
-This is where connectedness earns its keep. Against a loose raiser (common from blinds or other late-position players), 3-bet 99+, AKs–ATs, A5s–A2s, KQs–KJs, QJs, JTs, 97s, 75s, AKo–AQo.
+---
 
-### The Blinds
-Miller treats SB and BB similarly.
-- **Limped pots:** from SB, fold offsuit junk (J-4, 9-6); complete or raise with any pair, any suited hand, any connected hand, or high offsuits. Raising-over-limpers range: **99+, ATs+, KJs+, AQo+.**
-- **Vs. a tight/strong raise:** you're not obligated to defend — use EP ranges.
-- **Vs. a steal raise (loose CO/BTN raise):** attack. Defend ~36%, with a ~16% 3-bet range including 99+, 44–22, A2s+, KJs+, K7s–K5s, Q9s, 98s–54s, J9s–86s, AJo+, KQo.
+> [!danger] 🔴 Early Position (UTG → 2-off button) — ~14%
+> **Open-raise range:** *22+, A2s+, KTs+, QTs+, JTs–76s, AKo, AQo.*
+>
+> | Category              | Hands                       | Memory aid                                     |
+> | --------------------- | --------------------------- | ---------------------------------------------- |
+> | **Pocket pairs**      | 22+                         | **Any pair**                                   |
+> | **Suited aces**       | A2s+                        | **Every** suited ace                           |
+> | **Suited broadways**  | KTs+, QTs+, JTs             | K-T or better, suited only                     |
+> | **Suited connectors** | JTs, T9s, 98s, 87s, 76s     | Run of 5, stopping at 76s                      |
+> | **Offsuit**           | AKo, AQo                    | **Only AK and AQ** — *no other* offsuit hands  |
+>
+> **Facing a tight raiser:** 3-bet AA–KK (+ A5s as a bluff); flat QQ–22, ATs+, suited broadways, AKo.
+> **Facing a loose raiser:** 3-bet AA–QQ, AKs, A5s–A2s, T9s, 87s, AKo.
+
+---
+
+> [!warning] 🟠 The Cutoff — ~22%
+> **Open-raise range:** *22+, A2s+, K7s+, Q9s+, JTs–43s, J9s–53s, ATo+, KJo+.*
+>
+> | Category              | Hands          | Memory aid                          |
+> | --------------------- | -------------- | ----------------------------------- |
+> | **Pocket pairs**      | 22+            | Any pair                            |
+> | **Suited aces**       | A2s+           | Every suited ace                    |
+> | **Suited kings**      | K7s+           | **Down to K-7** suited              |
+> | **Suited queens**     | Q9s+           | Down to Q-9 suited                  |
+> | **Suited connectors** | JTs → 43s      | **Full run** — all the way to 4-3s  |
+> | **Suited 1-gappers**  | J9s → 53s      | One-gap version of connectors       |
+> | **Offsuit**           | ATo+, KJo+     | A-T or better, K-J or better        |
+>
+> **Vs. tight raise:** collapse back to EP range.
+> **Vs. loose raise:** 3-bet JJ+, AKs, A5s–A2s + select suited connectors as bluffs.
+
+---
+
+> [!success] 🟢 The Button — ~33%
+> **Open-raise range:** *22+, A2s+, K2s+, Q5s+, J7s+, T9s–43s, T8s–53s, T7s–96s, A7o+, K9o+, QTo+, JTo.*
+>
+> | Category              | Hands                     | Memory aid                                                 |
+> | --------------------- | ------------------------- | ---------------------------------------------------------- |
+> | **Pocket pairs**      | 22+                       | Any pair                                                   |
+> | **Suited aces**       | A2s+                      | Any suited ace                                             |
+> | **Suited kings**      | K2s+                      | **Any suited king**                                        |
+> | **Suited queens**     | Q5s+                      | Q-5 or better                                              |
+> | **Suited jacks**      | J7s+                      | J-7 or better                                              |
+> | **Suited connectors** | T9s → 43s                 | Full run                                                   |
+> | **Suited 1-gappers**  | T8s → 53s                 | Full run                                                   |
+> | **Suited 2-gappers**  | T7s → 96s                 | T-7 and 9-6 — wider reach                                  |
+> | **Offsuit**           | A7o+, K9o+, QTo+, JTo     | Much wider offsuit than CO                                 |
+>
+> This is where **connectedness earns its keep** — the button plays every suited connector and gapper down to near-bottom.
+> **Vs. loose raise from blinds:** 3-bet 99+, AKs–ATs, A5s–A2s, KQs–KJs, QJs, JTs, 97s, 75s, AKo–AQo.
+
+---
+
+> [!info] 🔵 The Blinds (SB & BB) — defend ~36% vs steals
+> Miller treats SB and BB similarly. You're not opening pots from the blinds — you're **reacting** to what's in front of you.
+>
+> | Situation                                | What to do                                                                                                                  |
+> | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+> | **Limped pot, SB**                       | Fold offsuit junk (J-4, 9-6). Complete or raise any pair / suited / connected / high offsuit. Raise-over-limpers: **99+, ATs+, KJs+, AQo+** |
+> | **Vs. tight/strong raise**               | Don't feel obligated — use EP ranges                                                                                        |
+> | **Vs. steal raise (loose CO/BTN raise)** | **Attack.** Defend ~36%, with a ~16% 3-bet range                                                                            |
+>
+> **Steal-defense 3-bet range:** 99+, 44–22, A2s+, KJs+, K7s–K5s, Q9s, 98s–54s, J9s–86s, AJo+, KQo.
 
 ---
 
