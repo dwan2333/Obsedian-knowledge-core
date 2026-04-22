@@ -35,11 +35,11 @@ Part 2 closes with **[12 hand quizzes](hand_quizzes_1_2.md)** that drill all thr
 
 The skills aren't independent — they lock together mathematically:
 
-| Skill | Role | What it gets you |
-|---|---|---|
-| **#1 Pre-Flop** | Structural | Enter pots with a **stronger range** than your opponents' |
-| **#3 Value** | Offensive | **Extract maximum value** when that range hits |
-| **#2 Folding** | Defensive | **Don't pay off** when opponents' narrower range hits *you* |
+| Skill           | Role       | What it gets you                                            |
+| --------------- | ---------- | ----------------------------------------------------------- |
+| **#1 Pre-Flop** | Structural | Enter pots with a **stronger range** than your opponents'   |
+| **#3 Value**    | Offensive  | **Extract maximum value** when that range hits              |
+| **#2 Folding**  | Defensive  | **Don't pay off** when opponents' narrower range hits *you* |
 
 > Stronger hand more often + max value when ahead + no payoff when beat = a structural edge that's hard for a typical 1-2 field to overcome.
 

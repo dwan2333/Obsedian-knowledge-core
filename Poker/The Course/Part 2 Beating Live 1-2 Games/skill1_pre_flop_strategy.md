@@ -12,12 +12,12 @@ Skill #1 is the foundation of beating 1-2: a tight, aggressive, position-aware o
 ## Hand Selection: The Four Criteria
 Miller organizes playable hands around four features. Suitedness is the gatekeeper — almost every non-pair hand he plays is suited. Big cards and connectedness are the two "qualifying" traits that, paired with suitedness, earn a hand into his range. Small pairs stand on their own as a separate category.
 
-| Criterion | Qualifying hands | Why it matters at 1-2 | Priority |
-|---|---|---|---|
-| **Suitedness** | Any two suited cards | Flush draws give fallback equity when your bluffs get called; flushes win the large multi-way pots | Most important trait — majority of unsuited hands are "unplayable" |
-| **Big cards** | A-K, A-Q (offsuit OK); K-Q, K-J etc. need suitedness | Top pair wins medium pots; overcards give equity vs. loose ranges | A-K/A-Q are premium; below that, suitedness required |
-| **Connectedness** | Suited connectors (9♥8♥, 6♠5♠) | Hit widest range of flops — pair, straight draw, flush draw, backdoors. Best bluffing hands in the deck | Substitute for big-card strength; offsuit connectors rarely playable |
-| **Small pairs** | 22–77 (roughly) | Flop sets for huge pots; set-threat makes your bets credible on low boards | "Last-resort" post-flop bluffs — terrible equity when they miss |
+| Criterion         | Qualifying hands                                     | Why it matters at 1-2                                                                                   | Priority                                                             |
+| ----------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Suitedness**    | Any two suited cards                                 | Flush draws give fallback equity when your bluffs get called; flushes win the large multi-way pots      | Most important trait — majority of unsuited hands are "unplayable"   |
+| **Big cards**     | A-K, A-Q (offsuit OK); K-Q, K-J etc. need suitedness | Top pair wins medium pots; overcards give equity vs. loose ranges                                       | A-K/A-Q are premium; below that, suitedness required                 |
+| **Connectedness** | Suited connectors (9♥8♥, 6♠5♠)                       | Hit widest range of flops — pair, straight draw, flush draw, backdoors. Best bluffing hands in the deck | Substitute for big-card strength; offsuit connectors rarely playable |
+| **Small pairs**   | 22–77 (roughly)                                      | Flop sets for huge pots; set-threat makes your bets credible on low boards                              | "Last-resort" post-flop bluffs — terrible equity when they miss      |
 
 ---
 
