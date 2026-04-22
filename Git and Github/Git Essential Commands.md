@@ -345,6 +345,18 @@ git pull --rebase                # pull that rebases instead of merging
 > [!warning] The golden rule — never rebase public history
 > Rebasing rewrites commits with new SHA-1s. If others have based work on those commits, rebasing forces them to reconcile duplicate histories. Safe on private branches only. See [[git rebase]] for the full rules and recipes.
 
+### Squashing Commits
+
+Combining multiple commits into one. Not a standalone command — done via rebase, merge, or reset:
+
+```bash
+git rebase -i HEAD~5             # interactive: pick one, mark others 'squash' or 'fixup'
+git merge --squash feature-x     # merge a whole branch as one unstaged change
+git reset --soft HEAD~5          # flatten last 5 commits, then git commit
+```
+
+See [[Squashing Commits]] for method comparison and when to use each.
+
 ### Merge Conflicts
 
 When the same lines change in both branches, Git halts and marks the conflict with `<<<<<<<`, `=======`, `>>>>>>>` in the affected files. Resolve by editing, then:
