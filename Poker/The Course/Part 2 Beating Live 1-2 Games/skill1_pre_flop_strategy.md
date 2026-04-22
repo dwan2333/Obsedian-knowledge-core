@@ -65,8 +65,12 @@ Think of the four positions as a **color-coded heat map** — as you move from e
 > | **Suited connectors** | JTs, T9s, 98s, 87s, 76s     | Run of 5, stopping at 76s                      |
 > | **Offsuit**           | AKo, AQo                    | **Only AK and AQ** — *no other* offsuit hands  |
 >
-> **Facing a tight raiser:** 3-bet AA–KK (+ A5s as a bluff); flat QQ–22, ATs+, suited broadways, AKo.
-> **Facing a loose raiser:** 3-bet AA–QQ, AKs, A5s–A2s, T9s, 87s, AKo.
+> **Response to a raiser (always split into 3-bet + flat-call):**
+>
+> | Raiser type    | 3-bet                                           | Flat call                                                        |
+> | -------------- | ----------------------------------------------- | ---------------------------------------------------------------- |
+> | **Tight**      | AA–KK, A5s *(bluff)*                            | QQ–22, ATs+, KTs+, QTs+, JTs–76s, AKo                            |
+> | **Loose**      | AA–QQ, AKs, A5s–A2s, T9s, 87s, AKo              | JJ–22, AQs–A6s, KTs+, QTs+, JTs, 98s, 76s, AQo                   |
 
 ---
 
@@ -83,8 +87,12 @@ Think of the four positions as a **color-coded heat map** — as you move from e
 > | **Suited 1-gappers**  | J9s → 53s      | One-gap version of connectors       |
 > | **Offsuit**           | ATo+, KJo+     | A-T or better, K-J or better        |
 >
-> **Vs. tight raise:** collapse back to EP range.
-> **Vs. loose raise:** 3-bet JJ+, AKs, A5s–A2s + select suited connectors as bluffs.
+> **Response to a raiser:**
+>
+> | Raiser type    | 3-bet                                                | Flat call                                                                                    |
+> | -------------- | ---------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+> | **Tight**      | AA–KK, A5s *(bluff)*                                 | QQ–22, ATs+, KTs+, QTs+, JTs–76s, AKo *(same as EP)*                                         |
+> | **Loose**      | JJ+, AKs, A7s, A5s–A2s, T9s, 87s, 54s, AKo           | TT–22, AQs–A8s, A6s, K9s+, Q9s+, JTs, 98s, 76s–65s, J9s–86s, AQo–AJo, KQo                    |
 
 ---
 
@@ -104,20 +112,36 @@ Think of the four positions as a **color-coded heat map** — as you move from e
 > | **Offsuit**           | A7o+, K9o+, QTo+, JTo     | Much wider offsuit than CO                                 |
 >
 > This is where **connectedness earns its keep** — the button plays every suited connector and gapper down to near-bottom.
-> **Vs. loose raise from blinds:** 3-bet 99+, AKs–ATs, A5s–A2s, KQs–KJs, QJs, JTs, 97s, 75s, AKo–AQo.
+>
+> **Response to a raiser (typically from the blinds):**
+>
+> | Raiser type    | 3-bet                                                         | Flat call                                                                                                         |
+> | -------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+> | **Tight**      | AA–KK, A5s *(bluff)*                                          | QQ–22, ATs+, KTs+, QTs+, JTs–76s, AKo *(same as EP)*                                                              |
+> | **Loose**      | 99+, AKs–ATs, A5s–A2s, KQs–KJs, QJs, JTs, 97s, 75s, AKo–AQo   | 88–22, A9s–A6s, KTs–K9s, QTs–Q9s, T9s–43s, J9s–T8s, 86s, 64s–53s, J8s–T7s, AJo–ATo, KQo–KJo                       |
 
 ---
 
 > [!info] 🔵 The Blinds (SB & BB) — defend ~36% vs steals
 > Miller treats SB and BB similarly. You're not opening pots from the blinds — you're **reacting** to what's in front of you.
 >
-> | Situation                                | What to do                                                                                                                  |
-> | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-> | **Limped pot, SB**                       | Fold offsuit junk (J-4, 9-6). Complete or raise any pair / suited / connected / high offsuit. Raise-over-limpers: **99+, ATs+, KJs+, AQo+** |
-> | **Vs. tight/strong raise**               | Don't feel obligated — use EP ranges                                                                                        |
-> | **Vs. steal raise (loose CO/BTN raise)** | **Attack.** Defend ~36%, with a ~16% 3-bet range                                                                            |
+> **Limped pot (SB action):**
 >
-> **Steal-defense 3-bet range:** 99+, 44–22, A2s+, KJs+, K7s–K5s, Q9s, 98s–54s, J9s–86s, AJo+, KQo.
+> | Situation                              | Hands                                                                     |
+> | -------------------------------------- | ------------------------------------------------------------------------- |
+> | **Fold**                               | Offsuit junk — **J-4, 9-6, 5-2, T-3** and similar                         |
+> | **Complete / see flop**                | Any pair, any suited hand, any offsuit with high cards or connected value |
+> | **Raise-over-limpers (value)**         | **99+, ATs+, KJs+, AQo+**                                                 |
+> | **Raise if table often folds to raise** | Add **A5s–A2s, K8s, 76s** as steals                                       |
+>
+> **Vs. a raise — split by raiser type (applies to SB *and* BB):**
+>
+> | Raiser type                  | 3-bet                                                                  | Flat call                                                                                                                              |
+> | ---------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+> | **Tight / strong**           | AA–KK, A5s *(bluff)*                                                   | QQ–22, ATs+, KTs+, QTs+, JTs–76s, AKo *(EP-style; don't feel obligated)*                                                               |
+> | **Steal raise (loose CO/BTN)** | 99+, 44–22, A2s+, KJs+, K7s–K5s, Q9s, 98s–54s, J9s–86s, AJo+, KQo    | 88–55, KTs–K8s, K4s–K2s, QJs–QTs, Q8s–Q5s, JTs–T9s, 43s, 75s–53s, J8s–96s, J7s, ATo–A8o, KJo–K9o, Q9o+, JTo–98o, J9o                   |
+>
+> Total defense vs. steals ≈ **36%**, of which ≈ **16% is the 3-bet range**. The remaining 20% is the flat-call range above. **BB note:** when it's limped to you, BB can also raise-over-limpers with the **99+/ATs+/KJs+/AQo+** value range (and the steal-widening A5s–A2s, K8s, 76s if the table folds often).
 
 ---
 
