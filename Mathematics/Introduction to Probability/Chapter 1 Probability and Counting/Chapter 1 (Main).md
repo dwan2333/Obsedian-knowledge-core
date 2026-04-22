@@ -235,23 +235,6 @@ Two specializations follow immediately:
 > [!tip] Aside — Unpacking the algebra: $n(n-1)(n-2)\cdots(n-k+1) = \dfrac{n!}{(n-k)!}$
 > The two expressions are the same number, just packaged differently. The left side counts the draws directly; the right side is an algebraic repackaging via factorials.
 
-#### The direct product — counting draw by draw
-
-On draw number $j$, we have already removed $j-1$ items, so $n - (j-1) = n - j + 1$ remain. Multiplying across all $k$ draws:
-
-| Draw # | Items already removed | Items remaining (= choices) |
-|---|---|---|
-| 1 | 0 | $n$ |
-| 2 | 1 | $n-1$ |
-| 3 | 2 | $n-2$ |
-| $\vdots$ | $\vdots$ | $\vdots$ |
-| $k$ | $k-1$ | $n-k+1$ |
-
-By the multiplication rule, total $= n(n-1)(n-2)\cdots(n-k+1)$ — exactly $k$ factors, one per draw.
-
-> [!tip] Why $(n-k+1)$ and not $(n-k)$?
-> On draw $k$, only $k-1$ items have been removed (the $k$-th draw hasn't happened yet when you count the remaining pool). Sanity check: if $k = n$, the last draw has $n - n + 1 = 1$ choice — the single leftover item. If the formula said $n-k$, we'd get $0$ choices on the last draw, which is impossible.
-
 #### The factorial rewrite — multiply top and bottom by $(n-k)!$
 
 Recall $n! = n(n-1)(n-2)\cdots 2 \cdot 1$ (a full countdown from $n$ to $1$). Expand the ratio in full and look for the "tail":
