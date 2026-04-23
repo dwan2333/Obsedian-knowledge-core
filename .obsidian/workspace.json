@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
+                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Introduction to Probability (Main)"
+              "title": "Chapter 1 (Main)"
             }
           }
         ]
@@ -215,6 +215,13 @@
   },
   "active": "0c620b8a84d10e50",
   "lastOpenFiles": [
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.4_ice_cream_cone_tree.png",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.3_chessboard_crossword.png",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.2_multiplication_rule_tree.png",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
+    "Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "Git and Github/Branching/Branching (Main).md",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.5128.1776933486518",
@@ -247,19 +254,12 @@
     "Poker/The Course/Part 2 Beating Live 1-2 Games/hand_quizzes_1_2.md",
     "Poker/The Course/Part 2 Beating Live 1-2 Games/the_course_part2_infographic.png",
     "Poker/The Course/Part 1 The 30000 Foot View/Part 1 The 30000 Foot View (Main).md",
-    "Poker/The Course/The Course (Main).md",
     "Poker/The Course/The Course (Main).md.tmp.9468.1776871695833",
     "Poker/The Course/Part 2 Beating Live 1-2 Games/the_course_part2_infographic.png.tmp",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_demorgan_shading_steps.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_demorgan_venn.png",
     "Poker/The Course/Part 1 The 30000 Foot View/the_course_part1_infographic.png",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.4_ice_cream_cone_tree.png",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.3_chessboard_crossword.png",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.2_multiplication_rule_tree.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.6_bose_einstein_encoding.png",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.5_birthday_problem.png",
     "Untitled.canvas"
   ]
 }
