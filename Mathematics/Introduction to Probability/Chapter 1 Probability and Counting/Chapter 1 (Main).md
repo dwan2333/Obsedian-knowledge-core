@@ -441,7 +441,11 @@ A **story proof** proves an identity by *interpretation* — typically by counti
 > **Identity.** $$n\binom{n-1}{k-1} = k\binom{n}{k}$$
 > **Problem.** Show that the number of ways to form a $k$-person team with a designated captain, drawn from a pool of $n$ people, can be counted in two equivalent ways.
 > **Setup.** We are counting ordered structures of the form (team of $k$, one captain $\in$ team) drawn from $n$ people.
-> **Story (Solution).** **Left side counts** by *choosing the captain first*: pick one of the $n$ people to be captain ($n$ ways), then pick the remaining $k-1$ teammates from the leftover $n-1$ people ($\binom{n-1}{k-1}$ ways). **Right side counts the same captained teams** by *choosing the team first*: pick the full $k$-person team from $n$ people ($\binom{n}{k}$ ways), then pick one of those $k$ teammates to wear the captain's badge ($k$ ways). Both procedures produce the identical end-object — a $k$-team with a captain — so they must enumerate the same number of outcomes. **Therefore equal.**
+> **Story (Solution).** Each side is a product of **two factors** — one picks the captain, one fills the rest of the team. The sides just differ in *which step comes first*.
+> - **Left (captain first):** $n$ ways to pick the captain, then $\binom{n-1}{k-1}$ ways to fill the remaining $k-1$ seats from the $n-1$ non-captains.
+> - **Right (team first):** $\binom{n}{k}$ ways to pick the full $k$-person team (nobody is captain yet), then $k$ ways to promote one of the $k$ team members to captain. ⚠ The factor $k$ on the right is **captain-within-team**, not a team-choice — the team is chosen by $\binom{n}{k}$.
+>
+> **Sanity check ($n=3$, $k=2$, people {A,B,C}):** Left = $3 \cdot \binom{2}{1} = 6$. Right = $\binom{3}{2} \cdot 2 = 6$. Both enumerate the same 6 captained teams — grouped by captain on the left, by team on the right. Identical end-objects ⇒ identical counts. **Therefore equal.**
 > **Answer.** $n\binom{n-1}{k-1} = k\binom{n}{k}$.
 > **Insight.** Switching the *order* in which we make choices (captain-first vs team-first) gives two different formulas for the same count, exposing a structural identity that algebra alone hides.
 
