@@ -345,6 +345,24 @@ git pull --rebase                # pull that rebases instead of merging
 > [!warning] The golden rule — never rebase public history
 > Rebasing rewrites commits with new SHA-1s. If others have based work on those commits, rebasing forces them to reconcile duplicate histories. Safe on private branches only. See [[git rebase]] for the full rules and recipes.
 
+### `git cherry-pick`
+
+Copies one or more existing commits by SHA and replays them onto your current branch as new commits. Use for hotfixes, backports, or rescuing a commit from the wrong branch — not as a substitute for merge or rebase.
+
+```bash
+git cherry-pick <sha>                    # apply one commit to current branch
+git cherry-pick <sha1> <sha2>            # apply multiple commits in order
+git cherry-pick <sha1>..<sha5>           # range (sha1 exclusive → sha5 inclusive)
+git cherry-pick -x <sha>                 # append "(cherry picked from ...)" to message
+git cherry-pick -n <sha>                 # stage changes without committing
+git cherry-pick -m 1 <merge-sha>         # cherry-pick a merge commit (mainline = parent 1)
+git cherry-pick --continue               # after resolving conflicts
+git cherry-pick --abort                  # cancel and restore pre-pick state
+```
+
+> [!warning] Cherry-pick creates duplicate commits with new hashes
+> Great for one-off transplants (hotfixes, backports). Overusing it fragments history and causes phantom conflicts when the source branch is later merged. See [[git cherry-pick]] for full pitfalls.
+
 ### Squashing Commits
 
 Combining multiple commits into one. Not a standalone command — done via rebase, merge, or reset:

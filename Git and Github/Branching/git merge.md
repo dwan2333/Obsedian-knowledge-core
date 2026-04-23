@@ -121,5 +121,6 @@ git branch -d feature-x      # delete the now-merged branch
 - [[Branching (Main)]] — what you're combining
 - [[git checkout]] — switch to the receiving branch first
 - [[git rebase]] — the history-rewriting alternative to merge
+- [[git cherry-pick]] — copy a single commit instead of merging the whole branch
 - [[Merge Conflicts]] — resolving overlapping changes
 - [[git pull]] — pull is `fetch` + `merge`

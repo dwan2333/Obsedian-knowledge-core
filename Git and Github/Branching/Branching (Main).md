@@ -7,7 +7,7 @@ A **branch** in Git is a lightweight pointer to a specific commit. Branches let 
 
 ---
 
-## The Four Core Commands
+## The Core Commands
 
 | Command                        | Purpose                                                               |
 | ------------------------------ | --------------------------------------------------------------------- |
@@ -15,8 +15,9 @@ A **branch** in Git is a lightweight pointer to a specific commit. Branches let 
 | [[git checkout]]               | Switch between branches (or restore files)                            |
 | [[git merge]]                  | Integrate one branch into another (adds a merge commit)               |
 | [[git rebase]]                 | Integrate by replaying commits onto a new base (rewrites history)     |
+| [[git cherry-pick]]            | Copy **individual commits** between branches without merging          |
 
-Conflicts that arise during merging or rebasing are covered separately in [[Merge Conflicts]].
+Conflicts that arise during merging, rebasing, or cherry-picking are covered separately in [[Merge Conflicts]].
 
 ---
 
@@ -99,6 +100,9 @@ See [[Syncing (Main)]] for the full remote-sync story.
 
 - [[git checkout]] — switch branches, restore files
 - [[git merge]] — combine branches
+- [[git rebase]] — replay commits on a new base
+- [[git cherry-pick]] — copy single commits across branches
+- [[Squashing Commits]] — collapse multiple commits into one
 - [[Merge Conflicts]] — what to do when Git can't auto-combine
 - [[Syncing (Main)]] — pushing branches to remotes
 - [[Git Essential Commands]] — local-side basics

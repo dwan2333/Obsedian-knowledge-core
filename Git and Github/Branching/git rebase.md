@@ -332,6 +332,8 @@ git branch -d feature-login
 
 - [[Branching (Main)]] — overview of branches
 - [[git merge]] — the non-rewriting alternative
+- [[git cherry-pick]] — replay single commits instead of a whole branch
+- [[Squashing Commits]] — `rebase -i` is one way; compared with `merge --squash` and `reset --soft`
 - [[Merge Conflicts]] — conflicts during rebase resolve the same way
 - [[git pull]] — `pull --rebase` for the sync use case
 - [[git push]] — why `--force-with-lease` is safer than `--force` after a rebase
