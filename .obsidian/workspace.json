@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+                "file": "Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 1 (Main)"
+              "title": "Introduction to Probability (Main)"
             }
           }
         ]
@@ -215,8 +215,8 @@
   },
   "active": "0c620b8a84d10e50",
   "lastOpenFiles": [
-    "Git and Github/Branching/Branching (Main).md",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+    "Git and Github/Branching/Branching (Main).md",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.5128.1776933486518",
     "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
     "Git and Github/Git Essential Commands.md",
