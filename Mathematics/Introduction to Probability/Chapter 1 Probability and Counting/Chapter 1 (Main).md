@@ -289,6 +289,48 @@ When each possibility is counted exactly $c$ times, divide by $c$.
 > **Answer.** (a) $\dbinom{4}{2} = 6$ committees. (b) $3$ team-splits.
 > **Insight.** The overcounting factor is exactly the size of the symmetry group acting on the structure: $2!$ for the order *within* a committee, $2$ for swapping the *labels of two indistinguishable teams*.
 
+> [!tip] Why $\binom{4}{2} = 6$ makes sense — pick in order, then collapse
+> The formula comes from **two questions asked in sequence**: *"how many ordered ways can I pick $k$ items from $n$?"* → *"how many of those are really the same unordered selection in disguise?"*
+>
+> **Step 1 — Pick in order (pretend order matters).** For 2 picks from $\{A,B,C,D\}$: 1st pick has $4$ options, 2nd has $3$, giving $4 \cdot 3 = 12$ ordered picks:
+>
+> | AB | AC | AD |
+> | -- | -- | -- |
+> | BA | BC | BD |
+> | CA | CB | CD |
+> | DA | DB | DC |
+>
+> In factorial form: $\dfrac{n!}{(n-k)!} = \dfrac{4!}{2!} = 12$.
+>
+> **Step 2 — Collapse the duplicates.** Each unordered pair shows up exactly $k! = 2! = 2$ times (AB and BA are the same committee):
+>
+> | Unordered pair | Ordered versions of it |
+> | -------------- | ---------------------- |
+> | $\{A,B\}$      | AB, BA                 |
+> | $\{A,C\}$      | AC, CA                 |
+> | $\{A,D\}$      | AD, DA                 |
+> | $\{B,C\}$      | BC, CB                 |
+> | $\{B,D\}$      | BD, DB                 |
+> | $\{C,D\}$      | CD, DC                 |
+>
+> So the 12 ordered picks encode only $12 / 2 = 6$ distinct committees. ✓
+>
+> **Assembling the formula.** Step 1 gives the numerator, Step 2 gives the $k!$ in the denominator:
+>
+> $$\binom{n}{k} = \underbrace{\frac{n!}{(n-k)!}}_{\text{ordered picks}} \cdot \underbrace{\frac{1}{k!}}_{\text{cancel the order}} = \frac{n!}{k!(n-k)!}$$
+>
+> Reading each factor for $\binom{4}{2}$:
+>
+> | Factor        | What it cancels                                             | Value |
+> | ------------- | ----------------------------------------------------------- | ----- |
+> | $n! = 4!$     | Line up **all** 4 people in a row — every arrangement       | $24$  |
+> | $(n-k)! = 2!$ | Order of the **2 *not* chosen** (doesn't matter) — divide   | $2$   |
+> | $k! = 2!$     | Order of the **2 chosen** (doesn't matter) — divide         | $2$   |
+>
+> Result: $\dfrac{24}{2 \cdot 2} = 6$. ✓
+>
+> **One-line intuition.** "Multiply down from $n$ for $k$ steps. Divide by $k!$." Or in story-proof language: "Line them up, then divide out whichever orderings don't matter."
+
 > [!tip] Bonus — Reading $\binom{4}{2}$ off Pascal's triangle
 > The answer $\binom{4}{2} = 6$ can also be found **visually**, without computing a quotient at all. Pascal's triangle collects every binomial coefficient into a single grid: **row $n$, position $k$** (both starting from $0$) *is* $\binom{n}{k}$.
 >
@@ -315,8 +357,6 @@ When each possibility is counted exactly $c$ times, divide by $c$.
 > **Two structural facts on display.**
 > - The **edges are always 1** because $\binom{n}{0} = 1$ (the empty subset) and $\binom{n}{n} = 1$ (the full subset).
 > - Every interior entry equals the sum of the two directly above it — the **recurrence** $\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$. The whole triangle regenerates from nothing but addition.
->
-> **Historical note.** Pingala (India, ~200 BCE), Al-Karaji (Persia, ~1000 CE), and Yang Hui (China, 1261) all documented this triangle before Pascal codified it in 1654 — the Western name is a historical accident more than sole attribution.
 
 > [!definition] Definition — Binomial Coefficient
 > $\binom{n}{k}$ ("$n$ choose $k$") is the number of size-$k$ subsets of an $n$-element set. The closed form:
