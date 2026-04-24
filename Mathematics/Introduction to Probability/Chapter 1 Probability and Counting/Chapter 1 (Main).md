@@ -465,6 +465,19 @@ A **story proof** proves an identity by *interpretation* — typically by counti
 > **Answer.** $\dfrac{(2n)!}{2^n \cdot n!} = (2n-1)(2n-3)\cdots 3 \cdot 1$.
 > **Insight.** A messy quotient of factorials and a clean product of odd numbers turn out to be the *same count* viewed from two algorithms — story proof shows the equality is structural, not a coincidence of cancellation.
 
+> [!tip] Why the $2^n$? — unpacking the pair-internal overcount
+> Each of the $n$ pairs has **2 internal orderings** — pair $\{A,B\}$ can be written as $(A,B)$ or $(B,A)$ and both describe the same pair. With $n$ pairs independently swappable, the total overcount from internal orderings is $2 \cdot 2 \cdots 2 = 2^n$.
+>
+> **Concrete check at $n=2$ (four people $\{A,B,C,D\}$).** The $(2n)! = 24$ line-ups group into exactly **3 distinct partnerships**, each appearing $2^n \cdot n! = 4 \cdot 2 = 8$ times (reading positions 1–2 as pair 1 and positions 3–4 as pair 2):
+>
+> | Partnership         | Line-ups producing it                                                       | Count |
+> | ------------------- | --------------------------------------------------------------------------- | ----- |
+> | $\{A,B\}, \{C,D\}$  | ABCD, ABDC, BACD, BADC, CDAB, CDBA, DCAB, DCBA                              | 8     |
+> | $\{A,C\}, \{B,D\}$  | ACBD, ACDB, CABD, CADB, BDAC, BDCA, DBAC, DBCA                              | 8     |
+> | $\{A,D\}, \{B,C\}$  | ADBC, ADCB, DABC, DACB, BCAD, BCDA, CBAD, CBDA                              | 8     |
+>
+> The $8$ splits cleanly: **$n! = 2$** ways to swap the **pair order** (pair 1 first vs pair 2 first) times **$2^n = 4$** ways to swap **within each pair** ($2$ for $\{A,B\}$ × $2$ for $\{C,D\}$). Dividing $24$ by $2^n \cdot n! = 8$ gives $3$ partnerships — matching $(2n-1)(2n-3)\cdots = 3 \cdot 1 = 3$. ✓
+
 ---
 
 ## 1.6 Non-Naive Definition of Probability
