@@ -151,10 +151,70 @@ git cherry-pick -m 1 <merge-sha>     # diff is "merge commit vs. first parent"
 git cherry-pick -m 2 <merge-sha>     # diff is "merge commit vs. second parent"
 ```
 
-Parent numbering follows `git show <sha>` — the first `Merge:` parent is `1`, the second is `2`.
+Parent numbering follows `git show <sha>` — the first `Merge:` parent is `1`, the second is `2`. Almost always `-m 1` is what you want: parent 1 is the branch that *received* the merge (usually `main`), and the diff you're replaying is "everything the merged-in branch added."
+
+---
+
+### Realistic scenario — backporting to a deleted feature branch
+
+Your team has three long-lived branches: `main`, `release-1.0`, and `release-2.0`. A customer is still on `release-1.0` and needs a security fix.
+
+**Monday:** a developer opens `fix-login-security`, lands three commits (`D`, `E`, `F`), merges into `main` as merge commit `M`, and deletes the feature branch.
+
+**Tuesday:** the fix needs to land on `release-1.0`. What now?
+
+```mermaid
+gitGraph
+    commit id: "A"
+    branch release-1.0
+    commit id: "R1"
+    checkout main
+    commit id: "B"
+    commit id: "C"
+    branch fix-login-security
+    commit id: "D"
+    commit id: "E"
+    commit id: "F"
+    checkout main
+    merge fix-login-security id: "M"
+    commit id: "G"
+```
+
+After Monday, `fix-login-security` is gone — only `M` remains on `main` as evidence the work happened. Three options exist for getting the fix onto `release-1.0`:
+
+| Option                              | Command                                    | Works?            | Cost                                                                       |
+| ----------------------------------- | ------------------------------------------ | ----------------- | -------------------------------------------------------------------------- |
+| **1. Cherry-pick D, E, F**          | `git cherry-pick D E F`                    | ✅ cleanest        | Requires knowing the three SHAs — easy on Monday, harder months later      |
+| **2. Re-merge the feature branch**  | `git merge fix-login-security`             | ❌ branch deleted  | Impossible — the ref is gone (though commits linger in `reflog` briefly)   |
+| **3. Cherry-pick the merge commit** | `git cherry-pick -m 1 M`                   | ✅ works           | Lumps D+E+F into **one big commit** — loses granular messages & diffs      |
+
+Option 3 is the one `-m 1` was built for. The diff it produces is *M minus parent 1* — i.e., everything the feature branch added to `main`. That's exactly the fix, re-applied as a single commit on `release-1.0`:
+
+```bash
+git checkout release-1.0
+git cherry-pick -m 1 <M-sha>
+# resolve any conflicts if release-1.0 has drifted
+git push origin release-1.0
+```
+
+### When `-m 1` is actually the right tool
+
+- **Deleted feature branch, no SHA list handy** — option 1 needs the individual SHAs; if they're lost, option 3 is the only path.
+- **Messy WIP commits inside the feature branch** — if `D`, `E`, `F` are "wip", "more wip", "oops" then picking them individually pollutes `release-1.0`. The lumped diff from `-m 1` is cleaner.
+- **Single-commit release policy** — some teams require every change on a release branch to arrive as one commit. `-m 1` gives you that by construction.
+- **Incident response at 2 AM** — you know the merge commit hash because it's at the top of `main`'s log. One command, done.
+
+### What you give up
+
+- **Granular commit messages.** Three focused "what and why" messages collapse into one.
+- **`git bisect` resolution.** Bisect on `release-1.0` can only narrow to the whole fix, not the individual piece that caused a regression.
+- **Three focused diffs become one fat diff** in review — harder to eyeball.
 
 > [!warning] Cherry-picking merges is usually a smell
-> If you need a merge's contents elsewhere, it's almost always cleaner to cherry-pick the individual commits that fed into that merge, or to re-merge the source branch.
+> If you need a merge's contents elsewhere, it's almost always cleaner to cherry-pick the individual commits that fed into that merge, or to re-merge the source branch. `-m <n>` exists for the cases where those options are gone — deleted branches, lost SHAs, or a release policy that demands a single commit.
+
+> [!tip] Niche but irreplaceable
+> In day-to-day work you'll rarely need `-m`. It earns its keep on teams juggling multiple long-lived release branches — see [[Branching (Main)#Release Branches and Backporting]] for the surrounding workflow.
 
 ---
 

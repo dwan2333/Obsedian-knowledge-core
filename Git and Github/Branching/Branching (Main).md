@@ -79,6 +79,40 @@ sequenceDiagram
 
 ---
 
+## Release Branches and Backporting
+
+Some branches aren't short-lived feature work — they're **long-lived release branches** that hang around for months or years, receiving patches for customers still on older versions. A team might carry `main`, `release-2.0`, and `release-1.0` simultaneously.
+
+```mermaid
+gitGraph
+    commit id: "v1.0"
+    branch release-1.0
+    checkout main
+    commit id: "dev"
+    commit id: "v2.0"
+    branch release-2.0
+    checkout main
+    commit id: "feat"
+    commit id: "fix"
+```
+
+When a fix lands on `main`, it often has to be **backported** to one or more release branches — the same change, re-applied on a different line of history.
+
+### Three ways to backport
+
+| Situation                                         | Tool                                     |
+| ------------------------------------------------- | ---------------------------------------- |
+| The original commits are known, standalone        | `git cherry-pick <sha1> <sha2> <sha3>`   |
+| The feature branch still exists                   | `git merge <branch>` directly onto the release branch |
+| Only a **merge commit** remains (branch deleted)  | `git cherry-pick -m 1 <merge-sha>`       |
+
+The third case — lumping a deleted feature branch's contents into one commit on a release branch — is the canonical use of [[git cherry-pick]]'s `-m` flag. See [[git cherry-pick#Cherry-Picking a Merge Commit]] for the full walkthrough.
+
+> [!tip] Keep release branches short on commits
+> Many teams enforce "one commit per release patch" to keep release-branch history auditable. Cherry-picking a merge with `-m 1` delivers exactly that: the whole fix as a single commit, with the cost that granular messages and bisectability are lost.
+
+---
+
 ## Local vs Remote Branches
 
 | Type | Where it lives | Who updates it |
