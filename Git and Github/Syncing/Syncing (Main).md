@@ -94,3 +94,4 @@ sequenceDiagram
 - [[Git Essential Commands]] — local-side commands (`init`, `add`, `commit`, `clone`, etc.)
 - [[Index and Object Store]] — where the syncing changes ultimately live
 - [[gitignore]] — controlling what *never* gets pushed
+- [[GitHub pull request]] — the review-and-merge flow that wraps `git push` on GitHub

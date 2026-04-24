@@ -139,4 +139,5 @@ See [[Syncing (Main)]] for the full remote-sync story.
 - [[Squashing Commits]] — collapse multiple commits into one
 - [[Merge Conflicts]] — what to do when Git can't auto-combine
 - [[Syncing (Main)]] — pushing branches to remotes
+- [[GitHub pull request]] — the review layer that sits on top of branch merges
 - [[Git Essential Commands]] — local-side basics
