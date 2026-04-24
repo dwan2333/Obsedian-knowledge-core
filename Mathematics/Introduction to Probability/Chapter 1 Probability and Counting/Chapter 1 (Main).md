@@ -289,6 +289,35 @@ When each possibility is counted exactly $c$ times, divide by $c$.
 > **Answer.** (a) $\dbinom{4}{2} = 6$ committees. (b) $3$ team-splits.
 > **Insight.** The overcounting factor is exactly the size of the symmetry group acting on the structure: $2!$ for the order *within* a committee, $2$ for swapping the *labels of two indistinguishable teams*.
 
+> [!tip] Bonus — Reading $\binom{4}{2}$ off Pascal's triangle
+> The answer $\binom{4}{2} = 6$ can also be found **visually**, without computing a quotient at all. Pascal's triangle collects every binomial coefficient into a single grid: **row $n$, position $k$** (both starting from $0$) *is* $\binom{n}{k}$.
+>
+> ```
+> Row 0:            1
+> Row 1:           1  1
+> Row 2:          1  2  1
+> Row 3:         1  3  3  1
+> Row 4:        1  4  6  4  1        ← row 4, position 2 = 6 = C(4,2)
+> Row 5:       1  5 10 10  5  1
+> Row 6:      1  6 15 20 15  6  1
+> ```
+>
+> Decoding row 4 entry-by-entry:
+>
+> | Position $k$ | $\binom{4}{k}$ | Meaning                           |
+> | ------------ | -------------- | --------------------------------- |
+> | 0            | 1              | The empty committee               |
+> | 1            | 4              | Pick 1 person                     |
+> | 2            | **6**          | **Pick 2 (this example)**         |
+> | 3            | 4              | Pick 3 people                     |
+> | 4            | 1              | Pick all 4                        |
+>
+> **Two structural facts on display.**
+> - The **edges are always 1** because $\binom{n}{0} = 1$ (the empty subset) and $\binom{n}{n} = 1$ (the full subset).
+> - Every interior entry equals the sum of the two directly above it — the **recurrence** $\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$. The whole triangle regenerates from nothing but addition.
+>
+> **Historical note.** Pingala (India, ~200 BCE), Al-Karaji (Persia, ~1000 CE), and Yang Hui (China, 1261) all documented this triangle before Pascal codified it in 1654 — the Western name is a historical accident more than sole attribution.
+
 > [!definition] Definition — Binomial Coefficient
 > $\binom{n}{k}$ ("$n$ choose $k$") is the number of size-$k$ subsets of an $n$-element set. The closed form:
 > $$\binom{n}{k} = \frac{n(n-1)\cdots(n-k+1)}{k!} = \frac{n!}{(n-k)!\,k!}$$
