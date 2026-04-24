@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git and Github/Collaboration on GitHub/GitHub Fork Request.md",
+                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GitHub Fork Request"
+              "title": "Chapter 1 (Main)"
             }
           }
         ]
@@ -215,10 +215,10 @@
   },
   "active": "41b3bf29fe9f1f49",
   "lastOpenFiles": [
+    "Git and Github/Collaboration on GitHub/GitHub Fork Request.md",
+    "Git and Github/Collaboration on GitHub/GitHub pull request.md",
     "Git and Github/Branching/git cherry-pick.md",
     "Git and Github/GitHub pull request.md",
-    "Git and Github/Collaboration on GitHub/GitHub pull request.md",
-    "Git and Github/Collaboration on GitHub/GitHub Fork Request.md",
     "Git and Github/Collaboration on GitHub/GitHub Fork Request.md.tmp.11564.1777018365223",
     "Git and Github/Syncing/git fetch.md",
     "Git and Github/Collaboration on GitHub",
