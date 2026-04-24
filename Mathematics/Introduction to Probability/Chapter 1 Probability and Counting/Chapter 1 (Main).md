@@ -587,6 +587,68 @@ This accommodates unequal weights and infinite sample spaces. It's compatible wi
 > 2. **Monotonicity:** if $A \subseteq B$, then $P(A) \leq P(B)$
 > 3. **Inclusion-exclusion (two events):** $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
 
+> [!tip] Proofs of the Three Properties
+> Each proof works the same way: **decompose a set into disjoint pieces**, then apply countable additivity (Axiom 2). The first axiom ($P \ge 0$) and the second ($P(S) = 1$) do the rest.
+>
+> ---
+>
+> **1. Complement rule — $P(A^c) = 1 - P(A)$**
+>
+> *Venn picture:* the sample space $S$ is split by $A$ into two disjoint regions — the inside of $A$ and everything outside it, which is $A^c$.
+>
+> | Region | Description |
+> |---|---|
+> | $A$ | inside the circle |
+> | $A^c$ | everything in $S$ outside the circle |
+>
+> Since $A$ and $A^c$ are disjoint and their union is $S$, finite additivity plus the axiom $P(S) = 1$ give
+> $$1 \;=\; P(S) \;=\; P(A \cup A^c) \;=\; P(A) + P(A^c) \quad\Longrightarrow\quad P(A^c) = 1 - P(A). \quad\blacksquare$$
+>
+> ---
+>
+> **2. Monotonicity — if $A \subseteq B$ then $P(A) \le P(B)$**
+>
+> *Venn picture:* circle $A$ sits entirely inside circle $B$, and the leftover crescent is $B \cap A^c$ (the part of $B$ not in $A$).
+>
+> | Region | Description |
+> |---|---|
+> | $A$ | the inner circle |
+> | $B \cap A^c$ | the crescent: in $B$ but not in $A$ |
+>
+> These two regions are disjoint and together make up all of $B$, so
+> $$B \;=\; A \cup (B \cap A^c), \qquad P(B) \;=\; P(A) + P(B \cap A^c).$$
+> By non-negativity $P(B \cap A^c) \ge 0$, therefore $P(B) \ge P(A)$. $\blacksquare$
+>
+> > [!tip] Corollary — $P(A) \le 1$
+> > Every event $A$ satisfies $A \subseteq S$, so by monotonicity $P(A) \le P(S) = 1$. Combined with non-negativity, this pins every probability into $[0, 1]$.
+>
+> ---
+>
+> **3. Inclusion-exclusion (two events) — $P(A \cup B) = P(A) + P(B) - P(A \cap B)$**
+>
+> *Venn picture:* two overlapping circles cut the union $A \cup B$ into **three disjoint pieces** — the two crescents and the lens in the middle.
+>
+> | Region | In $A$? | In $B$? | Visual |
+> |---|---|---|---|
+> | $A \setminus B$ | ✓ | ✗ | left crescent |
+> | $A \cap B$ | ✓ | ✓ | lens (overlap) |
+> | $B \setminus A$ | ✗ | ✓ | right crescent |
+>
+> **Step 1 — Decompose the union.** The three regions partition $A \cup B$, so finite additivity gives
+> $$P(A \cup B) \;=\; P(A \setminus B) + P(A \cap B) + P(B \setminus A). \qquad (\star)$$
+>
+> **Step 2 — Decompose each circle.** Each of $A$ and $B$ splits into its "only" part plus the overlap:
+> $$P(A) = P(A \setminus B) + P(A \cap B), \qquad P(B) = P(B \setminus A) + P(A \cap B).$$
+>
+> **Step 3 — Add the two equations.**
+> $$P(A) + P(B) \;=\; \underbrace{P(A \setminus B) + P(A \cap B) + P(B \setminus A)}_{=\,P(A \cup B)\text{ by }(\star)} \;+\; P(A \cap B).$$
+>
+> **Step 4 — Rearrange.**
+> $$P(A \cup B) \;=\; P(A) + P(B) - P(A \cap B). \quad\blacksquare$$
+>
+> > [!tip] Why the subtraction
+> > Summing $P(A) + P(B)$ counts the overlap $A \cap B$ **twice** — once as part of $A$, once as part of $B$. Subtracting $P(A \cap B)$ removes the double-count, so every point of $A \cup B$ is counted exactly once.
+
 The inclusion-exclusion formula generalizes to $n$ events:
 
 $$P\!\left(\bigcup_{i=1}^{n} A_i\right) = \sum_{i} P(A_i) - \sum_{i<j} P(A_i \cap A_j) + \cdots + (-1)^{n+1} P(A_1 \cap \cdots \cap A_n)$$
