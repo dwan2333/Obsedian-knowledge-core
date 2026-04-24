@@ -547,6 +547,27 @@ A **story proof** proves an identity by *interpretation* — typically by counti
 >
 > The $8$ splits cleanly: **$n! = 2$** ways to swap the **pair order** (pair 1 first vs pair 2 first) times **$2^n = 4$** ways to swap **within each pair** ($2$ for $\{A,B\}$ × $2$ for $\{C,D\}$). Dividing $24$ by $2^n \cdot n! = 8$ gives $3$ partnerships — matching $(2n-1)(2n-3)\cdots = 3 \cdot 1 = 3$. ✓
 
+> [!tip] Why the $n!$? — unpacking the pair-order overcount
+> Once we have $n$ pairs, they can be **listed in any of $n!$ orders** — and swapping the order of the pairs doesn't change the partnership, because a partnership is an *unordered set of pairs*. Every partnership therefore gets counted $n!$ extra times by the line-up, one for each way to list its pairs.
+>
+> **Concrete check at $n=2$ (four people $\{A,B,C,D\}$).** The partnership $\{\{A,B\}, \{C,D\}\}$ arises from every line-up in which positions (1,2) and (3,4) hold those two pairs — but the two *pairs themselves* can come in either order:
+>
+> | Pair order                        | Line-ups realizing $\{A,B\}, \{C,D\}$  |
+> | --------------------------------- | -------------------------------------- |
+> | $\{A,B\}$ first, $\{C,D\}$ second | ABCD, ABDC, BACD, BADC                 |
+> | $\{C,D\}$ first, $\{A,B\}$ second | CDAB, CDBA, DCAB, DCBA                 |
+>
+> Each pair-order column contains $2^n = 4$ line-ups (the within-pair swaps from the previous tip). With $n! = 2$ pair-orders on top of that, we get $n! \cdot 2^n = 2 \cdot 4 = 8$ line-ups per partnership — matching the 8 per row in the earlier enumeration.
+>
+> **The two redundancies, side by side.**
+>
+> | Factor  | What it cancels                                       | Value at $n=2$ |
+> | ------- | ----------------------------------------------------- | -------------- |
+> | $2^n$   | Swaps *within* each pair ($\{A,B\} = (A,B) = (B,A)$)  | $4$            |
+> | $n!$    | Reorderings *of the pairs themselves*                 | $2$            |
+>
+> A partnership is an **unordered set of unordered pairs**. The line-up model imposes order at both levels, so both need dividing out — hence the full denominator $2^n \cdot n!$ in $\dfrac{(2n)!}{2^n \cdot n!}$.
+
 ---
 
 ## 1.6 Non-Naive Definition of Probability
