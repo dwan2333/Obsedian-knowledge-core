@@ -24,15 +24,16 @@ origin  https://github.com/user/repo.git (push)
 
 ## Subcommands
 
-| Subcommand | Purpose |
-|---|---|
-| `git remote add <name> <url>` | Register a new remote |
-| `git remote rename <old> <new>` | Rename an existing remote |
-| `git remote rm <name>` | Remove a remote |
-| `git remote show <name>` | Show fetch/push URLs and tracked branches |
-| `git remote set-url <name> <url>` | Change the URL for an existing remote |
-| `git remote get-url <name>` | Print the URL for a remote |
-| `git remote prune <name>` | Delete local refs to branches that no longer exist on the remote |
+| Subcommand                        | Purpose                                                          |
+| --------------------------------- | ---------------------------------------------------------------- |
+| `git remote add <name> <url>`     | Register a new remote                                            |
+| `git remote rename <old> <new>`   | Rename an existing remote                                        |
+| `git remote rm <name>`            | Remove a remote                                                  |
+| `git remote show <name>`          | Show fetch/push URLs and tracked branches                        |
+| `git remote set-url <name> <url>` | Change the URL for an existing remote                            |
+| `git remote get-url <name>`       | Print the URL for a remote                                       |
+| `git remote prune <name>`         | Delete local refs to branches that no longer exist on the remote |
+|                                   |                                                                  |
 
 ---
 

@@ -20,8 +20,37 @@
               "icon": "lucide-file",
               "title": "Git Essential Commands"
             }
+          },
+          {
+            "id": "6a9f193c5a883eea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Git and Github/Syncing/git fetch.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "git fetch"
+            }
+          },
+          {
+            "id": "4096a3ee074a2b0d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Git and Github/Syncing/git remote.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "git remote"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -213,11 +242,12 @@
       "smart-context:Smart Context: List Named Contexts": false
     }
   },
-  "active": "41b3bf29fe9f1f49",
+  "active": "6a9f193c5a883eea",
   "lastOpenFiles": [
+    "Git and Github/Git Essential Commands.md",
+    "Git and Github/Syncing/git remote.md",
     "Git and Github/Collaboration on GitHub/GitHub Fork Request.md",
     "Git and Github/Branching/Squashing Commits.md",
-    "Git and Github/Git Essential Commands.md",
     "Git and Github/gitignore.md",
     "Git and Github/Branching/git checkout.md",
     "Git and Github/Branching/Merge Conflicts.md",
@@ -240,7 +270,6 @@
     "Git and Github/Branching/Branching (Main).md.tmp.11564.1777016997810",
     "Git and Github/Syncing/git pull.md",
     "Git and Github/Syncing/Syncing (Main).md",
-    "Git and Github/Syncing/git remote.md",
     "Git and Github/Syncing/git push.md",
     "Git and Github/What is Git and GitHub.md",
     "Git and Github/Branching/git merge.md",
