@@ -115,9 +115,9 @@ The third case — lumping a deleted feature branch's contents into one commit o
 
 ## Local vs Remote Branches
 
-| Type | Where it lives | Who updates it |
-|---|---|---|
-| **Local branch** | `.git/refs/heads/` | Your local commits |
+| Type                       | Where it lives              | Who updates it           |
+| -------------------------- | --------------------------- | ------------------------ |
+| **Local branch**           | `.git/refs/heads/`          | Your local commits       |
 | **Remote-tracking branch** | `.git/refs/remotes/origin/` | `git fetch` / `git pull` |
 
 A local branch can *track* a remote one so `git push` / `git pull` work without arguments. Set tracking with `-u`:

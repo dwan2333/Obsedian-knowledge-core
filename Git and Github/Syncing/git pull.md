@@ -24,12 +24,12 @@ git pull <remote> <branch>      # pull <branch> from <remote> into current branc
 
 ## Common Flags
 
-| Flag | Purpose |
-|---|---|
-| `--rebase` | Rebase local commits on top of the fetched ones instead of merging |
+| Flag          | Purpose                                                                       |
+| ------------- | ----------------------------------------------------------------------------- |
+| `--rebase`    | Rebase local commits on top of the fetched ones instead of merging            |
 | `--no-commit` | Run the merge but don't auto-create the merge commit — lets you inspect first |
-| `--ff-only` | Refuse the pull unless it can be a fast-forward (no merge commit) |
-| `--verbose` | Show detailed fetch and merge output |
+| `--ff-only`   | Refuse the pull unless it can be a fast-forward (no merge commit)             |
+| `--verbose`   | Show detailed fetch and merge output                                          |
 
 ---
 
