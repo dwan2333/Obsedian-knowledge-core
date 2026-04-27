@@ -19,14 +19,14 @@ git push                              # push the current branch to its upstream
 
 ## Common Flags
 
-| Flag | Purpose |
-|---|---|
+| Flag                    | Purpose                                                                                                                  |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | `-u` / `--set-upstream` | Tell Git which remote branch this local branch tracks. After this, plain `git push` / `git pull` work without arguments. |
-| `--all` | Push every local branch to the remote |
-| `--tags` | Push all local tags (tags are not pushed by default) |
-| `--force` / `-f` | Overwrite the remote branch even if it's not a fast-forward. **See warning below.** |
-| `--force-with-lease` | Safer `--force` — refuses to push if someone else has pushed since your last fetch |
-| `--dry-run` | Show what would be pushed without actually pushing |
+| `--all`                 | Push every local branch to the remote                                                                                    |
+| `--tags`                | Push all local tags (tags are not pushed by default)                                                                     |
+| `--force` / `-f`        | Overwrite the remote branch even if it's not a fast-forward. **See warning below.**                                      |
+| `--force-with-lease`    | Safer `--force` — refuses to push if someone else has pushed since your last fetch                                       |
+| `--dry-run`             | Show what would be pushed without actually pushing                                                                       |
 
 ---
 
