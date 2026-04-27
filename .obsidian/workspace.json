@@ -28,7 +28,7 @@
               "type": "markdown",
               "state": {
                 "file": "Git and Github/Branching/git rebase.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -242,11 +242,11 @@
       "smart-context:Smart Context: List Named Contexts": false
     }
   },
-  "active": "c9fd8fe928226580",
+  "active": "ba9670704becdfe8",
   "lastOpenFiles": [
-    "Git and Github/Branching/git rebase.md",
     "Git and Github/Git Essential Commands.md",
     "Git and Github/Branching/Squashing Commits.md",
+    "Git and Github/Branching/git rebase.md",
     "Git and Github/Branching/Merge Conflicts.md",
     "Git and Github/Branching/Branching (Main).md",
     "Git and Github/Branching/git merge.md",
