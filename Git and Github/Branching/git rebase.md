@@ -282,8 +282,9 @@ gitGraph
 
 > [!example] 📂 Open the visual walkthrough
 > A full step-by-step disaster scenario — color-coded commit diagrams, three failure modes, and the cost/benefit asymmetry that makes this rule absolute:
+> 
 >
-> 👉 **[Open: Git Rebase Disaster Walkthrough](git%20rebase%20disaster%20walkthrough.html)**
+> 👉 **[Open: Git Rebase Disaster Walkthrough](git%20rebase%20disaster%20walkthrough.html)**  , [golden_rule_violation.html](file:///C:/Users/dwan0/Downloads/golden_rule_violation.html)
 >
 > The HTML file lives next to this note in the `Branching/` folder. Clicking opens it in your default browser.
 
