@@ -11,14 +11,12 @@
             "id": "425d8593bb9ccdcf",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Poker/The Course/Part 1 The 30000 Foot View/core_strategy_philosophy.md",
-                "mode": "preview",
-                "source": false
+                "file": "Mathematics/Quadratic Formulas/quadratic_mindmap.png"
               },
-              "icon": "lucide-file",
-              "title": "core_strategy_philosophy"
+              "icon": "lucide-image",
+              "title": "quadratic_mindmap"
             }
           }
         ]
@@ -213,8 +211,13 @@
       "smart-chat:Open: Smart Chat": false
     }
   },
-  "active": "328aa9c891b22c6e",
+  "active": "425d8593bb9ccdcf",
   "lastOpenFiles": [
+    "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
+    "Poker/The Course/Part 1 The 30000 Foot View/core_strategy_philosophy.md",
+    "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md.tmp.16664.1777479963146",
+    "Mathematics/Quadratic Formulas/quadratic_mindmap.png",
+    "Mathematics/Quadratic Formulas",
     "Poker/The Course/Part 2 Beating Live 1-2 Games/skill3_assess_hand_value.md",
     "Poker/The Course/Part 2 Beating Live 1-2 Games/skill2_dont_pay_people_off.md",
     "Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
@@ -243,14 +246,10 @@
     "Git and Github/Branching/git rebase disaster walkthrough.html",
     "Git and Github/Branching/git rebase disaster walkthrough.html.tmp.6772.1777452140532",
     "Git and Github/Syncing/git push.md",
-    "Git and Github/Branching/git checkout.md",
-    "Git and Github/Branching/Branching (Main).md",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.11564.1777024453097",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.11564.1777022497357",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.11564.1777022106497",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.11564.1777021729861",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.11564.1777021150454",
-    "Git and Github/Collaboration on GitHub/GitHub Fork Request.md.tmp.11564.1777018365223",
     "Poker/The Course/Part 1 The 30000 Foot View/the_course_part1_infographic.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.4_ice_cream_cone_tree.png",
@@ -260,7 +259,6 @@
     "Poker/The Course/Part 2 Beating Live 1-2 Games/the_course_part2_infographic.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_demorgan_shading_steps.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_demorgan_venn.png",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.6_bose_einstein_encoding.png",
     "Untitled.canvas"
   ]
 }
