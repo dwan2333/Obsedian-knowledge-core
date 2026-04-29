@@ -35,8 +35,7 @@
               "title": "Squashing Commits"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -228,10 +227,14 @@
       "smart-chat:Open: Smart Chat": false
     }
   },
-  "active": "425d8593bb9ccdcf",
+  "active": "41b3bf29fe9f1f49",
   "lastOpenFiles": [
-    "Git and Github/Branching/git rebase.md",
     "Git and Github/Branching/Squashing Commits.md",
+    "Git and Github/Branching/git rebase.md.tmp.6772.1777452185884",
+    "Git and Github/Branching/git rebase.md.tmp.6772.1777452165087",
+    "Git and Github/Branching/git rebase disaster walkthrough.html",
+    "Git and Github/Branching/git rebase disaster walkthrough.html.tmp.6772.1777452140532",
+    "Git and Github/Branching/git rebase.md",
     "Git and Github/Branching/Merge Conflicts.md",
     "Git and Github/Git Essential Commands.md",
     "Git and Github/Syncing/git push.md",
@@ -256,16 +259,11 @@
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.11564.1777021150454",
     "Git and Github/GitHub pull request.md",
     "Git and Github/Collaboration on GitHub/GitHub Fork Request.md.tmp.11564.1777018365223",
-    "Git and Github/Collaboration on GitHub",
-    "Git and Github/What is Git and GitHub.md.tmp.11564.1777017011403",
-    "Git and Github/Syncing/Syncing (Main).md.tmp.11564.1777017003910",
-    "Git and Github/Branching/Branching (Main).md.tmp.11564.1777016997810",
     "Git and Github/Syncing/Syncing (Main).md",
     "Git and Github/What is Git and GitHub.md",
     "Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
     "Poker/The Course/Part 2 Beating Live 1-2 Games/Part 2 Beating Live 1-2 Games (Main).md",
     "Poker/The Course/Part 2 Beating Live 1-2 Games/hand_quizzes_1_2.md",
-    "Poker/The Course/Part 1 The 30000 Foot View/the_poker_pyramid.md",
     "Poker/The Course/Part 1 The 30000 Foot View/the_course_part1_infographic.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.4_ice_cream_cone_tree.png",

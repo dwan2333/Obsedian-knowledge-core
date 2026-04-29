@@ -200,6 +200,40 @@ exec  npm test
 
 If `npm test` fails at any point, the rebase stops so you can fix.
 
+### Fix a typo in one commit AND remove debug code from another (`reword` + `edit` combo)
+
+A common cleanup combo: an old commit has a typo in its **message**, and a different old commit has a leftover debug log in its **code**. Use `reword` for the message and `edit` for the code — in one interactive-rebase session.
+
+```bash
+git rebase -i HEAD~2
+```
+
+```
+reword 4a2b6e7 X: setup projct          ← typo in message text
+edit   9c1d5f8 Y: add database config   ← debug log in code
+```
+
+Git processes the plan top-to-bottom:
+
+1. **At `reword`** — editor opens with X's message. Fix the typo, save, close. Git makes a new commit X′ with the corrected message and auto-continues.
+2. **At `edit`** — Git replays Y, then **pauses** at the terminal with Y as `HEAD`. You're now in a normal shell.
+3. Modify the file and fold the change into Y:
+   ```bash
+   # remove the console.log line, save the file
+   git add database.config.js
+   git commit --amend --no-edit       # update Y in place, keep its message
+   git rebase --continue              # resume the rebase
+   ```
+4. Y is rewritten as Y′ with the debug log removed. Both commits now have new hashes.
+
+> [!tip] `reword` vs `edit` — pick the right tool
+> | Want to change… | Keyword | What Git does |
+> |---|---|---|
+> | Just the commit **message** | `reword` (`r`) | Pauses, opens editor for the message only, you save, Git auto-continues |
+> | The actual **code** in the commit | `edit` (`e`) | Pauses with that commit checked out; you modify files, then `git commit --amend` + `git rebase --continue` |
+>
+> `edit` can technically do everything `reword` can (since `commit --amend` opens the message editor too), but `reword` is the cleaner, less-error-prone choice when **only** the message needs work.
+
 ---
 
 ## Advanced — `--onto` for Branch Transplants
@@ -242,9 +276,37 @@ gitGraph
 ## ⚠ The Golden Rule
 
 > [!warning] Never rebase commits that have been pushed to a public/shared branch
-> Rebasing replaces commits with new ones that have different SHA-1 hashes. Anyone who already has the old commits sees the history "vanish" and will create duplicates when they try to sync. On shared branches (`main`, `develop`, release branches), this wrecks everyone's history.
+> Rebasing replaces commits with new ones that have **different SHA-1 hashes**. Anyone who already has the old commits sees the history "vanish" and will create duplicates when they try to sync. On shared branches (`main`, `develop`, release branches), this wrecks everyone's history.
 >
 > **Rule of thumb:** rebase is safe only on commits that exist nowhere but your machine.
+
+> [!example] 📂 Open the visual walkthrough
+> A full step-by-step disaster scenario — color-coded commit diagrams, three failure modes, and the cost/benefit asymmetry that makes this rule absolute:
+>
+> 👉 **[Open: Git Rebase Disaster Walkthrough](git%20rebase%20disaster%20walkthrough.html)**
+>
+> The HTML file lives next to this note in the `Branching/` folder. Clicking opens it in your default browser.
+
+### What goes wrong — the short version
+
+The trigger is small: fix a typo, remove a debug log. You rebase locally, force-push, and the remote's X / Y become X′ / Y′ — same content, **new hashes**.
+
+| Failure mode | Who | What happens |
+|---|---|---|
+| **Phantom conflicts** | Bob, on `git pull` | Git merges two timelines of nearly identical code, producing conflicts on every line that differs even slightly |
+| **Stranded feature branch** | Bob's `bob/login` | Anchored to orphan Y; rebasing onto Y′ produces more conflicts |
+| **Silent rollback** | Carol, force-pushing back | Carol force-pushes her stale tip, **erasing X′ and Y′ from the remote entirely** |
+
+Why the rule is **absolute**, not "use caution":
+
+| Cost / Benefit | Magnitude |
+|---|---|
+| Benefit of rebasing shared history | Marginal (slightly cleaner messages) |
+| Cost when it goes wrong | Hours of teammate confusion + potential lost work |
+| Failure visibility on **your** machine | **Zero** — push and everything looks fine |
+| Failure visibility on others' machines | Hours later, scattered across the team |
+
+That asymmetry — *invisible to you, expensive to them* — is why this is stated as an absolute rule. Git uses hashes (not content) to identify commits. Once a commit is shared, **its hash is its identity** — change the identity, and every reference to it elsewhere breaks.
 
 ### Acceptable force-push scenarios
 
