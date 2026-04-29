@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
+                "file": "Git and Github/Branching/git cherry-pick.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "the agent logic loop"
+              "title": "git cherry-pick"
             }
           }
         ]
@@ -215,8 +215,12 @@
   },
   "active": "425d8593bb9ccdcf",
   "lastOpenFiles": [
-    "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
+    "Git and Github/Branching/git checkout.md",
+    "Git and Github/Branching/git cherry-pick.md",
+    "Git and Github/Branching/git merge.md",
+    "Git and Github/Branching/Branching (Main).md",
     "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
+    "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
     "Mathematics/Quadratic Formulas/quadratic_mindmap.png",
     "Poker/The Course/Part 1 The 30000 Foot View/core_strategy_philosophy.md",
     "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md.tmp.16664.1777479963146",
@@ -239,10 +243,7 @@
     "Finance/Futures/SOFR Future.md",
     "Finance/Treasury Bonds/Treasury Bonds (main).md",
     "Git and Github/Branching/Squashing Commits.md",
-    "Git and Github/Branching/git merge.md",
     "Git and Github/Branching/git rebase.md",
-    "Git and Github/Branching/Merge Conflicts.md",
-    "Git and Github/Branching/git cherry-pick.md",
     "Git and Github/Branching/git rebase.md.tmp.6772.1777452185884",
     "Git and Github/Branching/git rebase.md.tmp.6772.1777452165087",
     "Git and Github/Branching/git rebase disaster walkthrough.html",
