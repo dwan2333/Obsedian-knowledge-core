@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
-                "mode": "preview",
+                "file": "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Quadratic Formula Intuition (Main)"
+              "title": "the agent logic loop"
             }
           }
         ]
@@ -215,8 +215,8 @@
   },
   "active": "425d8593bb9ccdcf",
   "lastOpenFiles": [
-    "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
     "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
+    "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
     "Mathematics/Quadratic Formulas/quadratic_mindmap.png",
     "Poker/The Course/Part 1 The 30000 Foot View/core_strategy_philosophy.md",
     "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md.tmp.16664.1777479963146",
