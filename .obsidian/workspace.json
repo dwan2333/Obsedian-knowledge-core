@@ -11,12 +11,14 @@
             "id": "425d8593bb9ccdcf",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Mathematics/Quadratic Formulas/quadratic_mindmap.png"
+                "file": "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "quadratic_mindmap"
+              "icon": "lucide-file",
+              "title": "the agent logic loop"
             }
           }
         ]
@@ -211,12 +213,12 @@
       "smart-chat:Open: Smart Chat": false
     }
   },
-  "active": "425d8593bb9ccdcf",
+  "active": "328aa9c891b22c6e",
   "lastOpenFiles": [
     "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
+    "Mathematics/Quadratic Formulas/quadratic_mindmap.png",
     "Poker/The Course/Part 1 The 30000 Foot View/core_strategy_philosophy.md",
     "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md.tmp.16664.1777479963146",
-    "Mathematics/Quadratic Formulas/quadratic_mindmap.png",
     "Mathematics/Quadratic Formulas",
     "Poker/The Course/Part 2 Beating Live 1-2 Games/skill3_assess_hand_value.md",
     "Poker/The Course/Part 2 Beating Live 1-2 Games/skill2_dont_pay_people_off.md",
@@ -245,7 +247,6 @@
     "Git and Github/Branching/git rebase.md.tmp.6772.1777452165087",
     "Git and Github/Branching/git rebase disaster walkthrough.html",
     "Git and Github/Branching/git rebase disaster walkthrough.html.tmp.6772.1777452140532",
-    "Git and Github/Syncing/git push.md",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.11564.1777024453097",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.11564.1777022497357",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.11564.1777022106497",
