@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -206,18 +206,22 @@
       "templater-obsidian:Templater": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "smart-context:Smart Context: Open Builder": false,
+      "smart-context:Smart Context: Copy to Clipboard (select depth)": false,
+      "smart-context:Smart Context: List Named Contexts": false,
+      "smart-chat:Open: Smart Chat": false
     }
   },
-  "active": "328aa9c891b22c6e",
+  "active": "425d8593bb9ccdcf",
   "lastOpenFiles": [
+    "Mathematics/Quadratic Formulas/topic_2_diff_squares.png",
+    "Mathematics/Quadratic Formulas/quadratic_mindmap.png",
+    "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
     "Mathematics/Quadratic Formulas/topic_3_parabola_roots.png",
     "Mathematics/Quadratic Formulas/topic_2_three_facts.png",
     "Mathematics/Quadratic Formulas/topic_2_parabola_scaling.png",
-    "Mathematics/Quadratic Formulas/topic_2_diff_squares.png",
     "Mathematics/Quadratic Formulas/topic_1_midpoint_deviation.png",
-    "Mathematics/Quadratic Formulas/quadratic_mindmap.png",
-    "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
     "Git and Github/Branching/git cherry-pick.md",
     "Git and Github/Branching/git checkout.md",
     "Git and Github/Branching/git merge.md",
@@ -256,7 +260,6 @@
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.4_ice_cream_cone_tree.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.3_chessboard_crossword.png",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.2_multiplication_rule_tree.png",
     "Untitled.canvas"
   ]
 }
