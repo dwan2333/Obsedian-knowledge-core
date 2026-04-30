@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git and Github/Branching/git cherry-pick.md",
+                "file": "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "git cherry-pick"
+              "title": "Quadratic Formula Intuition (Main)"
             }
           }
         ]
@@ -209,15 +209,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "425d8593bb9ccdcf",
+  "active": "328aa9c891b22c6e",
   "lastOpenFiles": [
-    "Git and Github/Branching/git checkout.md",
+    "Mathematics/Quadratic Formulas/topic_3_parabola_roots.png",
+    "Mathematics/Quadratic Formulas/topic_2_three_facts.png",
+    "Mathematics/Quadratic Formulas/topic_2_parabola_scaling.png",
+    "Mathematics/Quadratic Formulas/topic_2_diff_squares.png",
+    "Mathematics/Quadratic Formulas/topic_1_midpoint_deviation.png",
+    "Mathematics/Quadratic Formulas/quadratic_mindmap.png",
+    "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
     "Git and Github/Branching/git cherry-pick.md",
+    "Git and Github/Branching/git checkout.md",
     "Git and Github/Branching/git merge.md",
     "Git and Github/Branching/Branching (Main).md",
     "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
-    "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
-    "Mathematics/Quadratic Formulas/quadratic_mindmap.png",
     "Poker/The Course/Part 1 The 30000 Foot View/core_strategy_philosophy.md",
     "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md.tmp.16664.1777479963146",
     "Mathematics/Quadratic Formulas",
@@ -239,7 +244,6 @@
     "Finance/Futures/SOFR Future.md",
     "Finance/Treasury Bonds/Treasury Bonds (main).md",
     "Git and Github/Branching/Squashing Commits.md",
-    "Git and Github/Branching/git rebase.md",
     "Git and Github/Branching/git rebase.md.tmp.6772.1777452185884",
     "Git and Github/Branching/git rebase.md.tmp.6772.1777452165087",
     "Git and Github/Branching/git rebase disaster walkthrough.html",
@@ -253,10 +257,6 @@
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.4_ice_cream_cone_tree.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.3_chessboard_crossword.png",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.2_multiplication_rule_tree.png",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
-    "Poker/The Course/Part 2 Beating Live 1-2 Games/the_course_part2_infographic.png",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_demorgan_shading_steps.png",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_demorgan_venn.png",
     "Untitled.canvas"
   ]
 }
