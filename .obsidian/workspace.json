@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
+                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Quadratic Formula Intuition (Main)"
+              "title": "Chapter 1 (Main)"
             }
           }
         ]
@@ -215,18 +215,21 @@
   },
   "active": "425d8593bb9ccdcf",
   "lastOpenFiles": [
-    "Mathematics/Quadratic Formulas/topic_2_diff_squares.png",
-    "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
-    "Mathematics/Quadratic Formulas/quadratic_mindmap.png",
-    "Mathematics/Quadratic Formulas/topic_2_parabola_scaling.png",
-    "Mathematics/Quadratic Formulas/topic_1_midpoint_deviation.png",
-    "Mathematics/Quadratic Formulas/topic_3_parabola_roots.png",
-    "Mathematics/Quadratic Formulas/topic_2_three_facts.png",
+    "Finance/Futures/SOFR Future.md",
+    "Git and Github/Branching/Branching (Main).md",
     "Git and Github/Branching/git cherry-pick.md",
     "Git and Github/Branching/git checkout.md",
-    "Git and Github/Branching/git merge.md",
-    "Git and Github/Branching/Branching (Main).md",
     "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+    "Mathematics/Quadratic Formulas/topic_2_diff_squares.png",
+    "Mathematics/Quadratic Formulas/topic_1_midpoint_deviation.png",
+    "Mathematics/Quadratic Formulas/quadratic_mindmap.png",
+    "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
+    "Mathematics/Quadratic Formulas/topic_2_parabola_scaling.png",
+    "Mathematics/Quadratic Formulas/topic_3_parabola_roots.png",
+    "Mathematics/Quadratic Formulas/topic_2_three_facts.png",
+    "Git and Github/Branching/git merge.md",
     "Poker/The Course/Part 1 The 30000 Foot View/core_strategy_philosophy.md",
     "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md.tmp.16664.1777479963146",
     "Mathematics/Quadratic Formulas",
@@ -236,8 +239,6 @@
     "Poker/The Course/Part 2 Beating Live 1-2 Games/Part 2 Beating Live 1-2 Games (Main).md",
     "Poker/The Course/Part 2 Beating Live 1-2 Games/hand_quizzes_1_2.md",
     "Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "Git and Github/Bare Repositories.md",
     "Git and Github/Git Essential Commands.md",
     "Git and Github/Collaboration on GitHub/GitHub pull request.md",
@@ -245,7 +246,6 @@
     "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
     "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
     "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
-    "Finance/Futures/SOFR Future.md",
     "Finance/Treasury Bonds/Treasury Bonds (main).md",
     "Git and Github/Branching/Squashing Commits.md",
     "Git and Github/Branching/git rebase.md.tmp.6772.1777452185884",
