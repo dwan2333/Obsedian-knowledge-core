@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+                "file": "Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 1 (Main)"
+              "title": "quadratic_factoring_worked_examples"
             }
           }
         ]
@@ -215,6 +215,10 @@
   },
   "active": "425d8593bb9ccdcf",
   "lastOpenFiles": [
+    "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
+    "Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md.tmp.9288.1777615117909",
     "Mathematics/Quadratic Formulas/v2_topic_3_golden_ratio.png",
     "Mathematics/Quadratic Formulas/v2_topic_3_complex_roots.png",
@@ -222,18 +226,14 @@
     "Mathematics/Quadratic Formulas/v2_topic_2_trick.png",
     "Mathematics/Quadratic Formulas/v2_topic_1_zero_product.png",
     "Mathematics/Quadratic Formulas/v2_mindmap.png",
-    "Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
     "Finance/Futures/SOFR Future.md",
     "Git and Github/Branching/Branching (Main).md",
     "Git and Github/Branching/git cherry-pick.md",
     "Git and Github/Branching/git checkout.md",
     "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "Mathematics/Quadratic Formulas/topic_2_diff_squares.png",
     "Mathematics/Quadratic Formulas/topic_1_midpoint_deviation.png",
     "Mathematics/Quadratic Formulas/quadratic_mindmap.png",
-    "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
     "Mathematics/Quadratic Formulas/topic_2_parabola_scaling.png",
     "Git and Github/Branching/git merge.md",
     "Poker/The Course/Part 1 The 30000 Foot View/core_strategy_philosophy.md",
@@ -260,7 +260,6 @@
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.11564.1777024453097",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.11564.1777022497357",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.11564.1777022106497",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.11564.1777021729861",
     "Untitled.canvas"
   ]
 }
