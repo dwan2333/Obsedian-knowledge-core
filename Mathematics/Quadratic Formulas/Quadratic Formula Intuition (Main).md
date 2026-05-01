@@ -236,6 +236,12 @@ The textbook formula is a **corollary**, not something to memorize separately.
 
 ---
 
+## Related notes
+
+- **[Quadratic Formula — Worked Examples (Loh's Factoring Method)](quadratic_factoring_worked_examples.md)** — companion note with **7 collapsible-solution exercises** spanning integer / irrational / complex / fractional-midpoint (golden ratio) / non-monic cases. Use this main note for the *theory*, the companion for *practice*.
+
+---
+
 ## Sources
 
 | Source | URL |
