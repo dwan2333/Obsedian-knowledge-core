@@ -66,12 +66,30 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > > **Answer.** (a) $n$ — (b) $2^n - 1$ — (c) $2^n - 1$ ✓
 
 > [!example] Exercise 6 — Chess Pairings
-> **Problem.** There are 20 people at a chess club on a certain day. They each find opponents and start playing. How many possibilities are there for how they are matched up, assuming that in each game it does matter who has the white pieces (in a chess game, one player has the white pieces and the other player has the black pieces)?
+> **Problem.** There are 20 people at a chess club on a certain day. They each find opponents and start playing. How many possibilities are there for how they are matched up, assuming that in each game it does **not** matter who has the white pieces (in a chess game, one player has the white pieces and the other player has the black pieces)?
 >
 > > [!success]- Click to reveal solution
-> > **Solution.** Choose 10 white players: $\binom{20}{10}$. Pair each white with one of the 10 blacks: $10!$. Total $= \binom{20}{10} \cdot 10! = \dfrac{20!}{10!}$.
+> > **Solution.** This is exactly the [Partnerships setup of Example 1.5.4](<Chapter 1 (Main).md>): 20 distinguishable people partitioned into 10 **unordered pairs** (since color/position within a pair doesn't matter, the pair $\{A,B\}$ is the same as $\{B,A\}$, and the 10 pairs themselves are an unordered collection).
 > >
-> > **Answer.** $\dfrac{20!}{10!}$ ✓
+> > Apply the partnership formula with $n = 10$:
+> > $$\#\{\text{pairings}\} = \frac{(2n)!}{2^n \cdot n!} = \frac{20!}{2^{10} \cdot 10!}$$
+> >
+> > **Why the denominator $2^{10} \cdot 10!$?**
+> > - Total ordered line-ups of 20 people: $20!$
+> > - Within each of the 10 pairs, the two members can be listed in either order — overcount $2^{10}$
+> > - The 10 pairs themselves are unordered — overcount $10!$
+> >
+> > **Numerical evaluation:**
+> > $$\frac{20!}{10!} = 20 \cdot 19 \cdot 18 \cdots 11 = 670{,}442{,}572{,}800$$
+> > $$2^{10} = 1024$$
+> > $$\frac{670{,}442{,}572{,}800}{1024} = 654{,}729{,}075$$
+> >
+> > **Cross-check via the odd-product form** (from the algebraic identity $\frac{(2n)!}{2^n \cdot n!} = (2n-1)(2n-3)\cdots 3 \cdot 1$):
+> > $$19 \cdot 17 \cdot 15 \cdot 13 \cdot 11 \cdot 9 \cdot 7 \cdot 5 \cdot 3 \cdot 1 = 654{,}729{,}075 \;\checkmark$$
+> >
+> > **Answer.** $\dfrac{20!}{2^{10} \cdot 10!} = 654{,}729{,}075$ ✓
+> >
+> > **Common pitfall.** A frequent wrong answer is $\dfrac{20!}{10!}$ — that's the count if color **did** matter (i.e., if "$A$ plays white, $B$ plays black" is distinct from "$B$ plays white, $A$ plays black"). Since the problem says color doesn't matter, we must additionally divide by $2^{10}$ (one factor of 2 per pair) to remove the within-pair color overcount.
 
 > [!example] Exercise 7 — 7-Game Chess Match
 > **Problem.** Two chess players, A and B, are going to play 7 games. Each game has three possible outcomes: a win for A (which is a loss for B), a draw (tie), and a loss for A (which is a win for B). A win is worth 1 point, a draw is worth $0.5$ points, and a loss is worth 0 points.
