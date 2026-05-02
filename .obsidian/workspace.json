@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "chapter1_exercises"
+              "title": "Chapter 1 (Main)"
             }
           }
         ]
@@ -215,6 +215,7 @@
   },
   "active": "425d8593bb9ccdcf",
   "lastOpenFiles": [
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.16492.1777729254286",
@@ -225,7 +226,6 @@
     "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
     "Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
     "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md.tmp.9288.1777615117909",
     "Mathematics/Quadratic Formulas/v2_topic_3_golden_ratio.png",
     "Mathematics/Quadratic Formulas/v2_topic_3_complex_roots.png",
