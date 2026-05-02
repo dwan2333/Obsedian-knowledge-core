@@ -568,23 +568,52 @@ A **story proof** proves an identity by *interpretation* — typically by counti
 >
 > A partnership is an **unordered set of unordered pairs**. The line-up model imposes order at both levels, so both need dividing out — hence the full denominator $2^n \cdot n!$ in $\dfrac{(2n)!}{2^n \cdot n!}$.
 
-> [!tip] Algebraic derivation and the general formula $\dfrac{(nk)!}{(k!)^n \, n!}$
-> The story proof above shows *why* the answer is $\dfrac{(2n)!}{2^n \cdot n!}$ by interpretation. The **algebraic derivation** makes the divide-by-overcount logic precise — and the same machinery generalizes to *any* group size, not just pairs.
+> [!tip] Algebraic proof of the identity, and the general formula $\dfrac{(nk)!}{(k!)^n \, n!}$
+> The story proof above shows *why* the two sides count the same thing. The **algebraic proof** below shows the identity
+> $$\dfrac{(2n)!}{2^n \cdot n!} \;=\; (2n-1)(2n-3)(2n-5) \cdots 3 \cdot 1$$
+> directly through algebraic manipulation — no combinatorial interpretation needed.
 >
-> ### Algebraic derivation (group size $k = 2$)
+> ### Algebraic proof of the identity
 >
-> Build a partnership by overcounting and dividing out:
+> **Step 1 — Expand $(2n)!$ as a product of consecutive integers:**
+> $$(2n)! \;=\; 1 \cdot 2 \cdot 3 \cdot 4 \cdot 5 \cdot 6 \cdots (2n-1) \cdot (2n)$$
 >
-> 1. **Total ordered line-ups of $2n$ people:** $(2n)!$ — every distinguishable arrangement of all $2n$ people in a row.
-> 2. **Internal-order overcount per partnership:** within each of the $n$ pairs, the two members can be listed in either order. With $n$ independent pairs:
->    $$\underbrace{2 \cdot 2 \cdots 2}_{n \text{ pairs}} = 2^n$$
-> 3. **Pair-order overcount per partnership:** a partnership is a **set** of pairs, not a list, so any permutation of the $n$ pairs gives the same partnership: $n!$
-> 4. **Divide overcount out of total:**
->    $$\#\text{partnerships} = \frac{\text{total line-ups}}{\text{(internal swaps) × (pair reorderings)}} = \frac{(2n)!}{2^n \cdot n!}$$
+> **Step 2 — Separate the odd factors from the even factors:**
+> $$(2n)! \;=\; \underbrace{\big[\,1 \cdot 3 \cdot 5 \cdots (2n-1)\,\big]}_{\text{odd factors}} \;\cdot\; \underbrace{\big[\,2 \cdot 4 \cdot 6 \cdots (2n)\,\big]}_{\text{even factors}}$$
+>
+> **Step 3 — Factor a $2$ out of every even number:**
+> $$2 \cdot 4 \cdot 6 \cdots (2n) \;=\; (2 \cdot 1)\,(2 \cdot 2)\,(2 \cdot 3)\cdots(2 \cdot n)$$
+>
+> **Step 4 — Group all the $2$'s together and the integers together:**
+> $$(2 \cdot 1)(2 \cdot 2)\cdots(2 \cdot n) \;=\; \underbrace{(2 \cdot 2 \cdots 2)}_{n \text{ copies of }2} \;\cdot\; (1 \cdot 2 \cdot 3 \cdots n) \;=\; 2^n \cdot n!$$
+>
+> **Step 5 — Substitute the result of Steps 3-4 back into Step 2:**
+> $$(2n)! \;=\; \big[1 \cdot 3 \cdot 5 \cdots (2n-1)\big] \cdot 2^n \cdot n!$$
+>
+> **Step 6 — Divide both sides by $2^n \cdot n!$:**
+> $$\boxed{\;\frac{(2n)!}{2^n \cdot n!} \;=\; 1 \cdot 3 \cdot 5 \cdots (2n-1) \;=\; (2n-1)(2n-3) \cdots 3 \cdot 1\;}$$
+>
+> $\blacksquare$
+>
+> ### Numerical verification at $n = 3$ (six people)
+>
+> $$\text{LHS:} \quad \frac{(2 \cdot 3)!}{2^3 \cdot 3!} \;=\; \frac{6!}{8 \cdot 6} \;=\; \frac{720}{48} \;=\; 15$$
+>
+> $$\text{RHS:} \quad (2 \cdot 3 - 1)(2 \cdot 3 - 3)(2 \cdot 3 - 5) \;=\; 5 \cdot 3 \cdot 1 \;=\; 15 \;\;\checkmark$$
+>
+> ### Numerical verification at $n = 4$ (eight people)
+>
+> $$\text{LHS:} \quad \frac{8!}{2^4 \cdot 4!} \;=\; \frac{40{,}320}{16 \cdot 24} \;=\; \frac{40{,}320}{384} \;=\; 105$$
+>
+> $$\text{RHS:} \quad 7 \cdot 5 \cdot 3 \cdot 1 \;=\; 105 \;\;\checkmark$$
 >
 > ### General formula — $n$ unordered groups of $k$ each
 >
-> The same logic works when each group has $k$ members. Suppose $nk$ distinguishable people are partitioned into $n$ unordered groups of size $k$:
+> The Partnerships formula is the special case $k = 2$ of a more general count: the number of ways to partition $nk$ distinguishable people into $n$ **unordered groups of size $k$** is
+> $$\frac{(nk)!}{(k!)^n \cdot n!}$$
+> (This is a *count*, not an algebraic identity — there's no clean closed-form RHS for general $k$ analogous to the odd-product. The pair case happens to factor nicely because $2! = 2$.)
+>
+> The factorization mirrors the pair case exactly:
 >
 > | Step | Count | Why |
 > |---|---|---|
