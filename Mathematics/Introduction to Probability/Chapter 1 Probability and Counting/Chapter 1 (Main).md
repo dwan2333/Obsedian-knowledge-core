@@ -568,6 +568,59 @@ A **story proof** proves an identity by *interpretation* — typically by counti
 >
 > A partnership is an **unordered set of unordered pairs**. The line-up model imposes order at both levels, so both need dividing out — hence the full denominator $2^n \cdot n!$ in $\dfrac{(2n)!}{2^n \cdot n!}$.
 
+> [!tip] Algebraic derivation and the general formula $\dfrac{(nk)!}{(k!)^n \, n!}$
+> The story proof above shows *why* the answer is $\dfrac{(2n)!}{2^n \cdot n!}$ by interpretation. The **algebraic derivation** makes the divide-by-overcount logic precise — and the same machinery generalizes to *any* group size, not just pairs.
+>
+> ### Algebraic derivation (group size $k = 2$)
+>
+> Build a partnership by overcounting and dividing out:
+>
+> 1. **Total ordered line-ups of $2n$ people:** $(2n)!$ — every distinguishable arrangement of all $2n$ people in a row.
+> 2. **Internal-order overcount per partnership:** within each of the $n$ pairs, the two members can be listed in either order. With $n$ independent pairs:
+>    $$\underbrace{2 \cdot 2 \cdots 2}_{n \text{ pairs}} = 2^n$$
+> 3. **Pair-order overcount per partnership:** a partnership is a **set** of pairs, not a list, so any permutation of the $n$ pairs gives the same partnership: $n!$
+> 4. **Divide overcount out of total:**
+>    $$\#\text{partnerships} = \frac{\text{total line-ups}}{\text{(internal swaps) × (pair reorderings)}} = \frac{(2n)!}{2^n \cdot n!}$$
+>
+> ### General formula — $n$ unordered groups of $k$ each
+>
+> The same logic works when each group has $k$ members. Suppose $nk$ distinguishable people are partitioned into $n$ unordered groups of size $k$:
+>
+> | Step | Count | Why |
+> |---|---|---|
+> | Total ordered line-ups | $(nk)!$ | $nk$ distinguishable people in a row |
+> | Internal-order overcount | $(k!)^n$ | each of the $n$ groups can be listed in $k!$ orders, independently across groups |
+> | Group-order overcount | $n!$ | the $n$ groups themselves are an unordered set — any of $n!$ permutations gives the same partition |
+> | **Final count** | $\dfrac{(nk)!}{(k!)^n \cdot n!}$ | divide line-ups by total redundancy |
+>
+> $$\boxed{\;\#\{\text{partitions of }nk\text{ people into }n\text{ unordered groups of size }k\} \;=\; \frac{(nk)!}{(k!)^n \cdot n!}\;}$$
+>
+> **Sanity check — recover the pair case ($k = 2$):**
+> $$\frac{(2n)!}{(2!)^n \cdot n!} = \frac{(2n)!}{2^n \cdot n!} \quad\checkmark$$
+> The Partnerships formula is just this general one with $k = 2$.
+>
+> ### Worked numerical checks
+>
+> | Setting | $n$ | $k$ | Formula | Value |
+> |---|---|---|---|---|
+> | 4 people → 2 unordered pairs | $2$ | $2$ | $\dfrac{4!}{2^2 \cdot 2!} = \dfrac{24}{8}$ | $\mathbf{3}$ |
+> | 6 people → 2 unordered triples | $2$ | $3$ | $\dfrac{6!}{(3!)^2 \cdot 2!} = \dfrac{720}{72}$ | $\mathbf{10}$ |
+> | 6 people → 3 unordered pairs | $3$ | $2$ | $\dfrac{6!}{2^3 \cdot 3!} = \dfrac{720}{48}$ | $\mathbf{15}$ |
+> | 9 people → 3 unordered triples | $3$ | $3$ | $\dfrac{9!}{(3!)^3 \cdot 3!} = \dfrac{362{,}880}{1296}$ | $\mathbf{280}$ |
+>
+> The first row matches the concrete enumeration from the previous tip ($\{A,B,C,D\}$ → 3 partnerships).
+>
+> ### Why this formula keeps appearing
+>
+> $\dfrac{(nk)!}{(k!)^n \cdot n!}$ shows up across combinatorics whenever you partition a labeled set into **equal-sized, unordered pieces**:
+>
+> - Dealing 52 cards into 4 hands of 13 (when the *players* are anonymized): $\dfrac{52!}{(13!)^4 \cdot 4!}$
+> - Splitting a class of $nk$ students into $n$ study groups of $k$
+> - Dance partnerships (the pair case, $k=2$), debate brackets, doubles tennis pairings
+> - Forming research teams, coding pairs, jury sub-panels
+>
+> The Partnerships example is the **$k = 2$ slice** of this universal pattern. Once you've internalized the line-up-and-divide derivation here, every variant follows by adjusting the exponent on $k!$.
+
 ---
 
 ## 1.6 Non-Naive Definition of Probability
