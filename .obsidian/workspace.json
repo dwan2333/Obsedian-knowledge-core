@@ -225,6 +225,13 @@
   },
   "active": "da7c6bb8926eb928",
   "lastOpenFiles": [
+    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/exercise_9_lattice_paths_interactive.html",
+    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/exercise_13_casino_superdeck_interactive.html",
+    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/exercise_11_counting_functions_interactive.html",
+    "public/Git-and-Github/Branching/git-rebase-disaster-walkthrough.html",
+    "scripts/fix-html-extensions.mjs",
+    "scripts/fix-html-extensions.mjs.tmp.20788.1777893864173",
+    "scripts",
     "content/index.md",
     "public/Poker/The-Course/The-Course-(Main)-og-image.webp",
     "public/Poker/The-Course/Part-2-Beating-Live-1-2-Games/skill3_assess_hand_value-og-image.webp",
@@ -240,12 +247,6 @@
     "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/_gen_demorgan_shading.py",
     "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/index.html",
     "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/exercise_9_lattice_paths_interactive",
-    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/exercise_13_casino_superdeck_interactive",
-    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/exercise_11_counting_functions_interactive",
-    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/chapter1_exercises_raw.txt",
-    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/chapter1_exercises.html",
-    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/Chapter-1-(Main).html",
-    "public/Poker/The-Course/Part-2-Beating-Live-1-2-Games/skill3_assess_hand_value.html",
     "node_modules/@parcel/watcher/node_modules/picomatch/README.md",
     "node_modules/katex/node_modules/commander/Readme.md",
     "node_modules/speech-rule-engine/lib/README.md",
@@ -270,7 +271,6 @@
     "node_modules/web-namespaces/readme.md",
     "node_modules/varint/README.md",
     "node_modules/vfile-location/readme.md",
-    "node_modules/vfile/readme.md",
     "Untitled.canvas"
   ]
 }
