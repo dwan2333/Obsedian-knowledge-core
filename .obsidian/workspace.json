@@ -13,6 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chapter 1 (Main)"
+            }
+          },
+          {
+            "id": "88f9d9e83677b527",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
                 "mode": "preview",
                 "source": false
@@ -21,7 +35,8 @@
               "title": "chapter1_exercises"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -213,10 +228,11 @@
       "smart-chat:Open: Smart Chat": false
     }
   },
-  "active": "425d8593bb9ccdcf",
+  "active": "88f9d9e83677b527",
   "lastOpenFiles": [
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.20788.1777889081384",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.20788.1777888921666",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.20788.1777888636851",
     "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/exercise_9_lattice_paths_interactive.html",
@@ -246,7 +262,6 @@
     "Mathematics/Quadratic Formulas/topic_2_parabola_scaling.png",
     "Git and Github/Branching/git merge.md",
     "Poker/The Course/Part 1 The 30000 Foot View/core_strategy_philosophy.md",
-    "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md.tmp.16664.1777479963146",
     "Poker/The Course/Part 2 Beating Live 1-2 Games/skill3_assess_hand_value.md",
     "Poker/The Course/Part 2 Beating Live 1-2 Games/skill2_dont_pay_people_off.md",
     "Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
