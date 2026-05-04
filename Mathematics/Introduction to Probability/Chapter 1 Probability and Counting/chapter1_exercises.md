@@ -221,9 +221,75 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > (c) Explain intuitively why the answer to Part (b) is not the fourth power of the answer to Part (a).
 >
 > > [!success]- Click to reveal solution
-> > **Solution.** (a) $\binom{52}{13}$. (b) $\binom{52}{13}\binom{39}{13}\binom{26}{13}\binom{13}{13} = \dfrac{52!}{(13!)^4}$. (c) The fourth-power formula would treat each hand as drawn independently *with* replacement (cards could repeat across hands); the actual deal is without replacement.
+> > **(a) Player A's hand**
 > >
-> > **Answer.** (a) $\binom{52}{13}$ — (b) $\dfrac{52!}{(13!)^4}$ — (c) hands share a common deck ✓
+> > A's hand is an unordered 13-card subset of a 52-card deck:
+> > $$\binom{52}{13} = 635{,}013{,}559{,}600$$
+> > "Order within a hand doesn't matter" is exactly why this is $\binom{52}{13}$ rather than the permutation $P(52, 13)$.
+> >
+> > **(b) The four-hand deal — the key subtlety**
+> >
+> > > [!warning] Do NOT divide by $4!$
+> > > A common instinct is to compute $\binom{52}{13}\binom{39}{13}\binom{26}{13}\binom{13}{13}$ and then divide by $4!$ to "remove the overcounting from labeling four hands." **That instinct is wrong here.** The phrase that does the work in (b) is *"it matters which player gets which hand"* — that tells you the four hands are **labeled** by player (A, B, C, D). The "order doesn't matter" clause refers only to the order *within* a hand (which is why each hand uses $\binom{52}{13}$ instead of $P(52, 13)$). Since the recipients are distinguishable, "A holds the spades, B holds the hearts" is a genuinely different deal from "A holds the hearts, B holds the spades" — no overcounting to remove.
+> >
+> > **Sequential dealing derivation (factorial telescoping):**
+> > - A picks 13 from 52: $\binom{52}{13}$
+> > - B picks 13 from the remaining 39: $\binom{39}{13}$
+> > - C picks 13 from the remaining 26: $\binom{26}{13}$
+> > - D gets the last 13: $\binom{13}{13} = 1$
+> >
+> > Multiplying and watching the factorials cancel:
+> > $$\binom{52}{13}\binom{39}{13}\binom{26}{13}\binom{13}{13} = \frac{52!}{13!\,39!}\cdot\frac{39!}{13!\,26!}\cdot\frac{26!}{13!\,13!}\cdot\frac{13!}{13!\,0!} = \frac{52!}{(13!)^4}$$
+> >
+> > This is the **multinomial coefficient** $\binom{52}{13,13,13,13}$. **No $4!$ in the denominator.** Numerically:
+> > $$\frac{52!}{(13!)^4} \approx 5.36 \times 10^{28}$$
+> >
+> > **When *would* you divide by $4!$?** If the problem instead said *"split the deck into four 13-card piles"* without naming a recipient — i.e., the piles are anonymous and interchangeable — then yes, divide by $4!$ to remove the overcounting from labeling four interchangeable piles in different ways. That's the [Partnerships-style overcount](<Chapter 1 (Main).md>) (Example 1.5.4 generalized to $k=13, n=4$): $\dfrac{52!}{(13!)^4 \cdot 4!}$. The decision tree:
+> > | Are recipients named/distinct? | Formula |
+> > |---|---|
+> > | Yes (A, B, C, D have identities) | $\dfrac{52!}{(13!)^4}$ — multinomial |
+> > | No (piles are anonymous) | $\dfrac{52!}{(13!)^4 \cdot 4!}$ — multinomial divided by group permutations |
+> >
+> > **Miniature example to lock it in.** 4 cards $\{1,2,3,4\}$ dealt 2-each to two **labeled** players A, B:
+> > | # | A's hand | B's hand |
+> > |---|---|---|
+> > | 1 | $\{1, 2\}$ | $\{3, 4\}$ |
+> > | 2 | $\{1, 3\}$ | $\{2, 4\}$ |
+> > | 3 | $\{1, 4\}$ | $\{2, 3\}$ |
+> > | 4 | $\{2, 3\}$ | $\{1, 4\}$ |
+> > | 5 | $\{2, 4\}$ | $\{1, 3\}$ |
+> > | 6 | $\{3, 4\}$ | $\{1, 2\}$ |
+> >
+> > Six labeled deals — that's $\dfrac{4!}{2!\,2!} = 6$, the multinomial. Notice rows 1 and 6 share the same two piles $\{\{1,2\},\{3,4\}\}$, just swapped between A and B. If the players were **anonymous**, those would collapse to one — leaving $6/2! = 3$ unordered partitions (matching Example 1.5.4: partition 4 people into 2 unordered pairs gives 3). The $2!$ division is exactly that collapse, and it only makes sense when the recipients are interchangeable. In Exercise 12 they aren't.
+> >
+> > **(c) Why (b) is not $\binom{52}{13}^4$ — independence vs constraint**
+> >
+> > Comparing the two:
+> > | Quantity | Value |
+> > |---|---|
+> > | (a)$^4$ = $\binom{52}{13}^4$ | $\approx 1.63 \times 10^{47}$ |
+> > | (b) actual = $\dfrac{52!}{(13!)^4}$ | $\approx 5.36 \times 10^{28}$ |
+> > | Ratio (a)$^4$ / (b) | $\approx 3 \times 10^{18}$ |
+> >
+> > Raising (a) to the fourth power corresponds to *"give A any 13 cards from a fresh 52-card deck, then B any 13 from a fresh 52-card deck, then C from a fresh deck, then D from a fresh deck"* — that's sampling **with replacement**. The same Ace of Spades could end up in all four players' hands simultaneously, which never happens in real dealing.
+> >
+> > Real dealing samples **without replacement**: A's choice shrinks B's pool from 52 to 39 cards, B's shrinks C's from 39 to 26, and so on. That's why the count is $\binom{52}{13}\binom{39}{13}\binom{26}{13}\binom{13}{13}$ instead of $\binom{52}{13}^4$. The hands are **not independent** — they're constrained by sharing one finite deck.
+> >
+> > **The constraint is exactly what the multinomial captures.** $\binom{52}{13}^4$ over-counts by a factor of $\approx 3 \times 10^{18}$ because it pretends every hand draws from a fresh deck.
+> >
+> > **Answer.** (a) $\boxed{\dbinom{52}{13}}$ — (b) $\boxed{\dfrac{52!}{(13!)^4}}$ (multinomial, NO $4!$) — (c) hands share a common deck (sampling without replacement) ✓
+> >
+> > ---
+> >
+> > **General principles to take from this problem (useful elsewhere):**
+> >
+> > | Principle | What to ask | What you do |
+> > |---|---|---|
+> > | **Labeled vs unlabeled groups** | Are the recipients/groups distinguishable (named, color-coded, position-based)? | Yes → multinomial $\dfrac{N!}{(k_1)! \cdots (k_g)!}$. No (anonymous piles) → divide further by $g!$ |
+> > | **Independence vs shared constraint** | Does each draw come from a fresh pool, or do earlier draws shrink later pools? | Fresh pool → power $\binom{N}{k}^g$. Shrinking pool → product of decreasing binomials, which telescopes into the multinomial |
+> > | **Order within a group** | Does order *inside* each group matter? | Yes → use permutations $P(N, k)$ inside. No → use combinations $\binom{N}{k}$ inside |
+> >
+> > Together, these three switches let you set up almost any partition-style counting problem correctly. Exercise 12 has: (1) labeled groups (A, B, C, D), (2) shared constraint (one deck), (3) order within hand doesn't matter — leading uniquely to $\dfrac{52!}{(13!)^4}$.
 
 > [!example] Exercise 13 — Casino Superdeck
 > **Problem.** A certain casino uses 10 standard decks of cards mixed together into one big deck, which we will call a superdeck. Thus, the superdeck has $52 \cdot 10 = 520$ cards, with 10 copies of each card. How many different 10-card hands can be dealt from the superdeck? The order of the cards does not matter, nor does it matter which of the original 10 decks the cards came from. Express your answer as a binomial coefficient.
