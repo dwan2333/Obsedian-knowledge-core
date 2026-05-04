@@ -205,12 +205,12 @@
               "title": "Lookup"
             }
           }
-        ],
-        "currentTab": 7
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 289.5
+    "width": 289.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -239,8 +239,16 @@
   },
   "active": "425d8593bb9ccdcf",
   "lastOpenFiles": [
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.20788.1777905397758",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_5_grid_to_triangle.png",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_4_triangle.png",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_3_two_paths.png",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_2_penultimate.png",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_1_grid_path.png",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_mindmap.png",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.20788.1777895790365",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.20788.1777895771507",
     "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
@@ -257,12 +265,6 @@
     "public/Poker/The-Course/Part-2-Beating-Live-1-2-Games/skill3_assess_hand_value-og-image.webp",
     "public/Poker/The-Course/Part-2-Beating-Live-1-2-Games/skill2_dont_pay_people_off-og-image.webp",
     "public/Poker/The-Course/Part-2-Beating-Live-1-2-Games/skill1_pre_flop_strategy-og-image.webp",
-    "public/Poker/The-Course/Part-2-Beating-Live-1-2-Games/hand_quizzes_1_2-og-image.webp",
-    "public/Poker/The-Course/Part-2-Beating-Live-1-2-Games/Part-2-Beating-Live-1-2-Games-(Main)-og-image.webp",
-    "public/Poker/The-Course/Part-1-The-30000-Foot-View/the_poker_pyramid-og-image.webp",
-    "public/Poker/The-Course/Part-1-The-30000-Foot-View/the_poker_ecosystem-og-image.webp",
-    "public/Poker/The-Course/Part-1-The-30000-Foot-View/core_strategy_philosophy-og-image.webp",
-    "public/Poker/The-Course/Part-1-The-30000-Foot-View/Part-1-The-30000-Foot-View-(Main)-og-image.webp",
     "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/_gen_demorgan_venn.py",
     "node_modules/@parcel/watcher/node_modules/picomatch/README.md",
     "node_modules/katex/node_modules/commander/Readme.md",
@@ -283,7 +285,6 @@
     "node_modules/ws/README.md",
     "node_modules/wrap-ansi/readme.md",
     "node_modules/workerpool/README.md",
-    "node_modules/workerpool/HISTORY.md",
     "Untitled.canvas"
   ]
 }

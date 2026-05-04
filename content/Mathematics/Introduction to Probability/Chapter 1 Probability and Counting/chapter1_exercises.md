@@ -312,8 +312,15 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > **Problem.** Show that for all positive integers $n$ and $k$ with $n \ge k$, $\binom{n}{k} + \binom{n}{k-1} = \binom{n+1}{k}$, doing this in two ways: (a) algebraically and (b) with a story, giving an interpretation for why both sides count the same thing.
 > Hint for the story proof: Imagine an organization consisting of $n+1$ people, with one of them pre-designated as the president of the organization.
 >
+> > [!example] 📂 Companion deep-dive (alternative story proof via grid paths)
+> > A different story proof of the same identity — count increasing paths $(0,0) \to (m,n)$ on the integer grid two ways (recursive vs direct) and the equality forces Pascal's identity. Includes 5 visual aids and the connection to Pascal's triangle.
+> >
+> > 👉 **[Open: Pascal's Identity via Grid Paths](pascals_identity_grid_paths.md)**
+>
 > > [!success]- Click to reveal solution
-> > **Story.** Choose a $k$-committee from $n+1$ people. Distinguish one specific person ("Alice"). If Alice is on it: pick $k-1$ from the other $n$ → $\binom{n}{k-1}$. If Alice is off it: pick $k$ from the other $n$ → $\binom{n}{k}$. ✓ (Algebraic proof: combine over common denominator $(n-k+1)!\,k!$.)
+> > **Story (Alice on/off the committee).** Choose a $k$-committee from $n+1$ people. Distinguish one specific person ("Alice"). If Alice is on it: pick $k-1$ from the other $n$ → $\binom{n}{k-1}$. If Alice is off it: pick $k$ from the other $n$ → $\binom{n}{k}$. ✓ (Algebraic proof: combine over common denominator $(n-k+1)!\,k!$.)
+> >
+> > **Alternative story (grid paths).** See [the companion note](pascals_identity_grid_paths.md) for a different proof that counts increasing paths on the integer grid two ways: recursively (penultimate-step argument) and directly ($\binom{m+n}{m}$). Setting the two counts equal produces Pascal's identity. Same identity, two complementary intuitions.
 
 > [!example] Exercise 17 — Sum of Squared Binomials (Vandermonde with $m=n$)
 > **Problem.** Give a story proof that $\sum_{k=0}^n \binom{n}{k}^2 = \binom{2n}{n}$, for all positive integers $n$.
