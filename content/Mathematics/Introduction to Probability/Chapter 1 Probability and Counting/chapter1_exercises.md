@@ -288,6 +288,25 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 >
 > > [!success]- Click to reveal solution
 > > **Story.** Both sides count subsets of an $n$-element set. Right: each element is in or out, giving $2^n$. Left: tally subsets by size $k$, with $\binom{n}{k}$ subsets of each size. ✓
+> >
+> > **Why $2^n$ — the binary encoding intuition (concrete walk-through).** The right-side count feels abstract until you see it on a small set. Take $\{A, B, C\}$ with $n = 3$. List **every** subset alongside three yes/no questions: is $A$ in? is $B$ in? is $C$ in?
+> >
+> > | # | Subset | A in? | B in? | C in? | Binary |
+> > |---|---|---|---|---|---|
+> > | 1 | $\emptyset$ | no | no | no | `000` |
+> > | 2 | $\{C\}$ | no | no | yes | `001` |
+> > | 3 | $\{B\}$ | no | yes | no | `010` |
+> > | 4 | $\{B, C\}$ | no | yes | yes | `011` |
+> > | 5 | $\{A\}$ | yes | no | no | `100` |
+> > | 6 | $\{A, C\}$ | yes | no | yes | `101` |
+> > | 7 | $\{A, B\}$ | yes | yes | no | `110` |
+> > | 8 | $\{A, B, C\}$ | yes | yes | yes | `111` |
+> >
+> > Eight subsets = $2^3$. Each subset is uniquely determined by three independent yes/no answers — and three yes/no answers have $2 \cdot 2 \cdot 2 = 8$ combinations. Generalizing: $n$ elements → $n$ independent yes/no decisions → $\underbrace{2 \cdot 2 \cdots 2}_n = 2^n$ subsets total.
+> >
+> > **The story-proof bridge.** The left side $\sum_{k=0}^n \binom{n}{k}$ partitions those $2^n$ subsets by size: $\binom{n}{0} = 1$ subset of size 0 (just $\emptyset$), $\binom{n}{1} = n$ subsets of size 1, $\binom{n}{2}$ of size 2, …, $\binom{n}{n} = 1$ of size $n$ (the full set). Adding all those size-tallies must give the same total $2^n$. Sanity check at $n = 3$: $\binom{3}{0} + \binom{3}{1} + \binom{3}{2} + \binom{3}{3} = 1 + 3 + 3 + 1 = 8 = 2^3$. ✓
+> >
+> > **Cross-reference.** The same $2^n$-subsets count is derived in the [Multiplication Rule context at Example 1.4.3 (iii) — Subsets](<Chapter 1 (Main).md>) (without the size-partition framing — just the binary-encoding side).
 
 > [!example] Exercise 16 — Pascal's Identity
 > **Problem.** Show that for all positive integers $n$ and $k$ with $n \ge k$, $\binom{n}{k} + \binom{n}{k-1} = \binom{n+1}{k}$, doing this in two ways: (a) algebraically and (b) with a story, giving an interpretation for why both sides count the same thing.

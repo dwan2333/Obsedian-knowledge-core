@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 1 (Main)"
+              "title": "chapter1_exercises"
             }
           }
         ]
@@ -241,6 +241,8 @@
   "lastOpenFiles": [
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.20788.1777895790365",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.20788.1777895771507",
     "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
     "content/Git and Github/Syncing/git pull.md",
     "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/exercise_9_lattice_paths_interactive.html",
@@ -262,8 +264,6 @@
     "public/Poker/The-Course/Part-1-The-30000-Foot-View/core_strategy_philosophy-og-image.webp",
     "public/Poker/The-Course/Part-1-The-30000-Foot-View/Part-1-The-30000-Foot-View-(Main)-og-image.webp",
     "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/_gen_demorgan_venn.py",
-    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/_gen_demorgan_shading.py",
-    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/index.html",
     "node_modules/@parcel/watcher/node_modules/picomatch/README.md",
     "node_modules/katex/node_modules/commander/Readme.md",
     "node_modules/speech-rule-engine/lib/README.md",
@@ -284,7 +284,6 @@
     "node_modules/wrap-ansi/readme.md",
     "node_modules/workerpool/README.md",
     "node_modules/workerpool/HISTORY.md",
-    "node_modules/wicked-good-xpath/README.md",
     "Untitled.canvas"
   ]
 }

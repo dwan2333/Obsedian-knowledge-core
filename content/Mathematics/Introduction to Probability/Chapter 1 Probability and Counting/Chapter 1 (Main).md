@@ -214,6 +214,36 @@ Since most naive probabilities reduce to ratios of counts, the chapter spends se
 > **Answer.** $\underbrace{2 \cdot 2 \cdots 2}_{n} = 2^n$ subsets.
 > **Insight.** Encoding objects as binary include/exclude strings is one of the most powerful counting moves in combinatorics.
 
+> [!tip] Why $2^n$ — the binary encoding intuition (concrete walk-through)
+> The "$n$ independent in/out decisions" framing feels abstract until you see it on a small set. Take $\{A, B, C\}$ with $n = 3$. List **every** subset alongside three yes/no questions: is $A$ in? is $B$ in? is $C$ in?
+>
+> | # | Subset | A in? | B in? | C in? | Binary |
+> |---|---|---|---|---|---|
+> | 1 | $\emptyset$ | no | no | no | `000` |
+> | 2 | $\{C\}$ | no | no | yes | `001` |
+> | 3 | $\{B\}$ | no | yes | no | `010` |
+> | 4 | $\{B, C\}$ | no | yes | yes | `011` |
+> | 5 | $\{A\}$ | yes | no | no | `100` |
+> | 6 | $\{A, C\}$ | yes | no | yes | `101` |
+> | 7 | $\{A, B\}$ | yes | yes | no | `110` |
+> | 8 | $\{A, B, C\}$ | yes | yes | yes | `111` |
+>
+> Eight subsets = $2^3$. **Each subset is uniquely determined by three independent yes/no answers** — and three yes/no answers have $2 \cdot 2 \cdot 2 = 8$ combinations. The mapping is a bijection: every distinct binary string is a distinct subset, no double-counting and no missing subsets.
+>
+> **Doubling sanity check.** Watch what happens as you grow the set by one element: every existing subset can either include the new element or exclude it, doubling the count.
+>
+> | Set | Subsets | Count |
+> |---|---|---|
+> | $\emptyset$ | $\{\,\}$ | $2^0 = 1$ |
+> | $\{A\}$ | $\emptyset, \{A\}$ | $2^1 = 2$ |
+> | $\{A, B\}$ | $\emptyset, \{A\}, \{B\}, \{A,B\}$ | $2^2 = 4$ |
+> | $\{A, B, C\}$ | (the table above) | $2^3 = 8$ |
+> | $\{A, B, C, D\}$ | … | $2^4 = 16$ |
+>
+> Generalizing: an $n$-element set has $n$ independent yes/no decisions, giving $\underbrace{2 \cdot 2 \cdots 2}_n = 2^n$ subsets.
+>
+> **Cross-reference.** This same identity ($2^n$ subsets total) shows up as the right-hand side of [Exercise 15 — Sum of Binomial Coefficients](chapter1_exercises.md), where the story proof uses the binary-encoding count to match $\sum_{k=0}^n \binom{n}{k}$ on the left.
+
 ![Figure 1.3 — Chessboard and crossword grid](chapter1_fig_1.3_chessboard_crossword.png)
 
 > [!example] Example 1.4.5 — Ice Cream Cones
