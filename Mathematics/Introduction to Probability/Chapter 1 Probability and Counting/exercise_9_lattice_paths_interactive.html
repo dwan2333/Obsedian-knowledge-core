@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lattice Paths · Counting Routes on the Integer Grid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,300;1,9..144,400;1,9..144,600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4ecd8;
+    --paper-dark: #ebe1c5;
+    --ink: #1a1818;
+    --ink-soft: #5a544f;
+    --accent: #b73e3a;
+    --accent-trace: #b73e3a;
+    --grid-line: #cab98e;
+    --rule: #8a7e64;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { background: var(--paper); }
+
+  body {
+    color: var(--ink);
+    font-family: 'Fraunces', 'Times New Roman', serif;
+    font-feature-settings: "ss01" 1, "ss02" 1;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(circle at 18% 22%, rgba(139,115,85,0.05) 0%, transparent 45%),
+      radial-gradient(circle at 78% 70%, rgba(139,115,85,0.06) 0%, transparent 50%),
+      radial-gradient(circle at 50% 90%, rgba(139,115,85,0.04) 0%, transparent 40%);
+  }
+
+  .frame {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 64px 56px 96px;
+  }
+
+  /* ── HEADER ───────────────────────────────── */
+  header {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 28px;
+    margin-bottom: 56px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 24px;
+    align-items: end;
+  }
+
+  .meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  h1 {
+    font-size: clamp(48px, 7.5vw, 104px);
+    font-weight: 300;
+    line-height: 0.92;
+    letter-spacing: -0.045em;
+    font-style: italic;
+    text-align: center;
+  }
+
+  h1 em {
+    font-style: normal;
+    font-weight: 800;
+    color: var(--accent);
+  }
+
+  .lede {
+    font-size: 19px;
+    line-height: 1.6;
+    max-width: 680px;
+    margin: 36px 0 0;
+    color: var(--ink-soft);
+  }
+
+  .lede strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .lede em {
+    color: var(--accent);
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  /* ── PROBLEM PANELS ───────────────────────── */
+  .problems {
+    margin-top: 72px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  @media (max-width: 1000px) {
+    .problems { grid-template-columns: 1fr; gap: 64px; }
+    .frame { padding: 36px 24px 64px; }
+    header { grid-template-columns: 1fr; text-align: center; }
+    h1 { text-align: center; }
+  }
+
+  .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 14px;
+    margin-bottom: 24px;
+  }
+
+  .panel-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: var(--ink-soft);
+  }
+
+  .panel-title {
+    font-size: 30px;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .panel-title em {
+    font-style: normal;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* ── CANVAS / GRID ────────────────────────── */
+  .canvas {
+    background: var(--paper-dark);
+    padding: 20px;
+    position: relative;
+    border: 1px solid var(--rule);
+  }
+
+  .canvas::before, .canvas::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--ink-soft);
+  }
+  .canvas::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+  .canvas::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+  .grid-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ── COUNT DISPLAY ────────────────────────── */
+  .count-display {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 28px;
+    align-items: center;
+    margin: 28px 0 24px;
+    padding: 24px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .big-num {
+    font-size: 104px;
+    font-weight: 200;
+    line-height: 0.85;
+    color: var(--accent);
+    font-style: italic;
+    letter-spacing: -0.04em;
+  }
+
+  .formula {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+  }
+
+  .formula b {
+    color: var(--ink);
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .formula .label {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    opacity: 0.7;
+  }
+
+  /* ── PATH CHIPS ───────────────────────────── */
+  .paths-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .paths-label span:last-child {
+    font-style: normal;
+  }
+
+  .paths-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  @media (min-width: 1200px) {
+    .paths-list { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .path-chip {
+    background: transparent;
+    border: 1px solid var(--rule);
+    padding: 11px 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 0.18s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    font-weight: 500;
+  }
+
+  .path-chip:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateX(2px);
+  }
+
+  .path-chip.active {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+
+  .path-chip-num {
+    font-size: 10px;
+    opacity: 0.55;
+    min-width: 18px;
+  }
+
+  .path-chip.active .path-chip-num {
+    opacity: 0.7;
+  }
+
+  /* ── CONTROLS ─────────────────────────────── */
+  .controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .btn {
+    background: var(--ink);
+    color: var(--paper);
+    border: 1px solid var(--ink);
+    padding: 12px 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+  }
+
+  .btn:hover { background: var(--accent); border-color: var(--accent); }
+
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .btn:disabled:hover { background: var(--ink); border-color: var(--ink); }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+  }
+
+  .btn-ghost:hover { color: var(--paper); }
+
+  /* ── EXPLANATION NOTE ─────────────────────── */
+  .note {
+    margin-top: 96px;
+    border-top: 1px solid var(--rule);
+    padding-top: 36px;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 56px;
+  }
+
+  @media (max-width: 760px) {
+    .note { grid-template-columns: 1fr; gap: 16px; }
+  }
+
+  .note-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .note p {
+    font-size: 18px;
+    line-height: 1.65;
+    margin-bottom: 16px;
+    max-width: 720px;
+  }
+
+  .note em {
+    color: var(--accent);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .formula-block {
+    background: var(--paper-dark);
+    padding: 24px 28px;
+    margin: 24px 0;
+    border-left: 3px solid var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--ink);
+  }
+
+  .formula-block .equiv {
+    color: var(--ink-soft);
+  }
+
+  /* ── SVG STYLES ───────────────────────────── */
+  .path-trace {
+    fill: none;
+    stroke: var(--accent-trace);
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .lattice-dot { fill: var(--ink); }
+  .lattice-dot.start, .lattice-dot.end { fill: var(--accent); }
+
+  .grid-line { stroke: var(--grid-line); stroke-width: 1; }
+  .axis { stroke: var(--ink); stroke-width: 1.2; }
+
+  .axis-label, .tick-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    fill: var(--ink-soft);
+  }
+
+  .corner-label {
+    font-family: 'Fraunces', serif;
+    font-size: 13px;
+    font-style: italic;
+    fill: var(--ink);
+    font-weight: 500;
+  }
+
+  .arrow {
+    fill: var(--ink);
+  }
+
+  /* ── FOOTER ───────────────────────────────── */
+  footer {
+    margin-top: 80px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* ── PAGE LOAD ANIMATION ──────────────────── */
+  @keyframes drift {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  header > *           { animation: drift 0.8s ease both; }
+  header > *:nth-child(2) { animation-delay: 0.08s; }
+  header > *:nth-child(3) { animation-delay: 0.16s; }
+  .lede                { animation: drift 0.8s ease 0.24s both; }
+  .problems > section  { animation: drift 0.8s ease 0.36s both; }
+  .problems > section:nth-child(2) { animation-delay: 0.48s; }
+  .note                { animation: drift 0.8s ease 0.6s both; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <header>
+    <div class="meta">№ 01 · Combinatorics</div>
+    <h1>Lattice <em>Paths</em></h1>
+    <div class="meta">Right · Up</div>
+  </header>
+
+  <p class="lede">
+    Standing at the origin of an integer grid, with permission to step only <strong>right</strong> or <strong>up</strong> by one unit at a time — how many distinct routes lead to a given destination? Below, the question is settled for two endpoints: <em>(2, 2)</em> and <em>(3, 2)</em>. Click any path on the right to trace it.
+  </p>
+
+  <div class="problems">
+    <!-- ── PROBLEM I: (0,0) → (2,2) ─────────── -->
+    <section>
+      <div class="panel-header">
+        <span class="panel-num">PROBLEM I</span>
+        <span class="panel-title">to <em>(2, 2)</em></span>
+      </div>
+
+      <div class="canvas">
+        <svg id="grid1" class="grid-svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+
+      <div class="count-display">
+        <div class="big-num" id="count1">6</div>
+        <div class="formula">
+          <span class="label">Total paths</span>
+          <b>C(4, 2) = 4! / (2! · 2!) = 6</b><br>
+          2 right-steps + 2 up-steps = 4 moves.<br>
+          Choose which 2 of the 4 are rights.
+        </div>
+      </div>
+
+      <div class="paths-label">
+        <span>The six paths</span>
+        <span>R = right · U = up</span>
+      </div>
+      <div class="paths-list" id="paths1"></div>
+
+      <div class="controls">
+        <button class="btn" data-target="1" data-action="play">Animate all</button>
+        <button class="btn btn-ghost" data-target="1" data-action="clear">Clear</button>
+      </div>
+    </section>
+
+    <!-- ── PROBLEM II: (0,0) → (3,2) ────────── -->
+    <section>
+      <div class="panel-header">
+        <span class="panel-num">PROBLEM II</span>
+        <span class="panel-title">to <em>(3, 2)</em></span>
+      </div>
+
+      <div class="canvas">
+        <svg id="grid2" class="grid-svg" viewBox="0 0 520 400" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+
+      <div class="count-display">
+        <div class="big-num" id="count2">10</div>
+        <div class="formula">
+          <span class="label">Total paths</span>
+          <b>C(5, 2) = 5! / (2! · 3!) = 10</b><br>
+          3 right-steps + 2 up-steps = 5 moves.<br>
+          Choose which 2 of the 5 are ups.
+        </div>
+      </div>
+
+      <div class="paths-label">
+        <span>The ten paths</span>
+        <span>R = right · U = up</span>
+      </div>
+      <div class="paths-list" id="paths2"></div>
+
+      <div class="controls">
+        <button class="btn" data-target="2" data-action="play">Animate all</button>
+        <button class="btn btn-ghost" data-target="2" data-action="clear">Clear</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- ── EXPLANATORY NOTE ──────────────────── -->
+  <div class="note">
+    <div class="note-label">— On the formula</div>
+    <div>
+      <p>Any path from <em>(0, 0)</em> to <em>(m, n)</em> consists of exactly <em>m</em> right-steps and <em>n</em> up-steps. The order in which we take them is the only thing that distinguishes one path from another. Counting the paths is therefore identical to counting the number of ways to arrange <em>m</em> R's and <em>n</em> U's in a sequence.</p>
+
+      <div class="formula-block">
+        paths(m, n) = C(m + n, m) <span class="equiv">= C(m + n, n) = (m + n)! / (m! · n!)</span>
+      </div>
+
+      <p>For <em>(2, 2)</em>, that's C(4, 2) = <strong>6</strong>. For <em>(3, 2)</em>, C(5, 2) = <strong>10</strong>. The same numbers appear in Pascal's triangle: each entry in the triangle records the count of paths from the top to that position. A nice consequence is that the number of paths to a lattice point equals the sum of the paths to the two points immediately below and to its left.</p>
+    </div>
+  </div>
+
+  <footer>
+    <span>Lattice Paths</span>
+    <span>An interactive demonstration</span>
+  </footer>
+</div>
+
+<script>
+  // ── PATH ENUMERATIONS ──────────────────────
+  const PATHS_22 = ['RRUU','RURU','RUUR','URRU','URUR','UURR'];
+  const PATHS_32 = ['RRRUU','RRURU','RRUUR','RURRU','RURUR','RUURR','URRRU','URRUR','URURR','UURRR'];
+
+  // ── GRID CONFIGURATIONS ────────────────────
+  const CFG = {
+    1: { mx: 2, my: 2, w: 400, h: 400, padL: 60, padR: 40, padT: 40, padB: 60 },
+    2: { mx: 3, my: 2, w: 520, h: 400, padL: 60, padR: 50, padT: 40, padB: 60 }
+  };
+
+  const NS = 'http://www.w3.org/2000/svg';
+
+  function el(tag, attrs = {}, text) {
+    const e = document.createElementNS(NS, tag);
+    for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+    if (text != null) e.textContent = text;
+    return e;
+  }
+
+  function makeMapper(cfg) {
+    const usableW = cfg.w - cfg.padL - cfg.padR;
+    const usableH = cfg.h - cfg.padT - cfg.padB;
+    const stepX = usableW / cfg.mx;
+    const stepY = usableH / cfg.my;
+    return {
+      sx: i => cfg.padL + i * stepX,
+      sy: j => cfg.h - cfg.padB - j * stepY
+    };
+  }
+
+  function buildGrid(svg, cfg) {
+    const { sx, sy } = makeMapper(cfg);
+
+    // grid lines (light)
+    for (let i = 0; i <= cfg.mx; i++) {
+      svg.appendChild(el('line', {
+        x1: sx(i), y1: sy(0), x2: sx(i), y2: sy(cfg.my),
+        class: 'grid-line'
+      }));
+    }
+    for (let j = 0; j <= cfg.my; j++) {
+      svg.appendChild(el('line', {
+        x1: sx(0), y1: sy(j), x2: sx(cfg.mx), y2: sy(j),
+        class: 'grid-line'
+      }));
+    }
+
+    // axes — extending slightly past the grid with arrowheads
+    const axArrow = 14;
+    svg.appendChild(el('line', {
+      x1: sx(0) - 6, y1: sy(0), x2: sx(cfg.mx) + axArrow, y2: sy(0),
+      class: 'axis'
+    }));
+    svg.appendChild(el('line', {
+      x1: sx(0), y1: sy(0) + 6, x2: sx(0), y2: sy(cfg.my) - axArrow,
+      class: 'axis'
+    }));
+
+    // arrowheads
+    svg.appendChild(el('polygon', {
+      points: `${sx(cfg.mx) + axArrow + 6},${sy(0)} ${sx(cfg.mx) + axArrow},${sy(0) - 4} ${sx(cfg.mx) + axArrow},${sy(0) + 4}`,
+      class: 'arrow'
+    }));
+    svg.appendChild(el('polygon', {
+      points: `${sx(0)},${sy(cfg.my) - axArrow - 6} ${sx(0) - 4},${sy(cfg.my) - axArrow} ${sx(0) + 4},${sy(cfg.my) - axArrow}`,
+      class: 'arrow'
+    }));
+
+    // axis name labels (x, y)
+    svg.appendChild(el('text', {
+      x: sx(cfg.mx) + axArrow + 14, y: sy(0) + 4,
+      class: 'axis-label'
+    }, 'x'));
+    svg.appendChild(el('text', {
+      x: sx(0) - 4, y: sy(cfg.my) - axArrow - 12,
+      class: 'axis-label', 'text-anchor': 'end'
+    }, 'y'));
+
+    // tick labels along x
+    for (let i = 0; i <= cfg.mx; i++) {
+      svg.appendChild(el('text', {
+        x: sx(i), y: sy(0) + 22,
+        class: 'tick-label', 'text-anchor': 'middle'
+      }, i));
+    }
+    // tick labels along y
+    for (let j = 0; j <= cfg.my; j++) {
+      svg.appendChild(el('text', {
+        x: sx(0) - 14, y: sy(j) + 4,
+        class: 'tick-label', 'text-anchor': 'middle'
+      }, j));
+    }
+
+    // path layer (drawn beneath dots)
+    const pathLayer = el('g', { id: svg.id + '-paths' });
+    svg.appendChild(pathLayer);
+
+    // lattice dots (above paths)
+    for (let i = 0; i <= cfg.mx; i++) {
+      for (let j = 0; j <= cfg.my; j++) {
+        const cls = 'lattice-dot' +
+          (i === 0 && j === 0 ? ' start' : '') +
+          (i === cfg.mx && j === cfg.my ? ' end' : '');
+        const r = (i === 0 && j === 0) || (i === cfg.mx && j === cfg.my) ? 6 : 4;
+        svg.appendChild(el('circle', { cx: sx(i), cy: sy(j), r, class: cls }));
+      }
+    }
+
+    // corner labels (0,0) and (m,n)
+    svg.appendChild(el('text', {
+      x: sx(0) - 10, y: sy(0) + 38,
+      class: 'corner-label', 'text-anchor': 'middle'
+    }, '(0, 0)'));
+
+    svg.appendChild(el('text', {
+      x: sx(cfg.mx) + 8, y: sy(cfg.my) - 12,
+      class: 'corner-label'
+    }, `(${cfg.mx}, ${cfg.my})`));
+  }
+
+  function pathToD(moves, sx, sy) {
+    let x = 0, y = 0;
+    let d = `M ${sx(0)} ${sy(0)}`;
+    for (const m of moves) {
+      if (m === 'R') x++; else y++;
+      d += ` L ${sx(x)} ${sy(y)}`;
+    }
+    return d;
+  }
+
+  function drawPath(svg, cfg, moves, animate = true) {
+    const layer = svg.querySelector('#' + svg.id + '-paths');
+    layer.innerHTML = '';
+
+    const { sx, sy } = makeMapper(cfg);
+    const path = el('path', {
+      d: pathToD(moves, sx, sy),
+      class: 'path-trace'
+    });
+    layer.appendChild(path);
+
+    if (animate) {
+      const len = path.getTotalLength();
+      path.style.strokeDasharray = len;
+      path.style.strokeDashoffset = len;
+      path.style.transition = 'stroke-dashoffset 0.7s cubic-bezier(0.65, 0, 0.35, 1)';
+      // force layout
+      path.getBoundingClientRect();
+      path.style.strokeDashoffset = 0;
+    }
+    return path;
+  }
+
+  function clearPath(svg) {
+    const layer = svg.querySelector('#' + svg.id + '-paths');
+    if (layer) layer.innerHTML = '';
+  }
+
+  function setupPanel(idx, paths, svg, cfg) {
+    const listEl = document.getElementById('paths' + idx);
+    listEl.innerHTML = '';
+    const chips = [];
+
+    paths.forEach((p, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'path-chip';
+      btn.innerHTML =
+        `<span class="path-chip-num">${String(i + 1).padStart(2, '0')}</span>` +
+        `<span>${p.split('').join('  ')}</span>`;
+      btn.addEventListener('click', () => {
+        const wasActive = btn.classList.contains('active');
+        chips.forEach(c => c.classList.remove('active'));
+        if (wasActive) {
+          clearPath(svg);
+        } else {
+          btn.classList.add('active');
+          drawPath(svg, cfg, p, true);
+        }
+      });
+      listEl.appendChild(btn);
+      chips.push(btn);
+    });
+
+    return chips;
+  }
+
+  // ── BUILD GRIDS ────────────────────────────
+  const svg1 = document.getElementById('grid1');
+  const svg2 = document.getElementById('grid2');
+  buildGrid(svg1, CFG[1]);
+  buildGrid(svg2, CFG[2]);
+
+  const chips1 = setupPanel(1, PATHS_22, svg1, CFG[1]);
+  const chips2 = setupPanel(2, PATHS_32, svg2, CFG[2]);
+
+  // ── ANIMATE-ALL CONTROL ────────────────────
+  const playState = { 1: false, 2: false };
+
+  async function animateAll(idx) {
+    if (playState[idx]) return;
+    playState[idx] = true;
+
+    const paths  = idx === 1 ? PATHS_22 : PATHS_32;
+    const svg    = idx === 1 ? svg1 : svg2;
+    const cfg    = CFG[idx];
+    const chips  = idx === 1 ? chips1 : chips2;
+    const btns   = document.querySelectorAll(`[data-target="${idx}"]`);
+    btns.forEach(b => b.disabled = true);
+
+    chips.forEach(c => c.classList.remove('active'));
+
+    for (let i = 0; i < paths.length; i++) {
+      if (!playState[idx]) break;
+      chips.forEach(c => c.classList.remove('active'));
+      chips[i].classList.add('active');
+      drawPath(svg, cfg, paths[i], true);
+      await new Promise(r => setTimeout(r, 1100));
+    }
+
+    playState[idx] = false;
+    btns.forEach(b => b.disabled = false);
+  }
+
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const idx = btn.dataset.target;
+      const action = btn.dataset.action;
+      if (action === 'play') {
+        animateAll(idx);
+      } else if (action === 'clear') {
+        playState[idx] = false;
+        const chips = idx === '1' ? chips1 : chips2;
+        chips.forEach(c => c.classList.remove('active'));
+        const svg = idx === '1' ? svg1 : svg2;
+        clearPath(svg);
+      }
+    });
+  });
+
+  // ── INITIAL FLOURISH: draw the first path on each grid ─
+  setTimeout(() => {
+    chips1[0].classList.add('active');
+    drawPath(svg1, CFG[1], PATHS_22[0], true);
+    chips2[0].classList.add('active');
+    drawPath(svg2, CFG[2], PATHS_32[0], true);
+  }, 700);
+</script>
+</body>
+</html>

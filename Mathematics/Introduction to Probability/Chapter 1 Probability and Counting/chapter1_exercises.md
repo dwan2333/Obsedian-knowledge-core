@@ -115,10 +115,50 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > **Problem.** (a) How many paths are there from the point $(0, 0)$ to the point $(110, 111)$ in the plane such that each step either consists of going one unit up or one unit to the right?
 > (b) How many paths are there from $(0, 0)$ to $(210, 211)$, where each step consists of going one unit up or one unit to the right, and the path has to go through $(110, 111)$?
 >
-> > [!success]- Click to reveal solution
-> > **Solution.** (a) 110 R's and 111 U's in some order: $\binom{221}{110}$. (b) Multiply leg counts: $\binom{221}{110} \cdot \binom{200}{100}$.
+> > [!example] 📂 Interactive walkthrough
+> > A live grid demo where you can adjust the target $(a, b)$, watch lattice paths trace through the integer grid, and see why the count equals $\binom{a+b}{a}$ — every R/U step pattern produces a distinct path:
 > >
-> > **Answer.** (a) $\binom{221}{110}$ — (b) $\binom{221}{110}\binom{200}{100}$ ✓
+> > 👉 **[Open: Lattice Paths — Interactive Demonstration](exercise_9_lattice_paths_interactive.html)**
+> >
+> > Hosted as a self-contained HTML file in this folder. Clicking opens it in your default browser.
+>
+> > [!success]- Click to reveal solution
+> > **Core insight — every lattice path is a sequence of R's and U's.**
+> >
+> > A path from $(0, 0)$ to $(a, b)$ that only goes right or up uses **exactly $a$ right-steps (R) and $b$ up-steps (U)** — no other choice possible, since each R increases the $x$-coordinate by 1 and each U increases the $y$-coordinate by 1, and the path must arrive at $(a, b)$. The path is **completely determined** by the order in which the R's and U's appear in the sequence of $a + b$ total steps.
+> >
+> > Counting paths therefore reduces to counting binary strings: choose **which** $a$ of the $a+b$ positions hold the R's (the remaining $b$ positions automatically hold U's):
+> > $$\#\{\text{paths } (0,0) \to (a, b)\} \;=\; \binom{a+b}{a} \;=\; \binom{a+b}{b}$$
+> >
+> > **(a) Paths from $(0,0)$ to $(110, 111)$**
+> >
+> > The path uses 110 R's and 111 U's, totalling $221$ steps. Choose which 110 of the 221 positions are R's:
+> > $$\binom{221}{110}$$
+> > Equivalently $\binom{221}{111}$ by the symmetry $\binom{n}{k} = \binom{n}{n-k}$.
+> >
+> > **(b) Paths from $(0,0)$ to $(210, 211)$ that must pass through $(110, 111)$**
+> >
+> > A path from $(0,0)$ to $(210, 211)$ via $(110, 111)$ is fully determined by **two independent legs**:
+> > - **Leg 1:** $(0,0) \to (110, 111)$ — uses 110 R's and 111 U's → $\binom{221}{110}$ paths
+> > - **Leg 2:** $(110, 111) \to (210, 211)$ — uses $210-110 = 100$ R's and $211-111 = 100$ U's → $\binom{200}{100}$ paths
+> >
+> > By the **multiplication rule** (each leg-1 choice can be paired with each leg-2 choice independently):
+> > $$\#\{\text{paths via the waypoint}\} \;=\; \binom{221}{110} \cdot \binom{200}{100}$$
+> >
+> > **Why the multiplication rule applies cleanly here.** Once a path arrives at $(110, 111)$, its history (how it got there) places no constraint whatsoever on its future (how it leaves). The two legs are independent decisions in the sense that any combination is a valid full path — no "leg 1's choice forces leg 2's hand" interaction. That's the multiplication rule's signature condition.
+> >
+> > **Sanity check via small cases (try in the interactive demo).**
+> >
+> > | Target $(a, b)$ | Total steps | R's | U's | Path count |
+> > |---|---|---|---|---|
+> > | $(1, 1)$ | 2 | 1 | 1 | $\binom{2}{1} = 2$ |
+> > | $(2, 1)$ | 3 | 2 | 1 | $\binom{3}{2} = 3$ |
+> > | $(2, 2)$ | 4 | 2 | 2 | $\binom{4}{2} = 6$ |
+> > | $(3, 2)$ | 5 | 3 | 2 | $\binom{5}{3} = 10$ |
+> >
+> > For $(2, 2)$, the 6 paths correspond to the 6 strings: `RRUU`, `RURU`, `RUUR`, `URRU`, `URUR`, `UURR`. The interactive demo lets you click through each one to see how the binary string maps to a grid path.
+> >
+> > **Answer.** (a) $\boxed{\dbinom{221}{110}}$ — (b) $\boxed{\dbinom{221}{110}\dbinom{200}{100}}$ ✓
 
 > [!example] Exercise 10 — Course Selection
 > **Problem.** To fulfill the requirements for a certain degree, a student can choose to take any 7 out of a list of 20 courses, with the constraint that at least 1 of the 7 courses must be a statistics course. Suppose that 5 of the 20 courses are statistics courses.
