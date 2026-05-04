@@ -27,15 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "chapter1_exercises"
+              "title": "Chapter 1 (Main)"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -108,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for chapter1_exercises"
+              "title": "Backlinks for Chapter 1 (Main)"
             }
           },
           {
@@ -237,10 +238,10 @@
       "smart-chat:Open: Smart Chat": false
     }
   },
-  "active": "425d8593bb9ccdcf",
+  "active": "cc2d672911f6d2d9",
   "lastOpenFiles": [
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.20788.1777895790365",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.20788.1777895771507",
     "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
