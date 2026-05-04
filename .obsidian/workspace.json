@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
-                "mode": "preview",
+                "file": "content/Git and Github/Syncing/git pull.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 1 (Main)"
-            }
-          },
-          {
-            "id": "88f9d9e83677b527",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "chapter1_exercises"
+              "title": "git pull"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+                "file": "content/Git and Github/Syncing/git pull.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for chapter1_exercises"
+              "title": "Backlinks for git pull"
             }
           },
           {
@@ -197,13 +182,13 @@
             }
           },
           {
-            "id": "173e708a9166c8f9",
+            "id": "da7c6bb8926eb928",
             "type": "leaf",
             "state": {
-              "type": "smart-contexts-dashboard",
+              "type": "smart-lookup-view-connections",
               "state": {},
-              "icon": "smart-named-contexts",
-              "title": "Management dashboard (show named contexts)"
+              "icon": "smart-lookup",
+              "title": "Lookup"
             }
           }
         ],
@@ -238,54 +223,54 @@
       "smart-chat:Open: Smart Chat": false
     }
   },
-  "active": "88f9d9e83677b527",
+  "active": "da7c6bb8926eb928",
   "lastOpenFiles": [
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.20788.1777891841760",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.20788.1777891799196",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/exercise_13_casino_superdeck_interactive.html",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.20788.1777889081384",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.20788.1777888921666",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.20788.1777888636851",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/exercise_9_lattice_paths_interactive.html",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.20788.1777888310887",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/exercise_11_counting_functions_interactive.html",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.16492.1777731066679",
-    "Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
-    "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.16492.1777729254286",
-    "Git and Github/Branching/Branching (Main).md",
-    "Git and Github/Branching/git checkout.md",
-    "Git and Github/Branching/git cherry-pick.md",
-    "Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
-    "Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
-    "Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
-    "Mathematics/Quadratic Formulas/v2_topic_3_golden_ratio.png",
-    "Mathematics/Quadratic Formulas/v2_topic_3_complex_roots.png",
-    "Mathematics/Quadratic Formulas/v2_topic_2_method_steps.png",
-    "Mathematics/Quadratic Formulas/v2_topic_2_trick.png",
-    "Mathematics/Quadratic Formulas/v2_topic_1_zero_product.png",
-    "Mathematics/Quadratic Formulas/v2_mindmap.png",
-    "Finance/Futures/SOFR Future.md",
-    "Mathematics/Quadratic Formulas/topic_2_diff_squares.png",
-    "Mathematics/Quadratic Formulas/topic_1_midpoint_deviation.png",
-    "Mathematics/Quadratic Formulas/quadratic_mindmap.png",
-    "Mathematics/Quadratic Formulas/topic_2_parabola_scaling.png",
-    "Git and Github/Branching/git merge.md",
-    "Poker/The Course/Part 1 The 30000 Foot View/core_strategy_philosophy.md",
-    "Poker/The Course/Part 2 Beating Live 1-2 Games/skill3_assess_hand_value.md",
-    "Poker/The Course/Part 2 Beating Live 1-2 Games/skill2_dont_pay_people_off.md",
-    "Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
-    "Poker/The Course/Part 2 Beating Live 1-2 Games/Part 2 Beating Live 1-2 Games (Main).md",
-    "Poker/The Course/Part 2 Beating Live 1-2 Games/hand_quizzes_1_2.md",
-    "Git and Github/Bare Repositories.md",
-    "Git and Github/Git Essential Commands.md",
-    "Git and Github/Collaboration on GitHub/GitHub pull request.md",
-    "Git and Github/Collaboration on GitHub/GitHub Fork Request.md",
-    "Finance/Stablecoin/Crypto-Collateralized Stablecoins.md",
-    "Finance/Stablecoin/algorithmic_stablecoins_terra_luna.md",
-    "Finance/Stablecoin/ai_agent_payment_infrastructure.md",
-    "Finance/Treasury Bonds/Treasury Bonds (main).md",
+    "content/index.md",
+    "public/Poker/The-Course/The-Course-(Main)-og-image.webp",
+    "public/Poker/The-Course/Part-2-Beating-Live-1-2-Games/skill3_assess_hand_value-og-image.webp",
+    "public/Poker/The-Course/Part-2-Beating-Live-1-2-Games/skill2_dont_pay_people_off-og-image.webp",
+    "public/Poker/The-Course/Part-2-Beating-Live-1-2-Games/skill1_pre_flop_strategy-og-image.webp",
+    "public/Poker/The-Course/Part-2-Beating-Live-1-2-Games/hand_quizzes_1_2-og-image.webp",
+    "public/Poker/The-Course/Part-2-Beating-Live-1-2-Games/Part-2-Beating-Live-1-2-Games-(Main)-og-image.webp",
+    "public/Poker/The-Course/Part-1-The-30000-Foot-View/the_poker_pyramid-og-image.webp",
+    "public/Poker/The-Course/Part-1-The-30000-Foot-View/the_poker_ecosystem-og-image.webp",
+    "public/Poker/The-Course/Part-1-The-30000-Foot-View/core_strategy_philosophy-og-image.webp",
+    "public/Poker/The-Course/Part-1-The-30000-Foot-View/Part-1-The-30000-Foot-View-(Main)-og-image.webp",
+    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/_gen_demorgan_venn.py",
+    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/_gen_demorgan_shading.py",
+    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/index.html",
+    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/exercise_9_lattice_paths_interactive",
+    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/exercise_13_casino_superdeck_interactive",
+    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/exercise_11_counting_functions_interactive",
+    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/chapter1_exercises_raw.txt",
+    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/chapter1_exercises.html",
+    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/Chapter-1-(Main).html",
+    "public/Poker/The-Course/Part-2-Beating-Live-1-2-Games/skill3_assess_hand_value.html",
+    "node_modules/@parcel/watcher/node_modules/picomatch/README.md",
+    "node_modules/katex/node_modules/commander/Readme.md",
+    "node_modules/speech-rule-engine/lib/README.md",
+    "node_modules/speech-rule-engine/bin/README.md",
+    "node_modules/@types/d3/README.md",
+    "node_modules/@nodelib/fs.scandir/README.md",
+    "node_modules/@nodelib/fs.walk/README.md",
+    "node_modules/@nodelib/fs.stat/README.md",
+    "node_modules/zwitch/readme.md",
+    "node_modules/yoga-layout/README.md",
+    "node_modules/yargs-parser/README.md",
+    "node_modules/yargs-parser/CHANGELOG.md",
+    "node_modules/yargs/README.md",
+    "node_modules/y18n/README.md",
+    "node_modules/y18n/CHANGELOG.md",
+    "node_modules/xmldom-sre/readme.md",
+    "node_modules/ws/README.md",
+    "node_modules/wrap-ansi/readme.md",
+    "node_modules/workerpool/README.md",
+    "node_modules/workerpool/HISTORY.md",
+    "node_modules/wicked-good-xpath/README.md",
+    "node_modules/web-namespaces/readme.md",
+    "node_modules/varint/README.md",
+    "node_modules/vfile-location/readme.md",
+    "node_modules/vfile/readme.md",
     "Untitled.canvas"
   ]
 }
