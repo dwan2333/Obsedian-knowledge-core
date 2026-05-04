@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "chapter1_exercises"
+              "title": "pascals_identity_grid_paths"
             }
           },
           {
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for chapter1_exercises"
+              "title": "Backlinks for pascals_identity_grid_paths"
             }
           },
           {
@@ -239,9 +239,10 @@
   },
   "active": "425d8593bb9ccdcf",
   "lastOpenFiles": [
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.20788.1777905397758",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+    "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.20788.1777905397758",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_5_grid_to_triangle.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_4_triangle.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_3_two_paths.png",
@@ -251,7 +252,6 @@
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.20788.1777895790365",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md.tmp.20788.1777895771507",
-    "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
     "content/Git and Github/Syncing/git pull.md",
     "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/exercise_9_lattice_paths_interactive.html",
     "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/exercise_13_casino_superdeck_interactive.html",
@@ -265,7 +265,6 @@
     "public/Poker/The-Course/Part-2-Beating-Live-1-2-Games/skill3_assess_hand_value-og-image.webp",
     "public/Poker/The-Course/Part-2-Beating-Live-1-2-Games/skill2_dont_pay_people_off-og-image.webp",
     "public/Poker/The-Course/Part-2-Beating-Live-1-2-Games/skill1_pre_flop_strategy-og-image.webp",
-    "public/Mathematics/Introduction-to-Probability/Chapter-1-Probability-and-Counting/_gen_demorgan_venn.py",
     "node_modules/@parcel/watcher/node_modules/picomatch/README.md",
     "node_modules/katex/node_modules/commander/Readme.md",
     "node_modules/speech-rule-engine/lib/README.md",
