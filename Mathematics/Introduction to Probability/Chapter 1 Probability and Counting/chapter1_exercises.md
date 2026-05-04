@@ -252,10 +252,24 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > **Problem.** A certain casino uses 10 standard decks of cards mixed together into one big deck, which we will call a superdeck. Thus, the superdeck has $52 \cdot 10 = 520$ cards, with 10 copies of each card. How many different 10-card hands can be dealt from the superdeck? The order of the cards does not matter, nor does it matter which of the original 10 decks the cards came from. Express your answer as a binomial coefficient.
 > Hint: Bose-Einstein.
 >
-> > [!success]- Click to reveal solution
-> > **Solution.** Drawing only 10 cards, no card type can be exhausted (max needed = 10, copies available = 10). So this reduces to choosing a multiset of size 10 from 52 types: $\binom{52+10-1}{10} = \binom{61}{10}$.
+> > [!example] 📂 Interactive walkthrough
+> > A live stars-and-bars demonstration where you can adjust hand size $k$ and number of card types, then watch the multiset encoding map onto a binary string of stars and bars — and see exactly why the count is $\binom{n+k-1}{k}$:
 > >
-> > **Answer.** $\binom{61}{10}$ ✓
+> > 👉 **[Open: Casino Superdeck — Interactive Demonstration](exercise_13_casino_superdeck_interactive.html)**
+> >
+> > Hosted as a self-contained HTML file in this folder. Clicking opens it in your default browser.
+>
+> > [!success]- Click to reveal solution
+> > **Why this is Bose-Einstein, not just $\binom{520}{10}$.** A "hand" is determined by the **count of each card type** (how many Aces of Spades, how many 7 of Hearts, ...) — not by *which* of the 10 physical Aces of Spades was drawn. So we're choosing a **multiset** of size 10 from 52 distinguishable card types.
+> >
+> > **The 10-vs-10 detail that makes this clean.** With only 10 cards drawn and 10 copies available per type, no card type can ever be exhausted. So every multiset where the counts $n_1 + n_2 + \cdots + n_{52} = 10$ is achievable — exactly the unconstrained Bose-Einstein count.
+> >
+> > **Stars-and-bars encoding.** Represent each multiset as a string of stars (cards drawn) and bars (separators between card types):
+> > $$\underbrace{\star\star\star}_{\text{type 1}} \mid \underbrace{\star}_{\text{type 2}} \mid \;\; \mid \underbrace{\star\star}_{\text{type 4}} \mid \cdots$$
+> > A 10-card hand from 52 types needs $10$ stars and $52 - 1 = 51$ bars, for a total of $61$ symbols. Choose which $10$ of the $61$ positions are stars:
+> > $$\binom{52 + 10 - 1}{10} \;=\; \binom{61}{10}$$
+> >
+> > **Answer.** $\boxed{\dbinom{61}{10}} \;=\; 90{,}177{,}170{,}226$ ✓
 
 > [!example] Exercise 14 — Two Pizzas
 > **Problem.** You are ordering two pizzas. A pizza can be small, medium, large, or extra large, with any combination of 8 possible toppings (getting no toppings is allowed, as is getting all 8). How many possibilities are there for your two pizzas?

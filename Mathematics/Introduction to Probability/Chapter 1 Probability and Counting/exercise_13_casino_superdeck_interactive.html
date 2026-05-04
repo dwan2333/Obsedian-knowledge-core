@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stars & Bars · The Casino Superdeck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,200;1,6..72,300;1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:        #0a0f1c;
+    --bg-deep:   #060912;
+    --panel:     #131a2a;
+    --panel-2:   #1a2236;
+    --ink:       #f3e9c8;
+    --ink-soft:  #8a8068;
+    --rule:      #2a3142;
+    --gold:      #e6b95e;
+    --gold-deep: #c89d3f;
+    --gold-faint:rgba(230,185,94,0.08);
+    --ruby:      #c8525a;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { background: var(--bg); }
+
+  body {
+    color: var(--ink);
+    font-family: 'Newsreader', 'Times New Roman', serif;
+    font-size: 19px;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse 70% 50% at 18% 8%,  rgba(230,185,94,0.06), transparent 70%),
+      radial-gradient(ellipse 60% 40% at 82% 92%, rgba(200,82,90,0.04), transparent 70%);
+    background-attachment: fixed;
+  }
+
+  .frame {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 56px 48px 72px;
+  }
+
+  @media (max-width: 768px) {
+    .frame { padding: 36px 20px 56px; }
+  }
+
+  /* ── HEADER ───────────────────────────────── */
+  header {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 32px;
+    margin-bottom: 56px;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 22px;
+  }
+
+  h1 {
+    font-family: 'Newsreader', serif;
+    font-size: clamp(56px, 9vw, 120px);
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  h1 .deco {
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 400;
+  }
+
+  h1 .ampersand {
+    color: var(--ink-soft);
+    font-style: italic;
+    font-weight: 200;
+    margin: 0 0.05em;
+  }
+
+  .lede {
+    font-size: 21px;
+    line-height: 1.65;
+    max-width: 740px;
+    margin-top: 32px;
+    color: var(--ink);
+    font-weight: 300;
+  }
+
+  .lede em      { color: var(--gold); font-style: italic; font-weight: 400; }
+  .lede strong  { color: var(--ink); font-weight: 500; }
+
+  /* ── SECTIONS ─────────────────────────────── */
+  section { margin-bottom: 56px; }
+
+  h2 {
+    font-family: 'Newsreader', serif;
+    font-size: 38px;
+    line-height: 1.1;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 18px;
+    letter-spacing: -0.01em;
+  }
+
+  .intuition p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    max-width: 800px;
+  }
+
+  .intuition em      { color: var(--gold); font-style: italic; font-weight: 400; }
+  .intuition strong  { color: var(--ink); font-weight: 500; }
+
+  .callout {
+    background: var(--panel);
+    border-left: 2px solid var(--gold);
+    padding: 18px 24px;
+    margin: 22px 0;
+    font-size: 17px;
+    line-height: 1.65;
+    max-width: 800px;
+  }
+
+  .callout em   { color: var(--gold); font-style: italic; }
+  .callout code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: var(--ink);
+    background: var(--bg-deep);
+    padding: 2px 6px;
+  }
+
+  .enum-lede {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    max-width: 800px;
+  }
+
+  .enum-lede em      { color: var(--gold); font-style: italic; font-weight: 400; }
+  .enum-lede strong  { color: var(--ink); font-weight: 500; }
+
+  /* ── CONTROLS ─────────────────────────────── */
+  .controls-row {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    padding: 16px 22px;
+    background: var(--panel);
+    border-left: 2px solid var(--ink);
+  }
+
+  .stepper {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .stepper-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .step-btn {
+    background: transparent;
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    width: 32px;
+    height: 32px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.15s;
+    line-height: 1;
+  }
+
+  .step-btn:hover:not(:disabled) {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .step-btn:disabled { opacity: 0.25; cursor: not-allowed; }
+
+  .step-val {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 30px;
+    min-width: 32px;
+    text-align: center;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  /* ── ENUMERATE PANEL ──────────────────────── */
+  .enum-panel {
+    background: var(--panel);
+    padding: 28px 28px 24px;
+    border-top: 2px solid var(--gold);
+  }
+
+  .enum-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .config {
+    display: grid;
+    grid-template-columns: 36px 1fr auto;
+    gap: 14px;
+    padding: 12px 16px;
+    background: var(--panel-2);
+    border: 1px solid var(--rule);
+    align-items: center;
+    transition: all 0.15s;
+  }
+
+  .config:hover {
+    border-color: var(--gold-deep);
+    background: rgba(230,185,94,0.05);
+  }
+
+  .config-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+    letter-spacing: 0.05em;
+  }
+
+  .config-svg {
+    height: 30px;
+    width: 100%;
+    display: block;
+  }
+
+  .config-tuple {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    color: var(--gold);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  .enum-total {
+    padding: 16px 22px;
+    background: var(--bg-deep);
+    border: 1px solid var(--rule);
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+
+  .enum-total .label {
+    color: var(--ink-soft);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+
+  .enum-total .count {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 32px;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .enum-total .formula {
+    color: var(--ink-soft);
+    font-size: 13px;
+  }
+
+  .enum-total .formula b { color: var(--gold); font-weight: 700; }
+
+  /* ── RESULT (CASINO PROBLEM) ──────────────── */
+  .result-section {
+    background: var(--panel);
+    padding: 36px 32px;
+    border-top: 2px solid var(--ruby);
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 36px;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .result-section { grid-template-columns: 1fr; }
+  }
+
+  .result-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ruby);
+    margin-bottom: 10px;
+  }
+
+  .result-formula {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    color: var(--ink);
+    line-height: 1.9;
+  }
+
+  .result-formula sup { font-size: 0.7em; vertical-align: 0.4em; }
+  .result-formula .step { display: block; }
+  .result-formula b   { color: var(--gold); font-weight: 700; }
+
+  .result-value {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1;
+    color: var(--ruby);
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+    word-break: break-word;
+  }
+
+  .result-decimal {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  /* ── NOTE ─────────────────────────────────── */
+  .note {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 48px;
+  }
+
+  @media (max-width: 760px) {
+    .note { grid-template-columns: 1fr; gap: 12px; }
+  }
+
+  .note-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .note-body p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    max-width: 720px;
+  }
+
+  .note-body em      { color: var(--gold); font-style: italic; font-weight: 400; }
+  .note-body strong  { color: var(--ink); font-weight: 500; }
+
+  /* ── FOOTER ───────────────────────────────── */
+  footer {
+    margin-top: 64px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* ── SVG STYLES ───────────────────────────── */
+  .star-circle {
+    fill: var(--gold);
+  }
+
+  .bar-line {
+    stroke: var(--ruby);
+    stroke-width: 2.4;
+    stroke-linecap: round;
+  }
+
+  /* ── PAGE LOAD ANIMATION ──────────────────── */
+  @keyframes drift {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  header             { animation: drift 0.7s ease both; }
+  section.intuition  { animation: drift 0.7s ease 0.1s both; }
+  section.enumerate  { animation: drift 0.7s ease 0.2s both; }
+  section.apply-it   { animation: drift 0.7s ease 0.3s both; }
+  .note              { animation: drift 0.7s ease 0.4s both; }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .config { animation: fade-in 0.3s ease both; }
+</style>
+</head>
+<body>
+<div class="frame">
+
+  <header>
+    <div class="eyebrow">Exercise 13 · Casino Superdeck</div>
+    <h1><span class="deco">Stars</span><span class="ampersand"> &amp; </span><span class="deco">Bars</span></h1>
+    <p class="lede">
+      A casino mixes <strong>10 standard decks</strong> into one giant "superdeck" — <strong>520 cards</strong>, with ten copies of each of the 52 cards. Deal a 10-card hand. Order doesn't matter, and copies of the same card are <em>indistinguishable</em>. How many possible hands are there?
+    </p>
+  </header>
+
+  <section class="intuition">
+    <h2>The conceptual move</h2>
+    <p>In an ordinary deck the 52 cards are all distinct, so a hand is a <em>subset</em>. But here the ten copies of (say) the Ace of Spades are interchangeable. So holding two Aces of Spades is just <em>holding two Aces of Spades</em> — the two copies aren't tagged.</p>
+    <p>That changes what a "hand" <strong>is</strong>. A hand is no longer a subset; it's a <em>multiset</em> — described entirely by how many of each card type you hold:</p>
+    <div class="callout">
+      A hand is a tuple <code>(n₁, n₂, ..., n₅₂)</code> with each <em>nᵢ ≥ 0</em>, each <em>nᵢ ≤ 10</em>, and <em>n₁ + n₂ + ⋯ + n₅₂ = 10</em>.
+    </div>
+    <p>The upper bound <em>nᵢ ≤ 10</em> is automatically satisfied — since the total is only 10, no single nᵢ can exceed 10 anyway. So we just count nonnegative integer solutions to that sum, no inclusion-exclusion needed. That's exactly what stars and bars solves.</p>
+  </section>
+
+  <section class="enumerate">
+    <h2>See them all · the tiny case</h2>
+    <p class="enum-lede">
+      A hand with <strong>n</strong> card types and <strong>k</strong> total cards corresponds uniquely to an arrangement of <em>k stars</em> and <em>n−1 bars</em> in a row. Below are <strong>every single arrangement</strong> for the values you choose. Counting them gives <em>C(n + k − 1, k)</em> — try it.
+    </p>
+
+    <div class="controls-row">
+      <div class="stepper">
+        <span class="stepper-label">card types · n</span>
+        <button class="step-btn" id="n-down">−</button>
+        <span class="step-val" id="n-val">3</span>
+        <button class="step-btn" id="n-up">+</button>
+      </div>
+      <div class="stepper">
+        <span class="stepper-label">cards in hand · k</span>
+        <button class="step-btn" id="k-down">−</button>
+        <span class="step-val" id="k-val">3</span>
+        <button class="step-btn" id="k-up">+</button>
+      </div>
+    </div>
+
+    <div class="enum-panel">
+      <div class="enum-grid" id="enum-grid"></div>
+      <div class="enum-total">
+        <span class="label">Counted</span>
+        <span class="count" id="enum-count">10</span>
+        <span class="formula">configurations  ·  matches  C(<b id="enum-n">5</b>, <b id="enum-k">3</b>) = <b id="enum-formula-val">10</b></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="apply-it">
+    <h2>Apply to the casino</h2>
+    <div class="result-section">
+      <div>
+        <div class="result-tag">The setup</div>
+        <div class="result-formula">
+          <span class="step">n = <b>52</b> &nbsp;card types</span>
+          <span class="step">k = <b>10</b> &nbsp;cards in hand</span>
+          <span class="step" style="margin-top: 14px;">C(n + k − 1, &nbsp;k) = C(<b>61</b>, <b>10</b>)</span>
+        </div>
+      </div>
+      <div>
+        <div class="result-tag">The numerical value</div>
+        <div class="result-value">90,177,170,226</div>
+        <div class="result-decimal">
+          ≈ 9.02 × 10¹⁰<br>
+          roughly ninety billion possible hands
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="note">
+    <div class="note-tag">— Bose-Einstein</div>
+    <div class="note-body">
+      <p>The hint refers to <em>Bose-Einstein statistics</em>, which counts the number of ways to distribute <strong>k indistinguishable particles</strong> among <strong>n distinguishable states</strong>. The answer is <em>C(n + k − 1, k)</em> — exactly what we used.</p>
+      <p>The bridge to physics: photons (the indistinguishable "stars") populating energy levels (the distinguishable "bins") obey this same combinatorial rule, in contrast to Maxwell-Boltzmann (distinguishable particles) or Fermi-Dirac (at most one per state). Bose and Einstein worked this out in 1924; combinatorialists have called it stars and bars for far longer.</p>
+      <p>One subtlety worth keeping in mind: this problem only works cleanly because <em>k ≤ 10</em>. If the casino dealt 11-card hands, the constraint <em>nᵢ ≤ 10</em> would start to bite, and you'd subtract the bad configurations via inclusion-exclusion. The fact that the hand size doesn't exceed the per-card supply is what lets stars and bars handle the count directly.</p>
+    </div>
+  </div>
+
+  <footer>
+    <span>The Casino Superdeck</span>
+    <span>Interactive demonstration</span>
+  </footer>
+
+</div>
+
+<script>
+(function() {
+  const state = { n: 3, k: 3 };
+  const N_MIN = 2, N_MAX = 4;
+  const K_MIN = 1, K_MAX = 4;
+
+  // ── BIGINT BINOMIAL ─────────────────────────
+  function binomial(n, k) {
+    if (k < 0 || k > n) return 0n;
+    if (k === 0 || k === n) return 1n;
+    k = Math.min(k, n - k);
+    let result = 1n;
+    const nB = BigInt(n);
+    for (let i = 0n; i < BigInt(k); i++) {
+      result = result * (nB - i) / (i + 1n);
+    }
+    return result;
+  }
+
+  // ── ENUMERATE WEAK COMPOSITIONS ─────────────
+  // Generate all (a₁, ..., aₙ) with aᵢ ≥ 0 and sum = k,
+  // ordered with largest leading component first.
+  function generateConfigs(n, k) {
+    if (n === 1) return [[k]];
+    const result = [];
+    for (let first = k; first >= 0; first--) {
+      for (const rest of generateConfigs(n - 1, k - first)) {
+        result.push([first, ...rest]);
+      }
+    }
+    return result;
+  }
+
+  // ── RENDER A SINGLE CONFIG'S STARS-AND-BARS ─
+  function renderConfigSvg(config) {
+    const n = config.length;
+    const k = config.reduce((a, b) => a + b, 0);
+    const totalSlots = n + k - 1;
+    const slotW = 18;
+    const padX = 6;
+    const W = totalSlots * slotW + padX * 2;
+    const H = 30;
+    const cy = H / 2;
+    const radius = 5.5;
+    const barHalf = 9;
+
+    const parts = [];
+    parts.push(`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" class="config-svg">`);
+
+    let pos = 0;
+    for (let i = 0; i < n; i++) {
+      // stars in section i
+      for (let s = 0; s < config[i]; s++) {
+        const cx = padX + pos * slotW + slotW / 2;
+        parts.push(`<circle cx="${cx}" cy="${cy}" r="${radius}" class="star-circle"/>`);
+        pos++;
+      }
+      // bar between sections (none after the last section)
+      if (i < n - 1) {
+        const cx = padX + pos * slotW + slotW / 2;
+        parts.push(`<line x1="${cx}" x2="${cx}" y1="${cy - barHalf}" y2="${cy + barHalf}" class="bar-line"/>`);
+        pos++;
+      }
+    }
+    parts.push('</svg>');
+    return parts.join('');
+  }
+
+  // ── RENDER ALL CONFIGS ──────────────────────
+  function render() {
+    document.getElementById('n-val').textContent = state.n;
+    document.getElementById('k-val').textContent = state.k;
+    document.getElementById('n-down').disabled = state.n <= N_MIN;
+    document.getElementById('n-up').disabled   = state.n >= N_MAX;
+    document.getElementById('k-down').disabled = state.k <= K_MIN;
+    document.getElementById('k-up').disabled   = state.k >= K_MAX;
+
+    const configs = generateConfigs(state.n, state.k);
+    const grid = document.getElementById('enum-grid');
+    grid.innerHTML = '';
+
+    configs.forEach((config, idx) => {
+      const div = document.createElement('div');
+      div.className = 'config';
+      const numStr = String(idx + 1).padStart(2, '0');
+      const tupleStr = '(' + config.join(', ') + ')';
+      div.innerHTML =
+        `<span class="config-num">#${numStr}</span>` +
+        renderConfigSvg(config) +
+        `<span class="config-tuple">${tupleStr}</span>`;
+      grid.appendChild(div);
+    });
+
+    const total = Number(binomial(state.n + state.k - 1, state.k));
+    document.getElementById('enum-count').textContent = total;
+    document.getElementById('enum-n').textContent = state.n + state.k - 1;
+    document.getElementById('enum-k').textContent = state.k;
+    document.getElementById('enum-formula-val').textContent = total;
+  }
+
+  // ── EVENT WIRING ────────────────────────────
+  document.getElementById('n-down').addEventListener('click', () => {
+    if (state.n > N_MIN) { state.n--; render(); }
+  });
+  document.getElementById('n-up').addEventListener('click', () => {
+    if (state.n < N_MAX) { state.n++; render(); }
+  });
+  document.getElementById('k-down').addEventListener('click', () => {
+    if (state.k > K_MIN) { state.k--; render(); }
+  });
+  document.getElementById('k-up').addEventListener('click', () => {
+    if (state.k < K_MAX) { state.k++; render(); }
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
