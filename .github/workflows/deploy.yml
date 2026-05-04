@@ -32,6 +32,9 @@ jobs:
       - name: Build Quartz
         run: npx quartz build
 
+      - name: Fix HTML extensions
+        run: node scripts/fix-html-extensions.mjs
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
