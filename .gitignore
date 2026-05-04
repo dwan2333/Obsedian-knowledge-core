@@ -1,1 +1,14 @@
+# User-private
 .claude/
+.smart-env/event_logs/
+
+# Quartz build artifacts
+node_modules/
+public/
+.quartz-cache/
+prof/
+tsconfig.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
