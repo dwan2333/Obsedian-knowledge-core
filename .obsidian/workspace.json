@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+                "file": "Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Chapter 1 (Main)"
+              "title": "Backlinks for chapter1_exercises"
             }
           },
           {
@@ -195,13 +195,23 @@
               "icon": "lucide-ghost",
               "title": "smart-lookup-view"
             }
+          },
+          {
+            "id": "173e708a9166c8f9",
+            "type": "leaf",
+            "state": {
+              "type": "smart-contexts-dashboard",
+              "state": {},
+              "icon": "smart-named-contexts",
+              "title": "Management dashboard (show named contexts)"
+            }
           }
-        ]
+        ],
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
-    "width": 289.5,
-    "collapsed": true
+    "width": 289.5
   },
   "left-ribbon": {
     "hiddenItems": {
