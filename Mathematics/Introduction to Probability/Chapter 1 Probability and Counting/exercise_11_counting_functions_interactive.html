@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Counting Functions · f: A → B</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:      #0d1318;
+    --panel:   #131c24;
+    --viz-bg:  #0a1015;
+    --ink:     #ece4cf;
+    --ink-soft:#8c8478;
+    --rule:    #2a3441;
+    --amber:   #e9a23e;
+    --cyan:    #5dd1c4;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { background: var(--bg); }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 1.55;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse 60% 40% at 12% 8%,  rgba(233,162,62,0.05), transparent 100%),
+      radial-gradient(ellipse 50% 40% at 88% 92%, rgba(93,209,196,0.05), transparent 100%);
+    background-attachment: fixed;
+  }
+
+  .frame {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 56px 48px 80px;
+  }
+
+  /* ── HEADER ───────────────────────────────── */
+  header {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 32px;
+    margin-bottom: 48px;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 22px;
+  }
+
+  h1 {
+    font-family: 'Instrument Serif', 'Times New Roman', serif;
+    font-size: clamp(58px, 9vw, 124px);
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  h1 .col {
+    color: var(--ink);
+    font-style: normal;
+  }
+
+  h1 .arr {
+    color: var(--ink-soft);
+    margin: 0 0.05em;
+    font-style: italic;
+  }
+
+  .lede {
+    font-size: 21px;
+    line-height: 1.6;
+    max-width: 720px;
+    margin-top: 32px;
+    color: var(--ink);
+  }
+
+  .lede em      { color: var(--amber); font-style: italic; }
+  .lede em.cy   { color: var(--cyan); }
+  .lede strong  { color: var(--ink); font-weight: 600; }
+
+  /* ── SHARED CONTROLS ──────────────────────── */
+  .controls-row {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 56px 0 32px;
+    padding: 18px 24px;
+    background: var(--panel);
+    border-left: 2px solid var(--ink);
+  }
+
+  .stepper {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .stepper-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .step-btn {
+    background: transparent;
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    width: 32px;
+    height: 32px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.15s;
+    line-height: 1;
+  }
+
+  .step-btn:hover:not(:disabled) {
+    border-color: var(--ink);
+    background: var(--rule);
+  }
+
+  .step-btn:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
+
+  .step-val {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 28px;
+    min-width: 28px;
+    text-align: center;
+    color: var(--ink);
+    line-height: 1;
+  }
+
+  /* ── PANELS ───────────────────────────────── */
+  .panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-bottom: 56px;
+  }
+
+  @media (max-width: 940px) {
+    .panels { grid-template-columns: 1fr; gap: 32px; }
+    .frame { padding: 32px 20px 60px; }
+  }
+
+  .panel {
+    background: var(--panel);
+    padding: 32px 30px 30px;
+    border-top: 2px solid;
+    position: relative;
+  }
+
+  .panel.amber { border-color: var(--amber); }
+  .panel.cyan  { border-color: var(--cyan);  }
+
+  .panel-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .panel.amber .panel-tag { color: var(--amber); }
+  .panel.cyan  .panel-tag { color: var(--cyan);  }
+
+  .panel-title {
+    font-family: 'Instrument Serif', serif;
+    font-size: 30px;
+    line-height: 1.1;
+    margin-bottom: 22px;
+    font-style: italic;
+    color: var(--ink);
+  }
+
+  /* ── VIZ ──────────────────────────────────── */
+  .viz {
+    background: var(--viz-bg);
+    padding: 8px;
+    margin-bottom: 18px;
+    border: 1px solid var(--rule);
+  }
+
+  .viz svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .notation {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    text-align: center;
+    padding: 12px 8px;
+    color: var(--ink);
+    letter-spacing: 0.05em;
+    min-height: 42px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 14px;
+    word-break: keep-all;
+    line-height: 1.5;
+  }
+
+  .fn-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .fn-counter {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--ink-soft);
+  }
+
+  .fn-btns { display: flex; gap: 6px; }
+
+  .fn-btn {
+    background: transparent;
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    padding: 7px 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+    transition: all 0.15s;
+    text-transform: lowercase;
+  }
+
+  .fn-btn:hover:not(:disabled) {
+    background: var(--rule);
+    border-color: var(--ink);
+  }
+
+  .panel.amber .fn-btn.active {
+    border-color: var(--amber);
+    color: var(--amber);
+    background: rgba(233,162,62,0.08);
+  }
+
+  .panel.cyan .fn-btn.active {
+    border-color: var(--cyan);
+    color: var(--cyan);
+    background: rgba(93,209,196,0.08);
+  }
+
+  .fn-btn:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
+
+  /* ── COUNT DISPLAY ────────────────────────── */
+  .count-section {
+    border-top: 1px solid var(--rule);
+    padding-top: 22px;
+  }
+
+  .count-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+  }
+
+  .count-value {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 80px;
+    line-height: 0.9;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+  }
+
+  .panel.amber .count-value { color: var(--amber); }
+  .panel.cyan  .count-value { color: var(--cyan);  }
+
+  .count-formula {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--ink);
+    line-height: 1.7;
+  }
+
+  .count-formula sup { font-size: 0.7em; vertical-align: 0.4em; }
+
+  .count-formula .gen {
+    color: var(--ink-soft);
+    font-size: 11.5px;
+  }
+
+  /* ── EXPLANATORY NOTE ─────────────────────── */
+  .note {
+    margin-top: 72px;
+    border-top: 1px solid var(--rule);
+    padding-top: 36px;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 56px;
+  }
+
+  @media (max-width: 760px) {
+    .note { grid-template-columns: 1fr; gap: 14px; }
+  }
+
+  .note-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .note-body p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    max-width: 680px;
+  }
+
+  .note-body em        { color: var(--amber); font-style: italic; font-weight: 500; }
+  .note-body em.cy     { color: var(--cyan); }
+  .note-body strong    { color: var(--ink); font-weight: 600; }
+
+  .note-formula {
+    background: var(--panel);
+    padding: 18px 24px;
+    margin: 14px 0 22px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14.5px;
+    line-height: 2;
+    border-left: 2px solid var(--amber);
+  }
+
+  .note-formula.cy { border-color: var(--cyan); }
+
+  .note-formula sup { font-size: 0.7em; vertical-align: 0.4em; }
+  .note-formula b      { color: var(--amber); font-weight: 700; font-size: 16px; }
+  .note-formula.cy b   { color: var(--cyan); }
+  .note-formula .gen   { color: var(--ink-soft); }
+
+  /* ── FOOTER ───────────────────────────────── */
+  footer {
+    margin-top: 64px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* ── SVG STYLES ───────────────────────────── */
+  .dot {
+    stroke: var(--ink);
+    stroke-width: 1.5;
+    fill: var(--viz-bg);
+    transition: fill 0.25s, stroke 0.25s;
+  }
+
+  .dot.hit-amber { fill: var(--amber); stroke: var(--amber); }
+  .dot.hit-cyan  { fill: var(--cyan);  stroke: var(--cyan);  }
+
+  .dot-label {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 17px;
+    fill: var(--ink);
+    text-anchor: middle;
+    dominant-baseline: central;
+    pointer-events: none;
+    transition: fill 0.25s;
+  }
+
+  .dot.hit-amber + .dot-label,
+  .dot.hit-cyan  + .dot-label { fill: var(--bg); font-weight: 500; }
+
+  .set-label {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 22px;
+    fill: var(--ink-soft);
+    text-anchor: middle;
+    letter-spacing: 0.02em;
+  }
+
+  .empty-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-anchor: middle;
+  }
+
+  @keyframes arrow-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .fn-arrow, .arrowhead {
+    animation: arrow-in 0.28s ease both;
+  }
+
+  /* ── PAGE LOAD ANIMATION ──────────────────── */
+  @keyframes drift {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  header           { animation: drift 0.7s ease both; }
+  .controls-row    { animation: drift 0.7s ease 0.16s both; }
+  .panel.amber     { animation: drift 0.7s ease 0.24s both; }
+  .panel.cyan      { animation: drift 0.7s ease 0.32s both; }
+  .note            { animation: drift 0.7s ease 0.44s both; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <header>
+    <div class="eyebrow">Exercise 11 · Counting Functions</div>
+    <h1>How <em>many</em> <span class="col">f</span>: <span class="col">A</span> <span class="arr">⟶</span> <span class="col">B</span>?</h1>
+    <p class="lede">
+      Set <em>A</em> has <strong>n</strong> elements. Set <em class="cy">B</em> has <strong>m</strong> elements. A function from A to B is a rule that picks an element of B for each element of A. Below — adjust n and m, then step through every <em>function</em> on the left and every <em class="cy">one-to-one function</em> on the right.
+    </p>
+  </header>
+
+  <div class="controls-row">
+    <div class="stepper">
+      <span class="stepper-label">|A| = n</span>
+      <button class="step-btn" id="n-down">−</button>
+      <span class="step-val" id="n-val">2</span>
+      <button class="step-btn" id="n-up">+</button>
+    </div>
+    <div class="stepper">
+      <span class="stepper-label">|B| = m</span>
+      <button class="step-btn" id="m-down">−</button>
+      <span class="step-val" id="m-val">3</span>
+      <button class="step-btn" id="m-up">+</button>
+    </div>
+  </div>
+
+  <div class="panels">
+    <!-- ── PANEL A: ALL FUNCTIONS ──────────── -->
+    <section class="panel amber">
+      <div class="panel-tag">(a) All functions</div>
+      <div class="panel-title">Every map A → B</div>
+
+      <div class="viz">
+        <svg id="viz-all" viewBox="0 0 400 340" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+
+      <div class="notation" id="notation-all">—</div>
+
+      <div class="fn-controls">
+        <span class="fn-counter" id="counter-all">function 1 of 9</span>
+        <div class="fn-btns">
+          <button class="fn-btn" data-target="all" data-action="prev">◀ prev</button>
+          <button class="fn-btn" data-target="all" data-action="play">play</button>
+          <button class="fn-btn" data-target="all" data-action="next">next ▶</button>
+        </div>
+      </div>
+
+      <div class="count-section">
+        <div class="count-label">Total functions</div>
+        <div class="count-value" id="total-all">9</div>
+        <div class="count-formula" id="formula-all">
+          m<sup>n</sup> = 3<sup>2</sup> = 9<br>
+          <span class="gen">For each of n inputs, m independent choices.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PANEL B: ONE-TO-ONE ─────────────── -->
+    <section class="panel cyan">
+      <div class="panel-tag">(b) One-to-one</div>
+      <div class="panel-title">Injective f: A → B</div>
+
+      <div class="viz">
+        <svg id="viz-inj" viewBox="0 0 400 340" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+
+      <div class="notation" id="notation-inj">—</div>
+
+      <div class="fn-controls">
+        <span class="fn-counter" id="counter-inj">function 1 of 6</span>
+        <div class="fn-btns">
+          <button class="fn-btn" data-target="inj" data-action="prev">◀ prev</button>
+          <button class="fn-btn" data-target="inj" data-action="play">play</button>
+          <button class="fn-btn" data-target="inj" data-action="next">next ▶</button>
+        </div>
+      </div>
+
+      <div class="count-section">
+        <div class="count-label">Total one-to-one functions</div>
+        <div class="count-value" id="total-inj">6</div>
+        <div class="count-formula" id="formula-inj">
+          m! / (m−n)! = 3 · 2 = 6<br>
+          <span class="gen">m, then m−1, then m−2, ...</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="note">
+    <div class="note-tag">— On the formulas</div>
+    <div class="note-body">
+      <p><em>Part (a).</em> A function from A to B is just a list of n choices, one per element of A — and each choice is freely picked from B's m options, independently of all the others. Multiplying gives:</p>
+      <div class="note-formula">
+        <b>m<sup>n</sup></b> &nbsp;<span class="gen">total functions A → B</span>
+      </div>
+
+      <p><em class="cy">Part (b).</em> A one-to-one function uses each B-element at most once, so the choices stop being independent. After picking f(a₁), only m−1 elements of B remain available; after picking f(a₂), only m−2; and so on, for n picks total:</p>
+      <div class="note-formula cy">
+        <b>m · (m−1) · (m−2) · · · (m−n+1)</b><br>
+        <span class="gen">= m! / (m−n)! = P(m, n), the falling factorial</span>
+      </div>
+
+      <p>If <strong>n &gt; m</strong>, by the <em class="cy">pigeonhole principle</em> some B-element must be hit twice, so no one-to-one function exists — the count is <strong>0</strong>. Try setting n = 3, m = 2 in the panel above to see the (b) side go empty.</p>
+    </div>
+  </div>
+
+  <footer>
+    <span>Counting functions</span>
+    <span>Interactive demonstration</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  // ── STATE ──────────────────────────────────
+  const state = {
+    n: 2,
+    m: 3,
+    idxAll: 0,
+    idxInj: 0,
+    timerAll: null,
+    timerInj: null
+  };
+
+  const N_MIN = 1, N_MAX = 3;
+  const M_MIN = 1, M_MAX = 5;
+  const PLAY_INTERVAL = 650;
+
+  // ── ENUMERATE ──────────────────────────────
+  function allFunctions(n, m) {
+    const total = Math.pow(m, n);
+    const fs = [];
+    for (let i = 0; i < total; i++) {
+      const f = [];
+      let x = i;
+      for (let j = 0; j < n; j++) {
+        f.push(x % m);
+        x = Math.floor(x / m);
+      }
+      fs.push(f);
+    }
+    // sort lex by tuple
+    fs.sort((a, b) => {
+      for (let i = 0; i < n; i++) if (a[i] !== b[i]) return a[i] - b[i];
+      return 0;
+    });
+    return fs;
+  }
+
+  function injectiveFunctions(n, m) {
+    if (n > m) return [];
+    const result = [];
+    function rec(cur, used) {
+      if (cur.length === n) { result.push([...cur]); return; }
+      for (let b = 0; b < m; b++) {
+        if (!used.has(b)) {
+          used.add(b); cur.push(b);
+          rec(cur, used);
+          cur.pop(); used.delete(b);
+        }
+      }
+    }
+    rec([], new Set());
+    return result;
+  }
+
+  // ── SVG HELPERS ────────────────────────────
+  const NS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs = {}, text) {
+    const e = document.createElementNS(NS, tag);
+    for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+    if (text != null) e.textContent = text;
+    return e;
+  }
+
+  const SUBS = '₀₁₂₃₄₅₆₇₈₉';
+  function sub(i) { return String(i + 1).split('').map(d => SUBS[+d]).join(''); }
+  function aLab(i) { return 'a' + sub(i); }
+  function bLab(i) { return 'b' + sub(i); }
+
+  // ── RENDER ─────────────────────────────────
+  function renderViz(svgId, n, m, mapping, accent) {
+    const svg = document.getElementById(svgId);
+    svg.innerHTML = '';
+
+    const W = 400, H = 340;
+    const xA = 105, xB = 295;
+    const radius = 19;
+    const rowSpacing = 50;
+    const cy = H / 2 + 6;
+
+    const aY = i => cy - (n - 1) * rowSpacing / 2 + i * rowSpacing;
+    const bY = i => cy - (m - 1) * rowSpacing / 2 + i * rowSpacing;
+
+    // set labels
+    svg.appendChild(el('text', { x: xA, y: 32, class: 'set-label' }, 'A'));
+    svg.appendChild(el('text', { x: xB, y: 32, class: 'set-label' }, 'B'));
+
+    const accentCol = accent === 'amber' ? '#e9a23e' : '#5dd1c4';
+
+    // arrows (under the dots)
+    const hitB = new Set();
+    if (mapping) {
+      mapping.forEach((bIdx, i) => {
+        hitB.add(bIdx);
+        const x1 = xA + radius;
+        const y1 = aY(i);
+        const x2 = xB - radius;
+        const y2 = bY(bIdx);
+        const dx = x2 - x1, dy = y2 - y1;
+        const len = Math.hypot(dx, dy);
+        const ux = dx / len, uy = dy / len;
+        const ahLen = 9, ahWid = 5.5;
+
+        // shaft (slightly retracted to leave room for arrowhead)
+        svg.appendChild(el('line', {
+          x1, y1,
+          x2: x2 - ux * (ahLen * 0.6),
+          y2: y2 - uy * (ahLen * 0.6),
+          class: 'fn-arrow',
+          stroke: accentCol,
+          'stroke-width': 1.8,
+          'stroke-linecap': 'round'
+        }));
+
+        // arrowhead
+        const px = -uy, py = ux;
+        const tipX = x2, tipY = y2;
+        const aX = tipX - ux * ahLen + px * ahWid;
+        const aY1 = tipY - uy * ahLen + py * ahWid;
+        const bX2 = tipX - ux * ahLen - px * ahWid;
+        const bY2 = tipY - uy * ahLen - py * ahWid;
+        svg.appendChild(el('polygon', {
+          points: `${tipX},${tipY} ${aX},${aY1} ${bX2},${bY2}`,
+          fill: accentCol,
+          class: 'arrowhead'
+        }));
+      });
+    }
+
+    // A-side dots + labels
+    for (let i = 0; i < n; i++) {
+      svg.appendChild(el('circle', {
+        cx: xA, cy: aY(i), r: radius, class: 'dot'
+      }));
+      svg.appendChild(el('text', {
+        x: xA, y: aY(i), class: 'dot-label'
+      }, aLab(i)));
+    }
+
+    // B-side dots — colored if hit; label color flips via CSS adjacent-sibling rule
+    for (let j = 0; j < m; j++) {
+      const cls = 'dot' + (hitB.has(j) ? ' hit-' + accent : '');
+      svg.appendChild(el('circle', { cx: xB, cy: bY(j), r: radius, class: cls }));
+      svg.appendChild(el('text', { x: xB, y: bY(j), class: 'dot-label' }, bLab(j)));
+    }
+  }
+
+  function renderEmpty(svgId, n, m, message) {
+    const svg = document.getElementById(svgId);
+    svg.innerHTML = '';
+    const W = 400, H = 340;
+    const xA = 105, xB = 295;
+    const radius = 19;
+    const rowSpacing = 50;
+    const cy = H / 2 + 6;
+    const aY = i => cy - (n - 1) * rowSpacing / 2 + i * rowSpacing;
+    const bY = i => cy - (m - 1) * rowSpacing / 2 + i * rowSpacing;
+
+    svg.appendChild(el('text', { x: xA, y: 32, class: 'set-label' }, 'A'));
+    svg.appendChild(el('text', { x: xB, y: 32, class: 'set-label' }, 'B'));
+
+    for (let i = 0; i < n; i++) {
+      svg.appendChild(el('circle', { cx: xA, cy: aY(i), r: radius, class: 'dot' }));
+      svg.appendChild(el('text', { x: xA, y: aY(i), class: 'dot-label' }, aLab(i)));
+    }
+    for (let j = 0; j < m; j++) {
+      svg.appendChild(el('circle', { cx: xB, cy: bY(j), r: radius, class: 'dot' }));
+      svg.appendChild(el('text', { x: xB, y: bY(j), class: 'dot-label' }, bLab(j)));
+    }
+
+    svg.appendChild(el('text', {
+      x: W / 2, y: H - 18,
+      class: 'empty-label',
+      fill: '#5dd1c4'
+    }, message));
+  }
+
+  function notation(mapping, n) {
+    if (!mapping) return '—';
+    return mapping.map((b, i) => `f(${aLab(i)}) = ${bLab(b)}`).join('   ');
+  }
+
+  // ── UPDATE PANELS ──────────────────────────
+  function refreshAll() {
+    const { n, m } = state;
+    const fns = allFunctions(n, m);
+    const total = fns.length;
+    state.idxAll = ((state.idxAll % total) + total) % total;
+    const f = fns[state.idxAll];
+    renderViz('viz-all', n, m, f, 'amber');
+    document.getElementById('notation-all').textContent = notation(f, n);
+    document.getElementById('counter-all').textContent =
+      `function ${state.idxAll + 1} of ${total}`;
+    document.getElementById('total-all').textContent = total;
+    document.getElementById('formula-all').innerHTML =
+      `m<sup>n</sup> = ${m}<sup>${n}</sup> = ${total}<br>` +
+      `<span class="gen">For each of n inputs, m independent choices.</span>`;
+  }
+
+  function refreshInj() {
+    const { n, m } = state;
+    const fns = injectiveFunctions(n, m);
+    const total = fns.length;
+
+    if (total === 0) {
+      renderEmpty('viz-inj', n, m, `n = ${n} > m = ${m} · pigeonhole`);
+      document.getElementById('notation-inj').textContent = 'no one-to-one function exists';
+      document.getElementById('counter-inj').textContent = '— · —';
+      document.getElementById('total-inj').textContent = '0';
+      document.getElementById('formula-inj').innerHTML =
+        `n &gt; m · count = 0<br>` +
+        `<span class="gen">Pigeonhole: n inputs can't fit into fewer than n distinct outputs.</span>`;
+      // disable nav buttons
+      document.querySelectorAll('[data-target="inj"]').forEach(b => b.disabled = true);
+      stopTimer('inj');
+      return;
+    }
+
+    document.querySelectorAll('[data-target="inj"]').forEach(b => b.disabled = false);
+    state.idxInj = ((state.idxInj % total) + total) % total;
+    const f = fns[state.idxInj];
+    renderViz('viz-inj', n, m, f, 'cyan');
+    document.getElementById('notation-inj').textContent = notation(f, n);
+    document.getElementById('counter-inj').textContent =
+      `function ${state.idxInj + 1} of ${total}`;
+    document.getElementById('total-inj').textContent = total;
+
+    const factors = [];
+    for (let k = 0; k < n; k++) factors.push(m - k);
+    document.getElementById('formula-inj').innerHTML =
+      `m! / (m−n)! = ${factors.join(' · ')} = ${total}<br>` +
+      `<span class="gen">m, then m−1, then m−2, ...</span>`;
+  }
+
+  function refreshControls() {
+    document.getElementById('n-val').textContent = state.n;
+    document.getElementById('m-val').textContent = state.m;
+    document.getElementById('n-down').disabled = state.n <= N_MIN;
+    document.getElementById('n-up').disabled   = state.n >= N_MAX;
+    document.getElementById('m-down').disabled = state.m <= M_MIN;
+    document.getElementById('m-up').disabled   = state.m >= M_MAX;
+  }
+
+  function rerenderAll() {
+    state.idxAll = 0;
+    state.idxInj = 0;
+    stopTimer('all');
+    stopTimer('inj');
+    refreshControls();
+    refreshAll();
+    refreshInj();
+  }
+
+  // ── PLAY TIMERS ────────────────────────────
+  function stopTimer(target) {
+    const key = target === 'all' ? 'timerAll' : 'timerInj';
+    if (state[key]) {
+      clearInterval(state[key]);
+      state[key] = null;
+    }
+    document.querySelectorAll(`[data-target="${target}"][data-action="play"]`)
+      .forEach(b => { b.classList.remove('active'); b.textContent = 'play'; });
+  }
+
+  function startTimer(target, btn) {
+    const key = target === 'all' ? 'timerAll' : 'timerInj';
+    const idxKey = target === 'all' ? 'idxAll' : 'idxInj';
+    const refresh = target === 'all' ? refreshAll : refreshInj;
+    btn.classList.add('active');
+    btn.textContent = 'pause';
+    state[key] = setInterval(() => {
+      state[idxKey]++;
+      refresh();
+    }, PLAY_INTERVAL);
+  }
+
+  // ── EVENT WIRING ───────────────────────────
+  document.getElementById('n-down').addEventListener('click', () => {
+    if (state.n > N_MIN) { state.n--; rerenderAll(); }
+  });
+  document.getElementById('n-up').addEventListener('click', () => {
+    if (state.n < N_MAX) { state.n++; rerenderAll(); }
+  });
+  document.getElementById('m-down').addEventListener('click', () => {
+    if (state.m > M_MIN) { state.m--; rerenderAll(); }
+  });
+  document.getElementById('m-up').addEventListener('click', () => {
+    if (state.m < M_MAX) { state.m++; rerenderAll(); }
+  });
+
+  document.querySelectorAll('.fn-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.target;
+      const action = btn.dataset.action;
+      const idxKey = target === 'all' ? 'idxAll' : 'idxInj';
+      const refresh = target === 'all' ? refreshAll : refreshInj;
+      const timerKey = target === 'all' ? 'timerAll' : 'timerInj';
+
+      if (action === 'next') {
+        stopTimer(target);
+        state[idxKey]++; refresh();
+      } else if (action === 'prev') {
+        stopTimer(target);
+        state[idxKey]--; refresh();
+      } else if (action === 'play') {
+        if (state[timerKey]) {
+          stopTimer(target);
+        } else {
+          startTimer(target, btn);
+        }
+      }
+    });
+  });
+
+  // ── INITIAL RENDER ─────────────────────────
+  rerenderAll();
+})();
+</script>
+</body>
+</html>

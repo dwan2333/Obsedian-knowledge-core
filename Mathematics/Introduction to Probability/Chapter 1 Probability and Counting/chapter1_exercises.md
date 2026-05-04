@@ -135,10 +135,44 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > (a) How many functions are there from $A$ to $B$ (i.e., functions with domain $A$, assigning an element of $B$ to each element of $A$)?
 > (b) How many one-to-one functions are there from $A$ to $B$?
 >
-> > [!success]- Click to reveal solution
-> > **Solution.** (a) Each of $n$ inputs picks any of $m$ outputs: $m^n$. (b) First input has $m$ choices, second has $m-1$, ..., last has $m-n+1$: $\dfrac{m!}{(m-n)!}$ (= 0 if $n > m$).
+> > [!example] 📂 Interactive walkthrough
+> > A side-by-side visual demonstration that lets you adjust $n$ and $m$, then step through every function on the left and every one-to-one function on the right — with the SVG mappings rendering live so you can *see* why the counts are $m^n$ and $m!/(m-n)!$:
 > >
-> > **Answer.** (a) $m^n$ — (b) $m(m-1)\cdots(m-n+1)$ ✓
+> > 👉 **[Open: Counting Functions — Interactive Demonstration](exercise_11_counting_functions_interactive.html)**
+> >
+> > Hosted as a self-contained HTML file in this folder. Clicking opens it in your default browser.
+>
+> > [!success]- Click to reveal solution
+> > **(a) Total functions $f: A \to B$**
+> >
+> > A function from $A$ to $B$ is determined by choosing an output for **each** of the $n$ elements in $A$. The choices are made **independently** — the output for $a_1$ doesn't constrain the output for $a_2$, etc.
+> > - For input $a_1$: $m$ possible outputs
+> > - For input $a_2$: $m$ possible outputs (independent of $a_1$'s choice)
+> > - ...
+> > - For input $a_n$: $m$ possible outputs
+> >
+> > By the multiplication rule:
+> > $$\#\{\text{functions } A \to B\} \;=\; \underbrace{m \cdot m \cdots m}_{n \text{ factors}} \;=\; m^n$$
+> >
+> > **(b) One-to-one functions $f: A \hookrightarrow B$**
+> >
+> > A one-to-one (injective) function uses each $B$-element **at most once**, so the choices are no longer independent. After choosing $f(a_1)$, only $m - 1$ outputs remain available for $f(a_2)$; after $f(a_2)$, only $m - 2$ for $f(a_3)$; and so on.
+> > - For input $a_1$: $m$ choices (any of $B$)
+> > - For input $a_2$: $m - 1$ choices ($B$ minus the one used for $a_1$)
+> > - For input $a_3$: $m - 2$ choices
+> > - ...
+> > - For input $a_n$: $m - (n-1) = m - n + 1$ choices
+> >
+> > By the multiplication rule:
+> > $$\#\{\text{one-to-one } f: A \to B\} \;=\; m(m-1)(m-2) \cdots (m-n+1) \;=\; \frac{m!}{(m-n)!}$$
+> >
+> > This expression is sometimes called the **falling factorial** $P(m, n)$ or $m^{\underline{n}}$.
+> >
+> > **Edge case — pigeonhole.** If $n > m$, then by the **pigeonhole principle** at least two of the $n$ inputs must map to the same output, so no one-to-one function exists. Algebraically: the formula $m(m-1)\cdots(m-n+1)$ contains the factor $(m - m) = 0$ as soon as $n - 1 \ge m$, giving 0.
+> >
+> > **Quick check at $n = 2, m = 3$:** (a) $3^2 = 9$ total functions; (b) $3 \cdot 2 = 6$ one-to-one functions. The interactive walkthrough above lets you click through all 9 functions on the left panel and all 6 one-to-one functions on the right.
+> >
+> > **Answer.** (a) $\boxed{m^n}$ — (b) $\boxed{m(m-1)\cdots(m-n+1) = \dfrac{m!}{(m-n)!}}$ ✓
 
 > [!example] Exercise 12 — Bridge Hands
 > **Problem.** Four players, named A, B, C, and D, are playing a card game. A standard, well-shuffled deck of cards is dealt to the players (so each player receives a 13-card hand).
