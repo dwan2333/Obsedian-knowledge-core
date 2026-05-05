@@ -342,6 +342,13 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > **Problem.** Give a story proof that $\sum_{k=2}^n \binom{k}{2}\binom{n-k+2}{2} = \binom{n+3}{5}$, for all integers $n \ge 2$.
 > Hint: Consider the middle number in a subset of $\{1, 2, \ldots, n+3\}$ of size 5.
 >
+> > [!example] 📂 Interactive walkthrough
+> > A demonstration that lets you step $n$ up and down, watch the universe $\{1, 2, \ldots, n+3\}$ grow, and see every 5-subset get sorted into a bucket by its middle element — with the running total $\sum_{k=2}^n \binom{k}{2}\binom{n-k+2}{2}$ matching $\binom{n+3}{5}$ live as you scroll the buckets:
+> >
+> > 👉 **[Open: 5-Subsets via Middle Element — Interactive Demonstration](exercise_19_middle_element_interactive.html)**
+> >
+> > Hosted as a self-contained HTML file in this folder. Clicking opens it in your default browser.
+>
 > > [!success]- Click to reveal solution
 > > **Story.** Count 5-subsets of $\{1, \ldots, n+3\}$ by the middle (3rd-smallest) element $c = k+1$, ranging over $\{3, \ldots, n+1\}$. Below $c$: pick 2 of $k$ smaller values → $\binom{k}{2}$. Above $c$: pick 2 of $n+3-(k+1) = n-k+2$ larger values. ✓
 

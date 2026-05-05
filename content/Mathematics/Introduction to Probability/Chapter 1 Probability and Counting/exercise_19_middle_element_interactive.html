@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Story Proof · 5-Subsets via Middle Element</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:     #f7f1e3;
+    --paper-deep:#efe6d0;
+    --ink:       #1c2030;
+    --ink-soft:  #5a5d6e;
+    --rule:      #c8b89a;
+    --accent:    #b13a2e;
+    --accent-bg: rgba(177,58,46,0.10);
+    --side-lo:   #4a6670;
+    --side-hi:   #5e7c5e;
+    --panel:     #ede2c7;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { background: var(--paper); }
+
+  body {
+    color: var(--ink);
+    font-family: 'Crimson Pro', 'Times New Roman', serif;
+    font-size: 19px;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse 70% 50% at 14% 6%,  rgba(177,58,46,0.04), transparent 65%),
+      radial-gradient(ellipse 60% 50% at 86% 94%, rgba(74,102,112,0.04), transparent 65%);
+    background-attachment: fixed;
+  }
+
+  .frame {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 56px 48px 72px;
+  }
+
+  @media (max-width: 768px) {
+    .frame { padding: 36px 20px 56px; }
+  }
+
+  /* ── HEADER ───────────────────────────────── */
+  header {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 32px;
+    margin-bottom: 48px;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 22px;
+  }
+
+  h1 {
+    font-family: 'Crimson Pro', serif;
+    font-size: clamp(46px, 6.5vw, 84px);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ink);
+  }
+
+  h1 .roman {
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  /* ── IDENTITY DISPLAY ─────────────────────── */
+  .identity {
+    margin: 36px 0 12px;
+    padding: 28px 24px;
+    background: var(--paper-deep);
+    border-left: 3px solid var(--accent);
+    text-align: center;
+    font-family: 'Crimson Pro', serif;
+  }
+
+  .identity-formula {
+    font-size: clamp(22px, 3vw, 28px);
+    line-height: 1.4;
+    color: var(--ink);
+    letter-spacing: 0.005em;
+  }
+
+  .identity-formula .frak  { font-style: italic; }
+  .identity-formula .red   { color: var(--accent); font-weight: 500; }
+
+  .identity-formula .equals {
+    color: var(--ink-soft);
+    margin: 0 0.4em;
+    font-style: italic;
+  }
+
+  .identity-caption {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: 14px;
+  }
+
+  /* ── SECTIONS ─────────────────────────────── */
+  section { margin-bottom: 48px; }
+
+  h2 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 34px;
+    line-height: 1.1;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 18px;
+    letter-spacing: -0.01em;
+  }
+
+  .story p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    max-width: 780px;
+  }
+
+  .story em       { color: var(--accent); font-style: italic; font-weight: 500; }
+  .story strong   { color: var(--ink); font-weight: 600; }
+  .story .lo      { color: var(--side-lo);  font-weight: 500; }
+  .story .hi      { color: var(--side-hi);  font-weight: 500; }
+
+  .story-formula {
+    font-family: 'Crimson Pro', serif;
+    font-size: 21px;
+    text-align: center;
+    margin: 22px 0;
+    line-height: 1.5;
+    color: var(--ink);
+    font-style: italic;
+  }
+
+  .story-formula .red { color: var(--accent); font-weight: 500; font-style: normal; }
+  .story-formula .lo  { color: var(--side-lo); font-weight: 500; font-style: normal; }
+  .story-formula .hi  { color: var(--side-hi); font-weight: 500; font-style: normal; }
+  .story-formula .equals { color: var(--ink-soft); margin: 0 0.4em; }
+
+  /* ── CONTROLS ─────────────────────────────── */
+  .controls-row {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    padding: 16px 22px;
+    background: var(--panel);
+    border-left: 2px solid var(--ink);
+  }
+
+  .stepper {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .stepper-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .step-btn {
+    background: transparent;
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    width: 32px;
+    height: 32px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.15s;
+    line-height: 1;
+  }
+
+  .step-btn:hover:not(:disabled) {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .step-btn:disabled { opacity: 0.25; cursor: not-allowed; }
+
+  .step-val {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 32px;
+    min-width: 32px;
+    text-align: center;
+    color: var(--accent);
+    line-height: 1;
+    font-weight: 500;
+  }
+
+  .universe-display {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+
+  .universe-display b { color: var(--ink); font-weight: 700; }
+
+  /* ── MIDDLE GROUPS ────────────────────────── */
+  .middle-group {
+    margin-bottom: 28px;
+  }
+
+  .group-header {
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+    flex-wrap: wrap;
+    padding: 12px 0 10px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 16px;
+  }
+
+  .group-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .group-middle {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 28px;
+    line-height: 1;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .group-formula {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+    margin-left: auto;
+  }
+
+  .group-formula b { color: var(--ink); font-weight: 700; }
+  .group-formula .lo { color: var(--side-lo); font-weight: 700; }
+  .group-formula .hi { color: var(--side-hi); font-weight: 700; }
+  .group-formula .red { color: var(--accent); font-weight: 700; }
+
+  .subsets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 6px;
+  }
+
+  .subset {
+    padding: 8px 12px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13.5px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    transition: all 0.15s;
+    line-height: 1.3;
+  }
+
+  .subset:hover {
+    border-color: var(--accent);
+    background: var(--accent-bg);
+  }
+
+  .subset .lo  { color: var(--side-lo); }
+  .subset .mid { color: var(--accent); font-weight: 700; }
+  .subset .hi  { color: var(--side-hi); }
+  .subset .pun { color: var(--ink-soft); margin: 0 1px; }
+
+  /* ── SUM TOTALS ───────────────────────────── */
+  .totals {
+    margin-top: 36px;
+    padding: 22px 26px;
+    background: var(--ink);
+    color: var(--paper);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 28px;
+    align-items: center;
+  }
+
+  @media (max-width: 600px) {
+    .totals { grid-template-columns: 1fr; }
+  }
+
+  .totals-formula {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    line-height: 1.85;
+    letter-spacing: 0.03em;
+  }
+
+  .totals-formula .lhs-piece {
+    color: rgba(247,241,227,0.7);
+  }
+
+  .totals-formula b { color: var(--paper); font-weight: 700; }
+  .totals-formula .red { color: #ec7c70; font-weight: 700; }
+  .totals-formula .equals { color: rgba(247,241,227,0.5); margin: 0 0.4em; }
+
+  .totals-bignum {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: clamp(46px, 7vw, 76px);
+    line-height: 1;
+    color: #ec7c70;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  /* ── NOTE ─────────────────────────────────── */
+  .note {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 48px;
+  }
+
+  @media (max-width: 760px) {
+    .note { grid-template-columns: 1fr; gap: 12px; }
+  }
+
+  .note-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .note-body p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    max-width: 720px;
+  }
+
+  .note-body em      { color: var(--accent); font-style: italic; font-weight: 500; }
+  .note-body strong  { color: var(--ink); font-weight: 600; }
+
+  /* ── FOOTER ───────────────────────────────── */
+  footer {
+    margin-top: 64px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* ── ANIMATION ────────────────────────────── */
+  @keyframes drift {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  header             { animation: drift 0.7s ease both; }
+  section.story      { animation: drift 0.7s ease 0.1s both; }
+  section.interactive{ animation: drift 0.7s ease 0.2s both; }
+  .note              { animation: drift 0.7s ease 0.4s both; }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .middle-group { animation: fade-in 0.3s ease both; }
+  .subset { animation: fade-in 0.3s ease both; }
+</style>
+</head>
+<body>
+<div class="frame">
+
+  <header>
+    <div class="eyebrow">Exercise 19 · Story Proof</div>
+    <h1>5-Subsets <span class="roman">via</span> <em>middle</em></h1>
+    <div class="identity">
+      <div class="identity-formula">
+        <span>∑</span><sub style="font-size:0.55em;">k=2</sub><sup style="font-size:0.55em;">n</sup>
+        <span class="frak">(</span><span class="frak"><sup>k</sup>⁄<sub>2</sub></span><span class="frak">)</span>
+        <span class="frak">(</span><span class="frak"><sup>n−k+2</sup>⁄<sub>2</sub></span><span class="frak">)</span>
+        <span class="equals">=</span>
+        <span class="red frak">(</span><span class="red frak"><sup>n+3</sup>⁄<sub>5</sub></span><span class="red frak">)</span>
+      </div>
+      <div class="identity-caption">— prove for all integers n ≥ 2 —</div>
+    </div>
+  </header>
+
+  <section class="story">
+    <h2>The story</h2>
+    <p>Both sides count <strong>the same thing</strong>: the number of 5-element subsets of <em>{1, 2, ..., n+3}</em>. The right-hand side counts directly. The left-hand side counts by sorting subsets according to their <em>middle</em> element (the 3rd smallest).</p>
+
+    <p>If the middle element of a 5-subset is <em>m</em>, then the subset has:</p>
+    <ul style="list-style:none; max-width:780px; margin:0 0 18px 8px;">
+      <li>— <span class="lo">2 elements below m</span>, chosen from {1, ..., m−1} &nbsp;→&nbsp; C(m−1, 2) ways</li>
+      <li>— <span class="hi">2 elements above m</span>, chosen from {m+1, ..., n+3} &nbsp;→&nbsp; C(n+3−m, 2) ways</li>
+    </ul>
+
+    <p>Setting <em>k = m − 1</em> turns this into the LHS: each k from 2 to n picks out a distinct middle element <em>m = k+1</em>, and counts exactly the subsets having that middle. Sum over all valid middles, and you get every 5-subset once.</p>
+
+    <div class="story-formula">
+      total = &nbsp;∑<sub style="font-size:0.7em;">k=2..n</sub>&nbsp;
+      <span class="lo">C(k, 2)</span> · <span class="hi">C(n+2−k, 2)</span> &nbsp;<span class="equals">=</span>&nbsp; <span class="red">C(n+3, 5)</span>
+    </div>
+  </section>
+
+  <section class="interactive">
+    <h2>See it for yourself</h2>
+
+    <div class="controls-row">
+      <div class="stepper">
+        <span class="stepper-label">choose n</span>
+        <button class="step-btn" id="n-down">−</button>
+        <span class="step-val" id="n-val">4</span>
+        <button class="step-btn" id="n-up">+</button>
+      </div>
+      <div class="universe-display">
+        Universe: <b id="universe">{1, 2, 3, 4, 5, 6, 7}</b>
+        &nbsp;·&nbsp; size <b id="universe-size">7</b>
+        &nbsp;·&nbsp; pick 5
+      </div>
+    </div>
+
+    <div id="groups"></div>
+
+    <div class="totals">
+      <div class="totals-formula" id="totals-formula"></div>
+      <div class="totals-bignum" id="totals-bignum">21</div>
+    </div>
+  </section>
+
+  <div class="note">
+    <div class="note-tag">— Why this works</div>
+    <div class="note-body">
+      <p>Every 5-element subset has exactly one middle element (the 3rd smallest after sorting). So when we group all 5-subsets by their middle, every subset lands in exactly one group, and the groups don't overlap. Adding up the group sizes gives the total number of 5-subsets.</p>
+      <p>The bijection <em>k = m − 1</em> shifts the index purely for algebraic convenience — it turns "elements below m" from a count of m−1 into a count of k, which makes the binomial coefficients in the LHS look symmetrical. Either form counts the same thing.</p>
+      <p>This kind of argument — counting one thing two ways — is called a <strong>combinatorial identity by double counting</strong>, or in Blitzstein's vocabulary, a <em>story proof</em>. The formal manipulation of factorials would also work, but it would obscure why the identity holds. The story makes the equality feel inevitable.</p>
+    </div>
+  </div>
+
+  <footer>
+    <span>Exercise 19 · 5-subsets via middle element</span>
+    <span>Interactive demonstration</span>
+  </footer>
+
+</div>
+
+<script>
+(function() {
+  const state = { n: 4 };
+  const N_MIN = 2, N_MAX = 5;
+
+  // ── BIGINT BINOMIAL ─────────────────────────
+  function binomial(n, k) {
+    if (k < 0 || k > n) return 0;
+    if (k === 0 || k === n) return 1;
+    k = Math.min(k, n - k);
+    let result = 1;
+    for (let i = 0; i < k; i++) {
+      result = result * (n - i) / (i + 1);
+    }
+    return Math.round(result);
+  }
+
+  // ── ENUMERATE 2-SUBSETS ─────────────────────
+  function pairsFrom(arr) {
+    const result = [];
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = i + 1; j < arr.length; j++) {
+        result.push([arr[i], arr[j]]);
+      }
+    }
+    return result;
+  }
+
+  function range(lo, hi) {
+    const out = [];
+    for (let i = lo; i <= hi; i++) out.push(i);
+    return out;
+  }
+
+  // ── FORMAT A SUBSET ─────────────────────────
+  function formatSubset(lows, mid, highs) {
+    const open = '<span class="pun">{</span>';
+    const close = '<span class="pun">}</span>';
+    const sep = '<span class="pun">,&nbsp;</span>';
+    const loStr = lows.map(x => `<span class="lo">${x}</span>`).join(sep);
+    const hiStr = highs.map(x => `<span class="hi">${x}</span>`).join(sep);
+    const midStr = `<span class="mid">${mid}</span>`;
+    return open + loStr + sep + midStr + sep + hiStr + close;
+  }
+
+  // ── RENDER ──────────────────────────────────
+  function render() {
+    const n = state.n;
+    const universeSize = n + 3;
+
+    // controls
+    document.getElementById('n-val').textContent = n;
+    document.getElementById('n-down').disabled = n <= N_MIN;
+    document.getElementById('n-up').disabled   = n >= N_MAX;
+
+    // universe display
+    const universe = range(1, universeSize);
+    document.getElementById('universe').textContent = '{' + universe.join(', ') + '}';
+    document.getElementById('universe-size').textContent = universeSize;
+
+    // build groups
+    const groupsDiv = document.getElementById('groups');
+    groupsDiv.innerHTML = '';
+
+    let runningTotal = 0;
+    const lhsParts = [];
+
+    // m ranges from 3 to n+1 inclusive (so k = m-1 ranges 2..n)
+    for (let m = 3; m <= n + 1; m++) {
+      const k = m - 1;
+      const belowCount = m - 1;
+      const aboveCount = (n + 3) - m;
+      const groupCount = binomial(belowCount, 2) * binomial(aboveCount, 2);
+      runningTotal += groupCount;
+      lhsParts.push({ k, m, belowCount, aboveCount, groupCount });
+
+      const groupDiv = document.createElement('div');
+      groupDiv.className = 'middle-group';
+
+      const header = document.createElement('div');
+      header.className = 'group-header';
+      header.innerHTML =
+        `<span class="group-tag">middle</span>` +
+        `<span class="group-middle">m = ${m}</span>` +
+        `<span class="group-formula">` +
+          `<span class="lo">C(${belowCount}, 2)</span> · ` +
+          `<span class="hi">C(${aboveCount}, 2)</span> = ` +
+          `<b>${groupCount}</b> subset${groupCount === 1 ? '' : 's'}` +
+        `</span>`;
+      groupDiv.appendChild(header);
+
+      const grid = document.createElement('div');
+      grid.className = 'subsets-grid';
+
+      const lowPool  = range(1, m - 1);
+      const highPool = range(m + 1, universeSize);
+      const lowPairs = pairsFrom(lowPool);
+      const highPairs = pairsFrom(highPool);
+
+      for (const lp of lowPairs) {
+        for (const hp of highPairs) {
+          const subset = document.createElement('div');
+          subset.className = 'subset';
+          subset.innerHTML = formatSubset(lp, m, hp);
+          grid.appendChild(subset);
+        }
+      }
+      groupDiv.appendChild(grid);
+      groupsDiv.appendChild(groupDiv);
+    }
+
+    // totals
+    const rhs = binomial(n + 3, 5);
+    const lhsExpr = lhsParts
+      .map(p => `<span class="lhs-piece"><span class="lo">C(${p.belowCount},2)</span>·<span class="hi">C(${p.aboveCount},2)</span></span>`)
+      .join('  +  ');
+    document.getElementById('totals-formula').innerHTML =
+      `${lhsExpr}` +
+      `<br>= ` + lhsParts.map(p => `<b>${p.groupCount}</b>`).join(' + ') +
+      ` = <span class="red">${runningTotal}</span> ` +
+      `<span class="equals">=</span> ` +
+      `C(${n + 3}, 5)`;
+    document.getElementById('totals-bignum').textContent = rhs;
+  }
+
+  // ── EVENT WIRING ────────────────────────────
+  document.getElementById('n-down').addEventListener('click', () => {
+    if (state.n > N_MIN) { state.n--; render(); }
+  });
+  document.getElementById('n-up').addEventListener('click', () => {
+    if (state.n < N_MAX) { state.n++; render(); }
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
