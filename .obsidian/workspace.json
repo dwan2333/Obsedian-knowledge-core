@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "chapter1_exercises"
+              "title": "pascals_identity_grid_paths"
             }
           }
         ]
@@ -225,6 +225,7 @@
   },
   "active": "cc2d672911f6d2d9",
   "lastOpenFiles": [
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "quartz/styles/variables.scss",
     "quartz/styles/syntax.scss",
     "quartz/styles/custom.scss",
@@ -237,7 +238,6 @@
     "quartz/static/icon.png",
     "quartz/static/giscus",
     "quartz/static",
-    "quartz/processors/parse.ts",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_5_grid_to_triangle.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_2_penultimate.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_4_triangle.png",
@@ -247,7 +247,6 @@
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_demorgan_venn.png",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Learning AI from TOP to Bottom/Operating System/Bash/Bash(Main).md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill2_dont_pay_people_off.md",
