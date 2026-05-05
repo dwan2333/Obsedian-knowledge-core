@@ -89,8 +89,8 @@ We now have **two formulas for the same quantity** $|C(m,n)|$:
 
 | Method | Formula |
 |---|---|
-| Recursive (§2) | $|C(m,n)| = |C(m-1,n)| + |C(m,n-1)|$ |
-| Direct (§3) | $|C(m,n)| = \binom{m+n}{m}$ |
+| Recursive (§2) | $\|C(m,n)\| = \|C(m-1,n)\| + \|C(m,n-1)\|$ |
+| Direct (§3) | $\|C(m,n)\| = \binom{m+n}{m}$ |
 
 Substitute the closed form into both sides of the recurrence *(at [[04:24]](https://www.youtube.com/watch?v=Cwo2ua3H1pE&t=264s))*:
 
