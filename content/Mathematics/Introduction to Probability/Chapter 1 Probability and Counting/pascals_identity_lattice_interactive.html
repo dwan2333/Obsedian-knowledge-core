@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pascal's Identity · Lattice ↔ Triangle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:        #f7f1e3;
+    --paper-deep:   #efe6d0;
+    --ink:          #1c2030;
+    --ink-soft:     #5a5d6e;
+    --rule:         #c8b89a;
+    --accent:       #b13a2e;
+    --accent-bg:    rgba(177, 58, 46, 0.10);
+    --selected:     #2c6cb0;
+    --selected-fill:#4a90e2;
+    --pred:         #3d7530;
+    --pred-fill:    #7bb55c;
+    --origin:       #c4731f;
+    --origin-fill:  #e2924a;
+    --panel:        #ede2c7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); }
+  body {
+    color: var(--ink);
+    font-family: 'Crimson Pro', 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 1.55;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse 70% 50% at 14% 6%,  rgba(74,144,226,0.04), transparent 65%),
+      radial-gradient(ellipse 60% 50% at 86% 94%, rgba(177,58,46,0.04), transparent 65%);
+    background-attachment: fixed;
+  }
+  .frame {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 48px 40px 64px;
+  }
+  @media (max-width: 768px) {
+    .frame { padding: 32px 18px 48px; }
+  }
+
+  /* HEADER */
+  header {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 28px;
+    margin-bottom: 36px;
+  }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: 'Crimson Pro', serif;
+    font-size: clamp(38px, 5vw, 64px);
+    font-weight: 600;
+    line-height: 1.05;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+  }
+  .subtitle {
+    color: var(--ink-soft);
+    font-size: 17px;
+    font-style: italic;
+    max-width: 780px;
+  }
+
+  /* LAYOUT */
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-bottom: 28px;
+  }
+  @media (max-width: 880px) {
+    .layout { grid-template-columns: 1fr; }
+  }
+  .panel {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 22px 22px 26px;
+  }
+  .panel h2 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+  .panel-hint {
+    font-size: 14px;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+
+  /* LATTICE */
+  #lattice {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .grid-line {
+    stroke: var(--rule);
+    stroke-width: 0.5;
+    opacity: 0.65;
+  }
+  .grid-line.bold {
+    stroke: var(--ink-soft);
+    stroke-width: 1;
+    opacity: 0.45;
+  }
+  .lattice-point {
+    fill: #999;
+    stroke: var(--ink-soft);
+    stroke-width: 0.6;
+    cursor: pointer;
+    transition: fill 0.12s ease, r 0.12s ease, stroke 0.12s ease;
+  }
+  .lattice-point:hover {
+    fill: var(--accent);
+    r: 7;
+  }
+  .lattice-point.origin {
+    fill: var(--origin-fill);
+    stroke: var(--origin);
+    stroke-width: 1.6;
+    r: 7;
+  }
+  .lattice-point.selected {
+    fill: var(--selected-fill);
+    stroke: var(--selected);
+    stroke-width: 2.2;
+    r: 8.5;
+  }
+  .lattice-point.predecessor {
+    fill: var(--pred-fill);
+    stroke: var(--pred);
+    stroke-width: 2;
+    r: 7.5;
+  }
+  .lattice-point.on-diagonal {
+    fill: var(--selected-fill);
+    opacity: 0.45;
+  }
+  .axis-label {
+    font-family: 'Crimson Pro', serif;
+    fill: var(--ink-soft);
+    font-size: 16px;
+    font-style: italic;
+  }
+  .tick-label {
+    font-family: 'JetBrains Mono', monospace;
+    fill: var(--ink-soft);
+    font-size: 11px;
+  }
+  .point-value {
+    font-family: 'JetBrains Mono', monospace;
+    fill: var(--selected);
+    font-size: 11px;
+    font-weight: 700;
+    pointer-events: none;
+    text-anchor: middle;
+  }
+  .path-line {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 2.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0.75;
+    pointer-events: none;
+  }
+
+  /* TRIANGLE */
+  #triangle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 0 4px;
+  }
+  .tri-row {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    transition: opacity 0.18s ease;
+  }
+  .tri-row.dim {
+    opacity: 0.32;
+  }
+  .tri-cell {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 0.12s;
+  }
+  .tri-cell:hover {
+    background: var(--accent-bg);
+    border-color: var(--accent);
+  }
+  .tri-cell.selected {
+    background: var(--selected-fill);
+    color: white;
+    border-color: var(--selected);
+    font-weight: 700;
+    transform: scale(1.08);
+  }
+  .tri-cell.predecessor {
+    background: var(--pred-fill);
+    color: white;
+    border-color: var(--pred);
+    font-weight: 700;
+  }
+  .tri-cell.unreachable {
+    color: var(--ink-soft);
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  .tri-row-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-soft);
+    margin-right: 6px;
+    width: 36px;
+    text-align: right;
+  }
+
+  /* STATUS */
+  .status {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 22px 26px 20px;
+    margin-bottom: 28px;
+  }
+  .status-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+  @media (max-width: 720px) {
+    .status-grid { grid-template-columns: 1fr; }
+  }
+  .status-item .status-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 4px;
+  }
+  .status-item .status-value {
+    font-size: 19px;
+    color: var(--ink);
+    font-feature-settings: "tnum";
+  }
+  .status-item .status-value strong {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .controls-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-right: 6px;
+  }
+  .btn {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    padding: 9px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.12s;
+  }
+  .btn:hover {
+    background: var(--accent-bg);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn[disabled] {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .btn[disabled]:hover {
+    background: var(--paper);
+    border-color: var(--rule);
+    color: var(--ink);
+  }
+  .path-counter {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-left: 4px;
+  }
+
+  /* EXPLANATION */
+  .explanation {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 24px 26px;
+  }
+  .explanation h3 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+  .explanation p { margin-bottom: 12px; max-width: 800px; }
+  .explanation p:last-child { margin-bottom: 0; }
+  .explanation .key {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .explanation .blue { color: var(--selected); font-weight: 600; }
+  .explanation .green { color: var(--pred); font-weight: 600; }
+  .explanation .orange { color: var(--origin); font-weight: 600; }
+
+  footer {
+    margin-top: 36px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    color: var(--ink-soft);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="frame">
+  <header>
+    <div class="eyebrow">Pascal's Identity · Interactive</div>
+    <h1>Lattice paths &amp; Pascal's triangle</h1>
+    <div class="subtitle">Click any point on the 6×6 lattice (left). The same number — paths from <span style="color:var(--origin); font-style:normal; font-weight:600;">(0,0)</span> to that point using only right and up steps — lights up in Pascal's triangle (right). One identity, two geometries.</div>
+  </header>
+
+  <div class="layout">
+    <div class="panel">
+      <h2>Integer lattice</h2>
+      <div class="panel-hint">Click any point (a, b). The number of monotone (right/up) paths from <span style="color:var(--origin); font-weight:600;">(0,0)</span> to (a, b) is C(a+b, a).</div>
+      <svg id="lattice" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+
+    <div class="panel">
+      <h2>Pascal's triangle</h2>
+      <div class="panel-hint">The same numbers, rotated 45° clockwise. Anti-diagonal a+b on the lattice = row a+b in the triangle. Click any reachable entry to jump there.</div>
+      <div id="triangle"></div>
+    </div>
+  </div>
+
+  <div class="status">
+    <div class="status-grid">
+      <div class="status-item">
+        <div class="status-label">Selected point</div>
+        <div class="status-value" id="selected-display">(3, 2)</div>
+      </div>
+      <div class="status-item">
+        <div class="status-label">Path count</div>
+        <div class="status-value" id="path-count-display">C(5, 2) = <strong>10</strong></div>
+      </div>
+      <div class="status-item">
+        <div class="status-label">Pascal's identity</div>
+        <div class="status-value" id="identity-display">C(5,2) = C(4,1) + C(4,2) = 4 + 6 = <strong>10</strong></div>
+      </div>
+    </div>
+    <div class="controls">
+      <span class="controls-label">Sample paths</span>
+      <button class="btn" id="btn-prev">← Previous</button>
+      <button class="btn" id="btn-next">Next →</button>
+      <button class="btn" id="btn-toggle">Hide path</button>
+      <span class="path-counter" id="path-counter">path 1 of 10</span>
+    </div>
+  </div>
+
+  <div class="explanation">
+    <h3>What you're looking at</h3>
+    <p>The lattice and Pascal's triangle <span class="key">store the same numbers</span> in different geometries. The number of monotone paths from <span class="orange">(0,0)</span> to (a, b) — using only right and up steps — is <em>C(a+b, a)</em>. When you arrange these path-counts at every lattice point and rotate the lattice 45° clockwise, the counts line up exactly with Pascal's triangle: <span class="key">anti-diagonal of the lattice</span> (constant a+b) becomes a <span class="key">row of the triangle</span>.</p>
+    <p>Pascal's identity says <em>C(a+b, a) = C(a+b−1, a−1) + C(a+b−1, a)</em>. On the lattice, the predecessors are the points <span class="green">one step left</span> (a−1, b) and <span class="green">one step down</span> (a, b−1) — the only two points from which you can reach <span class="blue">(a, b)</span> in one move. In the triangle, those same predecessors are the two entries directly above the selected one. Either picture, the count at the destination is the sum of the counts at its two parents.</p>
+    <p>Use the <em>Sample paths</em> controls to step through every individual path from <span class="orange">(0,0)</span> to your selection — for example, (3,2) has 10 paths, (6,6) has 924, and you can scroll through them all.</p>
+  </div>
+
+  <footer>
+    <span>Pascal's Identity</span>
+    <span>Lattice ↔ Triangle Interactive</span>
+  </footer>
+</div>
+
+<script>
+(function() {
+  const SIZE = 6;                    // lattice dimension: points (0..6, 0..6)
+  const TRI_ROWS = 2 * SIZE + 1;     // triangle rows 0..12
+
+  function binom(n, k) {
+    if (k < 0 || k > n) return 0;
+    let r = 1;
+    for (let i = 0; i < k; i++) r = r * (n - i) / (i + 1);
+    return Math.round(r);
+  }
+
+  // ============================================================
+  // LATTICE (SVG)
+  // ============================================================
+  const SVG = 500;
+  const M = 56;                      // margin
+  const PLOT = SVG - 2 * M;
+  const STEP = PLOT / SIZE;
+
+  const ax = a => M + a * STEP;
+  const ay = b => SVG - M - b * STEP;
+
+  const svg = document.getElementById('lattice');
+  const NS = 'http://www.w3.org/2000/svg';
+
+  // Grid lines
+  for (let i = 0; i <= SIZE; i++) {
+    const v = document.createElementNS(NS, 'line');
+    v.setAttribute('x1', ax(i)); v.setAttribute('y1', ay(0));
+    v.setAttribute('x2', ax(i)); v.setAttribute('y2', ay(SIZE));
+    v.setAttribute('class', 'grid-line' + (i === 0 ? ' bold' : ''));
+    svg.appendChild(v);
+
+    const h = document.createElementNS(NS, 'line');
+    h.setAttribute('x1', ax(0)); h.setAttribute('y1', ay(i));
+    h.setAttribute('x2', ax(SIZE)); h.setAttribute('y2', ay(i));
+    h.setAttribute('class', 'grid-line' + (i === 0 ? ' bold' : ''));
+    svg.appendChild(h);
+  }
+
+  // Path layer (drawn before points so points sit on top)
+  const pathLayer = document.createElementNS(NS, 'g');
+  pathLayer.setAttribute('id', 'path-layer');
+  svg.appendChild(pathLayer);
+
+  // Tick labels
+  for (let i = 0; i <= SIZE; i++) {
+    const tx = document.createElementNS(NS, 'text');
+    tx.setAttribute('x', ax(i)); tx.setAttribute('y', ay(0) + 22);
+    tx.setAttribute('text-anchor', 'middle');
+    tx.setAttribute('class', 'tick-label');
+    tx.textContent = i;
+    svg.appendChild(tx);
+
+    if (i > 0) {
+      const ty = document.createElementNS(NS, 'text');
+      ty.setAttribute('x', ax(0) - 14); ty.setAttribute('y', ay(i) + 4);
+      ty.setAttribute('text-anchor', 'end');
+      ty.setAttribute('class', 'tick-label');
+      ty.textContent = i;
+      svg.appendChild(ty);
+    }
+  }
+
+  // Axis labels
+  const axA = document.createElementNS(NS, 'text');
+  axA.setAttribute('x', ax(SIZE) + 16); axA.setAttribute('y', ay(0) + 6);
+  axA.setAttribute('class', 'axis-label');
+  axA.textContent = 'a';
+  svg.appendChild(axA);
+
+  const axB = document.createElementNS(NS, 'text');
+  axB.setAttribute('x', ax(0) - 6); axB.setAttribute('y', ay(SIZE) - 14);
+  axB.setAttribute('text-anchor', 'middle');
+  axB.setAttribute('class', 'axis-label');
+  axB.textContent = 'b';
+  svg.appendChild(axB);
+
+  // Lattice points
+  const points = [];
+  const pointMap = {};
+  for (let b = 0; b <= SIZE; b++) {
+    for (let a = 0; a <= SIZE; a++) {
+      const c = document.createElementNS(NS, 'circle');
+      c.setAttribute('cx', ax(a)); c.setAttribute('cy', ay(b));
+      c.setAttribute('r', 5.5);
+      c.setAttribute('class', 'lattice-point');
+      c.setAttribute('data-a', a); c.setAttribute('data-b', b);
+      if (a === 0 && b === 0) c.classList.add('origin');
+      c.addEventListener('click', () => selectPoint(a, b));
+      const title = document.createElementNS(NS, 'title');
+      title.textContent = `(${a}, ${b}) — ${binom(a+b, a)} path${binom(a+b,a) === 1 ? '' : 's'} from (0,0)`;
+      c.appendChild(title);
+      svg.appendChild(c);
+      points.push(c);
+      pointMap[`${a},${b}`] = c;
+    }
+  }
+
+  // Floating value label (shown for the selected point)
+  const valueLabel = document.createElementNS(NS, 'text');
+  valueLabel.setAttribute('class', 'point-value');
+  valueLabel.style.display = 'none';
+  svg.appendChild(valueLabel);
+
+  // ============================================================
+  // TRIANGLE
+  // ============================================================
+  const triEl = document.getElementById('triangle');
+  const triCells = {};
+  for (let n = 0; n < TRI_ROWS; n++) {
+    const row = document.createElement('div');
+    row.className = 'tri-row';
+    row.setAttribute('data-row', n);
+
+    for (let k = 0; k <= n; k++) {
+      const cell = document.createElement('div');
+      cell.className = 'tri-cell';
+      cell.setAttribute('data-n', n); cell.setAttribute('data-k', k);
+      cell.textContent = binom(n, k);
+      // Map (n, k) back to lattice (a=k, b=n-k). Mark unreachable if outside [0..SIZE].
+      const a = k, b = n - k;
+      const reachable = a >= 0 && a <= SIZE && b >= 0 && b <= SIZE;
+      if (!reachable) cell.classList.add('unreachable');
+      cell.addEventListener('click', () => {
+        if (reachable) selectPoint(a, b);
+      });
+      cell.title = reachable
+        ? `Row ${n}, position ${k} → lattice (${a}, ${b})`
+        : `Row ${n}, position ${k} (outside the 6×6 lattice)`;
+      row.appendChild(cell);
+      triCells[`${n},${k}`] = cell;
+    }
+    triEl.appendChild(row);
+  }
+
+  // ============================================================
+  // PATH ENUMERATION (lex order: R before U)
+  // ============================================================
+  function* pathsBetween(a, b) {
+    // Generate every monotone path from (0,0) to (a,b) as a string in {R,U}*
+    // in lex order (Rs first).
+    if (a === 0 && b === 0) { yield ''; return; }
+    const total = a + b;
+    const buf = new Array(total);
+    function* rec(pos, ra, ub) {
+      if (pos === total) { yield buf.join(''); return; }
+      if (ra > 0)  { buf[pos] = 'R'; yield* rec(pos + 1, ra - 1, ub); }
+      if (ub > 0)  { buf[pos] = 'U'; yield* rec(pos + 1, ra, ub - 1); }
+    }
+    yield* rec(0, a, b);
+  }
+
+  function pathToCoords(path) {
+    let a = 0, b = 0;
+    const out = [[a, b]];
+    for (const ch of path) {
+      if (ch === 'R') a++; else b++;
+      out.push([a, b]);
+    }
+    return out;
+  }
+
+  // Cache: paths for the most recently-selected point
+  let cachedAB = null;
+  let cachedPaths = null;
+  function getPaths(a, b) {
+    const key = `${a},${b}`;
+    if (cachedAB === key) return cachedPaths;
+    cachedPaths = [...pathsBetween(a, b)];
+    cachedAB = key;
+    return cachedPaths;
+  }
+
+  // ============================================================
+  // STATE + UPDATE
+  // ============================================================
+  let sa = 3, sb = 2;          // selected point
+  let pathIdx = 0;             // index of currently-shown path
+  let pathVisible = true;
+
+  function selectPoint(a, b) {
+    sa = a; sb = b;
+    pathIdx = 0;
+    pathVisible = true;
+    document.getElementById('btn-toggle').textContent = 'Hide path';
+    update();
+  }
+
+  function update() {
+    const a = sa, b = sb;
+    const n = a + b, k = a;
+    const count = binom(n, k);
+
+    // Reset all classes
+    points.forEach(p => p.classList.remove('selected', 'predecessor', 'on-diagonal'));
+    Object.values(triCells).forEach(c => c.classList.remove('selected', 'predecessor'));
+    document.querySelectorAll('.tri-row').forEach(r => r.classList.add('dim'));
+
+    // Highlight anti-diagonal points on lattice
+    points.forEach(p => {
+      const pa = parseInt(p.getAttribute('data-a'));
+      const pb = parseInt(p.getAttribute('data-b'));
+      if (pa + pb === n && !(pa === a && pb === b)) p.classList.add('on-diagonal');
+    });
+
+    // Selected point
+    if (!(a === 0 && b === 0)) {
+      const sp = pointMap[`${a},${b}`];
+      if (sp) sp.classList.add('selected');
+    }
+
+    // Predecessors on lattice
+    if (a >= 1) {
+      const pp = pointMap[`${a-1},${b}`];
+      if (pp && !(a-1 === 0 && b === 0)) pp.classList.add('predecessor');
+    }
+    if (b >= 1) {
+      const pp = pointMap[`${a},${b-1}`];
+      if (pp && !(a === 0 && b-1 === 0)) pp.classList.add('predecessor');
+    }
+
+    // Triangle: undim selected row (and predecessor row if it exists)
+    const selRow = document.querySelector(`.tri-row[data-row="${n}"]`);
+    if (selRow) selRow.classList.remove('dim');
+    if (n >= 1) {
+      const predRow = document.querySelector(`.tri-row[data-row="${n-1}"]`);
+      if (predRow) predRow.classList.remove('dim');
+    }
+    const selCell = triCells[`${n},${k}`];
+    if (selCell) selCell.classList.add('selected');
+    if (k >= 1) {
+      const c1 = triCells[`${n-1},${k-1}`];
+      if (c1) c1.classList.add('predecessor');
+    }
+    if (k <= n - 1 && n >= 1) {
+      const c2 = triCells[`${n-1},${k}`];
+      if (c2) c2.classList.add('predecessor');
+    }
+
+    // Floating value label on selected lattice point
+    if (count > 1) {
+      valueLabel.setAttribute('x', ax(a));
+      valueLabel.setAttribute('y', ay(b) - 14);
+      valueLabel.textContent = count;
+      valueLabel.style.display = '';
+    } else {
+      valueLabel.style.display = 'none';
+    }
+
+    // Status displays
+    document.getElementById('selected-display').textContent = `(${a}, ${b})`;
+    document.getElementById('path-count-display').innerHTML =
+      `C(${n}, ${k}) = <strong>${count}</strong>`;
+
+    let identity;
+    if (a === 0 && b === 0) {
+      identity = 'C(0, 0) = <strong>1</strong> (origin: a single zero-step "path")';
+    } else if (a === 0) {
+      identity = `C(${n}, 0) = <strong>1</strong> (boundary: only one path — go straight up)`;
+    } else if (b === 0) {
+      identity = `C(${n}, ${n}) = <strong>1</strong> (boundary: only one path — go straight right)`;
+    } else {
+      const left = binom(n - 1, k - 1);
+      const right = binom(n - 1, k);
+      identity = `C(${n},${k}) = C(${n-1},${k-1}) + C(${n-1},${k}) = ${left} + ${right} = <strong>${count}</strong>`;
+    }
+    document.getElementById('identity-display').innerHTML = identity;
+
+    // Paths
+    drawPath();
+  }
+
+  function drawPath() {
+    pathLayer.innerHTML = '';
+    const a = sa, b = sb;
+    const count = binom(a + b, a);
+    const counter = document.getElementById('path-counter');
+
+    if (a === 0 && b === 0) {
+      counter.textContent = '— origin: no path to draw';
+      document.getElementById('btn-prev').disabled = true;
+      document.getElementById('btn-next').disabled = true;
+      document.getElementById('btn-toggle').disabled = true;
+      return;
+    }
+    document.getElementById('btn-prev').disabled = false;
+    document.getElementById('btn-next').disabled = false;
+    document.getElementById('btn-toggle').disabled = false;
+
+    if (!pathVisible) {
+      counter.textContent = `${count} path${count === 1 ? '' : 's'} total — hidden`;
+      return;
+    }
+
+    const paths = getPaths(a, b);
+    pathIdx = ((pathIdx % paths.length) + paths.length) % paths.length;
+    const coords = pathToCoords(paths[pathIdx]);
+    const pts = coords.map(([pa, pb]) => `${ax(pa)},${ay(pb)}`).join(' ');
+
+    const poly = document.createElementNS(NS, 'polyline');
+    poly.setAttribute('points', pts);
+    poly.setAttribute('class', 'path-line');
+    pathLayer.appendChild(poly);
+
+    counter.textContent = `path ${pathIdx + 1} of ${count}`;
+  }
+
+  // ============================================================
+  // BUTTONS
+  // ============================================================
+  document.getElementById('btn-prev').addEventListener('click', () => {
+    pathVisible = true;
+    document.getElementById('btn-toggle').textContent = 'Hide path';
+    pathIdx -= 1;
+    drawPath();
+  });
+  document.getElementById('btn-next').addEventListener('click', () => {
+    pathVisible = true;
+    document.getElementById('btn-toggle').textContent = 'Hide path';
+    pathIdx += 1;
+    drawPath();
+  });
+  document.getElementById('btn-toggle').addEventListener('click', () => {
+    pathVisible = !pathVisible;
+    document.getElementById('btn-toggle').textContent = pathVisible ? 'Hide path' : 'Show path';
+    drawPath();
+  });
+
+  // Keyboard shortcuts: arrow keys cycle paths
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft')  { document.getElementById('btn-prev').click(); }
+    if (e.key === 'ArrowRight') { document.getElementById('btn-next').click(); }
+  });
+
+  // ============================================================
+  // INITIAL RENDER
+  // ============================================================
+  update();
+})();
+</script>
+</body>
+</html>

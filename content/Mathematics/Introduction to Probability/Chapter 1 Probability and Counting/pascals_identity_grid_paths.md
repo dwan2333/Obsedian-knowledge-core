@@ -19,6 +19,13 @@ title: "Pascal's Identity via Grid Paths"
 > [!info] What this note is, and why it complements [Exercise 16](chapter1_exercises.md)
 > [Exercise 16 in your notes](chapter1_exercises.md) proves Pascal's identity $\binom{n}{k} + \binom{n}{k-1} = \binom{n+1}{k}$ via the **"Alice on/off the committee"** story. This video proves the same identity through a completely different story — **counting increasing paths on an integer grid**. Same identity, two stories. Together they reveal that Pascal's identity isn't an isolated algebraic curiosity — it's a *structural fact about combinatorial counting* that surfaces wherever you partition a count into two cases.
 
+> [!example] 📂 Interactive walkthrough
+> A clickable 6×6 lattice paired with Pascal's triangle. Click any point $(a, b)$ on the lattice to count the monotone paths from $(0,0)$ — the value $\binom{a+b}{a}$ lights up the corresponding entry in the triangle, and the two predecessor points $(a-1, b)$ and $(a, b-1)$ turn green to reveal Pascal's identity at work. A *Sample paths* control lets you step through every individual path one at a time (e.g. all 924 paths from $(0,0)$ to $(6,6)$):
+>
+> 👉 **[Open: Pascal's Identity — Lattice ↔ Triangle Interactive](pascals_identity_lattice_interactive.html)**
+>
+> Hosted as a self-contained HTML file in this folder. Clicking opens it in your default browser.
+
 ---
 
 ## 1. The setup — increasing paths on the integer grid
