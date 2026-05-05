@@ -334,6 +334,9 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 >
 > > [!success]- Click to reveal solution
 > > **Story.** Form an $n$-committee with chair from Group A (size $n$) drawn from a $2n$ pool (A + B, sizes $n$ each). Right: pick the chair from A ($n$), fill remaining $n-1$ from $2n-1$. Left: condition on $k$ A-members, $\binom{n}{k}\binom{n}{n-k} = \binom{n}{k}^2$ choices, then pick chair from the $k$ A-members. ✓
+>
+> > [!info]- Intuition — what "condition on $k$" means
+> > "Condition on $k$ A-members" = split the count by how many A-people are on the committee. For each fixed $k$, build the committee in three steps: pick the $k$ A's on it ($\binom{n}{k}$), pick the $n-k$ B's filling the rest ($\binom{n}{n-k} = \binom{n}{k}$ by symmetry — that's the **square**), then pick the chair from those $k$ A's ($k$ ways — that's the **leading $k$**). Sum over $k=1,\ldots,n$ and every valid committee is counted exactly once.
 
 > [!example] Exercise 19 — 5-Subsets via Middle Element
 > **Problem.** Give a story proof that $\sum_{k=2}^n \binom{k}{2}\binom{n-k+2}{2} = \binom{n+3}{5}$, for all integers $n \ge 2$.
