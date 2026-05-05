@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
-                "mode": "source",
+                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pascals_identity_grid_paths"
+              "title": "chapter1_exercises"
             }
           }
         ]
@@ -225,6 +225,10 @@
   },
   "active": "cc2d672911f6d2d9",
   "lastOpenFiles": [
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/_gen_sp_grid_path.py",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "quartz/styles/variables.scss",
     "quartz/styles/syntax.scss",
@@ -244,10 +248,7 @@
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_3_two_paths.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_mindmap.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_1_grid_path.png",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_demorgan_venn.png",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Learning AI from TOP to Bottom/Operating System/Bash/Bash(Main).md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill2_dont_pay_people_off.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
