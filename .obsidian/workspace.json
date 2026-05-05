@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
+                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pascals_identity_grid_paths"
+              "title": "chapter1_exercises"
             }
           }
         ]
@@ -225,6 +225,7 @@
   },
   "active": "cc2d672911f6d2d9",
   "lastOpenFiles": [
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md.tmp.22828.1777968047022",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md.tmp.22828.1777968044436",
@@ -237,7 +238,6 @@
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/_gen_sp_two_paths.py",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/_gen_sp_two_paths.py.tmp.22828.1777967902441",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png",
     "quartz/static/og-image.png",
     "quartz/static/icon.png",
