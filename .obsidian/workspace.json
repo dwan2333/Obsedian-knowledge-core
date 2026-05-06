@@ -48,6 +48,16 @@
               "icon": "lucide-file",
               "title": "Chapter 1 (Main)"
             }
+          },
+          {
+            "id": "a3ad42cfe120270e",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
         ],
         "currentTab": 1
