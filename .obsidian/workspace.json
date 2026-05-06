@@ -49,8 +49,7 @@
               "title": "chapter1_exercises"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -252,11 +251,11 @@
       "smart-chat:Open: Smart Chat": false
     }
   },
-  "active": "a3ad42cfe120270e",
+  "active": "a38cb7a668d8ac1f",
   "lastOpenFiles": [
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_lattice_interactive.html",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.22828.1778001167396",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/exercise_19_middle_element_interactive.html",
