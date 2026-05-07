@@ -242,8 +242,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
       "smart-connections:Smart Connections: Open random connection": false,
       "bases:Create new base": false,
       "switcher:Open quick switcher": false,
@@ -258,11 +256,7 @@
       "smart-connections:Toggle Footer Connections": false,
       "smart-connections:Smart Duplicate Detector": false,
       "templater-obsidian:Templater": false,
-      "obsidian-git:Open Git source control": false,
-      "smart-context:Smart Context: Open Builder": false,
-      "smart-context:Smart Context: Copy to Clipboard (select depth)": false,
-      "smart-context:Smart Context: List Named Contexts": false,
-      "smart-chat:Open: Smart Chat": false
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "a38cb7a668d8ac1f",
