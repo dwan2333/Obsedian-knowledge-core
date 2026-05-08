@@ -130,7 +130,7 @@ pick a5f4a0d Add cat-file
 # r, reword = use commit, edit the message
 # e, edit   = stop and amend the commit
 # s, squash = combine into the previous commit
-# f, fixup  = like squash but discard this commit's message
+# f, fixup  = like squash bt discard this commit's message
 # x, exec   = run a shell command
 # d, drop   = remove the commit
 # b, break  = stop here (resume with 'git rebase --continue')
