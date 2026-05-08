@@ -77,8 +77,7 @@
               "title": "Merge Conflicts"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -273,15 +272,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "147de05c04bd1a95",
+  "active": "4943b28e5a003d6c",
   "lastOpenFiles": [
     "content/Git and Github/Branching/Branching (Main).md",
     "content/Git and Github/Branching/git merge.md",
+    "content/Git and Github/Branching/git checkout.md",
     "content/Git and Github/Branching/Merge Conflicts.md",
     "content/Git and Github/Branching/Squashing Commits.md",
     "content/Git and Github/Branching/git rebase.md",
     "content/Git and Github/Git Essential Commands.md",
-    "content/Git and Github/Branching/git checkout.md",
     "content/Git and Github/Syncing/git fetch.md",
     "content/Git and Github/Syncing/git pull.md",
     "content/Git and Github/Syncing/git push.md",
