@@ -254,7 +254,6 @@
       "smart-connections:Smart Lookup: Open lookup view": false,
       "smart-connections:Toggle Inline Connections": false,
       "smart-connections:Toggle Footer Connections": false,
-      "smart-connections:Smart Duplicate Detector": false,
       "templater-obsidian:Templater": false,
       "obsidian-git:Open Git source control": false
     }
