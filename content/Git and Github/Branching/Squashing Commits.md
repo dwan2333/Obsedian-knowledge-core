@@ -21,12 +21,12 @@ e5f6g7h  login form
 
 A reviewer doesn't care about your bumbling — they want to see **the one logical change** you added. Squashing gives you:
 
-| Benefit | Reason |
-|---|---|
-| **Clean history** | Main reads as feature-by-feature, not WIP-by-WIP |
-| **Easier `git bisect`** | Each commit is a complete, testable unit |
-| **Better `git blame`** | Blame points to the real reason for a line, not a typo fix |
-| **Simpler reverts** | One `git revert` undoes the whole feature |
+| Benefit                 | Reason                                                     |
+| ----------------------- | ---------------------------------------------------------- |
+| **Clean history**       | Main reads as feature-by-feature, not WIP-by-WIP           |
+| **Easier `git bisect`** | Each commit is a complete, testable unit                   |
+| **Better `git blame`**  | Blame points to the real reason for a line, not a typo fix |
+| **Simpler reverts**     | One `git revert` undoes the whole feature                  |
 
 ---
 
@@ -66,8 +66,8 @@ x1y2z3a  Add login form with validation
 
 Five commits → one commit. Same code.
 
-> [!tip] `fixup` is `squash` without the message prompt
-> If the extra commits were just typo fixes you want to discard, use `fixup` instead of `squash`. Git silently combines them and keeps only the first commit's message.
+> [!tip] `fixup` is `squash` without the message  juprompt
+> If the extra commits werest typo fixes you want to discard, use `fixup` instead of `squash`. Git silently combines them and keeps only the first commit's message.
 
 See [[git rebase]] for the full interactive-rebase guide.
 

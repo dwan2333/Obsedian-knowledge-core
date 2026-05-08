@@ -42,14 +42,15 @@
               "type": "markdown",
               "state": {
                 "file": "content/Git and Github/Branching/Squashing Commits.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "Squashing Commits"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -244,10 +245,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4943b28e5a003d6c",
+  "active": "aedd5ae80146a949",
   "lastOpenFiles": [
-    "content/Git and Github/Branching/git rebase.md",
     "content/Git and Github/Branching/Squashing Commits.md",
+    "content/Git and Github/Branching/git rebase.md",
     "content/Git and Github/Git Essential Commands.md",
     "content/Git and Github/Branching/git checkout.md",
     "content/Git and Github/Branching/git merge.md",
