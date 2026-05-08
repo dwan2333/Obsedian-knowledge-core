@@ -100,11 +100,11 @@ When a fix lands on `main`, it often has to be **backported** to one or more rel
 
 ### Three ways to backport
 
-| Situation                                         | Tool                                     |
-| ------------------------------------------------- | ---------------------------------------- |
-| The original commits are known, standalone        | `git cherry-pick <sha1> <sha2> <sha3>`   |
-| The feature branch still exists                   | `git merge <branch>` directly onto the release branch |
-| Only a **merge commit** remains (branch deleted)  | `git cherry-pick -m 1 <merge-sha>`       |
+| Situation                                        | Tool                                                  |
+| ------------------------------------------------ | ----------------------------------------------------- |
+| The original commits are known, standalone       | `git cherry-pick <sha1> <sha2> <sha3>`                |
+| The feature branch still exists                  | `git merge <branch>` directly onto the release branch |
+| Only a **merge commit** remains (branch deleted) | `git cherry-pick -m 1 <merge-sha>`                    |
 
 The third case — lumping a deleted feature branch's contents into one commit on a release branch — is the canonical use of [[git cherry-pick]]'s `-m` flag. See [[git cherry-pick#Cherry-Picking a Merge Commit]] for the full walkthrough.
 
