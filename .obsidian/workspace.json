@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Git and Github/Best practices/Writing Good Commit Messages.md",
+                "file": "content/Git and Github/Best practices/Writing Good Branch Names.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Writing Good Commit Messages"
+              "title": "Writing Good Branch Names"
             }
           },
           {
@@ -230,13 +230,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "328aa9c891b22c6e",
+  "active": "4943b28e5a003d6c",
   "lastOpenFiles": [
+    "content/Git and Github/Best practices/Writing Good Commit Messages.md",
     "content/Git and Github/Best practices/Writing Good Branch Names.md",
     "content/Git and Github/Best practices/Writing Good Branch Names.md.tmp.15536.1778333521070",
     "content/index.md",
     "content/Finance/Futures/SOFR Future.md",
-    "content/Git and Github/Best practices/Writing Good Commit Messages.md",
     "content/Git and Github/Best practices",
     "content/Git and Github/What is Git and GitHub.md",
     "content/Git and Github/Branching/Branching (Main).md",
