@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "content/Git and Github/Git Essential Commands.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -250,11 +250,11 @@
     "content/Git and Github/Branching/Squashing Commits.md",
     "content/Git and Github/Branching/git rebase.md",
     "content/Git and Github/Git Essential Commands.md",
+    "content/Git and Github/Syncing/git pull.md",
     "content/Git and Github/Branching/git checkout.md",
     "content/Git and Github/Branching/git merge.md",
     "content/Git and Github/Branching/Branching (Main).md",
     "content/Git and Github/Branching/Merge Conflicts.md",
-    "content/Git and Github/Syncing/git pull.md",
     "content/Git and Github/Syncing/git push.md",
     "content/Git and Github/Syncing/git fetch.md",
     "content/Git and Github/Syncing/git remote.md",
