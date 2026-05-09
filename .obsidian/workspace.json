@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -245,11 +245,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "aedd5ae80146a949",
+  "active": "00c821c5864d8201",
   "lastOpenFiles": [
-    "content/Git and Github/Branching/Squashing Commits.md",
-    "content/Git and Github/Branching/git rebase.md",
     "content/Git and Github/Git Essential Commands.md",
+    "content/Git and Github/Branching/git rebase.md",
+    "content/Git and Github/Branching/Squashing Commits.md",
     "content/Git and Github/Syncing/git pull.md",
     "content/Git and Github/Branching/git checkout.md",
     "content/Git and Github/Branching/git merge.md",
