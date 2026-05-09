@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Git and Github/Collaboration on GitHub/GitHub Fork Request.md",
+                "file": "content/Git and Github/Writing Good Commit Messages.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GitHub Fork Request"
+              "title": "Writing Good Commit Messages"
             }
           },
           {
@@ -232,10 +232,11 @@
   },
   "active": "4943b28e5a003d6c",
   "lastOpenFiles": [
+    "content/Git and Github/Collaboration on GitHub/GitHub Fork Request.md",
+    "content/Git and Github/Writing Good Commit Messages.md",
     "content/Git and Github/Syncing/git push.md",
     "content/Git and Github/Syncing/git pull.md",
     "content/Git and Github/Collaboration on GitHub/GitHub pull request.md",
-    "content/Git and Github/Collaboration on GitHub/GitHub Fork Request.md",
     "content/Git and Github/Bare Repositories.md",
     "content/Git and Github/Branching/git cherry-pick.md",
     "content/Git and Github/Branching/Branching (Main).md",
@@ -277,7 +278,6 @@
     "content/Learning AI from TOP to Bottom/Operating System/Bash/Bash(Main).md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill2_dont_pay_people_off.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
-    "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill3_assess_hand_value.md",
     "Untitled.canvas"
   ]
 }
