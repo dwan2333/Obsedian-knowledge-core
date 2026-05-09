@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Poker/The Course/Part 1 The 30000 Foot View/the_poker_ecosystem.md",
+                "file": "content/Poker/The Course/Part 2 Beating Live 1-2 Games/Part 2 Beating Live 1-2 Games (Main).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "the_poker_ecosystem"
+              "title": "Part 2 Beating Live 1-2 Games (Main)"
+            }
+          },
+          {
+            "id": "f317c20fc314a7ae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "skill1_pre_flop_strategy"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -216,10 +231,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ae96c0dc26e08a1b",
+  "active": "f317c20fc314a7ae",
   "lastOpenFiles": [
-    "content/Poker/The Course/Part 1 The 30000 Foot View/Part 1 The 30000 Foot View (Main).md",
+    "content/Poker/The Course/Part 2 Beating Live 1-2 Games/Part 2 Beating Live 1-2 Games (Main).md",
+    "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
+    "content/Poker/The Course/Part 2 Beating Live 1-2 Games/hand_quizzes_1_2.md",
     "content/Poker/The Course/Part 1 The 30000 Foot View/core_strategy_philosophy.md",
+    "content/Poker/The Course/Part 1 The 30000 Foot View/Part 1 The 30000 Foot View (Main).md",
     "content/Poker/The Course/Part 1 The 30000 Foot View/the_course_part1_infographic.png",
     "content/Poker/The Course/Part 1 The 30000 Foot View/the_poker_ecosystem.md",
     "content/Poker/The Course/Part 1 The 30000 Foot View/the_poker_pyramid.md",
@@ -246,8 +264,6 @@
     "content/Git and Github/Branching/git merge.md",
     "content/Git and Github/Branching/Merge Conflicts.md",
     "content/Git and Github/Syncing/git fetch.md",
-    "content/Git and Github/Syncing/git remote.md",
-    "content/Git and Github/gitignore.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_lattice_interactive.html",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.22828.1778001167396",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/exercise_19_middle_element_interactive.html",
