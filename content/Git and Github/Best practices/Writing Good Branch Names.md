@@ -6,6 +6,44 @@ This note covers the consensus structural rules and the prefix vocabulary that's
 
 ---
 
+## Two Kinds of Branches
+
+Git repositories have two fundamentally different kinds of branches, and the naming rules apply differently to each.
+
+**Regular (long-lived) branches** are the *platform* — persistent lines of development representing environments or stable states. They exist for the life of the project, are never deleted, and serve as merge *targets* for everyone else's work. They use **no prefix** because they aren't a *kind* of work — they're a *destination* for work.
+
+| Branch | What it represents |
+|---|---|
+| `main` (or `master`) | Production-ready code; the canonical history |
+| `dev` (or `develop`) | Integration branch; the latest working state |
+| `qa` (or `staging`) | Pre-production; what QA tests against |
+
+These are typically **protected** (PR required, no direct push) because they're the platform everyone else's work plugs into. Their names are short, lowercase, and rarely debated — the convention is so settled that picking something other than `main`/`dev`/`qa` will confuse new teammates.
+
+**Temporary (short-lived) branches** are the *work* — created for a single task, merged, deleted. These are where the prefix conventions in this note actually apply. A typical lifecycle:
+
+1. Branch off a regular branch — `git checkout -b feature/AUTH-142-add-jwt-login dev`
+2. Commit the work
+3. Open a PR back to the regular branch
+4. After review and merge, delete the branch — `git push origin --delete feature/AUTH-142-add-jwt-login`
+
+Common temporary types and their typical merge flow:
+
+| Prefix | Branches off | Merges back to |
+|---|---|---|
+| `feature/` | `dev` (or `main` in trunk-based teams) | `dev` |
+| `bugfix/` | `dev` | `dev` |
+| `hotfix/` | `main` (urgent — bypasses `dev`) | `main` *and* `dev` |
+| `release/` | `dev` | `main` (then back-merged to `dev`) |
+| `docs/`, `chore/`, `test/`, `refactor/` | `dev` | `dev` |
+
+> [!tip] Why hotfix is the odd one out
+> `hotfix/` branches are the only common temporary type that branches off `main` instead of `dev`, because they're patching production directly without waiting for the next release cycle. They merge back to **both** `main` (so production gets the fix) and `dev` (so the fix isn't lost on the next release). Forgetting the second merge is a classic source of "wait, didn't we already fix this?" regressions a few weeks later.
+
+The rest of this note focuses on temporary branches — regular branches' naming is essentially fixed and not up for debate.
+
+---
+
 ## The Format
 
 Branch names follow this shape:
@@ -28,7 +66,7 @@ Examples:
 | `docs/update-readme-screenshots` | Documentation only |
 | `johndoe/feature/profile-page` | With author prefix (some teams) |
 
-Long-lived branches like `main`, `master`, `dev`, `qa`, and `staging` typically use no prefix — they're the platform, not the work.
+(Recall from the previous section: regular branches like `main`, `dev`, `qa` use no prefix — they're the platform, not the work.)
 
 ---
 
