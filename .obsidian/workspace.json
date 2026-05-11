@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
+                "file": "content/Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Quadratic Formula Intuition (Main)"
+              "title": "quadratic_factoring_worked_examples"
             }
           }
         ],
@@ -233,6 +233,7 @@
   },
   "active": "f317c20fc314a7ae",
   "lastOpenFiles": [
+    "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill2_dont_pay_people_off.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md.tmp.8324.1778484367290",
@@ -265,7 +266,6 @@
     "content/Git and Github/Branching/Squashing Commits.md",
     "content/Git and Github/Branching/git checkout.md",
     "content/Git and Github/Branching/git merge.md",
-    "content/Git and Github/Branching/Merge Conflicts.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_lattice_interactive.html",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.22828.1778001167396",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/exercise_19_middle_element_interactive.html",
