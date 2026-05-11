@@ -561,3 +561,8 @@
 "event_logs:connect_pro:ping": {"key":"connect_pro:ping","ct":37658,"first_at":1775203074921,"last_at":1778501642229,"class_name":"EventLog"},
 "event_logs:connect_pro:ping": {"key":"connect_pro:ping","ct":37660,"first_at":1775203074921,"last_at":1778501702148,"class_name":"EventLog"},
 "event_logs:connect_pro:ping": {"key":"connect_pro:ping","ct":37662,"first_at":1775203074921,"last_at":1778501762102,"class_name":"EventLog"},
+"event_logs:connect_pro:ping": {"key":"connect_pro:ping","ct":37664,"first_at":1775203074921,"last_at":1778501822084,"class_name":"EventLog"},
+"event_logs:connect_pro:ping": {"key":"connect_pro:ping","ct":37666,"first_at":1775203074921,"last_at":1778501882126,"class_name":"EventLog"},
+"event_logs:connect_pro:ping": {"key":"connect_pro:ping","ct":37668,"first_at":1775203074921,"last_at":1778501942098,"class_name":"EventLog"},
+"event_logs:connect_pro:ping": {"key":"connect_pro:ping","ct":37670,"first_at":1775203074921,"last_at":1778502002074,"class_name":"EventLog"},
+"event_logs:connect_pro:ping": {"key":"connect_pro:ping","ct":37672,"first_at":1775203074921,"last_at":1778502062091,"class_name":"EventLog"},
