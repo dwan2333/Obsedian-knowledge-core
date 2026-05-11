@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-Flop Strategy Quiz · Skill #1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:        #f7f1e3;
+    --paper-deep:   #efe6d0;
+    --ink:          #1c2030;
+    --ink-soft:     #5a5d6e;
+    --rule:         #c8b89a;
+    --accent:       #b13a2e;
+    --accent-bg:    rgba(177, 58, 46, 0.10);
+    --good:         #3d7530;
+    --good-bg:      rgba(61, 117, 48, 0.12);
+    --bad:          #b13a2e;
+    --bad-bg:       rgba(177, 58, 46, 0.12);
+    --neutral:      #4a6670;
+    --panel:        #ede2c7;
+    --card-red:     #b13a2e;
+    --card-black:   #1c2030;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); }
+  body {
+    color: var(--ink);
+    font-family: 'Crimson Pro', 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 1.55;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse 70% 50% at 14% 6%,  rgba(74,144,226,0.04), transparent 65%),
+      radial-gradient(ellipse 60% 50% at 86% 94%, rgba(177,58,46,0.04), transparent 65%);
+    background-attachment: fixed;
+  }
+  .frame {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 40px 36px 56px;
+  }
+  @media (max-width: 720px) {
+    .frame { padding: 28px 16px 40px; }
+  }
+
+  header {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 22px;
+    margin-bottom: 32px;
+  }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-size: clamp(32px, 4.5vw, 52px);
+    font-weight: 600;
+    line-height: 1.05;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    color: var(--ink-soft);
+    font-size: 17px;
+    font-style: italic;
+    max-width: 700px;
+  }
+
+  .screen { display: none; }
+  .screen.active { display: block; }
+
+  /* START SCREEN */
+  .start-info {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 22px 26px;
+    margin-bottom: 24px;
+  }
+  .start-info p { margin-bottom: 10px; }
+  .start-info p:last-child { margin-bottom: 0; }
+  .start-info ul {
+    margin: 8px 0 4px 18px;
+    padding: 0;
+  }
+  .start-info li { margin-bottom: 4px; }
+  .mode-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+  }
+  .mode-btn {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    padding: 16px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Crimson Pro', serif;
+    font-size: 17px;
+    text-align: left;
+    transition: all 0.15s;
+  }
+  .mode-btn:hover {
+    background: var(--accent-bg);
+    border-color: var(--accent);
+  }
+  .mode-btn .mode-title {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+  .mode-btn .mode-detail {
+    font-size: 14px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .num-q-row {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .num-q-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .num-q-row select {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    padding: 6px 10px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    background: var(--paper);
+  }
+
+  /* QUIZ SCREEN */
+  .quiz-progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+    gap: 12px;
+  }
+  .quiz-progress .score { color: var(--good); }
+  .back-btn {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    color: var(--ink-soft);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    padding: 7px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.12s;
+    text-transform: none;
+  }
+  .back-btn:hover {
+    background: var(--accent-bg);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .back-btn:active { transform: scale(0.97); }
+
+  .scenario-card {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .position-tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    background: var(--neutral);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 3px;
+    margin-bottom: 12px;
+  }
+  .position-tag.ep    { background: #b13a2e; }
+  .position-tag.co    { background: #d97a3a; }
+  .position-tag.btn   { background: #5e7c5e; }
+  .position-tag.blinds { background: #4a6670; }
+
+  .scenario-text {
+    font-size: 19px;
+    color: var(--ink);
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+  .scenario-detail {
+    font-size: 16px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  .hand-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 26px 0 12px;
+  }
+  .card {
+    width: 100px;
+    height: 140px;
+    background: white;
+    border: 2px solid var(--ink);
+    border-radius: 9px;
+    position: relative;
+    box-shadow: 2px 3px 0 rgba(0,0,0,0.08);
+    overflow: hidden;
+    font-family: 'Crimson Pro', serif;
+  }
+  .card.red { color: var(--card-red); border-color: var(--card-red); }
+  .card.black { color: var(--card-black); }
+  .card-corner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+  }
+  .card-corner.top    { top: 8px;    left: 8px;  }
+  .card-corner.bottom { bottom: 8px; right: 8px; transform: rotate(180deg); }
+  .card-rank {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .card-suit-mini {
+    font-size: 18px;
+    margin-top: 2px;
+    line-height: 1;
+  }
+  .card-suit-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 56px;
+    line-height: 1;
+  }
+
+  .hand-label {
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: var(--ink-soft);
+    letter-spacing: 0.08em;
+    margin-bottom: 18px;
+  }
+
+  .question {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 18px;
+  }
+
+  .answer-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto 22px;
+  }
+  .answer-btn {
+    background: var(--paper);
+    border: 2px solid var(--rule);
+    color: var(--ink);
+    padding: 14px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Crimson Pro', serif;
+    font-size: 19px;
+    font-weight: 500;
+    transition: all 0.12s;
+  }
+  .answer-btn:hover:not(:disabled) {
+    background: var(--accent-bg);
+    border-color: var(--accent);
+  }
+  .answer-btn:disabled { cursor: default; }
+  .answer-btn.correct {
+    background: var(--good-bg);
+    border-color: var(--good);
+    color: var(--good);
+    font-weight: 600;
+  }
+  .answer-btn.wrong {
+    background: var(--bad-bg);
+    border-color: var(--bad);
+    color: var(--bad);
+    font-weight: 600;
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+
+  .feedback {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-bottom: 20px;
+    display: none;
+  }
+  .feedback.shown { display: block; }
+  .feedback .verdict {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .feedback .verdict.good { color: var(--good); }
+  .feedback .verdict.bad  { color: var(--bad); }
+  .feedback .reasoning {
+    font-size: 16px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .feedback .reasoning .badge {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 2px 7px;
+    border-radius: 3px;
+    margin: 0 2px;
+  }
+  .next-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  .next-btn {
+    background: var(--accent);
+    color: white;
+    border: 1px solid var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .next-btn:hover { background: #8e2d23; }
+  .quit-btn {
+    background: var(--paper);
+    color: var(--ink-soft);
+    border: 1px solid var(--rule);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .quit-btn:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* END SCREEN */
+  .end-card {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 26px 28px;
+    margin-bottom: 22px;
+    text-align: center;
+  }
+  .end-card h2 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .end-score {
+    font-size: 56px;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 10px 0;
+    font-family: 'Crimson Pro', serif;
+  }
+  .end-score .pct { font-size: 22px; color: var(--ink-soft); margin-left: 12px; }
+
+  .breakdown {
+    text-align: left;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+  }
+  .breakdown-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+  }
+  .breakdown-row .label { color: var(--ink); }
+  .breakdown-row .num { color: var(--ink-soft); }
+
+  /* MISC */
+  .ranges-toggle {
+    margin-top: 12px;
+    text-align: right;
+  }
+  .ranges-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .ranges-link:hover { color: var(--accent); }
+
+  .ranges-panel {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 16px;
+    display: none;
+    font-size: 14px;
+  }
+  .ranges-panel.shown { display: block; }
+  .ranges-panel h4 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+  .ranges-panel .range-row {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+  .ranges-panel .range-row .lbl { color: var(--ink-soft); }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    color: var(--ink-soft);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+<div class="frame">
+  <header>
+    <div class="eyebrow">Skill #1 · Pre-Flop Strategy</div>
+    <h1>Position-Based Range Quiz</h1>
+    <div class="subtitle">Random hand, random position, random situation. Pick the action — Raise, 3-bet, Flat call, Fold, or Complete (depending on the spot). Built from the exact ranges in your Skill #1 note.</div>
+  </header>
+
+  <!-- START SCREEN -->
+  <div class="screen active" id="screen-start">
+    <div class="start-info">
+      <p><strong>How it works.</strong> You'll get random scenarios — your position, what's happened so far (unopened, someone raised, limpers in front, etc.), and your hand. Pick the action that matches the Skill #1 range for that exact situation.</p>
+      <p><strong>What's tested.</strong></p>
+      <ul>
+        <li><strong>Open-raise ranges</strong> for EP, CO, BTN — Raise vs Fold</li>
+        <li><strong>Vs tight raiser</strong> at every position — 3-bet, Flat call, or Fold</li>
+        <li><strong>Vs loose / steal raiser</strong> at every position — 3-bet, Flat call, or Fold</li>
+        <li><strong>SB limped pot</strong> — Fold, Complete, Raise (value), or Raise (wide-steal)</li>
+        <li><strong>BB raise-over-limpers</strong> — Check or Raise (value/steal)</li>
+      </ul>
+    </div>
+    <h3 style="margin-bottom:10px; font-family:'Crimson Pro', serif; font-weight:500;">Pick a mode</h3>
+    <div class="mode-grid">
+      <button class="mode-btn" onclick="startQuiz('all')">
+        <div class="mode-title">All positions</div>
+        <div class="mode-detail">Random scenarios across every position and situation</div>
+      </button>
+      <button class="mode-btn" onclick="startQuiz('EP')">
+        <div class="mode-title">Early Position only</div>
+        <div class="mode-detail">~14% open range — tight; vs tight/loose 3-bets</div>
+      </button>
+      <button class="mode-btn" onclick="startQuiz('CO')">
+        <div class="mode-title">Cutoff only</div>
+        <div class="mode-detail">~22% open range — middling</div>
+      </button>
+      <button class="mode-btn" onclick="startQuiz('BTN')">
+        <div class="mode-title">Button only</div>
+        <div class="mode-detail">~33% open range — wide; steal city</div>
+      </button>
+      <button class="mode-btn" onclick="startQuiz('Blinds')">
+        <div class="mode-title">Blinds only</div>
+        <div class="mode-detail">Defending vs steals + SB limp decisions</div>
+      </button>
+      <button class="mode-btn" onclick="startQuiz('opens-only')">
+        <div class="mode-title">Open-raises only</div>
+        <div class="mode-detail">Just Raise/Fold from EP/CO/BTN</div>
+      </button>
+      <button class="mode-btn" onclick="startQuiz('vs-raise-only')">
+        <div class="mode-title">Vs-raise only</div>
+        <div class="mode-detail">Just 3-bet/Flat/Fold spots</div>
+      </button>
+    </div>
+    <div class="num-q-row">
+      <span class="num-q-label">Questions per session:</span>
+      <select id="num-questions">
+        <option value="10">10</option>
+        <option value="20" selected>20</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- QUIZ SCREEN -->
+  <div class="screen" id="screen-quiz">
+    <div class="quiz-progress">
+      <button class="back-btn" onclick="goToMenu()">← Menu</button>
+      <span>Question <span id="q-num">1</span> / <span id="q-total">20</span></span>
+      <span class="score">Score: <span id="q-score">0</span></span>
+    </div>
+
+    <div class="scenario-card">
+      <span class="position-tag" id="position-tag">EP</span>
+      <div class="scenario-text" id="scenario-text">Unopened pot — folded to you</div>
+      <div class="scenario-detail" id="scenario-detail"></div>
+    </div>
+
+    <div class="hand-display" id="hand-display"></div>
+    <div class="hand-label" id="hand-label">AKs</div>
+
+    <div class="question">What's your action?</div>
+    <div class="answer-grid" id="answer-grid"></div>
+
+    <div class="feedback" id="feedback">
+      <div class="verdict" id="verdict">Correct</div>
+      <div class="reasoning" id="reasoning"></div>
+    </div>
+    <div class="next-row">
+      <button class="quit-btn" onclick="goToMenu()">← Back to menu</button>
+      <button class="next-btn" id="next-btn" style="display:none;" onclick="nextQuestion()">Next →</button>
+    </div>
+  </div>
+
+  <!-- END SCREEN -->
+  <div class="screen" id="screen-end">
+    <div class="end-card">
+      <h2>Quiz complete</h2>
+      <div class="end-score">
+        <span id="final-correct">0</span><span style="color:var(--ink-soft);"> / </span><span id="final-total">20</span>
+        <span class="pct" id="final-pct">0%</span>
+      </div>
+      <div class="breakdown" id="breakdown"></div>
+    </div>
+    <div style="text-align:center;">
+      <button class="next-btn" onclick="restart()">Restart</button>
+    </div>
+  </div>
+
+  <footer>
+    <span>Skill #1 Pre-Flop Quiz</span>
+    <span>Built from your Skill #1 note</span>
+  </footer>
+</div>
+
+<script>
+"use strict";
+
+// ============================================================
+// ALL 169 STARTING HANDS (canonical notation)
+// ============================================================
+const RANKS = ['2','3','4','5','6','7','8','9','T','J','Q','K','A'];
+const RANK_VAL = {};
+RANKS.forEach((r, i) => RANK_VAL[r] = i);
+
+function generateAllHands() {
+  const hands = [];
+  // pairs
+  for (const r of RANKS) hands.push(r + r);
+  // suited (high rank first)
+  for (let i = RANKS.length - 1; i >= 0; i--) {
+    for (let j = i - 1; j >= 0; j--) {
+      hands.push(RANKS[i] + RANKS[j] + 's');
+    }
+  }
+  // offsuit
+  for (let i = RANKS.length - 1; i >= 0; i--) {
+    for (let j = i - 1; j >= 0; j--) {
+      hands.push(RANKS[i] + RANKS[j] + 'o');
+    }
+  }
+  return hands;
+}
+const ALL_HANDS = generateAllHands(); // 169 hands
+
+// ============================================================
+// RANGES (transcribed from Skill #1 note)
+// ============================================================
+// All pairs 22-AA
+const PAIRS_ALL = ['22','33','44','55','66','77','88','99','TT','JJ','QQ','KK','AA'];
+// Helper to slice pair runs
+function pairsFrom(low, high) {
+  const lo = PAIRS_ALL.indexOf(low + low);
+  const hi = PAIRS_ALL.indexOf(high + high);
+  return PAIRS_ALL.slice(lo, hi + 1);
+}
+
+const RANGES = {
+  // ========== EP ==========
+  EP_open: [
+    ...PAIRS_ALL,
+    'A2s','A3s','A4s','A5s','A6s','A7s','A8s','A9s','ATs','AJs','AQs','AKs',
+    'KTs','KJs','KQs',
+    'QTs','QJs',
+    'JTs',
+    'T9s','98s','87s','76s',
+    'AKo','AQo'
+  ],
+  EP_vs_tight_3bet: ['AA','KK','A5s'],
+  EP_vs_tight_flat: [
+    ...pairsFrom('2','Q'),
+    'ATs','AJs','AQs','AKs',
+    'KTs','KJs','KQs',
+    'QTs','QJs',
+    'JTs','T9s','98s','87s','76s',
+    'AKo'
+  ],
+  EP_vs_loose_3bet: [
+    'AA','KK','QQ',
+    'AKs',
+    'A5s','A4s','A3s','A2s',
+    'T9s','87s',
+    'AKo'
+  ],
+  EP_vs_loose_flat: [
+    ...pairsFrom('2','J'),
+    'AQs','AJs','ATs','A9s','A8s','A7s','A6s',
+    'KTs','KJs','KQs',
+    'QTs','QJs',
+    'JTs','98s','76s',
+    'AQo'
+  ],
+
+  // ========== CO ==========
+  CO_open: [
+    ...PAIRS_ALL,
+    'A2s','A3s','A4s','A5s','A6s','A7s','A8s','A9s','ATs','AJs','AQs','AKs',
+    'K7s','K8s','K9s','KTs','KJs','KQs',
+    'Q9s','QTs','QJs',
+    'JTs','T9s','98s','87s','76s','65s','54s','43s', // suited connectors JTs-43s
+    'J9s','T8s','97s','86s','75s','64s','53s',       // suited 1-gappers J9s-53s
+    'ATo','AJo','AQo','AKo',
+    'KJo','KQo'
+  ],
+  CO_vs_tight_3bet: ['AA','KK','A5s'],
+  CO_vs_tight_flat: [
+    ...pairsFrom('2','Q'),
+    'ATs','AJs','AQs','AKs',
+    'KTs','KJs','KQs',
+    'QTs','QJs',
+    'JTs','T9s','98s','87s','76s',
+    'AKo'
+  ],
+  CO_vs_loose_3bet: [
+    'JJ','QQ','KK','AA',
+    'AKs','A7s',
+    'A5s','A4s','A3s','A2s',
+    'T9s','87s','54s',
+    'AKo'
+  ],
+  CO_vs_loose_flat: [
+    ...pairsFrom('2','T'),
+    'A8s','A9s','ATs','AJs','AQs',
+    'A6s',
+    'K9s','KTs','KJs','KQs',
+    'Q9s','QTs','QJs',
+    'JTs','98s',
+    '76s','65s',
+    'J9s','T8s','97s','86s',
+    'AJo','AQo',
+    'KQo'
+  ],
+
+  // ========== BTN ==========
+  BTN_open: [
+    ...PAIRS_ALL,
+    'A2s','A3s','A4s','A5s','A6s','A7s','A8s','A9s','ATs','AJs','AQs','AKs',
+    'K2s','K3s','K4s','K5s','K6s','K7s','K8s','K9s','KTs','KJs','KQs',
+    'Q5s','Q6s','Q7s','Q8s','Q9s','QTs','QJs',
+    'J7s','J8s','J9s','JTs',
+    'T9s','98s','87s','76s','65s','54s','43s', // T9s-43s connectors
+    'T8s','97s','86s','75s','64s','53s',       // T8s-53s 1-gappers
+    'T7s','96s',                               // T7s-96s 2-gappers (per memory aid: just T-7 and 9-6)
+    'A7o','A8o','A9o','ATo','AJo','AQo','AKo',
+    'K9o','KTo','KJo','KQo',
+    'QTo','QJo',
+    'JTo'
+  ],
+  BTN_vs_tight_3bet: ['AA','KK','A5s'],
+  BTN_vs_tight_flat: [
+    ...pairsFrom('2','Q'),
+    'ATs','AJs','AQs','AKs',
+    'KTs','KJs','KQs',
+    'QTs','QJs',
+    'JTs','T9s','98s','87s','76s',
+    'AKo'
+  ],
+  BTN_vs_loose_3bet: [
+    '99','TT','JJ','QQ','KK','AA',
+    'ATs','AJs','AQs','AKs',
+    'A2s','A3s','A4s','A5s',
+    'KJs','KQs',
+    'QJs',
+    'JTs','97s','75s',
+    'AQo','AKo'
+  ],
+  BTN_vs_loose_flat: [
+    ...pairsFrom('2','8'),
+    'A6s','A7s','A8s','A9s',
+    'K9s','KTs',
+    'Q9s','QTs',
+    'T9s','98s','87s','76s','65s','54s','43s',
+    'T8s','J9s',
+    '86s',
+    '53s','64s',
+    'T7s','J8s',
+    'ATo','AJo',
+    'KJo','KQo'
+  ],
+
+  // ========== BLINDS ==========
+  BL_vs_tight_3bet: ['AA','KK','A5s'],
+  BL_vs_tight_flat: [
+    ...pairsFrom('2','Q'),
+    'ATs','AJs','AQs','AKs',
+    'KTs','KJs','KQs',
+    'QTs','QJs',
+    'JTs','T9s','98s','87s','76s',
+    'AKo'
+  ],
+  BL_vs_steal_3bet: [
+    '99','TT','JJ','QQ','KK','AA',
+    '22','33','44',
+    'A2s','A3s','A4s','A5s','A6s','A7s','A8s','A9s','ATs','AJs','AQs','AKs',
+    'KJs','KQs',
+    'K5s','K6s','K7s',
+    'Q9s',
+    '54s','65s','76s','87s','98s',
+    '86s','97s','T8s','J9s',
+    'AJo','AQo','AKo',
+    'KQo'
+  ],
+  BL_vs_steal_flat: [
+    '55','66','77','88',
+    'K8s','K9s','KTs',
+    'K2s','K3s','K4s',
+    'QTs','QJs',
+    'Q5s','Q6s','Q7s','Q8s',
+    'T9s','JTs',
+    '43s',
+    '53s','64s','75s',
+    '96s','T7s','J8s',
+    'J7s',
+    'A8o','A9o','ATo',
+    'K9o','KTo','KJo',
+    'Q9o','QTo','QJo',
+    '98o','T9o','JTo',
+    'J9o'
+  ],
+
+  // ========== SB LIMPED POT (over limpers) ==========
+  SB_limp_raise_value: [
+    '99','TT','JJ','QQ','KK','AA',
+    'ATs','AJs','AQs','AKs',
+    'KJs','KQs',
+    'AQo','AKo'
+  ],
+  SB_limp_raise_steal_extras: [ // additional hands to raise IF table folds often
+    'A2s','A3s','A4s','A5s',
+    'K8s',
+    '76s'
+  ],
+  SB_limp_fold_junk_examples: [ // examples of fold trash; in practice anything offsuit no high cards no connection
+    'J4o','96o','52o','T3o'
+  ]
+};
+
+// Convenience union: any hand "good enough to complete" in SB limped pot — any pair, any suited, or offsuit with high cards / connection
+function isPlayableInLimpedPot(hand) {
+  if (hand.length === 2) return true; // pair
+  if (hand.endsWith('s')) return true; // any suited
+  // offsuit: must have high cards (one card T+) OR be connected (gap of 0-1)
+  const hi = hand[0], lo = hand[1];
+  const hiVal = RANK_VAL[hi], loVal = RANK_VAL[lo];
+  const hasHighCard = hiVal >= RANK_VAL['T'] || loVal >= RANK_VAL['T'];
+  const gap = hiVal - loVal - 1;
+  const connected = gap <= 1;
+  return hasHighCard || connected;
+}
+
+// ============================================================
+// STUDY HANDS — boundary-focused pools for harder practice
+// ============================================================
+// Each pool is a curated set of "tricky" hands for that scenario.
+// The quiz samples from these instead of all 169 hands so it never
+// asks about obvious folds (27o, J3o, etc.). Three categories per
+// pool:
+//   1. Hands at the edge of being in the relevant range
+//   2. Hands just past the edge (tempting but wrong)
+//   3. Counterintuitive / cross-scenario flips (e.g. A5s as a bluff
+//      3-bet, AKs flats vs tight but 3-bets vs loose, AQo opens
+//      from EP but folds vs an EP tight raiser)
+const STUDY_HANDS = {
+  EP_open: [
+    // in-range edges (lowest pair, lowest suited ace/K/Q, connector floor, offsuit floor)
+    '22','33','A2s','A5s','ATs','KTs','QTs','JTs','T9s','98s','87s','76s','AQo','AKo',
+    // out-of-range temptations (offsuit aces, K9s/Q9s/J9s just below cutoff, 65s/54s, 1-gappers)
+    'A2o','ATo','AJo','KJo','KQo','K9s','Q9s','J9s','T8s','65s','54s','97s'
+  ],
+  EP_vs_tight: [
+    // 3-bets (only 3 hands in this range — A5s as bluff is the surprise)
+    'AA','KK','A5s',
+    // flat boundary (QQ, AKs, AKo are all flats — many would 3-bet them!)
+    'QQ','JJ','22','AKs','AQs','ATs','AKo','KQs','KTs','QJs','QTs','JTs','76s',
+    // fold boundary (AQo opens EP but FOLDS vs tight; A4s folds despite A5s being 3-bet)
+    'A4s','A2s','AQo','AJo','ATo','KQo','K9s','Q9s','65s'
+  ],
+  EP_vs_loose: [
+    // 3-bets (QQ flips from flat→3-bet vs loose; T9s and 87s are bluff 3-bets)
+    'AA','KK','QQ','AKs','A5s','A2s','T9s','87s','AKo',
+    // flats (A6s flats but A5s 3-bets — boundary; 98s flats while T9s and 87s 3-bet — alternating!)
+    'JJ','TT','22','AQs','A6s','A7s','AQo','KQs','KTs','QTs','JTs','98s','76s',
+    // folds
+    'AJo','ATo','KQo','K9s','65s','T8s'
+  ],
+  CO_open: [
+    // in-range edges (K7s+, Q9s+, full connector + 1-gapper runs, ATo+/KJo+)
+    '22','A2s','K7s','K9s','Q9s','QTs','JTs','T9s','43s','J9s','53s','ATo','AJo','KJo','KQo','T8s','87s','65s',
+    // out-of-range temptations
+    'A9o','A8o','KTo','K6s','Q8s','K5s','42s','T9o','98o'
+  ],
+  CO_vs_tight: [
+    'AA','KK','A5s',
+    'QQ','JJ','22','AKs','AQs','ATs','AKo','KQs','KTs','QJs','QTs','JTs','76s',
+    'A4s','A2s','AQo','AJo','K9s','Q9s','65s'
+  ],
+  CO_vs_loose: [
+    // 3-bets (A7s 3-bets but A6s flats — boundary; 54s 3-bets but 65s/76s flat — surprising)
+    'JJ','QQ','AKs','A7s','A5s','T9s','87s','54s','AKo',
+    // flats (TT flats but JJ 3-bets; A8s flats; KQo flats but KJo folds)
+    'TT','22','AQs','A8s','A6s','K9s','Q9s','JTs','98s','76s','J9s','T8s','AJo','KQo',
+    // folds
+    'ATo','KJo','KTo','Q8s','J7s'
+  ],
+  BTN_open: [
+    // in-range edges (K2s+ = ANY suited K; Q5s+; J7s+; T7s and 96s as 2-gappers)
+    '22','A2s','K2s','K7s','Q5s','J7s','JTs','T9s','43s','T8s','53s','T7s','96s','A7o','A8o','K9o','KTo','QTo','JTo',
+    // out-of-range temptations (A6o, K8o, Q9o, T9o all just below their cutoffs; 85s and J6s tempt but fold)
+    'A6o','K8o','Q9o','T9o','85s','J6s','Q4s','74s','98o'
+  ],
+  BTN_vs_tight: [
+    'AA','KK','A5s',
+    'QQ','JJ','22','AKs','AQs','ATs','AKo','KQs','KTs','QJs','QTs','JTs','76s',
+    'A4s','A2s','AQo','AJo','KQo','K9s','Q9s','65s'
+  ],
+  BTN_vs_loose: [
+    // 3-bets (KJs 3-bets but KTs flats; QJs 3-bets but QTs flats; JTs 3-bets but T9s flats; 97s and 75s are RANDOM 2-gapper bluffs!)
+    '99','JJ','AKs','ATs','A5s','KJs','QJs','JTs','97s','AKo','AQo',
+    // flats (88 flats but 99 3-bets; 86s flats while 97s/75s 3-bet — surprising)
+    '88','22','A9s','KTs','K9s','QTs','T9s','65s','43s','53s','T8s','ATo','KJo',
+    // folds
+    'KTo','Q9o','K8s'
+  ],
+  Blinds_vs_tight: [
+    'AA','KK','A5s',
+    'QQ','JJ','22','AKs','AQs','ATs','AKo','KQs','KTs','QJs','QTs','JTs','76s',
+    'A4s','A2s','AQo','AJo','KQo','K9s','Q9s','65s'
+  ],
+  Blinds_vs_steal: [
+    // 3-bets (44-22 but NOT 55-88; A2s+ entire; KJs+/K5s-K7s 3-bet but K2s-K4s/K8s-KTs flat;
+    // 98s-54s connectors 3-bet but JTs/T9s flat; J9s-86s 1-gappers 3-bet but 75s-53s/J7s flat)
+    '22','44','99','AA','A5s','AKs','KJs','K5s','Q9s','87s','65s','54s','J9s','97s','AJo','KQo',
+    // flats (the wide flatting range; lots of small Qs/Ks/connectors that 3-bet would over-defend)
+    '55','88','K2s','K8s','KTs','QJs','JTs','T9s','43s','75s','J7s','ATo','KJo','JTo','J9o','98o','Q9o',
+    // folds (narrow — most things flat or 3-bet; A7o just below A8o, K7o below K9o)
+    'A7o','K7o','Q8o','87o','T8o'
+  ],
+  SB_limped_pot: [
+    // raise (value) — boundary hands of 99+/ATs+/KJs+/AQo+
+    '99','JJ','ATs','AJs','KJs','KQs','AQo','AKo',
+    // complete — playable hands that aren't strong enough to raise (any pair, any suited, high-card offsuit)
+    '88','22','A2s','A6s','K2s','Q9s','JTs','87s','AJo','KQo','JTo','98o','T9o','J9o',
+    // fold — offsuit junk near the playable boundary (kept minimal per request)
+    'J4o','96o','T3o','84o','73o','62o'
+  ]
+};
+
+// ============================================================
+// SCENARIOS
+// ============================================================
+const SCENARIOS = [
+  {
+    id: 'EP_open',
+    position: 'EP',
+    positionLong: 'Early Position (UTG → 2-off)',
+    text: 'Unopened pot — folded to you',
+    detail: 'No one has acted. ~14% open frequency.',
+    options: ['Raise', 'Fold'],
+    correct: hand => RANGES.EP_open.includes(hand) ? 'Raise' : 'Fold',
+    rangeName: 'EP open-raise range'
+  },
+  {
+    id: 'EP_vs_tight',
+    position: 'EP',
+    positionLong: 'Early Position',
+    text: 'A tight player raised before you',
+    detail: 'You\'re still acting from EP, but a known-tight opponent has opened.',
+    options: ['3-bet', 'Flat call', 'Fold'],
+    correct: hand => {
+      if (RANGES.EP_vs_tight_3bet.includes(hand)) return '3-bet';
+      if (RANGES.EP_vs_tight_flat.includes(hand)) return 'Flat call';
+      return 'Fold';
+    },
+    rangeName: 'EP vs tight raiser'
+  },
+  {
+    id: 'EP_vs_loose',
+    position: 'EP',
+    positionLong: 'Early Position',
+    text: 'A loose player raised before you',
+    detail: 'You\'re still acting from EP; a known-loose opponent has opened.',
+    options: ['3-bet', 'Flat call', 'Fold'],
+    correct: hand => {
+      if (RANGES.EP_vs_loose_3bet.includes(hand)) return '3-bet';
+      if (RANGES.EP_vs_loose_flat.includes(hand)) return 'Flat call';
+      return 'Fold';
+    },
+    rangeName: 'EP vs loose raiser'
+  },
+  {
+    id: 'CO_open',
+    position: 'CO',
+    positionLong: 'Cutoff',
+    text: 'Unopened pot — folded to you',
+    detail: 'Folded to you in the cutoff. ~22% open frequency.',
+    options: ['Raise', 'Fold'],
+    correct: hand => RANGES.CO_open.includes(hand) ? 'Raise' : 'Fold',
+    rangeName: 'CO open-raise range'
+  },
+  {
+    id: 'CO_vs_tight',
+    position: 'CO',
+    positionLong: 'Cutoff',
+    text: 'A tight player raised before you',
+    detail: 'You\'re in the cutoff; a tight EP/MP opponent has opened.',
+    options: ['3-bet', 'Flat call', 'Fold'],
+    correct: hand => {
+      if (RANGES.CO_vs_tight_3bet.includes(hand)) return '3-bet';
+      if (RANGES.CO_vs_tight_flat.includes(hand)) return 'Flat call';
+      return 'Fold';
+    },
+    rangeName: 'CO vs tight raiser'
+  },
+  {
+    id: 'CO_vs_loose',
+    position: 'CO',
+    positionLong: 'Cutoff',
+    text: 'A loose player raised before you',
+    detail: 'You\'re in the cutoff; a loose EP/MP opponent has opened.',
+    options: ['3-bet', 'Flat call', 'Fold'],
+    correct: hand => {
+      if (RANGES.CO_vs_loose_3bet.includes(hand)) return '3-bet';
+      if (RANGES.CO_vs_loose_flat.includes(hand)) return 'Flat call';
+      return 'Fold';
+    },
+    rangeName: 'CO vs loose raiser'
+  },
+  {
+    id: 'BTN_open',
+    position: 'BTN',
+    positionLong: 'Button',
+    text: 'Unopened pot — folded to you',
+    detail: 'Folded to the button. ~33% — steal city.',
+    options: ['Raise', 'Fold'],
+    correct: hand => RANGES.BTN_open.includes(hand) ? 'Raise' : 'Fold',
+    rangeName: 'BTN open-raise range'
+  },
+  {
+    id: 'BTN_vs_tight',
+    position: 'BTN',
+    positionLong: 'Button',
+    text: 'A tight player raised before you',
+    detail: 'You\'re on the button; a tight opponent has opened.',
+    options: ['3-bet', 'Flat call', 'Fold'],
+    correct: hand => {
+      if (RANGES.BTN_vs_tight_3bet.includes(hand)) return '3-bet';
+      if (RANGES.BTN_vs_tight_flat.includes(hand)) return 'Flat call';
+      return 'Fold';
+    },
+    rangeName: 'BTN vs tight raiser'
+  },
+  {
+    id: 'BTN_vs_loose',
+    position: 'BTN',
+    positionLong: 'Button',
+    text: 'A loose player raised before you',
+    detail: 'You\'re on the button; a loose opponent has opened.',
+    options: ['3-bet', 'Flat call', 'Fold'],
+    correct: hand => {
+      if (RANGES.BTN_vs_loose_3bet.includes(hand)) return '3-bet';
+      if (RANGES.BTN_vs_loose_flat.includes(hand)) return 'Flat call';
+      return 'Fold';
+    },
+    rangeName: 'BTN vs loose raiser'
+  },
+  {
+    id: 'Blinds_vs_tight',
+    position: 'Blinds',
+    positionLong: 'Big Blind',
+    text: 'A tight player raised',
+    detail: 'You\'re in the BB facing a raise from a tight EP/MP opener.',
+    options: ['3-bet', 'Flat call', 'Fold'],
+    correct: hand => {
+      if (RANGES.BL_vs_tight_3bet.includes(hand)) return '3-bet';
+      if (RANGES.BL_vs_tight_flat.includes(hand)) return 'Flat call';
+      return 'Fold';
+    },
+    rangeName: 'Blinds vs tight raiser'
+  },
+  {
+    id: 'Blinds_vs_steal',
+    position: 'Blinds',
+    positionLong: 'Big Blind',
+    text: 'A loose CO/BTN steal-raised',
+    detail: 'A loose CO or BTN opens — likely a wide steal. Defend ~36%.',
+    options: ['3-bet', 'Flat call', 'Fold'],
+    correct: hand => {
+      if (RANGES.BL_vs_steal_3bet.includes(hand)) return '3-bet';
+      if (RANGES.BL_vs_steal_flat.includes(hand)) return 'Flat call';
+      return 'Fold';
+    },
+    rangeName: 'Blinds vs steal raise'
+  },
+  {
+    id: 'SB_limped_pot',
+    position: 'Blinds',
+    positionLong: 'Small Blind',
+    text: 'Limped pot — limpers in front, no raise',
+    detail: 'You\'re in the SB. One or more limpers; the action folds to you.',
+    options: ['Raise (value)', 'Complete', 'Fold'],
+    correct: hand => {
+      if (RANGES.SB_limp_raise_value.includes(hand)) return 'Raise (value)';
+      if (isPlayableInLimpedPot(hand)) return 'Complete';
+      return 'Fold';
+    },
+    rangeName: 'SB limped-pot decision'
+  }
+];
+
+// ============================================================
+// QUIZ STATE
+// ============================================================
+let state = {
+  mode: 'all',
+  totalQuestions: 20,
+  currentQ: 0,
+  correct: 0,
+  perPosition: {},
+  questions: [],
+  answered: false
+};
+
+// ============================================================
+// CARD RENDERING
+// ============================================================
+const SUITS = ['♠','♥','♦','♣'];
+const SUIT_COLORS = { '♠':'black', '♥':'red', '♦':'red', '♣':'black' };
+
+function handToCards(hand) {
+  // hand: '22', 'AKs', 'AKo'
+  if (hand.length === 2) {
+    // pair — pick two different suits
+    const r = hand[0];
+    const [s1, s2] = sampleTwo(SUITS);
+    return [{rank: r, suit: s1}, {rank: r, suit: s2}];
+  }
+  const hi = hand[0], lo = hand[1], type = hand[2];
+  if (type === 's') {
+    const s = SUITS[Math.floor(Math.random() * 4)];
+    return [{rank: hi, suit: s}, {rank: lo, suit: s}];
+  } else {
+    // offsuit — different suits
+    const [s1, s2] = sampleTwo(SUITS);
+    return [{rank: hi, suit: s1}, {rank: lo, suit: s2}];
+  }
+}
+
+function sampleTwo(arr) {
+  const a = Math.floor(Math.random() * arr.length);
+  let b = Math.floor(Math.random() * arr.length);
+  while (b === a) b = Math.floor(Math.random() * arr.length);
+  return [arr[a], arr[b]];
+}
+
+function renderHand(hand) {
+  const cards = handToCards(hand);
+  const display = document.getElementById('hand-display');
+  display.innerHTML = '';
+  for (const c of cards) {
+    const colorClass = SUIT_COLORS[c.suit];
+    const rankDisplay = c.rank === 'T' ? '10' : c.rank;
+    const div = document.createElement('div');
+    div.className = 'card ' + colorClass;
+    div.innerHTML = `
+      <div class="card-corner top">
+        <span class="card-rank">${rankDisplay}</span>
+        <span class="card-suit-mini">${c.suit}</span>
+      </div>
+      <span class="card-suit-center">${c.suit}</span>
+      <div class="card-corner bottom">
+        <span class="card-rank">${rankDisplay}</span>
+        <span class="card-suit-mini">${c.suit}</span>
+      </div>
+    `;
+    display.appendChild(div);
+  }
+  document.getElementById('hand-label').textContent = hand;
+}
+
+// ============================================================
+// QUIZ FLOW
+// ============================================================
+function pickRandom(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+function buildQuestionPool(mode) {
+  const filt = (s) => {
+    if (mode === 'all') return true;
+    if (mode === 'EP')      return s.position === 'EP';
+    if (mode === 'CO')      return s.position === 'CO';
+    if (mode === 'BTN')     return s.position === 'BTN';
+    if (mode === 'Blinds')  return s.position === 'Blinds';
+    if (mode === 'opens-only')    return s.id.endsWith('_open');
+    if (mode === 'vs-raise-only') return s.id.includes('_vs_') || s.id.includes('vs_');
+    return true;
+  };
+  return SCENARIOS.filter(filt);
+}
+
+function generateOneQuestion(scenarioPool) {
+  const scenario = pickRandom(scenarioPool);
+  // Pick from the curated study pool for this scenario (boundary hands only).
+  // Falls back to ALL_HANDS only if a study pool is missing for some reason.
+  const studyPool = STUDY_HANDS[scenario.id] || ALL_HANDS;
+  const hand = pickRandom(studyPool);
+  const correct = scenario.correct(hand);
+  return { scenario, hand, correct };
+}
+
+function startQuiz(mode) {
+  state.mode = mode;
+  state.totalQuestions = parseInt(document.getElementById('num-questions').value, 10);
+  state.currentQ = 0;
+  state.correct = 0;
+  state.perPosition = {};
+  state.answered = false;
+  const pool = buildQuestionPool(mode);
+  state.questions = [];
+  for (let i = 0; i < state.totalQuestions; i++) {
+    state.questions.push(generateOneQuestion(pool));
+  }
+  showScreen('quiz');
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = state.questions[state.currentQ];
+  document.getElementById('q-num').textContent = state.currentQ + 1;
+  document.getElementById('q-total').textContent = state.totalQuestions;
+  document.getElementById('q-score').textContent = state.correct;
+
+  const tag = document.getElementById('position-tag');
+  tag.textContent = q.scenario.positionLong;
+  tag.className = 'position-tag ' + q.scenario.position.toLowerCase();
+
+  document.getElementById('scenario-text').textContent = q.scenario.text;
+  document.getElementById('scenario-detail').textContent = q.scenario.detail;
+  renderHand(q.hand);
+
+  // Render options
+  const grid = document.getElementById('answer-grid');
+  grid.innerHTML = '';
+  for (const opt of q.scenario.options) {
+    const btn = document.createElement('button');
+    btn.className = 'answer-btn';
+    btn.textContent = opt;
+    btn.onclick = () => selectAnswer(opt, btn);
+    grid.appendChild(btn);
+  }
+
+  document.getElementById('feedback').classList.remove('shown');
+  document.getElementById('next-btn').style.display = 'none';
+  state.answered = false;
+}
+
+function selectAnswer(answer, btnEl) {
+  if (state.answered) return;
+  state.answered = true;
+  const q = state.questions[state.currentQ];
+  const correct = q.correct;
+  const isRight = answer === correct;
+  if (isRight) state.correct++;
+
+  // Track per-position
+  const posKey = q.scenario.position;
+  if (!state.perPosition[posKey]) state.perPosition[posKey] = { right: 0, total: 0 };
+  state.perPosition[posKey].total++;
+  if (isRight) state.perPosition[posKey].right++;
+
+  // Highlight buttons
+  const buttons = document.querySelectorAll('.answer-btn');
+  buttons.forEach(b => {
+    b.disabled = true;
+    if (b.textContent === correct) b.classList.add('correct');
+    else if (b === btnEl) b.classList.add('wrong');
+  });
+
+  // Show feedback
+  const fb = document.getElementById('feedback');
+  const verdict = document.getElementById('verdict');
+  const reasoning = document.getElementById('reasoning');
+  verdict.textContent = isRight ? '✓ Correct' : '✗ Wrong';
+  verdict.className = 'verdict ' + (isRight ? 'good' : 'bad');
+  reasoning.innerHTML = buildReasoning(q, answer, correct);
+  fb.classList.add('shown');
+
+  document.getElementById('next-btn').style.display = 'inline-block';
+  document.getElementById('next-btn').textContent =
+    state.currentQ === state.totalQuestions - 1 ? 'Finish →' : 'Next →';
+  document.getElementById('q-score').textContent = state.correct;
+}
+
+function buildReasoning(q, picked, correct) {
+  const handBadge = `<span class="badge">${q.hand}</span>`;
+  const correctBadge = `<span class="badge">${correct}</span>`;
+  const rangeName = q.scenario.rangeName;
+  if (picked === correct) {
+    if (correct === 'Fold') {
+      return `${handBadge} is <em>not</em> in the ${rangeName}, so folding is right.`;
+    }
+    return `${handBadge} is in the ${rangeName} as a <strong>${correct}</strong>.`;
+  } else {
+    if (correct === 'Fold') {
+      return `${handBadge} is <em>not</em> in the ${rangeName}. You picked <span class="badge">${picked}</span>, but the correct play is ${correctBadge}.`;
+    }
+    return `${handBadge} is in the ${rangeName} as a <strong>${correct}</strong>. You picked <span class="badge">${picked}</span>; the correct action is ${correctBadge}.`;
+  }
+}
+
+function nextQuestion() {
+  if (state.currentQ >= state.totalQuestions - 1) {
+    finishQuiz();
+    return;
+  }
+  state.currentQ++;
+  renderQuestion();
+}
+
+function finishQuiz() {
+  document.getElementById('final-correct').textContent = state.correct;
+  document.getElementById('final-total').textContent = state.totalQuestions;
+  const pct = Math.round((state.correct / state.totalQuestions) * 100);
+  document.getElementById('final-pct').textContent = pct + '%';
+
+  // Per-position breakdown
+  const bd = document.getElementById('breakdown');
+  bd.innerHTML = '<div style="font-family:\'JetBrains Mono\', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:8px;">By position</div>';
+  for (const [pos, val] of Object.entries(state.perPosition)) {
+    const pPct = Math.round((val.right / val.total) * 100);
+    const row = document.createElement('div');
+    row.className = 'breakdown-row';
+    row.innerHTML = `<span class="label">${pos}</span><span class="num">${val.right} / ${val.total}  (${pPct}%)</span>`;
+    bd.appendChild(row);
+  }
+
+  showScreen('end');
+}
+
+function goToMenu() {
+  showScreen('start');
+}
+// Backward-compat alias in case any onclick still references the old name
+function quitQuiz() { goToMenu(); }
+
+function restart() {
+  showScreen('start');
+}
+
+function showScreen(name) {
+  for (const id of ['screen-start', 'screen-quiz', 'screen-end']) {
+    document.getElementById(id).classList.remove('active');
+  }
+  document.getElementById('screen-' + name).classList.add('active');
+}
+
+// Boot
+showScreen('start');
+
+// Keyboard shortcuts: 1/2/3 to pick, Enter for next
+document.addEventListener('keydown', (e) => {
+  if (state.answered && (e.key === 'Enter' || e.key === ' ')) {
+    if (document.getElementById('next-btn').style.display !== 'none') {
+      nextQuestion();
+      e.preventDefault();
+    }
+    return;
+  }
+  if (!state.answered && document.getElementById('screen-quiz').classList.contains('active')) {
+    const buttons = document.querySelectorAll('.answer-btn');
+    if (e.key === '1' && buttons[0]) buttons[0].click();
+    if (e.key === '2' && buttons[1]) buttons[1].click();
+    if (e.key === '3' && buttons[2]) buttons[2].click();
+  }
+});
+</script>
+</body>
+</html>

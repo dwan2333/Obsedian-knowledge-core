@@ -52,6 +52,13 @@ Think of the four positions as a **color-coded heat map** — as you move from e
 > | 🟢 **Button (BTN)**        | Hot / wide    | **~33%**                       | Best seat in poker — steal liberally             |
 > | 🔵 **Blinds (SB/BB)**      | Reactive      | Defend ~36% vs steals          | React based on the raiser; do not initiate       |
 
+> [!example] 📂 Interactive walkthrough — Range Memorization Quiz
+> A multiple-choice quiz that drills these position-based ranges. **Boundary-focused** — every question features a hand near the edge of a range (the tricky ones), with obvious folds and obvious value hands deliberately filtered out. Pick the right action (Raise, 3-bet, Flat call, Fold, or Complete) and get immediate feedback that names the exact range the hand belongs to. Counterintuitive hands you'll meet a lot: **A5s as a bluff 3-bet, AQo opens EP but folds vs an EP tight raiser, AKs flats vs tight but 3-bets vs loose, QQ flats vs tight but 3-bets vs loose, K5s 3-bets vs steal while K2s flats, T9s flats but JTs 3-bets in BTN vs loose**.
+>
+> 👉 **[Open: Skill #1 Pre-Flop Strategy Quiz](skill1_preflop_quiz_interactive.html)**
+>
+> Modes: random across all positions, by-position drills (EP-only, CO-only, BTN-only, Blinds-only), or open-raises-only / vs-raise-only. Pick 10/20/30/50 questions per session. Hosted as a self-contained HTML file in this folder.
+
 ---
 
 > [!danger] 🔴 Early Position (UTG → 2-off button) — ~14%
