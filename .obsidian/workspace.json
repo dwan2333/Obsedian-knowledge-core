@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
+                "file": "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Quadratic Formula Intuition (Main)"
+              "title": "Complex Number Fundamentals (Main)"
             }
           }
         ]
@@ -216,10 +216,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "328aa9c891b22c6e",
+  "active": "514fd0b989326cb9",
   "lastOpenFiles": [
-    "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
     "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
+    "content/Mathematics/Complex Numbers/cnf_mindmap.png",
+    "content/Mathematics/Complex Numbers/cnf_fig5_roots_unity.png",
+    "content/Mathematics/Complex Numbers/cnf_fig4_angle_sum.png",
+    "content/Mathematics/Complex Numbers/cnf_fig3_rotation_number.png",
+    "content/Mathematics/Complex Numbers/cnf_fig2_mult_by_i.png",
+    "content/Mathematics/Complex Numbers/cnf_fig1_complex_plane.png",
+    "content/Mathematics/Complex Numbers/_gen_cnf_mindmap.py",
+    "content/Mathematics/Complex Numbers/_gen_cnf_fig5_roots_unity.py",
+    "content/Mathematics/Complex Numbers/_gen_cnf_fig4_angle_sum.py",
+    "content/Mathematics/Complex Numbers/_gen_cnf_fig3_rotation_number.py",
+    "content/Mathematics/Complex Numbers/_gen_cnf_fig2_mult_by_i.py",
+    "content/Mathematics/Complex Numbers/_gen_cnf_fig1_complex_plane.py",
+    "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
+    "content/Mathematics/Complex Numbers",
+    "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
     "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
     "content/Git and Github/Best practices/Writing Good Branch Names.md",
     "content/Git and Github/Best practices/Writing Good Commit Messages.md",
@@ -231,24 +245,16 @@
     "content/Mathematics/Trigonometric/_gen_spt_mindmap.py",
     "content/Mathematics/Trigonometric/_gen_spt_fig3_unit_circle.py",
     "content/Mathematics/Trigonometric/_gen_spt_fig2_proof.py",
-    "content/Mathematics/Trigonometric/_gen_spt_fig1_setup.py",
-    "content/Mathematics/Trigonometric",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/Part 2 Beating Live 1-2 Games (Main).md",
     "content/Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill2_dont_pay_people_off.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
-    "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md.tmp.8324.1778484367290",
-    "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_preflop_quiz_interactive.html",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/hand_quizzes_1_2.md",
     "content/Poker/The Course/Part 1 The 30000 Foot View/core_strategy_philosophy.md",
     "content/Poker/The Course/Part 1 The 30000 Foot View/Part 1 The 30000 Foot View (Main).md",
-    "content/Poker/The Course/Part 1 The 30000 Foot View/the_course_part1_infographic.png",
     "content/Poker/The Course/Part 1 The 30000 Foot View/the_poker_ecosystem.md",
     "content/Poker/The Course/Part 1 The 30000 Foot View/the_poker_pyramid.md",
     "content/Git and Github/Branching/Branching (Main).md",
-    "content/Git and Github/Best practices/Writing Good Branch Names.md.tmp.15536.1778333876480",
-    "content/Git and Github/Best practices/Writing Good Branch Names.md.tmp.15536.1778333874263",
-    "content/Git and Github/Best practices/Writing Good Branch Names.md.tmp.15536.1778333521070",
     "content/index.md",
     "content/Finance/Futures/SOFR Future.md",
     "content/Git and Github/What is Git and GitHub.md",
@@ -257,13 +263,6 @@
     "content/Git and Github/Syncing/git pull.md",
     "content/Git and Github/Collaboration on GitHub/GitHub pull request.md",
     "content/Git and Github/Bare Repositories.md",
-    "content/Git and Github/Branching/git cherry-pick.md",
-    "content/Git and Github/Git Essential Commands.md",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_infographic.png",
-    "quartz/static/og-image.png",
-    "quartz/static/icon.png",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_5_grid_to_triangle.png",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_2_penultimate.png",
     "Untitled.canvas"
   ]
 }
