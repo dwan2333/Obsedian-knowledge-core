@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Git and Github/Best practices/Writing Good Branch Names.md",
+                "file": "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Writing Good Branch Names"
+              "title": "Quadratic Formula Intuition (Main)"
             }
           }
         ]
@@ -216,12 +216,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "514fd0b989326cb9",
+  "active": "328aa9c891b22c6e",
   "lastOpenFiles": [
+    "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
+    "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
+    "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
+    "content/Git and Github/Best practices/Writing Good Branch Names.md",
+    "content/Git and Github/Best practices/Writing Good Commit Messages.md",
     "content/Mathematics/Trigonometric/Visual representation On Demos.md",
     "content/Mathematics/Trigonometric/spt_fig3_unit_circle.png",
     "content/Mathematics/Trigonometric/spt_mindmap.png",
-    "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
     "content/Mathematics/Trigonometric/spt_fig2_proof.png",
     "content/Mathematics/Trigonometric/spt_fig1_setup.png",
     "content/Mathematics/Trigonometric/_gen_spt_mindmap.py",
@@ -231,7 +235,6 @@
     "content/Mathematics/Trigonometric",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/Part 2 Beating Live 1-2 Games (Main).md",
     "content/Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
-    "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill2_dont_pay_people_off.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md.tmp.8324.1778484367290",
@@ -243,10 +246,8 @@
     "content/Poker/The Course/Part 1 The 30000 Foot View/the_poker_ecosystem.md",
     "content/Poker/The Course/Part 1 The 30000 Foot View/the_poker_pyramid.md",
     "content/Git and Github/Branching/Branching (Main).md",
-    "content/Git and Github/Best practices/Writing Good Branch Names.md",
     "content/Git and Github/Best practices/Writing Good Branch Names.md.tmp.15536.1778333876480",
     "content/Git and Github/Best practices/Writing Good Branch Names.md.tmp.15536.1778333874263",
-    "content/Git and Github/Best practices/Writing Good Commit Messages.md",
     "content/Git and Github/Best practices/Writing Good Branch Names.md.tmp.15536.1778333521070",
     "content/index.md",
     "content/Finance/Futures/SOFR Future.md",
