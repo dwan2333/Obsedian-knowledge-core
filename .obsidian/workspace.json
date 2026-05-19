@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
+                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Complex Number Fundamentals (Main)"
+              "title": "Chapter 1 (Main)"
             }
           }
         ]
@@ -218,6 +218,7 @@
   },
   "active": "514fd0b989326cb9",
   "lastOpenFiles": [
+    "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
     "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
     "content/Mathematics/Complex Numbers/cnf_mindmap.png",
     "content/Mathematics/Complex Numbers/cnf_fig5_roots_unity.png",
@@ -231,7 +232,6 @@
     "content/Mathematics/Complex Numbers/_gen_cnf_fig3_rotation_number.py",
     "content/Mathematics/Complex Numbers/_gen_cnf_fig2_mult_by_i.py",
     "content/Mathematics/Complex Numbers/_gen_cnf_fig1_complex_plane.py",
-    "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
     "content/Mathematics/Complex Numbers",
     "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
     "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
