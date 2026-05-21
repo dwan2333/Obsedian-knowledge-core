@@ -357,6 +357,13 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > Hint: Imagine arranging a group of people by age, and then think about the oldest person in a chosen subgroup.
 > (b) Suppose that a large pack of Haribo gummi bears can have anywhere between 30 and 50 gummi bears. There are 5 delicious flavors: pineapple (clear), raspberry (red), orange (orange), strawberry (green, mysteriously), and lemon (yellow). There are 0 non-delicious flavors. How many possibilities are there for the composition of such a pack of gummi bears? You can leave your answer in terms of a couple binomial coefficients, but not a sum of lots of binomial coefficients.
 >
+> > [!example] 📂 Interactive walkthrough
+> > Step $n$ and $k$ up and down with the controls. Each $(k+1)$-subset of $\{1, \ldots, n+1\}$ is bucketed by the age-rank of its oldest member, and the running sum $\binom{k}{k} + \binom{k+1}{k} + \cdots + \binom{n}{k}$ tallies live to $\binom{n+1}{k+1}$ as you scroll the buckets — the hockey stick identity made visible. Carries straight over to the gummi-bear count in part (b), since the answer there is $\binom{55}{5} - \binom{34}{5}$ via the same identity applied twice:
+> >
+> > 👉 **[Open: The Hockey Stick — A Story Proof](exercise_20_hockey_stick_interactive.html)**
+> >
+> > Hosted as a self-contained HTML file in this folder. Clicking opens it in your default browser.
+>
 > > [!success]- Click to reveal solution
 > > **(a) Story.** Line up $n+1$ people by age. Count $(k+1)$-subsets by age-rank $j+1$ of the oldest member ($j \in \{k, \ldots, n\}$): $\binom{j}{k}$ ways for the younger $k$. ✓
 > >

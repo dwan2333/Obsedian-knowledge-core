@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hockey Stick · A Story Proof</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:       #f4ede0;
+    --paper-deep:  #e8dec7;
+    --ink:         #1a1f2e;
+    --ink-soft:    #595c6b;
+    --rule:        #c4b393;
+    --ice:         #2c5f7c;
+    --ice-deep:    #1f4a63;
+    --ice-glow:    rgba(44,95,124,0.15);
+    --puck:        #b73e3a;
+    --puck-glow:   rgba(183,62,58,0.18);
+    --panel:       #ebe1c6;
+    --oldest:      #b73e3a;
+    --rest:        #4a6670;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { background: var(--paper); }
+
+  body {
+    color: var(--ink);
+    font-family: 'Crimson Pro', 'Times New Roman', serif;
+    font-size: 19px;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse 70% 50% at 14% 6%,  rgba(44,95,124,0.06), transparent 65%),
+      radial-gradient(ellipse 60% 50% at 86% 94%, rgba(183,62,58,0.05), transparent 65%);
+    background-attachment: fixed;
+  }
+
+  .frame {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 56px 48px 72px;
+  }
+
+  @media (max-width: 768px) {
+    .frame { padding: 36px 20px 56px; }
+  }
+
+  /* ── HEADER ───────────────────────────────── */
+  header {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 32px;
+    margin-bottom: 48px;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ice);
+    margin-bottom: 22px;
+  }
+
+  h1 {
+    font-family: 'Crimson Pro', serif;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ink);
+  }
+
+  h1 em {
+    color: var(--puck);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  /* ── IDENTITY DISPLAY ─────────────────────── */
+  .identity {
+    margin: 36px 0 12px;
+    padding: 28px 24px;
+    background: var(--paper-deep);
+    border-left: 3px solid var(--ice);
+    text-align: center;
+    font-family: 'Crimson Pro', serif;
+  }
+
+  .identity-formula {
+    font-size: clamp(20px, 2.6vw, 26px);
+    line-height: 1.5;
+    color: var(--ink);
+    letter-spacing: 0.005em;
+  }
+
+  .identity-formula .frak  { font-style: italic; }
+  .identity-formula .ice   { color: var(--ice); font-weight: 500; }
+  .identity-formula .puck  { color: var(--puck); font-weight: 500; }
+
+  .identity-formula .equals {
+    color: var(--ink-soft);
+    margin: 0 0.4em;
+    font-style: italic;
+  }
+
+  .identity-caption {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: 14px;
+  }
+
+  /* ── SECTIONS ─────────────────────────────── */
+  section { margin-bottom: 48px; }
+
+  h2 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 34px;
+    line-height: 1.1;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 18px;
+    letter-spacing: -0.01em;
+  }
+
+  .story p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    max-width: 780px;
+  }
+
+  .story em       { color: var(--puck); font-style: italic; font-weight: 500; }
+  .story strong   { color: var(--ink); font-weight: 600; }
+  .story .ice     { color: var(--ice); font-weight: 500; }
+
+  .story-formula {
+    font-family: 'Crimson Pro', serif;
+    font-size: 19px;
+    text-align: center;
+    margin: 22px 0;
+    line-height: 1.6;
+    color: var(--ink);
+    font-style: italic;
+  }
+
+  .story-formula .puck { color: var(--puck); font-weight: 500; font-style: normal; }
+  .story-formula .ice  { color: var(--ice); font-weight: 500; font-style: normal; }
+  .story-formula .equals { color: var(--ink-soft); margin: 0 0.4em; }
+
+  /* ── CONTROLS ─────────────────────────────── */
+  .controls-row {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    padding: 16px 22px;
+    background: var(--panel);
+    border-left: 2px solid var(--ink);
+  }
+
+  .stepper {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .stepper-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .step-btn {
+    background: transparent;
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    width: 32px;
+    height: 32px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.15s;
+    line-height: 1;
+  }
+
+  .step-btn:hover:not(:disabled) {
+    border-color: var(--puck);
+    color: var(--puck);
+  }
+
+  .step-btn:disabled { opacity: 0.25; cursor: not-allowed; }
+
+  .step-val {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 32px;
+    min-width: 32px;
+    text-align: center;
+    color: var(--puck);
+    line-height: 1;
+    font-weight: 500;
+  }
+
+  .setup-display {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+
+  .setup-display b { color: var(--ink); font-weight: 700; }
+
+  /* ── TWO-COLUMN LAYOUT ────────────────────── */
+  .interactive-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  @media (max-width: 960px) {
+    .interactive-layout { grid-template-columns: 1fr; }
+  }
+
+  /* ── COMMITTEE GROUPS ─────────────────────── */
+  .panel-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+  }
+
+  .committees-panel {
+    background: var(--paper-deep);
+    padding: 22px 22px 20px;
+    border-top: 2px solid var(--ice);
+    max-height: 720px;
+    overflow-y: auto;
+  }
+
+  .committees-panel::-webkit-scrollbar { width: 6px; }
+  .committees-panel::-webkit-scrollbar-track { background: transparent; }
+  .committees-panel::-webkit-scrollbar-thumb { background: var(--rule); }
+
+  .group {
+    margin-bottom: 20px;
+  }
+
+  .group:last-child { margin-bottom: 0; }
+
+  .group-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding: 10px 0 8px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 12px;
+  }
+
+  .group-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .group-oldest {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--puck);
+    font-weight: 500;
+  }
+
+  .group-formula {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+    margin-left: auto;
+  }
+
+  .group-formula b { color: var(--ink); font-weight: 700; }
+  .group-formula .ice { color: var(--ice); font-weight: 700; }
+
+  .committees-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 5px;
+  }
+
+  .committee {
+    padding: 6px 9px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    transition: all 0.15s;
+    line-height: 1.3;
+  }
+
+  .committee:hover {
+    border-color: var(--puck);
+    background: var(--puck-glow);
+  }
+
+  .committee .rest    { color: var(--rest); }
+  .committee .oldest  { color: var(--puck); font-weight: 700; }
+  .committee .pun     { color: var(--ink-soft); margin: 0 1px; }
+
+  /* ── PASCAL TRIANGLE ──────────────────────── */
+  .pascal-panel {
+    background: var(--paper-deep);
+    padding: 22px 18px 24px;
+    border-top: 2px solid var(--puck);
+    position: sticky;
+    top: 20px;
+  }
+
+  .pascal-grid {
+    display: grid;
+    justify-content: center;
+    gap: 4px 6px;
+    margin: 12px 0 18px;
+  }
+
+  .pascal-cell {
+    width: 44px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    background: transparent;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+    font-weight: 500;
+    position: relative;
+  }
+
+  .pascal-cell.empty {
+    visibility: hidden;
+  }
+
+  .pascal-cell.diagonal {
+    background: var(--ice-glow);
+    border-color: var(--ice);
+    color: var(--ice-deep);
+    font-weight: 700;
+  }
+
+  .pascal-cell.blade {
+    background: var(--puck-glow);
+    border-color: var(--puck);
+    color: var(--puck);
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .pascal-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink);
+    letter-spacing: 0.04em;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .legend-chip {
+    width: 16px;
+    height: 16px;
+    border: 1px solid;
+    flex-shrink: 0;
+  }
+
+  .legend-chip.ice {
+    background: var(--ice-glow);
+    border-color: var(--ice);
+  }
+
+  .legend-chip.puck {
+    background: var(--puck-glow);
+    border-color: var(--puck);
+  }
+
+  /* ── TOTALS ───────────────────────────────── */
+  .totals {
+    margin-top: 36px;
+    padding: 24px 28px;
+    background: var(--ink);
+    color: var(--paper);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 28px;
+    align-items: center;
+  }
+
+  @media (max-width: 600px) {
+    .totals { grid-template-columns: 1fr; }
+  }
+
+  .totals-formula {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    line-height: 1.85;
+    letter-spacing: 0.03em;
+  }
+
+  .totals-formula b   { color: var(--paper); font-weight: 700; }
+  .totals-formula .puck { color: #ec7c70; font-weight: 700; }
+  .totals-formula .equals { color: rgba(244,237,224,0.5); margin: 0 0.4em; }
+
+  .totals-bignum {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: clamp(46px, 7vw, 76px);
+    line-height: 1;
+    color: #ec7c70;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  /* ── NOTE ─────────────────────────────────── */
+  .note {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 48px;
+  }
+
+  @media (max-width: 760px) {
+    .note { grid-template-columns: 1fr; gap: 12px; }
+  }
+
+  .note-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .note-body p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    max-width: 720px;
+  }
+
+  .note-body em      { color: var(--puck); font-style: italic; font-weight: 500; }
+  .note-body strong  { color: var(--ink); font-weight: 600; }
+  .note-body .ice    { color: var(--ice); font-weight: 500; }
+
+  /* ── FOOTER ───────────────────────────────── */
+  footer {
+    margin-top: 64px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* ── ANIMATION ────────────────────────────── */
+  @keyframes drift {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  header             { animation: drift 0.7s ease both; }
+  section.story      { animation: drift 0.7s ease 0.1s both; }
+  section.interactive{ animation: drift 0.7s ease 0.2s both; }
+  .note              { animation: drift 0.7s ease 0.4s both; }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .group { animation: fade-in 0.3s ease both; }
+  .committee { animation: fade-in 0.3s ease both; }
+</style>
+</head>
+<body>
+<div class="frame">
+
+  <header>
+    <div class="eyebrow">Exercise · Hockey Stick Identity</div>
+    <h1>The <em>Hockey</em> Stick</h1>
+    <div class="identity">
+      <div class="identity-formula">
+        <span class="ice frak">(</span><span class="ice frak"><sup>k</sup>⁄<sub>k</sub></span><span class="ice frak">)</span>
+        + <span class="ice frak">(</span><span class="ice frak"><sup>k+1</sup>⁄<sub>k</sub></span><span class="ice frak">)</span>
+        + <span class="ice frak">(</span><span class="ice frak"><sup>k+2</sup>⁄<sub>k</sub></span><span class="ice frak">)</span>
+        + ⋯ + <span class="ice frak">(</span><span class="ice frak"><sup>n</sup>⁄<sub>k</sub></span><span class="ice frak">)</span>
+        <span class="equals">=</span>
+        <span class="puck frak">(</span><span class="puck frak"><sup>n+1</sup>⁄<sub>k+1</sub></span><span class="puck frak">)</span>
+      </div>
+      <div class="identity-caption">— for all positive integers n ≥ k —</div>
+    </div>
+  </header>
+
+  <section class="story">
+    <h2>The story</h2>
+    <p>Both sides count <strong>the same thing</strong>: the number of <em>(k+1)-element committees</em> we can form from <em>n+1 people</em>, lined up by age from youngest (1) to oldest (n+1). The RHS counts these directly: <span class="puck" style="font-style:italic;">C(n+1, k+1)</span>.</p>
+
+    <p>The LHS partitions the committees by their <em>oldest member</em>. If the oldest person on the committee is <strong>person j</strong> (where j ranges from <em>k+1</em> up to <em>n+1</em>, since you need at least k younger people to fill out the committee), then the remaining <span class="ice">k members</span> are chosen from the <span class="ice">j−1 people younger than j</span>. That's <span class="ice">C(j−1, k)</span> ways.</p>
+
+    <p>Letting j run from k+1 to n+1, the LHS exponents (j−1) run from k to n — exactly the identity:</p>
+
+    <div class="story-formula">
+      ∑<sub style="font-size:0.7em;">j=k+1..n+1</sub>&nbsp;<span class="ice">C(j−1, k)</span> &nbsp;<span class="equals">=</span>&nbsp; <span class="puck">C(n+1, k+1)</span>
+    </div>
+    <p>Every committee has exactly one oldest member, so summing across all possible oldest-ages counts each committee once. The two sides agree.</p>
+  </section>
+
+  <section class="interactive">
+    <h2>See it for yourself</h2>
+
+    <div class="controls-row">
+      <div class="stepper">
+        <span class="stepper-label">choose n</span>
+        <button class="step-btn" id="n-down">−</button>
+        <span class="step-val" id="n-val">5</span>
+        <button class="step-btn" id="n-up">+</button>
+      </div>
+      <div class="stepper">
+        <span class="stepper-label">choose k</span>
+        <button class="step-btn" id="k-down">−</button>
+        <span class="step-val" id="k-val">2</span>
+        <button class="step-btn" id="k-up">+</button>
+      </div>
+      <div class="setup-display">
+        <b id="setup-people">6</b> people  ·  pick committees of size <b id="setup-size">3</b>
+      </div>
+    </div>
+
+    <div class="interactive-layout">
+      <div class="committees-panel">
+        <div class="panel-label">— committees grouped by oldest member —</div>
+        <div id="groups"></div>
+      </div>
+
+      <div class="pascal-panel">
+        <div class="panel-label">— hockey stick in pascal's triangle —</div>
+        <div class="pascal-grid" id="pascal"></div>
+        <div class="pascal-legend">
+          <div class="legend-item">
+            <div class="legend-chip ice"></div>
+            <span>handle · LHS summands C(j, k)</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-chip puck"></div>
+            <span>blade · RHS total C(n+1, k+1)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="totals">
+      <div class="totals-formula" id="totals-formula"></div>
+      <div class="totals-bignum" id="totals-bignum">20</div>
+    </div>
+  </section>
+
+  <div class="note">
+    <div class="note-tag">— Why the name</div>
+    <div class="note-body">
+      <p>If you highlight the LHS terms in Pascal's triangle, they trace a <em>diagonal line</em> going down-and-to-the-right — the <strong>handle</strong> of the hockey stick. The RHS term sits one row below the bottom of that handle, offset to the right — the <strong>blade</strong>. The identity says: the handle's sum equals the blade's value.</p>
+      <p>This is a special case of a more general phenomenon: every entry in Pascal's triangle equals the sum of the entries on the diagonal above and to its left, terminating at the edge. It falls out of repeatedly applying <span class="ice">Pascal's rule</span>: C(n+1, k+1) = C(n, k) + C(n, k+1), and then expanding the second term the same way. Try the algebraic version on paper — it's a satisfying telescope.</p>
+      <p>Worth noticing: this is the discrete analogue of integration. The RHS C(n+1, k+1) is essentially a "running total" of the LHS terms C(j, k) for increasing j — the same structural pattern as ∫xᵏ dx = xᵏ⁺¹/(k+1). Binomial coefficients have a deep parallel with polynomials, and identities like this one are where the parallel really shows.</p>
+    </div>
+  </div>
+
+  <footer>
+    <span>The hockey stick identity</span>
+    <span>Interactive demonstration</span>
+  </footer>
+
+</div>
+
+<script>
+(function() {
+  const state = { n: 5, k: 2 };
+  const N_MIN = 2, N_MAX = 7;
+  const K_MIN = 1, K_MAX = 4;
+
+  // ── BINOMIAL ────────────────────────────────
+  function binomial(n, k) {
+    if (k < 0 || k > n) return 0;
+    if (k === 0 || k === n) return 1;
+    k = Math.min(k, n - k);
+    let result = 1;
+    for (let i = 0; i < k; i++) {
+      result = result * (n - i) / (i + 1);
+    }
+    return Math.round(result);
+  }
+
+  // ── ENUMERATE k-SUBSETS OF [1..n] ───────────
+  function subsetsOf(pool, size) {
+    if (size === 0) return [[]];
+    if (size > pool.length) return [];
+    const result = [];
+    for (let i = 0; i <= pool.length - size; i++) {
+      const head = pool[i];
+      const tailSubs = subsetsOf(pool.slice(i + 1), size - 1);
+      for (const t of tailSubs) {
+        result.push([head, ...t]);
+      }
+    }
+    return result;
+  }
+
+  function range(lo, hi) {
+    const out = [];
+    for (let i = lo; i <= hi; i++) out.push(i);
+    return out;
+  }
+
+  // ── FORMAT A COMMITTEE ──────────────────────
+  function formatCommittee(rest, oldest) {
+    const open = '<span class="pun">{</span>';
+    const close = '<span class="pun">}</span>';
+    const sep = '<span class="pun">,&nbsp;</span>';
+    const restStr = rest.map(x => `<span class="rest">${x}</span>`).join(sep);
+    const oldestStr = `<span class="oldest">${oldest}</span>`;
+    return open + (rest.length ? restStr + sep : '') + oldestStr + close;
+  }
+
+  // ── RENDER PASCAL TRIANGLE ──────────────────
+  function renderPascal() {
+    const { n, k } = state;
+    const totalPeople = n + 1;
+    const maxRow = totalPeople; // we want to show through row n+1
+
+    const pascalDiv = document.getElementById('pascal');
+    pascalDiv.innerHTML = '';
+    pascalDiv.style.gridTemplateColumns = `repeat(${maxRow + 1}, 44px)`;
+
+    // For each row r from 0 to maxRow, render r+1 cells (C(r,0), C(r,1), ..., C(r,r))
+    // Cells beyond r in that row are made empty.
+    for (let r = 0; r <= maxRow; r++) {
+      for (let c = 0; c <= maxRow; c++) {
+        const cell = document.createElement('div');
+        if (c > r) {
+          cell.className = 'pascal-cell empty';
+          cell.textContent = '·';
+        } else {
+          cell.className = 'pascal-cell';
+          cell.textContent = binomial(r, c);
+
+          // Highlight handle: cells where column = k AND row in [k, n]
+          if (c === k && r >= k && r <= n) {
+            cell.classList.add('diagonal');
+          }
+          // Highlight blade: C(n+1, k+1)
+          if (r === n + 1 && c === k + 1) {
+            cell.classList.add('blade');
+          }
+        }
+        pascalDiv.appendChild(cell);
+      }
+    }
+  }
+
+  // ── RENDER COMMITTEES ───────────────────────
+  function renderCommittees() {
+    const { n, k } = state;
+    const totalPeople = n + 1;
+    const committeeSize = k + 1;
+
+    document.getElementById('setup-people').textContent = totalPeople;
+    document.getElementById('setup-size').textContent = committeeSize;
+
+    const groupsDiv = document.getElementById('groups');
+    groupsDiv.innerHTML = '';
+
+    let runningTotal = 0;
+    const lhsTerms = [];
+
+    // oldest member j ranges from k+1 to n+1
+    for (let j = committeeSize; j <= totalPeople; j++) {
+      const youngerPool = range(1, j - 1);
+      const restSubsets = subsetsOf(youngerPool, k);
+      const groupCount = binomial(j - 1, k);
+      runningTotal += groupCount;
+      lhsTerms.push({ j, groupCount });
+
+      const groupDiv = document.createElement('div');
+      groupDiv.className = 'group';
+
+      const header = document.createElement('div');
+      header.className = 'group-header';
+      header.innerHTML =
+        `<span class="group-tag">oldest</span>` +
+        `<span class="group-oldest">j = ${j}</span>` +
+        `<span class="group-formula">` +
+          `<span class="ice">C(${j - 1}, ${k})</span> = ` +
+          `<b>${groupCount}</b> committee${groupCount === 1 ? '' : 's'}` +
+        `</span>`;
+      groupDiv.appendChild(header);
+
+      const grid = document.createElement('div');
+      grid.className = 'committees-grid';
+
+      for (const rest of restSubsets) {
+        const committee = document.createElement('div');
+        committee.className = 'committee';
+        committee.innerHTML = formatCommittee(rest, j);
+        grid.appendChild(committee);
+      }
+      groupDiv.appendChild(grid);
+      groupsDiv.appendChild(groupDiv);
+    }
+
+    // totals
+    const rhs = binomial(n + 1, k + 1);
+    const lhsExpr = lhsTerms
+      .map(t => `<b>${t.groupCount}</b>`)
+      .join(' + ');
+    const lhsBinoms = lhsTerms
+      .map(t => `C(${t.j - 1},${state.k})`)
+      .join(' + ');
+    document.getElementById('totals-formula').innerHTML =
+      `${lhsBinoms}<br>` +
+      `= ${lhsExpr} = <span class="puck">${runningTotal}</span> ` +
+      `<span class="equals">=</span> ` +
+      `C(${n + 1}, ${k + 1})`;
+    document.getElementById('totals-bignum').textContent = rhs;
+  }
+
+  // ── MAIN RENDER ─────────────────────────────
+  function render() {
+    // Ensure k <= n
+    if (state.k > state.n) state.k = state.n;
+
+    document.getElementById('n-val').textContent = state.n;
+    document.getElementById('k-val').textContent = state.k;
+    document.getElementById('n-down').disabled = state.n <= N_MIN || state.n <= state.k;
+    document.getElementById('n-up').disabled   = state.n >= N_MAX;
+    document.getElementById('k-down').disabled = state.k <= K_MIN;
+    document.getElementById('k-up').disabled   = state.k >= K_MAX || state.k >= state.n;
+
+    renderCommittees();
+    renderPascal();
+  }
+
+  // ── EVENT WIRING ────────────────────────────
+  document.getElementById('n-down').addEventListener('click', () => {
+    if (state.n > N_MIN && state.n > state.k) { state.n--; render(); }
+  });
+  document.getElementById('n-up').addEventListener('click', () => {
+    if (state.n < N_MAX) { state.n++; render(); }
+  });
+  document.getElementById('k-down').addEventListener('click', () => {
+    if (state.k > K_MIN) { state.k--; render(); }
+  });
+  document.getElementById('k-up').addEventListener('click', () => {
+    if (state.k < K_MAX && state.k < state.n) { state.k++; render(); }
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
