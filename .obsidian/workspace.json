@@ -232,6 +232,8 @@
   },
   "active": "514fd0b989326cb9",
   "lastOpenFiles": [
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.17344.e3b217a00715",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/exercise_20_hockey_stick_interactive.html",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
@@ -261,7 +263,6 @@
     "content/Mathematics/Trigonometric/spt_fig1_setup.png",
     "content/Mathematics/Trigonometric/_gen_spt_mindmap.py",
     "content/Mathematics/Trigonometric/_gen_spt_fig3_unit_circle.py",
-    "content/Mathematics/Trigonometric/_gen_spt_fig2_proof.py",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/Part 2 Beating Live 1-2 Games (Main).md",
     "content/Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill2_dont_pay_people_off.md",
@@ -277,7 +278,6 @@
     "content/Git and Github/What is Git and GitHub.md",
     "content/Git and Github/Collaboration on GitHub/GitHub Fork Request.md",
     "content/Git and Github/Syncing/git push.md",
-    "content/Git and Github/Syncing/git pull.md",
     "Untitled.canvas"
   ]
 }
