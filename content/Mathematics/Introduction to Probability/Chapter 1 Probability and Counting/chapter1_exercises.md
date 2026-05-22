@@ -389,6 +389,13 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > It is then just basic algebra (not required for this problem) to check that the square of the right-hand side in (a) is the right-hand side in (b).
 > Hint: Imagine choosing a number between 1 and $n$ and then choosing 3 numbers between 0 and $n$ smaller than the original number, with replacement. Then consider cases based on how many distinct numbers were chosen.
 >
+> > [!example] 📂 Interactive walkthrough
+> > Step $n$ up and down with the controls and watch part (b)'s identity unfold at $n = 5$ and beyond. The same set of 4-tuples $(x, y, z, w)$ with $w \in \{1, \ldots, n\}$ and $x, y, z \in \{0, \ldots, w-1\}$ is counted **two ways**: first by fixing the strict-max $w = k$ (giving $\sum_{k=1}^{n} k^3$), and second by casing on how many distinct values appear among $\{x, y, z, w\}$ (giving $6\binom{n+1}{4} + 6\binom{n+1}{3} + \binom{n+1}{2}$). Both counts tally live to the same total — the story proof of the cubes identity made visible:
+> >
+> > 👉 **[Open: Sum of Cubes — Two Stories](exercise_22_sum_of_cubes_interactive.html)**
+> >
+> > Hosted as a self-contained HTML file in this folder. Clicking opens it in your default browser.
+>
 > > [!success]- Click to reveal solution
 > > **(a) Story (round-robin).** $n+1$ players, every pair plays once: $\binom{n+1}{2}$ total games. Counted sequentially: player 1 plays $n$, player 2 plays $n-1$ new opponents, ..., summing to $1 + 2 + \cdots + n$. ✓
 > >

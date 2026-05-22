@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sum of Cubes · n = 5 · Two Stories</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:       #f5ecd6;
+    --paper-deep:  #ebe0c4;
+    --paper-deeper:#dfd2b2;
+    --ink:         #1e2330;
+    --ink-soft:    #5a5c66;
+    --rule:        #c4b393;
+    --teal:        #1d6478;
+    --teal-deep:   #134756;
+    --teal-glow:   rgba(29,100,120,0.10);
+    --copper:      #c2683d;
+    --copper-deep: #a35025;
+    --copper-glow: rgba(194,104,61,0.10);
+    --highlight:   #d4a017;
+    --highlight-bg:rgba(212,160,23,0.22);
+    --x-bg:        rgba(30,35,48,0.07);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { background: var(--paper); }
+
+  body {
+    color: var(--ink);
+    font-family: 'Crimson Pro', 'Times New Roman', serif;
+    font-size: 19px;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse 70% 50% at 14% 6%,  rgba(29,100,120,0.06), transparent 65%),
+      radial-gradient(ellipse 60% 50% at 86% 94%, rgba(194,104,61,0.06), transparent 65%);
+    background-attachment: fixed;
+  }
+
+  .frame {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 56px 48px 72px;
+  }
+
+  @media (max-width: 768px) {
+    .frame { padding: 36px 20px 56px; }
+  }
+
+  /* ── HEADER ───────────────────────────────── */
+  header {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 32px;
+    margin-bottom: 40px;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 22px;
+  }
+
+  h1 {
+    font-family: 'Crimson Pro', serif;
+    font-size: clamp(46px, 6.5vw, 84px);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ink);
+  }
+
+  h1 em { color: var(--copper); font-style: italic; font-weight: 500; }
+
+  .identity {
+    margin: 30px 0 12px;
+    padding: 24px 22px;
+    background: var(--paper-deep);
+    border-left: 3px solid var(--ink);
+    text-align: center;
+    font-family: 'Crimson Pro', serif;
+  }
+
+  .identity-formula {
+    font-size: clamp(19px, 2.4vw, 24px);
+    line-height: 1.5;
+    color: var(--ink);
+  }
+
+  .identity-formula .teal   { color: var(--teal);  font-weight: 500; }
+  .identity-formula .copper { color: var(--copper); font-weight: 500; }
+  .identity-formula .frak   { font-style: italic; }
+  .identity-formula .equals { color: var(--ink-soft); margin: 0 0.4em; font-style: italic; }
+
+  /* ── SECTIONS ─────────────────────────────── */
+  section { margin-bottom: 40px; }
+
+  .hint-bar {
+    margin: 30px 0 24px;
+    padding: 14px 22px;
+    background: var(--highlight-bg);
+    border-left: 3px solid var(--highlight);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+
+  .hint-bar strong { color: var(--ink); font-weight: 600; }
+  .hint-bar em { color: var(--copper-deep); font-style: italic; font-weight: 500; }
+
+  /* ── CONTROLS ─────────────────────────────── */
+  .controls-row {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    padding: 16px 22px;
+    background: var(--paper-deep);
+    border-left: 2px solid var(--ink);
+  }
+
+  .stepper { display: flex; align-items: center; gap: 14px; }
+
+  .stepper-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .step-btn {
+    background: transparent;
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    width: 32px;
+    height: 32px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.15s;
+    line-height: 1;
+  }
+
+  .step-btn:hover:not(:disabled) {
+    border-color: var(--ink);
+    background: var(--paper-deeper);
+  }
+
+  .step-btn:disabled { opacity: 0.25; cursor: not-allowed; }
+
+  .step-val {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 32px;
+    min-width: 32px;
+    text-align: center;
+    color: var(--ink);
+    line-height: 1;
+    font-weight: 500;
+  }
+
+  .setup-display {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+
+  .setup-display b { color: var(--ink); font-weight: 700; }
+
+  /* ── TWO-COLUMN LAYOUT ────────────────────── */
+  .views {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    align-items: start;
+  }
+
+  @media (max-width: 1100px) {
+    .views { grid-template-columns: 1fr; }
+  }
+
+  .view-panel {
+    background: var(--paper-deep);
+    padding: 22px 22px 20px;
+    border-top: 2px solid;
+  }
+
+  .view-panel.lhs { border-top-color: var(--teal); }
+  .view-panel.rhs { border-top-color: var(--copper); }
+
+  .view-header {
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .view-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .view-panel.lhs .view-tag { color: var(--teal); }
+  .view-panel.rhs .view-tag { color: var(--copper); }
+
+  .view-title {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 6px;
+    font-weight: 400;
+  }
+
+  .view-subtitle {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.03em;
+  }
+
+  /* ── GROUPS ───────────────────────────────── */
+  .group { margin-bottom: 18px; }
+  .group:last-child { margin-bottom: 0; }
+
+  .group-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 6px 0 8px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed var(--rule);
+  }
+
+  .group-key {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 500;
+  }
+
+  .lhs .group-key { color: var(--teal); }
+  .rhs .group-key { color: var(--copper); }
+
+  .group-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+    letter-spacing: 0.05em;
+    margin-left: auto;
+  }
+
+  .group-count b { color: var(--ink); font-weight: 700; font-size: 12.5px; }
+  .group-count .teal   { color: var(--teal-deep); font-weight: 700; }
+  .group-count .copper { color: var(--copper-deep); font-weight: 700; }
+
+  /* ── TUPLE TILES (compact for big n) ──────── */
+  .tuples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+    gap: 4px;
+  }
+
+  .tuple {
+    padding: 5px 4px 4px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    transition: all 0.15s;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .tuple:hover {
+    border-color: var(--ink);
+    background: var(--paper-deeper);
+    z-index: 2;
+  }
+
+  .tuple .x {
+    color: var(--ink);
+    font-weight: 700;
+    background: var(--x-bg);
+    padding: 0px 3px;
+    margin-right: 1px;
+  }
+
+  .tuple .sep { color: var(--ink-soft); margin: 0 1px; opacity: 0.5; }
+  .tuple .v   { color: var(--ink-soft); }
+
+  /* ── LINKED HIGHLIGHT STATE ───────────────── */
+  .tuple.linked {
+    background: var(--highlight-bg);
+    border-color: var(--highlight);
+    transform: scale(1.08);
+    z-index: 3;
+    box-shadow: 0 2px 8px rgba(212,160,23,0.35);
+  }
+
+  .tuple.linked .x {
+    background: var(--highlight);
+    color: var(--paper);
+  }
+
+  .tuple.linked .v { color: var(--ink); font-weight: 700; }
+
+  /* ── TOTALS ───────────────────────────────── */
+  .totals {
+    margin-top: 32px;
+    padding: 24px 28px;
+    background: var(--ink);
+    color: var(--paper);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 28px;
+    align-items: center;
+  }
+
+  @media (max-width: 760px) {
+    .totals { grid-template-columns: 1fr; gap: 18px; text-align: center; }
+  }
+
+  .totals-side {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.85;
+    letter-spacing: 0.03em;
+  }
+
+  .totals-side.right { text-align: right; }
+  @media (max-width: 760px) { .totals-side.right { text-align: center; } }
+
+  .totals-side b   { color: var(--paper); font-weight: 700; }
+  .totals-side .teal   { color: #67a9ba; font-weight: 700; }
+  .totals-side .copper { color: #e8a075; font-weight: 700; }
+
+  .totals-side .label {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(245,236,214,0.55);
+    margin-bottom: 4px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .totals-equals {
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: clamp(56px, 9vw, 96px);
+    line-height: 1;
+    color: var(--paper);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+  }
+
+  .totals-bignum {
+    color: var(--paper);
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+    font-size: 38px;
+    line-height: 1;
+    margin-top: 6px;
+    font-weight: 400;
+  }
+
+  /* ── NOTE ─────────────────────────────────── */
+  .note {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 48px;
+  }
+
+  @media (max-width: 760px) {
+    .note { grid-template-columns: 1fr; gap: 12px; }
+  }
+
+  .note-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .note-body p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    max-width: 760px;
+  }
+
+  .note-body em      { font-style: italic; font-weight: 500; }
+  .note-body em.teal { color: var(--teal); }
+  .note-body em.copper { color: var(--copper); }
+  .note-body strong  { color: var(--ink); font-weight: 600; }
+
+  .note-formula {
+    background: var(--paper-deep);
+    padding: 14px 20px;
+    margin: 14px 0 18px;
+    border-left: 2px solid var(--ink);
+    font-family: 'Crimson Pro', serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink);
+    font-style: italic;
+  }
+
+  .note-formula b { color: var(--ink); font-style: normal; font-weight: 600; }
+
+  /* ── FOOTER ───────────────────────────────── */
+  footer {
+    margin-top: 56px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* ── ANIMATION ────────────────────────────── */
+  @keyframes drift {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  header             { animation: drift 0.7s ease both; }
+  .hint-bar          { animation: drift 0.7s ease 0.1s both; }
+  section.interactive{ animation: drift 0.7s ease 0.2s both; }
+  .note              { animation: drift 0.7s ease 0.4s both; }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .group { animation: fade-in 0.3s ease both; }
+  .tuple { animation: fade-in 0.3s ease both; }
+</style>
+</head>
+<body>
+<div class="frame">
+
+  <header>
+    <div class="eyebrow">Sum of cubes · Story proof for <span style="color:var(--ink);font-weight:700;">n = 5</span></div>
+    <h1><span class="teal" style="color:var(--teal);font-weight:500;">1³ + 2³ + ⋯ + n³</span> <em>=</em> <span class="copper" style="color:var(--copper);font-weight:500;">RHS</span></h1>
+    <div class="identity">
+      <div class="identity-formula">
+        <span class="teal">1³ + 2³ + 3³ + 4³ + 5³</span>
+        <span class="equals">=</span>
+        <span class="copper">6 <span class="frak">(</span><span class="frak"><sup>6</sup>⁄<sub>4</sub></span><span class="frak">)</span>
+        + 6 <span class="frak">(</span><span class="frak"><sup>6</sup>⁄<sub>3</sub></span><span class="frak">)</span>
+        + <span class="frak">(</span><span class="frak"><sup>6</sup>⁄<sub>2</sub></span><span class="frak">)</span></span>
+        <span class="equals">=</span>
+        <span class="copper" style="font-weight:600;">225</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="hint-bar">
+    <strong>Try this:</strong> <em>hover or tap any tuple</em> below. The same tuple lights up on the other side too — proving that the left view and the right view show the <strong>exact same 225 tuples</strong>, just sorted into different bins.
+  </div>
+
+  <section class="interactive">
+    <div class="controls-row">
+      <div class="stepper">
+        <span class="stepper-label">choose n</span>
+        <button class="step-btn" id="n-down">−</button>
+        <span class="step-val" id="n-val">5</span>
+        <button class="step-btn" id="n-up">+</button>
+      </div>
+      <div class="setup-display">
+        Pool: <b id="pool">{0, 1, 2, 3, 4, 5}</b>
+        &nbsp;·&nbsp; total tuples shown: <b id="tuple-count">225</b>
+      </div>
+    </div>
+
+    <div class="views">
+      <!-- ── LHS VIEW: grouped by x ──────────── -->
+      <div class="view-panel lhs">
+        <div class="view-header">
+          <div class="view-tag">First story · grouped by x</div>
+          <div class="view-title">x ranges from 1 to n</div>
+          <div class="view-subtitle">each group contributes x³ tuples</div>
+        </div>
+        <div id="lhs-groups"></div>
+      </div>
+
+      <!-- ── RHS VIEW: grouped by distinctness ─ -->
+      <div class="view-panel rhs">
+        <div class="view-header">
+          <div class="view-tag">Second story · grouped by distinct count</div>
+          <div class="view-title">|{x, a, b, c}| ∈ {2, 3, 4}</div>
+          <div class="view-subtitle">x is highlighted in every tuple</div>
+        </div>
+        <div id="rhs-groups"></div>
+      </div>
+    </div>
+
+    <div class="totals">
+      <div class="totals-side">
+        <div class="label">First story · grouped by x</div>
+        <span id="lhs-sum"></span>
+        <div class="totals-bignum"><span class="teal" id="lhs-total">225</span></div>
+      </div>
+      <div class="totals-equals">=</div>
+      <div class="totals-side right">
+        <div class="label">Second story · grouped by distinctness</div>
+        <span id="rhs-sum"></span>
+        <div class="totals-bignum"><span class="copper" id="rhs-total">225</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="note">
+    <div class="note-tag">— The takeaway</div>
+    <div class="note-body">
+      <p>For <em>n = 5</em>, the left side counts 1³+2³+3³+4³+5³ = 1+8+27+64+125 = <strong>225</strong> tuples. The right side counts the same tuples by sorting them according to how many distinct numbers they contain — <strong>90 + 120 + 15 = 225</strong>.</p>
+      <p>The <em class="copper">90 tuples</em> with 4 distinct values come from choosing 4 numbers out of {0,...,5} in C(6,4) = 15 ways, then arranging the smaller three in 3! = 6 ways. The <em class="copper">120 tuples</em> with 3 distinct values come from C(6,3) = 20 choices times 6 arrangements (two values, both required to appear, in three slots: 2³−2 = 6). The <em class="copper">15 tuples</em> with 2 distinct values come from C(6,2) = 15 choices times 1 arrangement.</p>
+      <p>Two stories. Same 225 tuples. The identity isn't a coincidence — it's two correct counts of one collection. And by the side note from problem (a), the LHS also equals (1+2+3+4+5)² = 15² = <strong>225</strong>, which is why <em>sum of first n cubes = (sum of first n integers)²</em>.</p>
+    </div>
+  </div>
+
+  <footer>
+    <span>Sum of cubes · n = 5</span>
+    <span>Hover or tap any tuple to link the two stories</span>
+  </footer>
+
+</div>
+
+<script>
+(function() {
+  const state = { n: 5, linkedKey: null, pinned: false };
+  const N_MIN = 2, N_MAX = 6;
+
+  // ── BINOMIAL ────────────────────────────────
+  function binomial(n, k) {
+    if (k < 0 || k > n) return 0;
+    if (k === 0 || k === n) return 1;
+    k = Math.min(k, n - k);
+    let result = 1;
+    for (let i = 0; i < k; i++) {
+      result = result * (n - i) / (i + 1);
+    }
+    return Math.round(result);
+  }
+
+  // ── ENUMERATE TUPLES ────────────────────────
+  function generateTuples(n) {
+    const tuples = [];
+    for (let x = 1; x <= n; x++) {
+      for (let a = 0; a < x; a++) {
+        for (let b = 0; b < x; b++) {
+          for (let c = 0; c < x; c++) {
+            tuples.push([x, a, b, c]);
+          }
+        }
+      }
+    }
+    return tuples;
+  }
+
+  function distinctCount(t) {
+    return new Set(t).size;
+  }
+
+  function tupleKey(t) {
+    return t.join(',');
+  }
+
+  // ── FORMAT A TUPLE ──────────────────────────
+  function formatTuple([x, a, b, c]) {
+    return (
+      '<span class="x">' + x + '</span>' +
+      '<span class="sep">·</span>' +
+      '<span class="v">' + a + '</span>' +
+      '<span class="v">' + b + '</span>' +
+      '<span class="v">' + c + '</span>'
+    );
+  }
+
+  function range(lo, hi) {
+    const out = [];
+    for (let i = lo; i <= hi; i++) out.push(i);
+    return out;
+  }
+
+  // ── LINKED HIGHLIGHTING ─────────────────────
+  function applyLinkedHighlight(key) {
+    document.querySelectorAll('.tuple.linked').forEach(el => el.classList.remove('linked'));
+    if (key) {
+      document.querySelectorAll('.tuple[data-key="' + key + '"]').forEach(el => {
+        el.classList.add('linked');
+      });
+    }
+  }
+
+  function setupTupleEvents() {
+    document.querySelectorAll('.tuple').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        if (!state.pinned) {
+          state.linkedKey = el.dataset.key;
+          applyLinkedHighlight(el.dataset.key);
+        }
+      });
+      el.addEventListener('mouseleave', () => {
+        if (!state.pinned) {
+          state.linkedKey = null;
+          applyLinkedHighlight(null);
+        }
+      });
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (state.pinned && state.linkedKey === el.dataset.key) {
+          // unpin
+          state.pinned = false;
+          state.linkedKey = null;
+          applyLinkedHighlight(null);
+        } else {
+          state.pinned = true;
+          state.linkedKey = el.dataset.key;
+          applyLinkedHighlight(el.dataset.key);
+        }
+      });
+    });
+
+    // Click on background to unpin
+    document.addEventListener('click', () => {
+      if (state.pinned) {
+        state.pinned = false;
+        state.linkedKey = null;
+        applyLinkedHighlight(null);
+      }
+    });
+  }
+
+  // ── RENDER LHS (grouped by x) ───────────────
+  function renderLhs(tuples) {
+    const container = document.getElementById('lhs-groups');
+    container.innerHTML = '';
+
+    const byX = {};
+    for (const t of tuples) {
+      const x = t[0];
+      if (!byX[x]) byX[x] = [];
+      byX[x].push(t);
+    }
+
+    const sortedKeys = Object.keys(byX).map(Number).sort((a, b) => a - b);
+    for (const x of sortedKeys) {
+      const group = document.createElement('div');
+      group.className = 'group';
+      const list = byX[x];
+
+      const header = document.createElement('div');
+      header.className = 'group-header';
+      header.innerHTML =
+        '<span class="group-key">x = ' + x + '</span>' +
+        '<span class="group-count">' +
+          '<span class="teal">' + x + '³</span> = <b>' + list.length + '</b> tuple' +
+          (list.length === 1 ? '' : 's') +
+        '</span>';
+      group.appendChild(header);
+
+      const grid = document.createElement('div');
+      grid.className = 'tuples-grid';
+      for (const t of list) {
+        const tile = document.createElement('div');
+        tile.className = 'tuple';
+        tile.dataset.key = tupleKey(t);
+        tile.innerHTML = formatTuple(t);
+        grid.appendChild(tile);
+      }
+      group.appendChild(grid);
+      container.appendChild(group);
+    }
+  }
+
+  // ── RENDER RHS (grouped by distinct count) ──
+  function renderRhs(tuples) {
+    const container = document.getElementById('rhs-groups');
+    container.innerHTML = '';
+
+    const byD = { 4: [], 3: [], 2: [] };
+    for (const t of tuples) {
+      byD[distinctCount(t)].push(t);
+    }
+
+    for (const d of [4, 3, 2]) {
+      const list = byD[d];
+      const group = document.createElement('div');
+      group.className = 'group';
+
+      const n = state.n;
+      const binomVal = binomial(n + 1, d);
+      const ways = (d === 2) ? 1 : 6;
+      const expected = ways * binomVal;
+      const formulaStr = (ways === 1 ? '' : '6 · ') + 'C(' + (n+1) + ', ' + d + ') = ' +
+                         (ways === 1 ? '' : (ways + ' · ')) + binomVal + ' = ' + expected;
+
+      const header = document.createElement('div');
+      header.className = 'group-header';
+      header.innerHTML =
+        '<span class="group-key">' + d + ' distinct</span>' +
+        '<span class="group-count">' +
+          '<span class="copper">' + formulaStr + '</span>' +
+        '</span>';
+      group.appendChild(header);
+
+      const grid = document.createElement('div');
+      grid.className = 'tuples-grid';
+      if (list.length === 0) {
+        const empty = document.createElement('div');
+        empty.style.gridColumn = '1 / -1';
+        empty.style.fontFamily = "'JetBrains Mono', monospace";
+        empty.style.fontSize = '12px';
+        empty.style.color = 'var(--ink-soft)';
+        empty.style.padding = '8px 4px';
+        empty.style.fontStyle = 'italic';
+        empty.textContent = '(no tuples in this bin — pool too small)';
+        grid.appendChild(empty);
+      } else {
+        list.sort((p, q) => {
+          for (let i = 0; i < 4; i++) if (p[i] !== q[i]) return p[i] - q[i];
+          return 0;
+        });
+        for (const t of list) {
+          const tile = document.createElement('div');
+          tile.className = 'tuple';
+          tile.dataset.key = tupleKey(t);
+          tile.innerHTML = formatTuple(t);
+          grid.appendChild(tile);
+        }
+      }
+      group.appendChild(grid);
+      container.appendChild(group);
+    }
+  }
+
+  // ── RENDER TOTALS ───────────────────────────
+  function renderTotals() {
+    const n = state.n;
+    // LHS
+    const lhsTerms = [];
+    let lhsTotal = 0;
+    for (let x = 1; x <= n; x++) {
+      lhsTerms.push(x * x * x);
+      lhsTotal += x * x * x;
+    }
+    const lhsExpr = lhsTerms.map((v, i) => '<b>' + (i+1) + '³</b>').join(' + ') +
+                    '<br>= ' + lhsTerms.join(' + ') + ' = <span class="teal">' + lhsTotal + '</span>';
+
+    // RHS
+    const c4 = binomial(n + 1, 4);
+    const c3 = binomial(n + 1, 3);
+    const c2 = binomial(n + 1, 2);
+    const rhsTotal = 6 * c4 + 6 * c3 + c2;
+    const rhsExpr =
+      '<b>6·C(' + (n+1) + ',4)</b> + <b>6·C(' + (n+1) + ',3)</b> + <b>C(' + (n+1) + ',2)</b>' +
+      '<br>= ' + (6*c4) + ' + ' + (6*c3) + ' + ' + c2 +
+      ' = <span class="copper">' + rhsTotal + '</span>';
+
+    document.getElementById('lhs-sum').innerHTML = lhsExpr;
+    document.getElementById('rhs-sum').innerHTML = rhsExpr;
+    document.getElementById('lhs-total').textContent = lhsTotal;
+    document.getElementById('rhs-total').textContent = rhsTotal;
+  }
+
+  // ── MAIN RENDER ─────────────────────────────
+  function render() {
+    document.getElementById('n-val').textContent = state.n;
+    document.getElementById('n-down').disabled = state.n <= N_MIN;
+    document.getElementById('n-up').disabled   = state.n >= N_MAX;
+
+    const pool = '{' + range(0, state.n).join(', ') + '}';
+    document.getElementById('pool').textContent = pool;
+
+    const tuples = generateTuples(state.n);
+    document.getElementById('tuple-count').textContent = tuples.length;
+
+    renderLhs(tuples);
+    renderRhs(tuples);
+    renderTotals();
+    setupTupleEvents();
+
+    // Reset any pinned highlight on re-render
+    state.pinned = false;
+    state.linkedKey = null;
+  }
+
+  // ── EVENT WIRING ────────────────────────────
+  document.getElementById('n-down').addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (state.n > N_MIN) { state.n--; render(); }
+  });
+  document.getElementById('n-up').addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (state.n < N_MAX) { state.n++; render(); }
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
