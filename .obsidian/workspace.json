@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Git and Github/Syncing/git push.md",
+                "file": "content/Git and Github/Git Essential Commands.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "git push"
+              "title": "Git Essential Commands"
             }
           },
           {
@@ -232,9 +232,11 @@
   },
   "active": "2685add9a9bdc406",
   "lastOpenFiles": [
+    "content/Git and Github/Branching/git merge.md",
+    "content/Git and Github/Git Essential Commands.md",
+    "content/Git and Github/Branching/git checkout.md",
     "content/Git and Github/Branching/Branching (Main).md",
     "content/Git and Github/Syncing/git push.md",
-    "content/Git and Github/Git Essential Commands.md",
     "content/Git and Github/Syncing/git remote.md",
     "content/Git and Github/Syncing/git pull.md",
     "content/Git and Github/Syncing/git fetch.md",
@@ -276,8 +278,6 @@
     "content/Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill2_dont_pay_people_off.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
-    "content/Poker/The Course/Part 2 Beating Live 1-2 Games/hand_quizzes_1_2.md",
-    "content/Poker/The Course/Part 1 The 30000 Foot View/core_strategy_philosophy.md",
     "Untitled.canvas"
   ]
 }
