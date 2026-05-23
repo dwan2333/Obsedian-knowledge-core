@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Git and Github/Branching/git rebase.md",
+                "file": "content/Git and Github/Best practices/Writing Good Branch Names.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "git rebase"
+              "title": "Writing Good Branch Names"
             }
           }
         ]
@@ -218,15 +218,15 @@
   },
   "active": "66d6b6cbd14fb88e",
   "lastOpenFiles": [
+    "content/Git and Github/Best practices/Writing Good Commit Messages.md",
+    "content/Git and Github/Branching/git rebase.md",
     "content/Git and Github/Branching/Squashing Commits.md",
     "content/Git and Github/Branching/Merge Conflicts.md",
-    "content/Git and Github/Branching/git rebase.md",
     "content/Git and Github/Branching/git checkout.md",
     "content/Git and Github/Branching/git cherry-pick.md",
     "content/Git and Github/Branching/git merge.md",
     "content/Git and Github/Branching/Branching (Main).md",
     "content/Git and Github/Best practices/Writing Good Branch Names.md",
-    "content/Git and Github/Best practices/Writing Good Commit Messages.md",
     "content/Git and Github/gitignore.md",
     "content/Git and Github/Index and Object Store.md",
     "content/Git and Github/What is Git and GitHub.md",
