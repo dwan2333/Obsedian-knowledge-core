@@ -8,11 +8,11 @@ This note covers the universally-agreed-on rules and the modern **Conventional C
 
 ## The Three Parts of a Commit Message
 
-| Part | Required? | Length | Purpose |
-|---|---|---|---|
-| **Subject line** | Yes | ≤ 50 chars | Imperative-mood headline of the change |
-| **Body** | No | Wrap at 72 chars | Explain *what* and *why* (never *how*) |
-| **Footer** | No | One line per token | Metadata: `BREAKING CHANGE`, issue refs, co-authors |
+| Part             | Required? | Length             | Purpose                                             |
+| ---------------- | --------- | ------------------ | --------------------------------------------------- |
+| **Subject line** | Yes       | ≤ 50 chars         | Imperative-mood headline of the change              |
+| **Body**         | No        | Wrap at 72 chars   | Explain *what* and *why* (never *how*)              |
+| **Footer**       | No        | One line per token | Metadata: `BREAKING CHANGE`, issue refs, co-authors |
 
 Separate each part with a blank line. Most editors will do this automatically when you run `git commit` without `-m`.
 
