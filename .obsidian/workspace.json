@@ -35,8 +35,7 @@
               "title": "Chapter 1 (Main)"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -231,8 +230,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6768d2e2fa5bc0d2",
+  "active": "66d6b6cbd14fb88e",
   "lastOpenFiles": [
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
@@ -256,7 +256,6 @@
     "content/Git and Github/Syncing/git remote.md",
     "content/Git and Github/Syncing/git pull.md",
     "content/Git and Github/Syncing/git fetch.md",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.24404.73dc6fef2439",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/exercise_22_sum_of_cubes_interactive.html",
     "content/Learning AI from TOP to Bottom/AI agent/the agent logic loop.md",
