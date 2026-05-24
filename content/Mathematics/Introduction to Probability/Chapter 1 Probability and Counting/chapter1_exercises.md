@@ -482,6 +482,24 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > > **Solution.** Hypergeometric: $\dfrac{\binom{n}{k}\binom{N-n}{m-k}}{\binom{N}{m}}$.
 > >
 > > **Answer.** As above ✓
+>
+> > [!example] 📂 Interactive walkthrough
+> > Step the population $N$, the tagged count $n$, and the sample size $m$. The bar chart shows $P_k$ live; a side table verifies that the actual ratio $P_{k+1}/P_k$ equals the polynomial formula $\dfrac{(n-k)(m-k)}{(k+1)(N-n-m+k+1)}$ at every valid $k$, every time. Useful for building intuition that the "hypergeometric" name is descriptive, not decorative:
+> >
+> > 👉 **[Open: Hypergeometric Ratio Explorer](exercise_31_hypergeometric_interactive.html)**
+> >
+> > Hosted as a self-contained HTML file in this folder. Clicking opens it in your default browser.
+>
+> > [!tip] Why is this called the *Hypergeometric* distribution?
+> > A sequence of numbers is a **hypergeometric series** when the ratio between consecutive terms is a *rational function of the index* — a polynomial divided by another polynomial. The hypergeometric *distribution* is exactly the distribution whose probabilities form such a series. The "hyper" doesn't refer to anything exotic; it just marks this rationality property, generalizing the simpler geometric series (where the ratio is a constant).
+> >
+> > For the elk problem, the consecutive-probability multiplier is
+> > $$\frac{P_{k+1}}{P_k} \;=\; \frac{(n-k)\,(m-k)}{(k+1)\,(N-n-m+k+1)}$$
+> > which is a clean rational function of $k$. That's the entire fingerprint.
+> >
+> > **Concrete check** at $N = 10, n = 4, m = 3$. The four probabilities are $\tfrac{20}{120}, \tfrac{60}{120}, \tfrac{36}{120}, \tfrac{4}{120}$, so the actual ratios are $\tfrac{60}{20} = 3$, then $\tfrac{36}{60} = \tfrac{3}{5}$, then $\tfrac{4}{36} = \tfrac{1}{9}$. Plugging $k = 0, 1, 2$ into the formula gives exactly $3, \tfrac{3}{5}, \tfrac{1}{9}$. ✓
+> >
+> > **Why the formula works.** Write $P_k = \binom{n}{k}\binom{N-n}{m-k}/\binom{N}{m}$. In the ratio $P_{k+1}/P_k$ the $\binom{N}{m}$ cancels. Expanding each remaining binomial into factorials, the same kind of cancellation that drives Pascal's identity collapses the tagged-elk factor to $\dfrac{n-k}{k+1}$ and the untagged-elk factor to $\dfrac{m-k}{N-n-m+k+1}$. Multiplying gives the formula above. Algebraic plumbing, not magic.
 
 > [!example] Exercise 32 — Card Guessing
 > **Problem.** Four cards are face down on a table. You are told that two are red and two are black, and you need to guess which two are red and which two are black. You do this by pointing to the two cards you're guessing are red (and then implicitly you're guessing that the other two are black). Assume that all configurations are equally likely, and that you do not have psychic powers. Find the probability that exactly $j$ of your guesses are correct, for $j = 0, 1, 2, 3, 4$.

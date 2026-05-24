@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hypergeometric Ratio Explorer · Exercise 31</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:       #f7f1e3;
+    --paper-deep:  #efe6d0;
+    --ink:         #1c2030;
+    --ink-soft:    #5a5d6e;
+    --rule:        #c8b89a;
+    --accent:      #b13a2e;
+    --accent-bg:   rgba(177,58,46,0.10);
+    --tagged:      #5e7c5e;
+    --tagged-bg:   rgba(94,124,94,0.15);
+    --untagged:    #b88455;
+    --untagged-bg: rgba(184,132,85,0.15);
+    --good:        #3d7530;
+    --bad:         #b13a2e;
+    --panel:       #ede2c7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); }
+  body {
+    color: var(--ink);
+    font-family: 'Crimson Pro', 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 1.55;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse 70% 50% at 14% 6%,  rgba(94,124,94,0.04), transparent 65%),
+      radial-gradient(ellipse 60% 50% at 86% 94%, rgba(177,58,46,0.04), transparent 65%);
+    background-attachment: fixed;
+  }
+  .frame {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 44px 36px 56px;
+  }
+  @media (max-width: 720px) { .frame { padding: 28px 16px 40px; } }
+
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 26px; margin-bottom: 32px; }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 16px;
+  }
+  h1 {
+    font-size: clamp(32px, 4.5vw, 54px);
+    font-weight: 600; line-height: 1.05;
+    margin-bottom: 12px; letter-spacing: -0.01em;
+  }
+  .subtitle {
+    color: var(--ink-soft); font-size: 17px; font-style: italic; max-width: 760px;
+  }
+
+  section {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  h2 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 21px; font-weight: 500; margin-bottom: 14px;
+  }
+
+  /* Controls */
+  .controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  @media (max-width: 640px) { .controls { grid-template-columns: 1fr; } }
+  .stepper-box {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 14px 16px;
+  }
+  .stepper-box .lbl {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink-soft); margin-bottom: 8px;
+  }
+  .stepper {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .step-btn {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    width: 36px; height: 36px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px; font-weight: 700;
+    cursor: pointer; transition: all 0.1s;
+  }
+  .step-btn:hover { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+  .step-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+  .step-btn:disabled:hover { background: var(--paper-deep); border-color: var(--rule); color: var(--ink); }
+  .step-val {
+    font-family: 'Crimson Pro', serif;
+    font-size: 28px; font-weight: 600;
+    color: var(--ink); min-width: 38px; text-align: center;
+  }
+  .stepper-note {
+    font-size: 13px; color: var(--ink-soft); font-style: italic; margin-top: 6px;
+  }
+  .universe {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  .universe b { color: var(--ink); }
+  .tagged-swatch  { color: var(--tagged); font-weight: 700; }
+  .untagged-swatch { color: var(--untagged); font-weight: 700; }
+  .invalid-warning {
+    margin-top: 10px;
+    padding: 10px 14px;
+    background: var(--accent-bg);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    color: var(--accent);
+    font-size: 14px;
+    display: none;
+  }
+  .invalid-warning.shown { display: block; }
+
+  /* Bar chart */
+  .chart {
+    margin-top: 6px;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    height: 220px;
+    padding: 18px 12px 6px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+  }
+  .bar-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 0;
+    height: 100%;
+    gap: 4px;
+  }
+  .bar-val {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-soft);
+    white-space: nowrap;
+    line-height: 1;
+  }
+  .bar {
+    width: 100%;
+    background: var(--tagged);
+    border: 1px solid #3d5630;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    min-height: 1px;
+    transition: height 0.25s ease, background 0.15s;
+  }
+  .bar.highlighted {
+    background: var(--accent);
+    border-color: #6e2820;
+  }
+  .bar-k {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink);
+    border-top: 1px solid var(--rule);
+    width: 100%;
+    text-align: center;
+    padding-top: 4px;
+  }
+  .chart-caption {
+    text-align: center;
+    color: var(--ink-soft);
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    font-feature-settings: "tnum";
+  }
+  thead th {
+    background: var(--panel);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 9px 12px;
+    color: var(--ink);
+    border-bottom: 1px solid var(--rule);
+  }
+  tbody td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: var(--accent-bg); }
+  td.match  { color: var(--good); font-weight: 700; }
+  td.mismatch { color: var(--bad); font-weight: 700; }
+  td.k { font-weight: 700; color: var(--ink); }
+  td.frac { color: var(--ink); }
+  td.dec  { color: var(--ink-soft); }
+
+  /* Formula display */
+  .formula-row {
+    margin-top: 14px;
+    padding: 14px 18px;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    font-family: 'Crimson Pro', serif;
+    font-size: 17px;
+    color: var(--ink);
+    line-height: 1.7;
+  }
+  .formula-row .frac-display {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: middle;
+    margin: 0 4px;
+  }
+  .formula-row .num-line {
+    border-bottom: 1.5px solid var(--ink);
+    padding: 0 8px 2px;
+  }
+  .formula-row .den-line {
+    padding: 2px 8px 0;
+  }
+  .formula-row .red { color: var(--accent); font-weight: 600; }
+  .formula-row code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    background: var(--paper);
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 1px solid var(--rule);
+  }
+
+  /* Elk visual */
+  .elk-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 12px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    margin-top: 10px;
+    min-height: 50px;
+    align-items: center;
+  }
+  .elk {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1.5px solid;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .elk.tagged   { background: var(--tagged-bg);   border-color: var(--tagged);   color: var(--tagged); }
+  .elk.untagged { background: var(--untagged-bg); border-color: var(--untagged); color: var(--untagged); }
+
+  /* Notes section */
+  .notes {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 22px 26px;
+  }
+  .notes h2 { margin-bottom: 10px; }
+  .notes p { margin-bottom: 10px; }
+  .notes p:last-child { margin-bottom: 0; }
+  .notes .key { color: var(--accent); font-weight: 600; }
+  .notes details {
+    margin-top: 12px;
+    padding: 12px 16px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+  }
+  .notes summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .notes details[open] summary { margin-bottom: 8px; }
+  .notes details p { margin-bottom: 8px; font-size: 15px; }
+  .notes details code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    background: var(--paper-deep);
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+
+  footer {
+    margin-top: 32px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    color: var(--ink-soft);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+<div class="frame">
+  <header>
+    <div class="eyebrow">Exercise 31 · Capture-Recapture · Hypergeometric</div>
+    <h1>Why is it called <em>Hypergeometric</em>?</h1>
+    <div class="subtitle">The ratio between consecutive probabilities $P_{k+1}/P_k$ is a rational function of $k$ — that's the fingerprint of a <strong>hypergeometric series</strong>, and the elk-counting distribution inherits the name. Step the controls and watch the formula prediction match every actual ratio, every time.</div>
+  </header>
+
+  <section>
+    <h2>The forest</h2>
+    <div class="controls">
+      <div class="stepper-box">
+        <div class="lbl">N — total elk</div>
+        <div class="stepper">
+          <button class="step-btn" id="N-down">−</button>
+          <span class="step-val" id="N-val">10</span>
+          <button class="step-btn" id="N-up">+</button>
+        </div>
+        <div class="stepper-note">Population size</div>
+      </div>
+      <div class="stepper-box">
+        <div class="lbl"><span class="tagged-swatch">n</span> — tagged elk</div>
+        <div class="stepper">
+          <button class="step-btn" id="n-down">−</button>
+          <span class="step-val" id="n-val">4</span>
+          <button class="step-btn" id="n-up">+</button>
+        </div>
+        <div class="stepper-note">First capture, now tagged &amp; released</div>
+      </div>
+      <div class="stepper-box">
+        <div class="lbl">m — second sample</div>
+        <div class="stepper">
+          <button class="step-btn" id="m-down">−</button>
+          <span class="step-val" id="m-val">3</span>
+          <button class="step-btn" id="m-up">+</button>
+        </div>
+        <div class="stepper-note">New random sample</div>
+      </div>
+    </div>
+    <div class="universe">
+      Population: <b id="universe-summary">10 elk · 4 tagged · 6 untagged · sample 3</b>
+    </div>
+    <div class="elk-row" id="elk-row"></div>
+    <div class="invalid-warning" id="invalid-warning"></div>
+  </section>
+
+  <section>
+    <h2>Probabilities <span style="color:var(--ink-soft);font-weight:400;font-size:14px;">— how often you catch exactly <em>k</em> tagged elk in the sample</span></h2>
+    <div class="chart" id="chart"></div>
+    <div class="chart-caption" id="chart-caption">For each k, $P_k = \dbinom{n}{k} \dbinom{N-n}{m-k} \big/ \dbinom{N}{m}$.</div>
+
+    <table style="margin-top:18px;">
+      <thead>
+        <tr>
+          <th style="width:60px;">k</th>
+          <th>$\binom{n}{k}$</th>
+          <th>$\binom{N-n}{m-k}$</th>
+          <th>$\binom{N}{m}$</th>
+          <th>$P_k$ (fraction)</th>
+          <th>$P_k$ (decimal)</th>
+        </tr>
+      </thead>
+      <tbody id="prob-tbody"></tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>The hypergeometric fingerprint <span style="color:var(--ink-soft);font-weight:400;font-size:14px;">— actual ratio vs polynomial prediction</span></h2>
+
+    <div class="formula-row">
+      Claim: <span class="red">$\dfrac{P_{k+1}}{P_k} \;=\; \dfrac{(n-k)(m-k)}{(k+1)\bigl(N-n-m+k+1\bigr)}$</span> for every valid k.
+    </div>
+
+    <table style="margin-top:14px;">
+      <thead>
+        <tr>
+          <th style="width:60px;">k</th>
+          <th>Actual $P_{k+1}/P_k$</th>
+          <th>Formula prediction</th>
+          <th>Match?</th>
+        </tr>
+      </thead>
+      <tbody id="ratio-tbody"></tbody>
+    </table>
+  </section>
+
+  <section class="notes">
+    <h2>What's going on</h2>
+    <p>A sequence of numbers is called a <span class="key">hypergeometric series</span> when the ratio between its consecutive terms is a <em>rational function</em> of the index — that is, a polynomial divided by another polynomial. The hypergeometric <em>distribution</em> is the distribution whose probabilities form such a series. The "hyper" doesn't refer to anything exotic; it just marks this rationality property, which generalizes the simpler geometric series (where the ratio is a constant).</p>
+    <p>So the test for "is this a hypergeometric distribution?" is essentially the test "does $P_{k+1}/P_k$ simplify to a ratio of polynomials in $k$?" — and for the elk problem, the answer is yes, with the exact polynomial fraction shown above.</p>
+
+    <details>
+      <summary>Why the ratio formula works — algebra in 3 steps</summary>
+      <p>Write $P_k$ and $P_{k+1}$ as quotients of three binomial coefficients (numerator: tagged times untagged; denominator: total). When you form $P_{k+1}/P_k$, the $\binom{N}{m}$ in both denominators cancels, leaving</p>
+      <p style="text-align:center;">$\dfrac{P_{k+1}}{P_k} = \dfrac{\binom{n}{k+1}}{\binom{n}{k}} \cdot \dfrac{\binom{N-n}{m-k-1}}{\binom{N-n}{m-k}}$.</p>
+      <p><strong>Step 1 — Tagged factor.</strong> Expand $\binom{n}{k}$ and $\binom{n}{k+1}$ into factorials. The $n!$'s cancel; $k!/(k+1)! = 1/(k+1)$ on the bottom; $(n-k)!/(n-k-1)! = (n-k)$ on top. Result: $\dfrac{n-k}{k+1}$.</p>
+      <p><strong>Step 2 — Untagged factor.</strong> Same move on $\binom{N-n}{m-k}$ and $\binom{N-n}{m-k-1}$. The $(N-n)!$'s cancel; $(m-k)/(m-k-1)! = (m-k)$ on top; $(N-n-m+k+1)$ on bottom. Result: $\dfrac{m-k}{N-n-m+k+1}$.</p>
+      <p><strong>Step 3 — Multiply.</strong> Multiplying the two clean factors gives <code>(n-k)(m-k) / ((k+1)(N-n-m+k+1))</code>. It looked monstrous but it was always just two cancellations stacked.</p>
+    </details>
+  </section>
+
+  <footer>
+    <span>Exercise 31 · Capture-Recapture</span>
+    <span>Hypergeometric Ratio Explorer</span>
+  </footer>
+</div>
+
+<script>
+"use strict";
+
+// =============================================================
+// State
+// =============================================================
+let N = 10;
+let n = 4;
+let m = 3;
+const MAX_N = 30;
+
+// =============================================================
+// Math helpers (integer binomial via iterative multiply-divide)
+// =============================================================
+function binom(a, b) {
+  if (b < 0 || b > a) return 0;
+  if (b > a - b) b = a - b;
+  let r = 1;
+  for (let i = 0; i < b; i++) {
+    r = r * (a - i) / (i + 1);
+  }
+  return Math.round(r);
+}
+function gcd(a, b) {
+  a = Math.abs(a); b = Math.abs(b);
+  while (b) { [a, b] = [b, a % b]; }
+  return a || 1;
+}
+function reduce(num, den) {
+  const g = gcd(num, den);
+  return [num / g, den / g];
+}
+
+// =============================================================
+// Stepper wiring
+// =============================================================
+function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+function bumpN(d) { N = clamp(N + d, 2, MAX_N); n = clamp(n, 0, N); m = clamp(m, 0, N); render(); }
+function bumpn(d) { n = clamp(n + d, 0, N); render(); }
+function bumpm(d) { m = clamp(m + d, 0, N); render(); }
+document.getElementById('N-up').onclick   = () => bumpN(+1);
+document.getElementById('N-down').onclick = () => bumpN(-1);
+document.getElementById('n-up').onclick   = () => bumpn(+1);
+document.getElementById('n-down').onclick = () => bumpn(-1);
+document.getElementById('m-up').onclick   = () => bumpm(+1);
+document.getElementById('m-down').onclick = () => bumpm(-1);
+
+// =============================================================
+// Render
+// =============================================================
+function render() {
+  document.getElementById('N-val').textContent = N;
+  document.getElementById('n-val').textContent = n;
+  document.getElementById('m-val').textContent = m;
+  document.getElementById('universe-summary').innerHTML =
+    `<b>${N}</b> elk · <b>${n}</b> tagged · <b>${N - n}</b> untagged · sample <b>${m}</b>`;
+
+  // Elk visual
+  const elkRow = document.getElementById('elk-row');
+  elkRow.innerHTML = '';
+  for (let i = 0; i < n; i++) {
+    const e = document.createElement('span');
+    e.className = 'elk tagged';
+    e.textContent = '🦌';
+    elkRow.appendChild(e);
+  }
+  for (let i = 0; i < N - n; i++) {
+    const e = document.createElement('span');
+    e.className = 'elk untagged';
+    e.textContent = '🦌';
+    elkRow.appendChild(e);
+  }
+
+  // Validity
+  const warn = document.getElementById('invalid-warning');
+  if (m > N) {
+    warn.textContent = `Invalid: sample size m = ${m} can't exceed population N = ${N}.`;
+    warn.classList.add('shown');
+  } else if (n > N) {
+    warn.textContent = `Invalid: tagged n = ${n} can't exceed population N = ${N}.`;
+    warn.classList.add('shown');
+  } else {
+    warn.classList.remove('shown');
+  }
+
+  // Valid range of k
+  const kMin = Math.max(0, m - (N - n));
+  const kMax = Math.min(n, m);
+  const totalDen = binom(N, m);
+
+  // Probability table
+  const probTbody = document.getElementById('prob-tbody');
+  probTbody.innerHTML = '';
+  const probs = [];   // {k, num, den, reducedFrac, dec}
+  for (let k = kMin; k <= kMax; k++) {
+    const t = binom(n, k);
+    const u = binom(N - n, m - k);
+    const num = t * u;
+    const [pn, pd] = reduce(num, totalDen);
+    probs.push({ k, num, den: totalDen, t, u, pn, pd, dec: num / totalDen });
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="k">${k}</td>
+      <td>${t}</td>
+      <td>${u}</td>
+      <td>${totalDen}</td>
+      <td class="frac">${pn === pd ? '1' : (pn === 0 ? '0' : `${pn}/${pd}`)}</td>
+      <td class="dec">${(num / totalDen).toFixed(4)}</td>
+    `;
+    probTbody.appendChild(tr);
+  }
+
+  // Bar chart
+  const chart = document.getElementById('chart');
+  chart.innerHTML = '';
+  const maxP = Math.max(...probs.map(p => p.dec), 0.01);
+  for (const p of probs) {
+    const col = document.createElement('div');
+    col.className = 'bar-col';
+    const hPct = Math.max(2, (p.dec / maxP) * 86);   // up to 86% of height
+    col.innerHTML = `
+      <div class="bar-val">${p.dec.toFixed(3)}</div>
+      <div class="bar" style="height: ${hPct}%"></div>
+      <div class="bar-k">k = ${p.k}</div>
+    `;
+    chart.appendChild(col);
+  }
+
+  // Ratios — for each consecutive pair within valid range
+  const ratioTbody = document.getElementById('ratio-tbody');
+  ratioTbody.innerHTML = '';
+  for (let i = 0; i < probs.length - 1; i++) {
+    const a = probs[i];
+    const b = probs[i + 1];
+    const k = a.k;
+    // Actual ratio b.dec / a.dec, but exact via integer numerators (same denominator)
+    const actualNum = b.num;
+    const actualDen = a.num;
+    const [an, ad] = reduce(actualNum, actualDen);
+    // Formula
+    const fNum = (n - k) * (m - k);
+    const fDen = (k + 1) * (N - n - m + k + 1);
+    let fn, fd;
+    if (fDen === 0) { fn = 0; fd = 1; }
+    else { [fn, fd] = reduce(fNum, fDen); }
+    const match = (an * fd === fn * ad);
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="k">k = ${k}</td>
+      <td class="frac">${an}/${ad} <span style="color:var(--ink-soft);">= ${(actualNum / actualDen).toFixed(4)}</span></td>
+      <td class="frac">${fn}/${fd} <span style="color:var(--ink-soft);">= ${(fNum / fDen).toFixed(4)}</span></td>
+      <td class="${match ? 'match' : 'mismatch'}">${match ? '✓ exact' : '✗ off'}</td>
+    `;
+    ratioTbody.appendChild(tr);
+  }
+  if (probs.length < 2) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td colspan="4" style="text-align:center;color:var(--ink-soft);font-style:italic;">Need at least 2 valid k values to show a ratio. Adjust n or m.</td>`;
+    ratioTbody.appendChild(tr);
+  }
+}
+
+render();
+</script>
+</body>
+</html>
