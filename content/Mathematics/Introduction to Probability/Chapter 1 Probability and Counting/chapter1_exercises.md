@@ -499,7 +499,28 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > >
 > > **Concrete check** at $N = 10, n = 4, m = 3$. The four probabilities are $\tfrac{20}{120}, \tfrac{60}{120}, \tfrac{36}{120}, \tfrac{4}{120}$, so the actual ratios are $\tfrac{60}{20} = 3$, then $\tfrac{36}{60} = \tfrac{3}{5}$, then $\tfrac{4}{36} = \tfrac{1}{9}$. Plugging $k = 0, 1, 2$ into the formula gives exactly $3, \tfrac{3}{5}, \tfrac{1}{9}$. ✓
 > >
-> > **Why the formula works.** Write $P_k = \binom{n}{k}\binom{N-n}{m-k}/\binom{N}{m}$. In the ratio $P_{k+1}/P_k$ the $\binom{N}{m}$ cancels. Expanding each remaining binomial into factorials, the same kind of cancellation that drives Pascal's identity collapses the tagged-elk factor to $\dfrac{n-k}{k+1}$ and the untagged-elk factor to $\dfrac{m-k}{N-n-m+k+1}$. Multiplying gives the formula above. Algebraic plumbing, not magic.
+> > **Why the formula works (sketch).** Write $P_k = \binom{n}{k}\binom{N-n}{m-k}/\binom{N}{m}$. In the ratio $P_{k+1}/P_k$ the $\binom{N}{m}$ cancels. Expanding each remaining binomial into factorials, the same kind of cancellation that drives Pascal's identity collapses the tagged-elk factor to $\dfrac{n-k}{k+1}$ and the untagged-elk factor to $\dfrac{m-k}{N-n-m+k+1}$. Multiplying gives the formula above. Algebraic plumbing, not magic.
+> >
+> > > [!info]- Click for the full step-by-step derivation
+> > > **Step 1 — Set up the division.** Write the two probabilities side-by-side:
+> > > $$P_k \;=\; \frac{\binom{n}{k}\binom{N-n}{m-k}}{\binom{N}{m}}, \qquad P_{k+1} \;=\; \frac{\binom{n}{k+1}\binom{N-n}{m-k-1}}{\binom{N}{m}}.$$
+> > > Dividing, the $\binom{N}{m}$ in both denominators cancels immediately and we're left with
+> > > $$\frac{P_{k+1}}{P_k} \;=\; \frac{\binom{n}{k+1}}{\binom{n}{k}} \;\cdot\; \frac{\binom{N-n}{m-k-1}}{\binom{N-n}{m-k}}.$$
+> > > Two independent factors — a "tagged" ratio and an "untagged" ratio. Simplify each.
+> > >
+> > > **Step 2 — The tagged factor** $\dfrac{\binom{n}{k+1}}{\binom{n}{k}}$. Expand each binomial as $\dfrac{n!}{k!\,(n-k)!}$, then divide by multiplying the numerator by the reciprocal of the denominator:
+> > > $$\frac{n!}{(k+1)!\,(n-k-1)!} \;\cdot\; \frac{k!\,(n-k)!}{n!}.$$
+> > > Three cancellations: (i) the two $n!$'s cancel; (ii) since $(k+1)! = (k+1)\cdot k!$, the $k!$'s cancel and $(k+1)$ remains in the denominator; (iii) since $(n-k)! = (n-k)\cdot(n-k-1)!$, the $(n-k-1)!$'s cancel and $(n-k)$ remains in the numerator. The whole factor collapses to
+> > > $$\frac{n-k}{k+1}.$$
+> > >
+> > > **Step 3 — The untagged factor** $\dfrac{\binom{N-n}{m-k-1}}{\binom{N-n}{m-k}}$. Same playbook. Expand:
+> > > $$\frac{(N-n)!}{(m-k-1)!\,(N-n-m+k+1)!} \;\cdot\; \frac{(m-k)!\,(N-n-m+k)!}{(N-n)!}.$$
+> > > Cancellations: (i) the $(N-n)!$'s cancel; (ii) since $(m-k)! = (m-k)\cdot(m-k-1)!$, the smaller factorials cancel and $(m-k)$ is left in the numerator; (iii) since $(N-n-m+k+1)! = (N-n-m+k+1)\cdot(N-n-m+k)!$, the smaller factorials cancel and $(N-n-m+k+1)$ is left in the denominator. The factor collapses to
+> > > $$\frac{m-k}{N-n-m+k+1}.$$
+> > >
+> > > **Step 4 — Multiply.** Combine the two clean factors:
+> > > $$\frac{P_{k+1}}{P_k} \;=\; \frac{n-k}{k+1} \;\cdot\; \frac{m-k}{N-n-m+k+1} \;=\; \boxed{\dfrac{(n-k)(m-k)}{(k+1)\,(N-n-m+k+1)}}.$$
+> > > A formula that looked terrifying is, in the end, two cancellations stacked. Notice the kinship with Pascal's identity (Exercise 16) — both proofs reduce to the same factorial-cancellation move applied to neighboring binomial coefficients.
 
 > [!example] Exercise 32 — Card Guessing
 > **Problem.** Four cards are face down on a table. You are told that two are red and two are black, and you need to guess which two are red and which two are black. You do this by pointing to the two cards you're guessing are red (and then implicitly you're guessing that the other two are black). Assume that all configurations are equally likely, and that you do not have psychic powers. Find the probability that exactly $j$ of your guesses are correct, for $j = 0, 1, 2, 3, 4$.
