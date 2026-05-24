@@ -501,26 +501,50 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > >
 > > **Why the formula works (sketch).** Write $P_k = \binom{n}{k}\binom{N-n}{m-k}/\binom{N}{m}$. In the ratio $P_{k+1}/P_k$ the $\binom{N}{m}$ cancels. Expanding each remaining binomial into factorials, the same kind of cancellation that drives Pascal's identity collapses the tagged-elk factor to $\dfrac{n-k}{k+1}$ and the untagged-elk factor to $\dfrac{m-k}{N-n-m+k+1}$. Multiplying gives the formula above. Algebraic plumbing, not magic.
 > >
-> > > [!info]- Click for the full step-by-step derivation
-> > > **Step 1 — Set up the division.** Write the two probabilities side-by-side:
-> > > $$P_k \;=\; \frac{\binom{n}{k}\binom{N-n}{m-k}}{\binom{N}{m}}, \qquad P_{k+1} \;=\; \frac{\binom{n}{k+1}\binom{N-n}{m-k-1}}{\binom{N}{m}}.$$
-> > > Dividing, the $\binom{N}{m}$ in both denominators cancels immediately and we're left with
-> > > $$\frac{P_{k+1}}{P_k} \;=\; \frac{\binom{n}{k+1}}{\binom{n}{k}} \;\cdot\; \frac{\binom{N-n}{m-k-1}}{\binom{N-n}{m-k}}.$$
-> > > Two independent factors — a "tagged" ratio and an "untagged" ratio. Simplify each.
+> > > [!info]+ Full step-by-step derivation of $P_{k+1}/P_k$
+> > > We want the exact ratio between the *next* probability $P_{k+1}$ and the *current* probability $P_k$.
 > > >
-> > > **Step 2 — The tagged factor** $\dfrac{\binom{n}{k+1}}{\binom{n}{k}}$. Expand each binomial as $\dfrac{n!}{k!\,(n-k)!}$, then divide by multiplying the numerator by the reciprocal of the denominator:
-> > > $$\frac{n!}{(k+1)!\,(n-k-1)!} \;\cdot\; \frac{k!\,(n-k)!}{n!}.$$
-> > > Three cancellations: (i) the two $n!$'s cancel; (ii) since $(k+1)! = (k+1)\cdot k!$, the $k!$'s cancel and $(k+1)$ remains in the denominator; (iii) since $(n-k)! = (n-k)\cdot(n-k-1)!$, the $(n-k-1)!$'s cancel and $(n-k)$ remains in the numerator. The whole factor collapses to
-> > > $$\frac{n-k}{k+1}.$$
+> > > **Step 1 — Set up the division.** The two probabilities are
+> > > $$P_k \;=\; \frac{\binom{n}{k}\binom{N-n}{m-k}}{\binom{N}{m}}, \qquad P_{k+1} \;=\; \frac{\binom{n}{k+1}\binom{N-n}{m-(k+1)}}{\binom{N}{m}}$$
+> > > (just replace every $k$ with $k+1$ to get $P_{k+1}$). When we divide $P_{k+1}$ by $P_k$, the giant $\binom{N}{m}$ in both denominators perfectly cancels out immediately, and we are left with just the top combinations:
+> > > $$\frac{P_{k+1}}{P_k} \;=\; \frac{\binom{n}{k+1} \cdot \binom{N-n}{m-k-1}}{\binom{n}{k} \cdot \binom{N-n}{m-k}}$$
+> > > Split this into two bite-sized fractions and tackle them one at a time.
 > > >
-> > > **Step 3 — The untagged factor** $\dfrac{\binom{N-n}{m-k-1}}{\binom{N-n}{m-k}}$. Same playbook. Expand:
-> > > $$\frac{(N-n)!}{(m-k-1)!\,(N-n-m+k+1)!} \;\cdot\; \frac{(m-k)!\,(N-n-m+k)!}{(N-n)!}.$$
-> > > Cancellations: (i) the $(N-n)!$'s cancel; (ii) since $(m-k)! = (m-k)\cdot(m-k-1)!$, the smaller factorials cancel and $(m-k)$ is left in the numerator; (iii) since $(N-n-m+k+1)! = (N-n-m+k+1)\cdot(N-n-m+k)!$, the smaller factorials cancel and $(N-n-m+k+1)$ is left in the denominator. The factor collapses to
-> > > $$\frac{m-k}{N-n-m+k+1}.$$
+> > > **Step 2 — Unpack the tagged-elk fraction** $\dfrac{\binom{n}{k+1}}{\binom{n}{k}}$.
 > > >
-> > > **Step 4 — Multiply.** Combine the two clean factors:
-> > > $$\frac{P_{k+1}}{P_k} \;=\; \frac{n-k}{k+1} \;\cdot\; \frac{m-k}{N-n-m+k+1} \;=\; \boxed{\dfrac{(n-k)(m-k)}{(k+1)\,(N-n-m+k+1)}}.$$
-> > > A formula that looked terrifying is, in the end, two cancellations stacked. Notice the kinship with Pascal's identity (Exercise 16) — both proofs reduce to the same factorial-cancellation move applied to neighboring binomial coefficients.
+> > > Expand both combinations into raw factorials using $\binom{n}{k} = \dfrac{n!}{k!\,(n-k)!}$:
+> > > $$\dfrac{\dfrac{n!}{(k+1)!\,(n-(k+1))!}}{\dfrac{n!}{k!\,(n-k)!}}$$
+> > > When dividing fractions, multiply by the reciprocal (flip the bottom upside down):
+> > > $$\frac{n!}{(k+1)!\,(n-k-1)!} \;\cdot\; \frac{k!\,(n-k)!}{n!}$$
+> > > Now cancel:
+> > > 1. The $n!$ on top and bottom cancel out perfectly.
+> > > 2. Look at $\dfrac{k!}{(k+1)!}$. Because $(k+1)! = (k+1) \cdot k!$, the $k!$ cancels, leaving a $(k+1)$ in the denominator.
+> > > 3. Look at $\dfrac{(n-k)!}{(n-k-1)!}$. Because $(n-k)! = (n-k) \cdot (n-k-1)!$, the smaller factorial cancels, leaving an $(n-k)$ in the numerator.
+> > >
+> > > The entire messy fraction collapses down to:
+> > > $$\boxed{\;\dfrac{n-k}{k+1}\;}$$
+> > >
+> > > **Step 3 — Unpack the untagged-elk fraction** $\dfrac{\binom{N-n}{m-k-1}}{\binom{N-n}{m-k}}$.
+> > >
+> > > Same playbook. Expand into factorials and multiply by the reciprocal:
+> > > $$\frac{(N-n)!}{(m-k-1)!\,\bigl((N-n) - (m-k-1)\bigr)!} \;\cdot\; \frac{(m-k)!\,\bigl((N-n) - (m-k)\bigr)!}{(N-n)!}$$
+> > > Clean up the inner parentheses:
+> > > $$\frac{(N-n)!}{(m-k-1)!\,(N-n-m+k+1)!} \;\cdot\; \frac{(m-k)!\,(N-n-m+k)!}{(N-n)!}$$
+> > > Time to cancel again:
+> > > 1. The $(N-n)!$ on top and bottom cancel out perfectly.
+> > > 2. Look at $\dfrac{(m-k)!}{(m-k-1)!}$. The top is one step larger, so the factorials cancel, leaving $(m-k)$ in the numerator.
+> > > 3. Look at $\dfrac{(N-n-m+k)!}{(N-n-m+k+1)!}$. The bottom is exactly one step larger (because of the $+1$), so they cancel, leaving $(N-n-m+k+1)$ in the denominator.
+> > >
+> > > This second giant fraction collapses down to:
+> > > $$\boxed{\;\dfrac{m-k}{N-n-m+k+1}\;}$$
+> > >
+> > > **Step 4 — Combine the pieces.**
+> > >
+> > > Multiply the clean result from Step 2 with the clean result from Step 3:
+> > > $$\frac{P_{k+1}}{P_k} \;=\; \left(\frac{n-k}{k+1}\right) \cdot \left(\frac{m-k}{N-n-m+k+1}\right)$$
+> > > Squish them together and you get the exact formula of the **hypergeometric series**:
+> > > $$\frac{P_{k+1}}{P_k} \;=\; \boxed{\;\dfrac{(n-k)(m-k)}{(k+1)\,(N-n-m+k+1)}\;}$$
+> > > It looks terrifying at first glance, but it is literally just a graveyard of canceled-out factorials — the same factorial-cancellation move that drives Pascal's identity (Exercise 16), applied here to neighboring binomial coefficients on each side.
 
 > [!example] Exercise 32 — Card Guessing
 > **Problem.** Four cards are face down on a table. You are told that two are red and two are black, and you need to guess which two are red and which two are black. You do this by pointing to the two cards you're guessing are red (and then implicitly you're guessing that the other two are black). Assume that all configurations are equally likely, and that you do not have psychic powers. Find the probability that exactly $j$ of your guesses are correct, for $j = 0, 1, 2, 3, 4$.
