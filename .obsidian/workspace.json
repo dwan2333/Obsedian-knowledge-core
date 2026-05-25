@@ -35,7 +35,8 @@
               "title": "Chapter 1 (Main)"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -230,15 +231,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "66d6b6cbd14fb88e",
+  "active": "6768d2e2fa5bc0d2",
   "lastOpenFiles": [
-    "content/Mathematics/Trigonometric/Visual representation On Demos.md",
     "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+    "content/Mathematics/Trigonometric/Visual representation On Demos.md",
     "content/Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
     "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
     "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.6824.eb6250f2f299",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.6824.091dcef8b809",
     "content/Mathematics/Complex Numbers/cnf_fig1_complex_plane.png",
