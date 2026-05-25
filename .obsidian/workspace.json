@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
+                "file": "content/Mathematics/Complex Numbers/Euler's Formula via exp(x) (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Complex Number Fundamentals (Main)"
+              "title": "Euler's Formula via exp(x) (Main)"
             }
           }
         ],
@@ -233,6 +233,7 @@
   },
   "active": "6768d2e2fa5bc0d2",
   "lastOpenFiles": [
+    "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
     "content/Mathematics/Complex Numbers/Euler's Formula via exp(x) (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Complex Numbers/efm_mindmap.png",
@@ -249,7 +250,6 @@
     "content/Mathematics/Trigonometric/Visual representation On Demos.md",
     "content/Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
     "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
-    "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.6824.eb6250f2f299",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.6824.091dcef8b809",
