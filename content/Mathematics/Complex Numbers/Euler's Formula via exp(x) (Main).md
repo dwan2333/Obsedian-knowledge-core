@@ -299,6 +299,13 @@ Grant leaves the proof of $\exp(a+b) = \exp(a)\exp(b)$ as homework. The plan:
 
 ---
 
+## Related Documents
+
+- **[Consequences of Euler's Formula](eulers_formula_consequences.md)** — Companion note covering the closed-form exponential expressions for $\sin$ and $\cos$ ($\cos\theta = (e^{i\theta}+e^{-i\theta})/2$ etc.), the Maclaurin series for $\sin$ and $\cos$ derived via $e^{\pm i\theta}$, a shorter Cartesian↔polar derivation of Euler's formula, and a tour of custom identities ($e^{i\pi/2}=i$, $\sqrt{i}=(\sqrt{2}/2)(1+i)$, …). Sourced from Numberphile / Tom Crawford's "Euler's Formula" video.
+- **[Complex Number Fundamentals (Main)](<Complex Number Fundamentals (Main).md>)** — Sibling hub note. Defines the complex plane, addition / multiplication, and the rotation-by-$z$ interpretation that makes the polar form $re^{i\theta}$ meaningful in the first place.
+
+---
+
 ### Sources
 
 | Source | Section | Type |
