@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Complex Numbers/Euler's Formula via exp(x) (Main).md",
+                "file": "content/Mathematics/Euler 's equation/eulers_formula_consequences.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Euler's Formula via exp(x) (Main)"
+              "title": "eulers_formula_consequences"
             }
           }
         ],
@@ -231,38 +231,38 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "328aa9c891b22c6e",
+  "active": "6768d2e2fa5bc0d2",
   "lastOpenFiles": [
-    "content/Mathematics/Complex Numbers/eulers_formula_consequences.md",
-    "content/Mathematics/Complex Numbers/efc_fig4_custom_identities.png",
-    "content/Mathematics/Complex Numbers/efc_fig3_maclaurin.png",
-    "content/Mathematics/Complex Numbers/efc_fig2_minus_i_cycle.png",
-    "content/Mathematics/Complex Numbers/efc_fig1_cart_polar.png",
+    "content/Mathematics/Euler 's equation/Euler's Formula via exp(x) (Main).md",
+    "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
+    "content/Mathematics/Euler 's equation/eulers_formula_consequences.md",
+    "content/Mathematics/Euler 's equation/efm_mindmap.png",
+    "content/Mathematics/Complex Numbers/cnf_fig4_angle_sum.png",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_1_grid_path.png",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_2_penultimate.png",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_3_two_paths.png",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_4_triangle.png",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_5_grid_to_triangle.png",
+    "content/Mathematics/Euler 's equation/efc_fig1_cart_polar.png",
+    "content/Mathematics/Euler 's equation/efc_fig2_minus_i_cycle.png",
+    "content/Mathematics/Complex Numbers/cnf_fig1_complex_plane.png",
+    "content/Mathematics/Euler 's equation",
     "content/Mathematics/Complex Numbers/_gen_efc_fig4_custom_identities.py",
     "content/Mathematics/Complex Numbers/_gen_efc_fig3_maclaurin.py",
     "content/Mathematics/Complex Numbers/_gen_efc_fig2_minus_i_cycle.py",
     "content/Mathematics/Complex Numbers/_gen_efc_fig1_cart_polar.py",
     "content/Mathematics/Complex Numbers/Euler's Formula via exp(x) (Main).md.tmp.20008.34792417b6c4",
-    "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
-    "content/Mathematics/Complex Numbers/Euler's Formula via exp(x) (Main).md",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
-    "content/Mathematics/Complex Numbers/efm_mindmap.png",
-    "content/Mathematics/Complex Numbers/efm_fig4_two_faces.png",
-    "content/Mathematics/Complex Numbers/efm_fig3_spiral.png",
-    "content/Mathematics/Complex Numbers/efm_fig2_powers_of_i.png",
-    "content/Mathematics/Complex Numbers/efm_fig1_unit_circle.png",
     "content/Mathematics/Complex Numbers/_gen_efm_mindmap.py",
     "content/Mathematics/Complex Numbers/_gen_efm_fig4_two_faces.py",
     "content/Mathematics/Complex Numbers/_gen_efm_fig3_spiral.py",
     "content/Mathematics/Complex Numbers/_gen_efm_fig2_powers_of_i.py",
-    "content/Mathematics/Complex Numbers/_gen_efm_fig1_unit_circle.py",
     "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
     "content/Mathematics/Trigonometric/Visual representation On Demos.md",
     "content/Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
     "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
-    "content/Mathematics/Complex Numbers/cnf_fig1_complex_plane.png",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
     "content/Git and Github/Best practices/Writing Good Branch Names.md",
     "content/Git and Github/Best practices/Writing Good Commit Messages.md",
@@ -278,7 +278,6 @@
     "content/Git and Github/What is Git and GitHub.md",
     "content/Git and Github/Bare Repositories.md",
     "content/Git and Github/Git Essential Commands.md",
-    "content/Git and Github/Collaboration on GitHub/GitHub Fork Request.md",
     "Untitled.canvas"
   ]
 }
