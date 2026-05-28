@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
+                "file": "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Imaginary Interest and Continuous Rotation (Main)"
+              "title": "Complex Number Fundamentals (Main)"
             }
           }
         ],
@@ -233,6 +233,7 @@
   },
   "active": "6768d2e2fa5bc0d2",
   "lastOpenFiles": [
+    "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
     "content/Mathematics/Complex Numbers/iir_demo.html",
     "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
     "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
@@ -249,7 +250,6 @@
     "content/Mathematics/Complex Numbers/_gen_iir_fig3_imag_spiral.py",
     "content/Mathematics/Complex Numbers/_gen_iir_fig2_timeline.py",
     "content/Mathematics/Complex Numbers/_gen_iir_fig1_staircase.py",
-    "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
@@ -263,7 +263,6 @@
     "content/Mathematics/Euler 's equation",
     "content/Mathematics/Complex Numbers/_gen_efc_fig4_custom_identities.py",
     "content/Mathematics/Complex Numbers/_gen_efc_fig3_maclaurin.py",
-    "content/Mathematics/Complex Numbers/_gen_efc_fig2_minus_i_cycle.py",
     "content/Mathematics/Trigonometric/Visual representation On Demos.md",
     "content/Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
     "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
