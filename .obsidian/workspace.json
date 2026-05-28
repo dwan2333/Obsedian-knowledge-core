@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
+                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sneaky Proof of Pythagorean Identity (Main)"
+              "title": "Chapter 1 (Main)"
             }
           },
           {
@@ -35,8 +35,7 @@
               "title": "chapter1_exercises"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -231,8 +230,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6768d2e2fa5bc0d2",
+  "active": "66d6b6cbd14fb88e",
   "lastOpenFiles": [
+    "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_mindmap.png",
@@ -250,7 +251,6 @@
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_4_triangle.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_topic_5_grid_to_triangle.png",
     "content/Mathematics/Euler 's equation/efc_fig1_cart_polar.png",
-    "content/Mathematics/Euler 's equation/efc_fig2_minus_i_cycle.png",
     "content/Mathematics/Euler 's equation",
     "content/Mathematics/Complex Numbers/_gen_efc_fig4_custom_identities.py",
     "content/Mathematics/Complex Numbers/_gen_efc_fig3_maclaurin.py",
@@ -261,11 +261,9 @@
     "content/Mathematics/Complex Numbers/_gen_efm_fig4_two_faces.py",
     "content/Mathematics/Complex Numbers/_gen_efm_fig3_spiral.py",
     "content/Mathematics/Complex Numbers/_gen_efm_fig2_powers_of_i.py",
-    "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
     "content/Mathematics/Trigonometric/Visual representation On Demos.md",
     "content/Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
     "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Git and Github/Best practices/Writing Good Branch Names.md",
     "content/Git and Github/Best practices/Writing Good Commit Messages.md",
     "content/Git and Github/Branching/git rebase.md",
