@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Imaginary Interest — Spiral to Circle Demo</title>
+<style>
+  :root {
+    --bg: #fafaf5;
+    --panel: #ffffff;
+    --border: #e6e6e6;
+    --text: #222;
+    --muted: #888;
+    --blue: #1f4f8c;
+    --blue-light: #4a90e2;
+    --orange: #8c4f1f;
+    --orange-light: #e2924a;
+    --green: #3d7530;
+    --green-light: #7bb55c;
+    --red: #7a3030;
+    --yellow-bg: #fff8dc;
+    --yellow-border: #aa8b3a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 24px 16px 36px;
+  }
+  h1 {
+    text-align: center;
+    font-weight: 600;
+    color: var(--blue);
+    margin: 0 0 6px;
+    font-size: 1.55em;
+  }
+  .subtitle {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 20px;
+    font-style: italic;
+    font-size: 1.0em;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    max-width: 1180px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  .canvas-wrap { padding: 8px; }
+  .controls { min-width: 320px; max-width: 380px; padding: 22px; }
+  .formula {
+    font-size: 1.15em;
+    margin-bottom: 14px;
+    text-align: center;
+    color: var(--blue);
+    line-height: 1.5;
+    padding: 12px;
+    background: #f4f4ee;
+    border-radius: 6px;
+  }
+  .formula .var { color: var(--orange); font-weight: bold; }
+  .values {
+    background: #f7f7f1;
+    padding: 12px 14px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-family: 'SF Mono', Consolas, monospace;
+    font-size: 0.91em;
+    line-height: 1.7;
+  }
+  .values .label { color: var(--muted); width: 90px; display: inline-block; }
+  .values .val { color: var(--text); font-weight: 500; }
+  .values .convergence {
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dashed var(--border);
+    color: var(--green);
+    font-weight: 500;
+  }
+  label.slider-label {
+    display: block;
+    margin: 6px 0 4px;
+    font-size: 0.92em;
+    color: var(--muted);
+  }
+  label.slider-label .value-tag {
+    float: right;
+    color: var(--orange);
+    font-weight: bold;
+    font-family: 'SF Mono', Consolas, monospace;
+  }
+  input[type=range] {
+    width: 100%;
+    margin: 4px 0 14px;
+    accent-color: var(--orange);
+  }
+  .presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 14px;
+  }
+  .presets button {
+    padding: 6px 10px;
+    border: 1px solid #d0d0c8;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.88em;
+    font-family: inherit;
+    transition: background 0.12s, border-color 0.12s;
+  }
+  .presets button:hover { background: #f0f0e8; }
+  .presets button.active {
+    background: var(--orange);
+    color: white;
+    border-color: var(--orange);
+  }
+  .toggles {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
+    font-size: 0.92em;
+    color: var(--text);
+  }
+  .toggles label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .toggles input { cursor: pointer; }
+  .play-btn {
+    padding: 10px 20px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95em;
+    width: 100%;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  .play-btn:hover { background: var(--blue-light); }
+  .play-btn.playing { background: var(--orange); }
+  .play-btn.playing:hover { background: var(--orange-light); }
+  .insight {
+    background: var(--yellow-bg);
+    padding: 12px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--yellow-border);
+    margin-top: 14px;
+    color: #6e5a20;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+  .insight strong { color: var(--orange); }
+  .legend {
+    margin-top: 12px;
+    font-size: 0.85em;
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .legend-row { display: flex; align-items: center; gap: 8px; margin: 2px 0; }
+  .legend-swatch {
+    width: 28px; height: 3px;
+    border-radius: 1px;
+  }
+  .footnote {
+    text-align: center;
+    color: var(--muted);
+    margin-top: 22px;
+    font-size: 0.83em;
+    font-style: italic;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<h1>Imaginary Interest: Spiral &rarr; Circle</h1>
+<div class="subtitle">
+  Watch what happens to <em>M</em><sub>0</sub> = 1 when you multiply by (1 + i&middot;&Delta;t) repeatedly,
+  total time <em>T</em> fixed. As &Delta;t shrinks (more steps), the jagged outward spiral collapses
+  onto the unit circle and the endpoint converges to <em>e</em><sup>iT</sup>.
+</div>
+
+<div class="container">
+
+  <div class="panel canvas-wrap">
+    <svg id="canvas" width="560" height="560" viewBox="0 0 560 560"></svg>
+  </div>
+
+  <div class="panel controls">
+    <div class="formula">
+      M<sub>n</sub> = (1 + i&middot;<span class="var" id="dt-display">0.157</span>)<sup><span class="var" id="n-display">20</span></sup><br>
+      <span style="font-size: 0.9em; color: var(--muted);">target as &Delta;t&rarr;0:</span>
+      <span style="color: var(--green); font-weight: bold;">e<sup>iT</sup></span>
+    </div>
+
+    <div class="values">
+      <div><span class="label">n (steps):</span>      <span class="val" id="n-value">20</span></div>
+      <div><span class="label">&Delta;t:</span>       <span class="val" id="dt-value">0.157</span></div>
+      <div><span class="label">T = n&middot;&Delta;t:</span> <span class="val" id="T-value">3.142</span> &nbsp;(<span id="T-frac">&pi;</span>)</div>
+      <div><span class="label">endpoint:</span>       <span class="val" id="end-value">(-1.27, 0.03)</span></div>
+      <div><span class="label">|endpoint|:</span>     <span class="val" id="end-mag">1.273</span></div>
+      <div><span class="label">target e<sup>iT</sup>:</span> <span class="val" id="target-value">(-1.00, 0.00)</span></div>
+      <div class="convergence">
+        <span class="label">gap:</span> <span class="val" id="gap-value">0.275</span>
+      </div>
+    </div>
+
+    <label class="slider-label">
+      n &mdash; number of steps:
+      <span class="value-tag" id="n-slider-tag">20</span>
+    </label>
+    <input type="range" id="n-slider" min="2" max="400" step="1" value="20">
+
+    <label class="slider-label">
+      T &mdash; total "time" (radians of arc):
+      <span class="value-tag" id="T-slider-tag">&pi;</span>
+    </label>
+    <input type="range" id="T-slider" min="0.5" max="6.283185" step="0.001" value="3.141593">
+
+    <div class="presets">
+      <button data-T="1.570796">T = &pi;/2</button>
+      <button data-T="3.141593" class="active">T = &pi;</button>
+      <button data-T="4.712389">T = 3&pi;/2</button>
+      <button data-T="6.283185">T = 2&pi;</button>
+    </div>
+
+    <div class="toggles">
+      <label><input type="checkbox" id="show-circle" checked> Show unit circle (target)</label>
+      <label><input type="checkbox" id="show-target-arc" checked> Show e<sup>it</sup> arc from 0 to T</label>
+      <label><input type="checkbox" id="show-endpoints" checked> Show step endpoints (dots)</label>
+    </div>
+
+    <button class="play-btn" id="play-btn">&blacktriangleright; Sweep n: 2 &rarr; 400</button>
+
+    <div class="legend">
+      <div class="legend-row">
+        <div class="legend-swatch" style="background: var(--orange-light); height: 3px;"></div>
+        <span>Discrete spiral &mdash; arrows from M<sub>k</sub> to M<sub>k+1</sub></span>
+      </div>
+      <div class="legend-row">
+        <div class="legend-swatch" style="background: var(--green-light); border-top: 2px dashed var(--green); height: 0;"></div>
+        <span>Continuous e<sup>it</sup> arc (the limit)</span>
+      </div>
+      <div class="legend-row">
+        <div class="legend-swatch" style="background: var(--blue-light); height: 2px; border-style: dashed;"></div>
+        <span>Unit circle reference</span>
+      </div>
+    </div>
+
+    <div class="insight" id="insight-box">
+      <strong>Try this:</strong> set T = &pi;, then drag n from 2 to 400.
+      Notice the endpoint sliding inward toward exactly &minus;1 on the real axis.
+      The "gap" value shows how far off the discrete answer is from the continuous one.
+    </div>
+  </div>
+
+</div>
+
+<div class="footnote">
+  The discrete process: each step multiplies by (1 + i&middot;&Delta;t), which rotates by arctan(&Delta;t) &asymp; &Delta;t radians
+  <em>and</em> scales by &radic;(1 + &Delta;t&sup2;) &gt; 1. The scaling is what causes the outward spiral.
+  As &Delta;t &rarr; 0, both the rotation per step and the excess scaling shrink in lock-step, and the path collapses onto pure rotation along the unit circle.
+</div>
+
+<script>
+'use strict';
+
+const PI = Math.PI;
+const TWO_PI = 2 * PI;
+
+// SVG coordinates: center at (280, 280), 130 px per unit -> ~2 units in each direction visible.
+const CENTER_X = 280, CENTER_Y = 280;
+const SCALE = 130;
+
+const COLORS = {
+  axis: '#888',
+  grid: '#e8e8e0',
+  circle: '#4a90e2',
+  spiral: '#e2924a',
+  spiralEdge: '#8c4f1f',
+  target: '#7bb55c',
+  targetEdge: '#3d7530',
+  endpoint: '#7a3030',
+  startpoint: '#aa8b3a',
+  text: '#222',
+  muted: '#888',
+};
+
+const SVG_NS = 'http://www.w3.org/2000/svg';
+const svg = document.getElementById('canvas');
+
+function el(tag, attrs) {
+  const e = document.createElementNS(SVG_NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  return e;
+}
+
+function mx(x) { return CENTER_X + x * SCALE; }
+function my(y) { return CENTER_Y - y * SCALE; }
+
+// State
+let state = {
+  n: 20,
+  T: PI,
+  showCircle: true,
+  showTargetArc: true,
+  showEndpoints: true,
+  playing: false,
+  playRAF: null,
+};
+
+// Static layer (axes, grid, unit circle). Rendered once.
+let staticGroup, dynamicGroup;
+
+function renderStatic() {
+  staticGroup = el('g', {});
+  svg.appendChild(staticGroup);
+
+  // Grid lines at -2,-1.5,-1,-0.5,0.5,1,1.5,2
+  for (let g of [-2, -1.5, -1, -0.5, 0.5, 1, 1.5, 2]) {
+    staticGroup.appendChild(el('line', {
+      x1: mx(-2.1), y1: my(g), x2: mx(2.1), y2: my(g),
+      stroke: COLORS.grid, 'stroke-width': '0.7'
+    }));
+    staticGroup.appendChild(el('line', {
+      x1: mx(g), y1: my(-2.1), x2: mx(g), y2: my(2.1),
+      stroke: COLORS.grid, 'stroke-width': '0.7'
+    }));
+  }
+
+  // Main axes
+  staticGroup.appendChild(el('line', {
+    x1: mx(-2.1), y1: my(0), x2: mx(2.1), y2: my(0),
+    stroke: COLORS.axis, 'stroke-width': '1'
+  }));
+  staticGroup.appendChild(el('line', {
+    x1: mx(0), y1: my(-2.1), x2: mx(0), y2: my(2.1),
+    stroke: COLORS.axis, 'stroke-width': '1'
+  }));
+
+  // Axis labels
+  let lbl = el('text', {
+    x: mx(2.05), y: my(0) - 8, fill: COLORS.axis,
+    'font-size': '13', 'text-anchor': 'middle', 'font-style': 'italic'
+  });
+  lbl.textContent = 'Re'; staticGroup.appendChild(lbl);
+
+  lbl = el('text', {
+    x: mx(0) + 12, y: my(2.05), fill: COLORS.axis,
+    'font-size': '13', 'text-anchor': 'start', 'font-style': 'italic'
+  });
+  lbl.textContent = 'Im'; staticGroup.appendChild(lbl);
+
+  // Tick labels
+  function tickLbl(x, y, label, ha, dx, dy) {
+    const t = el('text', {
+      x: mx(x) + (dx || 0), y: my(y) + (dy || 0), fill: COLORS.muted,
+      'font-size': '11', 'text-anchor': ha || 'middle',
+    });
+    t.textContent = label; staticGroup.appendChild(t);
+  }
+  tickLbl(1, 0, '1', 'middle', 0, 14);
+  tickLbl(-1, 0, '-1', 'middle', 0, 14);
+  tickLbl(2, 0, '2', 'middle', 0, 14);
+  tickLbl(-2, 0, '-2', 'middle', 0, 14);
+  tickLbl(0, 1, 'i', 'start', 6, 4);
+  tickLbl(0, -1, '-i', 'start', 6, 4);
+
+  // Container for dynamic content
+  dynamicGroup = el('g', {});
+  svg.appendChild(dynamicGroup);
+
+  // Arrowhead marker
+  const defs = el('defs', {});
+  const marker = el('marker', {
+    id: 'arrow-spiral', markerWidth: '8', markerHeight: '8',
+    refX: '7', refY: '4', orient: 'auto', markerUnits: 'strokeWidth'
+  });
+  marker.appendChild(el('path', {
+    d: 'M0,0 L8,4 L0,8 Z', fill: COLORS.spiralEdge
+  }));
+  defs.appendChild(marker);
+
+  const startMarker = el('marker', {
+    id: 'arrow-start', markerWidth: '8', markerHeight: '8',
+    refX: '7', refY: '4', orient: 'auto', markerUnits: 'strokeWidth'
+  });
+  startMarker.appendChild(el('path', {
+    d: 'M0,0 L8,4 L0,8 Z', fill: COLORS.spiral
+  }));
+  defs.appendChild(startMarker);
+  svg.appendChild(defs);
+}
+
+function clearDynamic() {
+  while (dynamicGroup.firstChild) {
+    dynamicGroup.removeChild(dynamicGroup.firstChild);
+  }
+}
+
+// Complex multiplication: (a+bi)*(c+di) = (ac-bd) + (ad+bc)i
+function cmul(a, b) {
+  return [a[0]*b[0] - a[1]*b[1], a[0]*b[1] + a[1]*b[0]];
+}
+function cmag(z) { return Math.sqrt(z[0]*z[0] + z[1]*z[1]); }
+
+function computeSpiral(n, T) {
+  const dt = T / n;
+  const factor = [1, dt];  // 1 + i*dt
+  const points = [[1, 0]];
+  let z = [1, 0];
+  for (let k = 0; k < n; k++) {
+    z = cmul(z, factor);
+    points.push(z);
+  }
+  return points;
+}
+
+function render() {
+  clearDynamic();
+  const n = state.n;
+  const T = state.T;
+  const dt = T / n;
+  const points = computeSpiral(n, T);
+  const endpoint = points[n];
+
+  // Unit circle reference (dashed)
+  if (state.showCircle) {
+    dynamicGroup.appendChild(el('circle', {
+      cx: CENTER_X, cy: CENTER_Y, r: SCALE,
+      fill: 'none', stroke: COLORS.circle, 'stroke-width': '1.4',
+      'stroke-dasharray': '4 4'
+    }));
+  }
+
+  // Continuous target arc (e^{it} from 0 to T)
+  if (state.showTargetArc) {
+    const arcPts = [];
+    const N = 200;
+    for (let i = 0; i <= N; i++) {
+      const t = (i / N) * T;
+      arcPts.push([Math.cos(t), Math.sin(t)]);
+    }
+    const d = 'M' + arcPts.map(p => `${mx(p[0])},${my(p[1])}`).join(' L');
+    dynamicGroup.appendChild(el('path', {
+      d: d,
+      fill: 'none', stroke: COLORS.target, 'stroke-width': '3.2',
+      'stroke-linecap': 'round', 'stroke-dasharray': '6 4',
+      opacity: 0.85
+    }));
+  }
+
+  // Discrete spiral path -- solid colored line connecting all points
+  if (n <= 250) {
+    // For small n, draw arrows between every pair
+    for (let k = 0; k < n; k++) {
+      const p0 = points[k], p1 = points[k + 1];
+      // Skip if too tiny to see
+      if (Math.hypot(p1[0]-p0[0], p1[1]-p0[1]) < 0.01) continue;
+      const useArrow = (n <= 60);  // arrows readable only with few steps
+      dynamicGroup.appendChild(el('line', {
+        x1: mx(p0[0]), y1: my(p0[1]),
+        x2: mx(p1[0]), y2: my(p1[1]),
+        stroke: COLORS.spiralEdge,
+        'stroke-width': n <= 30 ? '2.2' : (n <= 100 ? '1.7' : '1.2'),
+        'stroke-linecap': 'round',
+        'marker-end': useArrow ? 'url(#arrow-spiral)' : '',
+        opacity: 0.92
+      }));
+    }
+  } else {
+    // For large n, draw as a single polyline (faster)
+    const d = 'M' + points.map(p => `${mx(p[0])},${my(p[1])}`).join(' L');
+    dynamicGroup.appendChild(el('path', {
+      d: d,
+      fill: 'none', stroke: COLORS.spiralEdge,
+      'stroke-width': '1.4', 'stroke-linecap': 'round', opacity: 0.92
+    }));
+  }
+
+  // Step endpoint dots
+  if (state.showEndpoints && n <= 100) {
+    for (let k = 0; k < points.length; k++) {
+      const p = points[k];
+      dynamicGroup.appendChild(el('circle', {
+        cx: mx(p[0]), cy: my(p[1]), r: n <= 30 ? 4 : 2.5,
+        fill: COLORS.spiral, stroke: COLORS.spiralEdge,
+        'stroke-width': '1'
+      }));
+    }
+  }
+
+  // Start point: big gold dot at (1, 0)
+  dynamicGroup.appendChild(el('circle', {
+    cx: mx(1), cy: my(0), r: 7,
+    fill: '#d4a04a', stroke: '#8c6520', 'stroke-width': '1.6'
+  }));
+  const startLabel = el('text', {
+    x: mx(1) + 10, y: my(0) + 16, fill: '#6e5a20',
+    'font-size': '11', 'font-weight': 'bold'
+  });
+  startLabel.textContent = 'M₀ = 1';
+  dynamicGroup.appendChild(startLabel);
+
+  // Endpoint marker: red star
+  dynamicGroup.appendChild(el('circle', {
+    cx: mx(endpoint[0]), cy: my(endpoint[1]), r: 8,
+    fill: COLORS.endpoint, stroke: '#3a1010', 'stroke-width': '1.6'
+  }));
+  // Endpoint label
+  const lblOffsetX = endpoint[0] >= 0 ? 14 : -14;
+  const lblOffsetY = endpoint[1] >= 0 ? -10 : 18;
+  const lblAnchor = endpoint[0] >= 0 ? 'start' : 'end';
+  const endLabel = el('text', {
+    x: mx(endpoint[0]) + lblOffsetX, y: my(endpoint[1]) + lblOffsetY,
+    fill: COLORS.endpoint,
+    'font-size': '12', 'font-weight': 'bold', 'text-anchor': lblAnchor
+  });
+  endLabel.textContent = `Mₙ = (${endpoint[0].toFixed(2)}, ${endpoint[1].toFixed(2)})`;
+  dynamicGroup.appendChild(endLabel);
+
+  // Target marker (e^{iT}) — green ring
+  const tx = Math.cos(T), ty = Math.sin(T);
+  dynamicGroup.appendChild(el('circle', {
+    cx: mx(tx), cy: my(ty), r: 9,
+    fill: 'none', stroke: COLORS.targetEdge, 'stroke-width': '2.4'
+  }));
+  const tgtLabel = el('text', {
+    x: mx(tx) - 14, y: my(ty) - 14,
+    fill: COLORS.targetEdge,
+    'font-size': '12', 'font-weight': 'bold', 'text-anchor': 'end'
+  });
+  tgtLabel.textContent = `e^iT = (${tx.toFixed(2)}, ${ty.toFixed(2)})`;
+  dynamicGroup.appendChild(tgtLabel);
+
+  // Update text displays
+  document.getElementById('n-value').textContent = n;
+  document.getElementById('n-display').textContent = n;
+  document.getElementById('dt-value').textContent = dt.toFixed(3);
+  document.getElementById('dt-display').textContent = dt.toFixed(3);
+  document.getElementById('T-value').textContent = T.toFixed(3);
+  document.getElementById('T-frac').innerHTML = formatTFrac(T);
+  document.getElementById('end-value').textContent =
+    `(${endpoint[0].toFixed(3)}, ${endpoint[1].toFixed(3)})`;
+  document.getElementById('end-mag').textContent = cmag(endpoint).toFixed(3);
+  document.getElementById('target-value').textContent =
+    `(${tx.toFixed(3)}, ${ty.toFixed(3)})`;
+  const gap = Math.hypot(endpoint[0] - tx, endpoint[1] - ty);
+  document.getElementById('gap-value').textContent = gap.toFixed(4);
+  // Color gap by magnitude
+  const gapEl = document.getElementById('gap-value');
+  gapEl.style.color = gap < 0.05 ? '#3d7530' : (gap < 0.3 ? '#8c6520' : '#8c4f1f');
+
+  // Slider tag values
+  document.getElementById('n-slider-tag').textContent = n;
+  document.getElementById('T-slider-tag').innerHTML = formatTFrac(T);
+}
+
+function formatTFrac(T) {
+  // Snap to common pi-fractions for display
+  const candidates = [
+    [PI/2, '&pi;/2'],
+    [PI, '&pi;'],
+    [3*PI/2, '3&pi;/2'],
+    [2*PI, '2&pi;'],
+  ];
+  for (const [val, label] of candidates) {
+    if (Math.abs(T - val) < 0.005) return label;
+  }
+  return T.toFixed(3);
+}
+
+// Wire up controls
+function init() {
+  renderStatic();
+  render();
+
+  const nSlider = document.getElementById('n-slider');
+  const TSlider = document.getElementById('T-slider');
+
+  nSlider.addEventListener('input', () => {
+    state.n = parseInt(nSlider.value);
+    render();
+  });
+
+  TSlider.addEventListener('input', () => {
+    state.T = parseFloat(TSlider.value);
+    // Deactivate preset buttons unless we snapped to one
+    document.querySelectorAll('.presets button').forEach(b => {
+      const bT = parseFloat(b.dataset.T);
+      b.classList.toggle('active', Math.abs(bT - state.T) < 0.005);
+    });
+    render();
+  });
+
+  document.querySelectorAll('.presets button').forEach(b => {
+    b.addEventListener('click', () => {
+      state.T = parseFloat(b.dataset.T);
+      TSlider.value = state.T;
+      document.querySelectorAll('.presets button').forEach(x =>
+        x.classList.toggle('active', x === b)
+      );
+      render();
+    });
+  });
+
+  document.getElementById('show-circle').addEventListener('change', e => {
+    state.showCircle = e.target.checked; render();
+  });
+  document.getElementById('show-target-arc').addEventListener('change', e => {
+    state.showTargetArc = e.target.checked; render();
+  });
+  document.getElementById('show-endpoints').addEventListener('change', e => {
+    state.showEndpoints = e.target.checked; render();
+  });
+
+  const playBtn = document.getElementById('play-btn');
+  playBtn.addEventListener('click', () => {
+    if (state.playing) {
+      cancelAnimationFrame(state.playRAF);
+      state.playing = false;
+      playBtn.textContent = '▶ Sweep n: 2 → 400';
+      playBtn.classList.remove('playing');
+      return;
+    }
+    state.playing = true;
+    playBtn.textContent = '■ Stop';
+    playBtn.classList.add('playing');
+    let start = null;
+    const duration = 6000; // ms full sweep
+    function step(ts) {
+      if (!state.playing) return;
+      if (start === null) start = ts;
+      const elapsed = ts - start;
+      const t = Math.min(1, elapsed / duration);
+      // Exponential-ish ramp so we spend more time at smaller n
+      const eased = Math.pow(t, 2);
+      const n = Math.round(2 + eased * 398);
+      state.n = n;
+      nSlider.value = n;
+      render();
+      if (t >= 1) {
+        state.playing = false;
+        playBtn.textContent = '▶ Sweep n: 2 → 400';
+        playBtn.classList.remove('playing');
+        return;
+      }
+      state.playRAF = requestAnimationFrame(step);
+    }
+    state.playRAF = requestAnimationFrame(step);
+  });
+}
+
+init();
+</script>
+
+</body>
+</html>
