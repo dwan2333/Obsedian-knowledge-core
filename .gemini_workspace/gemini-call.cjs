@@ -139,6 +139,10 @@ async function main() {
     process.stdout.write(text);
   } catch (err) {
     process.stderr.write(`ERROR: ${err.message || err}\n`);
+    if (err.cause) {
+      process.stderr.write(`CAUSE: ${err.cause.message || JSON.stringify(err.cause)}\n`);
+      if (err.cause.code) process.stderr.write(`CAUSE_CODE: ${err.cause.code}\n`);
+    }
     if (err.stack) process.stderr.write(err.stack + '\n');
     process.exit(2);
   }
