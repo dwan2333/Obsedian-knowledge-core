@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
+                "file": "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Complex Number Fundamentals (Main)"
+              "title": "Imaginary Interest and Continuous Rotation (Main)"
             }
           }
         ],
@@ -233,9 +233,12 @@
   },
   "active": "6768d2e2fa5bc0d2",
   "lastOpenFiles": [
+    "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
+    "content/Mathematics/Euler 's equation/eulers_formula_consequences.md",
+    "content/Mathematics/Euler 's equation/Euler's Formula via exp(x) (Main).md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
     "content/Mathematics/Complex Numbers/iir_demo.html",
-    "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
     "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Complex Numbers/iir_mindmap.png",
@@ -250,13 +253,10 @@
     "content/Mathematics/Complex Numbers/_gen_iir_fig3_imag_spiral.py",
     "content/Mathematics/Complex Numbers/_gen_iir_fig2_timeline.py",
     "content/Mathematics/Complex Numbers/_gen_iir_fig1_staircase.py",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_mindmap.png",
-    "content/Mathematics/Euler 's equation/Euler's Formula via exp(x) (Main).md",
-    "content/Mathematics/Euler 's equation/eulers_formula_consequences.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
     "content/Mathematics/Euler 's equation/efm_mindmap.png",
     "content/Mathematics/Complex Numbers/cnf_fig4_angle_sum.png",
