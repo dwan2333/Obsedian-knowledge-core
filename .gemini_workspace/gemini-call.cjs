@@ -59,6 +59,27 @@ function parseTimeToSeconds(time) {
   return time;
 }
 
+async function withRetry(fn, label, maxAttempts = 5) {
+  let lastErr;
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      return await fn();
+    } catch (err) {
+      lastErr = err;
+      const cause = err.cause ? (err.cause.code || err.cause.message) : '';
+      const msg = err.message || String(err);
+      const is503 = msg.includes('"code":503') || msg.includes('UNAVAILABLE');
+      const isSocket = cause === 'UND_ERR_SOCKET' || msg.includes('other side closed') || msg.includes('fetch failed');
+      const shouldRetry = is503 || isSocket;
+      if (!shouldRetry || attempt === maxAttempts) throw err;
+      const backoff = is503 ? 30 : 5 * attempt;
+      process.stderr.write(`[retry ${attempt}/${maxAttempts}] ${label} failed (${is503 ? '503' : 'socket'}), backoff ${backoff}s\n`);
+      await new Promise((r) => setTimeout(r, backoff * 1000));
+    }
+  }
+  throw lastErr;
+}
+
 async function callYouTube(url, question, startTime, endTime) {
   const videoPart = {
     fileData: { fileUri: url, mimeType: 'video/*' },
@@ -72,7 +93,10 @@ async function callYouTube(url, question, startTime, endTime) {
   const contents = [{ role: 'user', parts: [videoPart, { text: question }] }];
   process.stderr.write(`[gemini] model=${model} youtube_call start=${startTime || 'none'} end=${endTime || 'none'}\n`);
   const t0 = Date.now();
-  const response = await genAI.models.generateContent({ model, contents });
+  const response = await withRetry(
+    () => genAI.models.generateContent({ model, contents }),
+    `youtube[${startTime || 'start'}-${endTime || 'end'}]`,
+  );
   process.stderr.write(`[gemini] response in ${((Date.now() - t0) / 1000).toFixed(1)}s\n`);
   return response.text || '';
 }
@@ -117,7 +141,15 @@ async function callText(question) {
 }
 
 async function main() {
-  const [, , subcmd, ...args] = process.argv;
+  // Optional --out <file> writes UTF-8 text to the file instead of stdout.
+  const argv = process.argv.slice(2);
+  let outFile = null;
+  const outIdx = argv.indexOf('--out');
+  if (outIdx >= 0) {
+    outFile = argv[outIdx + 1];
+    argv.splice(outIdx, 2);
+  }
+  const [subcmd, ...args] = argv;
   try {
     let text;
     if (subcmd === 'youtube') {
@@ -136,7 +168,12 @@ async function main() {
       process.stderr.write(`Unknown subcommand: ${subcmd}\n`);
       process.exit(1);
     }
-    process.stdout.write(text);
+    if (outFile) {
+      fs.writeFileSync(outFile, text, { encoding: 'utf8' });
+      process.stderr.write(`[gemini] wrote ${text.length} chars to ${outFile}\n`);
+    } else {
+      process.stdout.write(text);
+    }
   } catch (err) {
     process.stderr.write(`ERROR: ${err.message || err}\n`);
     if (err.cause) {
