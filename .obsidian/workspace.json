@@ -35,7 +35,8 @@
               "title": "chapter1_exercises"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -230,15 +231,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "66d6b6cbd14fb88e",
+  "active": "6768d2e2fa5bc0d2",
   "lastOpenFiles": [
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_mindmap.png",
     "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
     "content/Mathematics/Euler 's equation/Euler's Formula via exp(x) (Main).md",
     "content/Mathematics/Euler 's equation/eulers_formula_consequences.md",
