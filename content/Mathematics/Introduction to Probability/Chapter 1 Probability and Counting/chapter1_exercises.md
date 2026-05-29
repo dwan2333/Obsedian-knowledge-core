@@ -561,9 +561,19 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > (c) Suppose that there are 16 balls in total, and that the probability that the two balls are the same color is the same as the probability that they are different colors. What are $r$ and $g$ (list all possibilities)?
 >
 > > [!success]- Click to reveal solution
-> > **Solution.** (a)/(b) By labeling, every ball is equally likely to be the 2nd: $g/(r+g)$. (c) $r(r-1) + g(g-1) = 120$ with $r+g=16$ → $r^2 - 16r + 60 = 0$ → $(r,g) \in \{(6,10), (10,6)\}$.
+> > **(a) Intuition — line them up.** Instead of thinking about this as "draw one, then draw another from a now-changed jar," reach into the jar and pull all $r + g$ balls out into a single random line. The "first draw" is just the ball at position 1; the "second draw" is the ball at position 2. Because the line is a uniformly random permutation, every position is symmetric — position 2 is no more or less likely to be green than position 1. So $P(G_2) = P(G_1) = g/(r+g)$.
 > >
-> > **Answer.** $g/(r+g)$; $(6,10)$ or $(10,6)$ ✓
+> > **(b) Formal proof — Law of Total Probability.** Define $G_i$ = "the $i$-th ball is green" and $R_i$ = "the $i$-th ball is red." Then $P(G_1) = g/(r+g)$ directly. For $G_2$, condition on what happened first:
+> > $$P(G_2) \;=\; P(G_1)\,P(G_2 \mid G_1) + P(R_1)\,P(G_2 \mid R_1) \;=\; \frac{g}{r+g}\cdot\frac{g-1}{r+g-1} + \frac{r}{r+g}\cdot\frac{g}{r+g-1}.$$
+> > Combine over the common denominator:
+> > $$P(G_2) \;=\; \frac{g(g-1) + rg}{(r+g)(r+g-1)} \;=\; \frac{g\,(g-1+r)}{(r+g)(r+g-1)} \;=\; \frac{g\,(r+g-1)}{(r+g)(r+g-1)} \;=\; \frac{g}{r+g}.$$
+> > The algebra confirms the intuition: $P(G_1) = P(G_2)$. ✓
+> >
+> > **(c) Solving for $r$ and $g$.** With $r + g = 16$ and $P(\text{same colour}) = P(\text{different colours})$, both sides have denominator $16 \cdot 15$, so we can equate numerators:
+> > $$r(r-1) + g(g-1) \;=\; 2rg.$$
+> > Expand and rearrange: $r^2 - r + g^2 - g = 2rg$, so $r^2 - 2rg + g^2 = r + g$, which is the same as $(r-g)^2 = r+g = 16$. Therefore $r - g = \pm 4$. Combined with $r + g = 16$: $r - g = +4$ gives $(r, g) = (10, 6)$; $r - g = -4$ gives $(r, g) = (6, 10)$.
+> >
+> > **Answer.** $P(G_1) = P(G_2) = g/(r+g)$; for part (c), $(r, g) \in \{(10, 6), (6, 10)\}$. ✓
 
 > [!example] Exercise 34 — Poker
 > **Problem.** A random 5-card poker hand is dealt from a standard deck of cards. Find the probability of each of the following possibilities (in terms of binomial coefficients).
