@@ -41,16 +41,21 @@ topics = [
      "$\\approx 2.71828$" "\n"
      r"$M(T) = M(0)\, e^{rT}$" "\n"
      "continuous compounding"),
-    ("4. Imaginary input",
-     r"$\Delta M = i\Delta t\cdot M$" "\n"
-     r"$\Rightarrow$ change perpendicular" "\n"
-     "to current value" "\n"
-     "Discrete: spiral outward"),
-    ("5. Continuous limit",
-     r"$\Delta t \to 0$" "\n"
-     "perpendicular nudges don't" "\n"
-     "grow magnitude $\\to$ circle" "\n"
-     r"$e^{i\pi}{=}{-1}$ in $\pi$ yrs"),
+    ("4. Imaginary $\\to$ rotation",
+     r"$\Delta M = i\Delta t\cdot M$:" "\n"
+     "perpendicular nudges" "\n"
+     r"$\Delta t \to 0 \Rightarrow$ unit circle" "\n"
+     r"$e^{it}$ at speed 1 rad/yr"),
+    ("5. Special values",
+     r"$e^{i\pi/2} = i$" "\n"
+     r"$e^{i\pi} = -1$ (in $\pi$ yrs)" "\n"
+     r"$e^{2\pi i} = 1$" "\n"
+     "Euler's identity for free"),
+    ("6. SHM connection",
+     r"Spring: $F = -kx$, $a = -\omega^2 x$" "\n"
+     r"State $z = x + i(v/\omega)$" "\n"
+     r"$\dot z = -i\omega z \Rightarrow z = z_0 e^{-i\omega t}$" "\n"
+     "Same rotation, different story"),
 ]
 
 node_palette = [
@@ -59,6 +64,7 @@ node_palette = [
     ('#7bb55c', '#3d7530'),  # green
     ('#b76db4', '#6e3a6c'),  # purple
     ('#d4a04a', '#8c6520'),  # yellow
+    ('#cd6680', '#7a3030'),  # red
 ]
 
 n_topics = len(topics)
