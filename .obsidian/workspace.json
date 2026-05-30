@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+                "file": "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 1 (Main)"
+              "title": "Imaginary Interest and Continuous Rotation (Main)"
             }
           }
         ],
@@ -231,17 +231,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "328aa9c891b22c6e",
+  "active": "6768d2e2fa5bc0d2",
   "lastOpenFiles": [
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
-    "content/Mathematics/Euler 's equation/Euler's Formula via exp(x) (Main).md",
     "content/Mathematics/Euler 's equation/eulers_formula_consequences.md",
+    "content/Mathematics/Euler 's equation/Euler's Formula via exp(x) (Main).md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
     "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
     "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
     "content/Mathematics/Complex Numbers/iir_mindmap.png",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Complex Numbers/cnf_mindmap.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.21776.bdf8163a7150",
     "content/Mathematics/Complex Numbers/iir_fig7_shm_phase_space.png",
