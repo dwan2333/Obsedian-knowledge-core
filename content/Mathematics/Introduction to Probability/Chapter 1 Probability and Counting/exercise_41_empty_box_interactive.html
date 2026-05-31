@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exactly One Empty Box · Exercise 41</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:        #f7f1e3;
+    --paper-deep:   #efe6d0;
+    --ink:          #1c2030;
+    --ink-soft:     #5a5d6e;
+    --rule:         #c8b89a;
+    --accent:       #b13a2e;
+    --accent-bg:    rgba(177,58,46,0.10);
+    --teal:         #2d6470;
+    --good:         #3d7530;
+    --good-bg:      rgba(61,117,48,0.10);
+    --bad:          #b13a2e;
+    --bad-bg:       rgba(177,58,46,0.12);
+    --crowded:      #b88455;
+    --crowded-bg:   rgba(184,132,85,0.18);
+    --empty-box:    #9aa0a8;
+    --panel:        #ede2c7;
+    --ball-1:       #b13a2e;
+    --ball-2:       #2d6470;
+    --ball-3:       #b88455;
+    --ball-4:       #7bb55c;
+    --ball-5:       #b76db4;
+    --ball-6:       #d4a04a;
+    --ball-7:       #5e7c5e;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); }
+  body {
+    color: var(--ink);
+    font-family: 'Crimson Pro', 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 1.55;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse 70% 50% at 14% 6%,  rgba(45,100,112,0.04), transparent 65%),
+      radial-gradient(ellipse 60% 50% at 86% 94%, rgba(177,58,46,0.04), transparent 65%);
+    background-attachment: fixed;
+  }
+  .frame { max-width: 1080px; margin: 0 auto; padding: 44px 36px 56px; }
+  @media (max-width: 720px) { .frame { padding: 28px 16px 40px; } }
+
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 26px; margin-bottom: 30px; }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 16px;
+  }
+  h1 {
+    font-size: clamp(30px, 4.2vw, 50px);
+    font-weight: 600; line-height: 1.05;
+    margin-bottom: 12px; letter-spacing: -0.01em;
+  }
+  .subtitle { color: var(--ink-soft); font-size: 17px; font-style: italic; max-width: 780px; }
+
+  section {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  h2 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 21px; font-weight: 500; margin-bottom: 14px;
+    color: var(--ink);
+  }
+
+  /* Stepper */
+  .stepper-row {
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .stepper-box {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 12px 16px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .stepper-box .lbl {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .step-btn {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    width: 32px; height: 32px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px; font-weight: 700;
+    cursor: pointer;
+  }
+  .step-btn:hover { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+  .step-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+  .step-val {
+    font-family: 'Crimson Pro', serif;
+    font-size: 28px; font-weight: 600;
+    color: var(--ink); min-width: 36px; text-align: center;
+  }
+  .shuffle-btn {
+    background: var(--accent);
+    color: white;
+    border: 1px solid var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; letter-spacing: 0.08em;
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .shuffle-btn:hover { background: #8e2d23; }
+
+  /* Boxes visualization */
+  .boxes-row {
+    display: flex; justify-content: center; gap: 12px;
+    flex-wrap: wrap; margin: 16px 0 12px;
+  }
+  .box {
+    width: 92px; min-height: 110px;
+    background: var(--paper);
+    border: 2px solid var(--rule);
+    border-radius: 8px;
+    padding: 8px 6px;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 4px;
+    position: relative;
+    transition: all 0.18s;
+  }
+  .box-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-soft);
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+  }
+  .box-balls {
+    display: flex; flex-wrap: wrap; gap: 4px;
+    justify-content: center; align-content: flex-start;
+    flex: 1; width: 100%;
+    padding-top: 2px;
+  }
+  .ball {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: white;
+    font-family: 'Crimson Pro', serif;
+    font-size: 14px; font-weight: 700;
+    border: 1.5px solid rgba(0,0,0,0.15);
+  }
+  .box.empty {
+    background: rgba(154,160,168,0.10);
+    border-color: var(--empty-box);
+    border-style: dashed;
+  }
+  .box.empty::after {
+    content: '∅';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    color: var(--empty-box);
+    font-family: 'Crimson Pro', serif;
+  }
+  .box.crowded {
+    background: var(--crowded-bg);
+    border-color: var(--crowded);
+    border-width: 2.5px;
+  }
+  .box.normal {
+    background: var(--good-bg);
+    border-color: var(--good);
+  }
+
+  .shape-caption {
+    text-align: center;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 15px;
+    margin-top: 8px;
+  }
+  .shape-caption b { color: var(--ink); font-style: normal; }
+
+  /* Step-by-step build */
+  .build-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .build-step {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 14px 16px;
+  }
+  .build-step .step-lbl {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 6px;
+  }
+  .build-step .step-desc {
+    font-size: 15px; margin-bottom: 8px; color: var(--ink);
+  }
+  .build-step .step-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px; font-weight: 700;
+    color: var(--ink);
+    text-align: center;
+    padding: 6px 10px;
+    background: var(--panel);
+    border-radius: 4px;
+  }
+  .product-row {
+    margin-top: 16px;
+    padding: 14px 18px;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    text-align: center;
+    color: var(--ink);
+  }
+  .product-row .total {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 22px;
+    margin-left: 8px;
+  }
+
+  /* Probability display */
+  .prob-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  @media (max-width: 700px) { .prob-grid { grid-template-columns: 1fr; } }
+  .prob-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 16px 18px;
+  }
+  .prob-card.good { background: var(--good-bg); border-color: var(--good); }
+  .prob-card.bad  { background: var(--bad-bg);  border-color: var(--bad);  }
+  .prob-card .head {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .prob-card.good .head { color: var(--good); }
+  .prob-card.bad  .head { color: var(--bad); }
+  .prob-card .formula {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    color: var(--ink);
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .prob-card .values {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    text-align: center;
+    color: var(--ink);
+  }
+  .prob-card .values .big {
+    font-size: 28px; font-weight: 700;
+  }
+  .prob-card.good .values .big { color: var(--good); }
+  .prob-card.bad  .values .big { color: var(--bad);  }
+  .prob-card .note {
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin-top: 6px;
+    text-align: center;
+  }
+
+  /* Stars and Bars trap */
+  .trap-explain {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin-top: 12px;
+  }
+  .trap-explain h3 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 16px; font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .trap-explain p { font-size: 15px; margin-bottom: 8px; }
+  .trap-explain p:last-child { margin-bottom: 0; }
+  .trap-explain table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0;
+    background: var(--paper-deep);
+    border-radius: 4px;
+    overflow: hidden;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+  }
+  .trap-explain th, .trap-explain td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--rule);
+  }
+  .trap-explain th {
+    background: var(--panel);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .trap-explain tr:last-child td { border-bottom: none; }
+  .trap-explain .winning td { background: var(--good-bg); }
+  .trap-explain .key { color: var(--accent); font-weight: 700; font-style: normal; }
+
+  /* Notes section */
+  .notes p { margin-bottom: 10px; }
+  .notes p:last-child { margin-bottom: 0; }
+  .notes .key { color: var(--accent); font-weight: 600; }
+  .notes ul { margin: 6px 0 6px 22px; }
+  .notes li { margin-bottom: 4px; }
+
+  footer {
+    margin-top: 36px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    color: var(--ink-soft);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="frame">
+  <header>
+    <div class="eyebrow">Chapter 1 · Exercise 41 · Empty Box</div>
+    <h1>Exactly one empty box</h1>
+    <div class="subtitle">Throw <em>n</em> distinguishable balls into <em>n</em> distinguishable boxes, all placements equally likely. Watch the winning shape, build the count, and see the famous Stars-and-Bars trap that makes the "obvious" indistinguishable-balls formula give the wrong answer.</div>
+  </header>
+
+  <section>
+    <h2>The setup</h2>
+    <div class="stepper-row">
+      <div class="stepper-box">
+        <span class="lbl"><em>n</em> — balls = boxes</span>
+        <button class="step-btn" id="n-down">−</button>
+        <span class="step-val" id="n-val">3</span>
+        <button class="step-btn" id="n-up">+</button>
+      </div>
+      <button class="shuffle-btn" id="shuffle-btn">↻ New random winning arrangement</button>
+    </div>
+    <p style="color: var(--ink-soft); font-style: italic; font-size: 15px;">
+      Total possible arrangements: <span style="color: var(--ink); font-weight: 700;" id="total-count">27</span>
+      &nbsp;=&nbsp; <em>n</em><sup><em>n</em></sup> with each ball independently choosing 1 of <em>n</em> boxes.
+    </p>
+  </section>
+
+  <section>
+    <h2>The winning shape</h2>
+    <p style="color: var(--ink); margin-bottom: 4px;">
+      "Exactly one empty box" forces one box to hold <strong>2 balls</strong>, every other box to hold <strong>1 ball</strong>, and one box to hold <strong>0 balls</strong>.
+      This is the only shape that fits — by the pigeonhole principle, <em>n</em> balls in <em>n</em>−1 occupied boxes means one box must be doubled.
+    </p>
+    <div class="boxes-row" id="boxes-row"></div>
+    <div class="shape-caption" id="shape-caption">A random arrangement matching the shape. Click <b>New random winning arrangement</b> above to shuffle.</div>
+  </section>
+
+  <section>
+    <h2>Building the count, step by step</h2>
+    <p style="color: var(--ink-soft); font-style: italic; font-size: 15px;">
+      Construct every possible winning arrangement by 4 independent choices, then multiply.
+    </p>
+    <div class="build-grid">
+      <div class="build-step">
+        <div class="step-lbl">Step A</div>
+        <div class="step-desc">Pick the <strong>empty box</strong> (1 of <em>n</em>).</div>
+        <div class="step-count" id="step-a"><em>n</em> = 3</div>
+      </div>
+      <div class="build-step">
+        <div class="step-lbl">Step B</div>
+        <div class="step-desc">Pick the <strong>crowded box</strong> (holds 2 balls).</div>
+        <div class="step-count" id="step-b"><em>n</em>−1 = 2</div>
+      </div>
+      <div class="build-step">
+        <div class="step-lbl">Step C</div>
+        <div class="step-desc">Pick which <strong>2 balls</strong> get paired in the crowded box.</div>
+        <div class="step-count" id="step-c">C(<em>n</em>, 2) = 3</div>
+      </div>
+      <div class="build-step">
+        <div class="step-lbl">Step D</div>
+        <div class="step-desc">Place the remaining <em>n</em>−2 balls into the <em>n</em>−2 remaining boxes (1 each).</div>
+        <div class="step-count" id="step-d">(<em>n</em>−2)! = 1</div>
+      </div>
+    </div>
+    <div class="product-row">
+      <em>n</em> · (<em>n</em>−1) · C(<em>n</em>, 2) · (<em>n</em>−2)!
+      &nbsp;=&nbsp; <em>n</em>! · C(<em>n</em>, 2) &nbsp;=&nbsp;
+      <span class="total" id="winning-count">18</span>&nbsp;winning arrangements
+    </div>
+  </section>
+
+  <section>
+    <h2>Two probabilities — only one is right</h2>
+    <div class="prob-grid">
+      <div class="prob-card good">
+        <div class="head">✓ Correct — distinguishable balls</div>
+        <div class="formula">P = <em>n</em>! · C(<em>n</em>, 2) / <em>n</em><sup><em>n</em></sup></div>
+        <div class="values">
+          <span id="correct-frac">18 / 27</span>
+          &nbsp;=&nbsp;
+          <span class="big" id="correct-dec">0.667</span>
+        </div>
+        <div class="note">Every physical arrangement of <em>n</em> distinct balls is equally likely.</div>
+      </div>
+      <div class="prob-card bad">
+        <div class="head">✗ Wrong — Stars-and-Bars trap</div>
+        <div class="formula">P = <em>n</em>(<em>n</em>−1) / C(2<em>n</em>−1, <em>n</em>)</div>
+        <div class="values">
+          <span id="wrong-frac">6 / 10</span>
+          &nbsp;=&nbsp;
+          <span class="big" id="wrong-dec">0.600</span>
+        </div>
+        <div class="note">Treats balls as identical — outcomes are <strong>not</strong> equally likely!</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why the Stars-and-Bars trap fails</h2>
+    <div class="trap-explain">
+      <h3>The 2-ball, 2-box proof</h3>
+      <p>Take <em>n</em> = 2. With <strong>distinguishable</strong> Ball A and Ball B, there are 4 physically distinct, equally likely arrangements:</p>
+      <table>
+        <thead>
+          <tr><th>Arrangement</th><th>Box 1</th><th>Box 2</th><th>Empty box?</th></tr>
+        </thead>
+        <tbody>
+          <tr class="winning"><td>1</td><td>A, B</td><td>(empty)</td><td>Yes — Box 2 ✓</td></tr>
+          <tr class="winning"><td>2</td><td>(empty)</td><td>A, B</td><td>Yes — Box 1 ✓</td></tr>
+          <tr><td>3</td><td>A</td><td>B</td><td>No</td></tr>
+          <tr><td>4</td><td>B</td><td>A</td><td>No</td></tr>
+        </tbody>
+      </table>
+      <p>True probability: <span class="key">2 / 4 = 1/2</span>.</p>
+      <p>Now <strong>Stars and Bars</strong> treats balls as identical. It can't tell rows 3 and 4 apart ("just one ball in each box"), so it <strong>merges them into one outcome</strong> and reports a sample space of only 3:</p>
+      <table>
+        <thead>
+          <tr><th>Stars-and-Bars view</th><th>Box 1</th><th>Box 2</th><th>Empty?</th></tr>
+        </thead>
+        <tbody>
+          <tr class="winning"><td>1</td><td>● ●</td><td>(empty)</td><td>Yes ✓</td></tr>
+          <tr class="winning"><td>2</td><td>(empty)</td><td>● ●</td><td>Yes ✓</td></tr>
+          <tr><td>3</td><td>●</td><td>●</td><td>No (but secretly TWO physical realities!)</td></tr>
+        </tbody>
+      </table>
+      <p>Stars and Bars now reports <span class="key">2 / 3 ≈ 0.667</span> — wrong.</p>
+      <p><strong>The fundamental error:</strong> By compressing two physical realities (A in Box 1 + B in Box 2; A in Box 2 + B in Box 1) into one "outcome," Stars and Bars makes its sample space <em>uneven</em>. The "one ball each" outcome is secretly <strong>twice as likely</strong> as either "both in one box" outcome — but the math treats them as having equal probability, and the answer drifts.</p>
+      <p><strong>Golden rule:</strong> When computing physical-event probabilities (balls, dice, coins), always treat the items as distinct. Stars and Bars is for <em>counting</em> partitions, not for computing physical probabilities, because its outcomes are never uniformly distributed.</p>
+    </div>
+  </section>
+
+  <section class="notes">
+    <h2>The big picture</h2>
+    <p>The interactive at the top lets you change <em>n</em> and see how the formula scales. Watch the gap between the correct and wrong probabilities as <em>n</em> grows — the trap doesn't fix itself with larger samples.</p>
+    <p><span class="key">A quick mental check at the next-up case (<em>n</em> = 3):</span> distinguishable counting gives 18/27 ≈ 0.667; Stars and Bars gives 6/10 = 0.600. Different! And both are off from each other in every <em>n</em>.</p>
+    <p><strong>Why does Stars and Bars exist at all then?</strong> It's perfect for counting <em>distinct partitions</em>, where you genuinely don't care about labels — e.g., "how many ways can 10 identical candies be split among 4 children" if children's labels are fixed but the candies are identical. It's a counting tool, not a probability tool. The mistake is using it as if every partition is equally likely.</p>
+  </section>
+
+  <footer>
+    <span>Exercise 41 — Empty Box</span>
+    <span>Stars-and-Bars Trap Interactive</span>
+  </footer>
+</div>
+
+<script>
+"use strict";
+
+const NMIN = 2, NMAX = 7;
+let n = 3;
+let currentArrangement = null;
+const BALL_COLORS = ['ball-1','ball-2','ball-3','ball-4','ball-5','ball-6','ball-7'];
+
+// ============================================================
+// Math helpers
+// ============================================================
+function factorial(k) {
+  if (k <= 1) return 1;
+  let r = 1; for (let i = 2; i <= k; i++) r *= i;
+  return r;
+}
+function binom(a, b) {
+  if (b < 0 || b > a) return 0;
+  if (b > a - b) b = a - b;
+  let r = 1;
+  for (let i = 0; i < b; i++) r = r * (a - i) / (i + 1);
+  return Math.round(r);
+}
+function gcd(a, b) {
+  a = Math.abs(a); b = Math.abs(b);
+  while (b) { [a, b] = [b, a % b]; }
+  return a || 1;
+}
+function reduceFrac(num, den) {
+  const g = gcd(num, den);
+  return [num / g, den / g];
+}
+function fmtFrac(num, den) {
+  const [n2, d2] = reduceFrac(num, den);
+  if (d2 === 1) return n2.toString();
+  return n2 + ' / ' + d2;
+}
+function fmtBig(num) {
+  // Display with thousands separators
+  return num.toLocaleString('en-US');
+}
+
+// ============================================================
+// Generate a random winning arrangement
+// ============================================================
+function generateWinningArrangement() {
+  // Pick empty box
+  const emptyBox = Math.floor(Math.random() * n);
+  // Pick crowded box from remaining
+  let crowdedBox;
+  do { crowdedBox = Math.floor(Math.random() * n); } while (crowdedBox === emptyBox);
+
+  // Other boxes
+  const otherBoxes = [];
+  for (let i = 0; i < n; i++) if (i !== emptyBox && i !== crowdedBox) otherBoxes.push(i);
+
+  // Balls labeled 0..n-1
+  const balls = Array.from({length: n}, (_, i) => i);
+
+  // Pick 2 balls for crowded box
+  const shuffled = balls.slice();
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  const crowdedBalls = shuffled.slice(0, 2);
+  const remainingBalls = shuffled.slice(2);
+
+  // Place remaining balls in otherBoxes (1 per box)
+  const boxContents = Array.from({length: n}, () => []);
+  boxContents[crowdedBox] = crowdedBalls.slice();
+  for (let i = 0; i < otherBoxes.length; i++) {
+    boxContents[otherBoxes[i]] = [remainingBalls[i]];
+  }
+  // emptyBox stays empty
+
+  return { emptyBox, crowdedBox, otherBoxes, boxContents };
+}
+
+// ============================================================
+// Render functions
+// ============================================================
+function ballLabel(i) {
+  return String.fromCharCode(65 + i); // A, B, C, ...
+}
+
+function renderBoxes() {
+  const row = document.getElementById('boxes-row');
+  row.innerHTML = '';
+  if (!currentArrangement) return;
+  const { emptyBox, crowdedBox, boxContents } = currentArrangement;
+  for (let i = 0; i < n; i++) {
+    const boxDiv = document.createElement('div');
+    boxDiv.className = 'box';
+    if (i === emptyBox) boxDiv.classList.add('empty');
+    else if (i === crowdedBox) boxDiv.classList.add('crowded');
+    else boxDiv.classList.add('normal');
+
+    const lbl = document.createElement('div');
+    lbl.className = 'box-label';
+    lbl.textContent = 'BOX ' + (i + 1);
+    boxDiv.appendChild(lbl);
+
+    const ballsDiv = document.createElement('div');
+    ballsDiv.className = 'box-balls';
+    for (const ballIdx of boxContents[i]) {
+      const b = document.createElement('div');
+      b.className = 'ball';
+      b.style.background = `var(--${BALL_COLORS[ballIdx % BALL_COLORS.length]})`;
+      b.textContent = ballLabel(ballIdx);
+      ballsDiv.appendChild(b);
+    }
+    boxDiv.appendChild(ballsDiv);
+    row.appendChild(boxDiv);
+  }
+}
+
+function updateAll() {
+  // Stepper buttons
+  document.getElementById('n-val').textContent = n;
+  document.getElementById('n-down').disabled = (n <= NMIN);
+  document.getElementById('n-up').disabled = (n >= NMAX);
+
+  // Counts
+  const total = Math.pow(n, n);
+  document.getElementById('total-count').textContent = fmtBig(total);
+
+  // Build steps
+  document.getElementById('step-a').innerHTML = `<em>n</em> = ${n}`;
+  document.getElementById('step-b').innerHTML = `<em>n</em>−1 = ${n - 1}`;
+  document.getElementById('step-c').innerHTML = `C(<em>n</em>, 2) = ${binom(n, 2)}`;
+  document.getElementById('step-d').innerHTML = `(<em>n</em>−2)! = ${factorial(n - 2)}`;
+
+  const winning = factorial(n) * binom(n, 2);
+  document.getElementById('winning-count').textContent = fmtBig(winning);
+
+  // Correct probability
+  document.getElementById('correct-frac').textContent = fmtBig(winning) + ' / ' + fmtBig(total);
+  document.getElementById('correct-dec').textContent = (winning / total).toFixed(3);
+
+  // Wrong probability (Stars and Bars)
+  const wrongDen = binom(2 * n - 1, n);
+  const wrongNum = n * (n - 1);
+  document.getElementById('wrong-frac').textContent = wrongNum + ' / ' + wrongDen;
+  document.getElementById('wrong-dec').textContent = (wrongNum / wrongDen).toFixed(3);
+
+  // Boxes
+  currentArrangement = generateWinningArrangement();
+  renderBoxes();
+}
+
+// ============================================================
+// Wire up controls
+// ============================================================
+document.getElementById('n-up').addEventListener('click', () => {
+  if (n < NMAX) { n++; updateAll(); }
+});
+document.getElementById('n-down').addEventListener('click', () => {
+  if (n > NMIN) { n--; updateAll(); }
+});
+document.getElementById('shuffle-btn').addEventListener('click', () => {
+  currentArrangement = generateWinningArrangement();
+  renderBoxes();
+});
+
+updateAll();
+</script>
+</body>
+</html>

@@ -646,6 +646,26 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > > **Solution.** Distribution must be one box with 2 balls, $n-2$ boxes with 1, one box empty. Count: $n \cdot \binom{n}{2} \cdot (n-1)! = \binom{n}{2} \cdot n!$. $P = \dfrac{\binom{n}{2} \cdot n!}{n^n}$.
 > >
 > > **Answer.** $\dfrac{\binom{n}{2} n!}{n^n}$ ✓
+>
+> > [!example] 📂 Interactive walkthrough
+> > Step the value of $n$ (2–7), watch a random winning arrangement render across the boxes (one empty, one crowded with 2 balls, the rest with 1 each), and see the four-step count construction with live values. A side-by-side comparison shows the correct probability $n!\binom{n}{2}/n^n$ next to the Stars-and-Bars-trap "answer" $n(n-1)/\binom{2n-1}{n}$ that catches almost everyone the first time:
+> >
+> > 👉 **[Open: Exactly One Empty Box — The Stars-and-Bars Trap](exercise_41_empty_box_interactive.html)**
+> >
+> > Hosted as a self-contained HTML file in this folder. Clicking opens it in your default browser.
+>
+> > [!warning] The Stars-and-Bars trap
+> > A common attempt at this problem uses *identical* balls and divides by the Stars-and-Bars total $\binom{2n-1}{n}$. With identical balls the count of "winning" arrangements is just $n(n-1)$ (pick empty box × pick crowded box), giving $P = \dfrac{n(n-1)}{\binom{2n-1}{n}}$. **This is wrong.**
+> >
+> > **The 2-ball, 2-box proof.** With distinguishable Ball A and Ball B there are 4 physical realities:
+> > 1. A in Box 1, B in Box 1 — Box 2 empty
+> > 2. A in Box 2, B in Box 2 — Box 1 empty
+> > 3. A in Box 1, B in Box 2 — no empty box
+> > 4. A in Box 2, B in Box 1 — no empty box
+> >
+> > Two of these four equally likely outcomes have an empty box, so the true probability is $\tfrac{2}{4} = \tfrac{1}{2}$. Stars and Bars, treating balls as identical, *merges* realities 3 and 4 into a single "one ball in each box" outcome — shrinking the denominator from 4 to 3 and giving $\tfrac{2}{3}$. The wrong answer comes from pretending the "one each" outcome is as likely as either "both in one box" outcome, when in physical reality it's twice as likely.
+> >
+> > **The golden rule.** When computing probabilities of *physical events* (balls, dice, coins), the items must be treated as distinct. Stars and Bars is a *counting* tool for partitions — its outcomes are not uniformly distributed, so dividing by its sample-space count never gives a valid probability of a physical event.
 
 > [!example] Exercise 42 — Norepeatword Approaches $1/e$
 > **Problem.** A norepeatword is a sequence of at least one (and possibly all) of the usual 26 letters a, b, c, ..., z, with repetitions not allowed. For example, "course" is a norepeatword, but "statistics" is not. Order matters, e.g., "course" is not the same as "source". A norepeatword is chosen randomly, with all norepeatwords equally likely. Show that the probability that it uses all 26 letters is very close to $1/e$.
