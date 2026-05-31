@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHM · Spinning Dot → Cosine Wave</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:       #f7f1e3;
+    --paper-deep:  #efe6d0;
+    --ink:         #1c2030;
+    --ink-soft:    #5a5d6e;
+    --rule:        #c8b89a;
+    --accent:      #b13a2e;
+    --accent-bg:   rgba(177,58,46,0.10);
+    --teal:        #2d6470;
+    --copper:      #b88455;
+    --copper-deep: #7a5535;
+    --good:        #3d7530;
+    --panel:       #ede2c7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); }
+  body {
+    color: var(--ink);
+    font-family: 'Crimson Pro', 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 1.55;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse 70% 50% at 14% 6%,  rgba(45,100,112,0.04), transparent 65%),
+      radial-gradient(ellipse 60% 50% at 86% 94%, rgba(177,58,46,0.04), transparent 65%);
+    background-attachment: fixed;
+  }
+  .frame {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 44px 36px 56px;
+  }
+  @media (max-width: 720px) { .frame { padding: 28px 16px 40px; } }
+
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 26px; margin-bottom: 30px; }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 16px;
+  }
+  h1 {
+    font-size: clamp(32px, 4.5vw, 54px);
+    font-weight: 600; line-height: 1.05;
+    margin-bottom: 12px; letter-spacing: -0.01em;
+  }
+  .subtitle {
+    color: var(--ink-soft); font-size: 17px; font-style: italic; max-width: 800px;
+  }
+
+  section {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  h2 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 20px; font-weight: 500; margin-bottom: 14px;
+    color: var(--ink);
+  }
+  h3 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 16px; font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  /* Mode toggle */
+  .mode-toggle {
+    display: inline-flex;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .mode-btn {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    padding: 8px 14px;
+    background: transparent;
+    border: none;
+    color: var(--ink-soft);
+    cursor: pointer;
+  }
+  .mode-btn:hover { color: var(--accent); }
+  .mode-btn.active {
+    background: var(--accent);
+    color: white;
+    font-weight: 600;
+  }
+
+  /* Stepper grid */
+  .controls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 12px;
+  }
+  .stepper-box {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 12px 14px;
+  }
+  .stepper-box.derived {
+    background: rgba(255,255,255,0.4);
+    border-style: dashed;
+  }
+  .stepper-box .lbl {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-soft); margin-bottom: 6px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .stepper-box .lbl .tag {
+    background: var(--paper-deep);
+    color: var(--ink-soft);
+    font-size: 9px;
+    padding: 1px 5px;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+  }
+  .stepper {
+    display: flex; align-items: center; gap: 10px;
+  }
+  .step-btn {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    width: 30px; height: 30px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px; font-weight: 700;
+    cursor: pointer;
+    transition: all 0.1s;
+  }
+  .step-btn:hover { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+  .step-val {
+    font-family: 'Crimson Pro', serif;
+    font-size: 22px; font-weight: 600;
+    color: var(--ink); min-width: 50px; text-align: center;
+    font-feature-settings: "tnum";
+  }
+  .step-val.derived { color: var(--teal); }
+
+  /* Visualization panels */
+  .visual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 18px;
+  }
+  @media (max-width: 880px) { .visual-grid { grid-template-columns: 1fr; } }
+  .panel {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 14px 14px 10px;
+  }
+  .panel svg {
+    width: 100%; height: auto; display: block;
+  }
+  .panel .readout {
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: var(--panel);
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--ink);
+    text-align: center;
+  }
+  .panel .readout .v { color: var(--accent); font-weight: 700; }
+
+  /* SVG element styles */
+  .axis-line { stroke: var(--ink-soft); stroke-width: 1.2; opacity: 0.7; }
+  .axis-label {
+    font-family: 'Crimson Pro', serif;
+    fill: var(--ink-soft);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tick-label {
+    font-family: 'JetBrains Mono', monospace;
+    fill: var(--ink-soft);
+    font-size: 10px;
+  }
+  .tick-mark { stroke: var(--ink-soft); stroke-width: 1; opacity: 0.6; }
+  .ref-circle { fill: none; stroke: var(--rule); stroke-width: 1; stroke-dasharray: 3 3; }
+  .orbit-circle { fill: none; stroke: var(--copper); stroke-width: 2; opacity: 0.5; }
+  .rotating-point {
+    fill: var(--copper);
+    stroke: var(--copper-deep);
+    stroke-width: 2;
+  }
+  .shadow-line {
+    stroke: var(--accent);
+    stroke-width: 1.8;
+    stroke-dasharray: 4 3;
+  }
+  .shadow-dot {
+    fill: var(--accent);
+    stroke: var(--accent);
+    stroke-width: 1.5;
+  }
+  .cosine-curve {
+    fill: none;
+    stroke: var(--teal);
+    stroke-width: 2.4;
+    stroke-linejoin: round;
+  }
+  .current-marker {
+    stroke: var(--accent);
+    stroke-width: 1.5;
+    stroke-dasharray: 3 3;
+  }
+  .current-dot {
+    fill: var(--accent);
+    stroke: var(--accent);
+    stroke-width: 2;
+  }
+
+  /* Playback controls */
+  .playback {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .play-btn, .reset-btn {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .play-btn:hover, .reset-btn:hover {
+    background: var(--accent-bg);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .play-btn.playing {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+  .scrubber-wrap {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .scrubber-lbl {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-soft);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .scrubber-lbl .t-val { color: var(--accent); font-weight: 700; }
+  input[type=range] { width: 100%; accent-color: var(--accent); }
+
+  /* Notes */
+  .notes p { margin-bottom: 10px; }
+  .notes p:last-child { margin-bottom: 0; }
+  .notes .key { color: var(--accent); font-weight: 600; }
+  .notes ul { margin: 6px 0 6px 20px; }
+  .notes li { margin-bottom: 4px; }
+
+  footer {
+    margin-top: 36px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    color: var(--ink-soft);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="frame">
+  <header>
+    <div class="eyebrow">Imaginary Interest · §6.5 · SHM Interactive</div>
+    <h1>Spinning dot ↦ cosine wave</h1>
+    <div class="subtitle">A spring's position $x(t)$ is the real-axis "shadow" of a dot rotating clockwise on the complex plane. Set <em>either</em> the math constants ($A$, $\phi$, $\omega$) <em>or</em> the physical initial conditions ($x_0$, $v_0$, $\omega$), and watch both pictures move in lockstep.</div>
+  </header>
+
+  <section>
+    <h2>Controls</h2>
+    <div class="mode-toggle">
+      <button class="mode-btn active" id="mode-math" onclick="setMode('math')">Math inputs (A, φ, ω)</button>
+      <button class="mode-btn" id="mode-phys" onclick="setMode('phys')">Physical inputs (x₀, v₀, ω)</button>
+    </div>
+
+    <div class="controls-grid" id="ctrls-math">
+      <div class="stepper-box">
+        <div class="lbl">A — amplitude</div>
+        <div class="stepper">
+          <button class="step-btn" onclick="bump('A', -0.25)">−</button>
+          <span class="step-val" id="val-A">1.00</span>
+          <button class="step-btn" onclick="bump('A', +0.25)">+</button>
+        </div>
+      </div>
+      <div class="stepper-box">
+        <div class="lbl">φ — phase (× π)</div>
+        <div class="stepper">
+          <button class="step-btn" onclick="bump('phi', -1/12)">−</button>
+          <span class="step-val" id="val-phi">0</span>
+          <button class="step-btn" onclick="bump('phi', +1/12)">+</button>
+        </div>
+      </div>
+      <div class="stepper-box">
+        <div class="lbl">ω — angular frequency</div>
+        <div class="stepper">
+          <button class="step-btn" onclick="bump('omega', -0.25)">−</button>
+          <span class="step-val" id="val-omega">1.00</span>
+          <button class="step-btn" onclick="bump('omega', +0.25)">+</button>
+        </div>
+      </div>
+      <div class="stepper-box derived">
+        <div class="lbl">x₀ <span class="tag">derived</span></div>
+        <div class="stepper"><span class="step-val derived" id="val-x0">1.00</span></div>
+      </div>
+      <div class="stepper-box derived">
+        <div class="lbl">v₀ <span class="tag">derived</span></div>
+        <div class="stepper"><span class="step-val derived" id="val-v0">0.00</span></div>
+      </div>
+    </div>
+
+    <div class="controls-grid" id="ctrls-phys" style="display:none;">
+      <div class="stepper-box">
+        <div class="lbl">x₀ — initial position</div>
+        <div class="stepper">
+          <button class="step-btn" onclick="bump('x0', -0.25)">−</button>
+          <span class="step-val" id="val-x0p">1.00</span>
+          <button class="step-btn" onclick="bump('x0', +0.25)">+</button>
+        </div>
+      </div>
+      <div class="stepper-box">
+        <div class="lbl">v₀ — initial velocity</div>
+        <div class="stepper">
+          <button class="step-btn" onclick="bump('v0', -0.25)">−</button>
+          <span class="step-val" id="val-v0p">0.00</span>
+          <button class="step-btn" onclick="bump('v0', +0.25)">+</button>
+        </div>
+      </div>
+      <div class="stepper-box">
+        <div class="lbl">ω — angular frequency</div>
+        <div class="stepper">
+          <button class="step-btn" onclick="bump('omega', -0.25)">−</button>
+          <span class="step-val" id="val-omega2">1.00</span>
+          <button class="step-btn" onclick="bump('omega', +0.25)">+</button>
+        </div>
+      </div>
+      <div class="stepper-box derived">
+        <div class="lbl">A <span class="tag">derived</span></div>
+        <div class="stepper"><span class="step-val derived" id="val-Ap">1.00</span></div>
+      </div>
+      <div class="stepper-box derived">
+        <div class="lbl">φ (× π) <span class="tag">derived</span></div>
+        <div class="stepper"><span class="step-val derived" id="val-phip">0</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The two pictures</h2>
+    <div class="visual-grid">
+      <div class="panel">
+        <h3>Complex plane — rotating $z(t)$</h3>
+        <svg id="complex-svg" viewBox="0 0 320 320" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="readout">
+          $z(t) =$ <span class="v" id="z-readout">1.00 + 0.00i</span>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Real-axis projection — the spring's position $x(t)$</h3>
+        <svg id="cosine-svg" viewBox="0 0 460 220" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="readout">
+          $x(t) = A\cos(\omega t + \phi) =$ <span class="v" id="x-readout">1.00</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Playback</h2>
+    <div class="playback">
+      <button class="play-btn" id="play-btn" onclick="togglePlay()">▶ Play</button>
+      <button class="reset-btn" onclick="resetT()">↻ Reset (t = 0)</button>
+      <div class="scrubber-wrap">
+        <div class="scrubber-lbl">Time t = <span class="t-val" id="t-readout">0.00</span></div>
+        <input type="range" id="time-scrubber" min="0" max="100" value="0" step="0.1" oninput="scrubT(this.value)">
+      </div>
+    </div>
+  </section>
+
+  <section class="notes">
+    <h2>What you're watching</h2>
+    <p>The complex equation $z(t) = z(0)\, e^{-i\omega t}$ says the state vector rotates <strong>clockwise</strong> around the origin at angular speed $\omega$. The starting position $z(0) = A\, e^{-i\phi}$ encodes two facts: its distance from the origin is <span class="key">$A$ (the amplitude)</span>, and its starting angle is <span class="key">$\phi$ (the phase)</span>.</p>
+    <p>Now project that rotating point straight down onto the real axis — the "<strong>shadow</strong>" of the orbit. As the dot circles, its shadow slides back and forth between $+A$ and $-A$, tracing out the cosine wave you see on the right. The horizontal coordinate at any time $t$ is exactly $A\cos(\omega t + \phi)$.</p>
+    <p><strong>The bridge to physics.</strong> The same equation governs a mass on a spring. The spring's actual position $x(t)$ is the shadow; the imaginary part of $z(t)$ encodes its velocity (specifically, $\mathrm{Im}[z(t)] = -v(t)/\omega$). So watching the spring is watching the shadow of a circle you never see — and that's why the wave is sinusoidal in the first place.</p>
+    <p><strong>How the physical inputs map to the math.</strong> If you start with position $x_0$ and velocity $v_0$, then</p>
+    <ul>
+      <li>$A = \sqrt{x_0^2 + (v_0/\omega)^2}$ — total "energy", combining stretch and kick</li>
+      <li>$\tan(-\phi) = (v_0/\omega) / x_0$ — phase set by the direction of the initial state in the complex plane</li>
+    </ul>
+    <p>Special cases worth trying:</p>
+    <ul>
+      <li>$x_0 = 1$, $v_0 = 0$ → pure cosine starting at peak ($A = 1$, $\phi = 0$).</li>
+      <li>$x_0 = 0$, $v_0 = 1$ → pure sine starting at zero moving outward ($A = 1/\omega$, $\phi = -\pi/2$).</li>
+      <li>$x_0 = 1$, $v_0 = 1$, $\omega = 1$ → a stretched-and-kicked combo: $A = \sqrt{2}$, $\phi = -\pi/4$.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <span>Imaginary Interest · §6.5</span>
+    <span>SHM Spinning Dot Interactive</span>
+  </footer>
+</div>
+
+<script>
+"use strict";
+
+// =============================================================
+// State (canonical: A, phi, omega; x0/v0 derived from them)
+// =============================================================
+let A = 1.0;        // amplitude
+let phi = 0;        // phase shift (radians)
+let omega = 1.0;    // angular frequency
+let t = 0;          // current time
+let playing = false;
+let mode = 'math';  // 'math' or 'phys'
+
+// =============================================================
+// Math helpers
+// =============================================================
+function piFmt(x) {
+  // express x in units of pi, snap to common fractions
+  const r = x / Math.PI;
+  if (Math.abs(r) < 1e-6) return '0';
+  const denoms = [12, 6, 4, 3, 2, 1];
+  for (const d of denoms) {
+    const n = r * d;
+    if (Math.abs(n - Math.round(n)) < 1e-6) {
+      const num = Math.round(n);
+      if (Math.abs(num) === d) return (num < 0 ? '−' : '') + 'π';
+      if (Math.abs(num) === 1) return (num < 0 ? '−' : '') + 'π/' + d;
+      return num + 'π/' + d;
+    }
+  }
+  return r.toFixed(2) + 'π';
+}
+function fmt(x, dp = 2) {
+  if (Math.abs(x) < 1e-9) x = 0;
+  return x.toFixed(dp);
+}
+
+// z(0) = A * exp(-i*phi)  →  x0 = A cos(phi),  v0 = A * omega * sin(phi)
+// Derivation: z(t) = A exp(-i(omega t + phi)),  x(t) = A cos(omega t + phi),
+// v(t) = dx/dt = -A omega sin(omega t + phi).  At t=0: x0 = A cos(phi), v0 = -A omega sin(phi).
+function x0() { return A * Math.cos(phi); }
+function v0() { return -A * omega * Math.sin(phi); }
+
+// Reverse: from (x0, v0) → (A, phi)
+// A = sqrt(x0^2 + (v0/omega)^2);  phi = -atan2(v0/omega, x0)
+function fromPhysical(x0v, v0v) {
+  const w = omega;
+  const ANew = Math.sqrt(x0v * x0v + (v0v / w) * (v0v / w));
+  const phiNew = -Math.atan2(v0v / w, x0v);
+  return { A: ANew, phi: phiNew };
+}
+
+// Current state at time t
+function zt(time) {
+  const angle = -(omega * time + phi);
+  return [A * Math.cos(angle), A * Math.sin(angle)];
+}
+function xt(time) {
+  return A * Math.cos(omega * time + phi);
+}
+
+// =============================================================
+// Mode switching
+// =============================================================
+function setMode(m) {
+  mode = m;
+  document.getElementById('mode-math').classList.toggle('active', m === 'math');
+  document.getElementById('mode-phys').classList.toggle('active', m === 'phys');
+  document.getElementById('ctrls-math').style.display = m === 'math' ? '' : 'none';
+  document.getElementById('ctrls-phys').style.display = m === 'phys' ? '' : 'none';
+  update();
+}
+
+// =============================================================
+// Steppers
+// =============================================================
+function bump(key, delta) {
+  if (key === 'A') {
+    A = Math.max(0, Math.min(3, A + delta));
+  } else if (key === 'phi') {
+    phi += delta * Math.PI;
+    // Wrap to [-pi, pi]
+    while (phi >  Math.PI) phi -= 2 * Math.PI;
+    while (phi < -Math.PI) phi += 2 * Math.PI;
+  } else if (key === 'omega') {
+    omega = Math.max(0.25, Math.min(3, omega + delta));
+  } else if (key === 'x0') {
+    const cur = { x0: x0(), v0: v0() };
+    const newX0 = Math.max(-2, Math.min(2, cur.x0 + delta));
+    const nm = fromPhysical(newX0, cur.v0);
+    A = nm.A; phi = nm.phi;
+  } else if (key === 'v0') {
+    const cur = { x0: x0(), v0: v0() };
+    const newV0 = Math.max(-2, Math.min(2, cur.v0 + delta));
+    const nm = fromPhysical(cur.x0, newV0);
+    A = nm.A; phi = nm.phi;
+  }
+  update();
+}
+
+// =============================================================
+// Playback
+// =============================================================
+function togglePlay() {
+  playing = !playing;
+  const b = document.getElementById('play-btn');
+  b.textContent = playing ? '⏸ Pause' : '▶ Play';
+  b.classList.toggle('playing', playing);
+}
+function resetT() {
+  t = 0;
+  document.getElementById('time-scrubber').value = 0;
+  update();
+}
+function scrubT(v) {
+  const maxT = 4 * Math.PI / omega;
+  t = (v / 100) * maxT;
+  // pause if user is scrubbing
+  if (playing) togglePlay();
+  update();
+}
+
+// Animation loop
+let lastFrame = 0;
+function frame(timestamp) {
+  if (lastFrame === 0) lastFrame = timestamp;
+  const dt = (timestamp - lastFrame) / 1000;
+  lastFrame = timestamp;
+  if (playing) {
+    t += dt;
+    const maxT = 4 * Math.PI / omega;
+    if (t > maxT) t -= maxT;
+    document.getElementById('time-scrubber').value = (t / maxT) * 100;
+    update();
+  }
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+
+// =============================================================
+// SVG rendering — Complex plane
+// =============================================================
+const NS = 'http://www.w3.org/2000/svg';
+const C_SVG = document.getElementById('complex-svg');
+const C_SIZE = 320;
+const C_CENTER = C_SIZE / 2;
+const C_SCALE = 80;  // pixels per unit
+function complexX(re) { return C_CENTER + re * C_SCALE; }
+function complexY(im) { return C_CENTER - im * C_SCALE; }
+
+function renderComplexPlane() {
+  C_SVG.innerHTML = '';
+  // Axes
+  const xAxis = document.createElementNS(NS, 'line');
+  xAxis.setAttribute('x1', 10); xAxis.setAttribute('y1', C_CENTER);
+  xAxis.setAttribute('x2', C_SIZE - 10); xAxis.setAttribute('y2', C_CENTER);
+  xAxis.setAttribute('class', 'axis-line');
+  C_SVG.appendChild(xAxis);
+
+  const yAxis = document.createElementNS(NS, 'line');
+  yAxis.setAttribute('x1', C_CENTER); yAxis.setAttribute('y1', 10);
+  yAxis.setAttribute('x2', C_CENTER); yAxis.setAttribute('y2', C_SIZE - 10);
+  yAxis.setAttribute('class', 'axis-line');
+  C_SVG.appendChild(yAxis);
+
+  // Tick marks at ±1, ±2 on each axis
+  for (const v of [-2, -1, 1, 2]) {
+    const tx = document.createElementNS(NS, 'line');
+    tx.setAttribute('x1', complexX(v)); tx.setAttribute('y1', C_CENTER - 4);
+    tx.setAttribute('x2', complexX(v)); tx.setAttribute('y2', C_CENTER + 4);
+    tx.setAttribute('class', 'tick-mark');
+    C_SVG.appendChild(tx);
+
+    const lx = document.createElementNS(NS, 'text');
+    lx.setAttribute('x', complexX(v));
+    lx.setAttribute('y', C_CENTER + 16);
+    lx.setAttribute('text-anchor', 'middle');
+    lx.setAttribute('class', 'tick-label');
+    lx.textContent = v;
+    C_SVG.appendChild(lx);
+
+    const ty = document.createElementNS(NS, 'line');
+    ty.setAttribute('x1', C_CENTER - 4); ty.setAttribute('y1', complexY(v));
+    ty.setAttribute('x2', C_CENTER + 4); ty.setAttribute('y2', complexY(v));
+    ty.setAttribute('class', 'tick-mark');
+    C_SVG.appendChild(ty);
+
+    if (v !== 0) {
+      const ly = document.createElementNS(NS, 'text');
+      ly.setAttribute('x', C_CENTER - 8);
+      ly.setAttribute('y', complexY(v) + 3);
+      ly.setAttribute('text-anchor', 'end');
+      ly.setAttribute('class', 'tick-label');
+      ly.textContent = v + 'i';
+      C_SVG.appendChild(ly);
+    }
+  }
+
+  // Axis labels
+  const reLbl = document.createElementNS(NS, 'text');
+  reLbl.setAttribute('x', C_SIZE - 18); reLbl.setAttribute('y', C_CENTER - 8);
+  reLbl.setAttribute('class', 'axis-label');
+  reLbl.textContent = 'Re';
+  C_SVG.appendChild(reLbl);
+
+  const imLbl = document.createElementNS(NS, 'text');
+  imLbl.setAttribute('x', C_CENTER + 8); imLbl.setAttribute('y', 18);
+  imLbl.setAttribute('class', 'axis-label');
+  imLbl.textContent = 'Im';
+  C_SVG.appendChild(imLbl);
+
+  // Reference unit circle (light)
+  const unit = document.createElementNS(NS, 'circle');
+  unit.setAttribute('cx', C_CENTER); unit.setAttribute('cy', C_CENTER);
+  unit.setAttribute('r', C_SCALE);
+  unit.setAttribute('class', 'ref-circle');
+  C_SVG.appendChild(unit);
+
+  // Orbit circle of radius A
+  if (A > 0.01) {
+    const orb = document.createElementNS(NS, 'circle');
+    orb.setAttribute('cx', C_CENTER); orb.setAttribute('cy', C_CENTER);
+    orb.setAttribute('r', A * C_SCALE);
+    orb.setAttribute('class', 'orbit-circle');
+    C_SVG.appendChild(orb);
+  }
+
+  // Current z(t)
+  const [re, im] = zt(t);
+  const px = complexX(re), py = complexY(im);
+
+  // Shadow line from z(t) down/up to real axis
+  const shadow = document.createElementNS(NS, 'line');
+  shadow.setAttribute('x1', px); shadow.setAttribute('y1', py);
+  shadow.setAttribute('x2', px); shadow.setAttribute('y2', C_CENTER);
+  shadow.setAttribute('class', 'shadow-line');
+  C_SVG.appendChild(shadow);
+
+  // Shadow dot on real axis
+  const shadowDot = document.createElementNS(NS, 'circle');
+  shadowDot.setAttribute('cx', px); shadowDot.setAttribute('cy', C_CENTER);
+  shadowDot.setAttribute('r', 5);
+  shadowDot.setAttribute('class', 'shadow-dot');
+  C_SVG.appendChild(shadowDot);
+
+  // Rotating point
+  const pt = document.createElementNS(NS, 'circle');
+  pt.setAttribute('cx', px); pt.setAttribute('cy', py);
+  pt.setAttribute('r', 7);
+  pt.setAttribute('class', 'rotating-point');
+  C_SVG.appendChild(pt);
+
+  // Radius arrow from origin
+  const radius = document.createElementNS(NS, 'line');
+  radius.setAttribute('x1', C_CENTER); radius.setAttribute('y1', C_CENTER);
+  radius.setAttribute('x2', px); radius.setAttribute('y2', py);
+  radius.setAttribute('stroke', '#7a5535');
+  radius.setAttribute('stroke-width', '1.5');
+  radius.setAttribute('opacity', '0.5');
+  C_SVG.insertBefore(radius, pt);
+
+  // Label z(t)
+  const zLbl = document.createElementNS(NS, 'text');
+  zLbl.setAttribute('x', px + 10); zLbl.setAttribute('y', py - 6);
+  zLbl.setAttribute('font-family', 'Crimson Pro, serif');
+  zLbl.setAttribute('font-size', '15');
+  zLbl.setAttribute('font-style', 'italic');
+  zLbl.setAttribute('fill', '#7a5535');
+  zLbl.setAttribute('font-weight', '700');
+  zLbl.textContent = 'z(t)';
+  C_SVG.appendChild(zLbl);
+}
+
+// =============================================================
+// SVG rendering — Cosine wave
+// =============================================================
+const W_SVG = document.getElementById('cosine-svg');
+const W_W = 460, W_H = 220;
+const W_MARGIN_L = 40, W_MARGIN_R = 16, W_MARGIN_T = 18, W_MARGIN_B = 28;
+const W_PLOT_W = W_W - W_MARGIN_L - W_MARGIN_R;
+const W_PLOT_H = W_H - W_MARGIN_T - W_MARGIN_B;
+function waveX(time, maxT) { return W_MARGIN_L + (time / maxT) * W_PLOT_W; }
+function waveY(val, ymax) { return W_MARGIN_T + W_PLOT_H / 2 - (val / ymax) * (W_PLOT_H / 2 - 8); }
+
+function renderCosine() {
+  W_SVG.innerHTML = '';
+  const maxT = 4 * Math.PI / omega;  // show 2 periods
+  const ymax = Math.max(A, 1.05);
+
+  // X axis (horizontal middle)
+  const xAxis = document.createElementNS(NS, 'line');
+  xAxis.setAttribute('x1', W_MARGIN_L); xAxis.setAttribute('y1', waveY(0, ymax));
+  xAxis.setAttribute('x2', W_W - W_MARGIN_R); xAxis.setAttribute('y2', waveY(0, ymax));
+  xAxis.setAttribute('class', 'axis-line');
+  W_SVG.appendChild(xAxis);
+
+  // Y axis (vertical at left)
+  const yAxis = document.createElementNS(NS, 'line');
+  yAxis.setAttribute('x1', W_MARGIN_L); yAxis.setAttribute('y1', W_MARGIN_T);
+  yAxis.setAttribute('x2', W_MARGIN_L); yAxis.setAttribute('y2', W_H - W_MARGIN_B);
+  yAxis.setAttribute('class', 'axis-line');
+  W_SVG.appendChild(yAxis);
+
+  // Y ticks at +A and -A
+  for (const val of [A, -A]) {
+    if (Math.abs(val) < 0.01) continue;
+    const lblY = waveY(val, ymax);
+    const tk = document.createElementNS(NS, 'line');
+    tk.setAttribute('x1', W_MARGIN_L - 4); tk.setAttribute('y1', lblY);
+    tk.setAttribute('x2', W_MARGIN_L + 4); tk.setAttribute('y2', lblY);
+    tk.setAttribute('class', 'tick-mark');
+    W_SVG.appendChild(tk);
+
+    const lbl = document.createElementNS(NS, 'text');
+    lbl.setAttribute('x', W_MARGIN_L - 7);
+    lbl.setAttribute('y', lblY + 3);
+    lbl.setAttribute('text-anchor', 'end');
+    lbl.setAttribute('class', 'tick-label');
+    lbl.textContent = (val > 0 ? '+' : '−') + 'A';
+    W_SVG.appendChild(lbl);
+  }
+
+  // X ticks at multiples of pi/omega
+  for (let k = 0; k <= 4; k++) {
+    const tVal = k * Math.PI / omega;
+    const x = waveX(tVal, maxT);
+    const tk = document.createElementNS(NS, 'line');
+    tk.setAttribute('x1', x); tk.setAttribute('y1', waveY(0, ymax) - 3);
+    tk.setAttribute('x2', x); tk.setAttribute('y2', waveY(0, ymax) + 3);
+    tk.setAttribute('class', 'tick-mark');
+    W_SVG.appendChild(tk);
+
+    const lbl = document.createElementNS(NS, 'text');
+    lbl.setAttribute('x', x);
+    lbl.setAttribute('y', waveY(0, ymax) + 16);
+    lbl.setAttribute('text-anchor', 'middle');
+    lbl.setAttribute('class', 'tick-label');
+    if (k === 0) lbl.textContent = '0';
+    else if (k === 1) lbl.textContent = 'π/ω';
+    else lbl.textContent = k + 'π/ω';
+    W_SVG.appendChild(lbl);
+  }
+
+  // Axis labels
+  const xLbl = document.createElementNS(NS, 'text');
+  xLbl.setAttribute('x', W_W - W_MARGIN_R - 4); xLbl.setAttribute('y', waveY(0, ymax) - 6);
+  xLbl.setAttribute('class', 'axis-label');
+  xLbl.setAttribute('text-anchor', 'end');
+  xLbl.textContent = 't';
+  W_SVG.appendChild(xLbl);
+
+  const yLbl = document.createElementNS(NS, 'text');
+  yLbl.setAttribute('x', W_MARGIN_L + 4); yLbl.setAttribute('y', W_MARGIN_T + 8);
+  yLbl.setAttribute('class', 'axis-label');
+  yLbl.textContent = 'x(t)';
+  W_SVG.appendChild(yLbl);
+
+  // Cosine curve
+  const N = 200;
+  let pathPts = [];
+  for (let i = 0; i <= N; i++) {
+    const tVal = (i / N) * maxT;
+    const xVal = A * Math.cos(omega * tVal + phi);
+    pathPts.push(waveX(tVal, maxT) + ',' + waveY(xVal, ymax));
+  }
+  const curve = document.createElementNS(NS, 'polyline');
+  curve.setAttribute('points', pathPts.join(' '));
+  curve.setAttribute('class', 'cosine-curve');
+  W_SVG.appendChild(curve);
+
+  // Current time marker (vertical line)
+  const cx = waveX(t, maxT);
+  const marker = document.createElementNS(NS, 'line');
+  marker.setAttribute('x1', cx); marker.setAttribute('y1', W_MARGIN_T);
+  marker.setAttribute('x2', cx); marker.setAttribute('y2', W_H - W_MARGIN_B);
+  marker.setAttribute('class', 'current-marker');
+  W_SVG.appendChild(marker);
+
+  // Current point on curve
+  const cy = waveY(xt(t), ymax);
+  const cdot = document.createElementNS(NS, 'circle');
+  cdot.setAttribute('cx', cx); cdot.setAttribute('cy', cy);
+  cdot.setAttribute('r', 6);
+  cdot.setAttribute('class', 'current-dot');
+  W_SVG.appendChild(cdot);
+}
+
+// =============================================================
+// Update all displays
+// =============================================================
+function update() {
+  // Stepper values (math mode)
+  document.getElementById('val-A').textContent = fmt(A);
+  document.getElementById('val-phi').textContent = piFmt(phi);
+  document.getElementById('val-omega').textContent = fmt(omega);
+  document.getElementById('val-x0').textContent = fmt(x0());
+  document.getElementById('val-v0').textContent = fmt(v0());
+
+  // Stepper values (phys mode)
+  document.getElementById('val-x0p').textContent = fmt(x0());
+  document.getElementById('val-v0p').textContent = fmt(v0());
+  document.getElementById('val-omega2').textContent = fmt(omega);
+  document.getElementById('val-Ap').textContent = fmt(A);
+  document.getElementById('val-phip').textContent = piFmt(phi);
+
+  // Readouts
+  const [re, im] = zt(t);
+  const imSign = im >= 0 ? '+' : '−';
+  document.getElementById('z-readout').textContent =
+    fmt(re) + ' ' + imSign + ' ' + fmt(Math.abs(im)) + 'i';
+  document.getElementById('x-readout').textContent = fmt(xt(t));
+  document.getElementById('t-readout').textContent = fmt(t);
+
+  renderComplexPlane();
+  renderCosine();
+}
+
+// Init
+update();
+</script>
+</body>
+</html>
