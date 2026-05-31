@@ -322,7 +322,7 @@ This is **exactly the structure of imaginary-interest compounding**, but in 2D p
 >
 > Two intuitive special cases worth holding onto:
 > - **Drop the block from rest at $x_0$:** $v_0 = 0$ gives $A = |x_0|$ and $\phi = 0$. The motion is a pure cosine starting at its peak — the maximum stretch equals where you let go.
-> - **Kick from the origin with velocity $v_0$:** $x_0 = 0$ gives $A = |v_0|/\omega$ and $\phi = +\pi/2$. The motion is a pure sine starting at zero and moving outward — the kick provides all the energy.
+> - **Kick from the origin with velocity $v_0> 0$:** $x_0 = 0$ gives $A = v_0/\omega$ and $\phi = -\pi/2$. Then $x(t) = A\cos(\omega t - \pi/2) = A\sin(\omega t)$ — a pure sine starting at zero and moving outward, since the kick provides all the energy.
 >
 > **Intuition.** $A$ encodes the **total energy** of the motion (sum of "stretch energy" from $x_0$ and "kinetic energy" from $v_0$). $\phi$ is the **phase shift** — a knob that slides the cosine left or right so the math syncs with your stopwatch. A standard cosine starts at its absolute peak ($x = A$); if you start your stopwatch when the block is passing through the middle, $\phi$ is the offset that aligns the wave with reality.
 
