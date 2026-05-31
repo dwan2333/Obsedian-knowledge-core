@@ -302,7 +302,7 @@
   <header>
     <div class="eyebrow">Imaginary Interest · §6.5 · SHM Interactive</div>
     <h1>Spinning dot ↦ cosine wave</h1>
-    <div class="subtitle">A spring's position $x(t)$ is the real-axis "shadow" of a dot rotating clockwise on the complex plane. Set <em>either</em> the math constants ($A$, $\phi$, $\omega$) <em>or</em> the physical initial conditions ($x_0$, $v_0$, $\omega$), and watch both pictures move in lockstep.</div>
+    <div class="subtitle">A spring's position <em>x</em>(<em>t</em>) is the real-axis "shadow" of a dot rotating clockwise on the complex plane. Set <em>either</em> the math constants (<em>A</em>, φ, ω) <em>or</em> the physical initial conditions (<em>x</em><sub>0</sub>, <em>v</em><sub>0</sub>, ω), and watch both pictures move in lockstep.</div>
   </header>
 
   <section>
@@ -387,17 +387,17 @@
     <h2>The two pictures</h2>
     <div class="visual-grid">
       <div class="panel">
-        <h3>Complex plane — rotating $z(t)$</h3>
+        <h3>Complex plane — rotating <em>z</em>(<em>t</em>)</h3>
         <svg id="complex-svg" viewBox="0 0 320 320" preserveAspectRatio="xMidYMid meet"></svg>
         <div class="readout">
-          $z(t) =$ <span class="v" id="z-readout">1.00 + 0.00i</span>
+          <em>z</em>(<em>t</em>) = <span class="v" id="z-readout">1.00 + 0.00i</span>
         </div>
       </div>
       <div class="panel">
-        <h3>Real-axis projection — the spring's position $x(t)$</h3>
+        <h3>Real-axis projection — the spring's position <em>x</em>(<em>t</em>)</h3>
         <svg id="cosine-svg" viewBox="0 0 460 220" preserveAspectRatio="xMidYMid meet"></svg>
         <div class="readout">
-          $x(t) = A\cos(\omega t + \phi) =$ <span class="v" id="x-readout">1.00</span>
+          <em>x</em>(<em>t</em>) = <em>A</em>·cos(ω<em>t</em> + φ) = <span class="v" id="x-readout">1.00</span>
         </div>
       </div>
     </div>
@@ -417,19 +417,19 @@
 
   <section class="notes">
     <h2>What you're watching</h2>
-    <p>The complex equation $z(t) = z(0)\, e^{-i\omega t}$ says the state vector rotates <strong>clockwise</strong> around the origin at angular speed $\omega$. The starting position $z(0) = A\, e^{-i\phi}$ encodes two facts: its distance from the origin is <span class="key">$A$ (the amplitude)</span>, and its starting angle is <span class="key">$\phi$ (the phase)</span>.</p>
-    <p>Now project that rotating point straight down onto the real axis — the "<strong>shadow</strong>" of the orbit. As the dot circles, its shadow slides back and forth between $+A$ and $-A$, tracing out the cosine wave you see on the right. The horizontal coordinate at any time $t$ is exactly $A\cos(\omega t + \phi)$.</p>
-    <p><strong>The bridge to physics.</strong> The same equation governs a mass on a spring. The spring's actual position $x(t)$ is the shadow; the imaginary part of $z(t)$ encodes its velocity (specifically, $\mathrm{Im}[z(t)] = -v(t)/\omega$). So watching the spring is watching the shadow of a circle you never see — and that's why the wave is sinusoidal in the first place.</p>
-    <p><strong>How the physical inputs map to the math.</strong> If you start with position $x_0$ and velocity $v_0$, then</p>
+    <p>The complex equation <em>z</em>(<em>t</em>) = <em>z</em>(0)·e<sup>−<em>iωt</em></sup> says the state vector rotates <strong>clockwise</strong> around the origin at angular speed ω. The starting position <em>z</em>(0) = <em>A</em>·e<sup>−<em>iφ</em></sup> encodes two facts: its distance from the origin is <span class="key"><em>A</em> (the amplitude)</span>, and its starting angle is <span class="key">φ (the phase)</span>.</p>
+    <p>Now project that rotating point straight down onto the real axis — the "<strong>shadow</strong>" of the orbit. As the dot circles, its shadow slides back and forth between +<em>A</em> and −<em>A</em>, tracing out the cosine wave you see on the right. The horizontal coordinate at any time <em>t</em> is exactly <em>A</em>·cos(ω<em>t</em> + φ).</p>
+    <p><strong>The bridge to physics.</strong> The same equation governs a mass on a spring. The spring's actual position <em>x</em>(<em>t</em>) is the shadow; the imaginary part of <em>z</em>(<em>t</em>) encodes its velocity (specifically, Im[<em>z</em>(<em>t</em>)] = −<em>v</em>(<em>t</em>)/ω). So watching the spring is watching the shadow of a circle you never see — and that's why the wave is sinusoidal in the first place.</p>
+    <p><strong>How the physical inputs map to the math.</strong> If you start with position <em>x</em><sub>0</sub> and velocity <em>v</em><sub>0</sub>, then</p>
     <ul>
-      <li>$A = \sqrt{x_0^2 + (v_0/\omega)^2}$ — total "energy", combining stretch and kick</li>
-      <li>$\tan(-\phi) = (v_0/\omega) / x_0$ — phase set by the direction of the initial state in the complex plane</li>
+      <li><em>A</em> = √(<em>x</em><sub>0</sub><sup>2</sup> + (<em>v</em><sub>0</sub>/ω)<sup>2</sup>) — total "energy", combining stretch and kick</li>
+      <li>φ = −atan2(<em>v</em><sub>0</sub>/ω, <em>x</em><sub>0</sub>) — phase from the polar angle of the initial state in the complex plane</li>
     </ul>
     <p>Special cases worth trying:</p>
     <ul>
-      <li>$x_0 = 1$, $v_0 = 0$ → pure cosine starting at peak ($A = 1$, $\phi = 0$).</li>
-      <li>$x_0 = 0$, $v_0 = 1$ → pure sine starting at zero moving outward ($A = 1/\omega$, $\phi = -\pi/2$).</li>
-      <li>$x_0 = 1$, $v_0 = 1$, $\omega = 1$ → a stretched-and-kicked combo: $A = \sqrt{2}$, $\phi = -\pi/4$.</li>
+      <li><em>x</em><sub>0</sub> = 1, <em>v</em><sub>0</sub> = 0 → pure cosine starting at peak (<em>A</em> = 1, φ = 0).</li>
+      <li><em>x</em><sub>0</sub> = 0, <em>v</em><sub>0</sub> = 1 → pure sine starting at zero moving outward (<em>A</em> = 1/ω, φ = −π/2).</li>
+      <li><em>x</em><sub>0</sub> = 1, <em>v</em><sub>0</sub> = 1, ω = 1 → a stretched-and-kicked combo: <em>A</em> = √2, φ = −π/4.</li>
     </ul>
   </section>
 
