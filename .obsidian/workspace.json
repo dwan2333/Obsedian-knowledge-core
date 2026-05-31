@@ -35,7 +35,8 @@
               "title": "Imaginary Interest and Continuous Rotation (Main)"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -230,13 +231,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "66d6b6cbd14fb88e",
+  "active": "6768d2e2fa5bc0d2",
   "lastOpenFiles": [
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md.tmp.11056.ec5b4c1263f6",
     "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md.tmp.11056.c89971ea3618",
     "content/Mathematics/Complex Numbers/iir_shm_spinning_dot_interactive.html",
     "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md.tmp.11056.8cc786c2a9bf",
     "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
@@ -259,7 +260,6 @@
     "content/Mathematics/Complex Numbers/iir_fig1_staircase.png",
     "content/Mathematics/Complex Numbers/_gen_iir_mindmap.py",
     "content/Mathematics/Complex Numbers/_gen_iir_fig5_eit_circle.py",
-    "content/Mathematics/Complex Numbers/_gen_iir_fig4_spiral_to_circle.py",
     "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
