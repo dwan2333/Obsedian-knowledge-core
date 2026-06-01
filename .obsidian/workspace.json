@@ -218,6 +218,10 @@
   },
   "active": "c6ffd1b6d6396f23",
   "lastOpenFiles": [
+    "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_branch_4_4_graphs_of_logarithmic.md",
+    "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_branch_4_3_logarithmic_functions.md",
+    "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_branch_4_2_graphs_of_exponential.md",
+    "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_branch_4_1_exponential_functions.md",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/precalculus_2e_chapter_4_text.md",
     "content/Mathematics/Logarithms/lf_practice_petri_dish.html",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/precalculus_2e_chapter_4.pdf",
@@ -260,10 +264,6 @@
     "content/Git and Github/Branching/Squashing Commits.md",
     "content/Git and Github/Branching/Merge Conflicts.md",
     "content/Git and Github/Branching/git checkout.md",
-    "content/Git and Github/Branching/git cherry-pick.md",
-    "content/Git and Github/Branching/git merge.md",
-    "content/Git and Github/Branching/Branching (Main).md",
-    "content/Git and Github/gitignore.md",
     "Untitled.canvas"
   ]
 }
