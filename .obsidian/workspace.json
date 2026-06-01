@@ -35,7 +35,8 @@
               "title": "Chapter 1 (Main)"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -230,8 +231,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "66d6b6cbd14fb88e",
+  "active": "c6ffd1b6d6396f23",
   "lastOpenFiles": [
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Finance/Futures/SOFR Future.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
@@ -246,7 +248,6 @@
     "content/Mathematics/Complex Numbers/iir_shm_spinning_dot_interactive.html",
     "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md.tmp.11056.8cc786c2a9bf",
     "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Mathematics/Euler 's equation/eulers_formula_consequences.md",
     "content/Mathematics/Euler 's equation/Euler's Formula via exp(x) (Main).md",
     "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
