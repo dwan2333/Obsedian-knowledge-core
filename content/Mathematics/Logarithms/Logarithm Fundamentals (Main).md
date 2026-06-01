@@ -55,6 +55,52 @@ In March 2020, Google Trends for "logarithmic scale" spiked because every news o
 
 Quote *(at [[14:04]](https://www.youtube.com/watch?v=cEvgcoyZvB4&t=844s))*: *"Anytime that you're coming across something in nature where what's natural to think about are multiplicative increases, logarithms come in to help you."*
 
+### 2.3 Practice — The Petri Dish Mystery
+
+> [!tip] Interactive practice — [open `lf_practice_petri_dish.html`](lf_practice_petri_dish.html) in a browser
+> A self-contained problem set (5 parts) that walks you through the exact same machinery the COVID chart above uses — recognize exponential structure, extract the doubling time, transform to a log axis, extrapolate, and detect when growth *stops* being exponential. Click "reveal" on each part after attempting it.
+
+**Scenario.** A microbiologist seeds a petri dish with 100 bacteria at $t=0$ and measures every 3 hours:
+
+| $t$ (hr) | 0 | 3 | 6 | 9 | 12 | 15 | 18 |
+|---|---|---|---|---|---|---|---|
+| Bacteria | 100 | 200 | 400 | 800 | 1,600 | 3,200 | **5,400** ⚠ |
+
+The first six rows are textbook exponential growth — each measurement is exactly double the previous. The last row breaks the pattern (the pure-exponential prediction is 6,400). That deviation is the punchline.
+
+#### 2.3.1 Extracting the equation
+
+> [!example] Five-step derivation
+> **Step 1 — recognize the pattern.** Consecutive ratios are constant at $\times 2$ over each 3-hour step → exponential growth with **doubling time** $T_d = 3$ hr.
+> **Step 2 — doubling form.** $N(t) = 100 \cdot 2^{t/3}$. Verify against the first six rows: $t=15 \Rightarrow 100 \cdot 2^5 = 3{,}200$ ✓.
+> **Step 3 — three equivalent forms.** Same curve, three notations:
+> $$N(t) = N_0 \cdot 2^{t/T_d} \;=\; N_0 \cdot r^{t} \;=\; N_0 \cdot e^{kt}$$
+> For this colony: $T_d = 3$, $r = 2^{1/3} \approx 1.2599$ (≈ 26% per hour), $k = \ln(2)/3 \approx 0.2310$. All three give 400 at $t = 6$.
+> **Step 4 — why the log axis is straight.** Taking $\log_{10}$ of both sides:
+> $$\log_{10} N(t) \;=\; \log_{10}(100) + \tfrac{t}{3}\log_{10}(2) \;=\; 2 + 0.1003\, t$$
+> This is $y = mx + b$ with slope $\log_{10}(2)/3 \approx 0.1003$ per hour, y-intercept $2$. **The slope on a log-y plot is the growth rate.**
+> **Step 5 — reconstruct from any two points.** Given $N(t_1)$ and $N(t_2)$:
+> $$r = \left(\frac{N(t_2)}{N(t_1)}\right)^{1/(t_2 - t_1)}$$
+> Plugging in $t_1 = 0$, $t_2 = 15$: $r = (3200/100)^{1/15} = 32^{1/15} = 2^{1/3}$ ✓.
+
+#### 2.3.2 How this connects to the COVID chart above
+
+The figure `lf_fig1_linear_vs_log.png` and the petri-dish problem are the same picture at two different scales. Compare them side by side:
+
+| | COVID-19 (the figure above) | Petri dish (the practice) |
+|---|---|---|
+| Initial count | ~30 cases (day 0) | 100 bacteria (hour 0) |
+| Doubling-equivalent | ×10 every 16 days | ×2 every 3 hours |
+| Linear y-axis shape | Steep curve, hard to extrapolate | Same hockey-stick |
+| **Log y-axis shape** | **Straight line** with slope $\log_{10}(10)/16 = 0.0625$ /day | **Straight line** with slope $\log_{10}(2)/3 \approx 0.1003$ /hour |
+| Extrapolation method | Extend the straight log-line | Extend the straight log-line |
+| Detecting trend break | Curve *bends* off the line | Curve *bends* off the line (the t=18 anomaly) |
+
+**The takeaway connecting the two**: any process with a constant multiplicative growth rate — whether cases per day or bacteria per hour — becomes a straight line on a $\log_{10}$ y-axis. The slope encodes the growth rate. Most importantly, **once you've established that the line is straight, any deviation jumps out**. That's why epidemiologists in March 2020 used log plots to spot when a lockdown was working: bending of the line meant growth was no longer constant-rate. In the petri dish, the same bending at $t = 18$ tells the microbiologist that something (limited nutrients, accumulated waste, antibiotic activity) has started slowing the colony — the **logistic transition** away from pure exponential growth.
+
+> [!info] The #1 real-world use case for log scales
+> Spotting *changes* in growth — is it still accelerating at the same rate, slowing down, or accelerating further? — is nearly impossible on linear axes (everything looks "going up") and almost trivial on log axes (anything that deviates from a straight line is obvious). The interactive HTML walks through all five parts of this analysis: recognizing the pattern, computing the growth factor $r$, plotting on both axes, extrapolating to 1 million bacteria (~40 hours), and reading the anomaly at $t=18$.
+
 ---
 
 ## 3. The Triangle of Power: One Relationship, Three Faces *(at [[14:20]](https://www.youtube.com/watch?v=cEvgcoyZvB4&t=860s))*
