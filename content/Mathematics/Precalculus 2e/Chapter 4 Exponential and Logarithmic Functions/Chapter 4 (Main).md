@@ -67,7 +67,7 @@ and science.
 using the natural base $e$ rather than discrete periodic intervals.
 
 
-> [!example] Example 1 �” Distinguishing Exponential Functions
+> [!example] Example 1 —” Distinguishing Exponential Functions
 > **Problem.** Determine which of the provided mathematical equations correctly
 represent exponential functions.
 > **Setup.** You are analyzing the functions $f(x)=4^{3(x-2)}$, $g(x)=x^3$, 
@@ -81,7 +81,7 @@ negative number. The remaining two fit all mathematical criteria.
 > **Insight.** The base of an exponential function must be strictly positive to
 guarantee that the resulting outputs are valid real numbers.
 
-> [!example] Example 2 �” Calculating an Exponential Output
+> [!example] Example 2 —” Calculating an Exponential Output
 > **Problem.** Compute the value of the given exponential function without 
 utilizing a calculator.
 > **Setup.** The function is $f(x)=5(3)^{x+1}$, and it must be evaluated at 
@@ -93,7 +93,7 @@ Finally, multiply that result by the leading coefficient 5.
 > **Insight.** Adhering strictly to the order of operations prevents the common
 error of multiplying the coefficient and base together prematurely.
 
-> [!example] Example 3 �” Using an Exponential Formula for Populations
+> [!example] Example 3 —” Using an Exponential Formula for Populations
 > **Problem.** Predict India's population for the year 2031 based on a provided
 2013 population figure and an established annual growth rate.
 > **Setup.** The population formula is $P(t) = 1.252(1.012)^t$, where the 
@@ -105,7 +105,7 @@ the value using a calculator.
 > **Insight.** Real-world exponential formulas easily yield future projections 
 simply by determining the correct elapsed time for the input variable.
 
-> [!example] Example 4 �” Creating a Model from a Known Starting Value
+> [!example] Example 4 —” Creating a Model from a Known Starting Value
 > **Problem.** Formulate an exponential equation to represent a deer population
 that grows from an initial count to a specific later count over a timeframe.
 > **Setup.** Starting in 2006, there were 80 deer, and 6 years later the count 
@@ -117,7 +117,7 @@ then take the sixth root to solve for $b$.
 > **Insight.** Designating the initial measurement year as time zero instantly 
 provides the $a$ parameter in the general exponential format.
 
-> [!example] Example 5 �” Building a Model Without a Starting Value
+> [!example] Example 5 —” Building a Model Without a Starting Value
 > **Problem.** Construct the exponential equation that connects two arbitrary 
 coordinate points when the initial value is unknown.
 > **Setup.** The two given points are (-2, 6) and (2, 1).
@@ -130,7 +130,7 @@ initial value coefficient.
 > **Insight.** A system of equations allows you to algebraically deduce both 
 parameters even when the y-intercept is entirely hidden.
 
-> [!example] Example 6 �” Extracting a Formula from a Visual Graph
+> [!example] Example 6 —” Extracting a Formula from a Visual Graph
 > **Problem.** Determine the specific algebraic equation of a plotted 
 exponential curve.
 > **Setup.** A graph displays a curve crossing the y-axis at (0, 3) and passing
@@ -143,7 +143,7 @@ remaining equation algebraically for the base.
 > **Insight.** Spotting the y-intercept is always the fastest first step when 
 deciphering an exponential graph's formula.
 
-> [!example] Example 7 �” Relying on Technology for Regression
+> [!example] Example 7 —” Relying on Technology for Regression
 > **Problem.** Determine the exponential formula linking two data points by 
 leveraging a graphing calculator.
 > **Setup.** The specific data coordinate pairs are (2, 24.8) and (5, 198.4).
@@ -154,7 +154,7 @@ calculator's exponential regression computing tool from the statistical menu.
 > **Insight.** Modern graphing utilities possess built-in regression functions 
 that entirely bypass the need for tedious manual algebraic systems.
 
-> [!example] Example 8 �” Figuring Out Accrued Interest
+> [!example] Example 8 —” Figuring Out Accrued Interest
 > **Problem.** Calculate the future monetary amount of an investment placed in 
 an account with periodically compounded interest.
 > **Setup.** The principal deposit is $3,000, the annual rate is 3%, the 
@@ -168,7 +168,7 @@ value.
 > **Insight.** Breaking the annual interest rate down by the compounding 
 frequency ensures accurate mathematical modeling of periodic financial growth.
 
-> [!example] Example 9 �” Reverse-Engineering an Investment's Starting Amount
+> [!example] Example 9 —” Reverse-Engineering an Investment's Starting Amount
 > **Problem.** Determine the required initial deposit necessary to hit a 
 specific future financial goal utilizing semi-annual compounding.
 > **Setup.** The financial target is $40,000 after a span of 18 years, growing 
@@ -180,7 +180,7 @@ formula and divide the target amount by this resulting figure.
 > **Insight.** The compound interest formula can be manipulated algebraically 
 to solve for an unknown present value instead of just a future value.
 
-> [!example] Example 10 �” Computing Base e Expressions
+> [!example] Example 10 —” Computing Base e Expressions
 > **Problem.** Evaluate the irrational constant $e$ raised to a specific 
 decimal power using technology.
 > **Setup.** The mathematical expression to evaluate is $e^{3.14}$.
@@ -191,7 +191,7 @@ natural exponential, input the decimal exponent, and execute the calculation.
 $e$ because the constant is extraordinarily common in advanced mathematical 
 modeling.
 
-> [!example] Example 11 �” Assessing Continual Compounding
+> [!example] Example 11 —” Assessing Continual Compounding
 > **Problem.** Find the resulting balance of a financial deposit that grows 
 constantly at every instant rather than at discrete, periodic intervals.
 > **Setup.** A $1,000 deposit grows continuously at a 10% nominal interest rate
@@ -203,7 +203,7 @@ the product of the principal and $e$ raised to the rate.
 > **Insight.** Continuous financial growth relies on base $e$ to model constant
 change, rather than utilizing the standard discrete compounding structure.
 
-> [!example] Example 12 �” Evaluating Constant Decay
+> [!example] Example 12 —” Evaluating Constant Decay
 > **Problem.** Calculate how much of a radioactive isotope remains after it 
 decays at a continuous rate over several days.
 > **Setup.** You start with 100 mg of Radon-222, which decreases continuously 
@@ -287,8 +287,8 @@ Conversation: 811de852-23c7-481e-8a2c-fe733a626d9c (turn 1)
 This section focuses on translating the algebraic formulas of exponential 
 growth and decay into visual coordinate graphs. By establishing the basic shape
 of a parent exponential curve, you learn how to track geometric 
-transformations�”such as horizontal and vertical shifts, scaling stretches, and 
-mirror reflections�”without losing the underlying mathematical pattern. 
+transformations—”such as horizontal and vertical shifts, scaling stretches, and 
+mirror reflections—”without losing the underlying mathematical pattern. 
 Mastering these graphical representations is essential for the rest of the 
 chapter, as it builds visual intuition for identifying asymptotes and 
 intercepts, visually approximating solutions to complex equations, and 
@@ -305,7 +305,7 @@ notable for crossing the y-axis at 1, never touching the x-axis, and having a
 domain of all real numbers with a strictly positive range.
 
 
-> [!example] Example 1 �” Sketching the Graph of an Exponential Function
+> [!example] Example 1 —” Sketching the Graph of an Exponential Function
 > **Problem.** Create a visual graph of a basic fractional exponential function
 and identify its core properties.
 > **Setup.** The mathematical function to be graphed is $f(x) = 0.25^x$.
@@ -321,7 +321,7 @@ horizontal asymptote rests at $y=0$.
 y-intercept, quickly establishes the exact steepness of a basic exponential 
 decay curve.
 
-> [!example] Example 2 �” Graphing a Shift of an Exponential Function
+> [!example] Example 2 —” Graphing a Shift of an Exponential Function
 > **Problem.** Graph an exponential equation that has been translated away from
 the origin, noting its new properties.
 > **Setup.** The function provided is $f(x) = 2^{x+1} - 3$.
@@ -335,7 +335,7 @@ and an asymptote at $y=-3$.
 > **Insight.** Always sketch the new horizontal asymptote first when shifting 
 vertically, as it serves as a strict boundary for your hand-drawn curve.
 
-> [!example] Example 3 �” Approximating the Solution of an Exponential Equation
+> [!example] Example 3 —” Approximating the Solution of an Exponential Equation
 > **Problem.** Utilize graphing technology to estimate the numeric solution to 
 a complex exponential algebraic equation.
 > **Setup.** The equation to solve is $42 = 1.2(5)^x + 2.8$.
@@ -349,7 +349,7 @@ cross.
 techniques by simply finding the visual collision point of two independent 
 functions.
 
-> [!example] Example 4 �” Graphing the Stretch of an Exponential Function
+> [!example] Example 4 —” Graphing the Stretch of an Exponential Function
 > **Problem.** Plot an exponential function that features a vertical 
 compression multiplier.
 > **Setup.** The target function is $f(x) = \frac{1}{2}(4)^x$.
@@ -364,7 +364,7 @@ than 0, and the asymptote is at $y=0$.
 y-intercept) of every point without shifting the underlying horizontal 
 asymptote.
 
-> [!example] Example 5 �” Writing and Graphing the Reflection of an Exponential 
+> [!example] Example 5 —” Writing and Graphing the Reflection of an Exponential 
 Function
 > **Problem.** Formulate the equation for an exponential decay graph flipped 
 upside down, and sketch its shape.
@@ -380,7 +380,7 @@ asymptote sits at $y=0$.
 > **Insight.** Reflecting an exponential graph over the x-axis entirely inverts
 its range, trapping the entire curve below the horizontal axis.
 
-> [!example] Example 6 �” Writing a Function from a Description
+> [!example] Example 6 —” Writing a Function from a Description
 > **Problem.** Construct a complete exponential equation based entirely on a 
 written list of geometric transformations.
 > **Setup.** The base function is $e^x$; it undergoes a vertical stretch by a 
@@ -462,8 +462,8 @@ explicitly encompass the coordinates where the lines cross.
 Section 4.2 bridges algebraic formulas and visual geometry by demonstrating how
 every exponential function is merely a stretched, shifted, or flipped variation
 of a simple parent curve. By systematically applying transformation 
-rules�”knowing that a leading coefficient alters height, a trailing constant 
-shifts the horizontal asymptote, and negatives create mirror images�”you can 
+rules—”knowing that a leading coefficient alters height, a trailing constant 
+shifts the horizontal asymptote, and negatives create mirror images—”you can 
 accurately map complex equations onto a coordinate plane without calculating 
 endless tables of values. This visual literacy is a vital shortcut, allowing 
 you to instantly assess the boundaries, end behaviors, and feasible solutions 
@@ -503,7 +503,7 @@ denoted by a unique symbol ($\ln$), which represents the exponent $e$ must be
 raised to in order to reach a specific value.
 
 
-> [!example] Example 1 �” Converting from Logarithmic Form to Exponential Form
+> [!example] Example 1 —” Converting from Logarithmic Form to Exponential Form
 > **Problem.** Translate given logarithmic equations into their corresponding 
 exponential formats.
 > **Setup.** The equations provided are $\log_6(\sqrt{6}) = \frac{1}{2}$ and 
@@ -515,7 +515,7 @@ is raised to the exponent to equal the argument.
 > **Insight.** The output of any logarithmic expression seamlessly becomes the 
 exponent in its corresponding exponential equation.
 
-> [!example] Example 2 �” Converting from Exponential Form to Logarithmic Form
+> [!example] Example 2 —” Converting from Exponential Form to Logarithmic Form
 > **Problem.** Rewrite standard exponential equations into their logarithmic 
 counterparts.
 > **Setup.** The three equations are $2^3 = 8$, $5^2 = 25$, and $10^{-4} = 
@@ -528,7 +528,7 @@ $\log_{10}(\frac{1}{10000}) = -4$.
 > **Insight.** Converting to logarithmic form perfectly isolates the original 
 exponent on one side of the equals sign.
 
-> [!example] Example 3 �” Solving Logarithms Mentally
+> [!example] Example 3 —” Solving Logarithms Mentally
 > **Problem.** Compute the value of a specific logarithmic expression without 
 utilizing electronic calculation tools.
 > **Setup.** The expression to evaluate is $\log_4(64)$.
@@ -539,7 +539,7 @@ that 4 multiplied by itself three times equals 64 reveals the answer.
 > **Insight.** Basic logarithms can be rapidly solved by relying on your 
 memorized knowledge of perfect squares and cubes.
 
-> [!example] Example 4 �” Evaluating the Logarithm of a Reciprocal
+> [!example] Example 4 —” Evaluating the Logarithm of a Reciprocal
 > **Problem.** Find the numeric value of a logarithm where the argument is a 
 fraction.
 > **Setup.** You must calculate $\log_3(\frac{1}{27})$ entirely in your head.
@@ -551,7 +551,7 @@ into $\frac{1}{27}$.
 > **Insight.** A negative logarithmic output indicates that the positive base 
 was transformed into a fractional reciprocal.
 
-> [!example] Example 5 �” Finding the Value of a Common Logarithm Mentally
+> [!example] Example 5 —” Finding the Value of a Common Logarithm Mentally
 > **Problem.** Determine the output of a base-10 logarithm without a calculator.
 > **Setup.** The given mathematical expression is $\log(1000)$.
 > **Solution.** Acknowledge that the missing base defaults to 10, then 
@@ -561,7 +561,7 @@ formulate the equivalent exponential question: 10 raised to what power equals
 > **Insight.** Common logarithms of powers of ten simply map to the number of 
 zeros present in the argument.
 
-> [!example] Example 6 �” Finding the Value of a Common Logarithm Using a 
+> [!example] Example 6 —” Finding the Value of a Common Logarithm Using a 
 Calculator
 > **Problem.** Utilize graphing or scientific technology to compute a common 
 log that does not yield a clean integer.
@@ -574,7 +574,7 @@ calculation.
 > **Insight.** Calculators are mandatory when the argument of a logarithm is 
 not a perfect mathematical power of the base.
 
-> [!example] Example 7 �” Rewriting and Solving a Real-World Exponential Model
+> [!example] Example 7 —” Rewriting and Solving a Real-World Exponential Model
 > **Problem.** Find the exact difference in Richter scale magnitudes between 
 two earthquakes given their energy ratio.
 > **Setup.** An exponential equation $10^x = 500$ models the scenario, with $x$
@@ -587,7 +587,7 @@ to estimate the value of $x$ to three decimal places.
 format immediately isolates the unknown variable for easy electronic 
 calculation.
 
-> [!example] Example 8 �” Evaluating a Natural Logarithm Using a Calculator
+> [!example] Example 8 —” Evaluating a Natural Logarithm Using a Calculator
 > **Problem.** Compute a base $e$ logarithmic expression out to four decimal 
 places using a digital tool.
 > **Setup.** The expression to approximate is $\ln(500)$.
@@ -671,7 +671,7 @@ $(1, 0)$, a vertical asymptote sitting directly on the y-axis, and a range that
 spans all real numbers.
 
 
-> [!example] Example 1 �” Identifying the Domain of a Logarithmic Shift
+> [!example] Example 1 —” Identifying the Domain of a Logarithmic Shift
 > **Problem.** Determine the valid set of inputs for a logarithm that has been 
 shifted horizontally.
 > **Setup.** The given function is $f(x) = \log_2(x+3)$.
@@ -682,7 +682,7 @@ both sides to isolate the variable, revealing that $x$ must be larger than $-3$.
 > **Insight.** The domain of any translated logarithm is entirely dictated by 
 the algebraic inequality requiring its inner argument to be positive.
 
-> [!example] Example 2 �” Identifying the Domain of a Logarithmic Shift and 
+> [!example] Example 2 —” Identifying the Domain of a Logarithmic Shift and 
 Reflection
 > **Problem.** Find the mathematical domain of a logarithmic function 
 containing a negative coefficient on its variable.
@@ -696,7 +696,7 @@ dividing by a negative number.
 logarithm will flip the allowable domain interval from a "greater than" 
 scenario to a "less than" scenario.
 
-> [!example] Example 3 �” Graphing a Logarithmic Function with the Form $f(x) = 
+> [!example] Example 3 —” Graphing a Logarithmic Function with the Form $f(x) = 
 \log_b(x)$
 > **Problem.** Create a basic sketch of a parent logarithmic function and list 
 its defining traits.
@@ -710,7 +710,7 @@ $(-\infty, \infty)$, and a vertical asymptote at $x=0$.
 > **Insight.** Establishing the x-intercept and one key point based on the base
 value allows for a quick, accurate sketch of any parent logarithmic curve.
 
-> [!example] Example 4 �” Graphing a Horizontal Shift of the Parent Function $y 
+> [!example] Example 4 —” Graphing a Horizontal Shift of the Parent Function $y 
 = \log_b(x)$
 > **Problem.** Graph a logarithmic function that has been shifted left or right
 and determine its new characteristics.
@@ -725,7 +725,7 @@ $(-\infty, \infty)$, and the new asymptote is $x=2$.
 > **Insight.** A horizontal shift completely redefines the function's domain 
 and vertical asymptote, pushing the boundary of the graph left or right.
 
-> [!example] Example 5 �” Graphing a Vertical Shift of the Parent Function $y = 
+> [!example] Example 5 —” Graphing a Vertical Shift of the Parent Function $y = 
 \log_b(x)$
 > **Problem.** Visually plot a logarithm that has been moved up or down the 
 coordinate plane.
@@ -740,7 +740,7 @@ turning $(1,0)$ into $(1,-2)$ and $(3,1)$ into $(3,-1)$.
 have absolutely no effect on the graph's domain or its vertical asymptote 
 boundary.
 
-> [!example] Example 6 �” Graphing a Stretch or Compression of the Parent 
+> [!example] Example 6 —” Graphing a Stretch or Compression of the Parent 
 Function $y = \log_b(x)$
 > **Problem.** Plot a logarithmic graph that has been pulled vertically by a 
 multiplier.
@@ -755,7 +755,7 @@ asymptote does not move.
 > **Insight.** A vertical stretch amplifies the steepness of the curve but 
 leaves the x-intercept and the vertical boundary line perfectly intact.
 
-> [!example] Example 7 �” Combining a Shift and a Stretch
+> [!example] Example 7 —” Combining a Shift and a Stretch
 > **Problem.** Formulate a graph for a logarithm that features multiple 
 simultaneous transformations.
 > **Setup.** The given equation is $f(x) = 5\log(x+2)$.
@@ -770,7 +770,7 @@ $(-\infty, \infty)$, and the vertical asymptote is $x=-2$.
 processing transformations inside the parentheses before external multipliers 
 ensures the graph is positioned correctly.
 
-> [!example] Example 8 �” Graphing a Reflection of a Logarithmic Function
+> [!example] Example 8 —” Graphing a Reflection of a Logarithmic Function
 > **Problem.** Sketch the graph of a logarithm that has been flipped across an 
 axis.
 > **Setup.** The function to interpret is $f(x) = \log(-x)$.
@@ -784,7 +784,7 @@ $(-\infty, \infty)$, and the asymptote sits at $x=0$.
 > **Insight.** Flipping a logarithm across the y-axis effectively inverts its 
 domain to strictly accept negative input numbers.
 
-> [!example] Example 9 �” Approximating the Solution of a Logarithmic Equation
+> [!example] Example 9 —” Approximating the Solution of a Logarithmic Equation
 > **Problem.** Rely on technology to estimate the intersecting solution of two 
 different logarithmic curves.
 > **Setup.** The algebraic equation is $4\ln(x)+1 = -2\ln(x-1)$.
@@ -798,7 +798,7 @@ coordinate.
 complex algebraic manipulation by simply finding the visual collision of two 
 functions.
 
-> [!example] Example 10 �” Finding the Vertical Asymptote of a Logarithm Graph
+> [!example] Example 10 —” Finding the Vertical Asymptote of a Logarithm Graph
 > **Problem.** Deduce the vertical boundary line of a highly modified 
 logarithmic formula.
 > **Setup.** The equation provided is $f(x) = -2\log_3(x+4)+5$.
@@ -810,7 +810,7 @@ the graph slides 4 units left.
 > **Insight.** The vertical asymptote of any logarithm is exclusively 
 determined by the horizontal shift applied to its internal argument.
 
-> [!example] Example 11 �” Finding the Equation from a Graph
+> [!example] Example 11 —” Finding the Equation from a Graph
 > **Problem.** Construct the specific algebraic formula that matches a provided
 visual logarithmic curve.
 > **Setup.** A graph of a common logarithm shows a vertical asymptote at 
@@ -833,8 +833,8 @@ transformation variables.
 describing the fundamental inverse curve of an exponential formula.
 *   $f(x) = a\log_b(x+c) + d$
     This is the comprehensive transformation formula that integrates all 
-possible geometric modifications�”stretches, horizontal shifts, and vertical 
-shifts�”into a single equation.
+possible geometric modifications—”stretches, horizontal shifts, and vertical 
+shifts—”into a single equation.
 
 
 *   **Figure 1**: A graph illustrating how a logarithmic curve maps out the 
@@ -910,8 +910,8 @@ Conversation: 811de852-23c7-481e-8a2c-fe733a626d9c (turn 1)
 This section explores the fundamental algebraic rules that govern logarithms, 
 demonstrating how they mirror the established properties of exponents. 
 Because logarithms are essentially exponents written in an inverse format, 
-mathematical operations inside a logarithm�”like multiplication, division, or 
-raising to a power�”can be translated into simpler addition, subtraction, or 
+mathematical operations inside a logarithm—”like multiplication, division, or 
+raising to a power—”can be translated into simpler addition, subtraction, or 
 multiplication outside the logarithm [1-3]. Mastering these properties allows 
 you to either stretch out complex expressions into simpler pieces (expanding) 
 or bundle multiple terms together into a single manageable unit (condensing). Furthermore, the section introduces a formula to switch any logarithm 
@@ -928,7 +928,7 @@ logarithmic terms.
 share the exact same base into one single, unified logarithmic expression.
 
 
-> [!example] Example 1 �” Using the Product Rule for Logarithms
+> [!example] Example 1 —” Using the Product Rule for Logarithms
 > **Problem.** Stretch out the given logarithmic expression into a sum of 
 simpler logs.
 > **Setup.** The expression is $\log_3(30x(3x+4))$.
@@ -941,7 +941,7 @@ with the same base.
 > **Insight.** Factoring whole numbers into primes ensures the resulting 
 logarithmic expression is broken down as much as mathematically possible.
 
-> [!example] Example 2 �” Using the Quotient Rule for Logarithms
+> [!example] Example 2 —” Using the Quotient Rule for Logarithms
 > **Problem.** Break apart a complex logarithmic fraction into individual 
 terms.
 > **Setup.** The expression is $\log_2(\frac{15x(x-1)}{(3x+4)(2-x)})$.
@@ -956,7 +956,7 @@ bottom expressions, remembering to prime factor the 15 into 3 and 5.
 introducing a subtraction sign, while the product rule dismantles the 
 individual pieces on top and bottom.
 
-> [!example] Example 3 �” Expanding a Logarithm with Powers
+> [!example] Example 3 —” Expanding a Logarithm with Powers
 > **Problem.** Use logarithmic properties to pull an exponent out of an 
 argument.
 > **Setup.** You are given the expression $\log_2(x^5)$.
@@ -967,7 +967,7 @@ so it becomes a multiplying factor.
 > **Insight.** The power property acts as a mechanism to drop exponents down to
 the same level as the rest of the equation.
 
-> [!example] Example 4 �” Rewriting an Expression as a Power before Using the 
+> [!example] Example 4 —” Rewriting an Expression as a Power before Using the 
 Power Rule
 > **Problem.** Modify a logarithm to utilize the exponent rule even when no 
 power is initially visible.
@@ -979,7 +979,7 @@ it to the front of the logarithm as a multiplier.
 > **Insight.** Converting numeric arguments into exponential format allows you 
 to systematically shrink the size of the internal argument.
 
-> [!example] Example 5 �” Using the Power Rule in Reverse
+> [!example] Example 5 —” Using the Power Rule in Reverse
 > **Problem.** Transform a multiplied logarithm back into a single unit without
 a leading coefficient.
 > **Setup.** The expression provided is $4\ln(x)$.
@@ -990,7 +990,7 @@ variable $x$.
 > **Insight.** The power rule is fully reversible, allowing you to absorb 
 outside coefficients back into the logarithmic argument.
 
-> [!example] Example 6 �” Expanding Logarithms Using Product, Quotient, and 
+> [!example] Example 6 —” Expanding Logarithms Using Product, Quotient, and 
 Power Rules
 > **Problem.** Deconstruct a complex fraction into a sequence of added and 
 subtracted logs.
@@ -1003,7 +1003,7 @@ specific logarithmic term.
 > **Insight.** Applying the overarching quotient rule first makes it easier to 
 track which subsequent terms are positive and which are negative.
 
-> [!example] Example 7 �” Using the Power Rule for Logarithms to Simplify the 
+> [!example] Example 7 —” Using the Power Rule for Logarithms to Simplify the 
 Logarithm of a Radical Expression
 > **Problem.** Apply logarithmic expansion rules to an argument containing a 
 square root.
@@ -1015,7 +1015,7 @@ power rule to pull the fraction to the front.
 > **Insight.** Roots and radicals are merely fractional powers, meaning they 
 obey the exact same logarithm rules as whole-number exponents.
 
-> [!example] Example 8 �” Expanding Complex Logarithmic Expressions
+> [!example] Example 8 —” Expanding Complex Logarithmic Expressions
 > **Problem.** Completely dismantle a heavy rational expression containing 
 exponents and multiple factors.
 > **Setup.** The given term is $\log_6(\frac{64x^3(4x+1)}{2x-1})$.
@@ -1030,8 +1030,8 @@ front of their respective terms.
 This section explores the fundamental algebraic rules that govern logarithms, 
 demonstrating how they mirror the established properties of exponents. 
 Because logarithms are essentially exponents written in an inverse format, 
-mathematical operations inside a logarithm�”like multiplication, division, or 
-raising to a power�”can be translated into simpler addition, subtraction, or 
+mathematical operations inside a logarithm—”like multiplication, division, or 
+raising to a power—”can be translated into simpler addition, subtraction, or 
 multiplication outside the logarithm [1-3]. Mastering these properties allows 
 you to either stretch out complex expressions into simpler pieces (expanding) 
 or bundle multiple terms together into a single manageable unit (condensing). Furthermore, the section introduces a formula to switch any logarithm 
@@ -1048,7 +1048,7 @@ logarithmic terms.
 share the exact same base into one single, unified logarithmic expression.
 
 
-> [!example] Example 1 �” Using the Product Rule for Logarithms
+> [!example] Example 1 —” Using the Product Rule for Logarithms
 > **Problem.** Stretch out the given logarithmic expression into a sum of 
 simpler logs.
 > **Setup.** The expression is $\log_3(30x(3x+4))$.
@@ -1061,7 +1061,7 @@ with the same base.
 > **Insight.** Factoring whole numbers into primes ensures the resulting 
 logarithmic expression is broken down as much as mathematically possible.
 
-> [!example] Example 2 �” Using the Quotient Rule for Logarithms
+> [!example] Example 2 —” Using the Quotient Rule for Logarithms
 > **Problem.** Break apart a complex logarithmic fraction into individual 
 terms.
 > **Setup.** The expression is $\log_2(\frac{15x(x-1)}{(3x+4)(2-x)})$.
@@ -1076,7 +1076,7 @@ bottom expressions, remembering to prime factor the 15 into 3 and 5.
 introducing a subtraction sign, while the product rule dismantles the 
 individual pieces on top and bottom.
 
-> [!example] Example 3 �” Expanding a Logarithm with Powers
+> [!example] Example 3 —” Expanding a Logarithm with Powers
 > **Problem.** Use logarithmic properties to pull an exponent out of an 
 argument.
 > **Setup.** You are given the expression $\log_2(x^5)$.
@@ -1087,7 +1087,7 @@ so it becomes a multiplying factor.
 > **Insight.** The power property acts as a mechanism to drop exponents down to
 the same level as the rest of the equation.
 
-> [!example] Example 4 �” Rewriting an Expression as a Power before Using the 
+> [!example] Example 4 —” Rewriting an Expression as a Power before Using the 
 Power Rule
 > **Problem.** Modify a logarithm to utilize the exponent rule even when no 
 power is initially visible.
@@ -1099,7 +1099,7 @@ it to the front of the logarithm as a multiplier.
 > **Insight.** Converting numeric arguments into exponential format allows you 
 to systematically shrink the size of the internal argument.
 
-> [!example] Example 5 �” Using the Power Rule in Reverse
+> [!example] Example 5 —” Using the Power Rule in Reverse
 > **Problem.** Transform a multiplied logarithm back into a single unit without
 a leading coefficient.
 > **Setup.** The expression provided is $4\ln(x)$.
@@ -1110,7 +1110,7 @@ variable $x$.
 > **Insight.** The power rule is fully reversible, allowing you to absorb 
 outside coefficients back into the logarithmic argument.
 
-> [!example] Example 6 �” Expanding Logarithms Using Product, Quotient, and 
+> [!example] Example 6 —” Expanding Logarithms Using Product, Quotient, and 
 Power Rules
 > **Problem.** Deconstruct a complex fraction into a sequence of added and 
 subtracted logs.
@@ -1123,7 +1123,7 @@ specific logarithmic term.
 > **Insight.** Applying the overarching quotient rule first makes it easier to 
 track which subsequent terms are positive and which are negative.
 
-> [!example] Example 7 �” Using the Power Rule for Logarithms to Simplify the 
+> [!example] Example 7 —” Using the Power Rule for Logarithms to Simplify the 
 Logarithm of a Radical Expression
 > **Problem.** Apply logarithmic expansion rules to an argument containing a 
 square root.
@@ -1135,7 +1135,7 @@ power rule to pull the fraction to the front.
 > **Insight.** Roots and radicals are merely fractional powers, meaning they 
 obey the exact same logarithm rules as whole-number exponents.
 
-> [!example] Example 8 �” Expanding Complex Logarithmic Expressions
+> [!example] Example 8 —” Expanding Complex Logarithmic Expressions
 > **Problem.** Completely dismantle a heavy rational expression containing 
 exponents and multiple factors.
 > **Setup.** The given term is $\log_6(\frac{64x^3(4x+1)}{2x-1})$.
@@ -1269,7 +1269,7 @@ attempting to evaluate the logarithm of a negative number.
 > The specific length of time required for fifty percent of an unstable, 
 radioactive substance to naturally decay.
 
-> [!example] Example 1 �” Solving an Exponential Equation with a Common Base
+> [!example] Example 1 —” Solving an Exponential Equation with a Common Base
 > **Problem.** Find the value of the variable when two exponential expressions 
 with identical bases are set equal to each other.
 > **Setup.** The mathematical equation is $2^{x-1} = 2^{2x-4}$.
@@ -1281,7 +1281,7 @@ algebraically by isolating $x$.
 > **Insight.** When the bases inherently match, the complex exponential 
 equation instantly simplifies into a basic algebraic problem.
 
-> [!example] Example 2 �” Solving Equations by Rewriting Them to Have a Common 
+> [!example] Example 2 —” Solving Equations by Rewriting Them to Have a Common 
 Base
 > **Problem.** Solve an exponential equation where the bases are different but 
 mathematically related.
@@ -1294,7 +1294,7 @@ Finally, set the newly adjusted exponents equal to each other and solve for $x$.
 > **Insight.** Finding the lowest common prime base is the fastest way to 
 bridge two seemingly unmatched exponential terms.
 
-> [!example] Example 3 �” Solving Equations by Rewriting Roots with Fractional 
+> [!example] Example 3 —” Solving Equations by Rewriting Roots with Fractional 
 Exponents to Have a Common Base
 > **Problem.** Solve an equation where one side is an exponential expression 
 and the other is a radical.
@@ -1307,7 +1307,7 @@ and isolate the variable.
 > **Insight.** Radicals and roots are merely fractional exponents, meaning they
 can be seamlessly converted to match standard integer bases.
 
-> [!example] Example 4 �” Solving an Equation with Positive and Negative Powers
+> [!example] Example 4 —” Solving an Equation with Positive and Negative Powers
 > **Problem.** Attempt to find the solution for an exponential term set equal 
 to a negative constant.
 > **Setup.** The equation to solve is $3^{x+1} = -2$.
@@ -1319,7 +1319,7 @@ ever produce a negative output.
 > **Insight.** Recognizing the strictly positive range of an exponential 
 function can save you from attempting impossible algebraic calculations.
 
-> [!example] Example 5 �” Solving an Equation Containing Powers of Different 
+> [!example] Example 5 —” Solving an Equation Containing Powers of Different 
 Bases
 > **Problem.** Isolate the variable when the exponential bases on each side are
 entirely unrelated and cannot be rewritten to match.
@@ -1334,7 +1334,7 @@ out, and divide to isolate it completely.
 > **Insight.** Taking the logarithm of both sides acts as an algebraic override
 to pull variables down from exponents when finding a common base is impossible.
 
-> [!example] Example 6 �” Solve an Equation of the Form $y = Ae^{kt}$
+> [!example] Example 6 —” Solve an Equation of the Form $y = Ae^{kt}$
 > **Problem.** Determine the unknown time variable in a standard natural 
 exponential model.
 > **Setup.** The provided equation is $100 = 20e^{2t}$.
@@ -1346,7 +1346,7 @@ exponent $\ln(5) = 2t$. Finally, divide by 2.
 > **Insight.** You must securely isolate the exponential term by clearing away 
 any outside multipliers before you can apply a natural logarithm.
 
-> [!example] Example 7 �” Solving an Equation That Can Be Simplified to the Form
+> [!example] Example 7 —” Solving an Equation That Can Be Simplified to the Form
 $y = Ae^{kt}$
 > **Problem.** Strip away multiple constants to solve a base $e$ equation.
 > **Setup.** The starting expression is $4e^{2x} + 5 = 12$.
@@ -1358,7 +1358,7 @@ base, and divide by 2 to finalize the isolation of $x$.
 > **Insight.** Complex exponential equations often require several layers of 
 standard algebraic cleanup before the actual logarithmic inversion can occur.
 
-> [!example] Example 8 �” Solving Exponential Functions in Quadratic Form
+> [!example] Example 8 —” Solving Exponential Functions in Quadratic Form
 > **Problem.** Utilize factoring techniques to solve an equation containing 
 multiple squared exponential terms.
 > **Setup.** The mathematical equation is $e^{2x} - e^x = 56$.
@@ -1373,7 +1373,7 @@ negative result. Take the natural log of the remaining positive equation.
 hidden quadratic structures, but you must rigorously check the final factored 
 pieces for extraneous solutions.
 
-> [!example] Example 9 �” Using Algebra to Solve a Logarithmic Equation
+> [!example] Example 9 —” Using Algebra to Solve a Logarithmic Equation
 > **Problem.** Apply the fundamental definition of logarithms to free a 
 variable trapped inside an argument.
 > **Setup.** You must solve $2\ln(x) + 3 = 7$.
@@ -1385,7 +1385,7 @@ inverse exponential format to free the $x$.
 > **Insight.** Converting a fully isolated logarithm into its equivalent 
 exponential form is the most direct way to unlock an internal argument.
 
-> [!example] Example 10 �” Using Algebra Before and After Using the Definition 
+> [!example] Example 10 —” Using Algebra Before and After Using the Definition 
 of the Natural Logarithm
 > **Problem.** Untangle a natural logarithm where the internal argument 
 requires further algebraic division after conversion.
@@ -1399,7 +1399,7 @@ log, resulting in $6x = e^{7/2}$. Finally, divide the remaining coefficient
 logarithm, standard algebraic steps are usually still required to finish 
 isolating the variable.
 
-> [!example] Example 11 �” Using a Graph to Understand the Solution to a 
+> [!example] Example 11 —” Using a Graph to Understand the Solution to a 
 Logarithmic Equation
 > **Problem.** Utilize a graphing calculator to visually approximate the 
 crossing point of a complex logarithmic scenario.
@@ -1412,7 +1412,7 @@ pinpoint the precise coordinates where the two graphs collide.
 > **Insight.** Digital graphing utilities offer an immediate, visual 
 approximation technique that entirely bypasses manual algebraic manipulation.
 
-> [!example] Example 12 �” Solving an Equation Using the One-to-One Property of 
+> [!example] Example 12 —” Solving an Equation Using the One-to-One Property of 
 Logarithms
 > **Problem.** Solve a scenario where natural logarithms are present on both 
 sides of the equals sign.
@@ -1429,7 +1429,7 @@ and is mathematically valid.
 original logarithmic equation to ensure they don't break the strict domain 
 requirement of positive arguments.
 
-> [!example] Example 13 �” Using the Formula for Radioactive Decay to Find the 
+> [!example] Example 13 —” Using the Formula for Radioactive Decay to Find the 
 Quantity of a Substance
 > **Problem.** Calculate the exact number of years required for a percentage of
 a radioactive isotope mass to disappear.
@@ -1505,8 +1505,8 @@ Conversation: 811de852-23c7-481e-8a2c-fe733a626d9c (turn 1)
 This section transitions from the abstract algebraic manipulation of exponents 
 and logarithms into their practical application for modeling real-world 
 phenomena. Because exponential equations excel at describing quantities 
-that multiply rapidly over time�”such as compounding investments or bacterial 
-growth�”they are standard tools across biology, physics, and finance. 
+that multiply rapidly over time—”such as compounding investments or bacterial 
+growth—”they are standard tools across biology, physics, and finance. 
 Conversely, when physical growth faces environmental limitations, or when 
 trying to determine the time elapsed during continuous cooling or radioactive 
 decay, logarithmic and logistic models become indispensable [1-3]. Mastering 
@@ -1563,13 +1563,13 @@ approaches a maximum environmental limit.
 logistic growth model approaches over time due to restricted resources.
 
 > [!definition] Concavity
-> The visual bend of a plotted data curve�”either curving upward like a bowl 
-(concave up) or curving downward like an inverted bowl (concave down)�”which 
+> The visual bend of a plotted data curve—”either curving upward like a bowl 
+(concave up) or curving downward like an inverted bowl (concave down)—”which 
 helps determine whether an exponential or logarithmic function will best fit 
 the points.
 
 
-> [!example] Example 1 �” Graphing Exponential Growth
+> [!example] Example 1 —” Graphing Exponential Growth
 > **Problem.** Create a visual representation of a bacteria population's size 
 as time progresses.
 > **Setup.** The initial sample contains 10 bacteria, and the population 
@@ -1586,7 +1586,7 @@ $10^7$ after 24 hours.
 often requiring scientists to discuss results in broad orders of magnitude 
 rather than exact whole numbers.
 
-> [!example] Example 2 �” Finding the Function that Describes Radioactive Decay
+> [!example] Example 2 —” Finding the Function that Describes Radioactive Decay
 > **Problem.** Formulate the specific continuous decay equation for carbon-14 
 based on its known decay rate.
 > **Setup.** The documented half-life for the carbon-14 isotope is 5,730 years.
@@ -1600,7 +1600,7 @@ e^{(\frac{\ln(0.5)}{5730})t}$.
 output shrinks continuously as time advances, perfectly simulating physical 
 radioactive decay.
 
-> [!example] Example 3 �” Finding the Age of a Bone
+> [!example] Example 3 —” Finding the Age of a Bone
 > **Problem.** Calculate the approximate historical age of an excavated organic
 sample.
 > **Setup.** An old bone is tested and contains only 20% of the baseline 
@@ -1614,7 +1614,7 @@ $-0.000121$) to find the elapsed time variable.
 mathematical age calculations should be interpreted as strong approximations 
 rather than exact dates.
 
-> [!example] Example 4 �” Finding a Function That Describes Exponential Growth
+> [!example] Example 4 —” Finding a Function That Describes Exponential Growth
 > **Problem.** Construct a predictive mathematical model based on a known 
 doubling rate.
 > **Setup.** Based on Moore's Law, the processing power of computer chips 
@@ -1629,7 +1629,7 @@ e^{(\frac{\ln(2)}{2})t}$.
 algebraic information to compute a custom exponential growth rate for any base 
 $e$ model.
 
-> [!example] Example 5 �” Using Newton's Law of Cooling
+> [!example] Example 5 —” Using Newton's Law of Cooling
 > **Problem.** Determine the specific amount of time required for a hot food 
 item to reach an edible temperature in a cold environment.
 > **Setup.** A $165^\circ\text{F}$ cheesecake is placed inside a 
@@ -1646,7 +1646,7 @@ $T_s = 35$ and the initial difference $A = 165 - 35 = 130$. Plug in the
 horizontal asymptote, meaning the cooling object will never mathematically drop
 below the temperature of its surroundings.
 
-> [!example] Example 6 �” Using the Logistic-Growth Model
+> [!example] Example 6 —” Using the Logistic-Growth Model
 > **Problem.** Project the spread of a contagious illness through a small, 
 restricted population over time.
 > **Setup.** A specific flu strain has a logistic growth rate of $b = 0.6030$. It starts with 1 infected individual in an isolated town of 1,000 
@@ -1663,7 +1663,7 @@ illness; over a long period, the entire population of 1,000 will be infected.
 logistic model outputs dealing with living populations must always be rounded 
 to the nearest whole integer.
 
-> [!example] Example 7 �” Choosing a Mathematical Model
+> [!example] Example 7 —” Choosing a Mathematical Model
 > **Problem.** Determine the best regression shape to fit a provided set of 
 arbitrary statistical data points.
 > **Setup.** A table lists ten distinct $(x, y)$ coordinates that rise steeply 
@@ -1674,11 +1674,11 @@ eliminates exponential models (which are concave up), leaving a logarithmic
 model $y = d \ln(x)$ as the best candidate. Plug in the provided data 
 points $(1, 0)$ and $(e, 2)$ to algebraically solve for the multiplier $d$.
 > **Answer.** The logarithmic model that best fits the data is $y = 2 \ln(x)$.
-> **Insight.** Analyzing the concavity�”whether a curve would "hold water" or 
-"spill water"�”is the quickest visual method for deciding between exponential 
+> **Insight.** Analyzing the concavity—”whether a curve would "hold water" or 
+"spill water"—”is the quickest visual method for deciding between exponential 
 and logarithmic regression models.
 
-> [!example] Example 8 �” Changing to base e
+> [!example] Example 8 —” Changing to base e
 > **Problem.** Convert an exponential equation utilizing an arbitrary decimal 
 base into an equivalent continuous model utilizing base $e$.
 > **Setup.** The mathematical function provided is $y = 2.5(3.1)^x$.
@@ -1770,10 +1770,10 @@ domain branches in the negative quadrants, which may ruin your real-world model.
 Section 4.7 serves as the culmination of the chapter's algebraic techniques, 
 shifting the focus entirely to the application of mathematical modeling to 
 predict real-world scientific and financial outcomes. By understanding 
-the specific geometric curve shapes�”knowing that continuous compounding mimics 
+the specific geometric curve shapes—”knowing that continuous compounding mimics 
 bacterial growth, that ambient temperature shifts a cooling curve's horizontal 
 asymptote, and that environmental limits bend exponential explosions into 
-flattened logistic charts�”you can accurately assign algebraic formulas to 
+flattened logistic charts—”you can accurately assign algebraic formulas to 
 chaotic real-life data sets. Ultimately, this section provides the
 vital analytical skillset required to convert raw observational statistics into
 robust mathematical projections.
@@ -1787,8 +1787,8 @@ perfectly aligned algebraic points, you will learn how to leverage graphing
 utilities to calculate the best possible exponential, logarithmic, or logistic 
 curve that maps through a scatter plot of observed data. Recognizing the
 general shape of your raw data points allows you to choose the correct 
-regression model, giving you the power to translate historical trends�”like 
-shifting life expectancies or rapid technological adoption�”into precise 
+regression model, giving you the power to translate historical trends—”like 
+shifting life expectancies or rapid technological adoption—”into precise 
 algebraic equations that can forecast future events [2-4].
 
 > [!definition] Regression Analysis
@@ -1813,7 +1813,7 @@ outcomes for input values that extend far outside the limits of the original
 data observations.
 
 
-> [!example] Example 1 �” Using Exponential Regression to Fit a Model to Data
+> [!example] Example 1 —” Using Exponential Regression to Fit a Model to Data
 > **Problem.** Utilize graphing technology to determine the exponential 
 equation representing the correlation between alcohol consumption and vehicle 
 accidents, then use it to estimate a specific risk.
@@ -1833,7 +1833,7 @@ more likely to experience a crash.
 statistics to build predictive exponential models, but you must confirm the 
 underlying data actually trends exponentially before trusting the output.
 
-> [!example] Example 2 �” Using Logarithmic Regression to Fit a Model to Data
+> [!example] Example 2 —” Using Logarithmic Regression to Fit a Model to Data
 > **Problem.** Generate a logarithmic formula to model historical longevity 
 statistics and use it to predict a future demographic milestone.
 > **Setup.** A dataset tracks the average American life expectancy for each 
@@ -1850,7 +1850,7 @@ The predicted average life expectancy for 2030 is roughly 79.1 years.
 explosive growth naturally tapers off and slows down due to external factors 
 over time [7-9].
 
-> [!example] Example 3 �” Using Logistic Regression to Fit a Model to Data
+> [!example] Example 3 —” Using Logistic Regression to Fit a Model to Data
 > **Problem.** Build a logistic equation for technology adoption rates over 
 time, use it to evaluate a specific year, and interpret its maximum 
 mathematical ceiling.
@@ -1949,8 +1949,8 @@ account for the additional accumulated gains generated by multiple compounding
 periods within that year.
 
 > [!definition] Carrying Capacity
-> The absolute maximum sustainable limit�”represented visually as a horizontal 
-asymptote�”that a restricted logistic growth model approaches over time.
+> The absolute maximum sustainable limit—”represented visually as a horizontal 
+asymptote—”that a restricted logistic growth model approaches over time.
 
 > [!definition] Change-of-Base Formula
 > An algebraic conversion tool used to rewrite a logarithm of any arbitrary 
