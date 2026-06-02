@@ -11,14 +11,10 @@
             "id": "c6ffd1b6d6396f23",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/Chapter 4 (Main).md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Chapter 4 (Main)"
+              "title": "New tab"
             }
           }
         ]
@@ -216,7 +212,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c6ffd1b6d6396f23",
+  "active": "328aa9c891b22c6e",
   "lastOpenFiles": [
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_format_pass.py",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_format_pass.py.tmp.12832.e7c917e74a52",
