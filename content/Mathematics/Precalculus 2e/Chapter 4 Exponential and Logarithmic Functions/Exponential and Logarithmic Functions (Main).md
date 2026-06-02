@@ -1822,9 +1822,9 @@ capacity) of a population's adoption rate.
 
 ## Related Documents
 
-- **[Logarithm Fundamentals (Main)](<../Logarithms/Logarithm Fundamentals (Main).md>)** — Companion intuition note built from 3B1B's Lockdown Math ep. 6. Spends more time on the zero-counting intuition, log scales for COVID, and the petri-dish practice problem. This Chapter 4 note is the algebraic / textbook treatment; the Logarithm Fundamentals note is the intuition / "why does this exist" treatment. Cross-reference for the rules in §4.5 and the change-of-base derivation.
-- **[Imaginary Interest and Continuous Rotation (Main)](<../Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md>)** — Where the number $e$ comes from (compound interest in the limit) and what happens when you plug imaginary values into the exponential function. Useful follow-on for §4.1's introduction of $e$ and continuous compounding.
-- **[Euler's Formula via exp(x) (Main)](<../Complex Numbers/Euler's Formula via exp(x) (Main).md>)** — The polynomial-series definition of $\exp(x)$ and what it produces for imaginary inputs ($e^{i\theta} = \cos\theta + i\sin\theta$). Connects the $e$ defined in §4.1 to its deepest mathematical identity.
+- **[Logarithm Fundamentals (Main)](<../../Logarithms/Logarithm Fundamentals (Main).md>)** — Companion intuition note built from 3B1B's Lockdown Math ep. 6. Spends more time on the zero-counting intuition, log scales for COVID, and the petri-dish practice problem. This Chapter 4 note is the algebraic / textbook treatment; the Logarithm Fundamentals note is the intuition / "why does this exist" treatment. Cross-reference for the rules in §4.5 and the change-of-base derivation.
+- **[Imaginary Interest and Continuous Rotation (Main)](<../../Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md>)** — Where the number $e$ comes from (compound interest in the limit) and what happens when you plug imaginary values into the exponential function. Useful follow-on for §4.1's introduction of $e$ and continuous compounding.
+- **[Euler's Formula via exp(x) (Main)](<../../Complex Numbers/Euler's Formula via exp(x) (Main).md>)** — The polynomial-series definition of $\exp(x)$ and what it produces for imaginary inputs ($e^{i\theta} = \cos\theta + i\sin\theta$). Connects the $e$ defined in §4.1 to its deepest mathematical identity.
 
 ---
 
