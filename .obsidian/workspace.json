@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
+                "file": "content/Mathematics/Pi/Calculating Pi (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "skill1_pre_flop_strategy"
+              "title": "Calculating Pi (Main)"
             }
           }
         ]
@@ -216,26 +216,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c6ffd1b6d6396f23",
+  "active": "328aa9c891b22c6e",
   "lastOpenFiles": [
-    "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill3_assess_hand_value.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
+    "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill3_assess_hand_value.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill2_dont_pay_people_off.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/Part 2 Beating Live 1-2 Games (Main).md",
-    "content/Mathematics/Calculating Pi/pi_mindmap.png",
-    "content/Mathematics/Calculating Pi/pi_fig5_convergence.png",
-    "content/Mathematics/Calculating Pi/_gen_pi_mindmap.py",
-    "content/Mathematics/Calculating Pi/_gen_pi_fig5_convergence.py",
-    "content/Mathematics/Calculating Pi/_gen_pi_fig4_quarter_circle.py",
-    "content/Mathematics/Calculating Pi/_gen_pi_fig3_pascal_extended.py",
-    "content/Mathematics/Calculating Pi/_gen_pi_fig2_pizza_area.py",
-    "content/Mathematics/Calculating Pi/pi_fig4_quarter_circle.png",
-    "content/Mathematics/Calculating Pi/_gen_pi_fig1_polygon_bounds.py",
-    "content/Mathematics/Calculating Pi/pi_fig2_pizza_area.png",
-    "content/Mathematics/Calculating Pi/pi_fig3_pascal_extended.png",
-    "content/Mathematics/Calculating Pi/pi_fig1_polygon_bounds.png",
-    "content/Mathematics/Calculating Pi/Calculating Pi (Main).md",
-    "content/Mathematics/Calculating Pi",
+    "content/Mathematics/Pi/pi_mindmap.png",
+    "content/Mathematics/Pi/pi_fig5_convergence.png",
+    "content/Mathematics/Pi/_gen_pi_mindmap.py",
+    "content/Mathematics/Pi/_gen_pi_fig5_convergence.py",
+    "content/Mathematics/Pi/_gen_pi_fig4_quarter_circle.py",
+    "content/Mathematics/Pi/_gen_pi_fig3_pascal_extended.py",
+    "content/Mathematics/Pi/_gen_pi_fig2_pizza_area.py",
+    "content/Mathematics/Pi/pi_fig4_quarter_circle.png",
+    "content/Mathematics/Pi/_gen_pi_fig1_polygon_bounds.py",
+    "content/Mathematics/Pi/pi_fig2_pizza_area.png",
+    "content/Mathematics/Pi/pi_fig3_pascal_extended.png",
+    "content/Mathematics/Pi/pi_fig1_polygon_bounds.png",
+    "content/Mathematics/Pi/Calculating Pi (Main).md",
+    "content/Mathematics/Pi",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/hand_quizzes_1_2.md",
     "content/Poker/The Course/Part 1 The 30000 Foot View/the_poker_pyramid.md",
     "content/Poker/The Course/Part 1 The 30000 Foot View/the_poker_ecosystem.md",
