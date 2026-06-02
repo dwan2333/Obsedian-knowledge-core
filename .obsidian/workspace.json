@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -216,15 +216,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c6ffd1b6d6396f23",
+  "active": "328aa9c891b22c6e",
   "lastOpenFiles": [
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Mathematics/Logarithms/Logarithm Fundamentals (Main).md",
-    "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/Chapter 4 (Main).md",
     "content/Mathematics/Logarithms/lf_mindmap.png",
+    "content/Mathematics/Logarithms/lf_fig4_change_of_base.png",
+    "content/Mathematics/Logarithms/lf_fig3_richter.png",
     "content/Mathematics/Logarithms/lf_fig2_triangle_of_power.png",
     "content/Mathematics/Logarithms/lf_fig1_linear_vs_log.png",
-    "content/Mathematics/Logarithms/lf_fig4_change_of_base.png",
+    "content/Mathematics/Quadratic Formulas/v2_topic_3_golden_ratio.png",
+    "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
+    "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/Chapter 4 (Main).md",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_assemble.py.tmp.22056.fe96118a1971",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_fix_format.py",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_fix_format.py.tmp.22056.609360251b25",
@@ -238,8 +241,6 @@
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/pc4_fig5_logistic_growth.png",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/pc4_fig4_half_life_decay.png",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/pc4_fig3_log_bases.png",
-    "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/pc4_fig2_log_inverse_of_exp.png",
-    "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/pc4_fig1_exp_growth_decay.png",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_gen_pc4_mindmap.py",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_gen_pc4_mindmap.py.tmp.13156.9db1fddce424",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_gen_pc4_fig5_logistic_growth.py",
@@ -255,7 +256,6 @@
     "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
     "content/Mathematics/Euler 's equation/eulers_formula_consequences.md",
     "content/Mathematics/Euler 's equation/Euler's Formula via exp(x) (Main).md",
-    "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Finance/Futures/SOFR Future.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
