@@ -1,8 +1,18 @@
 """Assemble Chapter 4 (Main).md from the 9 branch files + figures.
 
-Clean NotebookLM artifacts (leading 'Answer:' line, [1, 2]-style citation tags),
-embed figures inline next to relevant sub-sections, add chapter intro/takeaways
-written from scratch, attach the OpenStax CC-BY attribution.
+Improvements over the first pass:
+- Read branches as raw bytes, normalize cp1252 punctuation (0x97 em-dash,
+  0x96 en-dash, 0x91-94 curly quotes, 0x85 ellipsis) to proper UTF-8 BEFORE
+  decoding.
+- Strip ALL line-ending variants (\\r\\n, \\r, \\n) and treat the document as
+  paragraphs separated by blank lines.
+- Within a callout block (line starting with '>'), MERGE every orphan
+  continuation line into the previous '>' line so it stays inside the
+  callout. NotebookLM hard-wraps at ~80 chars but only prefixes the first
+  line of each wrap with '>', which made the second line render as
+  out-of-callout plain text.
+- Write the final file in BINARY mode with explicit \\n line endings so
+  Windows text mode doesn't double-encode them as \\r\\n.
 """
 import re
 import os
@@ -21,7 +31,6 @@ BRANCHES = [
     ('chapter_review',             'Chapter Review'),
 ]
 
-# Figure embeds keyed by branch slug. Inserted after the section's intro paragraph.
 FIGURE_EMBEDS = {
     '4_1_exponential_functions': (
         '![Exponential growth and decay parent curves](pc4_fig1_exp_growth_decay.png)\n'
@@ -54,44 +63,101 @@ FIGURE_EMBEDS = {
     ),
 }
 
+# cp1252 -> UTF-8 byte-level normalization (run on raw bytes BEFORE decode)
+CP1252_FIXES = [
+    (b'\x85', '…'.encode('utf-8')),
+    (b'\x91', '‘'.encode('utf-8')),
+    (b'\x92', '’'.encode('utf-8')),
+    (b'\x93', '“'.encode('utf-8')),
+    (b'\x94', '”'.encode('utf-8')),
+    (b'\x95', '•'.encode('utf-8')),
+    (b'\x96', '–'.encode('utf-8')),
+    (b'\x97', '—'.encode('utf-8')),
+]
 
-def clean(content: str) -> str:
-    """Strip NotebookLM artifacts from a branch file."""
-    # Drop the leading "Answer:" line that NotebookLM prepends
-    lines = content.split('\n')
+
+def read_clean_branch(slug: str) -> str:
+    """Read a branch file, normalize cp1252 bytes, decode, normalize line endings."""
+    path = os.path.join(DIR, f'_branch_{slug}.md')
+    with open(path, 'rb') as f:
+        raw = f.read()
+    for bad, good in CP1252_FIXES:
+        raw = raw.replace(bad, good)
+    text = raw.decode('utf-8', errors='replace')
+    # Replace any remaining U+FFFD with em-dash (the only bad byte we saw was 0x97)
+    text = text.replace('�', '—')
+    # Normalize line endings: \r\n and \r → \n
+    text = text.replace('\r\n', '\n').replace('\r', '\n')
+    return text
+
+
+def strip_artifacts(text: str) -> str:
+    """Strip NotebookLM artifacts (citations, leading 'Answer:', stray quotes after em-dash)."""
+    # Drop a leading 'Answer:' or 'Continuing conversation...' line if present
+    lines = text.split('\n')
     while lines and lines[0].strip() in {'', 'Answer:'}:
         lines = lines[1:]
-    # Drop trailing chat continuation lines ("Resumed conversation: ...")
+    # Drop trailing chat continuation lines
     while lines and (
         lines[-1].strip().startswith('Resumed conversation:') or
         lines[-1].strip().startswith('Continuing conversation') or
         lines[-1].strip() == ''
     ):
         lines = lines[:-1]
-    content = '\n'.join(lines)
-    # Strip citation tags like " [1]", " [1, 2]", " [1, 2, 3]"
-    content = re.sub(r'\s*\[\d+(?:,\s*\d+)*\]', '', content)
-    # Fix mojibake em-dashes that may have appeared
-    content = content.replace('—', '—')
-    return content.strip()
+    text = '\n'.join(lines)
+    # Strip NotebookLM citation tags like " [1]", " [1, 2]"
+    text = re.sub(r'\s*\[\d+(?:,\s*\d+)*\]', '', text)
+    # Strip stray closing-quote artifacts adjacent to em-dashes
+    text = re.sub(r'—\s*["”“]\s*', '— ', text)
+    return text.strip()
 
 
-def insert_figures(branch_content: str, slug: str) -> str:
+def fix_callout_continuations(text: str) -> str:
+    """Glue orphan continuation lines into the preceding callout '>' line.
+
+    NotebookLM hard-wraps text at ~80 cols but only the first wrapped line
+    gets the '>' prefix. The remaining lines render as plain text outside
+    the callout. Fix: merge them into the previous line until we hit either
+    a blank line (callout ends) or another '>' line.
+    """
+    lines = text.split('\n')
+    out = []
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        if line.startswith('>'):
+            # Inside a callout. Accumulate this line + any orphan continuations.
+            merged = line.rstrip()
+            j = i + 1
+            while j < len(lines):
+                nxt = lines[j]
+                if nxt.strip() == '' or nxt.startswith('>'):
+                    break
+                # Orphan continuation — append with single space separator
+                merged = merged.rstrip() + ' ' + nxt.strip()
+                j += 1
+            out.append(merged)
+            i = j
+        else:
+            out.append(line)
+            i += 1
+    return '\n'.join(out)
+
+
+def insert_figures(branch_text: str, slug: str) -> str:
     """Insert the section's figures right after the intro paragraph (before first callout)."""
     if slug not in FIGURE_EMBEDS:
-        return branch_content
+        return branch_text
     figure_block = FIGURE_EMBEDS[slug]
-    # Find the first callout (line starting with '> [!') and insert figures before it.
-    lines = branch_content.split('\n')
+    lines = branch_text.split('\n')
     insert_idx = None
     for i, line in enumerate(lines):
         if line.lstrip().startswith('> [!'):
             insert_idx = i
             break
     if insert_idx is None:
-        # No callout found — append figures at the end
-        return branch_content + '\n\n' + figure_block
-    return '\n'.join(lines[:insert_idx]) + '\n' + figure_block + '\n' + '\n'.join(lines[insert_idx:])
+        return branch_text + '\n\n' + figure_block
+    return '\n'.join(lines[:insert_idx]) + '\n\n' + figure_block + '\n' + '\n'.join(lines[insert_idx:])
 
 
 # ===========================================================================
@@ -156,42 +222,49 @@ FOOTER = """
 This note paraphrases content from OpenStax Precalculus 2e, Chapter 4, under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/). All worked examples, definitions, and formulas are restated in paraphrased form; figures are generated programmatically via matplotlib rather than extracted from the source. The original book is freely available at [openstax.org](https://openstax.org/details/books/precalculus-2e).
 """
 
-# Read each branch file, clean, insert figures, concatenate.
+# Process each branch: read clean, strip artifacts, fix callouts, insert figures.
 sections = []
-for slug, title in BRANCHES:
-    branch_path = os.path.join(DIR, f'_branch_{slug}.md')
-    # NotebookLM occasionally emits Windows-1252 punctuation in a nominally UTF-8 stream.
-    # Read raw bytes and decode permissively, then normalize known-bad bytes to their
-    # Unicode equivalents so the final note is clean UTF-8.
-    with open(branch_path, 'rb') as f:
-        raw_bytes = f.read()
-    raw = raw_bytes.decode('utf-8', errors='replace')
-    # Replace the Unicode replacement character with the most common offenders
-    # (0x97 = em dash in cp1252; 0x91/0x92 = curly single quotes; 0x93/0x94 = curly double quotes; 0x96 = en dash)
-    raw_bytes_fixed = raw_bytes.replace(b'\x97', '—'.encode('utf-8'))  # em dash
-    raw_bytes_fixed = raw_bytes_fixed.replace(b'\x96', '–'.encode('utf-8'))  # en dash
-    raw_bytes_fixed = raw_bytes_fixed.replace(b'\x91', '‘'.encode('utf-8'))  # left single quote
-    raw_bytes_fixed = raw_bytes_fixed.replace(b'\x92', '’'.encode('utf-8'))  # right single quote
-    raw_bytes_fixed = raw_bytes_fixed.replace(b'\x93', '“'.encode('utf-8'))  # left double quote
-    raw_bytes_fixed = raw_bytes_fixed.replace(b'\x94', '”'.encode('utf-8'))  # right double quote
-    raw_bytes_fixed = raw_bytes_fixed.replace(b'\x85', '…'.encode('utf-8'))  # ellipsis
-    raw = raw_bytes_fixed.decode('utf-8', errors='replace')
-    cleaned = clean(raw)
-    with_figs = insert_figures(cleaned, slug)
-    sections.append(with_figs)
+for slug, _title in BRANCHES:
+    text = read_clean_branch(slug)
+    text = strip_artifacts(text)
+    text = fix_callout_continuations(text)
+    text = insert_figures(text, slug)
+    sections.append(text)
 
 main_content = HEADER + '\n'.join(sections) + FOOTER
 
-# Write the Main file
-main_path = os.path.join(DIR, 'Chapter 4 (Main).md')
-with open(main_path, 'w', encoding='utf-8') as f:
-    f.write(main_content)
+# Final cleanup: collapse runs of more than 2 consecutive newlines down to 2.
+main_content = re.sub(r'\n{3,}', '\n\n', main_content)
 
-# Stats
+# Write in BINARY mode with explicit \n so Windows doesn't auto-convert to \r\n.
+main_path = os.path.join(DIR, 'Chapter 4 (Main).md')
+with open(main_path, 'wb') as f:
+    f.write(main_content.encode('utf-8'))
+
+# Sanity checks
+data = open(main_path, 'rb').read()
 word_count = len(main_content.split())
 line_count = main_content.count('\n')
-file_kb = os.path.getsize(main_path) / 1024
-print('Chapter 4 (Main).md written')
-print(f'  Words: {word_count:,}')
-print(f'  Lines: {line_count:,}')
-print(f'  Size : {file_kb:.1f} KB')
+crlf_count = data.count(b'\r\n')
+ufffd_count = data.count(b'\xef\xbf\xbd')
+size_kb = os.path.getsize(main_path) / 1024
+
+print('Chapter 4 (Main).md regenerated')
+print(f'  Words : {word_count:,}')
+print(f'  Lines : {line_count:,}')
+print(f'  Size  : {size_kb:.1f} KB')
+print(f'  CRLF  : {crlf_count}  (should be 0)')
+print(f'  U+FFFD: {ufffd_count} (should be 0)')
+
+# Verify no orphan continuations remain
+lines = main_content.split('\n')
+orphans = 0
+in_callout = False
+for ln in lines:
+    if ln.startswith('>'):
+        in_callout = True
+    elif ln.strip() == '':
+        in_callout = False
+    elif in_callout:
+        orphans += 1
+print(f'  Orphan continuations remaining: {orphans} (should be 0)')

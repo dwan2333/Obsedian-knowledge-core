@@ -216,8 +216,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c6ffd1b6d6396f23",
+  "active": "328aa9c891b22c6e",
   "lastOpenFiles": [
+    "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_assemble.py.tmp.22056.fe96118a1971",
+    "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_fix_format.py",
+    "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_fix_format.py.tmp.22056.609360251b25",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_branch_4_1_exponential_functions.md",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/Chapter 4 (Main).md",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/precalculus_2e_chapter_4_text.md",
@@ -236,8 +239,6 @@
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_gen_pc4_mindmap.py.tmp.13156.9db1fddce424",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_gen_pc4_fig5_logistic_growth.py",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_gen_pc4_fig5_logistic_growth.py.tmp.13156.c95ce8f5e857",
-    "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_gen_pc4_fig4_half_life_decay.py",
-    "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_gen_pc4_fig4_half_life_decay.py.tmp.13156.4a5642f10cbc",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_branch_chapter_review.md",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_branch_4_8_fitting_models.md",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_branch_4_7_models.md",
@@ -263,7 +264,6 @@
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
     "content/Mathematics/Trigonometric/Visual representation On Demos.md",
     "content/Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
-    "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
     "Untitled.canvas"
   ]
 }
