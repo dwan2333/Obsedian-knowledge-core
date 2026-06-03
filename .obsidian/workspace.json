@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -219,8 +219,13 @@
   },
   "active": "c6ffd1b6d6396f23",
   "lastOpenFiles": [
-    "content/Mathematics/Pythagorean Theorem/inverse_pythagorean_theorem.md",
+    "content/Mathematics/Trigonometric/Visual representation On Demos.md",
+    "content/Mathematics/Trigonometric/spt_mindmap.png",
+    "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
+    "content/Mathematics/Euler 's equation/eulers_formula_consequences.md",
+    "content/Mathematics/Euler 's equation/Euler's Formula via exp(x) (Main).md",
     "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
+    "content/Mathematics/Pythagorean Theorem/inverse_pythagorean_theorem.md",
     "content/Mathematics/Logarithms/Logarithm Fundamentals (Main).md",
     "content/Mathematics/Pi/Calculating Pi (Main).md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
@@ -245,7 +250,6 @@
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill2_dont_pay_people_off.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/Part 2 Beating Live 1-2 Games (Main).md",
     "content/Mathematics/Pi/pi_mindmap.png",
-    "content/Mathematics/Pi/pi_fig5_convergence.png",
     "content/Mathematics/Pi/_gen_pi_mindmap.py",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/hand_quizzes_1_2.md",
     "content/Poker/The Course/Part 1 The 30000 Foot View/the_poker_pyramid.md",
@@ -259,11 +263,7 @@
     "content/Mathematics/Exponential and Logarithmic Functions/Exponential and Logarithmic Functions (Main).md",
     "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
     "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
-    "content/Mathematics/Euler 's equation/Euler's Formula via exp(x) (Main).md",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/Chapter 4 (Main).md",
-    "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/precalculus_2e_chapter_4_text.md",
-    "content/Mathematics/Euler 's equation/eulers_formula_consequences.md",
-    "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/_branch_4_1_exponential_functions.md",
     "Untitled.canvas"
   ]
 }
