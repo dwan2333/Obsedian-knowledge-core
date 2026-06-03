@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
+                "file": "content/Mathematics/Pi/Calculating Pi (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The Pythagorean Theorem (Main)"
+              "title": "Calculating Pi (Main)"
             }
           }
         ]
@@ -218,6 +218,7 @@
   },
   "active": "c6ffd1b6d6396f23",
   "lastOpenFiles": [
+    "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
     "content/Mathematics/Pythagorean Theorem/inverse_pythagorean_theorem.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
     "content/Mathematics/Pythagorean Theorem/ipt_mindmap.png",
@@ -236,7 +237,6 @@
     "content/Mathematics/Pythagorean Theorem/_gen_ipt_mindmap.py",
     "content/Mathematics/Pythagorean Theorem/_gen_ipt_fig2_three_similar.py",
     "content/Mathematics/Pythagorean Theorem/_gen_ipt_fig1_construction.py",
-    "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
     "content/Mathematics/Pythagorean Theorem",
     "content/Mathematics/Pi/Calculating Pi (Main).md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill3_assess_hand_value.md",
