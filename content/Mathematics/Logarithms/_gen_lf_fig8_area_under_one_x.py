@@ -45,7 +45,7 @@ ax.set_title('Harmonic partial sum vs. area under $1/x$',
              fontsize=14, pad=12, color=TEXT, fontweight='bold')
 
 ax.text(N - 0.5, 0.85,
-        r'$\displaystyle \sum_{k=1}^{N} \frac{1}{k}$' '\n'
+        r'$\sum_{k=1}^{N} \frac{1}{k}$' '\n'
         r'$\approx \int_1^N \dfrac{1}{x}\, dx = \ln N$',
         fontsize=13, color=TEXT, ha='center', va='center',
         bbox=dict(boxstyle='round,pad=0.4', facecolor='#fff8dc',

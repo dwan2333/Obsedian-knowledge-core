@@ -74,7 +74,7 @@ ax.scatter([math.log(2)], [0], s=250, marker='*', color=GREEN_EDGE,
 
 # Title and footer
 ax.text(0.55, 0.50,
-        r'$1 - \tfrac{1}{2} + \tfrac{1}{3} - \tfrac{1}{4} + \tfrac{1}{5} - \cdots = \ln 2$',
+        r'$1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \cdots = \ln 2$',
         fontsize=15, color=TEXT, ha='center', va='center', fontweight='bold',
         bbox=dict(boxstyle='round,pad=0.4', facecolor='#fff8dc',
                   edgecolor='#aa8b3a', linewidth=1.4))

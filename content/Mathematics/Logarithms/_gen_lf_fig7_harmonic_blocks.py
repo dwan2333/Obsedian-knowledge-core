@@ -14,10 +14,10 @@ ax.set_aspect('auto'); ax.axis('off')
 groups = [
     ([1], 'first', None, None),
     ([2], 'second', None, None),
-    (list(range(3, 5)), '$\\tfrac{1}{3} + \\tfrac{1}{4} > \\tfrac{1}{4}+\\tfrac{1}{4} = \\tfrac{1}{2}$', '> 1/2', BLUE_EDGE),
-    (list(range(5, 9)), '$\\tfrac{1}{5}{+}\\tfrac{1}{6}{+}\\tfrac{1}{7}{+}\\tfrac{1}{8} > 4\\cdot \\tfrac{1}{8} = \\tfrac{1}{2}$', '> 1/2', ORANGE_EDGE),
-    (list(range(9, 17)), '$8$ terms $> 8\\cdot \\tfrac{1}{16} = \\tfrac{1}{2}$', '> 1/2', GREEN_EDGE),
-    (list(range(17, 33)), '$16$ terms $> 16 \\cdot \\tfrac{1}{32} = \\tfrac{1}{2}$', '> 1/2', PURPLE_EDGE),
+    (list(range(3, 5)), '$\\frac{1}{3} + \\frac{1}{4} > \\frac{1}{4}+\\frac{1}{4} = \\frac{1}{2}$', '> 1/2', BLUE_EDGE),
+    (list(range(5, 9)), '$\\frac{1}{5}{+}\\frac{1}{6}{+}\\frac{1}{7}{+}\\frac{1}{8} > 4\\cdot \\frac{1}{8} = \\frac{1}{2}$', '> 1/2', ORANGE_EDGE),
+    (list(range(9, 17)), '$8$ terms $> 8\\cdot \\frac{1}{16} = \\frac{1}{2}$', '> 1/2', GREEN_EDGE),
+    (list(range(17, 33)), '$16$ terms $> 16 \\cdot \\frac{1}{32} = \\frac{1}{2}$', '> 1/2', PURPLE_EDGE),
 ]
 
 # Layout: each term takes 0.5 units of x; series is on y=0
@@ -33,7 +33,7 @@ for grp in groups:
 # Draw the fractions
 for x, idx in zip(all_x, all_labels):
     color = TEXT
-    ax.text(x, 0, f'$\\tfrac{{1}}{{{idx}}}$', fontsize=13, ha='center', va='center',
+    ax.text(x, 0, f'$\\frac{{1}}{{{idx}}}$', fontsize=13, ha='center', va='center',
             color=color, fontweight='bold')
     if idx > 1:
         ax.text(x - DX/2, 0, '$+$', fontsize=12, ha='center', va='center',
@@ -51,7 +51,6 @@ for indices, comment, lb, col in groups:
         # singletons (first, second) — no bracket
         x_pos += n * DX
         continue
-    x_start = (all_x.index(indices[0])) * 1
     x_start_xy = all_x[all_labels.index(indices[0])]
     x_end_xy = all_x[all_labels.index(indices[-1])]
     # Bracket
