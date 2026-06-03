@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
+                "file": "content/Mathematics/Logarithms/Logarithm Fundamentals (Main).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The Pythagorean Theorem (Main)"
+              "title": "Logarithm Fundamentals (Main)"
             }
           }
         ]
@@ -219,6 +219,7 @@
   },
   "active": "328aa9c891b22c6e",
   "lastOpenFiles": [
+    "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
     "content/Mathematics/Logarithms/lf_fig8_area_under_one_x.png",
     "content/Mathematics/Logarithms/lf_fig7_harmonic_blocks.png",
     "content/Mathematics/Logarithms/lf_fig6_alt_harmonic_hops.png",
@@ -236,7 +237,6 @@
     "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
     "content/Mathematics/Euler 's equation/eulers_formula_consequences.md",
     "content/Mathematics/Euler 's equation/Euler's Formula via exp(x) (Main).md",
-    "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
     "content/Mathematics/Pythagorean Theorem/inverse_pythagorean_theorem.md",
     "content/Mathematics/Logarithms/Logarithm Fundamentals (Main).md",
     "content/Mathematics/Pi/Calculating Pi (Main).md",
@@ -246,7 +246,6 @@
     "content/Mathematics/Pythagorean Theorem/ipt_fig1_construction.png",
     "content/Mathematics/Pythagorean Theorem/pyth_mindmap.png",
     "content/Mathematics/Pythagorean Theorem/pyth_fig4_super_theorem.png",
-    "content/Mathematics/Pythagorean Theorem/pyth_fig3_simplest_altitude.png",
     "content/Mathematics/Pythagorean Theorem/_gen_pyth_mindmap.py",
     "content/Mathematics/Pythagorean Theorem/_gen_pyth_fig4_super_theorem.py",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill3_assess_hand_value.md",
