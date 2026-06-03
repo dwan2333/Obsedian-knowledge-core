@@ -191,7 +191,8 @@
               "title": "Lookup"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
