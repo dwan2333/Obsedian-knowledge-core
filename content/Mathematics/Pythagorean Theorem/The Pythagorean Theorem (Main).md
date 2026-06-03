@@ -133,6 +133,55 @@ Choose the shape to be **a copy of the right triangle itself**. Now the proof is
 > [!tip] Why this is the punchline
 > Every other proof works to show a sum of areas is equal. Here, the splitting makes "small $+$ medium $=$ large" **true by construction** — the only real content is the observation that the three triangles are similar.
 
+#### Walk-through with concrete numbers (6-8-10 triangle)
+
+If the four-step proof above feels too abstract, here it is with actual arithmetic. The leap that's easy to miss is *where the squares come from* — they come from the area-scaling rule, not from drawn squares.
+
+> [!example] Same proof, this time with numbers
+> **Setup.** Right triangle with legs $A = 6$, $B = 8$, slanted side $C = 10$. Area of the whole triangle: $\tfrac{1}{2}\cdot 6\cdot 8 = 24$.
+>
+> **Step 1 — drop the altitude.** Draw the perpendicular from the right-angle corner down to the slanted side. The triangle splits into two pieces — a "small" one and a "medium" one. They literally fill the whole, so
+> $$\text{small area} + \text{medium area} = 24.$$
+>
+> **Step 2 — what scale is each piece?** All three triangles (small piece, medium piece, original whole) share the same angles, so the two pieces are **shrunken copies** of the original. By how much?
+> - The **small** piece's slanted side equals the original's leg $A = 6$. Compared to the original's slanted side of $10$, that's $6/10 = 0.6$ the size.
+> - The **medium** piece's slanted side equals the original's leg $B = 8$. Compared to $10$, that's $8/10 = 0.8$ the size.
+>
+> **Step 3 — area scales as length squared.** Shrinking lengths by a factor $r$ shrinks area by $r^2$ (because area is "length times length").
+> Sanity check: a $10\times 10$ square has area $100$; shrink each side to $6$ and the new $6\times 6$ square has area $36 = 0.36\cdot 100 = (0.6)^2\cdot 100$. ✓
+> So:
+> - Small area $= (0.6)^2 \cdot 24 = 0.36 \cdot 24 = 8.64$
+> - Medium area $= (0.8)^2 \cdot 24 = 0.64 \cdot 24 = 15.36$
+>
+> **Step 4 — add the pieces.** $8.64 + 15.36 = 24.$ ✓ Pieces equal the whole, as Step 1 demanded.
+>
+> **The cancellation.** Write Step 4 with the factors visible:
+> $$0.36 \cdot 24 \;+\; 0.64 \cdot 24 \;=\; 24$$
+> The $24$ appears in every term, so divide it out:
+> $$0.36 + 0.64 = 1.$$
+> Substitute back: $(6/10)^2 + (8/10)^2 = 1$. Multiply both sides by $10^2 = 100$:
+> $$\boxed{6^2 + 8^2 = 10^2} \quad\text{i.e. } 36 + 64 = 100. \;\checkmark$$
+>
+> **Answer.** Pythagoras for the $6$-$8$-$10$ triangle, derived **without ever drawing a square** — the squares appeared automatically from the area-scaling rule.
+>
+> **Insight.** The proof secretly *is* about squares — but the squares come from the area-shrinks-by-the-square-of-the-length rule applied to two shrunken copies of the original triangle, not from squares attached to the sides. Drop the altitude → two pieces appear with hypotenuses $A$ and $B$ → those pieces are scaled copies of the original by factors $A/C$ and $B/C$ → their areas are $(A/C)^2$ and $(B/C)^2$ of the original → pieces sum to whole → divide out the original area, multiply by $C^2$, get $A^2 + B^2 = C^2$.
+
+#### Same proof with $A$, $B$, $C$ generalized
+
+The numbers above weren't special. Replace 6, 8, 10 with arbitrary $A$, $B$, $C$ and the algebra runs identically:
+
+$$\underbrace{\left(\tfrac{A}{C}\right)^2 \cdot \text{Area}_{\text{whole}}}_{\text{small piece}} \;+\; \underbrace{\left(\tfrac{B}{C}\right)^2 \cdot \text{Area}_{\text{whole}}}_{\text{medium piece}} \;=\; \underbrace{\text{Area}_{\text{whole}}}_{\text{whole}}$$
+
+Divide every term by $\text{Area}_{\text{whole}}$ (it's positive, so this is allowed):
+
+$$\frac{A^2}{C^2} + \frac{B^2}{C^2} = 1$$
+
+Multiply both sides by $C^2$:
+
+$$A^2 + B^2 = C^2 \quad \blacksquare$$
+
+The "Area of the whole" disappears because it appears in every term — what survives is purely about the side lengths.
+
 ### 3.4 The pizza puzzle *(at [[11:48]](https://www.youtube.com/watch?v=p-0SOWbzUYI&t=708s))*
 
 > [!question] Left to the viewer
