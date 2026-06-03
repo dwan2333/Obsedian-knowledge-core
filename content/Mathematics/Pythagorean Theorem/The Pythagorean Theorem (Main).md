@@ -59,7 +59,7 @@ Take four identical copies of the right triangle and pack them into a large squa
 > Mathologer stresses this picture is only a *bulletproof* proof once you separately verify "that the two square-looking shapes are really squares." *(at [[3:24]](https://www.youtube.com/watch?v=p-0SOWbzUYI&t=204s))* — *"that's as true in maths as it is in life."*
 
 ### 2.2 Euclid's shearing proof *(at [[3:48]](https://www.youtube.com/watch?v=p-0SOWbzUYI&t=228s))*
-
+Ready this : [Euclid’s Proof of the Pythagorean Theorem | Synaptic | Central College](https://central.edu/writing-anthology/2019/01/31/159/)
 From Euclid's *Elements* (Prop. XLVII). Build squares on all three sides and drop a vertical line from the right angle through the big square on the hypotenuse, splitting it into a left rectangle and a right rectangle. The proof shows each leg-square equals the rectangle beneath it, using **area-preserving shears**:
 
 1. **Shear the small (leg-$A$) square** into a parallelogram, then shear it again so its base lands on the dividing line — turning it into the **left rectangle** of the hypotenuse square. Shearing never changes area *(at [[4:48]](https://www.youtube.com/watch?v=p-0SOWbzUYI&t=288s))*.
