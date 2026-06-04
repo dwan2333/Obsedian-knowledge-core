@@ -148,7 +148,7 @@ The answer (set up here, and the reason $\ln$ is "natural"): $e$ is the unique b
 
 ## Related Documents
 
-- **[Logarithm Fundamentals (Main)](<../Logarithms/Logarithm Fundamentals (Main).md>)** — the companion lecture from the same 3B1B Lockdown Math Ep. 6: the zero-counting intuition, all the log *rules*, change-of-base, and where $\ln$ sits among bases. Start there for the mechanics of logs; this note is the "why $\ln$ specifically" follow-up.
+- **[Logarithm Fundamentals (Main)](<Logarithm Fundamentals (Main).md>)** — the companion lecture from the same 3B1B Lockdown Math Ep. 6: the zero-counting intuition, all the log *rules*, change-of-base, and where $\ln$ sits among bases. Start there for the mechanics of logs; this note is the "why $\ln$ specifically" follow-up.
 
 ---
 
