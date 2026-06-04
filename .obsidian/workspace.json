@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
+                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The Pythagorean Theorem (Main)"
+              "title": "chapter1_exercises"
             }
           }
         ]
@@ -219,10 +219,16 @@
   },
   "active": "c6ffd1b6d6396f23",
   "lastOpenFiles": [
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+    "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
+    "content/Mathematics/Logarithms/Natural Logarithm/The Natural Logarithm (Main).md",
+    "content/Mathematics/Mental Math/Mental Math Multiplication Tricks (Main).md",
+    "content/Mathematics/Pi/Calculating Pi (Main).md",
     "content/Mathematics/Pythagorean Theorem/inverse_pythagorean_theorem.md",
+    "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
+    "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
     "content/Mathematics/Pythagorean Theorem/ipt_fig1_construction.png",
     "content/Poker/Pot Odds/Pot Odds (Main).md",
-    "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
     "content/Poker/Equity Fundamentals/Equity Fundamentals (Main).md",
     "Pasted image 20260604224817.png",
     "content/index.md",
@@ -233,7 +239,6 @@
     "content/Poker/Pot Odds/po_fig1_required_equity.png",
     "content/Poker/Pot Odds/po_mindmap.png",
     "content/Poker/Pot Odds",
-    "content/Mathematics/Logarithms/Natural Logarithm/The Natural Logarithm (Main).md",
     "content/Poker/Equity Fundamentals/eq2_fig27_fig27.png",
     "content/Poker/Equity Fundamentals/eq2_fig26_hands_drilled_down_to_all_the_suit_specific_combin.png",
     "content/Poker/Equity Fundamentals",
@@ -250,7 +255,6 @@
     "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
     "content/Mathematics/Euler 's equation/eulers_formula_consequences.md",
     "content/Mathematics/Euler 's equation/Euler's Formula via exp(x) (Main).md",
-    "content/Mathematics/Pi/Calculating Pi (Main).md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill1_pre_flop_strategy.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill3_assess_hand_value.md",
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/skill2_dont_pay_people_off.md",
@@ -261,9 +265,6 @@
     "content/Poker/The Course/Part 1 The 30000 Foot View/Part 1 The 30000 Foot View (Main).md",
     "content/Poker/The Course/Part 1 The 30000 Foot View/core_strategy_philosophy.md",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/Exponential and Logarithmic Functions (Main).md",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
-    "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
     "Untitled.canvas"
   ]
 }

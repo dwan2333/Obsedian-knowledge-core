@@ -193,6 +193,9 @@ The "Area of the whole" disappears because it appears in every term — what sur
 
 ### 4.1 Generalizing the picture to any triangle *(at [[12:11]](https://www.youtube.com/watch?v=p-0SOWbzUYI&t=731s))*
 
+Here is another proof : [Introducing Base44’s Big Game Ad “It’s App to You”](https://www.youtube.com/watch?v=NHxJ3Z_58Lw)
+Another proof of sine law (if you are interested) : [Law of Sines Visual Proof - YouTube](https://www.youtube.com/watch?v=TU0043SuGsM)
+
 Euclid's rectangles still work for a non-right triangle, but the two leg-squares now *overlap* the hypotenuse square by a correction term. With $\gamma$ the angle opposite side $C$, each correction rectangle has area $AB\cos\gamma$ *(at [[13:11]](https://www.youtube.com/watch?v=p-0SOWbzUYI&t=791s))*.
 
 $$\underbrace{A^2 + B^2}_{\text{two leg squares}} \;-\; \underbrace{2AB\cos\gamma}_{\text{two corrections}} \;=\; C^2$$
