@@ -8,6 +8,7 @@
 | **Length** | 05:05 |
 | **Topic** | Three multiplication shortcuts done faster than a calculator: ×11, squaring numbers ending in 5, and "same first digit / last digits sum to 10" |
 | **Captured** | 2026-06-04 |
+| **Series** | Part 1 of 2 — see [[mental_math_tricks_part_2\|Part 2: ÷5, adding by rounding, the percentage swap, the 7·8·9 tables, and 2-digit ×]] |
 
 ![Mental Math tricks — concept map](mm_mindmap.png)
 
@@ -133,3 +134,4 @@ The video teaches the *how*; here is the *why*. Write a two-digit number as $10a
 | Source | Section | Type |
 |---|---|---|
 | [Mental Math Multiplication Tricks](https://www.youtube.com/watch?v=1wAr2Kbe-GM) | 00:00 → 05:05 | YouTube |
+| [[mental_math_tricks_part_2\|Mental Math — Five More Tricks (Part 2)]] | companion note | Vault |
