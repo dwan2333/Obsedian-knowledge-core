@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
+                "file": "content/Mathematics/Pi/Calculating Pi (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The Pythagorean Theorem (Main)"
+              "title": "Calculating Pi (Main)"
             }
           }
         ]
@@ -220,8 +220,9 @@
   "active": "c6ffd1b6d6396f23",
   "lastOpenFiles": [
     "content/Mathematics/Pythagorean Theorem/inverse_pythagorean_theorem.md",
-    "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
     "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
+    "content/Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
+    "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
     "content/Mathematics/Trigonometric/Visual representation On Demos.md",
     "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/Exponential and Logarithmic Functions (Main).md",
@@ -264,7 +265,6 @@
     "content/Poker/The Course/Part 2 Beating Live 1-2 Games/hand_quizzes_1_2.md",
     "content/Poker/The Course/Part 1 The 30000 Foot View/the_poker_pyramid.md",
     "content/Poker/The Course/Part 1 The 30000 Foot View/the_poker_ecosystem.md",
-    "content/Poker/The Course/Part 1 The 30000 Foot View/Part 1 The 30000 Foot View (Main).md",
     "Untitled.canvas"
   ]
 }
