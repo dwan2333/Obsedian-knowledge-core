@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -220,6 +220,7 @@
   "active": "c6ffd1b6d6396f23",
   "lastOpenFiles": [
     "content/Mathematics/Pythagorean Theorem/inverse_pythagorean_theorem.md",
+    "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
     "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
     "content/Mathematics/Trigonometric/Visual representation On Demos.md",
     "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
@@ -230,7 +231,6 @@
     "content/Mathematics/Logarithms/Natural Logarithm/The Natural Logarithm (Main).md",
     "content/Mathematics/Mental Math/Mental Math Multiplication Tricks (Main).md",
     "content/Mathematics/Pi/Calculating Pi (Main).md",
-    "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
     "content/Mathematics/Pythagorean Theorem/ipt_fig1_construction.png",
     "content/Poker/Pot Odds/Pot Odds (Main).md",
     "content/Poker/Equity Fundamentals/Equity Fundamentals (Main).md",
