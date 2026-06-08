@@ -106,19 +106,19 @@ A bank account earning $r$ percent annually, compounded $n$ times per year, is a
 > Each compounding period multiplies the balance by $\left(1 + \tfrac{r}{n}\right)$, and there are $nt$ such periods.
 
 > [!example] Example 4.1.6 — Quarterly Compounding for 10 Years
-> **Problem.** \$3{,}000 is invested at 3% annual interest, compounded quarterly. What is the balance after 10 years?
+> **Problem.** &#36;3,000 is invested at 3% annual interest, compounded quarterly. What is the balance after 10 years?
 > **Setup.** $P = 3000$, $r = 0.03$, $n = 4$, $t = 10$.
 > **Solution.** $A(10) = 3000\left(1 + 0.03/4\right)^{4 \cdot 10} = 3000 (1.0075)^{40} \approx 4045.05$.
-> **Answer.** \$4{,}045.05.
+> **Answer.** &#36;4,045.05.
 > **Insight.** Each quarter the balance is multiplied by $1.0075$; after $40$ quarters the cumulative multiplier is roughly $1.35$.
 
 The same formula, run in reverse, answers *present-value* questions: how much do I need to invest now to reach a target later?
 
 > [!example] Example 4.1.7 — College-Savings Plan
-> **Problem.** Lily wants a 529 plan to grow to \$40{,}000 in 18 years at 6% compounded semi-annually. To the nearest dollar, how much must she invest now?
+> **Problem.** Lily wants a 529 plan to grow to &#36;40,000 in 18 years at 6% compounded semi-annually. To the nearest dollar, how much must she invest now?
 > **Setup.** $A(18) = 40000$, $r = 0.06$, $n = 2$, $t = 18$; solve for $P$.
 > **Solution.** $40000 = P(1 + 0.06/2)^{2(18)} = P(1.03)^{36}$, so $P = 40000 / (1.03)^{36} \approx 13801$.
-> **Answer.** Lily needs to invest about \$13{,}801.
+> **Answer.** Lily needs to invest about &#36;13,801.
 > **Insight.** Algebraically isolating $P$ converts the compound-interest formula into a present-value formula — the same equation, viewed from the other end.
 
 ### The number $e$ and continuous compounding
@@ -141,10 +141,10 @@ Push the compounding frequency $n$ in $\left(1 + \tfrac{r}{n}\right)^{nt}$ to in
 > where $a$ is the initial value, $r$ is the **continuous** rate per unit time, and $t$ is elapsed time. The sign of $r$ controls the direction: $r > 0$ for growth, $r < 0$ for decay. In financial contexts the formula is written $A(t) = P e^{rt}$.
 
 > [!example] Example 4.1.9 — Continuously Compounded Interest
-> **Problem.** \$1{,}000 is invested at a nominal 10% per year, compounded continuously. What is the balance after one year?
+> **Problem.** &#36;1,000 is invested at a nominal 10% per year, compounded continuously. What is the balance after one year?
 > **Setup.** $P = 1000$, $r = 0.10$, $t = 1$, using $A(t) = P e^{rt}$.
 > **Solution.** $A(1) = 1000 e^{0.10 \cdot 1} = 1000 e^{0.10} \approx 1105.17$.
-> **Answer.** \$1{,}105.17.
+> **Answer.** &#36;1,105.17.
 > **Insight.** Continuous compounding yields the theoretical *maximum* return for a given nominal rate — finer compounding always helps, but converges quickly to this limit.
 
 > [!example] Example 4.1.10 — Decay of Radon-222
