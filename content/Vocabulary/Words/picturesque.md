@@ -20,3 +20,6 @@
 - [prosaic](prosaic.md) — antonym; dull, plain, and unpictorial
 - [voluptuous](voluptuous.md) — kin; both describe strong sensory appeal
 - *scenic, quaint, charming* — close in sense (not yet in the vault)
+
+## Appears in
+- *"…had been less picturesque…"* — [The Brothers Karamazov](<../../Quotes/Sources/The Brothers Karamazov.md>) (p. 11)

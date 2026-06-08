@@ -18,3 +18,6 @@
 ## Related words
 - [pliable](pliable.md) — the counterpart; importunity is the pressure, a pliable person the one who yields to it
 - *insistence, persistence, pestering* — close in sense; the adjective is *importunate* (not yet in the vault)
+
+## Appears in
+- *"his persistent, shameless importunity"* — [The Brothers Karamazov](<../../Quotes/Sources/The Brothers Karamazov.md>) (p. 13)

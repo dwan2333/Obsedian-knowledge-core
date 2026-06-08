@@ -19,3 +19,6 @@
 ## Related words
 - [picturesque](picturesque.md) — antonym; vivid and pictorial
 - *mundane, banal, pedestrian, humdrum* — close in sense (not yet in the vault)
+
+## Appears in
+- *"…a prosaic flat bank in its place…"* — [The Brothers Karamazov](<../../Quotes/Sources/The Brothers Karamazov.md>) (p. 11)

@@ -19,3 +19,6 @@
 ## Related words
 - [voluptuous](voluptuous.md) — kin; a sharper, brighter cousin in the family of sensory pleasures
 - *zest, tang, pungency, spice* — close in sense; the adjective is *piquant* (not yet in the vault)
+
+## Appears in
+- *"what gave the marriage piquancy…"* — [The Brothers Karamazov](<../../Quotes/Sources/The Brothers Karamazov.md>) (p. 11)
