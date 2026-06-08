@@ -717,6 +717,23 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 >
 > > [!success]- Click to reveal solution
 > > **Solution.** $C_k = B_k \sqcup C_{k+1}$ (disjoint). So $P(B_k) = P(C_k) - P(C_{k+1})$. ✓
+>
+> > [!tip]- Intuition — the poker-hand way to see it
+> > Strip away the $A_i$ notation and picture a 5-card poker hand, with "Hearts" standing in for "the $A_i$ that occur." Take $k = 3$:
+> > - **$B_k$ — exactly $k$:** you hold *exactly* 3 Hearts.
+> > - **$C_k$ — at least $k$:** you hold *at least* 3 Hearts (3, 4, or 5).
+> > - **$C_{k+1}$ — at least $k+1$:** you hold *at least* 4 Hearts (4 or 5).
+> >
+> > **1 — The logical sentence.** "At least 3" is the same as "exactly 3 **or** at least 4":
+> > $$C_k = B_k \cup C_{k+1}.$$
+> >
+> > **2 — The disjoint check.** Can one hand hold *exactly* 3 Hearts **and** *at least* 4 Hearts at the same time? No — impossible. The two pieces are mutually exclusive, so the union is allowed to become a sum (additivity).
+> >
+> > **3 — The algebra.** Wrap $P(\cdot)$ around the equation, turning $\cup$ into $+$:
+> > $$P(C_k) = P(B_k) + P(C_{k+1}),$$
+> > then subtract $P(C_{k+1})$ from both sides:
+> > $$P(B_k) = P(C_k) - P(C_{k+1}).$$
+> > In words: to get the probability of *exactly* $k$, take "at least $k$" and chop off the "too many" cases ($k+1$ and beyond).
 
 > [!example] Exercise 47 — Independence Properties
 > **Problem.** Events $A$ and $B$ are independent if $P(A \cap B) = P(A)P(B)$ (independence is explored in detail in the next chapter).
