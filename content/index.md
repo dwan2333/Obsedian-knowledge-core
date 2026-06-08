@@ -15,6 +15,7 @@ This vault is organized as a hub-and-spoke knowledge system, with main topic are
 - **[Finance](Finance/)** — Markets, instruments, frameworks
 - **[Learning AI from TOP to Bottom](Learning%20AI%20from%20TOP%20to%20Bottom/)** — AI/ML notes
 - **[Poker](Poker/)** — Strategy, hand analysis, study notes
+- **[Vocabulary](<Vocabulary/Vocabulary (Main).md>)** — A growing, cross-linked map of words by theme, scenario, and domain, with example sentences and register notes
 
 ## Features available on this site
 
