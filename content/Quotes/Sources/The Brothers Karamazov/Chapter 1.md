@@ -11,7 +11,7 @@
 > "Indeed, if this precipice, chosen and favorite spot of hers, had been less picturesque, if there had been a prosaic flat bank in its place, most likely the suicide would never have taken place."
 
 > [!quote] Action as an echo of others' ideas (p. 11)
-> "Action was similarly, no doubt, an echo of other people's ideas, and was due to their irritation caused by lack of mental freedom."
+> "Adelaida Ivanovna Miusov's action was similarly, no doubt, an echo of other people's ideas, and was due to the irritation caused by lack of mental freedom. She wanted, perhaps, to show her feminine independence, to override class distinctions and the despotism of her family. And a pliable imagination persuaded her, we must suppose, for a brief moment, that Fyodor Pavlovitch, in spite of his parasitic position, was one of the bold and ironical spirits of that progressive epoch, though he was, in fact, an ill-natured buffoon and nothing more. What gave the marriage piquancy was that it was preceded by an elopement, and"
 
 > [!quote] What gave the marriage its piquancy (p. 11)
 > "What gave the marriage piquancy was that it was preceded by an elopement, and this greatly captivated Adelaide Ivanovna's fancy."
