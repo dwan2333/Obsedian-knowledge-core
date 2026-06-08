@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Vocabulary/Words/toady.md",
-                "mode": "source",
+                "file": "content/Quotes/Sources/The Brothers Karamazov.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "toady"
+              "title": "The Brothers Karamazov"
             }
           }
         ],
@@ -234,6 +234,10 @@
   },
   "active": "328aa9c891b22c6e",
   "lastOpenFiles": [
+    "content/Quotes/Sources/The Brothers Karamazov/The Brothers Karamazov (Main).md",
+    "content/Quotes/Sources/The Brothers Karamazov",
+    "content/Vocabulary/Categories/Domains/Everyday Speech & General Use.md",
+    "content/Vocabulary/Words/toady.md",
     "content/Vocabulary/Words/importunity.md.tmp.10196.8e8f6b224846",
     "content/Vocabulary/Words/elopement.md.tmp.10196.cdead4ba64e7",
     "content/Vocabulary/Words/piquancy.md.tmp.10196.844e28dd1e2a",
@@ -245,10 +249,6 @@
     "content/Quotes/Sources/The Brothers Karamazov.md",
     "content/Quotes/Sources/The Brothers Karamazov.md.tmp.10196.ef249d3b6912",
     "content/Quotes/Sources",
-    "content/Quotes",
-    "content/index.md.tmp.16072.670b46fd51be",
-    "content/Vocabulary/Categories/Domains/Everyday Speech & General Use.md",
-    "content/Vocabulary/Words/toady.md",
     "content/index.md",
     "content/Vocabulary/Categories/Domains/Literary & Elevated Prose.md",
     "content/Vocabulary/Categories/Domains/Society, History & Politics.md",
