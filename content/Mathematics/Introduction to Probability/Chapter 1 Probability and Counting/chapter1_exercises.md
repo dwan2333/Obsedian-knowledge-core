@@ -574,6 +574,21 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > > Expand and rearrange: $r^2 - r + g^2 - g = 2rg$, so $r^2 - 2rg + g^2 = r + g$, which is the same as $(r-g)^2 = r+g = 16$. Therefore $r - g = \pm 4$. Combined with $r + g = 16$: $r - g = +4$ gives $(r, g) = (10, 6)$; $r - g = -4$ gives $(r, g) = (6, 10)$.
 > >
 > > **Answer.** $P(G_1) = P(G_2) = g/(r+g)$; for part (c), $(r, g) \in \{(10, 6), (6, 10)\}$. ✓
+>
+> > [!tip]- Bonus — the "skeleton-key" proof for *any* draw $j$
+> > Part (b) only pins down the **second** draw. The same symmetry actually fixes **every** position at once — and combinatorics proves it in a single line, with no branching probability tree. (Without replacement, $j$ can run only up to $r+g$; after that the jar is empty.)
+> >
+> > **Setup — the slot method.** Let $N = r + g$. Tip the whole jar out into one random line of $N$ balls; "the $j$-th draw" is simply whoever lands in **slot $j$**. There are $N!$ equally likely orderings — that is the denominator.
+> >
+> > **Count the winners (a green ball in slot $j$).** Build such an ordering in two independent choices:
+> > - **Slot $j$:** choose which green ball sits there — $g$ ways.
+> > - **The rest:** scramble the other $N-1$ balls into the other $N-1$ slots — $(N-1)!$ ways.
+> >
+> > So the numerator is $g \cdot (N-1)!$.
+> >
+> > **Divide and cancel.**
+> > $$P(G_j) \;=\; \frac{g \cdot (N-1)!}{N!} \;=\; \frac{g \cdot (N-1)!}{N \cdot (N-1)!} \;=\; \frac{g}{N} \;=\; \frac{g}{r+g}.$$
+> > The $(N-1)!$ tail cancels completely. The probability isn't slowly *converging* to $g/(r+g)$ — it is *exactly* that for the 1st draw, the 4th, the 80th, and the very last. As long as you haven't peeked at the earlier draws, every position in the line is mathematically identical. $\blacksquare$
 
 > [!example] Exercise 34 — Poker
 > **Problem.** A random 5-card poker hand is dealt from a standard deck of cards. Find the probability of each of the following possibilities (in terms of binomial coefficients).
