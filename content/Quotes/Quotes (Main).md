@@ -5,7 +5,7 @@
 ---
 
 ## Books
-- [The Brothers Karamazov](<Sources/The Brothers Karamazov.md>)
+- [The Brothers Karamazov](<Sources/The Brothers Karamazov/The Brothers Karamazov (Main).md>)
 
 ## Videos
 

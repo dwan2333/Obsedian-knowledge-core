@@ -20,4 +20,4 @@
 - *brink, verge, abyss, chasm* — close in sense, literal and figurative (not yet in the vault)
 
 ## Appears in
-- *"if this precipice… had been less picturesque"* — [The Brothers Karamazov](<../../Quotes/Sources/The Brothers Karamazov.md>) (p. 11)
+- *"if this precipice… had been less picturesque"* — [The Brothers Karamazov — Ch. 1](<../../Quotes/Sources/The Brothers Karamazov/Chapter 1.md>) (p. 11)

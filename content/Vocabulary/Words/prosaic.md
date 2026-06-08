@@ -21,4 +21,4 @@
 - *mundane, banal, pedestrian, humdrum* — close in sense (not yet in the vault)
 
 ## Appears in
-- *"…a prosaic flat bank in its place…"* — [The Brothers Karamazov](<../../Quotes/Sources/The Brothers Karamazov.md>) (p. 11)
+- *"…a prosaic flat bank in its place…"* — [The Brothers Karamazov — Ch. 1](<../../Quotes/Sources/The Brothers Karamazov/Chapter 1.md>) (p. 11)

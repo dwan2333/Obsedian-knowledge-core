@@ -21,4 +21,4 @@
 - *zest, tang, pungency, spice* — close in sense; the adjective is *piquant* (not yet in the vault)
 
 ## Appears in
-- *"what gave the marriage piquancy…"* — [The Brothers Karamazov](<../../Quotes/Sources/The Brothers Karamazov.md>) (p. 11)
+- *"what gave the marriage piquancy…"* — [The Brothers Karamazov — Ch. 1](<../../Quotes/Sources/The Brothers Karamazov/Chapter 1.md>) (p. 11)

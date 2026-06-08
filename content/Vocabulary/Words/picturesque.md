@@ -22,4 +22,4 @@
 - *scenic, quaint, charming* — close in sense (not yet in the vault)
 
 ## Appears in
-- *"…had been less picturesque…"* — [The Brothers Karamazov](<../../Quotes/Sources/The Brothers Karamazov.md>) (p. 11)
+- *"…had been less picturesque…"* — [The Brothers Karamazov — Ch. 1](<../../Quotes/Sources/The Brothers Karamazov/Chapter 1.md>) (p. 11)

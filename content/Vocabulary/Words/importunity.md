@@ -20,4 +20,4 @@
 - *insistence, persistence, pestering* — close in sense; the adjective is *importunate* (not yet in the vault)
 
 ## Appears in
-- *"his persistent, shameless importunity"* — [The Brothers Karamazov](<../../Quotes/Sources/The Brothers Karamazov.md>) (p. 13)
+- *"his persistent, shameless importunity"* — [The Brothers Karamazov — Ch. 1](<../../Quotes/Sources/The Brothers Karamazov/Chapter 1.md>) (p. 13)

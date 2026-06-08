@@ -22,4 +22,4 @@
 - *abscond, flee* — close in the sense of secret flight (not yet in the vault)
 
 ## Appears in
-- *"…preceded by an elopement…"* — [The Brothers Karamazov](<../../Quotes/Sources/The Brothers Karamazov.md>) (p. 11)
+- *"…preceded by an elopement…"* — [The Brothers Karamazov — Ch. 1](<../../Quotes/Sources/The Brothers Karamazov/Chapter 1.md>) (p. 11)
