@@ -35,8 +35,7 @@
               "title": "Chapter 1 (Main)"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -232,8 +231,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "01d91b7d4750fd7b",
+  "active": "bb9d219abac20016",
   "lastOpenFiles": [
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md.tmp.9372.2933fd3762a3",
     "content/index.md.tmp.9372.d123dbfeeb47",
@@ -242,7 +242,6 @@
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.4_ice_cream_cone_tree.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
     "content/Mathematics/Complex Numbers/cnf_mindmap.png",
     "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
