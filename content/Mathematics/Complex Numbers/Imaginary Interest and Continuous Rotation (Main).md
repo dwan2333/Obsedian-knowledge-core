@@ -122,9 +122,11 @@ $$f(x) \;=\; \lim_{n \to \infty} \left(1 + \frac{x}{n}\right)^n$$
 
 Algebraic substitution: let $m = n/x$, so $x/n = 1/m$ and $n = mx$:
 
-$$\lim_{n\to\infty}\left(1 + \frac{x}{n}\right)^n
+$$
+\lim_{n\to\infty}\left(1 + \frac{x}{n}\right)^n
 \;=\; \lim_{m\to\infty}\left(1 + \frac{1}{m}\right)^{mx}
-\;=\; \left[\lim_{m\to\infty}\left(1 + \frac{1}{m}\right)^m\right]^{x}$$
+\;=\; \left[\lim_{m\to\infty}\left(1 + \frac{1}{m}\right)^m\right]^{x}
+$$
 
 The bracketed inner limit is a *constant*. Numerically *(at [[26:05]](https://www.youtube.com/watch?v=IAEASE5GjdI&t=1565s))*:
 
