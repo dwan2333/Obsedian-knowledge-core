@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 1 (Main)"
+              "title": "chapter1_exercises"
             }
           }
         ]
@@ -219,8 +219,11 @@
   },
   "active": "bb9d219abac20016",
   "lastOpenFiles": [
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.4_ice_cream_cone_tree.png",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
     "content/Mathematics/Complex Numbers/cnf_mindmap.png",
     "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
@@ -253,9 +256,6 @@
     "content/Vocabulary/Categories/Themes/Folly & the Absurd.md",
     "content/Vocabulary/Categories/Themes/The Ordinary & the Dull.md",
     "content/Vocabulary/Categories/Themes/Mystery & the Unknown.md",
-    "content/Vocabulary/Categories/Themes/Whim, Inconstancy & Yielding.md",
-    "content/Vocabulary/Categories/Themes/Cleverness & Cunning.md",
-    "content/Vocabulary/Categories/Themes/Transfer & Distribution.md",
     "content/Mathematics/Logarithms/lf_mindmap.png",
     "content/Mathematics/Pythagorean Theorem/ipt_fig1_construction.png",
     "Pasted image 20260604224817.png",
