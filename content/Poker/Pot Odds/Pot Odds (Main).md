@@ -203,3 +203,4 @@ The video teaches the *how*; here is the *why*. Write the bet as a fraction $b$ 
 |---|---|---|
 | [POT ODDS — GTO Wizard](https://www.youtube.com/watch?v=AcLnvm5nTaw) | 00:00 → 20:15 | YouTube |
 | [[The Course (Main)\|Poker — The Course]] | related poker notes | Vault |
+| [[The Big Picture (Main)\|Poker — The Big Picture]] | required equity, MDF, polarity | Vault |

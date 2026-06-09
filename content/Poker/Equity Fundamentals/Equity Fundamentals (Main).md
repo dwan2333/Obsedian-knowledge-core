@@ -661,6 +661,7 @@ The article closes with a software call-to-action: **"Crush with the Best AI Sol
 ## Related Documents
 
 - **[The Course (Main)](<../The Course/The Course (Main).md>)** — Ed Miller's poker fundamentals. Complementary intuition for hand reading, ranges, and live-game adjustments. Treat this Equity Fundamentals note as the GTO/solver lens; The Course as the exploit / live-reads lens.
+- **[The Big Picture (Main)](<../The Big Picture/The Big Picture (Main).md>)** — how to *study* solvers (thresholds, polarity, equity buckets, aggregate reports). Equity Fundamentals defines the concepts; The Big Picture is the workflow that puts them to use.
 
 ---
 
