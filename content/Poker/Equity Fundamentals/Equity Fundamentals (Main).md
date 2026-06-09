@@ -41,30 +41,46 @@ Two companion articles, captured as one document:
 
 > [!example] AA vs 65s — hand-vs-hand equity
 > **Hand/Scenario.** Pocket Aces against suited 6-5 preflop, all-in scenario, BTN open with BB defending narrowly.
+>
 > **Setup.** AA vs 65s, full 5-card board to come, no other hands removed from the deck.
+>
 > **Solution.** Run the matchup through an equity calculator; AA dominates because of the pair-vs-no-pair advantage, but 65s has live cards and runner-runner straight/flush potential.
+>
 > **Answer.** AA has **77% equity** against 65s.
+>
 > **Insight.** Even seemingly hopeless hands like 65s retain ~23% equity vs a dominant overpair because of board-runout variance — this is why "set mining" and suited connectors work in practice.
 
 > [!example] AA vs BB calling range — hand-vs-range equity
 > **Hand/Scenario.** BTN opens AA, BB calls; we want AA's equity against BB's whole continuing range, not against a single hand.
+>
 > **Setup.** BTN opens AA, BB calls with a standard defending range.
+>
 > **Solution.** Average AA's equity over every combination in BB's calling range, weighting by combinatoric frequency.
+>
 > **Answer.** AA has **83% equity** against BB's calling range.
+>
 > **Insight.** AA's equity goes up moving from a single strong hand (65s) to the full calling range because BB's range is mostly dominated middling pairs and broadways. Hand-vs-range is what actually drives preflop EV calculations.
 
 > [!example] BTN range vs BB range — range-vs-range equity
 > **Hand/Scenario.** Full BTN opening range against BB's calling range, preflop.
+>
 > **Setup.** Both sides represented as weighted distributions of combos.
+>
 > **Solution.** Compute the average equity of every BTN combo against every BB combo, weighted by frequency.
+>
 > **Answer.** BTN's range has roughly **53% equity** against BB's calling range.
+>
 > **Insight.** The aggressor's edge is much thinner than any single premium hand suggests — postflop play, position, and equity realization determine whether that 53% becomes real money.
 
 > [!example] Tie-handling math
 > **Hand/Scenario.** Generic hand whose outcomes are win 50%, tie 20%, lose 30%.
+>
 > **Setup.** Apply the equity formula directly.
+>
 > **Solution.** Equity = win% + 0.5 × tie% = 50% + 0.5 × 20% = 50% + 10%.
+>
 > **Answer.** **60% equity.**
+>
 > **Insight.** Chops are worth exactly half a win because the pot is split. This is why you cannot simply read off a "win %" from a tracker and call it equity.
 
 ![Hand-vs-hand equity calculator: AA dominates 65s but 65s still has ~23% from runner-runner equity.](eq1_fig03_fig3.png)
@@ -94,9 +110,13 @@ Outside that clean case, adjust for these distortions:
 
 > [!example] K♠J♠ on A♠6♠8♦ — flop flush draw vs shove
 > **Hand/Scenario.** You hold the K-high flush draw on an A-high rainbow-ish flop and face a pot-sized shove.
+>
 > **Setup.** Your hand is **K♠J♠**, the board is **A♠ 6♠ 8♦**, opponent shoves pot.
+>
 > **Solution.** Count outs: the remaining spades are 2♠, 3♠, 4♠, 5♠, 7♠, 8♠, 9♠, T♠, Q♠ — that's **9 outs**. Apply Rule of 4 because you're on the flop: $9 \times 4 = 36\%$ equity. The required equity from a pot-sized shove is $\frac{1}{1+2} = 33\%$ (risking 1 pot to win 2 pots).
+>
 > **Answer.** Estimated equity **~36%**, break-even **33%** — a clear call.
+>
 > **Insight.** The cushion is small. If the opponent actually holds AA, the **8♠** "out" pairs the board and gives them a full house, knocking real equity below the estimate. Always sanity-check that your outs are clean against the opponent's likely strongest holdings before trusting the Rule of 4.
 
 ---
@@ -111,9 +131,13 @@ Outside that clean case, adjust for these distortions:
 
 > [!example] 72o called from BB vs BTN 2.5bb open
 > **Hand/Scenario.** Big Blind defends the worst hand in poker against a standard BTN open, trusting the pot-odds-vs-equity comparison.
+>
 > **Setup.** BB holds **72o**, facing a **2.5bb** BTN open, needs to call **1.5bb** more into a **5.5bb** total pot. Pot odds require **27.3% equity** to break even (about **29%** after rake).
+>
 > **Solution.** 72o has **30% raw equity** against a standard BTN opening range — above the pot-odds threshold — so a naive analysis says "call." But simulating the actual postflop play shows the hand loses **48bb/100** when called. The EV of calling is **0.48bb worse than folding**, so the 1.5bb investment recoups only **1.02bb** in EV, which is just **18.5%** of the 5.5bb pot ($1.02 / 5.5$) — far below the 30% raw equity.
+>
 > **Answer.** Despite passing the pot-odds test, calling **loses 0.48bb** per hand vs folding; the hand captures only **18.5%** of the pot.
+>
 > **Insight.** Raw equity + pot odds is not a sufficient condition for calling. Positional and range disadvantage cause 72o to under-realize so badly that ~40% of its raw equity simply evaporates. Always think in terms of EV, not raw equity, when defending out of position with trash hands.
 
 ![EV of 72o vs a BTN open: passes the pot-odds test but loses 0.48 bb/hand — equity under-realization in action.](eq1_fig02_ev_of_72o_vs_btn_open.png)
@@ -158,16 +182,24 @@ The same board, two hands with nearly identical raw equity, wildly different rea
 
 > [!example] A♠9♠ on J♠8♥5♥ — looks fine, under-realizes badly
 > **Hand/Scenario.** BB defending with A-high backdoor flush draw and an overcard on a wet board.
+>
 > **Setup.** Hand is **A♠ 9♠**, board is **J♠ 8♥ 5♥**, 5.5bb pot. The hand flops an overcard (the A), a backdoor spade draw, and the 9 can outdraw an 8 or 5.
+>
 > **Solution.** Raw equity is **43.3%**. If equity were realized perfectly, the hand would win $0.433 \times 5.5\text{bb} = 2.36\text{bb}$ on average. In reality it captures only **13.5%** of the 5.5bb pot — about 0.74bb.
+>
 > **Answer.** Raw equity **43.3%**, pot share **13.5%**, EQR **less than ⅓** (~31%).
+>
 > **Insight.** A♠9♠ looks like a defensible bluff-catcher but is one of the worst-realizing hands on this texture. It has no made hand, no real draw, and is dominated against any continuation — so it folds before realizing most of its theoretical equity.
 
 > [!example] 6♥3♥ on J♠8♥5♥ — same raw equity, over 90% realization
 > **Hand/Scenario.** Same board, but the hand has a flush draw and a gutshot.
+>
 > **Setup.** Hand is **6♥ 3♥**, board is **J♠ 8♥ 5♥**, same 5.5bb pot.
+>
 > **Solution.** Raw equity is **43%** — essentially identical to A♠9♠. But the heart flush draw plus the gutshot to a 7 give it concrete implied odds and the ability to keep calling when bet at. It realizes **over 90%** of its raw equity.
+>
 > **Answer.** Raw equity **43%**, EQR **>90%**, EV "much higher" than A♠9♠ (exact bb figure not specified in the article).
+>
 > **Insight.** Two hands with identical raw equity can have radically different EVs depending on draw structure. Strong implied odds and the ability to continue against pressure are what turn raw equity into real EV. This is the key intuition behind why GTO ranges include weak suited hands but exclude offsuit aces that look stronger on paper.
 
 ![6♥3♥ on J♠8♥5♥ — same ~43% raw equity, but EQR > 90% because of flush + gutshot continuation value.](eq1_fig08_fig8.png)
@@ -197,9 +229,13 @@ The same board, two hands with nearly identical raw equity, wildly different rea
 
 > [!example] BB vs BTN on J♠8♥5♥ — reading the distribution
 > **Hand/Scenario.** Standard single-raised pot, BTN cbetting range, on a wet middling board.
+>
 > **Setup.** BB defending range vs BTN opening range on **J♠ 8♥ 5♥**.
+>
 > **Solution.** The bucket view shows BTN has **twice as many "best hands"** as BB and **only a third as many "worst hands"** as BB. The graph view shows BTN's curve sits slightly above BB's across the whole distribution.
+>
 > **Answer.** BTN has a small range advantage across the entire distribution, driven mostly by **excess trash at the bottom of BB's range** rather than by an overwhelming nut advantage at the top.
+>
 > **Insight.** A single "53% equity" number tells you nothing about why BTN is ahead. The distribution reveals that the edge is asymmetric — BB has too many garbage hands at the bottom, not that BTN has crushing nut hands at the top. That distinction changes bet sizing: shallow advantages get pushed with small bets, not polarized jams.
 
 ![BB vs BTN on J♠8♥5♥ — bucket view of the distribution.](eq1_fig09_fig9.png)
@@ -215,9 +251,13 @@ The same board, two hands with nearly identical raw equity, wildly different rea
 
 > [!example] J♠8♥5♥ bucket distribution — BTN vs BB
 > **Hand/Scenario.** Same board as section 7, but viewed strictly through the bucket lens.
+>
 > **Setup.** BTN opening range vs BB defending range on **J♠ 8♥ 5♥**.
+>
 > **Solution.** The article describes the buckets in relative terms rather than fixed percentages. BTN holds **2× as many "best hands"** as BB. BTN holds only **⅓ as many "worst hands"** as BB.
+>
 > **Answer.** BTN dominates both the top and bottom of the distribution in relative proportion — more nutted combos, far less air.
+>
 > **Insight.** Buckets are most useful for a quick at-a-glance read on who has the nutted region and who has the air. They lose nuance in the middle of the distribution, which is why the equity graph is the more powerful tool when bet sizing decisions hinge on middling equity.
 
 ![J♠8♥5♥ buckets: BTN holds 2× the best hands, ⅓ the worst.](eq1_fig10_fig10.png)
@@ -233,9 +273,13 @@ The same board, two hands with nearly identical raw equity, wildly different rea
 
 > [!example] BTN A5s on J♠8♥5♥ — reading a coordinate
 > **Hand/Scenario.** Using a specific combo to demonstrate how to read an equity graph.
+>
 > **Setup.** BTN's overall range plotted as a curve on **J♠ 8♥ 5♥**, with A5s singled out as a data point.
+>
 > **Solution.** On the x-axis, **A5s sits at the 62nd percentile** of BTN's range — meaning 62% of BTN's combos are weaker than A5s. On the y-axis, A5s has **57% equity** against BB's range.
+>
 > **Answer.** A5s is at coordinate **(62%, 57%)** — better than 62% of BTN's range, holds 57% equity vs BB.
+>
 > **Insight.** The graph lets you locate any specific hand within the distribution and read off both its rank within your own range and its absolute equity against the opponent. Comparing curves, BTN's line is slightly above BB's throughout the whole distribution, with the gap widest at the bottom — BTN's advantage is structural, driven by BB's excess trash, not by an overwhelming nut concentration.
 
 ![BTN A5s sits at the (62%, 57%) coordinate on the equity graph — better than 62% of BTN's range, 57% equity vs BB.](eq1_fig11_fig11.png)
@@ -267,9 +311,13 @@ The article names two formal metrics in this section — **Nut Advantage** and *
 
 > [!example] K♥J♦5♦ 2♣ Q♥ — triple-barrel river jam with nut advantage
 > **Hand/Scenario.** BTN aggressor reaches the river of a K-high straightening board after double-barreling, and now considers an all-in river jam.
+>
 > **Setup.** Board runs out **K♥ J♦ 5♦ 2♣ Q♥**. BTN cbet flop, barreled turn (a "double-barrel"), and the Q river completes the broadway texture. Range-vs-range equity on the river is a perfectly even **50%/50%**.
+>
 > **Solution.** Even though raw equity is split 50/50, the distribution is wildly asymmetric. BTN's range is polarized into "very nutted hands and bluffs" (sets, AT for the straight, draws turned into bluffs), while BB's range is condensed into "mostly top pair" (KQ, KJ, KT, K-rag). BTN holds the nut advantage, with a meaningful chunk of combos at ≥90% equity against BB's condensed range. This justifies a triple-barrel **all-in** on the river: the polarized strategy extracts value from BB's top pairs and forces folds from weaker holdings.
+>
 > **Answer.** Range equity is **50/50**, but BTN's nut advantage permits an all-in river jam — bet **pot or all-in**, polarized between nuts and bluffs.
+>
 > **Insight.** Equal raw equity is not the same as equal strategic position. The shape of the distribution is what matters: when one player has all the nutted combos and the other has none, the player with nut advantage gets to set the price, choose the polarization, and capture more than their 50% raw equity suggests. Crucially, this strategy only works with strict polarization — try it with KQ or KJ and you "fold out worse and get called by better."
 
 ![River runout K♥J♦5♦ 2♣ Q♥ — BTN polarized, BB condensed.](eq1_fig12_fig12.png)
@@ -285,9 +333,13 @@ The article names two formal metrics in this section — **Nut Advantage** and *
 
 > [!example] Q♥J♥8♣ A♥ — middle-of-distribution range advantage
 > **Hand/Scenario.** BTN aggressor on a high-card flop that turns the ace, holds a range advantage but not a nut advantage.
+>
 > **Setup.** Board is **Q♥ J♥ 8♣** flop, turn **A♥**. BTN vs BB single-raised pot.
+>
 > **Solution.** BTN has **52% overall equity** — a small range advantage. Graphing the distribution shows BTN's curve sits above BB's in the middle of the range (BTN has more AQ, AJ, KQ, KJ type hands), but BB has comparable nutted combos (sets, two-pair, flushes via heart hands) so the top of BTN's distribution is not dominant. BTN therefore pushes the middling equity edge with **small-medium bet sizes**, not big polarized jams.
+>
 > **Answer.** BTN has **52% equity** and a middle-distribution range advantage; correct sizing is **small to medium**, not pot-sized.
+>
 > **Insight.** Bet sizing is tied to nut advantage, not raw equity. Without dominant nutted combos, large bets either fold out the hands you're ahead of or get jammed on by the hands that beat you. Small-medium sizings let middling range advantages compound across multiple streets without overcommitting hands that can't withstand pressure.
 
 ![Q♥J♥8♣ A♥ board — BTN has a middling 52% range advantage, no nut advantage. Small to medium sizings only.](eq1_fig14_btn_vs_bb_equity_distribution.png)
@@ -347,9 +399,13 @@ The author's framing quotes:
 
 > [!example] de Groot / Simon-Chase chess recall experiment
 > **Hand/Scenario.** Show novices and expert chess players a chessboard for a brief glance, then ask them to reconstruct it from memory.
+>
 > **Setup.** Two conditions: (1) pieces arranged in meaningful, game-like positions drawn from real play; (2) pieces placed randomly on the board.
+>
 > **Solution.** Experts vastly outperform novices in the *meaningful* condition — they recall and reconstruct positions far more accurately. In the *random* condition the expert advantage disappears almost entirely.
+>
 > **Answer.** Expert recall is not superior raw memory; it is the ability to recognize and remember **larger, meaningful chunks**.
+>
 > **Insight.** "Expert chess players do not necessarily have superior memory compared to novices but possess an advanced ability to recognize and recall larger chunks of information relevant to the game." Random boards remove the chunks, so experts lose the advantage.
 
 **Chunking via the poker HUD.** Players chunk opponent data through HUD color-coding. If an opponent's VPIP is 35% or higher, you color that stat green; from then on the green dot itself becomes the chunk that conveys "wide range" without requiring you to recall any specific hand history.
@@ -401,9 +457,13 @@ Equity buckets are GTO Wizard's external mechanism for the same chunking princip
 
 > [!example] K♦Q♣2♠ — UTG single-raised pot vs BB
 > **Hand/Scenario.** UTG opens, BB calls. Flop K♦Q♣2♠.
+>
 > **Setup.** UTG holds a narrow, linear preflop range; BB holds a wide, capped defending range. The question is which player should bet on this flop.
+>
 > **Solution.** Sort both ranges into Simple EQ buckets. UTG beats BB across the Best, Good, and Weak buckets. BB has **a 57.6% majority in Trash hands**.
+>
 > **Answer.** Because UTG dominates the value buckets and BB is concentrated in Trash, the equilibrium is a **range-check for BB followed by a range-bet for UTG**.
+>
 > **Insight.** "The result is the natural dynamic of a narrow, linear range against a wide, capped range." You can derive the entire flop strategy from the bucket distribution alone — no need to examine individual hands.
 
 ![K♦Q♣2♠ — raw equity matrix for UTG vs BB.](eq2_fig06_equity_matrices.png)
@@ -417,9 +477,13 @@ Equity buckets are GTO Wizard's external mechanism for the same chunking princip
 
 > [!example] A♠8♦2♣ A♣ 7♥ — UTG vs BTN, bet-call flop and turn
 > **Hand/Scenario.** UTG opens preflop, BTN calls. Action goes **bet-call** on both the flop (A♠8♦2♣) and turn (A♣). River brings 7♥.
+>
 > **Setup.** By the river, UTG's range has been polarized through two streets of betting; BTN's range is the condensed set of medium-strength hands that called twice.
+>
 > **Solution.** Use Simple EQ buckets to read the shape. UTG retains "the best and worst hands" — high Best bucket and high Trash bucket, with the middling buckets checked off earlier. BTN's range is filled with middling buckets (Good and Weak).
+>
 > **Answer.** UTG checks the middle of their range and bets large with a polarized mix of value (Best) and bluffs (Trash). BTN's medium-strength hands act as bluff catchers. Expect "a lot of large bets from UTG."
+>
 > **Insight.** "I don't need to look at every hand in the range to devise a strategy. I can look at the four EQ buckets to understand and derive what my overall strategy should look like."
 
 ![A♠8♦2♣ A♣ 7♥ river — UTG range polarized, BTN range condensed.](eq2_fig07_equity_matrices.png)
@@ -430,9 +494,13 @@ Equity buckets are GTO Wizard's external mechanism for the same chunking princip
 
 > [!example] K♦5♠5♣ — UTG vs BB, range advantage vs nut advantage
 > **Hand/Scenario.** BB defends preflop vs a UTG open. Flop K♦5♠5♣.
+>
 > **Setup.** UTG has a clear preflop **range advantage** — far more high-card and pair-heavy hands. The question is why UTG nonetheless uses a small bet at moderate frequency rather than a large size at high frequency.
+>
 > **Solution.** Use Advanced EQ buckets. BB holds **77.7%** of its range in the **< 50% equity** bucket (with the bulk in **< 25%**). UTG holds **81.4%** of its range in **> 50% equity**. But the **Top advanced (90–100%) EQ bucket** flips: **BB holds 6.8%** here vs **UTG's 2.9%**, because BB's calling range contains all the suited 5-x combos.
+>
 > **Answer.** UTG **bets small** and bets "only slightly more than half the time" — they don't want to inflate the pot against BB's disproportionately strong nut-bucket holdings.
+>
 > **Insight.** "UTG has range advantage, but the BB has nut advantage." Range advantage controls *whether* to bet; **nut advantage primarily drives bet sizing**. UTG is "worried about running into nutted hands."
 
 ![K♦5♠5♣ — Top advanced (90–100%) bucket highlighted: BB holds 6.8% here vs UTG's 2.9%, the reason UTG bets small.](eq2_fig09_top_advanced_90_100_eq_bucket_highlighted.png)
@@ -443,11 +511,15 @@ Equity buckets are GTO Wizard's external mechanism for the same chunking princip
 
 > [!example] A♣Q♦8♥ 2♠ 7♦ — BB vs UTG, multi-street equity bucketing
 > **Hand/Scenario.** UTG opens, BB calls. Flop A♣Q♦8♥; turn 2♠; river 7♦.
+>
 > **Setup.** UTG c-bets the flop small (**33% pot**). BB's overall flop response: **mostly fold, call ~⅓ of the time, check-raise ~10% with a mix of sizes**. After BB calls flop, the turn (2♠) checks through. On the river (7♦), BB **bets almost half the time** as a river probe.
+>
 > **Solution.**
 > - **Flop (Simple buckets):** Best hands like AK, sets, and two pair **check-raise for value**. Good hands like ATs **just call** as bluff catchers — raising them would only get called by better. Check-raise **bluffs** are drawn from the **Weak** bucket, not Trash: JT (gutshot), 8-x bottom pair merges, and 86s — "86s can make TT fold, JTs call, and can improve to two pair, trips, or a backdoor flush." The principle: with two cards to come, bluffs need **improvability**.
 > - **River (Advanced buckets):** Value bets are hands with **at least 80% equity** — with one exception, a set of 88, which checks to unblock UTG's betting range and protect BB's checking range. Good and Weak hands (e.g., second pair) check as bluff catchers. River **bluffs are drawn exclusively from the 0–25% equity bucket** (Trash).
+>
 > **Answer.** Same player, same general framework, but bluffing candidates flip between streets: **Weak hands bluff on the flop, Trash hands bluff on the river**.
+>
 > **Insight.** "On the flop, we don't want to bluff with complete air because we need some element of improvability... so we use our 'Weak Hands.' On the river, however, we pick our worst hands to bluff with. With no cards to come, we are better off bluffing with a hand we know is going to lose otherwise."
 
 ![A♣Q♦8♥ flop — BB's hand-matrix strategy facing UTG's 33% c-bet.](eq2_fig10_hand_matrix_strategy.png)
