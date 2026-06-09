@@ -113,7 +113,10 @@ Outside that clean case, adjust for these distortions:
 >
 > **Setup.** Your hand is **K♠J♠**, the board is **A♠ 6♠ 8♦**, opponent shoves pot.
 >
-> **Solution.** Count outs: the remaining spades are 2♠, 3♠, 4♠, 5♠, 7♠, 8♠, 9♠, T♠, Q♠ — that's **9 outs**. Apply Rule of 4 because you're on the flop: $9 \times 4 = 36\%$ equity. The required equity from a pot-sized shove is $\frac{1}{1+2} = 33\%$ (risking 1 pot to win 2 pots).
+> **Solution.**
+> - **Count outs.** Remaining spades: 2♠ 3♠ 4♠ 5♠ 7♠ 8♠ 9♠ T♠ Q♠ → **9 outs**.
+> - **Your equity** (Rule of 4, on the flop): $9 \times 4 = \mathbf{36\%}$.
+> - **Required equity** (pot-sized shove): $\dfrac{1}{1+2} = \mathbf{33\%}$ — risk 1 pot to win 2.
 >
 > **Answer.** Estimated equity **~36%**, break-even **33%** — a clear call.
 >
@@ -134,7 +137,10 @@ Outside that clean case, adjust for these distortions:
 >
 > **Setup.** BB holds **72o**, facing a **2.5bb** BTN open, needs to call **1.5bb** more into a **5.5bb** total pot. Pot odds require **27.3% equity** to break even (about **29%** after rake).
 >
-> **Solution.** 72o has **30% raw equity** against a standard BTN opening range — above the pot-odds threshold — so a naive analysis says "call." But simulating the actual postflop play shows the hand loses **48bb/100** when called. The EV of calling is **0.48bb worse than folding**, so the 1.5bb investment recoups only **1.02bb** in EV, which is just **18.5%** of the 5.5bb pot ($1.02 / 5.5$) — far below the 30% raw equity.
+> **Solution.**
+> - **Raw equity is 30%** vs a standard BTN open — *above* the 27.3% pot-odds threshold, so a naive read says "call."
+> - But simulate the real postflop play and the hand **loses 48bb/100** when it calls.
+> - So calling is **0.48bb worse than folding**: the **1.5bb** you invest recoups only **1.02bb** of EV — just **18.5%** of the 5.5bb pot ($1.02 / 5.5$), far below the 30% raw equity.
 >
 > **Answer.** Despite passing the pot-odds test, calling **loses 0.48bb** per hand vs folding; the hand captures only **18.5%** of the pot.
 >
@@ -314,7 +320,11 @@ The article names two formal metrics in this section — **Nut Advantage** and *
 >
 > **Setup.** Board runs out **K♥ J♦ 5♦ 2♣ Q♥**. BTN cbet flop, barreled turn (a "double-barrel"), and the Q river completes the broadway texture. Range-vs-range equity on the river is a perfectly even **50%/50%**.
 >
-> **Solution.** Even though raw equity is split 50/50, the distribution is wildly asymmetric. BTN's range is polarized into "very nutted hands and bluffs" (sets, AT for the straight, draws turned into bluffs), while BB's range is condensed into "mostly top pair" (KQ, KJ, KT, K-rag). BTN holds the nut advantage, with a meaningful chunk of combos at ≥90% equity against BB's condensed range. This justifies a triple-barrel **all-in** on the river: the polarized strategy extracts value from BB's top pairs and forces folds from weaker holdings.
+> **Solution.** Raw equity is split **50/50**, but the *shape* is wildly asymmetric:
+> - **BTN is polarized** — "very nutted hands and bluffs" (sets, **AT** for the straight, busted draws turned into bluffs).
+> - **BB is condensed** — "mostly top pair" (**KQ, KJ, KT, K-rag**).
+>
+> BTN holds the **nut advantage** — a meaningful chunk of combos at **≥90% equity** vs BB's condensed range. That justifies a triple-barrel **all-in**: extract value from BB's top pairs, fold out everything weaker.
 >
 > **Answer.** Range equity is **50/50**, but BTN's nut advantage permits an all-in river jam — bet **pot or all-in**, polarized between nuts and bluffs.
 >
@@ -336,7 +346,11 @@ The article names two formal metrics in this section — **Nut Advantage** and *
 >
 > **Setup.** Board is **Q♥ J♥ 8♣** flop, turn **A♥**. BTN vs BB single-raised pot.
 >
-> **Solution.** BTN has **52% overall equity** — a small range advantage. Graphing the distribution shows BTN's curve sits above BB's in the middle of the range (BTN has more AQ, AJ, KQ, KJ type hands), but BB has comparable nutted combos (sets, two-pair, flushes via heart hands) so the top of BTN's distribution is not dominant. BTN therefore pushes the middling equity edge with **small-medium bet sizes**, not big polarized jams.
+> **Solution.** BTN has **52% overall equity** — a *small* range advantage. The graph tells the real story:
+> - **In the middle**, BTN's curve sits above BB's (more **AQ, AJ, KQ, KJ**).
+> - **At the top**, BB has comparable nutted combos (sets, two-pair, heart flushes) — so BTN has **no nut advantage**.
+>
+> With the edge in the middle and not the top, BTN pushes it with **small-to-medium bets**, not big polarized jams.
 >
 > **Answer.** BTN has **52% equity** and a middle-distribution range advantage; correct sizing is **small to medium**, not pot-sized.
 >
@@ -497,7 +511,10 @@ Equity buckets are GTO Wizard's external mechanism for the same chunking princip
 >
 > **Setup.** UTG has a clear preflop **range advantage** — far more high-card and pair-heavy hands. The question is why UTG nonetheless uses a small bet at moderate frequency rather than a large size at high frequency.
 >
-> **Solution.** Use Advanced EQ buckets. BB holds **77.7%** of its range in the **< 50% equity** bucket (with the bulk in **< 25%**). UTG holds **81.4%** of its range in **> 50% equity**. But the **Top advanced (90–100%) EQ bucket** flips: **BB holds 6.8%** here vs **UTG's 2.9%**, because BB's calling range contains all the suited 5-x combos.
+> **Solution.** Sort both ranges into **Advanced EQ buckets**:
+> - **BB:** **77.7%** sits in **< 50% equity** (bulk in **< 25%**) — mostly trash.
+> - **UTG:** **81.4%** sits in **> 50% equity** — the range advantage you'd expect.
+> - **But the top bucket flips:** in **90–100% equity**, **BB holds 6.8%** vs **UTG's 2.9%** — because BB's calling range has all the suited **5-x** combos.
 >
 > **Answer.** UTG **bets small** and bets "only slightly more than half the time" — they don't want to inflate the pot against BB's disproportionately strong nut-bucket holdings.
 >
