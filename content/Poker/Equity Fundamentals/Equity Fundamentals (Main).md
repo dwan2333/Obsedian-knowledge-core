@@ -19,14 +19,25 @@ Two companion articles, captured as one document:
 ## 1. Types of Equity Comparisons
 
 > [!definition] Equity
-> Equity is the probability
+> **Equity** is the probability that a player **wins (or ties)** the pot *if the hand is checked all the way down to showdown* — no more betting, just run the board out.
+>
+> $$\text{Equity}\% \;=\; \text{Win}\% \;+\; \tfrac{1}{2}\,\text{Tie}\%$$
+>
+> A tie counts as **half a win**, because a chopped pot is split evenly between the two players.
+
 ![Equity at a glance — what the % number means.](eq1_fig01_fig1.png)
 *Equity at a glance — what the % number means.*
 
- that a player will win (or tie) the pot if the hand were checked down all the way to showdown. The full formula is $Equity\% = win\% + 0.5 \cdot tie\%$, which means tie percentages are halved and added to win percentages because ties split the pot evenly between the two players.
-
 > [!definition] Three flavors of equity
-> Equity can be compared at three levels of abstraction. **Hand-vs-hand** equity is one exact holding against another exact holding (e.g., AA vs 65s). **Hand-vs-range** equity measures one exact holding against the opponent's full distribution of possible hands. **Range-vs-range** equity is your entire opening or continuing range against your opponent's entire range. Because it is very difficult to put an opponent on an exact hand in practice, strategic decisions almost always rely on hand-vs-range and range-vs-range comparisons rather than hand-vs-hand.
+> Equity is compared at three levels of abstraction:
+>
+> | Comparison | What it measures | Example |
+> |---|---|---|
+> | **Hand vs hand** | one exact holding against another | **AA** vs **65s** |
+> | **Hand vs range** | one exact holding against the opponent's *whole* range | **AA** vs BB's calling range |
+> | **Range vs range** | your *entire* range against the opponent's entire range | BTN open vs BB defend |
+>
+> In practice you can almost never put an opponent on one exact hand — so real decisions lean on **hand-vs-range** and **range-vs-range**, not hand-vs-hand.
 
 > [!example] AA vs 65s — hand-vs-hand equity
 > **Hand/Scenario.** Pocket Aces against suited 6-5 preflop, all-in scenario, BTN open with BB defending narrowly.
@@ -65,9 +76,21 @@ Two companion articles, captured as one document:
 ## 2. The Rule of 4 & 2
 
 > [!definition] The Rule of 4 & 2
-> A two-step mental shortcut for estimating drawing equity at the table. Count your outs, then multiply by **4 on the flop** (if you'll see both turn and river) or by **2 on the turn** (if you'll see only the river). The rule works because a deck has about 50 unknown cards, so each out is worth roughly 2% equity per remaining street.
+> A fast way to estimate drawing equity in your head. Count your **outs** (cards that complete your hand), then:
+>
+> - **On the flop** — two cards to come — equity $\approx$ **outs $\times\,4$**
+> - **On the turn** — one card to come — equity $\approx$ **outs $\times\,2$**
+>
+> It works because ~50 cards are unknown, so each out is worth roughly **2% per street**.
 
-The shortcut is most accurate when facing an all-in shove: there are no future streets where the opponent can apply more pressure, so the simple "outs × 4" estimate maps cleanly onto your real equity. Outside of that context, the rule must be adjusted for several distortions — the bet may not be all-in (meaning another bet is coming on the turn), the opponent may be bluffing (you already have the best hand and don't need to hit), some outs may be "unclean" (your draw card simultaneously improves your opponent), or implied odds may add value beyond the immediate calculation.
+The estimate is most accurate against an **all-in shove** — there are no future streets for the opponent to apply pressure, so "outs × 4" maps cleanly onto your real equity.
+
+Outside that clean case, adjust for these distortions:
+
+- **The bet isn't all-in** — another bet is probably coming on the turn.
+- **The opponent may be bluffing** — you might already hold the best hand and don't need to improve at all.
+- **"Unclean" outs** — a card that completes your draw can *also* help the opponent (e.g. it pairs the board and gives them a full house).
+- **Implied odds** — hitting your draw may win extra bets beyond the immediate pot.
 
 > [!example] K♠J♠ on A♠6♠8♦ — flop flush draw vs shove
 > **Hand/Scenario.** You hold the K-high flush draw on an A-high rainbow-ish flop and face a pot-sized shove.
@@ -121,13 +144,11 @@ The article's framing is blunt: raw equity assumes "that's not how poker works."
 > [!definition] Equity Realization (EQR)
 > EQR is the metric that transforms raw equity into expected value (EV). It compares how much you actually expect to win against how much your raw check-down equity says you should win. An EQR of 100% means your actual pot share matches your raw equity exactly; above 100% means you over-realize, below 100% means you under-realize.
 
-The article gives the formula two equivalent ways:
+Two equivalent ways to write it:
 
-$$EQR = \frac{\text{Pot Share \%}}{\text{Equity \%}}$$
+$$\text{EQR} \;=\; \frac{\text{Pot Share}\,\%}{\text{Equity}\,\%} \;=\; \frac{\text{EV}}{\text{pot} \times \text{equity}}$$
 
-$$EQR = \frac{EV}{\text{pot} \cdot \text{equity}}$$
-
-Pot share is simply $EV / pot$ — how much of the pot you actually expect to capture in the long run. EQR therefore tells you what fraction of your raw, checked-down equity you'll convert into real chips given how the hand will actually play out.
+Here **pot share** $= \text{EV}/\text{pot}$ — the fraction of the pot you actually expect to capture over the long run. So EQR tells you **what fraction of your raw, checked-down equity converts into real chips** once the hand actually plays out.
 
 ---
 
@@ -169,7 +190,10 @@ The same board, two hands with nearly identical raw equity, wildly different rea
 > Range-vs-range equity is usually quoted as a single number (e.g., "BTN has 53%"), but that hides enormous variation across the range. An equity distribution shows the full spectrum — "some nutted hands, some air, and everything in between." Visualizing the distribution exposes strategic trends a single number can't.
 
 > [!definition] Two ways to visualize a distribution
-> **Equity buckets** group hands by their equity against the opponent's range into coarse categories ("best", "worst", with an advanced option for finer slices). **Equity graphs** sort the entire range from weakest to strongest hand-vs-range equity and plot the result as a continuous curve: the **x-axis** is each hand's percentile within your range, the **y-axis** is that hand's equity against the opponent's range.
+> - **Equity buckets** — group hands into coarse tiers ("best", "worst"; an advanced view adds finer slices) by their equity against the opponent's range.
+> - **Equity graph** — sort the whole range from weakest to strongest, then plot a continuous curve:
+>     - **x-axis** — each hand's *percentile* within your range
+>     - **y-axis** — that hand's *equity* against the opponent's range
 
 > [!example] BB vs BTN on J♠8♥5♥ — reading the distribution
 > **Hand/Scenario.** Standard single-raised pot, BTN cbetting range, on a wet middling board.
@@ -231,7 +255,11 @@ The article names two formal metrics in this section — **Nut Advantage** and *
 > A general term for an advantage anywhere in your equity distribution. Range advantage does not have to apply to your whole range — you can have an advantage in the middle of the distribution while lacking a nut advantage at the top, or vice versa. The shape of where your advantage lives determines what bet sizes are appropriate.
 
 > [!definition] Polarization (strategic concept)
-> The betting strategy enabled by a nut advantage. A polarized range consists exclusively of nutted value hands and bluffs — no medium-strength hands. Polarization grants a "big EV advantage" because large, aggressive betting narrows the opponent's continuing range, and only hands strong enough to "extract money from Villain's value hands after triple barreling" survive that pressure. Without a nut advantage, polarizing fails: medium-strength hands "fold out worse and get called by better."
+> The betting strategy that a nut advantage unlocks. A **polarized range** holds *only* nutted value hands and bluffs — **no medium-strength hands**.
+>
+> It earns a big EV edge because large, aggressive bets shrink the opponent's continuing range, and only hands strong enough to "extract money from Villain's value hands after triple barreling" can keep calling.
+>
+> Without a nut advantage, polarizing backfires — your medium hands "fold out worse and get called by better."
 
 ---
 
