@@ -1,1 +1,1 @@
-This is the beginning of my daily note. I initiated this series to make my self more articulate via journaling and as a recreational ways to record my daily manners in a. I had spend countless time scrolling through 
+This is the beginning of my daily note. I initiated this series to make my self more articulate via journaling and as a recreational yet challenging way to document my daily manners. This would not be like most common journals where I record every thoughts that flow t
