@@ -2,7 +2,7 @@ This is the beginning of my daily note. I initiated this series to make my self 
 
 For the content of the journal, as I mentioned a bit above, should be mostly records of interesting stuffs that happened in my daily life. Occasionally, it would include self talks of mathematical theorems, poker optimal strategies, philosophical ideas, stocks, a concrete review of what I have learned today etc. Now, let us begin. 
 
-Not much compelling things to do today and I followed my regular schedule. Wake up early, if I could, and went straight to the coffee shop - " A billion".  As usual, I struggled to work around my body to be persistent at learnin
+Not much compelling things to do today and I followed my regular schedule. Wake up early, if I could, and went straight to the coffee shop - " A billion".  As usual, I struggled to be persistent at learning. I am learning Game Theorem Optimal in poker today. To be honest, I spend a lot of time playing rather than actual studying of what is behind the scene. Moreover, as of right now, I could not recall the two articles that I read.  After an "effective" studying sessions, I picked up 小杜 and went straight to the resturat 
 
 
 
