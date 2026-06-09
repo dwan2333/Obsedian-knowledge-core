@@ -23,6 +23,7 @@ The workaday register — vivid, useful words you can drop into conversation wit
 - [coarse](<../../Words/coarse.md>) — rough; crude or unrefined
 - [snigger](<../../Words/snigger.md>) — a sly, mocking laugh
 - [latter](<../../Words/latter.md>) — the second-mentioned of two
+- [ironclad](<../../Words/ironclad.md>) — unbreakably firm; impossible to break or escape
 
 ## Related categories
 - [Literary & Elevated Prose](<../Domains/Literary & Elevated Prose.md>)
