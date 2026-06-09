@@ -20,3 +20,5 @@
 - [caprice](caprice.md) — kin; a pliable mind is easily turned by whim
 - [importunity](importunity.md) — the pressure a pliable person gives way to
 - *flexible, supple, malleable, pliant* — close in sense (not yet in the vault)
+- [meekness](meekness.md) — kin; the gentle, yielding temperament
+- [obstinate](obstinate.md) — antonym; refuses to bend

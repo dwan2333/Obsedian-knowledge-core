@@ -20,6 +20,7 @@
 - [dowry](dowry.md) — kin; the family arrangement an elopement bypasses
 - [harem](harem.md) — kin; another institution from the world of marriage and household
 - *abscond, flee* — close in the sense of secret flight (not yet in the vault)
+- [matrimonial](matrimonial.md) — kin; relating to marriage
 
 ## Appears in
 - *"…preceded by an elopement…"* — [The Brothers Karamazov — Ch. 1](<../../Quotes/Sources/The Brothers Karamazov/Chapter 1.md>) (p. 11)

@@ -20,3 +20,4 @@
 - [picturesque](picturesque.md) — kin; both describe strong sensory appeal (one to the eye, one to all the senses)
 - [piquancy](piquancy.md) — kin; another flavour of sensory pleasure, sharp where this is rich
 - *sensual, luscious, opulent* — close in sense (not yet in the vault)
+- [debauchery](debauchery.md) — kin; indulgence in sensual pleasure

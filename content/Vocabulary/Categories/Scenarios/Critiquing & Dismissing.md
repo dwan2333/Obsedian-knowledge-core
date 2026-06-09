@@ -8,6 +8,9 @@ When you want to register disapproval with precision — too plain, too small, o
 - [prosaic](<../../Words/prosaic.md>) — dismissed as dull and commonplace
 - [ludicrous](<../../Words/ludicrous.md>) — dismissed as laughably absurd
 - [puny](<../../Words/puny.md>) — dismissed as feebly inadequate
+- [frivolous](<../../Words/frivolous.md>) — not serious; trivial and silly
+- [obscure](<../../Words/obscure.md>) — unclear or little-known
+- [snigger](<../../Words/snigger.md>) — a sly, mocking laugh
 
 ## Related categories
 - [Describing a Person](<../Scenarios/Describing a Person.md>)

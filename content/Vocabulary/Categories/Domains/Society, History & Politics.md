@@ -11,3 +11,6 @@ The register of historians, social commentators, and political writers — for n
 - [dowry](<../../Words/dowry.md>) — property brought to a marriage
 - [harem](<../../Words/harem.md>) — the women's quarters of a household
 - [elopement](<../../Words/elopement.md>) — a secret marriage flight
+- [grievance](<../../Words/grievance.md>) — a wrong; a public or private complaint
+- [monastery](<../../Words/monastery.md>) — a religious community/house
+- [deacon](<../../Words/deacon.md>) — a church office

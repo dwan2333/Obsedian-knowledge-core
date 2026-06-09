@@ -19,3 +19,4 @@
 - [dowry](dowry.md) — kin; another institution of marriage and household
 - [elopement](elopement.md) — kin; another term from the world of marriage customs
 - *seraglio, concubine* — related terms (not yet in the vault)
+- [matrimonial](matrimonial.md) — kin; from the world of marriage and household

@@ -18,3 +18,4 @@
 
 ## Related words
 - *mysterious, cryptic, inscrutable, puzzling* — close in sense, from open mystery (*mysterious*) to unreadable (*inscrutable*) (not yet in the vault)
+- [obscure](obscure.md) — kin; hard to understand or little-known

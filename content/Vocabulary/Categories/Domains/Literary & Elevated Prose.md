@@ -14,6 +14,14 @@ The heightened register — words that lend writing dignity, colour, or nuance, 
 - [prosaic](<../../Words/prosaic.md>) — dull and commonplace
 - [piquancy](<../../Words/piquancy.md>) — a pleasantly sharp quality
 - [importunity](<../../Words/importunity.md>) — persistent, pressing demands
+- [debauchery](<../../Words/debauchery.md>) — excessive sensual indulgence
+- [dissipated](<../../Words/dissipated.md>) — dissolute
+- [profligate](<../../Words/profligate.md>) — recklessly dissolute
+- [malice](<../../Words/malice.md>) — ill will
+- [indignation](<../../Words/indignation.md>) — anger at wrong
+- [meekness](<../../Words/meekness.md>) — gentle submissiveness
+- [obscure](<../../Words/obscure.md>) — unclear or little-known
+- [hitherto](<../../Words/hitherto.md>) — until now
 
 ## Related categories
 - [Everyday Speech & General Use](<../Domains/Everyday Speech & General Use.md>)

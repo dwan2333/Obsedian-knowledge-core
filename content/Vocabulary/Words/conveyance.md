@@ -18,3 +18,4 @@
 ## Related words
 - [apportion](apportion.md) — kin; where conveyance *moves* property, apportion *divides* it
 - *vehicle, transport* (sense 1); *transfer, deed* (legal sense) — close in sense (not yet in the vault)
+- [installment](installment.md) — kin; a staged transfer of money

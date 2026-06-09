@@ -19,3 +19,4 @@
 - [elopement](elopement.md) — kin; a marriage made *without* the family arrangements a dowry belongs to
 - [harem](harem.md) — kin; another institution of marriage and household
 - *bride price, trousseau* — related marriage customs (not yet in the vault)
+- [matrimonial](matrimonial.md) — kin; relating to marriage

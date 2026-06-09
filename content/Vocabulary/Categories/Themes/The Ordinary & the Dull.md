@@ -6,6 +6,8 @@ The vocabulary of dullness and the everyday — the opposite of the vivid and th
 
 ## Words
 - [prosaic](<../../Words/prosaic.md>) — commonplace, dull, and unpoetic
+- [wearying](<../../Words/wearying.md>) — tiring; tediously exhausting
+- [coarse](<../../Words/coarse.md>) — rough; crude or unrefined
 
 ## Related categories
 - [Beauty, Pleasure & the Senses](<../Themes/Beauty, Pleasure & the Senses.md>)

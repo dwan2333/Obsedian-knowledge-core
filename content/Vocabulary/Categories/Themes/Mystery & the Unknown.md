@@ -6,3 +6,4 @@ Vocabulary for things that resist understanding and invite curiosity.
 
 ## Words
 - [enigmatic](<../../Words/enigmatic.md>) — mysterious and hard to interpret
+- [obscure](<../../Words/obscure.md>) — unclear or little-known; to hide

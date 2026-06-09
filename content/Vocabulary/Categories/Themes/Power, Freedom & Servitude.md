@@ -9,6 +9,10 @@ Vocabulary for the whole arc of power over people — from the tyrant who wields
 - [toady](<../../Words/toady.md>) — a servile flatterer who fawns over the powerful
 - [despotism](<../../Words/despotism.md>) — cruel, absolute rule; tyranny
 - [emancipation](<../../Words/emancipation.md>) — liberation; a setting-free from control
+- [unruly](<../../Words/unruly.md>) — disorderly; resistant to control
+- [meekness](<../../Words/meekness.md>) — gentle submissiveness; humility
+- [halter](<../../Words/halter.md>) — a rope for leading or restraining; a noose
+- [trample](<../../Words/trample.md>) — to tread underfoot; to crush or oppress
 
 ## Related categories
 - [Whim, Inconstancy & Yielding](<../Themes/Whim, Inconstancy & Yielding.md>)
