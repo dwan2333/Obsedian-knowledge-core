@@ -45,8 +45,7 @@
               "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -242,10 +241,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c134d974a9449e2f",
+  "active": "5a6581175ad49c89",
   "lastOpenFiles": [
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Vocabulary/Words/voluptuous.md",
     "content/Vocabulary/Words/vigorous.md",
     "content/Vocabulary/Words/importunity.md",
