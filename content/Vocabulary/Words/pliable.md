@@ -22,3 +22,6 @@
 - *flexible, supple, malleable, pliant* — close in sense (not yet in the vault)
 - [meekness](meekness.md) — kin; the gentle, yielding temperament
 - [obstinate](obstinate.md) — antonym; refuses to bend
+
+## Appears in
+- *"a pliable imagination persuaded her…"* — [The Brothers Karamazov — Ch. 1](<../../Quotes/Sources/The Brothers Karamazov/Chapter 1.md>) (p. 11)
