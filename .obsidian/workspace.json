@@ -84,7 +84,7 @@
               "type": "markdown",
               "state": {
                 "file": "content/Vocabulary/Words/puny.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -386,7 +386,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 14
       }
     ],
     "direction": "vertical"
@@ -582,8 +582,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5fbc50d83b501441",
+  "active": "65e565b38ef90196",
   "lastOpenFiles": [
+    "content/Vocabulary/Words/pliable.md",
+    "content/Vocabulary/Words/despotism.md",
+    "content/Vocabulary/Words/precipice.md",
+    "content/Vocabulary/Words/prosaic.md",
+    "content/Vocabulary/Words/picturesque.md",
+    "content/Vocabulary/Words/caprice.md",
+    "content/Vocabulary/Words/insuperable.md",
+    "content/Vocabulary/Words/enigmatic.md",
+    "content/Vocabulary/Words/puny.md",
+    "content/Vocabulary/Words/vigorous.md",
+    "content/Vocabulary/Words/shrewd.md",
     "content/Vocabulary/Words/toady.md",
     "content/Vocabulary/Words/abject.md",
     "content/Vocabulary/Categories/Themes/Power, Freedom & Servitude.md",
@@ -593,23 +604,12 @@
     "content/Vocabulary/Words/ludicrous.md",
     "content/Vocabulary/Words/harem.md",
     "content/Vocabulary/Words/circumvent.md",
-    "content/Vocabulary/Words/insuperable.md",
     "content/Vocabulary/Words/conveyance.md",
     "content/Vocabulary/Words/apportion.md",
     "content/Vocabulary/Words/rapidity.md",
     "content/Vocabulary/Words/voluptuous.md",
     "content/Vocabulary/Words/piquancy.md",
     "content/Vocabulary/Words/epoch.md",
-    "content/Vocabulary/Words/pliable.md",
-    "content/Vocabulary/Words/dowry.md",
-    "content/Vocabulary/Words/elopement.md",
-    "content/Vocabulary/Words/despotism.md",
-    "content/Vocabulary/Words/precipice.md",
-    "content/Vocabulary/Words/prosaic.md",
-    "content/Vocabulary/Words/picturesque.md",
-    "content/Vocabulary/Words/caprice.md",
-    "content/Vocabulary/Words/enigmatic.md",
-    "content/Vocabulary/Words/puny.md",
     "content/Vocabulary/Words/epoch.md.tmp.18552.cc184ed77c22",
     "content/Vocabulary/Words/pliable.md.tmp.18552.bfff0dbda85a",
     "content/Vocabulary/Words/despotism.md.tmp.18552.c203088b3d3a",
