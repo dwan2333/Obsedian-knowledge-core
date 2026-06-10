@@ -125,16 +125,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Vocabulary/Words/precipice.md",
+                "file": "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "precipice"
+              "title": "Chapter 1"
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -330,8 +330,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3177983aaade2a26",
+  "active": "86b1615f20ff900c",
   "lastOpenFiles": [
+    "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
+    "content/Vocabulary/Words/precipice.md",
     "content/Vocabulary/Words/vigorous.md",
     "content/Vocabulary/Words/puny.md",
     "content/Vocabulary/Words/abject.md",
@@ -356,11 +358,9 @@
     "content/Vocabulary/Categories/Themes/Folly & the Absurd.md",
     "content/Vocabulary/Categories/Domains/Literary & Elevated Prose.md",
     "content/Vocabulary/Categories/Domains/Law & Formal Documents.md",
-    "content/Vocabulary/Categories/Domains/Everyday Speech & General Use.md",
     "content/Vocabulary/Words/epoch.md.tmp.18552.cc184ed77c22",
     "content/Vocabulary/Words/pliable.md.tmp.18552.bfff0dbda85a",
     "content/Vocabulary/Words/despotism.md.tmp.18552.c203088b3d3a",
-    "content/Vocabulary/Words/voluptuous.md",
     "content/Poker/Equity Fundamentals/Equity Fundamentals (Main).md.tmp.17352.a4645b0ff0c7",
     "content/Poker/The Big Picture/bp_fig5_turn_reports.png",
     "content/Poker/The Big Picture/bp_fig4_polarity_eqgraph.png",
