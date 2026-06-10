@@ -218,6 +218,62 @@
             }
           },
           {
+            "id": "5b5a520522168530",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/piquancy.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "piquancy"
+            }
+          },
+          {
+            "id": "18086827cb787989",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/elopement.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "elopement"
+            }
+          },
+          {
+            "id": "99a8545b9dad813b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/dowry.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "dowry"
+            }
+          },
+          {
+            "id": "22e03575d0605486",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/voluptuous.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "voluptuous"
+            }
+          },
+          {
             "id": "3177983aaade2a26",
             "type": "leaf",
             "state": {
@@ -232,7 +288,7 @@
             }
           }
         ],
-        "currentTab": 15
+        "currentTab": 18
       }
     ],
     "direction": "vertical"
@@ -428,10 +484,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3177983aaade2a26",
+  "active": "22e03575d0605486",
   "lastOpenFiles": [
+    "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
+    "content/Vocabulary/Words/piquancy.md",
     "content/Vocabulary/Words/epoch.md",
     "content/Vocabulary/Words/pliable.md",
+    "content/Vocabulary/Words/dowry.md",
+    "content/Vocabulary/Words/voluptuous.md",
+    "content/Vocabulary/Words/elopement.md",
     "content/Vocabulary/Words/despotism.md",
     "content/Vocabulary/Words/precipice.md",
     "content/Vocabulary/Words/prosaic.md",
@@ -444,7 +505,6 @@
     "content/Vocabulary/Words/shrewd.md",
     "content/Vocabulary/Words/toady.md",
     "content/Vocabulary/Words/abject.md",
-    "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
     "content/Vocabulary/Categories/Themes/Power, Freedom & Servitude.md",
     "content/Vocabulary/Categories/Themes/Persistence & Demand.md",
     "content/Vocabulary/Categories/Themes/Mystery & the Unknown.md",
@@ -452,10 +512,6 @@
     "content/Vocabulary/Categories/Themes/Ill Will, Anger & Resentment.md",
     "content/Vocabulary/Categories/Themes/Beauty, Pleasure & the Senses.md",
     "content/Vocabulary/Categories/Themes/Cleverness & Cunning.md",
-    "content/Vocabulary/Categories/Themes/Whim, Inconstancy & Yielding.md",
-    "content/Vocabulary/Categories/Themes/Vice, Excess & Dissipation.md",
-    "content/Vocabulary/Categories/Themes/Transfer & Distribution.md",
-    "content/Vocabulary/Categories/Themes/Time, Eras & Speed.md",
     "content/Vocabulary/Words/epoch.md.tmp.18552.cc184ed77c22",
     "content/Vocabulary/Words/pliable.md.tmp.18552.bfff0dbda85a",
     "content/Vocabulary/Words/despotism.md.tmp.18552.c203088b3d3a",
