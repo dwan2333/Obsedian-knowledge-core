@@ -1,2 +1,2 @@
 
-I sank into the voluptuous comfort of my bad and failed to climb out of it.  When I opened my eyes, the time was already half past noon. I laid in bed scrolling through my phone until 
+I sank into the voluptuous comfort of my bad and failed to climb out of it.  When I opened my eyes, the time was already half past noon. I laid in bed scrolling through my phone until the my world greyed out and then the time was already half past one. I quickly changed and followed plan b - stay home, order delivery, and study. I would say today's learning experiences was somewhat more effective than yesterday's at the coffee shop. There w
