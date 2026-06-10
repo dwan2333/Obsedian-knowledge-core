@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Vocabulary/Words/voluptuous.md",
-                "mode": "preview",
+                "file": "content/Daily notes/2026-06/Daily note 06-11.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "voluptuous"
+              "title": "Daily note 06-11"
             }
           },
           {
@@ -321,16 +321,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily notes/2026-06/Daily note 06-11.md",
+                "file": "content/Vocabulary/Words/voluptuous.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Daily note 06-11"
+              "title": "voluptuous"
             }
           }
-        ],
-        "currentTab": 22
+        ]
       }
     ],
     "direction": "vertical"
@@ -526,12 +525,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d10e2b48169ba88d",
+  "active": "5916c04753fea9a5",
   "lastOpenFiles": [
     "content/Daily notes/2026-06/Daily note 06-09.md",
     "content/Daily notes/2026-06/Daily note 06-11.md",
-    "content/Vocabulary/Words/circumvent.md",
+    "content/Quotes/Sources/The Brothers Karamazov/The Brothers Karamazov (Main).md",
+    "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
+    "content/Vocabulary/Words/voluptuous.md",
+    "content/Vocabulary/Words/vigorous.md",
     "content/Vocabulary/Words/caprice.md",
+    "content/Vocabulary/Words/circumvent.md",
     "content/Vocabulary/Words/apportion.md",
     "content/Vocabulary/Words/conveyance.md",
     "content/Vocabulary/Words/abject.md",
@@ -550,10 +553,6 @@
     "content/Vocabulary/Words/prosaic.md",
     "content/Vocabulary/Words/puny.md",
     "content/Vocabulary/Words/rapidity.md",
-    "content/Vocabulary/Words/toady.md",
-    "content/Vocabulary/Words/vigorous.md",
-    "content/Vocabulary/Words/voluptuous.md",
-    "content/Vocabulary/Words/grievance.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.2_multiplication_rule_tree.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
     "content/Vocabulary/Words/epoch.md.tmp.18552.cc184ed77c22",
