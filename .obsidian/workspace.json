@@ -176,13 +176,55 @@
             }
           },
           {
+            "id": "72b9f1e374cf8899",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/despotism.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "despotism"
+            }
+          },
+          {
+            "id": "e858897d39c74141",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/pliable.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "pliable"
+            }
+          },
+          {
+            "id": "65e565b38ef90196",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/epoch.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "epoch"
+            }
+          },
+          {
             "id": "3177983aaade2a26",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -190,7 +232,7 @@
             }
           }
         ],
-        "currentTab": 11
+        "currentTab": 13
       }
     ],
     "direction": "vertical"
@@ -386,9 +428,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "847984e4b5e739b7",
+  "active": "e858897d39c74141",
   "lastOpenFiles": [
+    "content/Vocabulary/Words/epoch.md",
     "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
+    "content/Vocabulary/Words/despotism.md",
+    "content/Vocabulary/Words/pliable.md",
+    "content/Vocabulary/Words/precipice.md",
     "content/Vocabulary/Words/prosaic.md",
     "content/Vocabulary/Words/picturesque.md",
     "content/Vocabulary/Words/caprice.md",
@@ -399,7 +445,6 @@
     "content/Vocabulary/Words/shrewd.md",
     "content/Vocabulary/Words/toady.md",
     "content/Vocabulary/Words/abject.md",
-    "content/Vocabulary/Words/precipice.md",
     "content/Vocabulary/Categories/Themes/Power, Freedom & Servitude.md",
     "content/Vocabulary/Categories/Themes/Persistence & Demand.md",
     "content/Vocabulary/Categories/Themes/Mystery & the Unknown.md",
@@ -411,9 +456,6 @@
     "content/Vocabulary/Categories/Themes/Vice, Excess & Dissipation.md",
     "content/Vocabulary/Categories/Themes/Transfer & Distribution.md",
     "content/Vocabulary/Categories/Themes/Time, Eras & Speed.md",
-    "content/Vocabulary/Categories/Themes/Strength & Weakness.md",
-    "content/Vocabulary/Categories/Themes/Religion & the Church.md",
-    "content/Vocabulary/Categories/Themes/Obstacles & Danger.md",
     "content/Vocabulary/Words/epoch.md.tmp.18552.cc184ed77c22",
     "content/Vocabulary/Words/pliable.md.tmp.18552.bfff0dbda85a",
     "content/Vocabulary/Words/despotism.md.tmp.18552.c203088b3d3a",
