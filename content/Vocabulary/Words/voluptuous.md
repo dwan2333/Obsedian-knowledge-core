@@ -7,6 +7,7 @@
 > - They sank into the **voluptuous** comfort of velvet chairs and ordered another bottle.
 > - The painting is all **voluptuous** colour — deep reds, golds, ripe fruit spilling from a bowl.
 > - The garden gave off a **voluptuous** scent of jasmine that hung in the warm evening air.
+> - "She turned heads on the runway with her striking, **voluptuous** figure."
 
 > [!info] Register & connotation
 > Literary and sensuous, positive but charged — it foregrounds bodily pleasure, so it can read as indulgent or erotic depending on context. Stronger and warmer than *luxurious*; use it when you want the reader to *feel* the pleasure.
