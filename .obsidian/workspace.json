@@ -364,7 +364,7 @@
               "type": "markdown",
               "state": {
                 "file": "content/Vocabulary/Words/grievance.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -386,7 +386,7 @@
             }
           }
         ],
-        "currentTab": 22
+        "currentTab": 26
       }
     ],
     "direction": "vertical"
@@ -582,8 +582,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dcf3ab51f254e14e",
+  "active": "3177983aaade2a26",
   "lastOpenFiles": [
+    "content/Vocabulary/Words/grievance.md",
+    "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
+    "content/Vocabulary/Words/ludicrous.md",
+    "content/Vocabulary/Words/harem.md",
+    "content/Vocabulary/Words/circumvent.md",
     "content/Vocabulary/Words/conveyance.md",
     "content/Vocabulary/Words/apportion.md",
     "content/Vocabulary/Words/rapidity.md",
@@ -605,11 +610,6 @@
     "content/Vocabulary/Words/shrewd.md",
     "content/Vocabulary/Words/toady.md",
     "content/Vocabulary/Words/abject.md",
-    "content/Vocabulary/Categories/Themes/Power, Freedom & Servitude.md",
-    "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
-    "content/Vocabulary/Words/grievance.md",
-    "content/Vocabulary/Words/emancipation.md",
-    "content/Vocabulary/Words/ludicrous.md",
     "content/Vocabulary/Words/epoch.md.tmp.18552.cc184ed77c22",
     "content/Vocabulary/Words/pliable.md.tmp.18552.bfff0dbda85a",
     "content/Vocabulary/Words/despotism.md.tmp.18552.c203088b3d3a",
