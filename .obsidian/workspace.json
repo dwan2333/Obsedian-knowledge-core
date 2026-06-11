@@ -38,7 +38,7 @@
               "type": "markdown",
               "state": {
                 "file": "content/Vocabulary/Words/dissipated.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -186,7 +186,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 10
       }
     ],
     "direction": "vertical"
@@ -382,20 +382,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "aa3eb244777684b8",
+  "active": "c72c78be2aadb7b2",
   "lastOpenFiles": [
-    "content/Vocabulary/Words/debauchery.md",
     "content/Vocabulary/Words/wearying.md",
+    "content/Vocabulary/Words/debauchery.md",
+    "content/Vocabulary/Words/monastery.md",
+    "content/Vocabulary/Words/indignation.md",
+    "content/Vocabulary/Words/latter.md",
+    "content/Vocabulary/Words/unruly.md",
+    "content/Vocabulary/Words/frivolous.md",
+    "content/Vocabulary/Words/dissipated.md",
+    "content/Vocabulary/Words/installment.md",
     "content/Vocabulary/Words/malice.md",
     "content/Vocabulary/Words/matrimonial.md",
     "content/Vocabulary/Words/grievance.md",
-    "content/Vocabulary/Words/installment.md",
-    "content/Vocabulary/Words/dissipated.md",
-    "content/Vocabulary/Words/unruly.md",
-    "content/Vocabulary/Words/frivolous.md",
-    "content/Vocabulary/Words/latter.md",
-    "content/Vocabulary/Words/indignation.md",
-    "content/Vocabulary/Words/monastery.md",
     "content/Daily notes/2026-06/Daily note 06-11.md",
     "content/Vocabulary/Words/voluptuous.md",
     "content/Vocabulary/Words/caprice.md",
