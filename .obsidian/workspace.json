@@ -8,342 +8,73 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5916c04753fea9a5",
+            "id": "1a63f121bcf9c83d",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "c3e120b2994b975c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily notes/2026-06/Daily note 06-11.md",
+                "file": "content/Vocabulary/Words/wearying.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Daily note 06-11"
+              "title": "wearying"
             }
           },
           {
-            "id": "2bd8dec5cb2e8571",
+            "id": "c72c78be2aadb7b2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Chapter 1"
-            }
-          },
-          {
-            "id": "ff522f71a0e480c8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/vigorous.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "vigorous"
-            }
-          },
-          {
-            "id": "19bb19fa13689df1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/toady.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "toady"
-            }
-          },
-          {
-            "id": "b90ae948a2de408f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/rapidity.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "rapidity"
-            }
-          },
-          {
-            "id": "e5c445f8904c67c5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/puny.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "puny"
-            }
-          },
-          {
-            "id": "55724c6ce7d231fc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/prosaic.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "prosaic"
-            }
-          },
-          {
-            "id": "085421c3a2f8d205",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/precipice.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "precipice"
-            }
-          },
-          {
-            "id": "ee06add383c4a0a6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/pliable.md",
+                "file": "content/Vocabulary/Words/malice.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pliable"
+              "title": "malice"
             }
           },
           {
-            "id": "3de6aaf330248874",
+            "id": "69153fbc30ac3614",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Vocabulary/Words/piquancy.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "piquancy"
-            }
-          },
-          {
-            "id": "fbbac4591b32de80",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/picturesque.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "picturesque"
-            }
-          },
-          {
-            "id": "a7fd2c9b1bc7f7d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/ludicrous.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ludicrous"
-            }
-          },
-          {
-            "id": "4695e51f08457f76",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/insuperable.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "insuperable"
-            }
-          },
-          {
-            "id": "48b7a1a2f9ac641c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/harem.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "harem"
-            }
-          },
-          {
-            "id": "b1c59d58b6480a88",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/epoch.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "epoch"
-            }
-          },
-          {
-            "id": "26cbfe4d7d3d7d2b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/enigmatic.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "enigmatic"
-            }
-          },
-          {
-            "id": "b7dca428c136318f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/emancipation.md",
+                "file": "content/Vocabulary/Words/matrimonial.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "emancipation"
+              "title": "matrimonial"
             }
           },
           {
-            "id": "5914e7317c8064b4",
+            "id": "70829f4488821a58",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Vocabulary/Words/elopement.md",
-                "mode": "source",
+                "file": "content/Vocabulary/Words/grievance.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "elopement"
-            }
-          },
-          {
-            "id": "c624cdc79607a843",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/despotism.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "despotism"
-            }
-          },
-          {
-            "id": "1866645ae36cf373",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/abject.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "abject"
-            }
-          },
-          {
-            "id": "ba08f870ef7e09db",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/conveyance.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "conveyance"
-            }
-          },
-          {
-            "id": "b3a6541e5ae2baa6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/apportion.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "apportion"
-            }
-          },
-          {
-            "id": "4a2cbde6a0d868af",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/caprice.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "caprice"
-            }
-          },
-          {
-            "id": "d10e2b48169ba88d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/voluptuous.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "voluptuous"
+              "title": "grievance"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -539,15 +270,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5916c04753fea9a5",
+  "active": "c3e120b2994b975c",
   "lastOpenFiles": [
-    "content/Daily notes/2026-06/Daily note 06-09.md",
+    "content/Vocabulary/Words/grievance.md",
+    "content/Vocabulary/Words/matrimonial.md",
+    "content/Vocabulary/Words/malice.md",
     "content/Daily notes/2026-06/Daily note 06-11.md",
-    "content/Vocabulary/Words/pliable.md",
-    "content/Vocabulary/Words/despotism.md",
-    "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
-    "content/Vocabulary/Words/abject.md",
+    "content/Vocabulary/Words/voluptuous.md",
+    "content/Vocabulary/Words/caprice.md",
+    "content/Vocabulary/Words/apportion.md",
     "content/Vocabulary/Words/conveyance.md",
+    "content/Vocabulary/Words/abject.md",
+    "content/Vocabulary/Words/despotism.md",
     "content/Vocabulary/Words/elopement.md",
     "content/Vocabulary/Words/emancipation.md",
     "content/Vocabulary/Words/enigmatic.md",
@@ -557,16 +291,13 @@
     "content/Vocabulary/Words/ludicrous.md",
     "content/Vocabulary/Words/picturesque.md",
     "content/Vocabulary/Words/piquancy.md",
+    "content/Vocabulary/Words/pliable.md",
     "content/Vocabulary/Words/precipice.md",
     "content/Vocabulary/Words/prosaic.md",
     "content/Vocabulary/Words/puny.md",
     "content/Vocabulary/Words/rapidity.md",
     "content/Vocabulary/Words/toady.md",
     "content/Vocabulary/Words/vigorous.md",
-    "content/Quotes/Sources/The Brothers Karamazov/The Brothers Karamazov (Main).md",
-    "content/Vocabulary/Words/voluptuous.md",
-    "content/Vocabulary/Words/caprice.md",
-    "content/Vocabulary/Words/circumvent.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.2_multiplication_rule_tree.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
     "content/Vocabulary/Words/epoch.md.tmp.18552.cc184ed77c22",
