@@ -1,0 +1,1 @@
+As usual, when I woke up was ready near noon. I went to the co
