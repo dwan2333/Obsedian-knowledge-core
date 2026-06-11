@@ -22,6 +22,20 @@
             }
           },
           {
+            "id": "72f8cee4e4f288c4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/dissipated.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "dissipated"
+            }
+          },
+          {
             "id": "fc0a692e4ff1e293",
             "type": "leaf",
             "state": {
@@ -373,11 +387,12 @@
   },
   "active": "86e2e731a1cd7a57",
   "lastOpenFiles": [
-    "content/Vocabulary/Words/ludicrous.md",
+    "content/Daily notes/2026-06/Daily note 06-11.md",
     "content/Daily notes/2026-06/Daily note 06-12.md",
+    "content/Vocabulary/Words/dissipated.md",
+    "content/Vocabulary/Words/ludicrous.md",
     "content/Vocabulary/Words/piquancy.md",
     "content/Vocabulary/Words/frivolous.md",
-    "content/Daily notes/2026-06/Daily note 06-11.md",
     "content/Daily notes/2026-06/Daily note 06-09.md",
     "content/Vocabulary/Words/circumvent.md",
     "content/Vocabulary/Words/insuperable.md",
@@ -400,7 +415,6 @@
     "content/Git and Github/Syncing/git fetch.md",
     "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
     "content/Vocabulary/Words/debauchery.md",
-    "content/Vocabulary/Words/monastery.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.2_multiplication_rule_tree.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
     "content/Vocabulary/Words/epoch.md.tmp.18552.cc184ed77c22",
