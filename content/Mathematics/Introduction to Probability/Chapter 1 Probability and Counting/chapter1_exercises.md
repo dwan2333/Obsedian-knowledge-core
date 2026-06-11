@@ -809,6 +809,10 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > > $$\sum_{k=1}^{8}\binom{8}{k}\,26^{k}\,36^{8-k} \;=\; (26+36)^8 - 36^8 \;=\; 62^8 - 36^8 \;=\; \mathbf{215{,}518{,}995{,}677{,}440}.$$
 > >
 > > **The bug to avoid.** Don't multiply by a *second* binomial $\binom{8}{8-k}$ for the leftover slots. Once the $k$ lowercase positions are chosen, the remaining $8-k$ are **already locked in place** — an extra $\binom{8}{8-k}$ double-counts the arrangement. It's redundant anyway, since $\binom{8}{k} = \binom{8}{8-k}$: you only ever pick positions for **one** camp, and the other is filled by default.
+> >
+> > **Footnote — the base for the leftover slots is *the size of the other camp*.** It is $36^{8-k}$ here only because this problem's non-lowercase pool really is 36 characters (26 uppercase + 10 digits). In the simplified variant with **no uppercase** (legal pool = 36: lowercase + digits), the other camp is just the 10 digits, and the same method gives
+> > $$\sum_{k=1}^{8}\binom{8}{k}\,26^{k}\,10^{8-k} \;=\; 36^8 - 10^8 \;=\; 2{,}821{,}009{,}907{,}456.$$
+> > Same skeleton, different base — always ask *"what may the remaining slots contain?"* before picking the exponent's base.
 
 > [!example] Exercise 54 — Class Every Day
 > **Problem.** Alice attends a small college in which each class meets only once a week. She is deciding between 30 non-overlapping classes. There are 6 classes to choose from for each day of the week, Monday through Friday. Trusting in the benevolence of randomness, Alice decides to register for 7 randomly selected classes out of the 30, with all choices equally likely. What is the probability that she will have classes every day, Monday through Friday? (This problem can be done either directly using the naive definition of probability, or using inclusion-exclusion.)
