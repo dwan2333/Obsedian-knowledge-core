@@ -1,1 +1,1 @@
-As usual, when I woke up was ready near noon. I went to the co
+As usual, when I woke up was ready near noon. I went to the coffee shop and begun my study for probability. I merely figured out one question and half way via the latter one, I gathered my stuff and went up to the car to pick up my girlfriend. I did my best to solve the two problems before my brain started to become wearying of any thoughts. Dose the true ma 
