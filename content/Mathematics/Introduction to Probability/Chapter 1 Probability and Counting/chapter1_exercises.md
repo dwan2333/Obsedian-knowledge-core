@@ -798,6 +798,17 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > > **Solution.** Total $62^8$. (a) $62^8 - 36^8$. (b) $62^8 - 2 \cdot 36^8 + 10^8$. (c) $62^8 - 52^8 - 2 \cdot 36^8 + 2 \cdot 26^8 + 10^8$.
 > >
 > > **Answer.** As above ✓
+> >
+> > [!tip]- The "exactly $k$ lowercase" method for part (a) — and the bug to avoid
+> > Part (a) also yields to the long way: add up the cases by **how many lowercase letters appear**, $k = 1, 2, \ldots, 8$. Split the 62 characters into two camps — **lowercase** (26 of them) and **everything else** (36 = 26 uppercase + 10 digits).
+> >
+> > **Exactly $k$ lowercase letters** — choose which $k$ of the 8 slots are lowercase, fill them from 26 letters, and fill the remaining slots from the 36 others:
+> > $$\binom{8}{k}\,26^{k}\,36^{\,8-k}$$
+> >
+> > **Sum over $k = 1 \ldots 8$** — by the binomial theorem this collapses straight back to the complement:
+> > $$\sum_{k=1}^{8}\binom{8}{k}\,26^{k}\,36^{8-k} \;=\; (26+36)^8 - 36^8 \;=\; 62^8 - 36^8 \;=\; \mathbf{215{,}518{,}995{,}677{,}440}.$$
+> >
+> > **The bug to avoid.** Don't multiply by a *second* binomial $\binom{8}{8-k}$ for the leftover slots. Once the $k$ lowercase positions are chosen, the remaining $8-k$ are **already locked in place** — an extra $\binom{8}{8-k}$ double-counts the arrangement. It's redundant anyway, since $\binom{8}{k} = \binom{8}{8-k}$: you only ever pick positions for **one** camp, and the other is filled by default.
 
 > [!example] Exercise 54 — Class Every Day
 > **Problem.** Alice attends a small college in which each class meets only once a week. She is deciding between 30 non-overlapping classes. There are 6 classes to choose from for each day of the week, Monday through Friday. Trusting in the benevolence of randomness, Alice decides to register for 7 randomly selected classes out of the 30, with all choices equally likely. What is the probability that she will have classes every day, Monday through Friday? (This problem can be done either directly using the naive definition of probability, or using inclusion-exclusion.)
