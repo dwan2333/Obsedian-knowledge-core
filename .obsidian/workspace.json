@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Euler 's equation/Euler's Formula via exp(x) (Main).md",
+                "file": "content/Mathematics/Logarithms/Logarithm Fundamentals (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Euler's Formula via exp(x) (Main)"
+              "title": "Logarithm Fundamentals (Main)"
             }
           }
         ],
@@ -234,7 +234,11 @@
   },
   "active": "86e2e731a1cd7a57",
   "lastOpenFiles": [
+    "content/Mathematics/Logarithms/Natural Logarithm/The Natural Logarithm (Main).md",
+    "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
+    "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
     "content/Mathematics/Euler 's equation/eulers_formula_consequences.md",
+    "content/Mathematics/Euler 's equation/Euler's Formula via exp(x) (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
@@ -256,10 +260,6 @@
     "content/Vocabulary/Words/circumvent.md",
     "content/Vocabulary/Words/despotism.md",
     "content/Vocabulary/Words/profligate.md",
-    "content/Vocabulary/Words/shrewd.md",
-    "content/Vocabulary/Words/rapidity.md",
-    "content/Vocabulary/Words/voluptuous.md",
-    "content/Vocabulary/Words/vigorous.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.16276.18683738f72c",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.16276.4cf5aefb34ae",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.2_multiplication_rule_tree.png",
