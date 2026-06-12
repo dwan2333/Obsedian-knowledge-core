@@ -1,1 +1,1 @@
-As usual, I woke up around noon and scrolled my phone a bit before I could climb out of the bed. I studied probability and nearly finished it. It would of ten take me nearly t
+As usual, I woke up around noon and scrolled my phone a bit before I could climb out of the bed. I studied probability and nearly finished it. For the inclusion and exclusion problems, it would nearly take me 25-40 minutes for a single one of them. I think I am really lagging behind the normal progress for studying a textbook. 
