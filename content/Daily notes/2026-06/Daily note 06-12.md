@@ -1,1 +1,1 @@
-As usual, I woke up around noon and scrolled my phone a bit before I could climb out of the bed. I studied probability and nearly finished it. I do not know if I am
+As usual, I woke up around noon and scrolled my phone a bit before I could climb out of the bed. I studied probability and nearly finished it. It would of ten take me nearly t
