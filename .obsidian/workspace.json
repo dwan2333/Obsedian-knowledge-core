@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+                "file": "content/Mathematics/Euler 's equation/Euler's Formula via exp(x) (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "chapter1_exercises"
+              "title": "Euler's Formula via exp(x) (Main)"
             }
           }
         ],
@@ -234,8 +234,9 @@
   },
   "active": "86e2e731a1cd7a57",
   "lastOpenFiles": [
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+    "content/Mathematics/Euler 's equation/eulers_formula_consequences.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Daily notes/2026-06/Daily note 06-09.md",
     "content/Vocabulary/Words/unruly.md",
@@ -261,7 +262,6 @@
     "content/Vocabulary/Words/vigorous.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.16276.18683738f72c",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.16276.4cf5aefb34ae",
-    "content/Git and Github/Syncing/git fetch.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.2_multiplication_rule_tree.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
     "content/Vocabulary/Words/epoch.md.tmp.18552.cc184ed77c22",
