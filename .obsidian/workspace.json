@@ -35,8 +35,7 @@
               "title": "chapter1_exercises"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -232,10 +231,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "86e2e731a1cd7a57",
+  "active": "4bc7eb5df9543f6d",
   "lastOpenFiles": [
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Daily notes/2026-06/Daily note 06-09.md",
     "content/Vocabulary/Words/unruly.md",
