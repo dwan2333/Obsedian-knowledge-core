@@ -22,31 +22,17 @@
             }
           },
           {
-            "id": "b7d280a8c9896c62",
+            "id": "9e9e5594c5eedf7e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Vocabulary/Words/bitter.md",
+                "file": "content/Vocabulary/Words/whimsical.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "bitter"
-            }
-          },
-          {
-            "id": "de63077ba757c302",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/malice.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "malice"
+              "title": "whimsical"
             }
           }
         ],
@@ -246,11 +232,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b7d280a8c9896c62",
+  "active": "9e9e5594c5eedf7e",
   "lastOpenFiles": [
-    "content/Vocabulary/Words/malice.md",
-    "content/Vocabulary/Words/bitter.md",
+    "content/Vocabulary/Words/wearying.md",
+    "content/Vocabulary/Words/voluptuous.md",
+    "content/Vocabulary/Words/vigorous.md",
+    "content/Vocabulary/Words/unruly.md",
+    "content/Vocabulary/Words/trample.md",
+    "content/Vocabulary/Words/toady.md",
+    "content/Vocabulary/Words/sullenness.md",
+    "content/Vocabulary/Words/stump.md",
     "content/Vocabulary/Words/spiteful.md",
+    "content/Vocabulary/Words/bitter.md",
+    "content/Vocabulary/Words/malice.md",
     "content/Vocabulary/Words/sottish.md",
     "content/Vocabulary/Words/snigger.md",
     "content/Vocabulary/Words/slyness.md",
@@ -266,14 +260,6 @@
     "content/Vocabulary/Words/revolting.md",
     "content/Vocabulary/Words/rapidity.md",
     "content/Vocabulary/Words/rapacious.md",
-    "content/Vocabulary/Words/queer.md",
-    "content/Vocabulary/Words/puny.md",
-    "content/Vocabulary/Words/prosaic.md",
-    "content/Vocabulary/Words/profligate.md",
-    "content/Vocabulary/Words/propensity.md",
-    "content/Vocabulary/Words/perverse.md",
-    "content/Vocabulary/Words/pester.md",
-    "content/Vocabulary/Words/pence.md",
     "content/Vocabulary/Vocabulary (Main).md.tmp.17000.2a94d27c55a4",
     "content/Vocabulary/Vocabulary (Main).md.tmp.17000.2019ca5ba750",
     "content/Vocabulary/Words/debauchery.md.tmp.17000.55402a10272c",
