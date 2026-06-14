@@ -19,3 +19,4 @@
 ## Related words
 - [coarse](coarse.md) — the snigger is often coarse, low, and mocking in tone
 - [ludicrous](ludicrous.md) — the kind of absurdity that provokes a snigger
+- [ridicule](ridicule.md) — kin; open mockery, where a snigger is half-suppressed

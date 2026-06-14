@@ -21,3 +21,4 @@
 - [debauchery](debauchery.md) — the conduct; a dissipated person is one given to debauchery
 - [profligate](profligate.md) — kin; profligate stresses the waste, dissipated the wear it leaves
 - [idleness](idleness.md) — its companion; the dissipated life is rarely an industrious one
+- [dissipation](dissipation.md) — the noun; the dissolute living this word embodies

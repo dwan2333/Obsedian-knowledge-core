@@ -14,3 +14,8 @@ The register of historians, social commentators, and political writers — for n
 - [grievance](<../../Words/grievance.md>) — a wrong; a public or private complaint
 - [monastery](<../../Words/monastery.md>) — a religious community/house
 - [deacon](<../../Words/deacon.md>) — a church office
+- [cassock](<../../Words/cassock.md>) — a clergyman's long robe
+- [secularist](<../../Words/secularist.md>) — one who separates Church and public life
+- [bourgeois](<../../Words/bourgeois.md>) — of the materialist middle class
+- [inmate](<../../Words/inmate.md>) — a person confined to an institution
+- [foundry](<../../Words/foundry.md>) — a metal-casting works

@@ -18,4 +18,5 @@
 
 ## Related words
 - [pliable](pliable.md) — kin in inconstancy; a pliable will bends to whim and pressure alike
+- [whimsical](whimsical.md) — kin; the playful, charming face of caprice
 - *whim, fancy, fickleness* — close in sense; the adjective is *capricious* (not yet in the vault)

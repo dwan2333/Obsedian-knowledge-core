@@ -11,3 +11,10 @@ When you're spinning a tale and need the language of suspense, impulse, and high
 - [debauchery](<../../Words/debauchery.md>) — excessive indulgence in sensual pleasure
 - [indignation](<../../Words/indignation.md>) — anger at unfairness or wrong
 - [trample](<../../Words/trample.md>) — to tread underfoot; to crush or oppress
+- [frenzied](<../../Words/frenzied.md>) — wildly excited and out of control
+- [pang](<../../Words/pang.md>) — a sudden sharp stab of feeling
+- [inconsolable](<../../Words/inconsolable.md>) — grief-stricken beyond comfort
+- [presentiment](<../../Words/presentiment.md>) — a foreboding of disaster
+- [affront](<../../Words/affront.md>) — an open, deliberate insult
+- [blubber](<../../Words/blubber.md>) — to weep noisily
+- [moan](<../../Words/moan.md>) — a low sound of pain or grief

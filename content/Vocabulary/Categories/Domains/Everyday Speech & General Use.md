@@ -24,6 +24,30 @@ The workaday register — vivid, useful words you can drop into conversation wit
 - [snigger](<../../Words/snigger.md>) — a sly, mocking laugh
 - [latter](<../../Words/latter.md>) — the second-mentioned of two
 - [ironclad](<../../Words/ironclad.md>) — unbreakably firm; impossible to break or escape
+- [slyness](<../../Words/slyness.md>) — secretive cunning
+- [wits](<../../Words/wits.md>) — the mental faculties
+- [rogue](<../../Words/rogue.md>) — a scoundrel or rascal
+- [blubber](<../../Words/blubber.md>) — to weep noisily
+- [moan](<../../Words/moan.md>) — a low sound of pain; to grumble
+- [pang](<../../Words/pang.md>) — a sharp stab of feeling
+- [fanatic](<../../Words/fanatic.md>) — a person of excessive zeal
+- [hoard](<../../Words/hoard.md>) — to amass and hide away
+- [merry](<../../Words/merry.md>) — cheerful and high-spirited
+- [liberally](<../../Words/liberally.md>) — freely and generously
+- [candid](<../../Words/candid.md>) — frank and honest
+- [stump](<../../Words/stump.md>) — the remnant of something cut off
+- [slobber](<../../Words/slobber.md>) — to drool; to gush
+- [spiteful](<../../Words/spiteful.md>) — moved by petty ill will
+- [bitter](<../../Words/bitter.md>) — resentful; sharp-tasting
+- [queer](<../../Words/queer.md>) — strange, odd
+- [pester](<../../Words/pester.md>) — to badger persistently
+- [whimsical](<../../Words/whimsical.md>) — playfully fanciful
+- [ridicule](<../../Words/ridicule.md>) — mockery
+- [scrape](<../../Words/scrape.md>) — an awkward predicament
+- [revolting](<../../Words/revolting.md>) — disgusting; repulsive
+- [scarcely](<../../Words/scarcely.md>) — barely; hardly
+- [canary](<../../Words/canary.md>) — a small songbird
+- [pence](<../../Words/pence.md>) — small coins; money
 
 ## Related categories
 - [Literary & Elevated Prose](<../Domains/Literary & Elevated Prose.md>)

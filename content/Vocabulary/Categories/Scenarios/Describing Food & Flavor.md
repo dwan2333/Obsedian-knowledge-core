@@ -6,3 +6,4 @@ When you're writing about food and need to name what the tongue notices.
 
 ## Words
 - [piquancy](<../../Words/piquancy.md>) — a pleasantly sharp, spicy quality
+- [piquant](<../../Words/piquant.md>) — pleasantly sharp or spicy to the taste

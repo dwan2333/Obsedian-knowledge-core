@@ -7,6 +7,7 @@ The opposite of firmness — being changeable, impressionable, or too easily swa
 ## Words
 - [caprice](<../../Words/caprice.md>) — a sudden, impulsive change of mind; fickleness
 - [pliable](<../../Words/pliable.md>) — easily bent or persuaded
+- [whimsical](<../../Words/whimsical.md>) — playfully fanciful; acting on whims
 
 ## Related categories
 - [Power, Freedom & Servitude](<../Themes/Power, Freedom & Servitude.md>)

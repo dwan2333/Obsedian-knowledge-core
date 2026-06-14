@@ -21,3 +21,4 @@
 - [unruly](unruly.md) — neighbour in resistance; obstinate digs in over a point, unruly refuses all control
 - [pliable](pliable.md) — antonym; the obstinate will not bend, the pliable bends too easily
 - [meekness](meekness.md) — antonym; obstinacy stands firm where meekness gives way
+- [perverse](perverse.md) — kin; stubbornness with a wilful, contrary twist

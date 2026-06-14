@@ -11,3 +11,4 @@ The precise, often Latin-rooted register of legal and official writing.
 - [scrupulous](<../../Words/scrupulous.md>) — diligent, exacting compliance
 - [matrimonial](<../../Words/matrimonial.md>) — relating to marriage
 - [installment](<../../Words/installment.md>) — a part-payment in a series
+- [preliminary](<../../Words/preliminary.md>) — preparatory; coming before the main business

@@ -11,6 +11,8 @@ When you want to register disapproval with precision — too plain, too small, o
 - [frivolous](<../../Words/frivolous.md>) — not serious; trivial and silly
 - [obscure](<../../Words/obscure.md>) — unclear or little-known
 - [snigger](<../../Words/snigger.md>) — a sly, mocking laugh
+- [ridicule](<../../Words/ridicule.md>) — mockery meant to belittle
+- [revolting](<../../Words/revolting.md>) — disgusting; repulsive
 
 ## Related categories
 - [Describing a Person](<../Scenarios/Describing a Person.md>)

@@ -21,3 +21,4 @@
 - [profligate](profligate.md) — kin; recklessly wasteful, the spendthrift side of the same excess
 - [idleness](idleness.md) — the soil it grows in; debauchery is idleness turned to indulgence
 - [voluptuous](voluptuous.md) — the pleasure debauchery overindulges, but without the censure
+- [chaste](chaste.md) — antonym; the abstinent purity debauchery casts off

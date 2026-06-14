@@ -17,6 +17,7 @@
 - **Scenario** — [Describing Food & Flavor](<../Categories/Scenarios/Describing Food & Flavor.md>)
 
 ## Related words
+- [piquant](piquant.md) — the adjective form of this quality
 - [voluptuous](voluptuous.md) — kin; a sharper, brighter cousin in the family of sensory pleasures
 - *zest, tang, pungency, spice* — close in sense; the adjective is *piquant* (not yet in the vault)
 

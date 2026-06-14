@@ -16,6 +16,7 @@
 - **Domain** — [Literary & Elevated Prose](<../Categories/Domains/Literary & Elevated Prose.md>)
 
 ## Related words
+- [pester](pester.md) — the everyday verb for this dogged, pressing demand
 - [pliable](pliable.md) — the counterpart; importunity is the pressure, a pliable person the one who yields to it
 - *insistence, persistence, pestering* — close in sense; the adjective is *importunate* (not yet in the vault)
 - [obstinate](obstinate.md) — kin; stubborn, unyielding persistence
