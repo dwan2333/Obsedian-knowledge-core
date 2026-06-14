@@ -7,3 +7,9 @@ Worldly cleverness — the mind that sizes things up quickly and outmanoeuvres w
 ## Words
 - [shrewd](<../../Words/shrewd.md>) — sharp and astute in practical judgment
 - [circumvent](<../../Words/circumvent.md>) — to cleverly get around an obstacle or rule
+- [sagacious](<../../Words/sagacious.md>) — wise and keenly discerning
+- [artfulness](<../../Words/artfulness.md>) — crafty, manipulative cleverness
+- [slyness](<../../Words/slyness.md>) — secretive cunning
+- [wits](<../../Words/wits.md>) — the mental faculties; sharpness of mind
+- [rogue](<../../Words/rogue.md>) — a scoundrel or mischievous rascal
+- [faculty](<../../Words/faculty.md>) — a power of the mind

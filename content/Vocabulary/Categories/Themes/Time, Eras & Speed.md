@@ -8,3 +8,4 @@ From the named ages of history to the swiftness of change within them.
 - [epoch](<../../Words/epoch.md>) — a notable historical period or era
 - [rapidity](<../../Words/rapidity.md>) — great speed; swiftness
 - [hitherto](<../../Words/hitherto.md>) — until now; up to this point
+- [preliminary](<../../Words/preliminary.md>) — coming before; preparatory

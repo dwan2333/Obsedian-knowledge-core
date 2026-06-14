@@ -8,6 +8,7 @@ Vocabulary for things that appeal to the senses — the lush, the scenic, and th
 - [voluptuous](<../../Words/voluptuous.md>) — richly sensual; luxuriously pleasurable
 - [picturesque](<../../Words/picturesque.md>) — charmingly scenic, like a picture
 - [piquancy](<../../Words/piquancy.md>) — a pleasantly sharp, zesty quality
+- [piquant](<../../Words/piquant.md>) — pleasantly sharp; intriguing
 
 ## Related categories
 - [The Ordinary & the Dull](<../Themes/The Ordinary & the Dull.md>)
