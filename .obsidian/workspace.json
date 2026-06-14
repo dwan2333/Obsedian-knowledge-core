@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
+                "file": "content/Vocabulary/Words/affront.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 1"
+              "title": "affront"
             }
           }
         ]
@@ -217,8 +217,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "328aa9c891b22c6e",
+  "active": "4bc7eb5df9543f6d",
   "lastOpenFiles": [
+    "content/Vocabulary/Words/apportion.md",
+    "content/Vocabulary/Words/affront.md",
+    "content/Vocabulary/Words/abject.md",
+    "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
     "content/Vocabulary/Vocabulary (Main).md.tmp.17000.2a94d27c55a4",
     "content/Vocabulary/Vocabulary (Main).md.tmp.17000.2019ca5ba750",
     "content/Vocabulary/Words/debauchery.md.tmp.17000.55402a10272c",
@@ -229,7 +233,6 @@
     "content/Vocabulary/Words/shrewd.md.tmp.17000.e59265f6412e",
     "content/Vocabulary/Categories/Domains/Everyday Speech & General Use.md.tmp.17000.eb200e2cdcae",
     "content/Vocabulary/Categories/Domains/Literary & Elevated Prose.md.tmp.17000.a44a8470bd4e",
-    "content/Vocabulary/Categories/Domains/Law & Formal Documents.md.tmp.17000.67745d64100c",
     "content/Vocabulary/Categories/Themes/Face, Body & Features.md",
     "content/Vocabulary/Categories/Themes/Speech, Frankness & the Unspoken.md",
     "content/Vocabulary/Categories/Themes/Cheer & Geniality.md",
@@ -252,9 +255,6 @@
     "content/Vocabulary/Words/perverse.md",
     "content/Vocabulary/Words/presentiment.md",
     "content/Vocabulary/Words/queer.md",
-    "content/Vocabulary/Words/cynicism.md",
-    "content/Vocabulary/Words/bitter.md",
-    "content/Vocabulary/Words/spiteful.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_mindmap.png",
     "content/Mathematics/Logarithms/lf_fig1_linear_vs_log.png",
     "content/Mathematics/Euler 's equation/efm_fig4_two_faces.png",
