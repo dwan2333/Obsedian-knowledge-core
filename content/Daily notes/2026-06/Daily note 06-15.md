@@ -2,4 +2,4 @@ A lot have occurred in the past few days, though nothing compares to the pervasi
 
 These were the past cheerful moments that are unique to me. We did not go anywhere on Sunday. We stayed home all day and teased each other for majority of our time. 
 
-Now I think is time to discuss about the event of the month. Merely 10 minutes that I got home from the airport (I had a flight from Beijing to Kunming and decides to stay here for a few day), my dad's lover or should I say my step mom suddenly showed up in our basement. She 
+Now I think is time to discuss about the event of the month. Merely 10 minutes that I got home from the airport (I had a flight from Beijing to Kunming and decides to stay here for a few day), my dad's lover or should I say my step mom suddenly showed up in our basement. I could hear the sullenness originated from her furriness. As 
