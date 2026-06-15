@@ -1,1 +1,1 @@
-A lot have occurred in the past few days, though nothing compares to the pervasive malice today, I will give a brief account of the joys and 
+A lot have occurred in the past few days, though nothing compares to the pervasive malice today, I will give a brief account of the joys and sorrowness. Saturday was like our "regular" Saturday. Me and my girlfriend went to the business center of Beijing. We wondered around the mall until it was time to eat
