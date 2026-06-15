@@ -1,1 +1,0 @@
-A lot have occurred in the past few days, though nothing compares to the l  
