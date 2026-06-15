@@ -22,6 +22,20 @@
             }
           },
           {
+            "id": "24b208405613b6a5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/wearying.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "wearying"
+            }
+          },
+          {
             "id": "4c6e1f03624e497a",
             "type": "leaf",
             "state": {
@@ -303,8 +317,9 @@
   },
   "active": "e6f77e48c0323266",
   "lastOpenFiles": [
-    "content/Vocabulary/Words/ridicule.md",
+    "content/Vocabulary/Words/wearying.md",
     "content/Daily notes/2026-06/Daily note 06-15.md",
+    "content/Vocabulary/Words/ridicule.md",
     "content/Vocabulary/Words/stump.md",
     "content/Vocabulary/Words/vigorous.md",
     "content/Vocabulary/Words/presentiment.md",
@@ -328,7 +343,6 @@
     "content/Vocabulary/Words/slyness.md",
     "content/Vocabulary/Words/sottish.md",
     "content/Vocabulary/Words/spiteful.md",
-    "content/Vocabulary/Words/whimsical.md",
     "content/Vocabulary/Vocabulary (Main).md.tmp.17000.2a94d27c55a4",
     "content/Vocabulary/Vocabulary (Main).md.tmp.17000.2019ca5ba750",
     "content/Vocabulary/Words/debauchery.md.tmp.17000.55402a10272c",
