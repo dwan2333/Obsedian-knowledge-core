@@ -20,3 +20,4 @@
 - [debilitating](debilitating.md) — antonym; weakening rather than strengthening
 - [puny](puny.md) — antonym; small, weak, and feeble
 - *robust, energetic, dynamic, forceful* — close in sense (not yet in the vault)
+- [grit](grit.md) — kin; the dogged resolve behind vigorous effort

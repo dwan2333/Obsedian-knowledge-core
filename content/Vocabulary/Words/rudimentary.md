@@ -14,6 +14,7 @@
 ## Categories
 - **Theme** — [The Ordinary & the Dull](<../Categories/Themes/The Ordinary & the Dull.md>)
 - **Domain** — [Everyday Speech & General Use](<../Categories/Domains/Everyday Speech & General Use.md>)
+- **Scenario** — [Critiquing & Dismissing](<../Categories/Scenarios/Critiquing & Dismissing.md>)
 
 ## Related words
 - [superficial](superficial.md) — kin; shallow, where this is basic and undeveloped

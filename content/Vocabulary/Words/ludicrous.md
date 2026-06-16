@@ -20,3 +20,4 @@
 - *absurd, ridiculous, preposterous, farcical* — close in sense (not yet in the vault)
 - [frivolous](frivolous.md) — kin; trivial and not serious
 - [snigger](snigger.md) — kin; the mocking laugh the ludicrous provokes
+- [farce](farce.md) — kin; a farce is a ludicrous spectacle

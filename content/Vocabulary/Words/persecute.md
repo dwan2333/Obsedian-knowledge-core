@@ -13,7 +13,7 @@
 
 ## Categories
 - **Theme** — [Power, Freedom & Servitude](<../Categories/Themes/Power, Freedom & Servitude.md>)
-- **Domain** — [Society, History & Politics](<../Categories/Domains/Society, History & Politics.md>)
+- **Domain** — [Society, History & Politics](<../Categories/Domains/Society, History & Politics.md>) · [Literary & Elevated Prose](<../Categories/Domains/Literary & Elevated Prose.md>)
 - **Scenario** — [Telling a Dramatic Story](<../Categories/Scenarios/Telling a Dramatic Story.md>)
 
 ## Related words
