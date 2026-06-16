@@ -217,8 +217,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "280fb91b828b758e",
+  "active": "328aa9c891b22c6e",
   "lastOpenFiles": [
+    "content/Mathematics/Pythagorean Theorem/inverse_pythagorean_theorem.md",
+    "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
     "content/Mathematics/Pythagorean Theorem/pyth_mindmap.png",
     "content/Mathematics/Pythagorean Theorem/pyth_fig4_super_theorem.png",
     "content/Mathematics/Pythagorean Theorem/pyth_fig3_simplest_altitude.png",
@@ -227,8 +229,6 @@
     "content/Mathematics/Pythagorean Theorem/ipt_mindmap.png",
     "content/Mathematics/Pythagorean Theorem/ipt_fig2_three_similar.png",
     "content/Mathematics/Pythagorean Theorem/ipt_fig1_construction.png",
-    "content/Mathematics/Pythagorean Theorem/inverse_pythagorean_theorem.md",
-    "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
     "content/Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
     "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
     "content/Mathematics/Trigonometric/Visual representation On Demos.md",
@@ -241,7 +241,6 @@
     "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
     "content/Mathematics/Trigonometric/spt_mindmap.png",
     "content/Mathematics/Trigonometric/spt_fig3_unit_circle.png",
-    "content/Mathematics/Trigonometric/spt_fig2_proof.png",
     "content/Vocabulary/Words/exhortation.md",
     "content/Vocabulary/Words/antsy.md",
     "content/Vocabulary/Words/admonition.md",
