@@ -11,12 +11,14 @@
             "id": "280fb91b828b758e",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Complex Numbers/cnf_fig1_complex_plane.png"
+                "file": "content/Mathematics/Trigonometric/Visual representation On Demos.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "cnf_fig1_complex_plane"
+              "icon": "lucide-file",
+              "title": "Visual representation On Demos"
             }
           }
         ]
@@ -215,10 +217,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "328aa9c891b22c6e",
+  "active": "280fb91b828b758e",
   "lastOpenFiles": [
-    "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
+    "content/Mathematics/Trigonometric/spt_mindmap.png",
+    "content/Mathematics/Trigonometric/spt_fig3_unit_circle.png",
+    "content/Mathematics/Trigonometric/spt_fig2_proof.png",
+    "content/Mathematics/Trigonometric/spt_fig1_setup.png",
+    "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
+    "content/Mathematics/Trigonometric/Visual representation On Demos.md",
     "content/Mathematics/Complex Numbers/cnf_fig1_complex_plane.png",
+    "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
     "content/Vocabulary/Words/exhortation.md",
     "content/Vocabulary/Words/antsy.md",
     "content/Vocabulary/Words/admonition.md",
@@ -241,9 +249,6 @@
     "content/Vocabulary/Words/voluptuous.md",
     "content/Vocabulary/Words/vileness.md",
     "content/Vocabulary/Words/vigorous.md",
-    "content/Vocabulary/Words/venture.md",
-    "content/Vocabulary/Words/utterance.md",
-    "content/Vocabulary/Words/upend.md",
     "content/Vocabulary/Words/vigorous.md.tmp.15160.3fef7e5810b4",
     "content/Vocabulary/Words/ludicrous.md.tmp.15160.ede229a50d96",
     "content/Vocabulary/Words/rudimentary.md.tmp.15160.8c82bc62ff3e",
@@ -259,10 +264,6 @@
     "content/Mathematics/Euler 's equation/efm_fig4_two_faces.png",
     "content/Mathematics/Euler 's equation/efm_mindmap.png",
     "content/Mathematics/Logarithms/lf_fig5_prime_density.png",
-    "content/Mathematics/Logarithms/lf_fig7_harmonic_blocks.png",
-    "content/Mathematics/Logarithms/lf_fig8_area_under_one_x.png",
-    "content/Mathematics/Logarithms/lf_mindmap.png",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.2_multiplication_rule_tree.png",
     "Untitled.canvas"
   ]
 }
