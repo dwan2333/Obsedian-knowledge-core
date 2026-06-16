@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
+                "file": "content/Mathematics/Euler 's equation/eulers_formula_consequences.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Complex Number Fundamentals (Main)"
+              "title": "eulers_formula_consequences"
             }
           }
         ]
@@ -219,12 +219,12 @@
   },
   "active": "280fb91b828b758e",
   "lastOpenFiles": [
-    "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
     "content/Mathematics/Euler 's equation/Euler's Formula via exp(x) (Main).md",
-    "content/Mathematics/Euler 's equation/eulers_formula_consequences.md",
-    "content/Mathematics/Complex Numbers/cnf_fig1_complex_plane.png",
     "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
     "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
+    "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
+    "content/Mathematics/Euler 's equation/eulers_formula_consequences.md",
+    "content/Mathematics/Complex Numbers/cnf_fig1_complex_plane.png",
     "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
     "content/Mathematics/Trigonometric/Visual representation On Demos.md",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/Exponential and Logarithmic Functions (Main).md",
