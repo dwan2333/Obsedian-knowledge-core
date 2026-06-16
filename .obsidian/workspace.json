@@ -11,10 +11,12 @@
             "id": "280fb91b828b758e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "image",
+              "state": {
+                "file": "content/Mathematics/Complex Numbers/cnf_fig1_complex_plane.png"
+              },
+              "icon": "lucide-image",
+              "title": "cnf_fig1_complex_plane"
             }
           }
         ]
@@ -213,8 +215,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "280fb91b828b758e",
+  "active": "328aa9c891b22c6e",
   "lastOpenFiles": [
+    "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
+    "content/Mathematics/Complex Numbers/cnf_fig1_complex_plane.png",
     "content/Vocabulary/Words/exhortation.md",
     "content/Vocabulary/Words/antsy.md",
     "content/Vocabulary/Words/admonition.md",
@@ -240,7 +244,6 @@
     "content/Vocabulary/Words/venture.md",
     "content/Vocabulary/Words/utterance.md",
     "content/Vocabulary/Words/upend.md",
-    "content/Vocabulary/Words/unsolicited.md",
     "content/Vocabulary/Words/vigorous.md.tmp.15160.3fef7e5810b4",
     "content/Vocabulary/Words/ludicrous.md.tmp.15160.ede229a50d96",
     "content/Vocabulary/Words/rudimentary.md.tmp.15160.8c82bc62ff3e",
@@ -260,7 +263,6 @@
     "content/Mathematics/Logarithms/lf_fig8_area_under_one_x.png",
     "content/Mathematics/Logarithms/lf_mindmap.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.2_multiplication_rule_tree.png",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
     "Untitled.canvas"
   ]
 }
