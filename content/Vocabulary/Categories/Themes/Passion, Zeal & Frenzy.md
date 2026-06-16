@@ -8,6 +8,7 @@ The spectrum of fervour — from noble ardour, through unbalanced fanaticism, to
 - [ardent](<../../Words/ardent.md>) — burning with passion and devotion
 - [fanatic](<../../Words/fanatic.md>) — filled with excessive, uncritical zeal
 - [frenzied](<../../Words/frenzied.md>) — wildly excited and out of control
+- [ecstatic](<../../Words/ecstatic.md>) — overwhelmed with rapturous joy
 
 ## Related categories
 - [Religion & the Church](<../Themes/Religion & the Church.md>)

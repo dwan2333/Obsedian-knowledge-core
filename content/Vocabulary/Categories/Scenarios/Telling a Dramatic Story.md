@@ -18,3 +18,4 @@ When you're spinning a tale and need the language of suspense, impulse, and high
 - [affront](<../../Words/affront.md>) — an open, deliberate insult
 - [blubber](<../../Words/blubber.md>) — to weep noisily
 - [moan](<../../Words/moan.md>) — a low sound of pain or grief
+- [seething](<../../Words/seething.md>) — a crowd or a temper boiling with turbulence

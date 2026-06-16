@@ -39,6 +39,10 @@ When you want to pin down what a person is *like* — sharp or servile, strong o
 - [sottish](<../../Words/sottish.md>) — stupefied with drink
 - [rogue](<../../Words/rogue.md>) — a scoundrel or mischievous rascal
 - [countenance](<../../Words/countenance.md>) — the face and its expression
+- [ecstatic](<../../Words/ecstatic.md>) — overwhelmed with rapturous joy
+- [graceful](<../../Words/graceful.md>) — elegant and smoothly beautiful
+- [serene](<../../Words/serene.md>) — calm, peaceful, and untroubled
+- [seething](<../../Words/seething.md>) — boiling with barely-contained anger
 
 ## Related categories
 - [Critiquing & Dismissing](<../Scenarios/Critiquing & Dismissing.md>)

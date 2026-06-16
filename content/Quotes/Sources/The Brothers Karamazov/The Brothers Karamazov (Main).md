@@ -6,6 +6,7 @@
 
 ## Chapters
 - [Chapter 1](<Chapter 1.md>)
+- [Chapter 5](<Chapter 5.md>)
 
 ## Source
 - **Type** — Novel

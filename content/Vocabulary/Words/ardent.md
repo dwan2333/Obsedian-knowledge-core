@@ -20,4 +20,5 @@
 - [fanatic](fanatic.md) — kin; the same fire taken to uncritical excess
 - [frenzied](frenzied.md) — kin; passion tipped into frantic disorder
 - [mystic](mystic.md) — kin in spiritual intensity, turned inward
+- [ecstatic](ecstatic.md) — kin; ardour risen to rapturous joy
 - *fervent, fervid, passionate, zealous* — close in sense (not yet in the vault)

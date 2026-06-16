@@ -9,3 +9,4 @@ From the named ages of history to the swiftness of change within them.
 - [rapidity](<../../Words/rapidity.md>) — great speed; swiftness
 - [hitherto](<../../Words/hitherto.md>) — until now; up to this point
 - [preliminary](<../../Words/preliminary.md>) — coming before; preparatory
+- [swift](<../../Words/swift.md>) — moving or happening with great speed

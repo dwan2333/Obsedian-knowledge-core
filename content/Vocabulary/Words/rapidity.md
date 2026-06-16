@@ -16,4 +16,5 @@
 - **Domain** — [Everyday Speech & General Use](<../Categories/Domains/Everyday Speech & General Use.md>)
 
 ## Related words
+- [swift](swift.md) — kin; the adjective for great speed
 - *speed, swiftness, celerity, velocity* — close in sense (not yet in the vault)

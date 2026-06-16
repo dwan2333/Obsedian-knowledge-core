@@ -53,6 +53,9 @@ The heightened register — words that lend writing dignity, colour, or nuance, 
 - [perverse](<../../Words/perverse.md>) — stubbornly contrary
 - [piquant](<../../Words/piquant.md>) — pleasantly sharp
 - [propensity](<../../Words/propensity.md>) — a natural tendency
+- [ecstatic](<../../Words/ecstatic.md>) — rapturously joyful
+- [serene](<../../Words/serene.md>) — calm and untroubled
+- [seething](<../../Words/seething.md>) — boiling with contained anger
 
 ## Related categories
 - [Everyday Speech & General Use](<../Domains/Everyday Speech & General Use.md>)

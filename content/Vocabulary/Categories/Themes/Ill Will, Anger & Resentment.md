@@ -11,3 +11,4 @@ Vocabulary for the darker social feelings: spite, resentment, and righteous indi
 - [spiteful](<../../Words/spiteful.md>) — moved by petty, malicious ill will
 - [bitter](<../../Words/bitter.md>) — resentful; sharp and acrid
 - [cynicism](<../../Words/cynicism.md>) — sneering distrust of others' motives
+- [seething](<../../Words/seething.md>) — boiling with barely-contained anger

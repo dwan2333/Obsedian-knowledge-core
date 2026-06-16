@@ -48,6 +48,8 @@ The workaday register — vivid, useful words you can drop into conversation wit
 - [scarcely](<../../Words/scarcely.md>) — barely; hardly
 - [canary](<../../Words/canary.md>) — a small songbird
 - [pence](<../../Words/pence.md>) — small coins; money
+- [graceful](<../../Words/graceful.md>) — elegant and smoothly beautiful
+- [swift](<../../Words/swift.md>) — moving or happening with great speed
 
 ## Related categories
 - [Literary & Elevated Prose](<../Domains/Literary & Elevated Prose.md>)

@@ -20,3 +20,4 @@
 
 ## Appears in
 - *"…spirits of that progressive epoch"* — [The Brothers Karamazov — Ch. 1](<../../Quotes/Sources/The Brothers Karamazov/Chapter 1.md>) (p. 11)
+- *"…a youth of our last epoch…"* — [The Brothers Karamazov — Ch. 5](<../../Quotes/Sources/The Brothers Karamazov/Chapter 5.md>) (p. 54)

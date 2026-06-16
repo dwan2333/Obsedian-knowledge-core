@@ -9,6 +9,7 @@ Vocabulary for things that appeal to the senses — the lush, the scenic, and th
 - [picturesque](<../../Words/picturesque.md>) — charmingly scenic, like a picture
 - [piquancy](<../../Words/piquancy.md>) — a pleasantly sharp, zesty quality
 - [piquant](<../../Words/piquant.md>) — pleasantly sharp; intriguing
+- [graceful](<../../Words/graceful.md>) — elegant and smoothly beautiful in form
 
 ## Related categories
 - [The Ordinary & the Dull](<../Themes/The Ordinary & the Dull.md>)
