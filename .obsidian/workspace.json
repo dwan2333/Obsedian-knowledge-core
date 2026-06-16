@@ -8,31 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e6f77e48c0323266",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/bitter.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "bitter"
-            }
-          },
-          {
             "id": "ed292567fd8c29b7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Vocabulary/Words/slyness.md",
+                "file": "content/Vocabulary/Words/acute.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "slyness"
+              "title": "acute"
+            }
+          },
+          {
+            "id": "d26960b6bc63c2fb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/artfulness.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "artfulness"
             }
           },
           {
@@ -287,44 +287,44 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e6f77e48c0323266",
+  "active": "ed292567fd8c29b7",
   "lastOpenFiles": [
-    "content/Vocabulary/Words/squirm.md",
-    "content/Vocabulary/Words/squirm.md.tmp.7092.e65228315ac2",
-    "content/Vocabulary/Words/perspiration.md",
-    "content/Vocabulary/Words/perspiration.md.tmp.7092.5839fa2d45e0",
-    "content/Vocabulary/Words/artfulness.md",
-    "content/Vocabulary/Words/writhe.md",
-    "content/Vocabulary/Words/slyness.md",
-    "content/Vocabulary/Words/throb.md",
-    "content/Vocabulary/Words/earnestness.md",
-    "content/Vocabulary/Words/earnestness.md.tmp.7092.9027ddea9236",
-    "content/Vocabulary/Words/impassioned.md",
-    "content/Vocabulary/Words/impassioned.md.tmp.7092.e10ae9608170",
-    "content/Vocabulary/Words/frantic.md",
-    "content/Vocabulary/Words/ecstasy.md",
-    "content/Vocabulary/Words/abnegation.md",
-    "content/Vocabulary/Words/abnegation.md.tmp.7092.a989c026d969",
-    "content/Vocabulary/Words/ardent.md",
+    "content/Vocabulary/Words/proliferation.md",
+    "content/Vocabulary/Words/proliferation.md.tmp.7092.dfd9d66ebd5a",
+    "content/Vocabulary/Words/desensitized.md",
+    "content/Vocabulary/Words/desensitized.md.tmp.7092.5a70cb990593",
+    "content/Vocabulary/Words/dud.md",
+    "content/Vocabulary/Words/dud.md.tmp.7092.74c55bb76f1b",
+    "content/Vocabulary/Words/incarnation.md",
+    "content/Vocabulary/Words/incarnation.md.tmp.7092.f7a287a63fb9",
+    "content/Vocabulary/Words/hew.md",
+    "content/Vocabulary/Words/hew.md.tmp.7092.0fe97aeb8ac4",
+    "content/Vocabulary/Words/gurney.md",
+    "content/Vocabulary/Words/sedentary.md",
+    "content/Vocabulary/Words/oleander.md",
+    "content/Vocabulary/Words/oleander.md.tmp.7092.e0793dbed577",
+    "content/Vocabulary/Words/doodle.md",
+    "content/Vocabulary/Words/doodle.md.tmp.7092.f6270b75f222",
+    "content/Vocabulary/Words/tangible.md",
+    "content/Vocabulary/Words/tangible.md.tmp.7092.fd794a040122",
+    "content/Vocabulary/Words/malpractice.md",
+    "content/Vocabulary/Words/unsolicited.md",
+    "content/Vocabulary/Words/unsolicited.md.tmp.7092.11ccc5a3c324",
+    "content/Vocabulary/Words/upend.md",
+    "content/Vocabulary/Words/stern.md",
+    "content/Vocabulary/Words/stern.md.tmp.7092.426362c03df5",
+    "content/Vocabulary/Words/custodian.md",
     "content/Vocabulary/Words/absolution.md",
-    "content/Vocabulary/Words/absolution.md.tmp.7092.e8c5d9d96b58",
-    "content/Vocabulary/Words/martyr.md",
-    "content/Vocabulary/Words/martyr.md.tmp.7092.36c4edb21404",
-    "content/Vocabulary/Words/ikon.md",
-    "content/Vocabulary/Words/ikon.md.tmp.7092.ab43f4965c37",
-    "content/Vocabulary/Words/frenzied.md",
-    "content/Vocabulary/Words/aquiline.md",
-    "content/Vocabulary/Words/apprehension.md",
-    "content/Vocabulary/Words/apportion.md",
-    "content/Vocabulary/Words/affront.md",
-    "content/Vocabulary/Words/dread.md",
-    "content/Vocabulary/Words/beseech.md",
-    "content/Vocabulary/Words/presentiment.md",
-    "content/Vocabulary/Words/exhortation.md",
-    "content/Vocabulary/Words/admonition.md",
-    "content/Vocabulary/Words/abject.md",
-    "content/Vocabulary/Words/indissoluble.md.tmp.7092.65c388795fb3",
-    "content/Vocabulary/Words/perpetual.md.tmp.7092.0751b4f06d05",
+    "content/Vocabulary/Words/artfulness.md",
+    "content/Vocabulary/Words/farce.md",
+    "content/Vocabulary/Words/vileness.md",
+    "content/Vocabulary/Words/inflict.md",
+    "content/Vocabulary/Words/persecute.md",
+    "content/Vocabulary/Words/abnegation.md",
+    "content/Vocabulary/Words/amicably.md",
+    "content/Vocabulary/Words/countenance.md",
+    "content/Vocabulary/Words/supercilious.md",
+    "content/Vocabulary/Words/rudimentary.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_mindmap.png",
     "content/Mathematics/Logarithms/lf_fig1_linear_vs_log.png",
     "content/Mathematics/Euler 's equation/efm_fig4_two_faces.png",
