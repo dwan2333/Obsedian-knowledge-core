@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
+                "file": "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/Exponential and Logarithmic Functions (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The Pythagorean Theorem (Main)"
+              "title": "Exponential and Logarithmic Functions (Main)"
             }
           }
         ]
@@ -217,10 +217,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "328aa9c891b22c6e",
+  "active": "280fb91b828b758e",
   "lastOpenFiles": [
-    "content/Mathematics/Pythagorean Theorem/inverse_pythagorean_theorem.md",
+    "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/chapter4_fig_4.1_2_companies_linear_vs_exp.png",
+    "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/chapter4_fig_4.1_1_exp_growth_graph.png",
     "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
+    "content/Mathematics/Pythagorean Theorem/inverse_pythagorean_theorem.md",
     "content/Mathematics/Pythagorean Theorem/pyth_mindmap.png",
     "content/Mathematics/Pythagorean Theorem/pyth_fig4_super_theorem.png",
     "content/Mathematics/Pythagorean Theorem/pyth_fig3_simplest_altitude.png",
@@ -240,7 +242,6 @@
     "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
     "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
     "content/Mathematics/Trigonometric/spt_mindmap.png",
-    "content/Mathematics/Trigonometric/spt_fig3_unit_circle.png",
     "content/Vocabulary/Words/exhortation.md",
     "content/Vocabulary/Words/antsy.md",
     "content/Vocabulary/Words/admonition.md",
