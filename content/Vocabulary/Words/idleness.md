@@ -19,3 +19,4 @@
 - [dissipated](dissipated.md) — what idleness can curdle into when filled with indulgence
 - [debauchery](debauchery.md) — the excess that often grows from too much idle time
 - [frivolous](frivolous.md) — kin in spirit; idleness does nothing, the frivolous does what little matters
+- [profligate](profligate.md) — kin; the reckless dissipation that idleness slides toward

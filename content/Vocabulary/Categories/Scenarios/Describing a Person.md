@@ -43,6 +43,8 @@ When you want to pin down what a person is *like* — sharp or servile, strong o
 - [graceful](<../../Words/graceful.md>) — elegant and smoothly beautiful
 - [serene](<../../Words/serene.md>) — calm, peaceful, and untroubled
 - [seething](<../../Words/seething.md>) — boiling with barely-contained anger
+- [spiteful](<../../Words/spiteful.md>) — full of spite; petty and malicious
+- [whimsical](<../../Words/whimsical.md>) — playfully fanciful; capricious
 
 ## Related categories
 - [Critiquing & Dismissing](<../Scenarios/Critiquing & Dismissing.md>)
