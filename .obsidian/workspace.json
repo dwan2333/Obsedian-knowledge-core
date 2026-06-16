@@ -35,7 +35,8 @@
               "title": "Exponential and Logarithmic Functions (Main)"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -156,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Mathematics/Logarithms/Logarithm Fundamentals (Main).md",
+                "file": "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/Exponential and Logarithmic Functions (Main).md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Logarithm Fundamentals (Main)"
+              "title": "Outline of Exponential and Logarithmic Functions (Main)"
             }
           },
           {
@@ -230,11 +231,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1a29935441866d19",
+  "active": "280fb91b828b758e",
   "lastOpenFiles": [
+    "content/Mathematics/Logarithms/Logarithm Fundamentals (Main).md",
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/Exponential and Logarithmic Functions (Main).md",
     "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
-    "content/Mathematics/Logarithms/Logarithm Fundamentals (Main).md",
     "content/Mathematics/Logarithms/Natural Logarithm/The Natural Logarithm (Main).md",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_mindmap.png",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_fig1_prime_density.png",
