@@ -17,6 +17,7 @@
 - **Scenario** — [Describing a Person](<../Categories/Scenarios/Describing a Person.md>)
 
 ## Related words
+- [mopey](mopey.md) — kin; a lighter, more colloquial gloom
 - [sullenness](sullenness.md) — kin; the silent, sulky temper morose names
 - [inconsolable](inconsolable.md) — kin in deeper grief
 - [merry](merry.md) — antonym; cheerful and jolly

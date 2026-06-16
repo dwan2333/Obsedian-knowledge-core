@@ -19,3 +19,14 @@ When you're spinning a tale and need the language of suspense, impulse, and high
 - [blubber](<../../Words/blubber.md>) — to weep noisily
 - [moan](<../../Words/moan.md>) — a low sound of pain or grief
 - [seething](<../../Words/seething.md>) — a crowd or a temper boiling with turbulence
+- [apprehension](<../../Words/apprehension.md>) — anxious dread
+- [dread](<../../Words/dread.md>) — deep fear of what is coming
+- [ominous](<../../Words/ominous.md>) — foreboding; threatening
+- [beseech](<../../Words/beseech.md>) — to implore desperately
+- [entreat](<../../Words/entreat.md>) — to plead earnestly
+- [exploit](<../../Words/exploit.md>) — a daring feat
+- [martyr](<../../Words/martyr.md>) — one who suffers for a cause
+- [writhe](<../../Words/writhe.md>) — to twist in pain
+- [wail](<../../Words/wail.md>) — to cry out in grief
+- [calamity](<../../Words/calamity.md>) — a disaster
+- [persecute](<../../Words/persecute.md>) — to hound and ill-treat

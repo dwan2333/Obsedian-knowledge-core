@@ -17,6 +17,7 @@
 - **Scenario** — [Describing a Person](<../Categories/Scenarios/Describing a Person.md>)
 
 ## Related words
+- [supercilious](supercilious.md) — kin; lofty disdain beside rude defiance
 - [effrontery](effrontery.md) — kin; the shameless audacity behind insolence
 - [affront](affront.md) — kin; the open insult insolence delivers
 - *impudent, impertinent, insubordinate, brazen* — close in sense (not yet in the vault)

@@ -13,6 +13,10 @@ When you want to register disapproval with precision — too plain, too small, o
 - [snigger](<../../Words/snigger.md>) — a sly, mocking laugh
 - [ridicule](<../../Words/ridicule.md>) — mockery meant to belittle
 - [revolting](<../../Words/revolting.md>) — disgusting; repulsive
+- [superficial](<../../Words/superficial.md>) — dismissed as shallow
+- [rudimentary](<../../Words/rudimentary.md>) — dismissed as basic
+- [farce](<../../Words/farce.md>) — dismissed as an absurd sham
+- [dud](<../../Words/dud.md>) — dismissed as a flop
 
 ## Related categories
 - [Describing a Person](<../Scenarios/Describing a Person.md>)

@@ -12,3 +12,4 @@ The precise, often Latin-rooted register of legal and official writing.
 - [matrimonial](<../../Words/matrimonial.md>) — relating to marriage
 - [installment](<../../Words/installment.md>) — a part-payment in a series
 - [preliminary](<../../Words/preliminary.md>) — preparatory; coming before the main business
+- [malpractice](<../../Words/malpractice.md>) — negligent professional misconduct

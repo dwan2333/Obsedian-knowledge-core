@@ -10,6 +10,8 @@ Vocabulary for things that appeal to the senses — the lush, the scenic, and th
 - [piquancy](<../../Words/piquancy.md>) — a pleasantly sharp, zesty quality
 - [piquant](<../../Words/piquant.md>) — pleasantly sharp; intriguing
 - [graceful](<../../Words/graceful.md>) — elegant and smoothly beautiful in form
+- [appealing](<../../Words/appealing.md>) — attractive and pleasing
+- [enticing](<../../Words/enticing.md>) — attractive in a tempting way
 
 ## Related categories
 - [The Ordinary & the Dull](<../Themes/The Ordinary & the Dull.md>)

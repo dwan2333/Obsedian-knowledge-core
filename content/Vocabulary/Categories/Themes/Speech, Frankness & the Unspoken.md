@@ -8,3 +8,6 @@ The vocabulary of expression — from the opinion declared and the truth spoken 
 - [opine](<../../Words/opine.md>) — to state as one's opinion
 - [candid](<../../Words/candid.md>) — frank and openly honest
 - [implicit](<../../Words/implicit.md>) — implied though not directly stated
+- [digress](<../../Words/digress.md>) — to wander off the subject
+- [utterance](<../../Words/utterance.md>) — something spoken
+- [ascribe](<../../Words/ascribe.md>) — to attribute to a source

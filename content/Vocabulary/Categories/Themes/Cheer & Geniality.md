@@ -8,6 +8,7 @@ The sunny side of temperament — the cheer that bubbles outward and the warmth 
 - [merry](<../../Words/merry.md>) — cheerful and high-spirited
 - [expansive](<../../Words/expansive.md>) — genial, open, and communicative
 - [liberally](<../../Words/liberally.md>) — freely and generously
+- [amicably](<../../Words/amicably.md>) — in a friendly, good-natured way
 
 ## Related categories
 - [Sorrow, Gloom & Weeping](<../Themes/Sorrow, Gloom & Weeping.md>)

@@ -16,6 +16,7 @@
 - **Domain** — [Literary & Elevated Prose](<../Categories/Domains/Literary & Elevated Prose.md>)
 
 ## Related words
+- [pretext](pretext.md) — kin; the false cover that artfulness devises
 - [slyness](slyness.md) — near-synonym; secretive craft
 - [rogue](rogue.md) — kin; the sly rascal who lives by such craft
 - *guile, cunning, craftiness, wiliness* — close in sense (not yet in the vault)

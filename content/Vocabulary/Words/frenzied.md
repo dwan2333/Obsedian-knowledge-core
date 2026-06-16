@@ -17,6 +17,7 @@
 > Neutral-to-literary, vivid and negative-leaning — *frenzied* stresses loss of control, whether from fear, excitement, or rage. Stronger than "hectic"; it suggests action that has slipped past reason.
 
 ## Related words
+- [frantic](frantic.md) — kin; wild with panic rather than excitement
 - [fanatic](fanatic.md) — kin; zeal that erupts into frantic action
 - [ardent](ardent.md) — kin; the passion that, unchecked, becomes frenzy
 - [ecstatic](ecstatic.md) — kin; intensity turned to rapture rather than disorder

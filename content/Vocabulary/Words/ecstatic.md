@@ -17,6 +17,7 @@
 - **Scenario** — [Describing a Person](<../Categories/Scenarios/Describing a Person.md>)
 
 ## Related words
+- [ecstasy](ecstasy.md) — the noun for this rapturous state
 - [ardent](ardent.md) — kin; burning, intense feeling
 - [frenzied](frenzied.md) — kin; emotion at an overwhelming, uncontrolled pitch
 - [serene](serene.md) — contrast; rapturous excitement against settled calm

@@ -8,6 +8,7 @@ The vocabulary of impudence — boldness that has thrown off shame and respect a
 - [insolent](<../../Words/insolent.md>) — rudely disrespectful and contemptuous
 - [effrontery](<../../Words/effrontery.md>) — shameless, barefaced audacity
 - [affront](<../../Words/affront.md>) — an open, deliberate insult
+- [supercilious](<../../Words/supercilious.md>) — haughtily disdainful
 
 ## Related categories
 - [Ill Will, Anger & Resentment](<../Themes/Ill Will, Anger & Resentment.md>)

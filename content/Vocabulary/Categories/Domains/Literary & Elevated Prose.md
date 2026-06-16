@@ -56,6 +56,41 @@ The heightened register — words that lend writing dignity, colour, or nuance, 
 - [ecstatic](<../../Words/ecstatic.md>) — rapturously joyful
 - [serene](<../../Words/serene.md>) — calm and untroubled
 - [seething](<../../Words/seething.md>) — boiling with contained anger
+- [apprehension](<../../Words/apprehension.md>) — anxious dread
+- [ominous](<../../Words/ominous.md>) — foreboding
+- [inharmonious](<../../Words/inharmonious.md>) — discordant
+- [disparity](<../../Words/disparity.md>) — a great or unfair difference
+- [beseech](<../../Words/beseech.md>) — to implore
+- [entreat](<../../Words/entreat.md>) — to plead earnestly
+- [exhortation](<../../Words/exhortation.md>) — an urgent appeal
+- [admonition](<../../Words/admonition.md>) — a gentle warning
+- [homage](<../../Words/homage.md>) — reverent tribute
+- [exalted](<../../Words/exalted.md>) — raised high in rank or worth
+- [laudable](<../../Words/laudable.md>) — praiseworthy
+- [endow](<../../Words/endow.md>) — to furnish with a quality or gift
+- [indissoluble](<../../Words/indissoluble.md>) — unbreakable
+- [perpetual](<../../Words/perpetual.md>) — never ending
+- [ikon](<../../Words/ikon.md>) — a venerated religious image
+- [martyr](<../../Words/martyr.md>) — one who suffers for a belief
+- [absolution](<../../Words/absolution.md>) — release from sin or guilt
+- [abnegation](<../../Words/abnegation.md>) — self-denial
+- [ecstasy](<../../Words/ecstasy.md>) — rapture
+- [impassioned](<../../Words/impassioned.md>) — filled with intense feeling
+- [earnestness](<../../Words/earnestness.md>) — sincere seriousness
+- [inexplicable](<../../Words/inexplicable.md>) — impossible to explain
+- [oblivion](<../../Words/oblivion.md>) — the state of being forgotten
+- [pretext](<../../Words/pretext.md>) — a false, concealing reason
+- [acute](<../../Words/acute.md>) — keen and sharp
+- [utterance](<../../Words/utterance.md>) — something spoken
+- [ascribe](<../../Words/ascribe.md>) — to attribute to a source
+- [calamity](<../../Words/calamity.md>) — a disaster
+- [supercilious](<../../Words/supercilious.md>) — haughtily disdainful
+- [persecute](<../../Words/persecute.md>) — to ill-treat for beliefs
+- [inflict](<../../Words/inflict.md>) — to impose something painful
+- [vileness](<../../Words/vileness.md>) — moral foulness
+- [debilitating](<../../Words/debilitating.md>) — weakening
+- [incarnation](<../../Words/incarnation.md>) — a living embodiment or version
+- [proliferation](<../../Words/proliferation.md>) — rapid increase or spread
 
 ## Related categories
 - [Everyday Speech & General Use](<../Domains/Everyday Speech & General Use.md>)

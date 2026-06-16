@@ -50,6 +50,46 @@ The workaday register — vivid, useful words you can drop into conversation wit
 - [pence](<../../Words/pence.md>) — small coins; money
 - [graceful](<../../Words/graceful.md>) — elegant and smoothly beautiful
 - [swift](<../../Words/swift.md>) — moving or happening with great speed
+- [digress](<../../Words/digress.md>) — to wander off the subject
+- [competent](<../../Words/competent.md>) — adequately skilled
+- [superficial](<../../Words/superficial.md>) — shallow
+- [exploit](<../../Words/exploit.md>) — a daring feat; to use unfairly
+- [flock](<../../Words/flock.md>) — to gather in numbers
+- [undertake](<../../Words/undertake.md>) — to take on a task
+- [stern](<../../Words/stern.md>) — severe and strict
+- [throb](<../../Words/throb.md>) — to pulse strongly
+- [wail](<../../Words/wail.md>) — to cry out in grief
+- [appealing](<../../Words/appealing.md>) — attractive and pleasing
+- [amicably](<../../Words/amicably.md>) — in a friendly way
+- [wrangle](<../../Words/wrangle.md>) — to argue noisily
+- [quarrelsome](<../../Words/quarrelsome.md>) — quick to argue
+- [dread](<../../Words/dread.md>) — deep fear of what is coming
+- [venture](<../../Words/venture.md>) — a risky undertaking; to dare
+- [farce](<../../Words/farce.md>) — an absurd mess
+- [upend](<../../Words/upend.md>) — to overturn or disrupt
+- [writhe](<../../Words/writhe.md>) — to twist in pain
+- [perspiration](<../../Words/perspiration.md>) — sweat
+- [grit](<../../Words/grit.md>) — courage and resolve
+- [unscathed](<../../Words/unscathed.md>) — unharmed
+- [rudimentary](<../../Words/rudimentary.md>) — basic and undeveloped
+- [frantic](<../../Words/frantic.md>) — wild with panic
+- [doodle](<../../Words/doodle.md>) — to scribble idly
+- [oleander](<../../Words/oleander.md>) — a flowering shrub
+- [sedentary](<../../Words/sedentary.md>) — given to sitting; inactive
+- [gurney](<../../Words/gurney.md>) — a wheeled stretcher
+- [enticing](<../../Words/enticing.md>) — temptingly attractive
+- [hew](<../../Words/hew.md>) — to chop or carve; to adhere to
+- [wunderkind](<../../Words/wunderkind.md>) — a young prodigy
+- [dud](<../../Words/dud.md>) — a flop; a failure
+- [desensitized](<../../Words/desensitized.md>) — numbed by exposure
+- [squirm](<../../Words/squirm.md>) — to wriggle from discomfort
+- [mopey](<../../Words/mopey.md>) — gloomy and listless
+- [kiosk](<../../Words/kiosk.md>) — a small booth or stall
+- [antsy](<../../Words/antsy.md>) — restless and fidgety
+- [ingrained](<../../Words/ingrained.md>) — deeply fixed
+- [unsolicited](<../../Words/unsolicited.md>) — not asked for
+- [unsettling](<../../Words/unsettling.md>) — quietly disturbing
+- [tangible](<../../Words/tangible.md>) — concrete; perceptible by touch
 
 ## Related categories
 - [Literary & Elevated Prose](<../Domains/Literary & Elevated Prose.md>)

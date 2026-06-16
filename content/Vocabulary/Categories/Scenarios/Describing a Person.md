@@ -45,6 +45,14 @@ When you want to pin down what a person is *like* — sharp or servile, strong o
 - [seething](<../../Words/seething.md>) — boiling with barely-contained anger
 - [spiteful](<../../Words/spiteful.md>) — full of spite; petty and malicious
 - [whimsical](<../../Words/whimsical.md>) — playfully fanciful; capricious
+- [quarrelsome](<../../Words/quarrelsome.md>) — quick to argue
+- [competent](<../../Words/competent.md>) — capable and adequately skilled
+- [frantic](<../../Words/frantic.md>) — wild with panic or hurry
+- [supercilious](<../../Words/supercilious.md>) — haughtily disdainful
+- [mopey](<../../Words/mopey.md>) — gloomy and listless
+- [grit](<../../Words/grit.md>) — courage and resolve
+- [stern](<../../Words/stern.md>) — severe and strict
+- [sedentary](<../../Words/sedentary.md>) — given to much sitting; inactive
 
 ## Related categories
 - [Critiquing & Dismissing](<../Scenarios/Critiquing & Dismissing.md>)

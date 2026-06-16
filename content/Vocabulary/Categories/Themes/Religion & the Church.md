@@ -13,3 +13,7 @@ Vocabulary for the world of faith: its places, ranks, and practices.
 - [mystic](<../../Words/mystic.md>) — a seeker of union with the divine
 - [secularist](<../../Words/secularist.md>) — one who keeps religion out of public life
 - [chaste](<../../Words/chaste.md>) — pure and abstinent
+- [ikon](<../../Words/ikon.md>) — a venerated religious image
+- [martyr](<../../Words/martyr.md>) — one who suffers or dies for a belief
+- [absolution](<../../Words/absolution.md>) — formal release from sin or guilt
+- [abnegation](<../../Words/abnegation.md>) — self-denial; renunciation

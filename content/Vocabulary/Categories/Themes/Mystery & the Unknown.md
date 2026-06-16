@@ -9,3 +9,5 @@ Vocabulary for things that resist understanding and invite curiosity.
 - [obscure](<../../Words/obscure.md>) — unclear or little-known; to hide
 - [queer](<../../Words/queer.md>) — strange, odd, or peculiar
 - [presentiment](<../../Words/presentiment.md>) — a foreboding of something to come
+- [inexplicable](<../../Words/inexplicable.md>) — impossible to explain
+- [oblivion](<../../Words/oblivion.md>) — the state of being forgotten

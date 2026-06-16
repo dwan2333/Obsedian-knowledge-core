@@ -17,6 +17,7 @@
 - **Scenario** — [Describing a Person](<../Categories/Scenarios/Describing a Person.md>)
 
 ## Related words
+- [acute](acute.md) — kin; keen and penetrating of mind
 - [circumvent](circumvent.md) — what a shrewd mind does to an obstacle: gets cleverly around it
 - [sagacious](sagacious.md) — near-synonym; wise and discerning, a touch grander and warmer
 - *astute, canny, wily, cunning* — close in sense, from neutral (*astute*) to sly (*cunning*) (not yet in the vault)

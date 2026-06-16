@@ -13,3 +13,5 @@ Worldly cleverness — the mind that sizes things up quickly and outmanoeuvres w
 - [wits](<../../Words/wits.md>) — the mental faculties; sharpness of mind
 - [rogue](<../../Words/rogue.md>) — a scoundrel or mischievous rascal
 - [faculty](<../../Words/faculty.md>) — a power of the mind
+- [pretext](<../../Words/pretext.md>) — a false reason concealing the real one
+- [acute](<../../Words/acute.md>) — keen and sharp of mind

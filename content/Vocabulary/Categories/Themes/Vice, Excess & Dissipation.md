@@ -14,6 +14,7 @@ Vocabulary for excess and dissipation: the dissolute life and the squandering of
 - [decadent](<../../Words/decadent.md>) — self-indulgent; in moral decline
 - [sottish](<../../Words/sottish.md>) — stupefied with drink
 - [harlot](<../../Words/harlot.md>) — (archaic) a prostitute
+- [vileness](<../../Words/vileness.md>) — moral foulness; baseness
 
 ## Related categories
 - [Beauty, Pleasure & the Senses](<../Themes/Beauty, Pleasure & the Senses.md>)

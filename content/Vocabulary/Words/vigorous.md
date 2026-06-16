@@ -17,5 +17,6 @@
 - **Scenario** — [Describing a Person](<../Categories/Scenarios/Describing a Person.md>)
 
 ## Related words
+- [debilitating](debilitating.md) — antonym; weakening rather than strengthening
 - [puny](puny.md) — antonym; small, weak, and feeble
 - *robust, energetic, dynamic, forceful* — close in sense (not yet in the vault)

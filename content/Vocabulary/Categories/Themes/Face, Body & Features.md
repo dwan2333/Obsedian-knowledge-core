@@ -9,6 +9,10 @@ The vocabulary of physical description — what the face reveals, the features t
 - [aquiline](<../../Words/aquiline.md>) — (of a nose) hooked like an eagle's beak
 - [stump](<../../Words/stump.md>) — the remnant of a limb or other cut-off part
 - [slobber](<../../Words/slobber.md>) — to drool; to gush mawkishly
+- [throb](<../../Words/throb.md>) — to pulse strongly, as with pain
+- [writhe](<../../Words/writhe.md>) — to twist the body in pain
+- [perspiration](<../../Words/perspiration.md>) — sweat
+- [squirm](<../../Words/squirm.md>) — to wriggle from discomfort
 
 ## Related categories
 - [Beauty, Pleasure & the Senses](<../Themes/Beauty, Pleasure & the Senses.md>)

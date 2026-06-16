@@ -19,3 +19,6 @@ The register of historians, social commentators, and political writers — for n
 - [bourgeois](<../../Words/bourgeois.md>) — of the materialist middle class
 - [inmate](<../../Words/inmate.md>) — a person confined to an institution
 - [foundry](<../../Words/foundry.md>) — a metal-casting works
+- [persecute](<../../Words/persecute.md>) — to ill-treat for beliefs or identity
+- [custodian](<../../Words/custodian.md>) — a keeper or guardian
+- [disincentive](<../../Words/disincentive.md>) — something that discourages action

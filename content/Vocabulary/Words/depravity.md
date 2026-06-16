@@ -16,6 +16,7 @@
 - **Domain** — [Literary & Elevated Prose](<../Categories/Domains/Literary & Elevated Prose.md>)
 
 ## Related words
+- [vileness](vileness.md) — kin; moral foulness with a note of disgust
 - [decadent](decadent.md) — kin; moral decline, with a flavour of luxury
 - [sottish](sottish.md) — kin; the degraded state of the habitual drunkard
 - *corruption, vice, turpitude, debasement* — close in sense (not yet in the vault)

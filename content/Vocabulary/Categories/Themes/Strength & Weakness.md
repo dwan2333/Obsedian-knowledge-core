@@ -8,6 +8,8 @@ The spectrum from robust force to feeble inadequacy — of bodies, efforts, and 
 - [vigorous](<../../Words/vigorous.md>) — strong, energetic, forceful
 - [puny](<../../Words/puny.md>) — small, weak, and insignificant
 - [ironclad](<../../Words/ironclad.md>) — unbreakably firm; impossible to alter or escape
+- [debilitating](<../../Words/debilitating.md>) — weakening; sapping strength
+- [grit](<../../Words/grit.md>) — courage and dogged resolve
 
 ## Related categories
 - [Obstacles & Danger](<../Themes/Obstacles & Danger.md>)

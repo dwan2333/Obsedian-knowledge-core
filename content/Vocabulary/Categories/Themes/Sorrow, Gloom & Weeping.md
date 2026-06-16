@@ -11,6 +11,8 @@ The vocabulary of sadness in all its shades — from a brooding, sullen gloom to
 - [pang](<../../Words/pang.md>) — a sudden sharp stab of feeling
 - [moan](<../../Words/moan.md>) — a low sound of pain or grief
 - [blubber](<../../Words/blubber.md>) — to weep noisily and messily
+- [wail](<../../Words/wail.md>) — to cry out loudly in grief
+- [mopey](<../../Words/mopey.md>) — gloomy and listless
 
 ## Related categories
 - [Ill Will, Anger & Resentment](<../Themes/Ill Will, Anger & Resentment.md>)

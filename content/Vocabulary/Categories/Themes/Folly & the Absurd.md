@@ -9,3 +9,4 @@ The vocabulary of absurdity — what is too foolish or far-fetched to take serio
 - [frivolous](<../../Words/frivolous.md>) — not serious; trivial and silly
 - [snigger](<../../Words/snigger.md>) — a sly, mocking, half-suppressed laugh
 - [ridicule](<../../Words/ridicule.md>) — mockery meant to make something look foolish
+- [farce](<../../Words/farce.md>) — an absurd, ridiculous mess
