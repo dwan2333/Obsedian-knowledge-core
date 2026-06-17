@@ -1,0 +1,1 @@
+Nothing too exciting happened today and I pretty much hewed to my regular schedule.  The World Cup was the most exhilarating part of my day. I watched the match between Argentina and Algeria. Although the match was a group match and not a knockout tournament yet, Messi's hat trick had
