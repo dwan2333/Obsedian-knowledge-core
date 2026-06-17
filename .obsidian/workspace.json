@@ -8,49 +8,34 @@
         "type": "tabs",
         "children": [
           {
-            "id": "980d2cd9a3a47b14",
+            "id": "a61b993deda68b92",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+                "file": "content/Daily notes/2026-06/Daily note 06-18.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 1 (Main)"
+              "title": "Daily note 06-18"
             }
           },
           {
-            "id": "ba6bbe66f6dc2e4a",
+            "id": "30d0f57d22f01c9e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
-                "mode": "preview",
+                "file": "content/Vocabulary/Words/wearying.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "chapter1_exercises"
-            }
-          },
-          {
-            "id": "3267d4b97e8c5409",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "chapter1_exercises"
+              "title": "wearying"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -246,11 +231,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ba6bbe66f6dc2e4a",
+  "active": "a61b993deda68b92",
   "lastOpenFiles": [
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+    "content/Vocabulary/Words/wearying.md",
+    "content/Daily notes/2026-06/Daily note 06-18.md",
+    "content/Daily notes/Untitled.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
     "content/Mathematics/Pi/negative_and_fractional_binomial_coefficients.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.4168.5d870fdd4820",
     "content/Daily notes/2026-06/Daily note 06-15.md",
@@ -276,8 +264,6 @@
     "content/Vocabulary/Words/fanatic.md",
     "content/Vocabulary/Words/graceful.md",
     "content/Vocabulary/Words/grit.md",
-    "content/Vocabulary/Words/impassioned.md",
-    "content/Vocabulary/Words/ironclad.md",
     "content/Mathematics/Pi/pi_fig1_polygon_bounds.png",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_mindmap.png",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_fig1_prime_density.png",
