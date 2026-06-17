@@ -8,133 +8,16 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a61b993deda68b92",
+            "id": "6f3c68d7c7fe8cc0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "chapter1_exercises"
-            }
-          },
-          {
-            "id": "0b567164ef467c5d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/enticing.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "enticing"
-            }
-          },
-          {
-            "id": "30d0f57d22f01c9e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Daily notes/2026-06/Daily note 06-17.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Daily note 06-17"
-            }
-          },
-          {
-            "id": "3d864b2d632606e1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/ascribe.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ascribe"
-            }
-          },
-          {
-            "id": "e64b07d228d4e520",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/exalted.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "exalted"
-            }
-          },
-          {
-            "id": "2614fbe3f9144a11",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/entreat.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "entreat"
-            }
-          },
-          {
-            "id": "5c4a8582c32a24a7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/ecstatic.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ecstatic"
-            }
-          },
-          {
-            "id": "217db0a6038683a3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/serene.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "serene"
-            }
-          },
-          {
-            "id": "53599865b173dfb7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/ecstasy.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ecstasy"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -330,20 +213,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "30d0f57d22f01c9e",
+  "active": "6f3c68d7c7fe8cc0",
   "lastOpenFiles": [
-    "content/Vocabulary/Words/ascribe.md",
-    "content/Daily notes/2026-06/Daily note 06-17.md",
-    "content/Vocabulary/Words/exalted.md",
-    "content/Vocabulary/Words/entreat.md",
     "content/Vocabulary/Words/enticing.md",
-    "content/Vocabulary/Words/appealing.md",
-    "content/Vocabulary/Words/ecstatic.md",
     "content/Vocabulary/Words/ecstasy.md",
     "content/Vocabulary/Words/serene.md",
-    "content/Vocabulary/Words/wearying.md",
+    "content/Vocabulary/Words/ecstatic.md",
+    "content/Vocabulary/Words/entreat.md",
+    "content/Vocabulary/Words/exalted.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+    "content/Vocabulary/Words/upend.md",
+    "content/Daily notes/2026-06/Daily note 06-17.md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_mindmap.png",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
+    "content/Vocabulary/Words/ascribe.md",
+    "content/Vocabulary/Words/appealing.md",
+    "content/Vocabulary/Words/wearying.md",
     "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
     "content/Daily notes/Untitled.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
@@ -354,15 +240,12 @@
     "content/Mathematics/Pi/Calculating Pi (Main).md.tmp.4452.ad0ac7ae5a5a",
     "content/Mathematics/Pi/Calculating Pi (Main).md.tmp.4452.5d37dfa4a0ae",
     "content/Mathematics/Pi/negative_and_fractional_binomial_coefficients.md.tmp.4452.475f2af29fa7",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Vocabulary/Words/disincentive.md",
     "content/Vocabulary/Words/apprehension.md",
     "content/Vocabulary/Words/dread.md",
     "content/Vocabulary/Words/ominous.md",
     "content/Vocabulary/Words/insolent.md",
     "content/Vocabulary/Words/supercilious.md",
-    "content/Vocabulary/Words/affront.md",
-    "content/Vocabulary/Words/beseech.md",
     "content/Mathematics/Pi/pi_fig1_polygon_bounds.png",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_mindmap.png",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_fig1_prime_density.png",
@@ -371,7 +254,6 @@
     "content/Mathematics/Precalculus 2e/Chapter 4 Exponential and Logarithmic Functions/chapter4_fig_4.1_1_exp_growth_graph.png",
     "content/Mathematics/Pythagorean Theorem/pyth_mindmap.png",
     "content/Mathematics/Pythagorean Theorem/pyth_fig4_super_theorem.png",
-    "content/Mathematics/Pythagorean Theorem/pyth_fig3_simplest_altitude.png",
     "content/Vocabulary/Words/vigorous.md.tmp.15160.3fef7e5810b4",
     "content/Vocabulary/Words/ludicrous.md.tmp.15160.ede229a50d96",
     "content/Vocabulary/Words/rudimentary.md.tmp.15160.8c82bc62ff3e",
