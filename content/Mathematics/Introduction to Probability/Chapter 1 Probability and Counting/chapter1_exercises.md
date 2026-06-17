@@ -699,6 +699,15 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 >
 > > [!success]- Click to reveal solution
 > > **Solution.** All three from inclusion-exclusion + non-negativity + monotonicity. Equalities: (1) iff $P(A \cup B) = 1$; (2) iff $P(A) = P(B) = P(A \cap B)$; (3) iff $A, B$ disjoint. ✓
+>
+> > [!tip]- Intuition — why bound (1) is equality exactly when $P(A \cup B) = 1$
+> > Start from the *always-true* identity (rearranged inclusion–exclusion):
+> > $$P(A \cap B) = P(A) + P(B) - P(A \cup B).$$
+> > The lower bound $P(A) + P(B) - 1$ simply **swaps $P(A \cup B)$ for $1$**. Since $P(A \cup B) \le 1$ always, replacing it with $1$ subtracts *at least as much* — pushing the right-hand side **down** — which is exactly why $P(A) + P(B) - 1 \le P(A \cap B)$. The two sides coincide only when the swap changed nothing, i.e. when $P(A \cup B) = 1$ exactly. Geometrically, $P(A \cup B) = 1$ means $A$ and $B$ together cover the *whole* sample space — there is **no outcome where both fail**.
+> >
+> > **Equality, on a die.** $A = \{1,2,3,4\}$ ("less than 5"), $B = \{3,4,5,6\}$ ("greater than 2"). Then $A \cup B = \{1,\dots,6\}$ so $P(A \cup B) = 1$, and $A \cap B = \{3,4\}$ so $P(A \cap B) = \tfrac{2}{6}$. Check: $\tfrac{4}{6} + \tfrac{4}{6} - 1 = \tfrac{2}{6}$ ✓ — a perfect equality, because the two events blanket every face.
+> >
+> > **Strict, on a die.** $A = \{1\}$, $B = \{2\}$. Now $A \cup B = \{1,2\}$, so $P(A \cup B) = \tfrac{2}{6} \ne 1$. The bound gives $\tfrac{1}{6} + \tfrac{1}{6} - 1 = -\tfrac{4}{6} \le 0 = P(A \cap B)$ — true, but nowhere near tight. The "$-1$" is a worst-case cushion; it stops wasting room only when $A \cup B$ covers 100% of the outcomes.
 
 > [!example] Exercise 44 — Set Difference
 > **Problem.** Let $A$ and $B$ be events. The difference $B - A$ is defined to be the set of all elements of $B$ that are not in $A$. Show that if $A \subseteq B$, then $P(B - A) = P(B) - P(A)$, directly using the axioms of probability.

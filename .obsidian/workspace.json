@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
-                "mode": "source",
+                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chapter 1 (Main)"
+              "title": "chapter1_exercises"
             }
           },
           {
@@ -233,6 +233,8 @@
   },
   "active": "ba6bbe66f6dc2e4a",
   "lastOpenFiles": [
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.4168.5d870fdd4820",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Daily notes/2026-06/Daily note 06-15.md",
     "content/Mathematics/Pi/negative_and_fractional_binomial_coefficients.md",
     "content/Mathematics/Pi/Calculating Pi (Main).md",
@@ -240,7 +242,6 @@
     "content/Mathematics/Pi/Calculating Pi (Main).md.tmp.4452.ad0ac7ae5a5a",
     "content/Mathematics/Pi/Calculating Pi (Main).md.tmp.4452.5d37dfa4a0ae",
     "content/Mathematics/Pi/negative_and_fractional_binomial_coefficients.md.tmp.4452.475f2af29fa7",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
     "content/Vocabulary/Words/disincentive.md",
     "content/Vocabulary/Words/apprehension.md",
@@ -261,7 +262,6 @@
     "content/Vocabulary/Words/grit.md",
     "content/Vocabulary/Words/impassioned.md",
     "content/Vocabulary/Words/ironclad.md",
-    "content/Vocabulary/Words/exalted.md",
     "content/Mathematics/Pi/pi_fig1_polygon_bounds.png",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_mindmap.png",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_fig1_prime_density.png",
