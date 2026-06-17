@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily notes/2026-06/Daily note 06-15.md",
+                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Daily note 06-15"
+              "title": "Chapter 1 (Main)"
             }
           },
           {
@@ -27,16 +27,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+                "file": "content/Mathematics/Pi/negative_and_fractional_binomial_coefficients.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "chapter1_exercises"
+              "title": "negative_and_fractional_binomial_coefficients"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -232,15 +231,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c454213724f09047",
+  "active": "ba6bbe66f6dc2e4a",
   "lastOpenFiles": [
+    "content/Daily notes/2026-06/Daily note 06-15.md",
+    "content/Mathematics/Pi/negative_and_fractional_binomial_coefficients.md",
+    "content/Mathematics/Pi/Calculating Pi (Main).md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Pi/Calculating Pi (Main).md.tmp.4452.ad0ac7ae5a5a",
     "content/Mathematics/Pi/Calculating Pi (Main).md.tmp.4452.5d37dfa4a0ae",
-    "content/Mathematics/Pi/negative_and_fractional_binomial_coefficients.md",
     "content/Mathematics/Pi/negative_and_fractional_binomial_coefficients.md.tmp.4452.475f2af29fa7",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
-    "content/Mathematics/Pi/Calculating Pi (Main).md",
     "content/Vocabulary/Words/disincentive.md",
     "content/Vocabulary/Words/apprehension.md",
     "content/Vocabulary/Words/dread.md",
@@ -261,7 +262,6 @@
     "content/Vocabulary/Words/impassioned.md",
     "content/Vocabulary/Words/ironclad.md",
     "content/Vocabulary/Words/exalted.md",
-    "content/Vocabulary/Words/laudable.md",
     "content/Mathematics/Pi/pi_fig1_polygon_bounds.png",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_mindmap.png",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_fig1_prime_density.png",
@@ -279,7 +279,6 @@
     "content/Vocabulary/Categories/Themes/Discord, Conflict & Disparity.md.tmp.7092.44a0c19769f5",
     "content/Vocabulary/Categories/Themes/Fear, Dread & Foreboding.md.tmp.7092.a4df8febc75c",
     "content/Vocabulary/Words/flock.md.tmp.7092.2b41ef64b389",
-    "content/Vocabulary/Words/disincentive.md.tmp.7092.8ed8e74f8805",
     "Untitled.canvas"
   ]
 }
