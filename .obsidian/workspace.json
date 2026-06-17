@@ -22,17 +22,59 @@
             }
           },
           {
+            "id": "63e34a1d68cf8ffd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/sedentary.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "sedentary"
+            }
+          },
+          {
+            "id": "c7ce92cfb82812ec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/scrupulous.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "scrupulous"
+            }
+          },
+          {
             "id": "b920ea7dd8beec21",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Vocabulary/Words/pretext.md",
+                "file": "content/Vocabulary/Words/puny.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pretext"
+              "title": "puny"
+            }
+          },
+          {
+            "id": "073e5f9f7b09ac57",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/vigorous.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "vigorous"
             }
           },
           {
@@ -554,34 +596,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b920ea7dd8beec21",
+  "active": "63e34a1d68cf8ffd",
   "lastOpenFiles": [
-    "content/Vocabulary/Words/presentiment.md",
+    "content/Vocabulary/Words/secularist.md",
+    "content/Vocabulary/Words/scrupulous.md",
+    "content/Vocabulary/Words/scrape.md",
+    "content/Vocabulary/Words/scarcely.md",
+    "content/Vocabulary/Words/sagacious.md",
+    "content/Vocabulary/Words/rudimentary.md",
+    "content/Vocabulary/Words/rogue.md",
+    "content/Vocabulary/Words/ridicule.md",
+    "content/Vocabulary/Words/revolting.md",
+    "content/Vocabulary/Words/rapidity.md",
+    "content/Vocabulary/Words/rapacious.md",
+    "content/Vocabulary/Words/queer.md",
+    "content/Vocabulary/Words/quarrelsome.md",
+    "content/Daily notes/2026-06/Daily note 06-15.md",
+    "content/Vocabulary/Words/puny.md",
+    "content/Vocabulary/Words/vigorous.md",
+    "content/Vocabulary/Words/prosaic.md",
+    "content/Vocabulary/Words/propensity.md",
+    "content/Vocabulary/Words/proliferation.md",
+    "content/Vocabulary/Words/profligate.md",
     "content/Vocabulary/Words/pretext.md",
+    "content/Vocabulary/Words/presentiment.md",
     "content/Vocabulary/Words/preliminary.md",
     "content/Vocabulary/Words/precipice.md",
     "content/Vocabulary/Words/pliable.md",
     "content/Vocabulary/Words/piquancy.md",
-    "content/Vocabulary/Words/piquant.md",
-    "content/Vocabulary/Words/picturesque.md",
-    "content/Vocabulary/Words/pester.md",
-    "content/Vocabulary/Words/perverse.md",
-    "content/Daily notes/2026-06/Daily note 06-15.md",
-    "content/Daily notes/2026-06/Daily note 06-16.md",
-    "content/Vocabulary/Words/disincentive.md",
-    "content/Vocabulary/Words/perspiration.md",
-    "content/Vocabulary/Words/persecute.md",
-    "content/Vocabulary/Words/perpetual.md",
-    "content/Vocabulary/Words/pence.md",
-    "content/Vocabulary/Words/pang.md",
-    "content/Vocabulary/Words/opine.md",
-    "content/Vocabulary/Words/ominous.md",
-    "content/Vocabulary/Words/oleander.md",
-    "content/Vocabulary/Words/obstinate.md",
-    "content/Vocabulary/Words/obscure.md",
-    "content/Vocabulary/Words/oblivion.md",
-    "content/Vocabulary/Words/mystic.md",
-    "content/Vocabulary/Words/morose.md",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_mindmap.png",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_fig1_prime_density.png",
     "content/Mathematics/Complex Numbers/cnf_fig1_complex_plane.png",
