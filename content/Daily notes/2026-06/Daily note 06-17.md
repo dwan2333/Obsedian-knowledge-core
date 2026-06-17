@@ -1,3 +1,3 @@
 Nothing too exciting happened today and I pretty much hewed to my regular schedule.  The World Cup was the most exhilarating part of my day. I watched the match between Argentina and Algeria. Although the match was a group match and not a knockout tournament yet, Messi's outstanding performance had earned him an hat trick and I was ecstatic each time he score a goal.
 
-For what I have learned today, I was again studying probability and reviewing the same topics over that I did nearly a week ago. I reviewed every math note that 
+For what I have learned today, I was again studying probability and reviewing the same topics that I did nearly a week ago. I reviewed every math note that I had, believing that this was going to perhaps make me a exalted Mathematician. Now I began to realize how futile this act is. This is no different to pure memorization as I skimmed through every problem cont

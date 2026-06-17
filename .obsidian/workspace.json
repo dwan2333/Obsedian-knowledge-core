@@ -50,6 +50,48 @@
             }
           },
           {
+            "id": "3d864b2d632606e1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/ascribe.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ascribe"
+            }
+          },
+          {
+            "id": "e64b07d228d4e520",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/exalted.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "exalted"
+            }
+          },
+          {
+            "id": "2614fbe3f9144a11",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/entreat.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "entreat"
+            }
+          },
+          {
             "id": "5c4a8582c32a24a7",
             "type": "leaf",
             "state": {
@@ -290,9 +332,12 @@
   },
   "active": "30d0f57d22f01c9e",
   "lastOpenFiles": [
+    "content/Vocabulary/Words/ascribe.md",
+    "content/Daily notes/2026-06/Daily note 06-17.md",
+    "content/Vocabulary/Words/exalted.md",
+    "content/Vocabulary/Words/entreat.md",
     "content/Vocabulary/Words/enticing.md",
     "content/Vocabulary/Words/appealing.md",
-    "content/Daily notes/2026-06/Daily note 06-17.md",
     "content/Vocabulary/Words/ecstatic.md",
     "content/Vocabulary/Words/ecstasy.md",
     "content/Vocabulary/Words/serene.md",
@@ -318,9 +363,6 @@
     "content/Vocabulary/Words/supercilious.md",
     "content/Vocabulary/Words/affront.md",
     "content/Vocabulary/Words/beseech.md",
-    "content/Vocabulary/Words/entreat.md",
-    "content/Vocabulary/Words/admonition.md",
-    "content/Vocabulary/Words/exhortation.md",
     "content/Mathematics/Pi/pi_fig1_polygon_bounds.png",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_mindmap.png",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_fig1_prime_density.png",
