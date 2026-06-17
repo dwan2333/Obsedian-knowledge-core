@@ -484,7 +484,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -680,13 +680,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c454213724f09047",
+  "active": "9551d59af626a0ce",
   "lastOpenFiles": [
-    "content/Mathematics/Pi/pi_fig1_polygon_bounds.png",
+    "content/Daily notes/2026-06/Daily note 06-15.md",
+    "content/Vocabulary/Words/wrangle.md",
     "content/Mathematics/Pi/Calculating Pi (Main).md",
+    "content/Mathematics/Pi/pi_fig1_polygon_bounds.png",
     "content/Vocabulary/Words/wunderkind.md",
     "content/Vocabulary/Words/writhe.md",
-    "content/Vocabulary/Words/wrangle.md",
     "content/Vocabulary/Words/wits.md",
     "content/Vocabulary/Words/whimsical.md",
     "content/Vocabulary/Words/wearying.md",
@@ -717,7 +718,6 @@
     "content/Mathematics/Pythagorean Theorem/pyth_fig4_super_theorem.png",
     "content/Mathematics/Pythagorean Theorem/pyth_fig3_simplest_altitude.png",
     "content/Mathematics/Pythagorean Theorem/pyth_fig2_similar_scaling.png",
-    "content/Mathematics/Pythagorean Theorem/pyth_fig1_rearrangement.png",
     "content/Vocabulary/Words/vigorous.md.tmp.15160.3fef7e5810b4",
     "content/Vocabulary/Words/ludicrous.md.tmp.15160.ede229a50d96",
     "content/Vocabulary/Words/rudimentary.md.tmp.15160.8c82bc62ff3e",
