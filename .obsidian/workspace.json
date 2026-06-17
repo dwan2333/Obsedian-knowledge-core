@@ -11,10 +11,14 @@
             "id": "6f3c68d7c7fe8cc0",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "chapter1_exercises"
             }
           }
         ]
