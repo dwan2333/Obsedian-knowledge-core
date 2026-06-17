@@ -28,7 +28,7 @@
               "type": "markdown",
               "state": {
                 "file": "content/Mathematics/Pi/Calculating Pi (Main).md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -682,6 +682,8 @@
   },
   "active": "c454213724f09047",
   "lastOpenFiles": [
+    "content/Mathematics/Pi/pi_fig1_polygon_bounds.png",
+    "content/Mathematics/Pi/Calculating Pi (Main).md",
     "content/Vocabulary/Words/wunderkind.md",
     "content/Vocabulary/Words/writhe.md",
     "content/Vocabulary/Words/wrangle.md",
@@ -706,8 +708,6 @@
     "content/Vocabulary/Words/swift.md",
     "content/Vocabulary/Words/supercilious.md",
     "content/Vocabulary/Words/superficial.md",
-    "content/Vocabulary/Words/serene.md",
-    "content/Vocabulary/Words/sullenness.md",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_mindmap.png",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_fig1_prime_density.png",
     "content/Mathematics/Complex Numbers/cnf_fig1_complex_plane.png",
