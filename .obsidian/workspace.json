@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily notes/2026-06/Daily note 06-15.md",
+                "file": "content/Daily notes/2026-06/Daily note 06-16.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Daily note 06-15"
+              "title": "Daily note 06-16"
             }
           },
           {
@@ -27,12 +27,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Vocabulary/Words/impassioned.md",
+                "file": "content/Vocabulary/Words/ironclad.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "impassioned"
+              "title": "ironclad"
+            }
+          },
+          {
+            "id": "517f85fcf852aecb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/ironclad.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ironclad"
             }
           },
           {
@@ -274,7 +288,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -470,8 +484,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1f0eade18dca1c63",
+  "active": "0f112a3fbf76d99d",
   "lastOpenFiles": [
+    "content/Vocabulary/Words/insuperable.md",
+    "content/Vocabulary/Words/installment.md",
+    "content/Vocabulary/Words/insolent.md",
+    "content/Vocabulary/Words/inmate.md",
+    "content/Vocabulary/Words/inharmonious.md",
+    "content/Vocabulary/Words/ingrained.md",
+    "content/Vocabulary/Words/inflict.md",
+    "content/Vocabulary/Words/inexplicable.md",
+    "content/Daily notes/2026-06/Daily note 06-16.md",
+    "content/Daily notes/2026-06/Daily note 06-15.md",
+    "content/Vocabulary/Words/indissoluble.md",
+    "content/Vocabulary/Words/ironclad.md",
+    "content/Vocabulary/Words/indignation.md",
+    "content/Vocabulary/Words/inconsolable.md",
+    "content/Vocabulary/Words/incarnation.md",
+    "content/Vocabulary/Words/importunity.md",
+    "content/Vocabulary/Words/implicit.md",
+    "content/Vocabulary/Words/impassioned.md",
     "content/Vocabulary/Words/ikon.md",
     "content/Vocabulary/Words/idleness.md",
     "content/Vocabulary/Words/homage.md",
@@ -480,24 +512,6 @@
     "content/Vocabulary/Words/hew.md",
     "content/Vocabulary/Words/harlot.md",
     "content/Vocabulary/Words/harem.md",
-    "content/Vocabulary/Words/halter.md",
-    "content/Vocabulary/Words/gurney.md",
-    "content/Vocabulary/Words/grit.md",
-    "content/Vocabulary/Words/grievance.md",
-    "content/Vocabulary/Words/graceful.md",
-    "content/Vocabulary/Words/frivolous.md",
-    "content/Vocabulary/Words/frenzied.md",
-    "content/Vocabulary/Words/frantic.md",
-    "content/Vocabulary/Words/fanatic.md",
-    "content/Daily notes/2026-06/Daily note 06-15.md",
-    "content/Vocabulary/Words/seething.md",
-    "content/Vocabulary/Words/foundry.md",
-    "content/Vocabulary/Words/flock.md",
-    "content/Vocabulary/Words/farce.md",
-    "content/Daily notes/2026-06/Daily note 06-16.md",
-    "content/Vocabulary/Words/ardent.md",
-    "content/Vocabulary/Words/faculty.md",
-    "content/Vocabulary/Words/exploit.md",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_mindmap.png",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_fig1_prime_density.png",
     "content/Mathematics/Complex Numbers/cnf_fig1_complex_plane.png",
