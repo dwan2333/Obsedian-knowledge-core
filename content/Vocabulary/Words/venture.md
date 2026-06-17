@@ -1,4 +1,4 @@
-# venture
+a# venture
 
 > [!definition] /ˈvɛntʃə/ · *noun & verb*
 > (Noun) a risky or daring undertaking, especially a business one. (Verb) to dare to do or say something; to risk going somewhere uncertain.
