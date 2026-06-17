@@ -22,6 +22,20 @@
             }
           },
           {
+            "id": "0b567164ef467c5d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/enticing.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "enticing"
+            }
+          },
+          {
             "id": "30d0f57d22f01c9e",
             "type": "leaf",
             "state": {
@@ -34,9 +48,51 @@
               "icon": "lucide-file",
               "title": "Daily note 06-17"
             }
+          },
+          {
+            "id": "5c4a8582c32a24a7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/ecstatic.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ecstatic"
+            }
+          },
+          {
+            "id": "217db0a6038683a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/serene.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "serene"
+            }
+          },
+          {
+            "id": "53599865b173dfb7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/ecstasy.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ecstasy"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -234,11 +290,16 @@
   },
   "active": "30d0f57d22f01c9e",
   "lastOpenFiles": [
+    "content/Vocabulary/Words/enticing.md",
+    "content/Vocabulary/Words/appealing.md",
+    "content/Daily notes/2026-06/Daily note 06-17.md",
+    "content/Vocabulary/Words/ecstatic.md",
+    "content/Vocabulary/Words/ecstasy.md",
+    "content/Vocabulary/Words/serene.md",
     "content/Vocabulary/Words/wearying.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Introduction to Probability/Introduction to Probability (Main).md",
-    "content/Daily notes/2026-06/Daily note 06-17.md",
     "content/Daily notes/Untitled.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
     "content/Mathematics/Pi/negative_and_fractional_binomial_coefficients.md",
@@ -256,15 +317,10 @@
     "content/Vocabulary/Words/insolent.md",
     "content/Vocabulary/Words/supercilious.md",
     "content/Vocabulary/Words/affront.md",
-    "content/Vocabulary/Words/appealing.md",
-    "content/Vocabulary/Words/enticing.md",
     "content/Vocabulary/Words/beseech.md",
     "content/Vocabulary/Words/entreat.md",
     "content/Vocabulary/Words/admonition.md",
     "content/Vocabulary/Words/exhortation.md",
-    "content/Vocabulary/Words/ardent.md",
-    "content/Vocabulary/Words/fanatic.md",
-    "content/Vocabulary/Words/graceful.md",
     "content/Mathematics/Pi/pi_fig1_polygon_bounds.png",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_mindmap.png",
     "content/Mathematics/Logarithms/Natural Logarithm/nl_fig1_prime_density.png",
