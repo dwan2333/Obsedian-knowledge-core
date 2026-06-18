@@ -35,8 +35,7 @@
               "title": "chapter1_exercises"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -232,7 +231,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d775160671a03655",
+  "active": "6f3c68d7c7fe8cc0",
   "lastOpenFiles": [
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
