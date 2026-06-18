@@ -1,0 +1,1 @@
+After midnight, I watched two world cup game in a row.  The two matches were Portugal versus Democratic of Congo and Croatia versus England. The latter one was a bit more intriguing because of there were much aggression taken and more goals scored.  The match for Portugal was a tie which was quit shocking to me.  T
