@@ -1,3 +1,3 @@
 After midnight, I watched two world cup game in a row.  The two matches were Portugal versus Democratic of Congo and Croatia versus England. The latter one was a bit more intriguing because of there were much aggression taken and more goals scored.  The match for Portugal was a tie which was quit shocking to me. Congo team 's vigorous efforts in both offense and defense endowed them with their first world cup tie against an insuperable opponent. 
 
-Besides watching the world cup,  my brother got back from the United States and it had been for nearly 5 months since I last seen
+Besides watching the world cup,  my brother got back from the United States and it had been for nearly 5 months since I last seen him in UC Irvine.  He always have an mopey and wearying look on him, but dose not mean he is not all lively. He is a complete difference person when he is around his favorite games. 
