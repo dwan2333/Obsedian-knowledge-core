@@ -910,6 +910,35 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > > **Solution.** (a) $n^n$. (b) Stars-and-bars: $\binom{2n-1}{n}$. (c) Most likely (all distinct): $n!/n^n$. Least likely (all same): $1/n^n$. Ratio $p_1/p_2 = n!$. There's 1 "all distinct" class but $n$ "all same" classes (one per value), so class-probability ratio $= n!/n = (n-1)!$.
 > >
 > > **Answer.** (a) $n^n$ — (b) $\binom{2n-1}{n}$ — (c) $n!$ and $(n-1)!$ ✓
+>
+> > [!tip]- Walkthrough — part (c): why arrangements drive the probability
+> > **The key idea.** Every *ordered* sequence is equally likely, with probability $1/n^n$. So an *unordered* sample's probability is just
+> > $$P(\text{unordered sample}) = \frac{\#\{\text{ordered sequences that produce it}\}}{n^n}.$$
+> > An unordered sample is likely in exact proportion to **how many ways it can be arranged** — which depends only on how many repeats it has.
+> >
+> > **The two extremes.**
+> > - **Most likely $b_1$ — all distinct**, e.g. $(a_1, a_2, \ldots, a_n)$: with $n$ different values it has $n!$ arrangements, so $p_1 = n!/n^n$.
+> > - **Least likely $b_2$ — all the same**, e.g. $(a_1, a_1, \ldots, a_1)$: only $1$ arrangement, so $p_2 = 1/n^n$.
+> >
+> > $$\frac{p_1}{p_2} = \frac{n!/n^n}{1/n^n} = n!.$$
+> > A specific all-distinct sample is $n!$ times likelier than a specific all-same sample.
+> >
+> > **The tricky "an" ratio.** The final question swaps "the sample $b_i$" for "**an** unordered sample whose probability is $p_i$" — i.e. the whole *class*. Count each class's members:
+> > - All-distinct samples: exactly **1** exists (the full set $\{a_1,\ldots,a_n\}$). Class probability $= 1 \cdot \dfrac{n!}{n^n}$.
+> > - All-same samples: there are **$n$** of them (all $a_1$, or all $a_2$, …). Class probability $= n \cdot \dfrac{1}{n^n}$.
+> >
+> > $$\frac{P(\text{class like } b_1)}{P(\text{class like } b_2)} = \frac{n!/n^n}{n/n^n} = \frac{n!}{n} = (n-1)!.$$
+> > The extra factor of $n$ — the number of all-same samples — divides $n!$ down to $(n-1)!$.
+> >
+> > **The middle of the spectrum** ($n = 3$, so $3^3 = 27$ ordered sequences). Probability slides with the number of repeats:
+> >
+> > | Unordered sample | arrangements | probability |
+> > |---|---:|---:|
+> > | all same $(a,a,a)$ | $1$ | $1/27$ |
+> > | one pair $(a,a,b)$ | $3!/2! = 3$ | $3/27$ |
+> > | all distinct $(a,b,c)$ | $3! = 6$ | $6/27$ |
+> >
+> > **Sanity check:** $3\,(\text{all-same})\cdot 1 + 6\,(\text{one-pair})\cdot 3 + 1\,(\text{all-distinct})\cdot 6 = 3 + 18 + 6 = 27 = 3^3$ ✓, and $3 + 6 + 1 = 10 = \binom{5}{3}$ unordered samples — matching parts (a) and (b).
 
 > [!example] Exercise 61 — Lost Boarding Pass
 > **Problem.** There are 100 passengers lined up to board an airplane with 100 seats (with each seat assigned to one of the passengers). The first passenger in line crazily decides to sit in a randomly chosen seat (with all seats equally likely). Each subsequent passenger takes their assigned seat if available, and otherwise sits in a random available seat. What is the probability that the last passenger in line gets to sit in their assigned seat? (This is a common interview problem, and a beautiful example of the power of symmetry.)
