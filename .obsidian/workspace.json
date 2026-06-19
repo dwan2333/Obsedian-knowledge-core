@@ -13,127 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Daily notes/2026-06/Daily note 06-18.md",
+                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Daily note 06-18"
+              "title": "Chapter 1 (Main)"
             }
           },
           {
-            "id": "851ca1e33ef47f25",
+            "id": "ba8db4782aa72f61",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Vocabulary/Words/bourgeois.md",
-                "mode": "source",
+                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "bourgeois"
-            }
-          },
-          {
-            "id": "613408a8167cebc2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/mopey.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "mopey"
-            }
-          },
-          {
-            "id": "c3d8b7144a5d1be5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/wearying.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "wearying"
-            }
-          },
-          {
-            "id": "ca8704f79ca0c678",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/vigorous.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "vigorous"
-            }
-          },
-          {
-            "id": "a3c7a8cd66b87644",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/insuperable.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "insuperable"
-            }
-          },
-          {
-            "id": "35b8590711f41f28",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/ascribe.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ascribe"
-            }
-          },
-          {
-            "id": "cad39861050b8b63",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Chapter 1"
-            }
-          },
-          {
-            "id": "308650ee751ca2c4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Quotes/Sources/The Brothers Karamazov/Chapter 5.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Chapter 5"
+              "title": "chapter1_exercises"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -329,22 +232,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9560fe86536e044e",
+  "active": "ba8db4782aa72f61",
   "lastOpenFiles": [
-    "content/Vocabulary/Words/bourgeois.md",
-    "content/Daily notes/2026-06/Daily note 06-18.md",
-    "content/Vocabulary/Words/ascribe.md",
-    "content/Vocabulary/Words/mopey.md",
-    "content/Vocabulary/Words/wearying.md",
-    "content/Vocabulary/Words/vigorous.md",
-    "content/Vocabulary/Words/insuperable.md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
+    "content/Daily notes/2026-06/Daily note 06-18.md",
     "content/Quotes/Sources/The Brothers Karamazov/Chapter 5.md",
+    "content/Vocabulary/Words/ascribe.md",
+    "content/Vocabulary/Words/insuperable.md",
+    "content/Vocabulary/Words/vigorous.md",
+    "content/Vocabulary/Words/wearying.md",
+    "content/Vocabulary/Words/mopey.md",
+    "content/Vocabulary/Words/bourgeois.md",
     "content/Vocabulary/Vocabulary (Main).md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Daily notes/2026-06/Daily note 06-17.md",
     "content/Daily notes/2026-06/Daily note 06-09.md",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Vocabulary/Words/enticing.md",
     "content/Vocabulary/Words/ecstasy.md",
     "content/Vocabulary/Words/serene.md",
