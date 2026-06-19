@@ -1,3 +1,3 @@
-Another weary day with another farce.  I done what I have done everyday - wake up, study,  and sleep. There is no meaning in keeping recording of those schedules unless there were something meaningful or at least recreational. 
+Another weary day with another farce.  I done what I have done everyday - wake up, study,  and sleep. There is no meaning in keeping recordings of those repetitive schedules unless there were something meaningful or at least recreational to me. 
 
-With regard to the farce, i
+With regard to the farce, my father brought my half sister back to our home.  Me and her lived at different places but not too far apart. Within ten minute drive we could reach each other's doorway. What baffled me is why ? What is the purpose of bring her over her. Is not that I do not want to  see her, or she is not welcomed, but at this state where my dad and her were fighting over their mon
