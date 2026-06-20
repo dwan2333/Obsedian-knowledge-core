@@ -366,7 +366,7 @@ Answering a viewer's question, Grant iterates the **power tower** $a_{n+1}=i^{\,
 - **Exponentiation's true signature** is $f(a+b)=f(a)f(b)$ with $f(1)=i$ — and there is more than one such function, which is exactly why the answer is ambiguous.
 - **Roots are multi-valued too** — $\sqrt[4]{16}=\{2,2i,-2,-2i\}$ and $2^{1/4}=\sqrt[4]{2}\{1,i,-1,-i\}$; a reduced power $b^{p/q}$ "wants" $q$ values. Same root cause as $i^{\,i}$: a base has names $e^{\ln b+2\pi i k}$.
 - **An exponential is *defined* by $f(a+b)=f(a)f(b)$** (plus differentiable and nonzero), which forces $f(x)=\exp(rx)$ with $r=f'(0)$. In the complex world $b^x$ is ambiguous; $\exp(rx)$ is not.
-- **Power towers of $i$ are complex tetration** — the principal tower converges to $pprox0.4383+0.3606i$, but another branch of $i^x$ gives a period-3 (chaotic) cycle. See [[Tetration (Main)|Tetration]].
+- **Power towers of $i$ are complex tetration** — the principal tower converges to $\approx0.4383+0.3606i$, but another branch of $i^x$ gives a period-3 (chaotic) cycle. See [[Tetration (Main)|Tetration]].
 
 ---
 
