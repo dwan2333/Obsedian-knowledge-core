@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+                "file": "content/Mathematics/Logarithms/Natural Logarithm/The Natural Logarithm (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "chapter1_exercises"
+              "title": "The Natural Logarithm (Main)"
             }
           }
         ]
@@ -219,6 +219,8 @@
   },
   "active": "4704e7d4c5787145",
   "lastOpenFiles": [
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
+    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.20252.534cfe319790",
     "content/Vocabulary/Words/absolution.md",
     "content/Daily notes/2026-06/Daily note 06-17.md",
     "content/Daily notes/2026-06/Daily note 06-16.md",
@@ -236,7 +238,6 @@
     "content/Mathematics/Euler 's equation/efc_fig1_cart_polar.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/Chapter 1 (Main).md",
     "content/Mathematics/Pi/negative_and_fractional_binomial_coefficients.md",
-    "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.8052.90e458a2028e",
     "content/Quotes/Sources/The Brothers Karamazov/Chapter 1.md",
     "content/Quotes/Sources/The Brothers Karamazov/Chapter 5.md",
@@ -246,7 +247,6 @@
     "content/Vocabulary/Words/mopey.md",
     "content/Vocabulary/Words/bourgeois.md",
     "content/Vocabulary/Vocabulary (Main).md",
-    "content/Vocabulary/Words/enticing.md",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/sp_mindmap.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_fig_1.1_pebble_world.png",
     "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md.tmp.4168.5d870fdd4820",
@@ -264,7 +264,6 @@
     "content/Vocabulary/Words/ludicrous.md.tmp.15160.ede229a50d96",
     "content/Vocabulary/Words/rudimentary.md.tmp.15160.8c82bc62ff3e",
     "content/Vocabulary/Categories/Themes/Praise, Honor & Reverence.md.tmp.7092.8c4d7713dccf",
-    "content/Vocabulary/Categories/Themes/Discord, Conflict & Disparity.md.tmp.7092.44a0c19769f5",
     "Untitled.canvas"
   ]
 }
