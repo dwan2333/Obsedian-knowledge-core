@@ -124,10 +124,10 @@ The intersections of $y = b^x$ and $y = x$ are exactly the fixed points $b^x = x
 
 This resolves the paradox. Both $\sqrt2$ and $1.1$ have **two** fixed points — a lower stable one and a higher unstable one:
 
-| Base $b$ | Stable fixed point (tower's limit) | Unstable fixed point (repels) |
-|---|---|---|
-| $\sqrt2 \approx 1.414$ | $x = 2$ | $x = 4$ |
-| $1.1$ | $x \approx 1.112$ | $x \approx 38.229$ |
+| Base $b$               | Stable fixed point (tower's limit) | Unstable fixed point (repels) |
+| ---------------------- | ---------------------------------- | ----------------------------- |
+| $\sqrt2 \approx 1.414$ | $x = 2$                            | $x = 4$                       |
+| $1.1$                  | $x \approx 1.112$                  | $x \approx 38.229$            |
 
 Seeding the iteration at $a_0 = 1$ always falls into the **lower, stable** value — which is why $\sqrt2$'s tower is 2 (not 4), and 1.1's is 1.112 (not 38.229). *(at [[30:45]](https://www.youtube.com/watch?v=elQVZLLiod4&t=1845s))*
 
