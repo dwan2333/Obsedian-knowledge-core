@@ -252,7 +252,8 @@ The deeper point isn't really about $\pi$ — it's about what made the leap poss
 - **[Negative & Fractional Binomial Coefficients](negative_and_fractional_binomial_coefficients.md)** — the coefficient algebra behind §3: how to compute $\binom{n}{k}$ when $n$ is negative or fractional, the identity $\binom{-n}{k} = (-1)^k\binom{n+k-1}{k}$ with proof, and its combinations-with-replacement (stars-and-bars) meaning.
 - **[Logarithm Fundamentals (Main)](<../Logarithms/Logarithm Fundamentals (Main).md>)** — Another Path-C note where a small algebraic insight (the zero-counting intuition for $\log_{10}$) replaces years of brute-force computation. Same "small move, huge consequence" structure.
 - **[Imaginary Interest and Continuous Rotation (Main)](<../Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md>)** — Connects to §3.3 (extending operations past their stated domain): plugging an imaginary value into compound interest, just as Newton plugged a fraction into the binomial theorem.
-- **[Euler's Formula via exp(x) (Main)](<../Complex Numbers/Euler's Formula via exp(x) (Main).md>)** — Another instance where an infinite series (the polynomial definition of $\exp$) is the bridge between algebra and geometry.
+- **[Euler's Formula via exp(x) (Main)](<../Euler 's equation/Euler's Formula via exp(x) (Main).md>)** — Another instance where an infinite series (the polynomial definition of $\exp$) is the bridge between algebra and geometry.
+- **[Tetration (Main)](<../Tetration/Tetration (Main).md>)** — The same "a tiny insight tames a wild object" structure: a single tangency condition turns a runaway power tower into the exact constant $e^{1/e}$, just as Newton's series turns the circle into π.
 
 ---
 
