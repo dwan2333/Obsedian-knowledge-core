@@ -14,7 +14,8 @@ A rigorous yet accessible introduction to probability theory, used in Harvard's 
 
 ## Chapters
 
-- **[Chapter 1 — Probability and Counting](<Chapter 1 Probability and Counting/Chapter 1 (Main).md>)** — Sample spaces, naive probability, counting techniques, classic problems (birthday problem, de Montmort, Bose-Einstein)
+- **[[Chapter 1 (Main)|Chapter 1 — Probability and Counting]]** — Sample spaces, naive probability, counting techniques, classic problems (birthday problem, de Montmort, Bose-Einstein)
+- **[[Chapter 2 (Main)|Chapter 2 — Conditional Probability]]** — Conditional probability and Bayes' rule, the law of total probability, independence, Monty Hall, gambler's ruin, and Simpson's paradox
 
 ---
 

@@ -1,0 +1,1013 @@
+Conditional probability
+83
+monty <- function() {
+doors <- 1:3
+# randomly pick where the car is
+cardoor <- sample(doors,1)
+# prompt player
+print("Monty Hall says 'Pick a door, any door!'")
+# receive the player's choice of door (should be 1,2, or 3)
+chosen <- scan(what = integer(), nlines = 1, quiet = TRUE)
+# pick Monty's door (can't be the player's door or the car door)
+if (chosen != cardoor) montydoor <- doors[-c(chosen, cardoor)]
+else montydoor <- sample(doors[-chosen],1)
+# find out whether the player wants to switch doors
+print(paste("Monty opens door ", montydoor, "!", sep=""))
+print("Would you like to switch (y/n)?")
+reply <- scan(what = character(), nlines = 1, quiet = TRUE)
+# interpret what player wrote as "yes" if it starts with "y"
+if (substr(reply,1,1) == "y"){
+chosen <- doors[-c(chosen,montydoor)]
+}
+# announce the result of the game!
+if (chosen == cardoor) print("You won!")
+else print("You lost!")
+}
+The print command prints its argument to the screen. We combine this with the
+paste command since if we used print("Monty opens door montydoor") then R
+would literally print "Monty opens door montydoor". The scan command interac-
+tively requests input from the user; we use what = integer() when we want the
+user to enter an integer and what = character() when we want the user to enter
+text. Using substr(reply,1,1) extracts the first character of reply, in case the
+user replies with "yes" or "yep" or "yeah!" rather than with "y".
+2.11
+Exercises
+Exercises marked with s⃝have detailed solutions at http://stat110.net.
+84
+Introduction to Probability
+Conditioning on evidence
+1.
+s⃝A spam filter is designed by looking at commonly occurring phrases in spam. Suppose
+that 80% of email is spam. In 10% of the spam emails, the phrase "free money" is used,
+whereas this phrase is only used in 1% of non-spam emails. A new email has just arrived,
+which does mention "free money". What is the probability that it is spam?
+2.
+s⃝A woman is pregnant with twin boys. Twins may be either identical or fraternal.
+Suppose that 1/3 of twins born are identical, that identical twins have a 50% chance
+of being both boys and a 50% chance of being both girls, and that for fraternal twins
+each twin independently has a 50% chance of being a boy and a 50% chance of being a
+girl. Given the above information, what is the probability that the woman's twins are
+identical?
+3.
+According to the CDC (Centers for Disease Control and Prevention), men who smoke are
+23 times more likely to develop lung cancer than men who don't smoke. Also according
+to the CDC, 21.6% of men in the U.S. smoke. What is the probability that a man in
+the U.S. is a smoker, given that he develops lung cancer?
+4.
+Fred is answering a multiple-choice problem on an exam, and has to choose one of n
+options (exactly one of which is correct). Let K be the event that he knows the answer,
+and R be the event that he gets the problem right (either through knowledge or through
+luck). Suppose that if he knows the right answer he will definitely get the problem right,
+but if he does not know then he will guess completely randomly. Let P(K) = p.
+(a) Find P(K|R) (in terms of p and n).
+(b) Show that P(K|R) ≥p, and explain why this makes sense intuitively. When (if ever)
+does P(K|R) equal p?
+5.
+Three cards are dealt from a standard, well-shuffled deck. The first two cards are flipped
+over, revealing the Ace of Spades as the first card and the 8 of Clubs as the second card.
+Given this information, find the probability that the third card is an ace in two ways:
+using the definition of conditional probability, and by symmetry.
+6.
+A hat contains 100 coins, where 99 are fair but one is double-headed (always landing
+Heads). A coin is chosen uniformly at random. The chosen coin is flipped 7 times, and it
+lands Heads all 7 times. Given this information, what is the probability that the chosen
+coin is double-headed? (Of course, another approach here would be to look at both sides
+of the coin-but this is a metaphorical coin.)
+7.
+A hat contains 100 coins, where at least 99 are fair, but there may be one that is double-
+headed (always landing Heads); if there is no such coin, then all 100 are fair. Let D be
+the event that there is such a coin, and suppose that P(D) = 1/2. A coin is chosen
+uniformly at random. The chosen coin is flipped 7 times, and it lands Heads all 7 times.
+(a) Given this information, what is the probability that one of the coins is double-
+headed?
+(b) Given this information, what is the probability that the chosen coin is double-
+headed?
+8.
+The screens used for a certain type of cell phone are manufactured by 3 companies,
+A, B, and C. The proportions of screens supplied by A, B, and C are 0.5, 0.3, and
+0.2, respectively, and their screens are defective with probabilities 0.01, 0.02, and 0.03,
+respectively. Given that the screen on such a phone is defective, what is the probability
+that Company A manufactured it?
+9.
+(a) Show that if events A1 and A2 have the same prior probability P(A1) = P(A2),
+A1 implies B, and A2 implies B, then A1 and A2 have the same posterior probability
+P(A1|B) = P(A2|B) if it is observed that B occurred.
+(b) Explain why (a) makes sense intuitively, and give a concrete example.
+Conditional probability
+85
+10.
+Fred is working on a major project. In planning the project, two milestones are set up,
+with dates by which they should be accomplished. This serves as a way to track Fred's
+progress. Let A1 be the event that Fred completes the first milestone on time, A2 be
+the event that he completes the second milestone on time, and A3 be the event that he
+completes the project on time.
+Suppose that P(Aj+1|Aj) = 0.8 but P(Aj+1|Ac
+j) = 0.3 for j = 1, 2, since if Fred falls
+behind on his schedule it will be hard for him to get caught up. Also, assume that the
+second milestone supersedes the first, in the sense that once we know whether he is
+on time in completing the second milestone, it no longer matters what happened with
+the first milestone. We can express this by saying that A1 and A3 are conditionally
+independent given A2 and they're also conditionally independent given Ac
+2.
+(a) Find the probability that Fred will finish the project on time, given that he completes
+the first milestone on time. Also find the probability that Fred will finish the project on
+time, given that he is late for the first milestone.
+(b) Suppose that P(A1) = 0.75. Find the probability that Fred will finish the project
+on time.
+11.
+An exit poll in an election is a survey taken of voters just after they have voted. One
+major use of exit polls has been so that news organizations can try to figure out as
+soon as possible who won the election, before the votes are officially counted. This has
+been notoriously inaccurate in various elections, sometimes because of selection bias:
+the sample of people who are invited to and agree to participate in the survey may not
+be similar enough to the overall population of voters.
+Consider an election with two candidates, Candidate A and Candidate B. Every voter
+is invited to participate in an exit poll, where they are asked whom they voted for; some
+accept and some refuse. For a randomly selected voter, let A be the event that they voted
+for A, and W be the event that they are willing to participate in the exit poll. Suppose
+that P(W|A) = 0.7 but P(W|Ac) = 0.3. In the exit poll, 60% of the respondents say
+they voted for A (assume that they are all honest), suggesting a comfortable victory for
+A. Find P(A), the true proportion of people who voted for A.
+12.
+Alice is trying to communicate with Bob, by sending a message (encoded in binary)
+across a channel.
+(a) Suppose for this part that she sends only one bit (a 0 or 1), with equal probabilities.
+If she sends a 0, there is a 5% chance of an error occurring, resulting in Bob receiving a
+1; if she sends a 1, there is a 10% chance of an error occurring, resulting in Bob receiving
+a 0. Given that Bob receives a 1, what is the probability that Alice actually sent a 1?
+(b) To reduce the chance of miscommunication, Alice and Bob decide to use a repetition
+code. Again Alice wants to convey a 0 or a 1, but this time she repeats it two more times,
+so that she sends 000 to convey 0 and 111 to convey 1. Bob will decode the message by
+going with what the majority of the bits were. Assume that the error probabilities are
+as in (a), with error events for different bits independent of each other. Given that Bob
+receives 110, what is the probability that Alice intended to convey a 1?
+13.
+Company A has just developed a diagnostic test for a certain disease. The disease
+afflicts 1% of the population. As defined in Example 2.3.9, the sensitivity of the test is
+the probability of someone testing positive, given that they have the disease, and the
+specificity of the test is the probability that of someone testing negative, given that they
+don't have the disease. Assume that, as in Example 2.3.9, the sensitivity and specificity
+are both 0.95.
+Company B, which is a rival of Company A, offers a competing test for the disease.
+Company B claims that their test is faster and less expensive to perform than Company
+A's test, is less painful (Company A's test requires an incision), and yet has a higher
+86
+Introduction to Probability
+overall success rate, where overall success rate is defined as the probability that a random
+person gets diagnosed correctly.
+(a) It turns out that Company B's test can be described and performed very simply: no
+matter who the patient is, diagnose that they do not have the disease. Check whether
+Company B's claim about overall success rates is true.
+(b) Explain why Company A's test may still be useful.
+(c) Company A wants to develop a new test such that the overall success rate is higher
+than that of Company B's test. If the sensitivity and specificity are equal, how high
+does the sensitivity have to be to achieve their goal? If (amazingly) they can get the
+sensitivity equal to 1, how high does the specificity have to be to achieve their goal? If
+(amazingly) they can get the specificity equal to 1, how high does the sensitivity have
+to be to achieve their goal?
+14.
+Consider the following scenario, from Tversky and Kahneman [27]:
+Let A be the event that before the end of next year, Peter will have installed
+a burglar alarm system in his home. Let B denote the event that Peter's
+home will be burglarized before the end of next year.
+(a) Intuitively, which do you think is bigger, P(A|B) or P(A|Bc)? Explain your intuition.
+(b) Intuitively, which do you think is bigger, P(B|A) or P(B|Ac)? Explain your intuition.
+(c) Show that for any events A and B (with probabilities not equal to 0 or 1), the
+inequality P(A|B) > P(A|Bc) is equivalent to P(B|A) > P(B|Ac).
+(d) Tversky and Kahneman report that 131 out of 162 people whom they posed (a)
+and (b) to said that P(A|B) > P(A|Bc) and P(B|A) < P(B|Ac). What is a plausible
+explanation for why this was such a popular opinion despite (c) showing that it is
+impossible for these inequalities both to hold?
+15.
+Let A and B be events with 0 < P(A ∩B) < P(A) < P(B) < P(A ∪B) < 1. You are
+hoping that both A and B occurred. Which of the following pieces of information would
+you be happiest to observe: that A occurred, that B occurred, or that A ∪B occurred?
+16.
+Show that P(A|B) ≤P(A) implies P(A|Bc) ≥P(A), and give an intuitive explanation
+of why this makes sense.
+17.
+In deterministic logic, the statement "A implies B" is equivalent to its contrapositive,
+"not B implies not A". In this problem we will consider analogous statements in prob-
+ability, the logic of uncertainty. Let A and B be events with probabilities not equal to
+0 or 1.
+(a) Show that if P(B|A) = 1, then P(Ac|Bc) = 1.
+Hint: Apply Bayes' rule and LOTP.
+(b) Show however that the result in (a) does not hold in general if = is replaced by ≈.
+In particular, find an example where P(B|A) is very close to 1 but P(Ac|Bc) is very
+close to 0.
+Hint: What happens if A and B are independent?
+18.
+Show that if P(A) = 1, then P(A|B) = 1 for any B with P(B) > 0. Intuitively, this says
+that if someone dogmatically believes something with absolute certainty, then no amount
+of evidence will change their mind. The principle of avoiding assigning probabilities of
+0 or 1 to any event (except for mathematical certainties) was named Cromwell's rule
+by the statistician Dennis Lindley, due to Cromwell saying to the Church of Scotland,
+"Think it possible you may be mistaken."
+Hint: Write P(B) = P(B ∩A) + P(B ∩Ac), and then show that P(B ∩Ac) = 0.
+Conditional probability
+87
+19.
+Explain the following Sherlock Holmes saying in terms of conditional probability, care-
+fully distinguishing between prior and posterior probabilities: "It is an old maxim of
+mine that when you have excluded the impossible, whatever remains, however improb-
+able, must be the truth."
+20.
+The Jack of Spades (with cider), Jack of Hearts (with tarts), Queen of Spades (with a
+wink), and Queen of Hearts (without tarts) are taken from a deck of cards. These four
+cards are shuffled, and then two are dealt. Note: Literary references to cider, tarts, and
+winks do not need to be considered when solving this problem.
+(a) Find the probability that both of these two cards are queens, given that the first
+card dealt is a queen.
+(b) Find the probability that both are queens, given that at least one is a queen.
+(c) Find the probability that both are queens, given that one is the Queen of Hearts.
+21.
+A fair coin is flipped 3 times. The toss results are recorded on separate slips of paper
+(writing "H" if Heads and "T" if Tails), and the 3 slips of paper are thrown into a hat.
+(a) Find the probability that all 3 tosses landed Heads, given that at least 2 were Heads.
+(b) Two of the slips of paper are randomly drawn from the hat, and both show the
+letter H. Given this information, what is the probability that all 3 tosses landed Heads?
+22.
+s⃝A bag contains one marble which is either green or blue, with equal probabilities. A
+green marble is put in the bag (so there are 2 marbles now), and then a random marble
+is taken out. The marble taken out is green. What is the probability that the remaining
+marble is also green?
+23.
+s⃝Let G be the event that a certain individual is guilty of a certain robbery. In gathering
+evidence, it is learned that an event E1 occurred, and a little later it is also learned that
+another event E2 also occurred. Is it possible that individually, these pieces of evidence
+increase the chance of guilt (so P(G|E1) > P(G) and P(G|E2) > P(G)), but together
+they decrease the chance of guilt (so P(G|E1, E2) < P(G))?
+24.
+Is it possible to have events A1, A2, B, C with P(A1|B) > P(A1|C) and P(A2|B) >
+P(A2|C), yet P(A1 ∪A2|B) < P(A1 ∪A2|C)? If so, find an example (with a "story"
+interpreting the events, as well as giving specific numbers); otherwise, show that it is
+impossible for this phenomenon to happen.
+25.
+s⃝A crime is committed by one of two suspects, A and B. Initially, there is equal
+evidence against both of them. In further investigation at the crime scene, it is found
+that the guilty party had a blood type found in 10% of the population. Suspect A does
+match this blood type, whereas the blood type of Suspect B is unknown.
+(a) Given this new information, what is the probability that A is the guilty party?
+(b) Given this new information, what is the probability that B's blood type matches
+that found at the crime scene?
+26.
+s⃝To battle against spam, Bob installs two anti-spam programs. An email arrives,
+which is either legitimate (event L) or spam (event Lc), and which program j marks as
+legitimate (event Mj) or marks as spam (event M c
+j ) for j ∈{1, 2}. Assume that 10%
+of Bob's email is legitimate and that the two programs are each "90% accurate" in the
+sense that P(Mj|L) = P(M c
+j |Lc) = 9/10. Also assume that given whether an email is
+spam, the two programs' outputs are conditionally independent.
+(a) Find the probability that the email is legitimate, given that the 1st program marks
+it as legitimate (simplify).
+(b) Find the probability that the email is legitimate, given that both programs mark it
+as legitimate (simplify).
+88
+Introduction to Probability
+(c) Bob runs the 1st program and M1 occurs. He updates his probabilities and then
+runs the 2nd program. Let ˜P(A) = P(A|M1) be the updated probability function after
+running the 1st program. Explain briefly in words whether or not ˜P(L|M2) = P(L|M1 ∩
+M2): is conditioning on M1 ∩M2 in one step equivalent to first conditioning on M1, then
+updating probabilities, and then conditioning on M2?
+27.
+Suppose that there are 5 blood types in the population, named type 1 through type 5,
+with probabilities p1, p2, . . . , p5. A crime was committed by two individuals. A suspect,
+who has blood type 1, has prior probability p of being guilty. At the crime scene, blood
+evidence is collected, which shows that one of the criminals has type 1 and the other
+has type 2.
+Find the posterior probability that the suspect is guilty, given the evidence. Does the
+evidence make it more likely or less likely that the suspect is guilty, or does this depend
+on the values of the parameters p, p1, . . . , p5? If it depends on these values, give a simple
+criterion for when the evidence makes it more likely that the suspect is guilty.
+28.
+Fred has just tested positive for a certain disease.
+(a) Given this information, find the posterior odds that he has the disease, in terms of
+the prior odds, the sensitivity of the test, and the specificity of the test.
+(b) Not surprisingly, Fred is much more interested in P(have disease|test positive),
+known as the positive predictive value, than in the sensitivity P(test positive|have disease).
+A handy rule of thumb in biostatistics and epidemiology is as follows:
+For a rare disease and a reasonably good test, specificity matters much more than sen-
+sitivity in determining the positive predictive value.
+Explain intuitively why this rule of thumb works. For this part you can make up some
+specific numbers and interpret probabilities in a frequentist way as proportions in a
+large population, e.g., assume the disease afflicts 1% of a population of 10000 people
+and then consider various possibilities for the sensitivity and specificity.
+29.
+A family has two children. Let C be a characteristic that a child can have, and assume
+that each child has characteristic C with probability p, independently of each other and
+of gender. For example, C could be the characteristic "born in winter" as in Exam-
+ple 2.2.7. Under the assumptions of Example 2.2.5, show that the probability that both
+children are girls given that at least one is a girl with characteristic C is 2−p
+4−p. Note that
+this is 1/3 if p = 1 (agreeing with the first part of Example 2.2.5) and approaches 1/2
+from below as p →0 (agreeing with Example 2.2.7).
+Independence and conditional independence
+30.
+s⃝A family has 3 children, creatively named A, B, and C.
+(a) Discuss intuitively (but clearly) whether the event "A is older than B" is independent
+of the event "A is older than C".
+(b) Find the probability that A is older than B, given that A is older than C.
+31.
+s⃝Is it possible that an event is independent of itself? If so, when is this the case?
+32.
+s⃝Consider four nonstandard dice (the Efron dice), whose sides are labeled as follows
+(the 6 sides on each die are equally likely).
+A: 4, 4, 4, 4, 0, 0
+B: 3, 3, 3, 3, 3, 3
+C: 6, 6, 2, 2, 2, 2
+Conditional probability
+89
+D: 5, 5, 5, 1, 1, 1
+These four dice are each rolled once. Let A be the result for die A, B be the result for
+die B, etc.
+(a) Find P(A > B), P(B > C), P(C > D), and P(D > A).
+(b) Is the event A > B independent of the event B > C? Is the event B > C independent
+of the event C > D? Explain.
+33.
+Alice, Bob, and 100 other people live in a small town. Let C be the set consisting of the
+100 other people, let A be the set of people in C who are friends with Alice, and let B
+be the set of people in C who are friends with Bob. Suppose that for each person in C,
+Alice is friends with that person with probability 1/2, and likewise for Bob, with all of
+these friendship statuses independent.
+(a) Let D ⊆C. Find P(A = D).
+(b) Find P(A ⊆B).
+(c) Find P(A ∪B = C).
+34.
+Suppose that there are two types of drivers: good drivers and bad drivers. Let G be
+the event that a certain man is a good driver, A be the event that he gets into a car
+accident next year, and B be the event that he gets into a car accident the following
+year. Let P(G) = g and P(A|G) = P(B|G) = p1, P(A|Gc) = P(B|Gc) = p2, with
+p1 < p2. Suppose that given the information of whether or not the man is a good driver,
+A and B are independent (for simplicity and to avoid being morbid, assume that the
+accidents being considered are minor and wouldn't make the man unable to drive).
+(a) Explain intuitively whether or not A and B are independent.
+(b) Find P(G|Ac).
+(c) Find P(B|Ac).
+35.
+s⃝You are going to play 2 games of chess with an opponent whom you have never
+played against before (for the sake of this problem). Your opponent is equally likely to
+be a beginner, intermediate, or a master. Depending on which, your chances of winning
+an individual game are 90%, 50%, or 30%, respectively.
+(a) What is your probability of winning the first game?
+(b) Congratulations: you won the first game! Given this information, what is the prob-
+ability that you will also win the second game (assume that, given the skill level of your
+opponent, the outcomes of the games are independent)?
+(c) Explain the distinction between assuming that the outcomes of the games are in-
+dependent and assuming that they are conditionally independent given the opponent's
+skill level. Which of these assumptions seems more reasonable, and why?
+36.
+(a) Suppose that in the population of college applicants, being good at baseball is
+independent of having a good math score on a certain standardized test (with respect
+to some measure of "good"). A certain college has a simple admissions procedure: admit
+an applicant if and only if the applicant is good at baseball or has a good math score
+on the test.
+Give an intuitive explanation of why it makes sense that among students that the college
+admits, having a good math score is negatively associated with being good at baseball,
+i.e., conditioning on having a good math score decreases the chance of being good at
+baseball.
+90
+Introduction to Probability
+(b) Show that if A and B are independent and C = A∪B, then A and B are conditionally
+dependent given C (as long as P(A ∩B) > 0 and P(A ∪B) < 1), with
+P(A|B, C) < P(A|C).
+This phenomenon is known as Berkson's paradox, especially in the context of admissions
+to a school, hospital, etc.
+37.
+Two different diseases cause a certain weird symptom; anyone who has either or both
+of these diseases will experience the symptom. Let D1 be the event of having the first
+disease, D2 be the event of having the second disease, and W be the event of having the
+weird symptom. Suppose that D1 and D2 are independent with P(Dj) = pj, and that a
+person with neither of these diseases will have the weird symptom with probability w0.
+Let qj = 1 −pj, and assume that 0 < pj < 1.
+(a) Find P(W).
+(b) Find P(D1|W), P(D2|W), and P(D1, D2|W).
+(c) Determine algebraically whether or not D1 and D2 are conditionally independent
+given W.
+(d) Suppose for this part only that w0 = 0. Give a clear, convincing intuitive explanation
+in words of whether D1 and D2 are conditionally independent given W.
+38.
+We want to design a spam filter for email. As described in Exercise 1, a major strategy
+is to find phrases that are much more likely to appear in a spam email than in a non-
+spam email. In that exercise, we only consider one such phrase: "free money". More
+realistically, suppose that we have created a list of 100 words or phrases that are much
+more likely to be used in spam than in non-spam.
+Let Wj be the event that an email contains the jth word or phrase on the list. Let
+p = P(spam), pj = P(Wj|spam), rj = P(Wj|not spam),
+where "spam" is shorthand for the event that the email is spam.
+Assume that W1, . . . , W100 are conditionally independent given that the email is spam,
+and conditionally independent given that it is not spam. A method for classifying emails
+(or other objects) based on this kind of assumption is called a naive Bayes classifier.
+(Here "naive" refers to the fact that the conditional independence is a strong assumption,
+not to Bayes being naive. The assumption may or may not be realistic, but naive Bayes
+classifiers sometimes work well in practice even if the assumption is not realistic.)
+Under this assumption we know, for example, that
+P(W1, W2, W c
+3 , W c
+4 , . . . , W c
+100|spam) = p1p2(1 −p3)(1 −p4) . . . (1 −p100).
+Without the naive Bayes assumption, there would be vastly more statistical and com-
+putational difficulties since we would need to consider 2100 ≈1.3 × 1030 events of the
+form A1 ∩A2 · · · ∩A100 with each Aj equal to either Wj or W c
+j . A new email has just
+arrived, and it includes the 23rd, 64th, and 65th words or phrases on the list (but not
+the other 97). So we want to compute
+P(spam|W c
+1 , . . . , W c
+22, W23, W c
+24, . . . , W c
+63, W64, W65, W c
+66, . . . , W c
+100).
+Note that we need to condition on all the evidence, not just the fact that W23∩W64∩W65
+occurred. Find the conditional probability that the new email is spam (in terms of p
+and the pj and rj).
+Conditional probability
+91
+Monty Hall
+39.
+s⃝(a) Consider the following 7-door version of the Monty Hall problem. There are 7
+doors, behind one of which there is a car (which you want), and behind the rest of which
+there are goats (which you don't want). Initially, all possibilities are equally likely for
+where the car is. You choose a door. Monty Hall then opens 3 goat doors, and offers
+you the option of switching to any of the remaining 3 doors.
+Assume that Monty Hall knows which door has the car, will always open 3 goat doors
+and offer the option of switching, and that Monty chooses with equal probabilities from
+all his choices of which goat doors to open. Should you switch? What is your probability
+of success if you switch to one of the remaining 3 doors?
+(b) Generalize the above to a Monty Hall problem where there are n ≥3 doors, of which
+Monty opens m goat doors, with 1 ≤m ≤n −2.
+40.
+s⃝Consider the Monty Hall problem, except that Monty enjoys opening door 2 more
+than he enjoys opening door 3, and if he has a choice between opening these two doors,
+he opens door 2 with probability p, where 1
+2 ≤p ≤1.
+To recap: there are three doors, behind one of which there is a car (which you want),
+and behind the other two of which there are goats (which you don't want). Initially,
+all possibilities are equally likely for where the car is. You choose a door, which for
+concreteness we assume is door 1. Monty Hall then opens a door to reveal a goat, and
+offers you the option of switching. Assume that Monty Hall knows which door has the
+car, will always open a goat door and offer the option of switching, and as above assume
+that if Monty Hall has a choice between opening door 2 and door 3, he chooses door 2
+with probability p (with 1
+2 ≤p ≤1).
+(a) Find the unconditional probability that the strategy of always switching succeeds
+(unconditional in the sense that we do not condition on which of doors 2 or 3 Monty
+opens).
+(b) Find the probability that the strategy of always switching succeeds, given that Monty
+opens door 2.
+(c) Find the probability that the strategy of always switching succeeds, given that Monty
+opens door 3.
+41.
+The ratings of Monty Hall's show have dropped slightly, and a panicking executive
+producer complains to Monty that the part of the show where he opens a door lacks
+suspense: Monty always opens a door with a goat. Monty replies that the reason is so
+that the game is never spoiled by him revealing the car, but he agrees to update the
+game as follows.
+Before each show, Monty secretly flips a coin with probability p of Heads. If the coin
+lands Heads, Monty resolves to open a door with a goat (with equal probabilities if there
+is a choice). Otherwise, Monty resolves to open a random door, with equal probabilities.
+Of course, Monty will not open the door that the contestant initially chooses. The
+contestant knows p but does not know the outcome of the coin flip. When the show
+starts, the contestant chooses a door. Monty (who knows where the car is) then opens a
+door. If the car is revealed, the game is over; if a goat is revealed, the contestant is offered
+the option of switching. Now suppose it turns out that the contestant chooses door 1
+and then Monty opens door 2, revealing a goat. What is the contestant's probability of
+success if they switch to door 3?
+42.
+Consider the following variation of the Monty Hall problem, where in some situations
+Monty may not open a door and give the contestant the choice of whether to switch
+doors. Specifically, there are 3 doors, with 2 containing goats and 1 containing a car. The
+car is equally likely to be anywhere, and Monty knows where the car is. Let 0 ≤p ≤1.
+92
+Introduction to Probability
+The contestant chooses a door. If this initial choice has the car, Monty will open another
+door, revealing a goat (choosing with equal probabilities among his two choices of door),
+and then offer the contestant the choice of whether to switch to the other unopened door.
+If the contestant's initial choice has a goat, then with probability p Monty will open
+another door, revealing a goat, and then offer the contestant the choice of whether to
+switch to the other unopened door; but with probability 1 −p, Monty will not open a
+door, and the contestant must stick with their initial choice.
+The contestant decides in advance to use the following strategy: initially choose door 1.
+Then, if Monty opens a door and offers the choice of whether to switch, do switch.
+(a) Find the unconditional probability that the contestant will get the car. Also, check
+what your answer reduces to in the extreme cases p = 0 and p = 1, and briefly explain
+why your answer makes sense in these two cases.
+(b) Monty now opens door 2, revealing a goat. So the contestant switches to door 3.
+Given this information, find the conditional probability that the contestant will get the
+car.
+43.
+You are the contestant on the Monty Hall show. Monty is trying out a new version of
+his game, with rules as follows. You get to choose one of three doors. One door has a car
+behind it, another has a computer, and the other door has a goat (with all permutations
+equally likely). Monty, who knows which prize is behind each door, will open a door (but
+not the one you chose) and then let you choose whether to switch from your current
+choice to the other unopened door.
+Assume that you prefer the car to the computer, the computer to the goat, and (by
+transitivity) the car to the goat.
+(a) Suppose for this part only that Monty always opens the door that reveals your less
+preferred prize out of the two alternatives, e.g., if he is faced with the choice between
+revealing the goat or the computer, he will reveal the goat. Monty opens a door, revealing
+a goat (this is again for this part only). Given this information, should you switch? If
+you do switch, what is your probability of success in getting the car?
+(b) Now suppose that Monty reveals your less preferred prize with probability p, and
+your more preferred prize with probability q = 1 −p. Monty opens a door, revealing a
+computer. Given this information, should you switch (your answer can depend on p)?
+If you do switch, what is your probability of success in getting the car (in terms of p)?
+44.
+Monty Hall has introduced a new twist in his game, by generalizing the assumption that
+the initial probabilities for where the car is are ( 1
+3, 1
+3, 1
+3). Specifically, there are three
+doors, behind one of which there is a car (which the contestant wants), and behind the
+other two of which there are goats (which the contestant doesn't want). Initially, door
+i has probability pi of having the car, where p1, p2, p3 are known constants such that
+0 < p1 ≤p2 ≤p3 < 1 and p1 + p2 + p3 = 1. The contestant chooses a door. Then Monty
+opens a door (other than the one the contestant chose) and offers the contestant the
+option of switching to the other unopened door.
+(a) Assume for this part that Monty knows in advance which door has the car. He always
+opens a door to reveal a goat, and if he has a choice of which door to open he chooses
+with equal probabilities. Suppose for this part that the contestant initially chooses door
+3, and then Monty opens door 2, revealing a goat. Given the above information, find
+the conditional probability that door 3 has the car. Should the contestant switch doors?
+(If whether to switch depends on the pi's, give a fully simplified criterion in terms of
+the pi's.)
+(b) Now assume instead that Monty does not know in advance where the car is. He
+randomly chooses which door to open (other than the one the contestant chose), with
+equal probabilities. (The game is spoiled if he reveals the car.) Suppose again that the
+Conditional probability
+93
+contestant initially chooses door 3, and then Monty opens door 2, revealing a goat.
+Given the above information, find the conditional probability that door 3 has the car.
+Should the contestant switch doors? (If whether to switch depends on the pi's, give a
+fully simplified criterion in terms of the pi's.)
+(c) Repeat (a), except with the contestant initially choosing door 1 rather than door 3.
+(d) Repeat (b), except with the contestant initially choosing door 1 rather than door 3.
+45.
+Monty Hall is trying out a new version of his game. In this version, instead of there always
+being 1 car and 2 goats, the prizes behind the doors are generated independently, with
+each door having probability p of having a car and q = 1 −p of having a goat. In detail:
+There are three doors, behind each of which there is one prize: either a car or a goat.
+For each door, there is probability p that there is a car behind it and q = 1 −p that
+there is a goat, independent of the other doors.
+The contestant chooses a door. Monty, who knows the contents of each door, then opens
+one of the two remaining doors. In choosing which door to open, Monty will always reveal
+a goat if possible. If both of the remaining doors have the same kind of prize, Monty
+chooses randomly (with equal probabilities). After opening a door, Monty offers the
+contestant the option of switching to the other unopened door.
+The contestant decides in advance to use the following strategy: first choose door 1.
+Then, after Monty opens a door, switch to the other unopened door.
+(a) Find the unconditional probability that the contestant will get a car.
+(b) Monty now opens door 2, revealing a goat. Given this information, find the condi-
+tional probability that the contestant will get a car.
+46.
+Monty Hall is trying out a new version of his game, with rules as follows. The contes-
+tant gets to choose one of four doors. One door has a car behind it, another has an
+apple, another has a book, and another has a goat. All 24 permutations for which door
+has which prize are equally likely. In order from least preferred to most preferred, the
+contestant's preferences are: goat, apple, book, car.
+Monty, who knows which prize is behind each door, will open a door (other than the
+contestant's initial choice) and then let the contestant choose whether to switch to
+another unopened door. Monty will reveal the least preferred prize (among the 3 doors
+other than the contestant's initial choice) with probability p, the intermediately preferred
+prize with probability 1 −p, and the most preferred prize never.
+The contestant decides in advance to use the following strategy: Initially choose door
+1. After Monty opens a door, switch to one of the other two unopened doors, randomly
+choosing between them (with probability 1/2 each).
+(a) Find the unconditional probability that the contestant will get the car.
+Hint: Condition on where the car is.
+(b) Find the unconditional probability that Monty will reveal the apple.
+Hint: Condition on what is behind door 1.
+(c) Monty now opens a door, revealing the apple. Given this information, find the
+conditional probability that the contestant will get the car.
+47.
+You are the contestant on Monty Hall's game show. Hoping to double the excitement of
+the game, Monty will offer you two opportunities to switch to another door. Specifically,
+the new rules are as follows. There are four doors. Behind one door there is a car (which
+you want); behind the other three doors there are goats (which you don't want). Initially,
+all possibilities are equally likely for where the car is. Monty knows where the car is,
+and when he has a choice of which door to open, he chooses with equal probabilities.
+You choose a door, which for concreteness we assume is door 1. Monty opens a door
+94
+Introduction to Probability
+(other than door 1), revealing a goat, and then offers you the option to switch to
+another door. Monty then opens another door (other than your currently selected door),
+revealing another goat. So now there are two open doors (with goats) and two unopened
+doors. Again Monty offers you the option to switch.
+You decide in advance to use one of the following four strategies: stay-stay, stay-switch,
+switch-stay, switch-switch, where, for example, "stay-switch" means that the first time
+Monty offers you the choice of switching, you stay with your current selection, but then
+the second time Monty offers you the choice, you do switch doors. In each part below
+the goal is to find or compare unconditional probabilities, i.e., from a vantage point of
+before the game has started.
+(a) Find the probability of winning the car if you follow the stay-stay strategy.
+(b) Find the probability of winning the car if you follow the stay-switch strategy.
+(c) Find the probability of winning the car if you follow the switch-stay strategy.
+(d) Find the probability of winning the car if you follow the switch-switch strategy.
+(e) Which of these four strategies is the best?
+First-step analysis and gambler's ruin
+48.
+s⃝A fair die is rolled repeatedly, and a running total is kept (which is, at each time,
+the total of all the rolls up until that time). Let pn be the probability that the running
+total is ever exactly n (assume the die will always be rolled enough times so that the
+running total will eventually exceed n, but it may or may not ever equal n).
+(a) Write down a recursive equation for pn (relating pn to earlier terms pk in a simple
+way). Your equation should be true for all positive integers n, so give a definition of p0
+and pk for k < 0 so that the recursive equation is true for small values of n.
+(b) Find p7.
+(c) Give an intuitive explanation for the fact that pn →1/3.5 = 2/7 as n →∞.
+49.
+A sequence of n ≥1 independent trials is performed, where each trial ends in "success"
+or "failure" (but not both). Let pi be the probability of success in the ith trial, qi = 1−pi,
+and bi = qi −1/2, for i = 1, 2, . . . , n. Let An be the event that the number of successful
+trials is even.
+(a) Show that for n = 2, P(A2) = 1/2 + 2b1b2.
+(b) Show by induction that
+P(An) = 1/2 + 2n−1b1b2 . . . bn.
+(This result is very useful in cryptography. Also, note that it implies that if n coins are
+flipped, then the probability of an even number of Heads is 1/2 if and only if at least
+one of the coins is fair.) Hint: Group some trials into a supertrial.
+(c) Check directly that the result of (b) is true in the following simple cases: pi = 1/2
+for some i; pi = 0 for all i; pi = 1 for all i.
+50.
+s⃝Calvin and Hobbes play a match consisting of a series of games, where Calvin has
+probability p of winning each game (independently). They play with a "win by two"
+rule: the first player to win two games more than his opponent wins the match. Find
+the probability that Calvin wins the match (in terms of p), in two different ways:
+(a) by conditioning, using the law of total probability.
+(b) by interpreting the problem as a gambler's ruin problem.
+Conditional probability
+95
+51.
+s⃝A gambler repeatedly plays a game where in each round, he wins a dollar with
+probability 1/3 and loses a dollar with probability 2/3. His strategy is "quit when he is
+ahead by $2". Suppose that he starts with a million dollars. Show that the probability
+that he'll ever be ahead by $2 is less than 1/4.
+52.
+As in the gambler's ruin problem, two gamblers, A and B, make a series of bets, until
+one of the gamblers goes bankrupt. Let A start out with i dollars and B start out with
+N −i dollars, and let p be the probability of A winning a bet, with 0 < p < 1
+2. Each
+bet is for 1
+k dollars, with k a positive integer, e.g., k = 1 is the original gambler's ruin
+problem and k = 20 means they're betting nickels. Find the probability that A wins the
+game, and determine what happens to this as k →∞.
+53.
+There are 100 equally spaced points around a circle. At 99 of the points, there are
+sheep, and at 1 point, there is a wolf. At each time step, the wolf randomly moves either
+clockwise or counterclockwise by 1 point. If there is a sheep at that point, he eats it.
+The sheep don't move. What is the probability that the sheep who is initially opposite
+the wolf is the last one remaining?
+54.
+An immortal drunk man wanders around randomly on the integers. He starts at the
+origin, and at each step he moves 1 unit to the right or 1 unit to the left, with probabilities
+p and q = 1−p respectively, independently of all his previous steps. Let Sn be his position
+after n steps.
+(a) Let pk be the probability that the drunk ever reaches the value k, for all k ≥0.
+Write down a difference equation for pk (you do not need to solve it for this part).
+(b) Find pk, fully simplified; be sure to consider all 3 cases: p < 1/2, p = 1/2, and
+p > 1/2. Feel free to assume that if A1, A2, . . . are events with Aj ⊆Aj+1 for all j,
+then P(An) →P(∪∞
+j=1Aj) as n →∞(because it is true; this is known as continuity of
+probability).
+Simpson's paradox
+55.
+s⃝(a) Is it possible to have events A, B, C such that P(A|C) < P(B|C) and P(A|Cc) <
+P(B|Cc), yet P(A) > P(B)? That is, A is less likely than B given that C is true,
+and also less likely than B given that C is false, yet A is more likely than B if we're
+given no information about C. Show this is impossible (with a short proof) or find a
+counterexample (with a story interpreting A, B, C).
+(b) If the scenario in (a) is possible, is it a special case of Simpson's paradox, equivalent to
+Simpson's paradox, or neither? If it is impossible, explain intuitively why it is impossible
+even though Simpson's paradox is possible.
+56.
+s⃝Consider the following conversation from an episode of The Simpsons:
+Lisa: Dad, I think he's an ivory dealer! His boots are ivory, his hat is
+ivory, and I'm pretty sure that check is ivory.
+Homer: Lisa, a guy who has lots of ivory is less likely to hurt Stampy
+than a guy whose ivory supplies are low.
+Here Homer and Lisa are debating the question of whether or not the man (named
+Blackheart) is likely to hurt Stampy the Elephant if they sell Stampy to him. They
+clearly disagree about how to use their observations about Blackheart to learn about
+the probability (conditional on the evidence) that Blackheart will hurt Stampy.
+(a) Define clear notation for the various events of interest here.
+(b) Express Lisa's and Homer's arguments (Lisa's is partly implicit) as conditional
+probability statements in terms of your notation from (a).
+96
+Introduction to Probability
+(c) Assume it is true that someone who has a lot of a commodity will have less desire
+to acquire more of the commodity. Explain what is wrong with Homer's reasoning that
+the evidence about Blackheart makes it less likely that he will harm Stampy.
+57.
+(a) There are two crimson jars (labeled C1 and C2) and two mauve jars (labeled M1 and
+M2). Each jar contains a mixture of green gummi bears and red gummi bears. Show by
+example that it is possible that C1 has a much higher percentage of green gummi bears
+than M1, and C2 has a much higher percentage of green gummi bears than M2, yet if
+the contents of C1 and C2 are merged into a new jar and likewise for M1 and M2, then
+the combination of C1 and C2 has a lower percentage of green gummi bears than the
+combination of M1 and M2.
+(b) Explain how (a) relates to Simpson's paradox, both intuitively and by explicitly
+defining events A, B, C as in the statement of Simpson's paradox.
+58.
+As explained in this chapter, Simpson's paradox says that it is possible to have events
+A, B, C such that P(A|B, C) < P(A|Bc, C) and P(A|B, Cc) < P(A|Bc, Cc), yet
+P(A|B) > P(A|Bc).
+(a) Can Simpson's paradox occur if A and B are independent? If so, give a concrete
+example (with both numbers and an interpretation); if not, prove that it is impossible.
+(b) Can Simpson's paradox occur if A and C are independent? If so, give a concrete
+example (with both numbers and an interpretation); if not, prove that it is impossible.
+(c) Can Simpson's paradox occur if B and C are independent? If so, give a concrete
+example (with both numbers and an interpretation); if not, prove that it is impossible.
+59.
+s⃝The book Red State, Blue State, Rich State, Poor State by Andrew Gelman [12]
+discusses the following election phenomenon: within any U.S. state, a wealthy voter is
+more likely to vote for a Republican than a poor voter, yet the wealthier states tend to
+favor Democratic candidates!
+(a) Assume for simplicity that there are only 2 states (called Red and Blue), each
+of which has 100 people, and that each person is either rich or poor, and either a
+Democrat or a Republican. Make up numbers consistent with the above, showing how
+this phenomenon is possible, by giving a 2 × 2 table for each state (listing how many
+people in each state are rich Democrats, etc.). So within each state, a rich voter is more
+likely to vote for a Republican than a poor voter, but the percentage of Democrats is
+higher in the state with the higher percentage of rich people than in the state with the
+lower percentage of rich people.
+(b) In the setup of (a) (not necessarily with the numbers you made up there), let
+D be the event that a randomly chosen person is a Democrat (with all 200 people
+equally likely), and B be the event that the person lives in the Blue State. Suppose
+that 10 people move from the Blue State to the Red State. Write Pold and Pnew for
+probabilities before and after they move. Assume that people do not change parties,
+so we have Pnew(D) = Pold(D). Is it possible that both Pnew(D|B) > Pold(D|B) and
+Pnew(D|Bc) > Pold(D|Bc) are true? If so, explain how it is possible and why it does not
+contradict the law of total probability P(D) = P(D|B)P(B) + P(D|Bc)P(Bc); if not,
+show that it is impossible.
+Mixed practice
+60.
+A patient is being given a blood test for the disease conditionitis. Let p be the prior
+probability that the patient has conditionitis. The blood sample is sent to one of two
+labs for analysis, lab A or lab B. The choice of which lab to use is made randomly,
+independent of the patient's disease status, with probability 1/2 for each lab.
+Conditional probability
+97
+For lab A, the probability of someone testing positive given that they do have the disease
+is a1, and the probability of someone testing negative given that they do not have the
+disease is a2. The corresponding probabilities for lab B are b1 and b2.
+(a) Find the probability that the patient has the disease, given that they tested positive.
+(b) Find the probability that the patient's blood sample was analyzed by lab A, given
+that the patient tested positive.
+61.
+Fred decides to take a series of n tests, to diagnose whether he has a certain disease
+(any individual test is not perfectly reliable, so he hopes to reduce his uncertainty by
+taking multiple tests). Let D be the event that he has the disease, p = P(D) be the
+prior probability that he has the disease, and q = 1 −p. Let Tj be the event that he
+tests positive on the jth test.
+(a) Assume for this part that the test results are conditionally independent given Fred's
+disease status. Let a = P(Tj|D) and b = P(Tj|Dc), where a and b don't depend on j.
+Find the posterior probability that Fred has the disease, given that he tests positive on
+all n of the n tests.
+(b) Suppose that Fred tests positive on all n tests. However, some people have a certain
+gene that makes them always test positive. Let G be the event that Fred has the gene.
+Assume that P(G) = 1/2 and that D and G are independent. If Fred does not have the
+gene, then the test results are conditionally independent given his disease status. Let
+a0 = P(Tj|D, Gc) and b0 = P(Tj|Dc, Gc), where a0 and b0 don't depend on j. Find the
+posterior probability that Fred has the disease, given that he tests positive on all n of
+the tests.
+62.
+A certain hereditary disease can be passed from a mother to her children. Given that
+the mother has the disease, her children independently will have it with probability 1/2.
+Given that she doesn't have the disease, her children won't have it either. A certain
+mother, who has probability 1/3 of having the disease, has two children.
+(a) Find the probability that neither child has the disease.
+(b) Is whether the elder child has the disease independent of whether the younger child
+has the disease? Explain.
+(c) The elder child is found not to have the disease. A week later, the younger child is
+also found not to have the disease. Given this information, find the probability that the
+mother has the disease.
+63.
+Three fair coins are tossed at the same time. Explain what is wrong with the following
+argument: "there is a 50% chance that the three coins all landed the same way, since
+obviously it is possible to find two coins that match, and then the other coin has a 50%
+chance of matching those two".
+64.
+An urn contains red, green, and blue balls. Let r, g, b be the proportions of red, green,
+blue balls, respectively (r + g + b = 1).
+(a) Balls are drawn randomly with replacement. Find the probability that the first time
+a green ball is drawn is before the first time a blue ball is drawn.
+Hint: Explain how this relates to finding the probability that a draw is green, given that
+it is either green or blue.
+(b) Balls are drawn randomly without replacement. Find the probability that the first
+time a green ball is drawn is before the first time a blue ball is drawn. Is the answer the
+same or different than the answer in (a)?
+Hint: Imagine the balls all lined up, in the order in which they will be drawn. Note that
+where the red balls are standing in this line is irrelevant.
+98
+Introduction to Probability
+(c) Generalize the result from (a) to the following setting. Independent trials are per-
+formed, and the outcome of each trial is classified as being exactly one of type 1, type 2,
+. . . , or type n, with probabilities p1, p2, . . . , pn, respectively. Find the probability that
+the first trial to result in type i comes before the first trial to result in type j, for i ̸= j.
+65.
+Marilyn vos Savant was asked the following question for her column in Parade:
+You're at a party with 199 other guests when robbers break in and announce
+that they are going to rob one of you. They put 199 blank pieces of paper in
+a hat, plus one marked "you lose." Each guest must draw, and the person
+who draws "you lose" will get robbed. The robbers offer you the option of
+drawing first, last, or at any time in between. When would you take your
+turn?
+The draws are made without replacement, and for (a) are uniformly random.
+(a) Determine whether it is optimal to draw first, last, or somewhere in between (or
+whether it does not matter), to maximize the probability of not being robbed. Give a
+clear, concise, and compelling explanation.
+(b) More generally, suppose that there is one "you lose" piece of paper, with "weight"
+v, and there are n blank pieces of paper, each with "weight" w. At each stage, draws
+are made with probability proportional to weight, i.e., the probability of drawing a
+particular piece of paper is its weight divided by the sum of the weights of all the
+remaining pieces of paper. Determine whether it is better to draw first or second (or
+whether it does not matter); here v > 0, w > 0, and n ≥1 are known constants.
+66.
+A fair die is rolled repeatedly, until the running total is at least 100 (at which point the
+rolling stops). Find the most likely value of the final running total (i.e., the value of the
+running total at the first time when it is at least 100).
+Hint: Consider the possibilities for what the running total is just before the last roll.
+67.
+Homer has a box of donuts, which currently contains exactly c chocolate, g glazed, and
+j jelly donuts. Homer eats donuts one after another, each time choosing uniformly at
+random from the remaining donuts.
+(a) Find the probability that the last donut remaining in the box is a chocolate donut.
+(b) Find the probability of the following event: glazed is the first type of donut that
+Homer runs out of, and then jelly is the second type of donut that he runs out of.
+Hint: Consider the last donut remaining, and the last donut that is either glazed or jelly.
+68.
+Let D be the event that a person develops a certain disease, and C be the event that
+the person was exposed to a certain substance (e.g., D may correspond to lung cancer
+and C may correspond to smoking cigarettes). We are interested in whether exposure
+to the substance is related to developing the disease (and if so, how they are related).
+The odds ratio is a very widely used measure in epidemiology of the association between
+disease and exposure, defined as
+OR = odds(D|C)
+odds(D|Cc),
+where conditional odds are defined analogously to unconditional odds: odds(A|B) =
+P (A|B)
+P (Ac|B). The relative risk of the disease for someone exposed to the substance, another
+widely used measure, is
+RR = P(D|C)
+P(D|Cc).
+The relative risk is especially easy to interpret, e.g., RR = 2 says that someone exposed
+to the substance is twice as likely to develop the disease as someone who isn't exposed
+(though this does not necessarily mean that the substance causes the increased chance
+of getting the disease, nor is there necessarily a causal interpretation for the odds ratio).
+Conditional probability
+99
+(a) Show that if the disease is rare, both for exposed people and for unexposed people,
+then the relative risk is approximately equal to the odds ratio.
+(b) Let pij for i = 0, 1 and j = 0, 1 be the probabilities in the following 2 × 2 table.
+D
+Dc
+C
+p11
+p10
+Cc
+p01
+p00
+For example, p10 = P(C, Dc). Show that the odds ratio can be expressed as a cross-
+product ratio, in the sense that
+OR = p11p00
+p10p01 .
+(c) Show that the odds ratio has the neat symmetry property that the roles of C and
+D can be swapped without changing the value:
+OR = odds(C|D)
+odds(C|Dc).
+This property is one of the main reasons why the odds ratio is so widely used, since it
+turns out that it allows the odds ratio to be estimated in a wide variety of problems
+where relative risk would be hard to estimate well.
+69.
+A researcher wants to estimate the percentage of people in some population who have
+used illegal drugs, by conducting a survey. Concerned that a lot of people would lie
+when asked a sensitive question like "Have you ever used illegal drugs?", the researcher
+uses a method known as randomized response. A hat is filled with slips of paper, each
+of which says either "I have used illegal drugs" or "I have not used illegal drugs". Let p
+be the proportion of slips of paper that say "I have used illegal drugs" (p is chosen by
+the researcher in advance).
+Each participant chooses a random slip of paper from the hat and answers (truthfully)
+"yes" or "no" to whether the statement on that slip is true. The slip is then returned
+to the hat. The researcher does not know which type of slip the participant had. Let
+y be the probability that a participant will say "yes", and d be the probability that a
+participant has used illegal drugs.
+(a) Find y, in terms of d and p.
+(b) What would be the worst possible choice of p that the researcher could make in
+designing the survey? Explain.
+(c) Now consider the following alternative system. Suppose that proportion p of the slips
+of paper say "I have used illegal drugs", but that now the remaining 1 −p say "I was
+born in winter" rather than "I have not used illegal drugs". Assume that 1/4 of people
+are born in winter, and that a person's season of birth is independent of whether they
+have used illegal drugs. Find d, in terms of y and p.
+70.
+At the beginning of the play Rosencrantz and Guildenstern Are Dead by Tom Stop-
+pard [25], Guildenstern is spinning coins and Rosencrantz is betting on the outcome for
+each. The coins have been landing Heads over and over again, prompting the following
+remark:
+Guildenstern: A weaker man might be moved to re-examine his faith, if in
+nothing else at least in the law of probability.
+The coin spins have resulted in Heads 92 times in a row.
+(a) Fred and his friend are watching the play. Upon seeing the events described above,
+they have the following conversation:
+100
+Introduction to Probability
+Fred: That outcome would be incredibly unlikely with fair coins. They must
+be using trick coins (maybe with double-headed coins), or the experiment
+must have been rigged somehow (maybe with magnets).
+Fred's friend: It's true that the string HH. . . H of length 92 is very unlikely;
+the chance is 1/292 ≈2 × 10−28 with fair coins. But any other specific
+string of H's and T's with length 92 has exactly the same probability! The
+reason the outcome seems extremely unlikely is that the number of possible
+outcomes grows exponentially as the number of spins grows, so any outcome
+would seem extremely unlikely. You could just as well have made the same
+argument even without looking at the results of their experiment, which
+means you really don't have evidence against the coins being fair.
+Discuss these comments, to help Fred and his friend resolve their debate.
+(b) Suppose there are only two possibilities: either the coins are all fair (and spun fairly),
+or double-headed coins are being used (in which case the probability of Heads is 1). Let
+p be the prior probability that the coins are fair. Find the posterior probability that the
+coins are fair, given that they landed Heads in 92 out of 92 trials.
+(c) Continuing from (b), for which values of p is the posterior probability that the coins
+are fair greater than 0.5? For which values of p is it less than 0.05?
+71.
+There are n types of toys, which you are collecting one by one. Each time you buy a
+toy, it is randomly determined which type it has, with equal probabilities. Let pij be the
+probability that just after you have bought your ith toy, you have exactly j toy types
+in your collection, for i ≥1 and 0 ≤j ≤n. (This problem is in the setting of the coupon
+collector problem, a famous problem which we study in Example 4.3.12.)
+(a) Find a recursive equation expressing pij in terms of pi−1,j and pi−1,j−1, for i ≥2
+and 1 ≤j ≤n.
+(b) Describe how the recursion from (a) can be used to calculate pij.
+72.
+A/B testing is a form of randomized experiment that is used by many companies to
+learn about how customers will react to different treatments. For example, a company
+may want to see how users will respond to a new feature on their website (compared
+with how users respond to the current version of the website) or compare two different
+advertisements.
+As the name suggests, two different treatments, Treatment A and Treatment B, are
+being studied. Users arrive one by one, and upon arrival are randomly assigned to one
+of the two treatments. The trial for each user is classified as "success" (e.g., the user
+made a purchase) or "failure". The probability that the nth user receives Treatment A
+is allowed to depend on the outcomes for the previous users. This set-up is known as a
+two-armed bandit.
+Many algorithms for how to randomize the treatment assignments have been studied.
+Here is an especially simple (but fickle) algorithm, called a stay-with-a-winner procedure:
+(i) Randomly assign the first user to Treatment A or Treatment B, with equal proba-
+bilities.
+(ii) If the trial for the nth user is a success, stay with the same treatment for the
+(n + 1)st user; otherwise, switch to the other treatment for the (n + 1)st user.
+Let a be the probability of success for Treatment A, and b be the probability of success
+for Treatment B. Assume that a ̸= b, but that a and b are unknown (which is why
+the test is needed). Let pn be the probability of success on the nth trial and an be the
+probability that Treatment A is assigned on the nth trial (using the above algorithm).
+(a) Show that
+pn = (a −b)an + b,
+an+1 = (a + b −1)an + 1 −b.
+Conditional probability
+101
+(b) Use the results from (a) to show that pn+1 satisfies the following recursive equation:
+pn+1 = (a + b −1)pn + a + b −2ab.
+(c) Use the result from (b) to find the long-run probability of success for this algorithm,
+limn→∞pn, assuming that this limit exists.
+73.
+In humans (and many other organisms), genes come in pairs. A certain gene comes in
+two types (alleles): type a and type A. The genotype of a person for that gene is the
+types of the two genes in the pair: AA, Aa, or aa (aA is equivalent to Aa). Assume that
+the Hardy-Weinberg law applies here, which means that the frequencies of AA, Aa, aa
+in the population are p2, 2p(1 −p), (1 −p)2 respectively, for some p with 0 < p < 1.
+When a woman and a man have a child, the child's gene pair has one gene contributed
+by each parent. Suppose that the mother is equally likely to contribute either of the two
+genes in her gene pair, and likewise for the father, independently. Also suppose that the
+genotypes of the parents are independent of each other (with probabilities given by the
+Hardy-Weinberg law).
+(a) Find the probabilities of each possible genotype (AA, Aa, aa) for a child of two
+random parents. Explain what this says about stability of the Hardy-Weinberg law
+from one generation to the next.
+Hint: Condition on the genotypes of the parents.
+(b) A person of type AA or aa is called homozygous (for the gene under consideration),
+and a person of type Aa is called heterozygous (for that gene). Find the probability
+that a child is homozygous, given that both parents are homozygous. Also, find the
+probability that a child is heterozygous, given that both parents are heterozygous.
+(c) Suppose that having genotype aa results in a distinctive physical characteristic, so it
+is easy to tell by looking at someone whether or not they have that genotype. A mother
+and father, neither of whom are of type aa, have a child. The child is also not of type
+aa. Given this information, find the probability that the child is heterozygous.
+Hint: Use the definition of conditional probability. Then expand both the numerator
+and the denominator using LOTP, conditioning on the genotypes of the parents.
+74.
+A standard deck of cards will be shuffled and then the cards will be turned over one at
+a time until the first ace is revealed. Let B be the event that the next card in the deck
+will also be an ace.
+(a) Intuitively, how do you think P(B) compares in size with 1/13 (the overall proportion
+of aces in a deck of cards)? Explain your intuition. (Give an intuitive discussion rather
+than a mathematical calculation; the goal here is to describe your intuition explicitly.)
+(b) Let Cj be the event that the first ace is at position j in the deck. Find P(B|Cj) in
+terms of j, fully simplified.
+(c) Using the law of total probability, find an expression for P(B) as a sum. (The sum
+can be left unsimplified, but it should be something that could easily be computed in
+software such as R that can calculate sums.)
+(d) Find a fully simplified expression for P(B) using a symmetry argument.
+Hint: If you were deciding whether to bet on the next card after the first ace being an
+ace or to bet on the last card in the deck being an ace, would you have a preference?
