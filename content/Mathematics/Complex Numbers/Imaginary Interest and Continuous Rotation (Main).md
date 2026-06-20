@@ -404,7 +404,7 @@ The Schrödinger equation has the same shape: $i\hbar\, \dot\psi = H\psi$. The s
 
 ## Related Documents
 
-- **[i to the power i (Main)](<i to the power i/i to the power i (Main).md>)** — The direct sequel in the same Lockdown Math series: it reuses *this* note's "$e^{it}$ as position, velocity perpendicular" dynamics to give meaning to $i^{\,i}=e^{-\pi/2}$, then shows the answer is in fact infinitely many real values.
+- **[[i to the power i (Main)|i to the power i (Main)]]** — The direct sequel in the same Lockdown Math series: it reuses *this* note's "$e^{it}$ as position, velocity perpendicular" dynamics to give meaning to $i^{\,i}=e^{-\pi/2}$, then shows the answer is in fact infinitely many real values.
 - **[Euler's Formula via exp(x) (Main)](<Euler's Formula via exp(x) (Main).md>)** — The same author's later derivation: $e^{i\theta} = \cos\theta + i\sin\theta$ via the polynomial series definition of $e^x$. This note motivates *why* you would ever plug imaginary inputs into $e^x$ in the first place; the Euler's-Formula note shows *what comes out*.
 - **[Euler's Formula Consequences](eulers_formula_consequences.md)** — Companion deep-dive on identities that follow from $e^{i\theta} = \cos\theta + i\sin\theta$ (Tom Crawford / Numberphile angle).
 
