@@ -316,6 +316,10 @@ What does $\exp(r\,x)$ *do* to the plane? Track where the input axes land.
 - **Real inputs → a log-spaced ray.** With $r=\ln2$, $f(1)=2$, $f(-1)=\tfrac12$, $f(2)=4$; negative reals get squeezed into $(0,1)$ since $e^{(\text{neg})}<1$.
 - **Imaginary inputs → the unit circle.** $f(i)$ is a rotation of $r$ radians; the whole imaginary axis wraps around the circle.
 
+> [!tip] Interactive exercise — aim the exponential map
+> 👉 **[Open: The Exponential Map — aim the output](complex_exponential_map_exercise.html)**
+> Drag the `r`, `a`, and `b` sliders and watch where $w = \exp(r\,z)$ lands: the real part $a$ sets the magnitude $e^{ra}$ (the orange radius), the imaginary part $b$ sets the rotation angle $rb$ (the green arc). Three challenge targets — reach $2$ on the log-spaced ray, reach $i$ on the unit circle, and reproduce Euler's $-1$ — check your aim automatically.
+
 > [!quote] *(at [[48:54]](https://www.youtube.com/watch?v=pq9LcwC7CoY&t=2934s))*
 > "It's turning the x-axis into a logarithmic scale and then wrapping the imaginary axis along a circle… and as soon as that value of $r$ becomes imaginary, it swaps the role of those."
 >

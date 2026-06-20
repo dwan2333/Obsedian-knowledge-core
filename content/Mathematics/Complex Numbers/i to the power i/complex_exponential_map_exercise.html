@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Exponential Map · Seeing Complex Exponentials (i to the power i §8)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#f7f1e3; --paper-deep:#efe6d0; --ink:#1c2030; --ink-soft:#5a5d6e;
+    --rule:#c8b89a; --accent:#b13a2e; --green:#5e7c5e; --orange:#b88455; --panel:#ede2c7; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { background:var(--paper); }
+  body { color:var(--ink); font-family:'Crimson Pro','Times New Roman',serif; line-height:1.5;
+    min-height:100vh; padding:36px 18px; display:flex; justify-content:center;
+    background-image:
+      radial-gradient(ellipse 70% 50% at 14% 6%, rgba(94,124,94,0.04), transparent 65%),
+      radial-gradient(ellipse 60% 50% at 86% 94%, rgba(177,58,46,0.04), transparent 65%);
+    background-attachment:fixed; }
+  .expmap { width:100%; max-width:760px; background:var(--paper); border:1px solid var(--rule);
+    border-radius:12px; padding:30px 32px; }
+  .eyebrow { font-family:'JetBrains Mono',ui-monospace,monospace; font-size:11px;
+    letter-spacing:.18em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
+  h1 { font-size:32px; font-weight:600; line-height:1.08; margin:0 0 10px; letter-spacing:-0.01em; }
+  .sub { color:var(--ink-soft); font-size:16px; font-style:italic; margin-bottom:22px; }
+  .ctrl { display:flex; align-items:center; gap:14px; margin:10px 0; }
+  .ctrl label { font-family:'JetBrains Mono',monospace; font-size:12.5px; min-width:132px; color:var(--ink); }
+  .ctrl input[type=range] { flex:1; accent-color:var(--accent); height:4px; }
+  .ctrl .v { font-family:'JetBrains Mono',monospace; font-size:13.5px; font-weight:700;
+    min-width:110px; text-align:right; color:var(--ink); }
+  .planes { display:flex; gap:18px; flex-wrap:wrap; margin:20px 0 8px; align-items:flex-start; justify-content:center; }
+  .planebox { background:var(--paper-deep); border:1px solid var(--rule); border-radius:8px; padding:8px 8px 4px; }
+  .planebox .cap { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.04em;
+    text-transform:uppercase; color:var(--ink-soft); text-align:center; margin-top:3px; }
+  canvas { display:block; border-radius:4px; }
+  .readout { background:var(--panel); border:1px solid var(--rule); border-radius:8px; padding:13px 18px; margin:10px 0; }
+  .readout div { font-family:'JetBrains Mono',monospace; font-size:14px; margin:6px 0; }
+  .ro-mag { color:var(--orange); } .ro-mag b { color:#8a5a28; }
+  .ro-ang { color:var(--green); } .ro-ang b { color:#3d5630; }
+  .ro-w { color:var(--accent); font-weight:700; }
+  .chal { background:var(--paper-deep); border:1px solid var(--rule); border-radius:8px; padding:16px 18px; margin-top:12px; }
+  .chal h2 { font-size:17px; font-weight:600; margin:0 0 12px; }
+  .chal .btns { display:flex; flex-wrap:wrap; gap:9px; margin-bottom:11px; }
+  .chal button { font-family:'JetBrains Mono',monospace; font-size:12.5px; cursor:pointer;
+    background:var(--paper); border:1px solid var(--rule); color:var(--ink); padding:8px 12px; border-radius:5px; transition:all .12s; }
+  .chal button:hover { border-color:var(--accent); color:var(--accent); }
+  .chal button.on { background:var(--accent); border-color:var(--accent); color:#fff; }
+  .hintline { font-size:14.5px; color:var(--ink-soft); font-style:italic; margin:7px 0; min-height:20px; }
+  .hintline .reveal { font-style:normal; font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--ink); }
+  .status { font-family:'JetBrains Mono',monospace; font-size:13.5px; font-weight:700; padding:9px 13px; border-radius:5px; margin-top:7px; }
+  .status.miss { background:rgba(177,58,46,.08); color:var(--accent); border:1px solid rgba(177,58,46,.3); }
+  .status.hit { background:rgba(94,124,94,.16); color:#3d5630; border:1px solid var(--green); }
+  .status.idle { background:var(--paper); color:var(--ink-soft); border:1px solid var(--rule); }
+  .note { font-size:14px; color:var(--ink-soft); margin-top:14px; border-top:1px solid var(--rule); padding-top:12px; }
+  .note b { color:var(--ink); }
+  sup { font-size:.72em; }
+  .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+</style>
+</head>
+<body>
+<div class="expmap">
+  <h2 class="sr-only">Interactive exercise: adjust the rate r and the real and imaginary parts of a complex input z, and watch where w = exp(r·z) lands on the output plane. The real part sets the magnitude; the imaginary part sets the rotation angle.</h2>
+  <div class="eyebrow">i to the power i · §8 Seeing Complex Exponentials</div>
+  <h1>The exponential map: aim the output</h1>
+  <div class="sub">Set a complex input z = a + b·i and watch where w = exp(r·z) lands. The real part a controls <span style="color:#8a5a28;font-style:normal;font-weight:600;">how far out</span>; the imaginary part b controls <span style="color:#3d5630;font-style:normal;font-weight:600;">how far around</span>.</div>
+
+  <div class="ctrl"><label>r &nbsp;(rate)</label><input type="range" id="em-r" min="0.2" max="1.4" step="0.001" value="0.693"><span class="v" id="em-rv"></span></div>
+  <div class="ctrl"><label style="color:#8a5a28;">a = Re(z)</label><input type="range" id="em-a" min="-3" max="3" step="0.05" value="1"><span class="v" id="em-av"></span></div>
+  <div class="ctrl"><label style="color:#3d5630;">b = Im(z)</label><input type="range" id="em-b" min="-8" max="8" step="0.05" value="0"><span class="v" id="em-bv"></span></div>
+
+  <div class="planes">
+    <div class="planebox"><canvas id="em-in" width="190" height="190"></canvas><div class="cap">input&nbsp; z = a + b·i</div></div>
+    <div class="planebox"><canvas id="em-out" width="350" height="350"></canvas><div class="cap">output&nbsp; w = exp(r·z)</div></div>
+  </div>
+
+  <div class="readout">
+    <div class="ro-mag" id="em-romag"></div>
+    <div class="ro-ang" id="em-roang"></div>
+    <div class="ro-w" id="em-row"></div>
+  </div>
+
+  <div class="chal">
+    <h2>Challenge — aim z so w hits the target</h2>
+    <div class="btns" id="em-btns">
+      <button data-t="two">Reach 2</button>
+      <button data-t="i">Reach i</button>
+      <button data-t="neg">Reach −1 (Euler!)</button>
+      <button data-t="free" class="on">Free explore</button>
+    </div>
+    <div class="hintline" id="em-hint"></div>
+    <div class="status idle" id="em-status">Pick a target above.</div>
+  </div>
+
+  <div class="note">
+    <b>What you're seeing.</b> The dashed circle is the image of the imaginary axis (every pure-imaginary input lands on the <b>unit circle</b>). The orange ray with log-spaced ticks is the image of the real axis (real inputs land on <b>e<sup>r·k</sup></b> — powers of 2 when r = ln 2). The faint orange circle is the locus of all outputs at the current a, as b sweeps.
+  </div>
+</div>
+<script>
+(function(){
+  const $=id=>document.getElementById(id);
+  const PAPER='#f7f1e3',INK='#1c2030',INK_SOFT='#5a5d6e',GRID='#ddd0b2',
+        ACCENT='#b13a2e',GREEN='#5e7c5e',ORANGE='#b88455';
+  const LN2=Math.log(2);
+  const st={r:0.693,a:1,b:0,target:'free'};
+  const TARGETS={
+    two:{p:[2,0],  name:'2',  hint:'Need magnitude 2 and angle 0. Since e<sup>r·a</sup>=2 ⟹ a = ln2 / r, and angle 0 ⟹ b = 0.'},
+    i:  {p:[0,1],  name:'i',  hint:'Need magnitude 1 ⟹ a = 0, and angle 90° = π/2 ⟹ b = π/(2r).'},
+    neg:{p:[-1,0], name:'−1', hint:'Euler! Need magnitude 1 ⟹ a = 0, and angle 180° = π ⟹ b = π/r.'}
+  };
+  function dpr(cv){const d=window.devicePixelRatio||1,s=cv.width;cv.style.width=s+'px';cv.style.height=cv.height+'px';
+    cv.width=s*d;cv.height=cv.height*d;const x=cv.getContext('2d');x.setTransform(d,0,0,d,0,0);return x;}
+  const inCv=$('em-in'),outCv=$('em-out');
+  const inCtx=dpr(inCv),outCtx=dpr(outCv);
+  const IN_S=190,OUT_S=350,IN_R=6,OUT_R=5;
+
+  function grid(ctx,S,R){
+    ctx.fillStyle=PAPER;ctx.fillRect(0,0,S,S);
+    const sc=(S/2)/R,cx=S/2,cy=S/2;
+    ctx.lineWidth=1;ctx.strokeStyle=GRID;ctx.beginPath();
+    for(let k=-R;k<=R;k++){let p=cx+k*sc;ctx.moveTo(p,0);ctx.lineTo(p,S);let q=cy-k*sc;ctx.moveTo(0,q);ctx.lineTo(S,q);}
+    ctx.stroke();
+    ctx.strokeStyle=INK_SOFT;ctx.lineWidth=1.3;ctx.beginPath();
+    ctx.moveTo(0,cy);ctx.lineTo(S,cy);ctx.moveTo(cx,0);ctx.lineTo(cx,S);ctx.stroke();
+    return {sc,cx,cy,X:w=>cx+w*sc,Y:w=>cy-w*sc};
+  }
+  function dot(ctx,x,y,col,rad){ctx.fillStyle=col;ctx.beginPath();ctx.arc(x,y,rad||5,0,7);ctx.fill();
+    ctx.lineWidth=1.4;ctx.strokeStyle='#fff';ctx.stroke();}
+
+  function fmt(n){return (n<0?'−':'')+Math.abs(n).toFixed(3);}
+
+  function render(){
+    const {r,a,b}=st;
+    const mag=Math.exp(r*a), ang=r*b;
+    const wx=mag*Math.cos(ang), wy=mag*Math.sin(ang);
+    $('em-rv').textContent='r = '+r.toFixed(3)+(Math.abs(r-LN2)<0.012?'  (ln2)':'');
+    $('em-av').textContent='a = '+a.toFixed(2);
+    $('em-bv').textContent='b = '+b.toFixed(2);
+
+    let P=grid(inCtx,IN_S,IN_R);
+    const ac=Math.max(-IN_R,Math.min(IN_R,a)), bc=Math.max(-IN_R,Math.min(IN_R,b));
+    inCtx.lineCap='round';
+    inCtx.strokeStyle=ORANGE;inCtx.lineWidth=3.4;inCtx.beginPath();inCtx.moveTo(P.X(0),P.Y(0));inCtx.lineTo(P.X(ac),P.Y(0));inCtx.stroke();
+    inCtx.strokeStyle=GREEN;inCtx.lineWidth=3.4;inCtx.beginPath();inCtx.moveTo(P.X(ac),P.Y(0));inCtx.lineTo(P.X(ac),P.Y(bc));inCtx.stroke();
+    dot(inCtx,P.X(ac),P.Y(bc),ACCENT,5);
+    inCtx.fillStyle=INK;inCtx.font="600 12px 'JetBrains Mono',monospace";inCtx.fillText('z',P.X(ac)+8,P.Y(bc)-6);
+
+    let Q=grid(outCtx,OUT_S,OUT_R);
+    outCtx.strokeStyle=ORANGE;outCtx.lineWidth=2;outCtx.beginPath();outCtx.moveTo(Q.X(0),Q.Y(0));outCtx.lineTo(Q.X(OUT_R),Q.Y(0));outCtx.stroke();
+    outCtx.fillStyle='#8a5a28';outCtx.font="10px 'JetBrains Mono',monospace";
+    for(let k=-3;k<=3;k++){let m=Math.exp(r*k); if(m<=OUT_R+0.001 && m>0.12){let px=Q.X(m);
+      outCtx.strokeStyle='#8a5a28';outCtx.lineWidth=1.4;outCtx.beginPath();outCtx.moveTo(px,Q.Y(0)-4);outCtx.lineTo(px,Q.Y(0)+4);outCtx.stroke();
+      let lab=Math.abs(r-LN2)<0.012?('2'+(k<0?'⁻':'')+Math.abs(k)):m.toFixed(m<1?2:1);
+      outCtx.fillText(lab,px-6,Q.Y(0)+15);}}
+    outCtx.setLineDash([5,4]);outCtx.strokeStyle=INK_SOFT;outCtx.lineWidth=1.5;
+    outCtx.beginPath();outCtx.arc(Q.cx,Q.cy,Q.sc,0,7);outCtx.stroke();outCtx.setLineDash([]);
+    if(mag<=OUT_R*1.6){outCtx.strokeStyle='rgba(184,132,85,.55)';outCtx.lineWidth=1.4;
+      outCtx.beginPath();outCtx.arc(Q.cx,Q.cy,mag*Q.sc,0,7);outCtx.stroke();}
+    const arcR=42, eff=((ang%(2*Math.PI))+2*Math.PI)%(2*Math.PI);
+    outCtx.strokeStyle=GREEN;outCtx.lineWidth=2.4;outCtx.beginPath();outCtx.arc(Q.cx,Q.cy,arcR,0,-eff,true);outCtx.stroke();
+    const onScreen=mag<=OUT_R*1.42;
+    const drawR=Math.min(mag,OUT_R*1.4)*Q.sc;
+    const px=Q.cx+drawR*Math.cos(ang), py=Q.cy-drawR*Math.sin(ang);
+    outCtx.strokeStyle=ORANGE;outCtx.lineWidth=2.4;outCtx.beginPath();outCtx.moveTo(Q.cx,Q.cy);outCtx.lineTo(px,py);outCtx.stroke();
+    let stt=$('em-status'),hintEl=$('em-hint');
+    if(st.target!=='free'){const T=TARGETS[st.target],tp=T.p;
+      const tx=Q.X(tp[0]),ty=Q.Y(tp[1]);
+      outCtx.strokeStyle=ACCENT;outCtx.lineWidth=2;outCtx.beginPath();outCtx.arc(tx,ty,9,0,7);outCtx.stroke();
+      outCtx.beginPath();outCtx.moveTo(tx-13,ty);outCtx.lineTo(tx+13,ty);outCtx.moveTo(tx,ty-13);outCtx.lineTo(tx,ty+13);outCtx.stroke();
+      const dist=Math.hypot(wx-tp[0],wy-tp[1]);
+      if(dist<0.1){stt.className='status hit';stt.innerHTML='✓ On target! w = '+fmt(wx)+' + '+fmt(wy)+'i  ≈  '+T.name;}
+      else{stt.className='status miss';stt.textContent='Distance to target: '+dist.toFixed(3)+'  — keep adjusting.';}
+    } else {stt.className='status idle';stt.textContent='Free explore — drag the sliders and watch the mapping.';hintEl.innerHTML='';}
+    dot(outCtx,px,py,ACCENT,onScreen?6:5);
+    if(!onScreen){outCtx.fillStyle=ACCENT;outCtx.font="10px 'JetBrains Mono',monospace";outCtx.fillText('|w|='+mag.toFixed(1)+' ↗',px-44,py+(wy>0?-10:18));}
+
+    const degT=ang*180/Math.PI;
+    $('em-romag').innerHTML='Re(z) = '+a.toFixed(2)+'  →  magnitude |w| = e<sup>r·a</sup> = <b>'+mag.toFixed(3)+'</b>';
+    $('em-roang').innerHTML='Im(z) = '+b.toFixed(2)+'  →  angle = r·b = <b>'+ang.toFixed(3)+' rad = '+degT.toFixed(0)+'°</b>';
+    $('em-row').innerHTML='⇒  w = exp(r·z) = '+fmt(wx)+' + '+fmt(wy)+' i';
+  }
+
+  $('em-r').addEventListener('input',e=>{st.r=+e.target.value;render();});
+  $('em-a').addEventListener('input',e=>{st.a=+e.target.value;render();});
+  $('em-b').addEventListener('input',e=>{st.b=+e.target.value;render();});
+  $('em-btns').addEventListener('click',e=>{const btn=e.target.closest('button');if(!btn)return;
+    st.target=btn.dataset.t;
+    [...$('em-btns').children].forEach(c=>c.classList.toggle('on',c===btn));
+    const h=$('em-hint');
+    if(st.target==='free'){h.innerHTML='';}
+    else{const T=TARGETS[st.target];h.innerHTML='<b>Goal:</b> land on '+T.name+'.  <span class="reveal">'+T.hint+'</span>';}
+    render();});
+  render();
+})();
+</script>
+</body>
+</html>
