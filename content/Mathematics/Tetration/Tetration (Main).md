@@ -103,6 +103,8 @@ The trick says base $\sqrt2$ makes the tower equal **both** 2 and 4 — impossib
 
 ### 3.1 The cobweb construction *(at [[20:12]](https://www.youtube.com/watch?v=elQVZLLiod4&t=1212s))*
 
+Desmos example over here [Power tower | Desmos](https://www.desmos.com/calculator/nul32eaaa9)
+
 To iterate $a \mapsto b^a$ graphically: from a point on $y = b^x$, go **horizontally** to $y = x$ (this turns the output into the next input), then **vertically** back to the curve. Repeating draws a "staircase."
 
 - For $b = 2$ the staircase climbs forever — the curve sits entirely above $y = x$, so it **escapes** to infinity.
