@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Rotation to Decay · iᶦ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:       #f7f1e3;
+    --paper-deep:  #efe6d0;
+    --ink:         #1c2030;
+    --ink-soft:    #5a5d6e;
+    --rule:        #c8b89a;
+    --accent:      #b13a2e;   /* decay / red */
+    --accent-bg:   rgba(177,58,46,0.10);
+    --blue:        #1f4f8c;   /* rotation / position */
+    --blue-soft:   rgba(31,79,140,0.12);
+    --teal:        #2d6470;
+    --good:        #3d7530;
+    --gold:        #b88455;
+    --panel:       #ede2c7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); }
+  body {
+    color: var(--ink);
+    font-family: 'Crimson Pro', 'Times New Roman', serif;
+    font-size: 18px; line-height: 1.55; min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse 70% 50% at 14% 6%,  rgba(31,79,140,0.04), transparent 65%),
+      radial-gradient(ellipse 60% 50% at 86% 94%, rgba(177,58,46,0.04), transparent 65%);
+    background-attachment: fixed;
+  }
+  .frame { max-width: 1140px; margin: 0 auto; padding: 44px 36px 56px; }
+  @media (max-width: 720px) { .frame { padding: 28px 16px 40px; } }
+
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 26px; margin-bottom: 30px; }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 16px;
+  }
+  h1 { font-size: clamp(32px, 4.5vw, 54px); font-weight: 600; line-height: 1.05; margin-bottom: 12px; letter-spacing: -0.01em; }
+  .subtitle { color: var(--ink-soft); font-size: 17px; font-style: italic; max-width: 820px; }
+  .subtitle .rot { color: var(--blue); font-style: normal; font-weight: 600; }
+  .subtitle .dec { color: var(--accent); font-style: normal; font-weight: 600; }
+
+  section { background: var(--paper-deep); border: 1px solid var(--rule); border-radius: 8px; padding: 22px 26px; margin-bottom: 22px; }
+  h2 { font-family: 'Crimson Pro', serif; font-size: 20px; font-weight: 500; margin-bottom: 14px; }
+  h3 { font-family: 'Crimson Pro', serif; font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+
+  /* Playback */
+  .playback { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .play-btn, .reset-btn, .jump-btn {
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.06em;
+    background: var(--paper); border: 1px solid var(--rule); color: var(--ink);
+    padding: 10px 16px; border-radius: 4px; cursor: pointer; transition: all 0.12s;
+  }
+  .play-btn:hover, .reset-btn:hover { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+  .play-btn.playing { background: var(--accent); color: white; border-color: var(--accent); }
+  .jump-btn { border-color: var(--blue); color: var(--blue); }
+  .jump-btn:hover { background: var(--blue-soft); }
+  .scrubber-wrap { flex: 1; min-width: 220px; display: flex; flex-direction: column; gap: 4px; }
+  .scrubber-lbl { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-soft); letter-spacing: 0.1em; text-transform: uppercase; }
+  .scrubber-lbl .t-val { color: var(--accent); font-weight: 700; }
+  input[type=range] { width: 100%; accent-color: var(--accent); }
+
+  /* Visualization panels */
+  .visual-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 18px; }
+  @media (max-width: 880px) { .visual-grid { grid-template-columns: 1fr; } }
+  .panel { background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 14px 10px; }
+  .panel svg { width: 100%; height: auto; display: block; }
+  .panel .readout { margin-top: 8px; padding: 8px 12px; background: var(--panel); border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 13px; text-align: center; }
+  .panel .readout .vr { color: var(--blue); font-weight: 700; }
+  .panel .readout .vd { color: var(--accent); font-weight: 700; }
+  .panel .caption { margin-top: 8px; font-size: 14px; color: var(--ink-soft); font-style: italic; text-align: center; }
+
+  /* The big "lands on i^i" banner */
+  .land {
+    margin-top: 14px; padding: 12px 16px; border-radius: 6px;
+    border: 1px dashed var(--rule); background: rgba(255,255,255,0.4);
+    font-family: 'JetBrains Mono', monospace; font-size: 14px; text-align: center;
+    color: var(--ink-soft); transition: all 0.25s;
+  }
+  .land.hit {
+    border: 1px solid var(--good); background: rgba(61,117,48,0.12); color: var(--ink);
+    box-shadow: 0 0 0 3px rgba(61,117,48,0.10);
+  }
+  .land b { color: var(--good); }
+
+  /* SVG element styles */
+  .axis-line { stroke: var(--ink-soft); stroke-width: 1.2; opacity: 0.7; }
+  .axis-label { font-family: 'Crimson Pro', serif; fill: var(--ink-soft); font-size: 13px; font-style: italic; }
+  .tick-label { font-family: 'JetBrains Mono', monospace; fill: var(--ink-soft); font-size: 10px; }
+  .tick-mark { stroke: var(--ink-soft); stroke-width: 1; opacity: 0.6; }
+  .ref-circle { fill: none; stroke: var(--rule); stroke-width: 1.2; stroke-dasharray: 3 3; }
+  .arc-trail { fill: none; stroke: var(--blue); stroke-width: 3; opacity: 0.55; stroke-linecap: round; }
+  .decay-track { stroke: var(--accent); stroke-width: 3; opacity: 0.5; stroke-linecap: round; }
+  .radius-line { stroke: var(--blue); stroke-width: 1.5; stroke-dasharray: 4 3; opacity: 0.7; }
+  .rot-point { fill: var(--blue); stroke: #11335f; stroke-width: 2; }
+  .dec-point { fill: var(--accent); stroke: #7a241c; stroke-width: 2; }
+  .i-dot { fill: var(--ink-soft); }
+  .decay-curve { fill: none; stroke: var(--accent); stroke-width: 2.6; stroke-linejoin: round; }
+  .target-line { stroke: var(--good); stroke-width: 1.4; stroke-dasharray: 3 3; opacity: 0.8; }
+  .target-dot { fill: var(--good); }
+  .cur-marker { stroke: var(--accent); stroke-width: 1.4; stroke-dasharray: 3 3; }
+  .cur-dot { fill: var(--accent); stroke: #7a241c; stroke-width: 1.5; }
+  .lbl-rot { font-family: 'Crimson Pro', serif; fill: var(--blue); font-size: 16px; font-style: italic; font-weight: 700; }
+  .lbl-dec { font-family: 'Crimson Pro', serif; fill: var(--accent); font-size: 16px; font-style: italic; font-weight: 700; }
+
+  .notes p { margin-bottom: 10px; } .notes p:last-child { margin-bottom: 0; }
+  .notes .key { color: var(--accent); font-weight: 600; }
+  .notes .keyb { color: var(--blue); font-weight: 600; }
+
+  footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; color: var(--ink-soft); font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <header>
+    <div class="eyebrow">i to the power i · §4.2 · Interactive</div>
+    <h1>From rotation to decay</h1>
+    <div class="subtitle">Raising circular motion <span class="rot">e<sup>it</sup></span> to the power <em>i</em> collapses the orbit into <span class="dec">exponential decay e<sup>−t</sup></span> sliding straight back toward the origin. The same <em>π</em>/2 of "time" that walks the blue dot up to <em>i</em> walks the red dot down to <strong>i<sup>i</sup> = e<sup>−π/2</sup> ≈ 0.2079</strong>.</div>
+  </header>
+
+  <section>
+    <h2>Playback</h2>
+    <div class="playback">
+      <button class="play-btn" id="play-btn" onclick="togglePlay()">▶ Play</button>
+      <button class="reset-btn" onclick="resetT()">↻ Reset</button>
+      <button class="jump-btn" onclick="jumpToHalfPi()">↦ Jump to t = π/2</button>
+      <div class="scrubber-wrap">
+        <div class="scrubber-lbl">Time t = <span class="t-val" id="t-readout">0.00</span> rad</div>
+        <input type="range" id="time-scrubber" min="0" max="100" value="0" step="0.1" oninput="scrubT(this.value)">
+      </div>
+    </div>
+    <div class="land" id="land">Drag the slider (or press Play) toward <b>t = π/2 ≈ 1.5708</b> to land exactly on i<sup>i</sup>.</div>
+  </section>
+
+  <section>
+    <h2>The two pictures</h2>
+    <div class="visual-grid">
+      <div class="panel">
+        <h3>The complex plane</h3>
+        <svg id="plane-svg" viewBox="0 0 340 340" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="readout">
+          <span class="vr">e<sup>it</sup></span> = <span class="vr" id="rot-readout">1.00 + 0.00i</span> &nbsp;·&nbsp; <span class="vd">e<sup>−t</sup></span> = <span class="vd" id="dec-readout">1.0000</span>
+        </div>
+        <div class="caption">The <span style="color:var(--blue);font-weight:600">blue dot</span> rotates around the unit circle; the <span style="color:var(--accent);font-weight:600">red dot</span> slides backward toward 0.</div>
+      </div>
+      <div class="panel">
+        <h3>Decay value over time</h3>
+        <svg id="decay-svg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="readout">
+          value = <span class="vd" id="val-readout">1.0000</span>
+        </div>
+        <div class="caption">The exact value of e<sup>−t</sup> as time ticks forward — it passes through 0.2079 at t = π/2.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="notes">
+    <h2>What you're watching</h2>
+    <p>Write the circular-motion parametrisation as <span class="keyb">e<sup>it</sup></span> — at time <em>t</em> you have walked an angle <em>t</em> around the unit circle. Reaching the point <em>i</em> at the top takes exactly <em>t</em> = π/2.</p>
+    <p>Now <strong>raise that whole expression to the power <em>i</em></strong>. Multiplying the exponent by <em>i</em> turns every velocity arrow another 90° — they stop pointing <em>around</em> the circle and point straight <em>inward</em>. Algebraically the parametrisation becomes
+    <br><span class="key">(e<sup>it</sup>)<sup>i</sup> = e<sup>i·i·t</sup> = e<sup>−t</sup></span>, &nbsp;real exponential decay along the number line.</p>
+    <p>So the base <em>i</em> says "<em>travel for π/2 units of time</em>", and the outer <em>i</em> says "<em>do it under decay dynamics instead of rotation</em>". Travelling π/2 under decay lands you at <span class="key">e<sup>−π/2</sup> ≈ 0.2079</span> — and that real number is exactly <strong>i<sup>i</sup></strong>. An imaginary number raised to an imaginary power turns out to be real.</p>
+  </section>
+
+  <footer>
+    <span>i to the power i · §4.2</span>
+    <span>From Rotation to Decay · Interactive</span>
+  </footer>
+</div>
+
+<script>
+"use strict";
+
+// ---- state ----
+const MAX_T = 2.5;                 // slider range (rad of "time")
+const HALF_PI = Math.PI / 2;       // 1.5708 -> lands on i^i
+const II = Math.exp(-HALF_PI);     // 0.20788 = i^i (principal)
+let t = 0;
+let playing = false;
+
+function fmt(x, dp = 2) { if (Math.abs(x) < 1e-9) x = 0; return x.toFixed(dp); }
+
+// ---- playback ----
+function togglePlay() {
+  playing = !playing;
+  const b = document.getElementById('play-btn');
+  b.textContent = playing ? '⏸ Pause' : '▶ Play';
+  b.classList.toggle('playing', playing);
+}
+function resetT() { t = 0; if (playing) togglePlay(); syncSlider(); update(); }
+function scrubT(v) { t = (v / 100) * MAX_T; if (playing) togglePlay(); update(); }
+function jumpToHalfPi() { t = HALF_PI; if (playing) togglePlay(); syncSlider(); update(); }
+function syncSlider() { document.getElementById('time-scrubber').value = (t / MAX_T) * 100; }
+
+let lastFrame = 0;
+function frame(ts) {
+  if (lastFrame === 0) lastFrame = ts;
+  const dt = (ts - lastFrame) / 1000; lastFrame = ts;
+  if (playing) {
+    t += dt * 0.55;                // gentle speed
+    if (t > MAX_T) { t = MAX_T; togglePlay(); }   // stop at the end
+    syncSlider(); update();
+  }
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+
+// ---- SVG helpers ----
+const NS = 'http://www.w3.org/2000/svg';
+function el(tag, attrs, parent) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (parent) parent.appendChild(e);
+  return e;
+}
+
+// ---- complex plane ----
+const P_SVG = document.getElementById('plane-svg');
+const P = 340, PC = 170, PSC = 110;        // center, scale (px per unit)
+const planeX = re => PC + re * PSC;
+const planeY = im => PC - im * PSC;
+
+function renderPlane() {
+  P_SVG.innerHTML = '';
+  // axes
+  el('line', {x1: 12, y1: PC, x2: P - 12, y2: PC, class: 'axis-line'}, P_SVG);
+  el('line', {x1: PC, y1: 12, x2: PC, y2: P - 12, class: 'axis-line'}, P_SVG);
+  el('text', {x: P - 16, y: PC - 8, class: 'axis-label'}, P_SVG).textContent = 'Re';
+  el('text', {x: PC + 8, y: 20, class: 'axis-label'}, P_SVG).textContent = 'Im';
+  // unit circle
+  el('circle', {cx: PC, cy: PC, r: PSC, class: 'ref-circle'}, P_SVG);
+  // 1 tick
+  el('line', {x1: planeX(1), y1: PC - 4, x2: planeX(1), y2: PC + 4, class: 'tick-mark'}, P_SVG);
+  el('text', {x: planeX(1), y: PC + 17, 'text-anchor': 'middle', class: 'tick-label'}, P_SVG).textContent = '1';
+  // i marker
+  el('circle', {cx: PC, cy: planeY(1), r: 3.5, class: 'i-dot'}, P_SVG);
+  el('text', {x: PC - 10, y: planeY(1) + 4, 'text-anchor': 'end', class: 'tick-label'}, P_SVG).textContent = 'i';
+
+  // arc trail of e^{it} from t'=0..t
+  let arc = [];
+  const steps = 60;
+  for (let k = 0; k <= steps; k++) {
+    const tt = (k / steps) * t;
+    arc.push(planeX(Math.cos(tt)) + ',' + planeY(Math.sin(tt)));
+  }
+  if (t > 0.001) el('polyline', {points: arc.join(' '), class: 'arc-trail'}, P_SVG);
+
+  // decay track of e^{-t} along the real axis from 1 down to current
+  el('line', {x1: planeX(Math.exp(-t)), y1: PC, x2: planeX(1), y2: PC, class: 'decay-track'}, P_SVG);
+
+  // rotating position e^{it}
+  const rx = planeX(Math.cos(t)), ry = planeY(Math.sin(t));
+  el('line', {x1: PC, y1: PC, x2: rx, y2: ry, class: 'radius-line'}, P_SVG);
+  el('circle', {cx: rx, cy: ry, r: 7, class: 'rot-point'}, P_SVG);
+  el('text', {x: rx + 11, y: ry - 7, class: 'lbl-rot'}, P_SVG).textContent = 'eᶦᵗ';
+
+  // decaying point e^{-t}
+  const dx = planeX(Math.exp(-t));
+  el('circle', {cx: dx, cy: PC, r: 7, class: 'dec-point'}, P_SVG);
+  el('text', {x: dx - 4, y: PC - 12, 'text-anchor': 'middle', class: 'lbl-dec'}, P_SVG).textContent = 'e⁻ᵗ';
+}
+
+// ---- decay graph ----
+const D_SVG = document.getElementById('decay-svg');
+const D_W = 400, D_H = 300, D_ML = 48, D_MR = 22, D_MT = 22, D_MB = 40;
+const D_PW = D_W - D_ML - D_MR, D_PH = D_H - D_MT - D_MB;
+const decX = tv => D_ML + (tv / MAX_T) * D_PW;
+const decY = val => D_MT + (1 - val) * D_PH;     // val in [0,1]
+
+function renderDecay() {
+  D_SVG.innerHTML = '';
+  // axes
+  el('line', {x1: D_ML, y1: decY(0), x2: D_W - D_MR, y2: decY(0), class: 'axis-line'}, D_SVG);
+  el('line', {x1: D_ML, y1: D_MT, x2: D_ML, y2: decY(0), class: 'axis-line'}, D_SVG);
+  el('text', {x: D_W - D_MR, y: decY(0) + 18, 'text-anchor': 'end', class: 'axis-label'}, D_SVG).textContent = 'Time t';
+  el('text', {x: D_ML - 34, y: D_MT + 80, class: 'axis-label', transform: `rotate(-90 ${D_ML - 34} ${D_MT + 80})`}, D_SVG).textContent = 'value';
+  // y ticks 0 and 1
+  el('text', {x: D_ML - 8, y: decY(1) + 4, 'text-anchor': 'end', class: 'tick-label'}, D_SVG).textContent = '1.0';
+  el('text', {x: D_ML - 8, y: decY(0) + 4, 'text-anchor': 'end', class: 'tick-label'}, D_SVG).textContent = '0.0';
+  // x tick at pi/2
+  el('line', {x1: decX(HALF_PI), y1: decY(0) - 3, x2: decX(HALF_PI), y2: decY(0) + 3, class: 'tick-mark'}, D_SVG);
+  el('text', {x: decX(HALF_PI), y: decY(0) + 17, 'text-anchor': 'middle', class: 'tick-label'}, D_SVG).textContent = 'π/2';
+
+  // e^{-t} curve over the full range
+  let pts = [];
+  const N = 200;
+  for (let i = 0; i <= N; i++) {
+    const tv = (i / N) * MAX_T;
+    pts.push(decX(tv) + ',' + decY(Math.exp(-tv)));
+  }
+  el('polyline', {points: pts.join(' '), class: 'decay-curve'}, D_SVG);
+
+  // target marker at (pi/2, 0.2079) — the i^i value
+  el('line', {x1: D_ML, y1: decY(II), x2: decX(HALF_PI), y2: decY(II), class: 'target-line'}, D_SVG);
+  el('line', {x1: decX(HALF_PI), y1: decY(II), x2: decX(HALF_PI), y2: decY(0), class: 'target-line'}, D_SVG);
+  el('circle', {cx: decX(HALF_PI), cy: decY(II), r: 4.5, class: 'target-dot'}, D_SVG);
+  el('text', {x: D_ML + 4, y: decY(II) - 6, class: 'tick-label', fill: '#3d7530'}, D_SVG).textContent = '0.2079 = iᶦ';
+
+  // current point on the curve
+  const cx = decX(t), cy = decY(Math.exp(-t));
+  el('line', {x1: cx, y1: D_MT, x2: cx, y2: decY(0), class: 'cur-marker'}, D_SVG);
+  el('circle', {cx: cx, cy: cy, r: 6, class: 'cur-dot'}, D_SVG);
+}
+
+// ---- update all ----
+function update() {
+  const re = Math.cos(t), im = Math.sin(t), dec = Math.exp(-t);
+  const sign = im >= 0 ? '+' : '−';
+  document.getElementById('rot-readout').textContent = fmt(re) + ' ' + sign + ' ' + fmt(Math.abs(im)) + 'i';
+  document.getElementById('dec-readout').textContent = fmt(dec, 4);
+  document.getElementById('val-readout').textContent = fmt(dec, 4);
+  document.getElementById('t-readout').textContent = fmt(t);
+
+  // "landed on i^i" banner
+  const land = document.getElementById('land');
+  if (Math.abs(t - HALF_PI) < 0.02) {
+    land.classList.add('hit');
+    land.innerHTML = 'At <b>t = π/2</b>: the red dot sits at <b>e<sup>−π/2</sup> = ' + fmt(II, 4) + ' = i<sup>i</sup></b> — imaginary<sup>imaginary</sup> is real. ✓';
+  } else {
+    land.classList.remove('hit');
+    land.innerHTML = 'Drag the slider (or press Play) toward <b>t = π/2 ≈ 1.5708</b> to land exactly on i<sup>i</sup>.';
+  }
+
+  renderPlane();
+  renderDecay();
+}
+
+update();
+</script>
+</body>
+</html>
