@@ -962,6 +962,28 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > >
 > > **Answer.** $P(\text{match}) = 1 - k! \cdot e_k(p)$, minimized at $p_j = 1/365$ ✓
 >
+> > [!tip]- Walkthrough — why uniform birthdays minimize matches (parts a–c)
+> > **(a) Why $P(\text{no match}) = k!\,e_k(p)$.** $e_k(p)$ adds up, over *every* set of $k$ distinct days, the product of those days' probabilities — the chance that "exactly these $k$ days are used, one per person." But $e_k$ only picks the *set* of days; it never says **which person** got **which** day. The $k$ people are distinguishable, so each chosen set can be handed out in $k!$ orders. Hence
+> > $$P(\text{all distinct}) = k!\,e_k(p), \qquad P(\text{match}) = 1 - k!\,e_k(p).$$
+> >
+> > **(b) Why clumping hurts.** At the extreme $p_1 = 1$ — everyone born the same day — any two people match for sure, so $P(\text{match}) = 1$. Piling probability onto a few days funnels people into a narrow set of dates and forces collisions; the only escape is to spread the mass as evenly as possible, which is exactly $p_j = 1/365$.
+> >
+> > **(c) The smoothing step.** Replace days 1–2 by their average, $r_1 = r_2 = \frac{p_1 + p_2}{2}$, leaving every other day fixed. The hint's identity sorts the whole $e_k$ sum into three buckets, by how days $1$ and $2$ take part:
+> >
+> > | Bucket | Term | Hinges on | Under averaging |
+> > |---|---|---|---|
+> > | uses **neither** day 1 nor 2 | $e_k(x_3, \ldots)$ | the other days only | unchanged |
+> > | uses **exactly one** | $(x_1 + x_2)\,e_{k-1}(x_3, \ldots)$ | the **sum** $x_1 + x_2$ | unchanged — sum preserved |
+> > | uses **both** | $x_1 x_2\,e_{k-2}(x_3, \ldots)$ | the **product** $x_1 x_2$ | **changes** |
+> >
+> > Averaging holds the sum $x_1 + x_2$ fixed, so the first two buckets tie. Only the product bucket can move, and AM-GM forces its direction — $\left(\frac{p_1 + p_2}{2}\right)^2 \ge p_1 p_2$, strict unless $p_1 = p_2$ (the inequality itself is proved in the lemma below). Therefore $e_k(r) \ge e_k(p)$, which means ==averaging two unequal days can only **raise** $P(\text{no match})$, hence only **lower** $P(\text{match})$.==
+> >
+> > **Concrete check.** Suppose days 1–2 together hold $30\%$ of all birthdays. Clumpy $p = (0.20,\, 0.10)$ vs. averaged $r = (0.15,\, 0.15)$: the sum is $0.30$ for both (buckets 1–2 tie), but the product bucket splits,
+> > $$0.20 \times 0.10 = 0.0200 \;<\; 0.15 \times 0.15 = 0.0225,$$
+> > so $r$ carries the larger $e_k$ — fewer matches, exactly as claimed.
+> >
+> > **One pair → the whole year.** Each averaging move weakly raises $e_k$, and *strictly* raises it whenever the two days differ. So if **any** two days are unequal, you can smooth that pair and strictly cut the match probability — no non-uniform $p$ can be the minimizer. The one distribution with no unequal pair left to smooth is the uniform one, $p_j = 1/365$, which is therefore the unique minimizer of $P(\text{at least one match})$. $\blacksquare$
+>
 > > [!tip]- The AM–GM lemma behind part (c) — intuition + proof
 > > Part (c) leans on the two-variable **AM–GM inequality**: for $x, y \ge 0$,
 > > $$\frac{x+y}{2} \ge \sqrt{xy}, \qquad \text{with equality} \iff x = y.$$
