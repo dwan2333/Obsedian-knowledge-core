@@ -961,6 +961,23 @@ _All 62 chapter-end exercises with NotebookLM-generated solutions and main-agent
 > > **Solution.** (a) $P(\text{no match}) = k! \cdot e_k(p)$, so $P(\text{match}) = 1 - k! \cdot e_k(p)$. (b) Clumped distributions force collisions (extreme: $p_1 = 1$ gives $P = 1$). (c) Using $e_k(x_1, x_2, \ldots) = x_1 x_2 E_{k-2} + (x_1 + x_2)E_{k-1} + E_k$, only the $x_1 x_2$ term varies under averaging; $((p_1 + p_2)/2)^2 \geq p_1 p_2$ by AM-GM. Iterated smoothing converges to uniform.
 > >
 > > **Answer.** $P(\text{match}) = 1 - k! \cdot e_k(p)$, minimized at $p_j = 1/365$ ✓
+>
+> > [!tip]- The AM–GM lemma behind part (c) — intuition + proof
+> > Part (c) leans on the two-variable **AM–GM inequality**: for $x, y \ge 0$,
+> > $$\frac{x+y}{2} \ge \sqrt{xy}, \qquad \text{with equality} \iff x = y.$$
+> > *(Source: [The Famous AM-GM Inequality — Dr. Amitesh Datta](https://www.youtube.com/watch?v=xrZJ_E22wfc), 6:48.)*
+> >
+> > **Geometric intuition** *(at [[1:03]](https://www.youtube.com/watch?v=xrZJ_E22wfc&t=63s))*. Multiply through by $4$ to read both sides as perimeters: $\,4\sqrt{xy} \le 2x + 2y$.
+> > - A **rectangle** with sides $x, y$ has area $xy$ and perimeter $2x + 2y$.
+> > - The **square of equal area** $xy$ has side $\sqrt{xy}$ and perimeter $4\sqrt{xy}$.
+> >
+> > So AM–GM says *among all rectangles of a fixed area, the square has the smallest perimeter* — equal only when the rectangle already is a square ($x = y$). *(at [[2:05]](https://www.youtube.com/watch?v=xrZJ_E22wfc&t=125s))*
+> >
+> > **Algebraic proof** *(at [[2:55]](https://www.youtube.com/watch?v=xrZJ_E22wfc&t=175s))*. A real square is non-negative; add $4xy$ and factor:
+> > $$(x-y)^2 \ge 0 \;\implies\; x^2 - 2xy + y^2 \ge 0 \;\implies\; x^2 + 2xy + y^2 \ge 4xy \;\implies\; (x+y)^2 \ge 4xy.$$
+> > Since $x, y \ge 0$, take square roots and divide by 2: $\,x + y \ge 2\sqrt{xy}$, so $\frac{x+y}{2} \ge \sqrt{xy}$. Equality traces back to $(x-y)^2 = 0$, i.e. $x = y$. $\blacksquare$
+> >
+> > **Why this finishes (c).** Smooth the first two probabilities toward their mean — $r_1 = r_2 = \frac{p_1+p_2}{2}$, $r_j = p_j$ otherwise. In the identity $e_k = x_1 x_2\,E_{k-2} + (x_1+x_2)\,E_{k-1} + E_k$ (with $E_m = e_m(p_3,\ldots,p_{365})$), averaging leaves $x_1 + x_2$ and every $E_m$ **unchanged** — only the product $x_1 x_2$ moves, and AM–GM squared gives $\left(\frac{p_1+p_2}{2}\right)^2 \ge p_1 p_2$. Hence $e_k(r) \ge e_k(p)$, so $P(\text{match}\mid r) = 1 - k!\,e_k(r) \le P(\text{match}\mid p)$ (strict if $p_1 \ne p_2$). Repeatedly averaging the most-unequal pair drives $p$ to **uniform** $p_j = 1/365$ — the minimizer.
 
 ---
 
