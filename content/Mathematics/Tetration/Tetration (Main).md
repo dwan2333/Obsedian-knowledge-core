@@ -256,6 +256,7 @@ Extending tetration to the **complex plane** and coloring each base by whether (
 - **[Euler's Formula via exp(x) (Main)](<../Euler 's equation/Euler's Formula via exp(x) (Main).md>)** — the star fact §4 leans on: $e^x$ is its own derivative. That note builds Euler's formula from the series for $\exp$; here the same fact gives the derivative of $b^x = e^{\ln(b)x}$ that pins down the cutoff $e^{1/e}$.
 - **[Calculating Pi (Main)](<../Pi/Calculating Pi (Main).md>)** — another "a tiny calculus/algebra insight tames a wild object" story: Newton extends the binomial theorem past its domain to compute $\pi$, just as a single tangency condition here turns a runaway power tower into the exact constant $e^{1/e}$.
 - **[The Natural Logarithm (Main)](<../Logarithms/Natural Logarithm/The Natural Logarithm (Main).md>)** — $\ln(b)$ threads through every step of §4 (the slope $\ln(b)\,b^x$, the condition $\ln(b) = 1/x$). Background on the natural log and $e$.
+- **[[i to the power i (Main)|i to the power i]]** — the *complex-base* cousin of these power towers: its §9 iterates $i^{i^{i^{\cdots}}}$, which converges (principal branch) to $\approx 0.4383+0.3606i$ but settles into a period-3 chaotic cycle on another branch.
 
 ---
 
