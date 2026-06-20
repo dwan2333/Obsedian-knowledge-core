@@ -1,6 +1,6 @@
 # Chapter 2 — Conditional Probability
 
-*Companion document to [Introduction to Probability (Main)](<../Introduction to Probability (Main).md>)*
+*Companion document to [[Introduction to Probability (Main)|Introduction to Probability (Main)]]*
 
 _Research compiled 2026-06-20 — Blitzstein & Hwang, *Introduction to Probability*, Ch. 2, with NotebookLM-assisted summaries and full main-agent verification of all 74 exercises._
 
