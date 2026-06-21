@@ -35,8 +35,7 @@
               "title": "i to the power i (Main)"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -232,10 +231,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a8a83701943818c0",
+  "active": "e822804266fc5da2",
   "lastOpenFiles": [
-    "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
     "content/Mathematics/Complex Numbers/i to the power i/i to the power i (Main).md",
+    "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
     "content/Mathematics/Complex Numbers/i to the power i/i to the power i (Main).md.tmp.29108.0e89c556af40",
     "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html",
     "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.29108.b0ded81a5bdc",
