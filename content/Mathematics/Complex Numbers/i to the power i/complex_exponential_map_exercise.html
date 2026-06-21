@@ -147,11 +147,6 @@
 
     let Q=grid(outCtx,OUT_S,OUT_R);
     outCtx.strokeStyle=ORANGE;outCtx.lineWidth=2;outCtx.beginPath();outCtx.moveTo(Q.X(0),Q.Y(0));outCtx.lineTo(Q.X(OUT_R),Q.Y(0));outCtx.stroke();
-    outCtx.fillStyle='#8a5a28';outCtx.font="10px 'JetBrains Mono',monospace";
-    for(let k=-3;k<=3;k++){let m=Math.exp(r*k); if(m<=OUT_R+0.001 && m>0.12){let px=Q.X(m);
-      outCtx.strokeStyle='#8a5a28';outCtx.lineWidth=1.4;outCtx.beginPath();outCtx.moveTo(px,Q.Y(0)-4);outCtx.lineTo(px,Q.Y(0)+4);outCtx.stroke();
-      let lab=Math.abs(r-LN2)<0.012?('2'+(k<0?'⁻':'')+Math.abs(k)):m.toFixed(m<1?2:1);
-      outCtx.fillText(lab,px-6,Q.Y(0)+15);}}
     outCtx.setLineDash([5,4]);outCtx.strokeStyle=INK_SOFT;outCtx.lineWidth=1.5;
     outCtx.beginPath();outCtx.arc(Q.cx,Q.cy,Q.sc,0,7);outCtx.stroke();outCtx.setLineDash([]);
     if(mag<=OUT_R*1.6){outCtx.strokeStyle='rgba(184,132,85,.55)';outCtx.lineWidth=1.4;
@@ -162,6 +157,21 @@
     const drawR=Math.min(mag,OUT_R*1.4)*Q.sc;
     const px=Q.cx+drawR*Math.cos(ang), py=Q.cy-drawR*Math.sin(ang);
     outCtx.strokeStyle=ORANGE;outCtx.lineWidth=2.4;outCtx.beginPath();outCtx.moveTo(Q.cx,Q.cy);outCtx.lineTo(px,py);outCtx.stroke();
+    const ay=Q.Y(0);
+    outCtx.font="11px 'JetBrains Mono',monospace";outCtx.textAlign='center';outCtx.textBaseline='middle';
+    const supMap={'-':'⁻','0':'⁰','1':'¹','2':'²','3':'³'};
+    const lastRight={a:-1e9,b:-1e9};
+    for(let k=-3;k<=3;k++){const m=Math.exp(r*k);if(m<0.2||m>OUT_R+0.001)continue;
+      const mx=Q.X(m);
+      outCtx.strokeStyle='#7a4516';outCtx.lineWidth=1.5;outCtx.beginPath();outCtx.moveTo(mx,ay-4);outCtx.lineTo(mx,ay+4);outCtx.stroke();
+      const lab=Math.abs(r-LN2)<0.012?('2'+(k<0?'⁻':'')+String(Math.abs(k)).split('').map(d=>supMap[d]).join('')):m.toFixed(m<1?2:1);
+      const row=(k%2===0)?'a':'b';const ly=ay+(row==='a'?15:30);const lw=outCtx.measureText(lab).width;
+      if(mx-lw/2-3<lastRight[row]+1)continue;
+      lastRight[row]=mx+lw/2+3;
+      outCtx.fillStyle=PAPER;outCtx.fillRect(mx-lw/2-3,ly-8,lw+6,15);
+      outCtx.fillStyle='#7a4516';outCtx.fillText(lab,mx,ly);
+    }
+    outCtx.textAlign='left';outCtx.textBaseline='alphabetic';
     let stt=$('em-status'),hintEl=$('em-hint');
     if(st.target!=='free'){const T=TARGETS[st.target],tp=T.p;
       const tx=Q.X(tp[0]),ty=Q.Y(tp[1]);
