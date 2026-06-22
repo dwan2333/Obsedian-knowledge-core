@@ -20,146 +20,6 @@
               "icon": "lucide-file",
               "title": "Tips to Be a Better Problem Solver (Main)"
             }
-          },
-          {
-            "id": "a8a83701943818c0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/writhe.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "writhe"
-            }
-          },
-          {
-            "id": "711a2c29e41e6664",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/bitter.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "bitter"
-            }
-          },
-          {
-            "id": "12001e8cf061490d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/unsolicited.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "unsolicited"
-            }
-          },
-          {
-            "id": "ec17a401b94866be",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/unscathed.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "unscathed"
-            }
-          },
-          {
-            "id": "eae724420a5a7d4d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/supercilious.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "supercilious"
-            }
-          },
-          {
-            "id": "69450b7f958a5489",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/stern.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "stern"
-            }
-          },
-          {
-            "id": "d184924c59a86bbf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/serene.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "serene"
-            }
-          },
-          {
-            "id": "2bd9c8724b2c5d18",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/perspiration.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "perspiration"
-            }
-          },
-          {
-            "id": "cfc9079c645f54dc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Imaginary Interest and Continuous Rotation (Main)"
-            }
-          },
-          {
-            "id": "89d1280d90194f83",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Vocabulary/Words/scrupulous.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "scrupulous"
-            }
           }
         ]
       }
@@ -359,12 +219,13 @@
   },
   "active": "33d0c20f629613d1",
   "lastOpenFiles": [
-    "content/Mathematics/Complex Numbers/i to the power i/i to the power i (Main).md",
-    "content/Vocabulary/Words/writhe.md",
-    "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
-    "content/Vocabulary/Words/pretext.md",
     "content/Vocabulary/Words/scrupulous.md",
+    "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
     "content/Vocabulary/Words/perspiration.md",
+    "content/Mathematics/Problem Solving/Tips to Be a Better Problem Solver (Main).md",
+    "content/Vocabulary/Words/writhe.md",
+    "content/Mathematics/Complex Numbers/i to the power i/i to the power i (Main).md",
+    "content/Vocabulary/Words/pretext.md",
     "content/Vocabulary/Words/serene.md",
     "content/Vocabulary/Words/stern.md",
     "content/Vocabulary/Words/supercilious.md",
@@ -384,7 +245,6 @@
     "content/Vocabulary/Words/whimsical.md",
     "content/Vocabulary/Words/wearying.md",
     "content/Vocabulary/Words/wail.md",
-    "content/Vocabulary/Words/voluptuous.md",
     "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.23896.be638887ac8f",
     "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.23896.ed9acc53eb6c",
     "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.16072.f4d1b549df53",
