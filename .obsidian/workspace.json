@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Trigonometric/Visual representation On Demos.md",
+                "file": "content/Mathematics/Problem Solving/Tips to Be a Better Problem Solver (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Visual representation On Demos"
+              "title": "Tips to Be a Better Problem Solver (Main)"
             }
           }
         ],
@@ -234,9 +234,11 @@
   },
   "active": "91f555ea60250831",
   "lastOpenFiles": [
+    "content/Mathematics/Euler 's equation/Euler's Formula via exp(x) (Main).md",
+    "content/Mathematics/Trigonometric/Visual representation On Demos.md",
+    "content/Mathematics/Pi/Calculating Pi (Main).md",
     "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
     "content/Mathematics/Problem Solving/Tips to Be a Better Problem Solver (Main).md",
-    "content/Mathematics/Pi/Calculating Pi (Main).md",
     "content/Mathematics/Pi/negative_and_fractional_binomial_coefficients.md",
     "content/Vocabulary/Words/scrupulous.md",
     "content/Mathematics/Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md",
@@ -258,8 +260,6 @@
     "content/Vocabulary/Words/absolution.md",
     "content/Vocabulary/Words/abnegation.md",
     "content/Vocabulary/Words/wunderkind.md",
-    "content/Vocabulary/Words/wrangle.md",
-    "content/Vocabulary/Words/wits.md",
     "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.23896.be638887ac8f",
     "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.23896.ed9acc53eb6c",
     "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.16072.f4d1b549df53",
