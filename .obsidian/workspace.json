@@ -27,12 +27,54 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Vocabulary/Words/ikon.md",
+                "file": "content/Vocabulary/Words/serene.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ikon"
+              "title": "serene"
+            }
+          },
+          {
+            "id": "2bd9c8724b2c5d18",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/perspiration.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "perspiration"
+            }
+          },
+          {
+            "id": "33d0c20f629613d1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/pretext.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "pretext"
+            }
+          },
+          {
+            "id": "89d1280d90194f83",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/Vocabulary/Words/scrupulous.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "scrupulous"
             }
           }
         ],
@@ -234,32 +276,32 @@
   },
   "active": "a8a83701943818c0",
   "lastOpenFiles": [
-    "content/Vocabulary/Words/idleness.md",
-    "content/Vocabulary/Words/homage.md",
-    "content/Vocabulary/Words/hoard.md",
-    "content/Vocabulary/Words/hitherto.md",
-    "content/Vocabulary/Words/hew.md",
-    "content/Vocabulary/Words/harlot.md",
-    "content/Vocabulary/Words/harem.md",
-    "content/Vocabulary/Words/halter.md",
-    "content/Vocabulary/Words/gurney.md",
-    "content/Vocabulary/Words/grit.md",
-    "content/Vocabulary/Words/grievance.md",
-    "content/Vocabulary/Words/graceful.md",
-    "content/Vocabulary/Words/frivolous.md",
-    "content/Vocabulary/Words/frenzied.md",
-    "content/Vocabulary/Words/frantic.md",
-    "content/Vocabulary/Words/foundry.md",
-    "content/Vocabulary/Words/flock.md",
-    "content/Vocabulary/Words/farce.md",
-    "content/Vocabulary/Words/fanatic.md",
-    "content/Vocabulary/Words/faculty.md",
-    "content/Vocabulary/Words/exploit.md",
-    "content/Vocabulary/Words/expansive.md",
-    "content/Vocabulary/Words/exhortation.md",
-    "content/Vocabulary/Words/exalted.md",
-    "content/Vocabulary/Words/epoch.md",
-    "content/Vocabulary/Words/entreat.md",
+    "content/Vocabulary/Words/seething.md",
+    "content/Vocabulary/Words/sedentary.md",
+    "content/Vocabulary/Words/secularist.md",
+    "content/Vocabulary/Words/scrupulous.md",
+    "content/Vocabulary/Words/sagacious.md",
+    "content/Vocabulary/Words/scrape.md",
+    "content/Vocabulary/Words/scarcely.md",
+    "content/Vocabulary/Words/rudimentary.md",
+    "content/Vocabulary/Words/rogue.md",
+    "content/Vocabulary/Words/revolting.md",
+    "content/Vocabulary/Words/ridicule.md",
+    "content/Vocabulary/Words/rapidity.md",
+    "content/Vocabulary/Words/rapacious.md",
+    "content/Vocabulary/Words/queer.md",
+    "content/Vocabulary/Words/quarrelsome.md",
+    "content/Vocabulary/Words/puny.md",
+    "content/Vocabulary/Words/prosaic.md",
+    "content/Vocabulary/Words/propensity.md",
+    "content/Vocabulary/Words/proliferation.md",
+    "content/Vocabulary/Words/profligate.md",
+    "content/Vocabulary/Words/pretext.md",
+    "content/Vocabulary/Words/presentiment.md",
+    "content/Vocabulary/Words/preliminary.md",
+    "content/Vocabulary/Words/precipice.md",
+    "content/Vocabulary/Words/pliable.md",
+    "content/Vocabulary/Words/piquant.md",
     "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.23896.be638887ac8f",
     "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.23896.ed9acc53eb6c",
     "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.16072.f4d1b549df53",
