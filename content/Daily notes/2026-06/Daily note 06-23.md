@@ -1,0 +1,1 @@
+I haven't been writing the journal for the past four days. I will provided an brief account of the events that I find intriguing.  On Saturday, I recalled my dad spending a day with me and my brother.  While having lunch together, he siad 
