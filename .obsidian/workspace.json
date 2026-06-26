@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Git and Github/Git Essential Commands.md",
+                "file": "content/Git and Github/gitignore.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Git Essential Commands"
+              "title": "gitignore"
             }
           },
           {
@@ -233,8 +233,10 @@
   },
   "active": "0c4ce65a0833e5cd",
   "lastOpenFiles": [
-    "content/Git and Github/Branching/Branching (Main).md",
+    "content/Git and Github/Index and Object Store.md",
+    "content/Git and Github/What is Git and GitHub.md",
     "content/Git and Github/Git Essential Commands.md",
+    "content/Git and Github/Branching/Branching (Main).md",
     "content/Git and Github/gitignore.md",
     "content/Git and Github/Best practices/Writing Good Branch Names.md",
     "content/Git and Github/Best practices/Writing Good Commit Messages.md",
@@ -257,8 +259,6 @@
     "content/Vocabulary/Words/blubber.md",
     "content/Vocabulary/Words/bitter.md",
     "content/Vocabulary/Words/beseech.md",
-    "content/Vocabulary/Words/artfulness.md",
-    "content/Vocabulary/Words/ardent.md",
     "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.23896.be638887ac8f",
     "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.23896.ed9acc53eb6c",
     "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.16072.f4d1b549df53",
