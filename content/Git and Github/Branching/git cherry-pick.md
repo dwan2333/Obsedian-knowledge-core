@@ -116,18 +116,18 @@ The `-x` flag appends *"(cherry picked from commit …)"* to the message. Use it
 
 ## Options Reference
 
-| Flag                         | Purpose                                                                                                              |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `-e`, `--edit`               | Open the editor to edit the commit message before committing                                                         |
-| `-x`                         | Append *"(cherry picked from commit …)"* to the message — recommended when backporting between public branches       |
-| `-n`, `--no-commit`          | Apply the changes to the working tree + index but **don't create a commit** — useful for combining several picks     |
-| `-s`, `--signoff`            | Add a `Signed-off-by` trailer                                                                                        |
-| `-m <n>`, `--mainline <n>`   | Cherry-pick a merge commit — tell Git which parent (1 or 2) is the mainline                                          |
-| `-S`, `--gpg-sign`           | GPG-sign the resulting commit                                                                                        |
-| `--ff`                       | If HEAD is the parent of the picked commit, fast-forward instead of creating a new commit                            |
-| `--allow-empty`              | Preserve an empty (no-diff) cherry-picked commit instead of erroring                                                 |
-| `--empty=drop\|keep\|stop`   | Handle commits whose changes are already in your branch — default is `drop`                                          |
-| `--strategy=<s>` / `-X<opt>` | Pick a merge strategy (`recursive`, `ours`, `patience`…) or pass a strategy option                                   |
+| Flag                         | Purpose                                                                                                          |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `-e`, `--edit`               | Open the editor to edit the commit message before committing                                                     |
+| `-x`                         | Append *"(cherry picked from commit …)"* to the message — recommended when backporting between public branches   |
+| `-n`, `--no-commit`          | Apply the changes to the working tree + index but **don't create a commit** — useful for combining several picks |
+| `-s`, `--signoff`            | Add a `Signed-off-by` trailer                                                                                    |
+| `-m <n>`, `--mainline <n>`   | Cherry-pick a merge commit — tell Git which parent (1 or 2) is the mainline                                      |
+| `-S`, `--gpg-sign`           | GPG-sign the resulting commit                                                                                    |
+| `--ff`                       | If HEAD is the parent of the picked commit, fast-forward instead of creating a new commit                        |
+| `--allow-empty`              | Preserve an empty (no-diff) cherry-picked commit instead of erroring                                             |
+| `--empty=drop\|keep\|stop`   | Handle commits whose changes are already in your branch — default is `drop`                                      |
+| `--strategy=<s>` / `-X<opt>` | Pick a merge strategy (`recursive`, `ours`, `patience`…) or pass a strategy option                               |
 
 ### Mid-sequence control
 

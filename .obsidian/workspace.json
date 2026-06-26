@@ -1,24 +1,20 @@
 {
   "main": {
-    "id": "3949001255f99a55",
+    "id": "34b6d5e3ebd178b0",
     "type": "split",
     "children": [
       {
-        "id": "d72c5084c6b364bf",
+        "id": "c50326045ee52dfb",
         "type": "tabs",
         "children": [
           {
-            "id": "0c4ce65a0833e5cd",
+            "id": "55491cbeff0b4166",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/Git and Github/Branching/git rebase.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "git rebase"
+              "title": "New tab"
             }
           }
         ]
@@ -27,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "f712844538846b6a",
+    "id": "8483ea6e6ce71236",
     "type": "split",
     "children": [
       {
-        "id": "41566c789e965abd",
+        "id": "6779d71da9d4cd06",
         "type": "tabs",
         "children": [
           {
-            "id": "328aa9c891b22c6e",
+            "id": "0c5b7ce92060ae46",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +44,7 @@
             }
           },
           {
-            "id": "c882ddf3676bdf9d",
+            "id": "40b12fc48879b4d4",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +61,7 @@
             }
           },
           {
-            "id": "65f8b3bcb84eb75a",
+            "id": "07abb13b3d173832",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -78,51 +74,49 @@
       }
     ],
     "direction": "horizontal",
-    "width": 362.5
+    "width": 300
   },
   "right": {
-    "id": "223b27babdb4a280",
+    "id": "3df345e73230b8fa",
     "type": "split",
     "children": [
       {
-        "id": "2116f485414f83db",
+        "id": "b42ab19364c03f90",
         "type": "tabs",
         "children": [
           {
-            "id": "09af861bbbb17c13",
+            "id": "1ebfebcd177c35f8",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/pascals_identity_grid_paths.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": true,
+                "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for pascals_identity_grid_paths"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "0839b28ae1fcc4fc",
+            "id": "4b9cebb2b3d14135",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Python/Automate boring stuff with python/Debugging/Assertion.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Assertion"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "9d460d500f550387",
+            "id": "77420a46e2158919",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,134 +131,44 @@
             }
           },
           {
-            "id": "6e634525b1e2b583",
+            "id": "0e234d7db4db7ae8",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/Mathematics/Introduction to Probability/Chapter 1 Probability and Counting/chapter1_exercises.md",
-                "followCursor": true,
+                "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of chapter1_exercises"
-            }
-          },
-          {
-            "id": "961dea74bf50958d",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
-          },
-          {
-            "id": "a3f3b5b62d0f9b55",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {},
-              "icon": "smart-connections",
-              "title": "Connections"
-            }
-          },
-          {
-            "id": "5f15fd7d704c2152",
-            "type": "leaf",
-            "state": {
-              "type": "smart-lookup-view",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "smart-lookup-view"
-            }
-          },
-          {
-            "id": "da7c6bb8926eb928",
-            "type": "leaf",
-            "state": {
-              "type": "smart-lookup-view-connections",
-              "state": {},
-              "icon": "smart-lookup",
-              "title": "Lookup"
+              "title": "Outline"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 289.5,
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "smart-connections:Smart Connections: Open random connection": false,
-      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
+      "bases:Create new base": false,
       "smart-connections:Smart Connections: Open connections view": false,
+      "smart-connections:Toggle Footer Connections": false,
+      "smart-connections:Smart Connections: Open random connection": false,
       "smart-connections:Smart Lookup: Open lookup view": false,
       "smart-connections:Toggle Inline Connections": false,
-      "smart-connections:Toggle Footer Connections": false,
       "templater-obsidian:Templater": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0c4ce65a0833e5cd",
-  "lastOpenFiles": [
-    "content/Git and Github/Git Essential Commands.md",
-    "content/Git and Github/Branching/git rebase.md",
-    "content/Git and Github/Branching/git merge.md",
-    "content/Git and Github/Syncing/git fetch.md",
-    "content/Git and Github/Best practices/Writing Good Commit Messages.md",
-    "content/Git and Github/Branching/git checkout.md",
-    "content/Git and Github/Branching/Branching (Main).md",
-    "content/Git and Github/Syncing/git pull.md",
-    "content/Git and Github/Syncing/git push.md",
-    "content/Git and Github/Syncing/Syncing (Main).md",
-    "content/Git and Github/Syncing/git remote.md",
-    "content/Git and Github/gitignore.md",
-    "content/Vocabulary/Words/ascribe.md",
-    "content/Git and Github/Index and Object Store.md",
-    "content/Git and Github/What is Git and GitHub.md",
-    "content/Git and Github/Best practices/Writing Good Branch Names.md",
-    "content/Vocabulary/Words/wits.md",
-    "content/Vocabulary/Words/wrangle.md",
-    "content/Vocabulary/Words/writhe.md",
-    "content/Vocabulary/Words/coarse.md",
-    "content/Vocabulary/Words/cloistered.md",
-    "content/Vocabulary/Words/circumvent.md",
-    "content/Vocabulary/Words/competent.md",
-    "content/Vocabulary/Words/chaste.md",
-    "content/Daily notes/2026-06/Daily note 06-25.md",
-    "content/Vocabulary/Words/cassock.md",
-    "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.23896.be638887ac8f",
-    "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.23896.ed9acc53eb6c",
-    "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.16072.f4d1b549df53",
-    "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.16072.e410e485a820",
-    "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.16072.ab11ed5fc57c",
-    "content/Mathematics/Complex Numbers/i to the power i/i to the power i (Main).md.tmp.29108.0e89c556af40",
-    "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html",
-    "content/Mathematics/Complex Numbers/i to the power i/complex_exponential_map_exercise.html.tmp.29108.b0ded81a5bdc",
-    "content/Mathematics/Problem Solving/_gen_ps_mindmap.py",
-    "content/Mathematics/Problem Solving/_gen_ps_fig4_histogram.py",
-    "content/Mathematics/Problem Solving/ps_mindmap.png",
-    "content/Mathematics/Problem Solving/ps_fig4_histogram.png",
-    "content/Mathematics/Problem Solving/ps_fig3_ratio_regions.png",
-    "content/Mathematics/Problem Solving/ps_fig2_cos2.png",
-    "content/Mathematics/Problem Solving/ps_fig1_inscribed.png",
-    "content/Mathematics/Complex Numbers/i to the power i/ii_fig9_period3.png",
-    "content/Mathematics/Complex Numbers/i to the power i/ii_fig8_power_tower.png",
-    "content/Mathematics/Complex Numbers/i to the power i/ii_fig7_exp_map.png",
-    "content/Mathematics/Complex Numbers/i to the power i/ii_fig6_roots.png",
-    "content/Mathematics/Introduction to Probability/Chapter 2 Conditional Probability/chapter2_infographic.png",
-    "Untitled.canvas"
-  ]
+  "active": "55491cbeff0b4166",
+  "lastOpenFiles": []
 }
