@@ -13,7 +13,6 @@ This vault is organized as a hub-and-spoke knowledge system, with main topic are
 - **[Mathematics](Mathematics/)** — Introduction to Probability (Blitzstein & Hwang), complex numbers & Euler's formula, logarithms, trigonometry, the Pythagorean theorem, π, precalculus, and mental-math tricks
 - **[Poker](Poker/)** — Pot odds, equity fundamentals, and "The Course" study notes — strategy and hand analysis
 - **[Finance](Finance/)** — Futures, stablecoins, and treasury bonds; markets, instruments, and frameworks
-- **[Git and Github](Git%20and%20Github/)** — Version-control concepts: branching, syncing, collaboration workflows, and best practices
 - **[Vocabulary](<Vocabulary/Vocabulary (Main).md>)** — A growing, cross-linked map of words by theme, scenario, and domain, with example sentences and register notes
 - **[Quotes](<Quotes/Quotes (Main).md>)** — A collection of quotes and passages worth keeping
 
