@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
+                "file": "content/Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Quadratic Formula Intuition (Main)"
+              "title": "quadratic_factoring_worked_examples"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "3df345e73230b8fa",
@@ -175,8 +176,8 @@
   },
   "active": "55491cbeff0b4166",
   "lastOpenFiles": [
-    "content/Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
     "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
+    "content/Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
     "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
     "content/Mathematics/Pythagorean Theorem/ipt_fig2_three_similar.png",
     "content/Mathematics/Pythagorean Theorem/ipt_mindmap.png",

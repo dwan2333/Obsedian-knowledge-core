@@ -4,13 +4,13 @@
 
 *Path C single-source note — 7 worked exercises with collapsible solutions, extracted via Gemini frame-by-frame analysis.*
 
-| Field | Value |
-|---|---|
-| **Source** | [Alternative Method of Solving Quadratics](https://www.youtube.com/watch?v=XKBX0r3J-9Y) |
-| **Speaker** | Po-Shen Loh (Daily Challenge series, expii) |
-| **Length** | 30:05 |
-| **Topic** | Quadratic equations — exercise-focused walkthrough |
-| **Captured** | 2026-04-30 |
+| Field        | Value                                                                                   |
+| ------------ | --------------------------------------------------------------------------------------- |
+| **Source**   | [Alternative Method of Solving Quadratics](https://www.youtube.com/watch?v=XKBX0r3J-9Y) |
+| **Speaker**  | Po-Shen Loh (Daily Challenge series, expii)                                             |
+| **Length**   | 30:05                                                                                   |
+| **Topic**    | Quadratic equations — exercise-focused walkthrough                                      |
+| **Captured** | 2026-04-30                                                                              |
 
 ![Worked Examples Mind Map](v2_mindmap.png)
 
