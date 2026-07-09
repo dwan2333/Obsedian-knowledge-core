@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
+                "file": "content/Mathematics/Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Complex Number Fundamentals (Main)"
+              "title": "Sneaky Proof of Pythagorean Identity (Main)"
             }
           }
         ]
@@ -175,6 +175,7 @@
   },
   "active": "55491cbeff0b4166",
   "lastOpenFiles": [
+    "content/Mathematics/Complex Numbers/Complex Number Fundamentals (Main).md",
     "content/Mathematics/Tetration/tet_fig1_hierarchy.png",
     "content/Mathematics/Trigonometric/spt_mindmap.png",
     "content/Mathematics/Trigonometric/Visual representation On Demos.md",
