@@ -68,3 +68,5 @@
 "event_logs:embedding:completed": {"key":"embedding:completed","ct":626,"first_at":1774722106351,"last_at":1783911607287,"class_name":"EventLog","event_sources":{"process_embed_queue":623}},
 "event_logs:embedding:progress": {"key":"embedding:progress","ct":1309,"first_at":1775289993850,"last_at":1783911607286,"class_name":"EventLog","event_sources":{"process_embed_queue":1309}},
 "event_logs:items:embedded": {"key":"items:embedded","ct":872,"first_at":1778241208174,"last_at":1783911607287,"class_name":"EventLog","event_sources":{"process_embed_queue":872}},
+"event_logs:source:initial_scan_started": {"key":"source:initial_scan_started","ct":1,"first_at":1783913102694,"last_at":1783913102694,"class_name":"EventLog","event_sources":{"init_items":1}},
+"event_logs:source:initial_scan_completed": {"key":"source:initial_scan_completed","ct":1,"first_at":1783913102711,"last_at":1783913102711,"class_name":"EventLog","event_sources":{"init_items":1}},
