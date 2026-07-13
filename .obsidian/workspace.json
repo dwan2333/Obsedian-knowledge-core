@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
+                "file": "content/Daily notes/2026-06/Daily note 06-25.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "The Pythagorean Theorem (Main)"
+              "title": "Daily note 06-25"
             }
           }
         ]
@@ -173,8 +173,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0c5b7ce92060ae46",
+  "active": "55491cbeff0b4166",
   "lastOpenFiles": [
+    "content/Daily notes/2026-06/Daily note 06-18.md",
+    "content/Daily notes/2026-06/Daily note 06-12.md",
+    "content/Daily notes/2026-06/Daily note 06-11.md",
+    "content/Daily notes/2026-06/Daily note 06-10.md",
+    "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
     "content/index.md.tmp.14532.19a2571393ca",
     "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
     "content/Mathematics/Trigonometric/Visual representation On Demos.md",
@@ -185,7 +190,6 @@
     "content/Mathematics/Tetration/tet_fig1_hierarchy.png",
     "content/Mathematics/Trigonometric/spt_mindmap.png",
     "content/Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
-    "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
     "content/Mathematics/Pythagorean Theorem/inverse_pythagorean_theorem.md",
     "content/Mathematics/Pythagorean Theorem/ipt_fig2_three_similar.png",
     "content/Mathematics/Pythagorean Theorem/ipt_mindmap.png"
