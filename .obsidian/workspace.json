@@ -11,14 +11,12 @@
             "id": "55491cbeff0b4166",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
-                "mode": "preview",
-                "source": false
+                "file": "content/Mathematics/Complex Numbers/i to the power i/ii_fig2_field.png"
               },
-              "icon": "lucide-file",
-              "title": "The Pythagorean Theorem (Main)"
+              "icon": "lucide-image",
+              "title": "ii_fig2_field"
             }
           }
         ]
@@ -175,6 +173,13 @@
   },
   "active": "0c5b7ce92060ae46",
   "lastOpenFiles": [
+    "content/Mathematics/Complex Numbers/i to the power i/ii_fig1_spiral.png",
+    "content/Daily notes/2026-06/Daily note 06-25.md",
+    "content/Daily notes/2026-06/Daily note 06-18.md",
+    "content/Daily notes/2026-06/Daily note 06-12.md",
+    "content/Daily notes/2026-06/Daily note 06-11.md",
+    "content/Daily notes/2026-06/Daily note 06-10.md",
+    "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
     "content/index.md.tmp.14532.19a2571393ca",
     "content/Mathematics/Quadratic Formulas/Quadratic Formula Intuition (Main).md",
     "content/Mathematics/Trigonometric/Visual representation On Demos.md",
@@ -185,7 +190,6 @@
     "content/Mathematics/Tetration/tet_fig1_hierarchy.png",
     "content/Mathematics/Trigonometric/spt_mindmap.png",
     "content/Mathematics/Quadratic Formulas/quadratic_factoring_worked_examples.md",
-    "content/Mathematics/Pythagorean Theorem/The Pythagorean Theorem (Main).md",
     "content/Mathematics/Pythagorean Theorem/inverse_pythagorean_theorem.md",
     "content/Mathematics/Pythagorean Theorem/ipt_fig2_three_similar.png",
     "content/Mathematics/Pythagorean Theorem/ipt_mindmap.png"
