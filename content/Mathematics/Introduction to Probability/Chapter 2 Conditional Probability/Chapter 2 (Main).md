@@ -137,6 +137,18 @@ Conditioning on a fixed event $E$ (with $P(E)>0$) yields a *new, fully valid* pr
 - **Normalization:** $\tilde P(S)=P(S\mid E)=\dfrac{P(S\cap E)}{P(E)}=1$ (and $\tilde P(\varnothing)=0$).
 - **Countable additivity:** for disjoint $A_1,A_2,\dots$, $\ \tilde P\!\big(\bigcup_j A_j\big)=\sum_j \tilde P(A_j)$.
 
+> [!abstract] Proof (book, §2.4, pp. 39–40) — $\tilde P$ satisfies the axioms
+> Fix an event $E$ with $P(E)>0$ and define $\tilde P(A)=P(A\mid E)$ — the tilde emphasizes that $E$ is *fixed* and $P(\cdot\mid E)$ is our new probability function. The book's Definition 1.6.1 has exactly **two axioms** to check (non-negativity is automatic since $\tilde P(A)$ is a ratio of probabilities with $P(E)>0$).
+> **Axiom 1** ($P(\varnothing)=0$, $P(S)=1$): direct from the definition,
+> $$\tilde P(\varnothing)=P(\varnothing\mid E)=\frac{P(\varnothing\cap E)}{P(E)}=\frac{P(\varnothing)}{P(E)}=0,\qquad
+> \tilde P(S)=P(S\mid E)=\frac{P(S\cap E)}{P(E)}=\frac{P(E)}{P(E)}=1.$$
+> **Axiom 2** (countable additivity): let $A_1,A_2,\dots$ be disjoint. Distribute the intersection over the union, $\big(\bigcup_j A_j\big)\cap E=\bigcup_j (A_j\cap E)$, and note the sets $A_j\cap E$ are *still disjoint* (each sits inside its own $A_j$). So ordinary countable additivity of $P$ applies to them:
+> $$\tilde P(A_1\cup A_2\cup\cdots)=\frac{P\big((A_1\cap E)\cup(A_2\cap E)\cup\cdots\big)}{P(E)}=\frac{\sum_{j=1}^{\infty}P(A_j\cap E)}{P(E)}=\sum_{j=1}^{\infty}\tilde P(A_j).\ \square$$
+> Every step is just the definition of conditional probability plus set algebra — the axioms of $P$ pass straight through the division by the constant $P(E)$.
+
+> [!warning] $A\mid E$ is not an event (book's ⚠ 2.4.1)
+> $P(A\mid E)$ does **not** mean "the probability of the event $A\mid E$" — there is no such event. Rather, $P(\cdot\mid E)$ and $P(\cdot)$ are two *different probability functions*: plugging the same event $A$ into each gives two different numbers, one incorporating the knowledge that $E$ occurred, one not. Conversely, the book notes *all* probabilities are secretly conditional — $P(A)$ is shorthand for $P(A\mid K)$ where $K$ is unstated background knowledge.
+
 > [!tip] The payoff — "extra conditioning"
 > Because $P(\cdot\mid E)$ is a genuine probability function, **every theorem stays true if you add "$,E$" to every conditioning bar.** Two we use constantly:
 > $$P(A\mid B,E)=\frac{P(B\mid A,E)\,P(A\mid E)}{P(B\mid E)}\quad\text{(Bayes with extra conditioning)},$$
