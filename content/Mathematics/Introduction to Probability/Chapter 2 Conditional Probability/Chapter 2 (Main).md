@@ -117,7 +117,13 @@ Two intuitions make the definition feel inevitable.
 
 > [!example] Example 2.3.10 — The six-fingered man
 > **Problem.** The culprit is one of $n$ equally likely men. An eyewitness says the criminal has six fingers on his right hand. An innocent man has six fingers with probability $p_0$; the true perpetrator with probability $p_1$ ($p_0<p_1$). Let $a=p_0/p_1$ and $b=(1-p_1)/(1-p_0)$. Rugen has six fingers. (a) Find the probability he is guilty. (b) Now suppose *everyone's* hands are checked and Rugen is the only six-fingered man — find the probability he is guilty.
-> **Solution.** With $R$ = "Rugen guilty," $P(R)=\tfrac1n$, $M$ = "six fingers," $P(M\mid R)=p_1$, $P(M\mid R^c)=p_0$. (a) Bayes + LOTP give $P(R\mid M)=\dfrac{p_1\cdot\frac1n}{p_1\cdot\frac1n + p_0(1-\frac1n)}$. (b) Conditioning additionally on "no one else has six fingers" multiplies in the extra evidence.
+> **Solution.** With $R$ = "Rugen guilty," $P(R)=\tfrac1n$, $M$ = "six fingers," $P(M\mid R)=p_1$, $P(M\mid R^c)=p_0$.
+> **(a)** Bayes + LOTP, then *divide top and bottom by the numerator* to expose the likelihood ratio:
+> $$P(R\mid M)=\frac{p_1\cdot\frac1n}{p_1\cdot\frac1n + p_0\cdot\frac{n-1}{n}}\;\xrightarrow{\times n}\;\frac{p_1}{p_1+p_0(n-1)}\;\xrightarrow{\div p_1}\;\frac{1}{1+\frac{p_0}{p_1}(n-1)}=\frac{1}{1+a(n-1)}.$$
+> The $a$ is just $\frac{p_0}{p_1}$ appearing when the denominator's $p_0(n-1)$ is divided by $p_1$.
+> **(b)** Stronger evidence $M_1$ = "Rugen six-fingered *and* the other $n-1$ men not." The likelihoods become products: $P(M_1\mid R)=p_1(1-p_0)^{n-1}$ (guilty Rugen shows the hand; all $n-1$ innocents don't), while $P(M_1\mid R^c)=p_0(1-p_1)(1-p_0)^{n-2}$ (innocent Rugen shows it anyway; the *true culprit* among the others must not, giving $1-p_1$; the $n-2$ remaining innocents don't). Bayes, then the same divide-by-the-numerator move:
+> $$P(R\mid M_1)=\frac{p_1(1-p_0)^{n-1}\cdot\frac1n}{p_1(1-p_0)^{n-1}\cdot\frac1n+p_0(1-p_1)(1-p_0)^{n-2}\cdot\frac{n-1}{n}}=\frac{1}{1+\underbrace{\tfrac{p_0}{p_1}}_{a}\underbrace{\tfrac{1-p_1}{1-p_0}}_{b}(n-1)}.$$
+> The $ab$ is the combined likelihood ratio: $a$ from Rugen's own hand, $b$ from checking everyone else's ($(1-p_0)^{n-2}/(1-p_0)^{n-1}$ leaves the lone $\tfrac{1}{1-p_0}$ that pairs with $1-p_1$ to form $b$).
 > **Answer.** (a) $\dfrac{1}{1+a(n-1)}$.  (b) $\dfrac{1}{1+ab(n-1)}$.
 > **Insight.** Checking everyone else multiplies the odds by the factor $b<1$, dramatically strengthening the case against Rugen — highly specific evidence can swing a tiny prior to near-certainty.
 
