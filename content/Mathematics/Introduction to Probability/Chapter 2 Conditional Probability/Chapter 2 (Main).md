@@ -89,10 +89,28 @@ Two intuitions make the definition feel inevitable.
 > For events with positive probability,
 > $$P(A\cap B) = P(B)\,P(A\mid B) = P(A)\,P(B\mid A).$$
 
+> [!definition] Theorem 2.3.2 — Probability of the intersection of $n$ events (chain rule)
+> Applying Theorem 2.3.1 repeatedly generalizes it to $n$ events: for any events $A_1,\dots,A_n$ with positive probabilities,
+> $$P(A_1, A_2, \dots, A_n) = P(A_1)\,P(A_2\mid A_1)\,P(A_3\mid A_1,A_2)\cdots P(A_n\mid A_1,\dots,A_{n-1}),$$
+> where the commas denote intersections. Peel off one event at a time, each conditioned on everything already peeled.
+> **This is really $n!$ theorems in one:** the left side is unchanged under any permutation of $A_1,\dots,A_n$, so e.g. $P(A_1,A_2,A_3)=P(A_1)P(A_2\mid A_1)P(A_3\mid A_1,A_2)=P(A_2)P(A_3\mid A_2)P(A_1\mid A_2,A_3)$, and so on. Some orderings make the right side far easier to compute than others — choosing well takes practice.
+
 > [!definition] Theorem 2.3.3 — Bayes' rule
 > Dividing the multiplication form by $P(B)$ reverses the conditioning:
 > $$P(A\mid B) = \frac{P(B\mid A)\,P(A)}{P(B)}.$$
 > Bayes' rule converts the likelihood $P(B\mid A)$ (often easy to state) into the posterior $P(A\mid B)$ (what we want).
+
+> [!definition] Definition 2.3.4 — Odds
+> The **odds** of an event $A$ are
+> $$\text{odds}(A) = \frac{P(A)}{P(A^c)},$$
+> the ratio of the probability that $A$ happens to the probability that it doesn't. E.g. $P(A)=\tfrac23$ gives odds of $2$ to $1$ *in favor* of $A$ (written $2:1$; equivalently "$1$ to $2$ *against*" — always check whether a source quotes odds in favor or against). Odds carry the same information as probability, and we can convert back:
+> $$P(A) = \frac{\text{odds}(A)}{1+\text{odds}(A)}.$$
+> (Sanity check: odds $2$ give $P(A)=\frac{2}{3}$. Odds live in $[0,\infty)$ while probabilities live in $[0,1]$ — even odds, $1:1$, mean $P(A)=\tfrac12$.)
+
+> [!definition] Theorem 2.3.5 — Odds form of Bayes' rule
+> For events $A$ and $B$ with positive probabilities, divide the Bayes'-rule expression for $P(A\mid B)$ by the one for $P(A^c\mid B)$ — the $P(B)$ denominators cancel, leaving
+> $$\underbrace{\frac{P(A\mid B)}{P(A^c\mid B)}}_{\text{posterior odds}} \;=\; \underbrace{\frac{P(B\mid A)}{P(B\mid A^c)}}_{\text{likelihood ratio}}\;\times\;\underbrace{\frac{P(A)}{P(A^c)}}_{\text{prior odds}}.$$
+> In words: *observing $B$ multiplies the odds of $A$ by the likelihood ratio.* No normalizing constant $P(B)$ is needed; compute posterior odds, then convert back to probability if desired. This is exactly the machinery behind Example 2.3.10, where the factors $a$ and $b$ are likelihood ratios multiplying the odds of guilt.
 
 > [!definition] Theorem 2.3.6 — Law of Total Probability (LOTP)
 > Let $A_1,\dots,A_n$ **partition** the sample space (disjoint, union is $S$), each with $P(A_i)>0$. For any event $B$,
