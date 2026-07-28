@@ -43,7 +43,12 @@ Two intuitions make the definition feel inevitable.
 ![Figure 2.1 — Pebble World intuition for P(A|B): start with A and B, discard the outcomes in B^c, then renormalize the restricted space to total mass 1](chapter2_fig_2.1_pebble_world_conditioning.png)
 
 > [!tip] Intuition 2 — Frequentist (long-run relative frequency)
-> Repeat the experiment $n$ times. Look only at the trials where $B$ happened; among *those*, the fraction where $A$ also happened approaches $P(A\mid B)$:
+> **The book's setup (Intuition 2.2.4).** The frequentist interpretation says probability is relative frequency over many repeated trials. So imagine repeating our experiment many times, generating a long list of observed outcomes — in the book's designed experiment, each repetition's outcome is written as a **string of 0's and 1's**, and the two events are defined on those digits:
+> - $B$ = the event that the **first digit is 1**;
+> - $A$ = the event that the **second digit is 1**.
+>
+> In Figure 2.2, each row is one repetition: the rows where $B$ occurred (first digit 1) are *circled*, and among those, the rows where $A$ also occurred (second digit 1) are shown in *bold*. $P(A\mid B)$ is the long-run fraction of circled rows that are also bold — the frequency of $A$ *restricted to the trials where $B$ happened*.
+> **In symbols.** Let $n_A, n_B, n_{AB}$ count the occurrences of $A$, $B$, $A\cap B$ in $n$ repetitions. Then $P(A)\approx \frac{n_A}{n}$, $P(B)\approx\frac{n_B}{n}$, $P(A\cap B)\approx\frac{n_{AB}}{n}$, and
 > $$P(A\mid B) \approx \frac{n_{AB}}{n_B} = \frac{n_{AB}/n}{n_B/n} = \frac{P(A\cap B)}{P(B)}.$$
 
 ![Figure 2.2 — Frequentist intuition: each row is one repetition; circled rows are those where B occurred, bold rows are those where A occurred. P(A|B) is the fraction of circled rows that are also bold](chapter2_fig_2.2_frequentist_intuition.png)
