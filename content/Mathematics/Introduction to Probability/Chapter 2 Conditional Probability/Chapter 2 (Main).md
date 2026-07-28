@@ -205,12 +205,25 @@ Conditioning on a fixed event $E$ (with $P(E)>0$) yields a *new, fully valid* pr
 
 For three events $A,B,C$, **mutual independence** requires all four equations
 $$P(A\cap B)=P(A)P(B),\ P(A\cap C)=P(A)P(C),\ P(B\cap C)=P(B)P(C),\ P(A\cap B\cap C)=P(A)P(B)P(C).$$
-The first three alone give only **pairwise independence**. For $n$ events, *every* sub-collection's intersection must factor. And **conditional independence given $E$** means $P(A\cap B\mid E)=P(A\mid E)P(B\mid E)$ — a separate condition that neither implies nor is implied by unconditional independence.
+The first three alone give only **pairwise independence**. For $n$ events, *every* sub-collection's intersection must factor.
 
 > [!example] Example 2.5.5 — Pairwise ≠ mutual
 > **Problem.** Two fair independent tosses. $A$ = first Heads, $B$ = second Heads, $C$ = "same result." Show $A,B,C$ are pairwise but not mutually independent.
 > **Solution.** Each has probability $\tfrac12$; each pairwise intersection has probability $\tfrac14=\tfrac12\cdot\tfrac12$ ✓. But $A\cap B$ forces $C$, so $P(A\cap B\cap C)=\tfrac14\ne \tfrac18=P(A)P(B)P(C)$.
 > **Insight.** Knowing one of $A,B$ says nothing about $C$, but knowing *both* determines $C$ — pairwise independence misses this.
+
+> [!definition] Definition 2.5.9 — Conditional independence
+> Events $A$ and $B$ are **conditionally independent given $E$** (with $P(E)>0$) if
+> $$P(A\cap B\mid E)=P(A\mid E)\,P(B\mid E).$$
+> This is a statement about the *conditional* probability function $P(\cdot\mid E)$ — a separate condition that neither implies nor is implied by unconditional independence (see Examples 2.5.10 / 2.5.11 below).
+
+> [!warning] Given $E$ vs. given $E^c$ — one does NOT imply the other (book's ⚠, good class / bad class)
+> Conditional independence given $E$ says nothing about what happens given $E^c$: the same pair of events can be conditionally independent in one of the two universes and *dependent* in the other.
+> **The book's example.** There are two types of classes. In a **good class**, working hard makes you very likely to get an A. In a **bad class**, the professor assigns grades *at random*, regardless of effort. Let $G$ = "the class is good," $W$ = "you work hard," $A$ = "you get an A."
+> - **Given $G^c$ (bad class):** grades are random and ignore effort, so learning $W$ changes nothing about $A$: $P(A\mid W, G^c)=P(A\mid G^c)$. Here $W$ and $A$ **are** conditionally independent.
+> - **Given $G$ (good class):** effort drives the grade, so $P(A\mid W, G)\gg P(A\mid G)$ — knowing you worked hard is strong evidence for an A. Here $W$ and $A$ are **not** conditionally independent.
+>
+> Same two events, opposite verdicts in the two universes. So after checking conditional independence given $E$, you must check $E^c$ *separately* — it can still fail there, and assuming it carries over is the blunder the book warns against.
 
 > [!example] Example 2.5.10 / 2.5.11 — Conditional vs. unconditional independence (both directions fail)
 > **Conditional ⇏ unconditional.** With the random coin (fair vs. biased), tosses $A_1,A_2$ are independent *given the coin*, but **not** unconditionally: the first toss is evidence about *which coin* you hold, which shifts your prediction for the second.
