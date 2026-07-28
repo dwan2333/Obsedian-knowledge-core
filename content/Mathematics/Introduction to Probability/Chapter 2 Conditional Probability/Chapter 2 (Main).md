@@ -245,12 +245,23 @@ The first three alone give only **pairwise independence**. For $n$ events, *ever
 
 ![Figure 2.7 — Conditioning as belief-updating: the prior for A, updated by evidence B, becomes the new prior before evidence C is observed. Updating sequentially (B then C) or jointly (B and C) lands on the same posterior](chapter2_fig_2.7_bayesian_updating.png)
 
-> [!example] Example 2.6.1 — A second positive test
-> **Problem.** Fred (Example 2.3.9) tests positive a *second* time, on an independent test with the same 95% sensitivity/specificity. Find $P(D\mid T_1\cap T_2)$ in one step and in two steps.
-> **Solution.** Prior odds $\tfrac{P(D)}{P(D^c)}=\tfrac{1}{99}$; each positive multiplies the odds by $\tfrac{0.95}{0.05}=19$.
-> $$\text{One step: } \frac{1}{99}\cdot 19^2=\frac{361}{99}\approx 3.646.\qquad \text{Two steps: } \Big(\frac{1}{99}\cdot 19\Big)\cdot 19=\frac{361}{99}.$$
-> **Answer.** Posterior odds $\tfrac{361}{99}$, i.e. $P(D\mid T_1\cap T_2)\approx 0.78$.
-> **Insight.** Both routes agree (coherency). A *second* opinion vaults the probability from $0.16$ to $0.78$.
+> [!example] Example 2.6.1 — Testing for a rare disease, continued (a second positive test)
+> **Problem.** Fred, who tested positive in Example 2.3.9, decides to get tested a **second time**. The new test has the same sensitivity and specificity ($0.95$ each), and — crucially — is **independent of the first test *conditional on Fred's disease status*** (given $D$, and given $D^c$, the two results carry no information about each other). Unfortunately, the second test also comes back positive. Find the probability Fred has the disease, given all the evidence, **two ways**:
+> **(1)** in *one step*, conditioning on both test results simultaneously; **(2)** in *two steps*, first updating on the first result, then updating that answer on the second result.
+>
+> **Solution.** Let $D$ = Fred has the disease ($P(D)=0.01$), and $T_1, T_2$ = the first/second test is positive.
+>
+> **One step (condition on both at once).** Bayes + LOTP with the event $T_1\cap T_2$; conditional independence lets the likelihoods factor: $P(T_1\cap T_2\mid D)=P(T_1\mid D)P(T_2\mid D)=(0.95)^2$ and $P(T_1\cap T_2\mid D^c)=(0.05)^2$. So
+> $$P(D\mid T_1\cap T_2)=\frac{P(T_1\cap T_2\mid D)P(D)}{P(T_1\cap T_2\mid D)P(D)+P(T_1\cap T_2\mid D^c)P(D^c)}=\frac{(0.95)^2(0.01)}{(0.95)^2(0.01)+(0.05)^2(0.99)}=\frac{361}{460}\approx 0.78.$$
+>
+> **Two steps (posterior becomes the new prior).** After the first positive we already know $P(D\mid T_1)=0.16$ (Example 2.3.9). Now treat $P(\cdot\mid T_1)$ as the *new prior* probability function — legal precisely because conditional probabilities **are** probabilities (§2.4) — and update on $T_2$ using **Bayes' rule with extra conditioning on $T_1$**:
+> $$P(D\mid T_1\cap T_2)=\frac{P(T_2\mid D, T_1)\,P(D\mid T_1)}{P(T_2\mid D,T_1)P(D\mid T_1)+P(T_2\mid D^c,T_1)P(D^c\mid T_1)},$$
+> where conditional independence gives $P(T_2\mid D,T_1)=P(T_2\mid D)=0.95$ and $P(T_2\mid D^c,T_1)=0.05$. Plugging in:
+> $$P(D\mid T_1\cap T_2)=\frac{(0.95)(0.16)}{(0.95)(0.16)+(0.05)(0.84)}\approx 0.78.$$
+>
+> **Answer.** $\approx 0.78$ both ways — the same number, as coherency demands.
+> **Odds-form shortcut.** Prior odds $\tfrac{1}{99}$; each positive test multiplies the odds by the likelihood ratio $\tfrac{0.95}{0.05}=19$: one step $\tfrac{1}{99}\cdot 19^2=\tfrac{361}{99}$, two steps $\big(\tfrac{1}{99}\cdot 19\big)\cdot 19$ — identical, and $\tfrac{361}{361+99}=\tfrac{361}{460}\approx0.78$. ✓
+> **Insight.** Updating **all at once** or **one piece at a time** gives the same posterior — Bayes' rule is *coherent*. The second opinion vaults Fred's probability from $0.16$ to $0.78$; and the whole calculation leaned on the §2.4 theme (treating $P(\cdot\mid T_1)$ as a genuine probability function) plus the *conditional* independence assumption — if the two tests shared a failure mode (e.g. the same benign condition triggers false positives), the second positive would add far less.
 
 ---
 
