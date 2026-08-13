@@ -153,10 +153,10 @@ Every step simply multiplies the distance-from-target by the slope — and that 
 | $f'(y) < 0$ | flips sign each step | **oscillates** across $y$ — a widening 2-cycle once $\lvert f'(y)\rvert > 1$ |
 
 > [!example] The pricing-bot intuition
-> A bot nudges a price toward a $\$100$ target with the correction rule $x_{n+1} = 100 + s\,(x_n - 100)$, starting $\$2$ too high:
-> - **$s = 0.5$** — corrections $\$1,\ \$0.50,\ \$0.25, \ldots$: the gap halves every step, homing in safely.
-> - **$s = 2$** — corrections $\$4,\ \$8,\ \$16, \ldots$: the gap doubles, shooting off to infinity.
-> - **$s = -2$** — $\$2$ high $\to \$4$ low $\to \$8$ high $\to \ldots$: the sign flips *and* the swing widens, bouncing apart forever.
+> A bot nudges a price toward a &#36;100 target with the correction rule $x_{n+1} = 100 + s\,(x_n - 100)$, starting &#36;2 too high:
+> - **$s = 0.5$** — corrections &#36;1, &#36;0.50, &#36;0.25, …: the gap halves every step, homing in safely.
+> - **$s = 2$** — corrections &#36;4, &#36;8, &#36;16, …: the gap doubles, shooting off to infinity.
+> - **$s = -2$** — &#36;2 high → &#36;4 low → &#36;8 high → …: the sign flips *and* the swing widens, bouncing apart forever.
 >
 > **The Golden Rule of stability:** an iteration settles on its target only when the slope there lies strictly between $-1$ and $1$. §4.4 feeds the tower's own slope — which works out to be $\ln y$ — into exactly this rule to pin down both convergence bounds.
 
