@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Tower Machine — why √2^x^x^… settles at 2</title>
+<style>
+  :root{
+    --paper:#0e1420;
+    --panel:#141c2c;
+    --grid:#1d2941;
+    --ink:#e8edf7;
+    --dim:#8b98b3;
+    --curve:#5eb3ff;
+    --diag:#7a88a8;
+    --tangent:#ffb454;
+    --step:#4ade80;
+    --bad:#ff6b81;
+    --good:#4ade80;
+    font-size:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:Georgia,'Times New Roman',serif;
+    line-height:1.5;
+    padding:1rem;
+    max-width:1100px;
+    margin:0 auto;
+  }
+  h1{font-size:1.5rem;font-weight:normal;margin:.5rem 0 .25rem}
+  h1 .fx{color:var(--curve);font-style:italic}
+  .sub{color:var(--dim);font-size:.95rem;margin-bottom:1rem}
+  .wrap{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:1rem}
+  @media(max-width:820px){.wrap{grid-template-columns:1fr}}
+  .plotcard{background:var(--panel);border:1px solid var(--grid);border-radius:10px;padding:.75rem}
+  canvas{width:100%;height:auto;display:block;border-radius:6px;touch-action:none;cursor:crosshair}
+  .controls{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.75rem;align-items:center}
+  button{
+    font-family:inherit;font-size:.95rem;
+    background:#1c2740;color:var(--ink);
+    border:1px solid #33415f;border-radius:8px;
+    padding:.45rem .9rem;cursor:pointer;
+  }
+  button:hover{background:#243252}
+  button:focus-visible{outline:2px solid var(--curve);outline-offset:2px}
+  button.primary{background:var(--step);color:#06240f;border-color:var(--step);font-weight:bold}
+  button.primary:hover{background:#66e694}
+  button.zoom{padding:.45rem .7rem;font-variant-numeric:tabular-nums}
+  button.zoom.active{background:#2d4a7a;border-color:var(--curve)}
+  .toggle{display:flex;align-items:center;gap:.4rem;color:var(--dim);font-size:.9rem;cursor:pointer;user-select:none}
+  .toggle input{accent-color:var(--tangent);width:1rem;height:1rem;cursor:pointer}
+  .panel{background:var(--panel);border:1px solid var(--grid);border-radius:10px;padding:.9rem;display:flex;flex-direction:column;gap:.75rem}
+  .readout{font-size:.95rem}
+  .readout b{color:var(--curve);font-weight:normal}
+  .eq{
+    background:#0a0f1a;border:1px solid var(--grid);border-radius:8px;
+    padding:.6rem .7rem;font-size:1.02rem;text-align:center;font-style:italic;
+  }
+  .eq .num{color:var(--step);font-style:normal}
+  .eq .slope{color:var(--tangent);font-style:normal}
+  table{width:100%;border-collapse:collapse;font-size:.88rem;font-variant-numeric:tabular-nums}
+  th,td{padding:.28rem .4rem;text-align:right;border-bottom:1px solid var(--grid)}
+  th{color:var(--dim);font-weight:normal;font-style:italic}
+  td:first-child,th:first-child{text-align:left}
+  tr.latest td{background:#182338}
+  .ratio{color:var(--step)}
+  .legend{display:flex;flex-wrap:wrap;gap:.9rem;font-size:.85rem;color:var(--dim);margin-top:.5rem}
+  .key{display:inline-block;width:1.2rem;height:0;border-top:3px solid;vertical-align:middle;margin-right:.35rem;border-radius:2px}
+  .story{color:var(--dim);font-size:.92rem;margin-top:.9rem;border-top:1px solid var(--grid);padding-top:.75rem}
+  .story b{color:var(--ink);font-weight:normal}
+  .story .g{color:var(--good)} .story .b{color:var(--bad)}
+  .slider{display:flex;align-items:center;gap:.5rem;flex:1;min-width:200px;color:var(--dim);font-size:.9rem}
+  input[type=range]{flex:1;accent-color:var(--curve)}
+  .zoomlbl{color:var(--dim);font-size:.9rem;margin-right:.2rem}
+</style>
+</head>
+<body>
+
+<h1>The Tower Machine &nbsp;<span class="fx">f(x) = (√2)<sup>x</sup></span></h1>
+<p class="sub">Each press of <b style="color:var(--step)">Step</b> feeds the latest number back into the machine: x<sub>n+1</sub> = f(x<sub>n</sub>). The latest step is drawn bright with arrows and labels; zoom in to watch the endgame up close.</p>
+
+<div class="wrap">
+  <div class="plotcard">
+    <canvas id="plot" width="700" height="700" aria-label="Cobweb diagram of the iteration"></canvas>
+    <div class="legend">
+      <span><span class="key" style="border-color:var(--curve)"></span>curve f(x) = (√2)^x</span>
+      <span><span class="key" style="border-color:var(--diag);border-top-style:dashed"></span>mirror line y = x</span>
+      <span><span class="key" style="border-color:var(--tangent)"></span>tangent at fixed point</span>
+      <span><span class="key" style="border-color:var(--step)"></span>iteration path</span>
+    </div>
+    <div class="controls">
+      <button class="primary" id="stepBtn">Step&nbsp;→</button>
+      <button id="playBtn">Auto-play</button>
+      <button id="resetBtn">Reset</button>
+      <span class="zoomlbl">zoom:</span>
+      <button class="zoom active" data-z="1">1×</button>
+      <button class="zoom" data-z="3">3×</button>
+      <button class="zoom" data-z="8">8×</button>
+      <button class="zoom" data-z="20">20×</button>
+      <label class="toggle"><input type="checkbox" id="followChk" checked> follow the action</label>
+    </div>
+    <div class="controls">
+      <label class="toggle"><input type="checkbox" id="tanChk" checked> show tangent lines</label>
+      <label class="toggle"><input type="checkbox" id="linChk"> iterate the <span style="color:var(--tangent)">tangent</span> instead of the curve</label>
+    </div>
+    <div class="controls">
+      <div class="slider">
+        start x₁ = <span id="startVal" style="color:var(--ink)">1.414</span>
+        <input type="range" id="startSlider" min="0.2" max="4.8" step="0.001" value="1.4142" aria-label="starting value">
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="eq" id="eqBox">
+      x<sub>n+1</sub> = (√2)<sup>x<sub>n</sub></sup>
+    </div>
+    <div class="readout" id="readout">
+      Press <b>Step</b>. Each step is two moves: <b style="color:var(--step)">① up/down to the curve</b> (the machine computes f(x<sub>n</sub>)) then <b style="color:var(--step)">② across to the mirror line</b> (the output becomes the next input).
+    </div>
+    <table id="tbl" aria-live="polite">
+      <thead>
+        <tr><th>n</th><th>x<sub>n</sub></th><th>gap ε<sub>n</sub> = x<sub>n</sub>−2</th><th>gap ratio</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="story">
+      Fixed points sit where the curve crosses the mirror line:
+      <b class="g">y = 2</b> (slope ln 2 ≈ 0.69 &lt; 1 — each step multiplies the gap by ~0.69, staircase pulled <b>in</b>) and
+      <b class="b">y = 4</b> (slope ln 4 ≈ 1.39 &gt; 1 — gaps grow, staircase pushed <b>away</b>).
+      Zoom to 8× or 20× with “follow the action” on: near 2 the blue curve and orange tangent become <i>indistinguishable</i> — the visual meaning of
+      x<sub>n+1</sub> ≈ y + ln(y)(x<sub>n</sub> − y).
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const SQRT2 = Math.SQRT2;
+  const LN = Math.log;
+  const f = x => Math.pow(SQRT2, x);
+  const tangent = (y0, x) => y0 + LN(y0)*(x - y0);
+
+  const cv = document.getElementById('plot');
+  const ctx = cv.getContext('2d');
+  const W = cv.width, H = cv.height;
+
+  // ---- view window (zoomable)
+  let zoom = 1;
+  let follow = true;
+  let view = {cx:2.5, cy:2.5, half:2.5};   // half-width of window
+
+  function computeView(){
+    const half = 2.5/zoom;
+    let cx = 2.5, cy = 2.5;
+    if(zoom > 1){
+      if(follow && path.length){
+        const last = path[path.length-1];
+        cx = last; cy = last;
+      } else { cx = 2; cy = 2; }        // default: the stable fixed point
+    }
+    // keep window from drifting too far off the data region
+    cx = Math.min(6-half, Math.max(-1+half, cx));
+    cy = Math.min(6-half, Math.max(-1+half, cy));
+    view = {cx, cy, half};
+  }
+  const f0 = () => (useLinear ? (x=>tangent(2,x)) : f);
+
+  const sx = x => (x-(view.cx-view.half))/(2*view.half)*W;
+  const sy = y => H - (y-(view.cy-view.half))/(2*view.half)*H;
+  const invx = px => px/W*(2*view.half)+(view.cx-view.half);
+
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+  let start = SQRT2;
+  let path = [];
+  let useLinear = false;
+  let showTan = true;
+  let playTimer = null;
+
+  const stepFn = x => useLinear ? tangent(2, x) : f(x);
+
+  function reset(){
+    path = [start];
+    stopPlay();
+    render();
+  }
+
+  function stepOnce(){
+    const cur = path[path.length-1];
+    const nxt = stepFn(cur);
+    if(!isFinite(nxt) || nxt > 1e6){ stopPlay(); return; }
+    path.push(nxt);
+    render();
+  }
+
+  function render(){ computeView(); draw(); fillTable(); updateReadout(); }
+
+  function stopPlay(){
+    if(playTimer){ clearInterval(playTimer); playTimer=null;
+      document.getElementById('playBtn').textContent='Auto-play'; }
+  }
+
+  // ---- adaptive grid
+  function gridStep(){
+    const span = 2*view.half;
+    const steps = [2,1,0.5,0.25,0.1,0.05,0.02,0.01];
+    for(const s of steps){ if(span/s <= 14) return s; }
+    return 0.01;
+  }
+
+  function grid(){
+    ctx.clearRect(0,0,W,H);
+    const s = gridStep();
+    const x0 = Math.floor((view.cx-view.half)/s)*s;
+    const y0 = Math.floor((view.cy-view.half)/s)*s;
+    ctx.lineWidth=1;
+    for(let v=x0; v<=view.cx+view.half+1e-9; v+=s){
+      const bold = Math.abs(v/(s*4) - Math.round(v/(s*4))) < 1e-9;
+      ctx.strokeStyle = bold ? '#223050' : css('--grid');
+      ctx.beginPath(); ctx.moveTo(sx(v),0); ctx.lineTo(sx(v),H); ctx.stroke();
+      if(bold){
+        ctx.fillStyle=css('--dim'); ctx.font='12px Georgia';
+        ctx.fillText(trim(v), sx(v)+4, H-6);
+      }
+    }
+    for(let v=y0; v<=view.cy+view.half+1e-9; v+=s){
+      const bold = Math.abs(v/(s*4) - Math.round(v/(s*4))) < 1e-9;
+      ctx.strokeStyle = bold ? '#223050' : css('--grid');
+      ctx.beginPath(); ctx.moveTo(0,sy(v)); ctx.lineTo(W,sy(v)); ctx.stroke();
+      if(bold){
+        ctx.fillStyle=css('--dim'); ctx.font='12px Georgia';
+        ctx.fillText(trim(v), 6, sy(v)-4);
+      }
+    }
+  }
+  const trim = v => (+v.toFixed(3)).toString();
+
+  function drawCurve(fn, color, width, dash){
+    ctx.strokeStyle=color; ctx.lineWidth=width||2.5;
+    ctx.setLineDash(dash||[]);
+    ctx.beginPath();
+    let first=true;
+    for(let px=0;px<=W;px+=2){
+      const x=invx(px), y=fn(x);
+      const Y=sy(y);
+      if(Y<-50||Y>H+50){ first=true; continue;}
+      if(first){ctx.moveTo(px,Y);first=false;} else ctx.lineTo(px,Y);
+    }
+    ctx.stroke(); ctx.setLineDash([]);
+  }
+
+  function dot(x,y,color,r){
+    ctx.fillStyle=color;
+    ctx.beginPath(); ctx.arc(sx(x),sy(y),r||6,0,7); ctx.fill();
+  }
+
+  function arrow(x1,y1,x2,y2,color,lw){
+    const X1=sx(x1),Y1=sy(y1),X2=sx(x2),Y2=sy(y2);
+    ctx.strokeStyle=color; ctx.fillStyle=color; ctx.lineWidth=lw;
+    ctx.beginPath(); ctx.moveTo(X1,Y1); ctx.lineTo(X2,Y2); ctx.stroke();
+    const dx=X2-X1, dy=Y2-Y1, len=Math.hypot(dx,dy);
+    if(len<14) return;
+    const ux=dx/len, uy=dy/len, ah=9;
+    ctx.beginPath();
+    ctx.moveTo(X2,Y2);
+    ctx.lineTo(X2-ah*ux-ah*.5*uy, Y2-ah*uy+ah*.5*ux);
+    ctx.lineTo(X2-ah*ux+ah*.5*uy, Y2-ah*uy-ah*.5*ux);
+    ctx.closePath(); ctx.fill();
+  }
+
+  function label(x,y,text,color,dx,dy){
+    ctx.fillStyle=color; ctx.font='bold 13px Georgia';
+    ctx.fillText(text, sx(x)+(dx||0), sy(y)+(dy||0));
+  }
+
+  function draw(){
+    grid();
+    drawCurve(x=>x, css('--diag'), 2, [6,5]);
+    if(showTan){
+      drawCurve(x=>tangent(2,x), css('--tangent'), 2, useLinear?[]:[2,3]);
+      drawCurve(x=>tangent(4,x), 'rgba(255,107,129,.55)', 2, [2,3]);
+    }
+    drawCurve(f, useLinear ? 'rgba(94,179,255,.35)' : css('--curve'), 2.5);
+
+    // cobweb: history dim, latest step bright with arrows + labels
+    const histColor='rgba(74,222,128,.38)';
+    ctx.lineWidth=1.6;
+    for(let i=0;i<path.length-1;i++){
+      const x=path[i], y=path[i+1];
+      const yPrev = i===0 ? (zoom>1? x : 0) : path[i];
+      const latest = (i===path.length-2);
+      if(!latest){
+        ctx.strokeStyle=histColor;
+        ctx.beginPath();
+        ctx.moveTo(sx(x), sy(i===0?0:x));
+        ctx.lineTo(sx(x), sy(y));
+        ctx.lineTo(sx(y), sy(y));
+        ctx.stroke();
+      }else{
+        // step ①: vertical to the curve/line
+        arrow(x, (i===0?Math.min(0,y):x), x, y, css('--step'), 2.6);
+        // step ②: horizontal to the mirror line
+        arrow(x, y, y, y, css('--step'), 2.6);
+        const midY=(i===0? y/2 : (x+y)/2);
+        label(x, midY, '① compute f(x'+(i+1)+')', css('--step'), 8, 4);
+        label((x+y)/2, y, '② output → next input', css('--step'), 0, -10);
+      }
+    }
+    for(let i=0;i<path.length;i++){
+      dot(path[i], i===0&&zoom<=1?0:path[i], css('--step'), i===path.length-1?5:3.5);
+    }
+    dot(2,2,css('--good'),7); dot(4,4,css('--bad'),7);
+    if(zoom<=3){
+      ctx.fillStyle=css('--good'); ctx.font='italic 14px Georgia';
+      ctx.fillText('y=2 stable, slope ln2≈0.69', sx(2)+10, sy(2)+20);
+      ctx.fillStyle=css('--bad');
+      ctx.fillText('y=4 unstable, slope ln4≈1.39', sx(4)-200, sy(4)-12);
+    }
+  }
+
+  function fillTable(){
+    const tb=document.querySelector('#tbl tbody');
+    tb.innerHTML='';
+    const startIdx = Math.max(0, path.length-9);
+    for(let i=startIdx;i<path.length;i++){
+      const x=path[i], eps=x-2;
+      let ratio='—';
+      if(i>0){
+        const prev=path[i-1]-2;
+        if(Math.abs(prev)>1e-12) ratio=(eps/prev).toFixed(3);
+      }
+      const tr=document.createElement('tr');
+      if(i===path.length-1) tr.className='latest';
+      tr.innerHTML=`<td>${i+1}</td><td>${x.toFixed(4)}</td><td>${eps>=0?'+':''}${eps.toFixed(4)}</td><td class="ratio">${ratio}</td>`;
+      tb.appendChild(tr);
+    }
+  }
+
+  function updateReadout(){
+    const n=path.length, cur=path[n-1];
+    const box=document.getElementById('readout');
+    if(n===1){
+      box.innerHTML=`Start x₁ = <b>${cur.toFixed(4)}</b>. Press <b>Step</b>: <b style="color:var(--step)">①</b> the machine computes f(x₁), <b style="color:var(--step)">②</b> that output slides across to the mirror line and becomes x₂.`;
+      return;
+    }
+    const prev=path[n-2];
+    const ratio=(cur-2)/(prev-2);
+    box.innerHTML =
+      `Step ${n-1}: fed <b>${prev.toFixed(4)}</b> in, got <b>${cur.toFixed(4)}</b> out.` +
+      (isFinite(ratio)&&Math.abs(prev-2)>1e-9
+        ? ` Gap to 2 multiplied by <span style="color:var(--step)">${ratio.toFixed(3)}</span> — compare slope ln 2 = <span style="color:var(--tangent)">0.693</span>.`
+        : '');
+  }
+
+  // ---- events
+  document.getElementById('stepBtn').onclick=stepOnce;
+  document.getElementById('resetBtn').onclick=reset;
+  document.getElementById('playBtn').onclick=function(){
+    if(playTimer){ stopPlay(); return; }
+    this.textContent='Pause';
+    playTimer=setInterval(stepOnce, 700);
+  };
+  document.querySelectorAll('button.zoom').forEach(b=>{
+    b.onclick=()=>{
+      zoom=+b.dataset.z;
+      document.querySelectorAll('button.zoom').forEach(x=>x.classList.toggle('active',x===b));
+      render();
+    };
+  });
+  document.getElementById('followChk').onchange=e=>{follow=e.target.checked; render();};
+  document.getElementById('tanChk').onchange=e=>{showTan=e.target.checked; draw();};
+  document.getElementById('linChk').onchange=e=>{
+    useLinear=e.target.checked;
+    document.getElementById('eqBox').innerHTML = useLinear
+      ? `x<sub>n+1</sub> = <span class="num">2</span> + <span class="slope">ln 2</span>·(x<sub>n</sub> − <span class="num">2</span>)`
+      : `x<sub>n+1</sub> = (√2)<sup>x<sub>n</sub></sup>`;
+    reset();
+  };
+  const slider=document.getElementById('startSlider');
+  slider.oninput=e=>{
+    start=parseFloat(e.target.value);
+    document.getElementById('startVal').textContent=start.toFixed(3);
+    reset();
+  };
+  function pick(ev){
+    const r=cv.getBoundingClientRect();
+    const px=(ev.touches?ev.touches[0].clientX:ev.clientX)-r.left;
+    const x=Math.min(4.8,Math.max(0.2, invx(px*(W/r.width))));
+    start=x; slider.value=x;
+    document.getElementById('startVal').textContent=x.toFixed(3);
+    reset();
+  }
+  let dragging=false;
+  cv.addEventListener('pointerdown',e=>{dragging=true;pick(e);});
+  cv.addEventListener('pointermove',e=>{if(dragging)pick(e);});
+  addEventListener('pointerup',()=>dragging=false);
+
+  reset();
+})();
+</script>
+</body>
+</html>

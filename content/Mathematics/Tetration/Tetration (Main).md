@@ -160,6 +160,10 @@ Every step simply multiplies the distance-from-target by the slope — and that 
 >
 > **The Golden Rule of stability:** an iteration settles on its target only when the slope there lies strictly between $-1$ and $1$. §4.4 feeds the tower's own slope — which works out to be $\ln y$ — into exactly this rule to pin down both convergence bounds.
 
+> [!tip] Interactive — run the tower machine yourself
+> 👉 **[Open: The Tower Machine — cobweb iteration lab](tet_tower_iteration_lab.html)**
+> Everything in this section, live: press **Step** to feed $x_{n+1}=(\sqrt2)^{x_n}$ one iteration at a time and watch the §3.1 staircase build; the two fixed points are marked ($2$ stable, slope $\ln 2\approx0.69$; $4$ unstable, slope $\ln 4\approx1.39$); a gap table shows each step multiplying the error by $\approx0.693$ — the §3.3 rule $\varepsilon_{n+1}\approx f'(y)\,\varepsilon_n$ in action. Zoom to 8×–20× until the curve and its tangent become indistinguishable, drag the start anywhere (try starting just above $4$), or flip "iterate the tangent instead" to run the pure linearization.
+
 ---
 
 ## 4. The maximum base: $e^{1/e}$
