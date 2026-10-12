@@ -131,5 +131,5 @@ Stronger hand more often + max value when ahead + no payoff when beat = a struct
 
 ## Related Documents
 - **[Part 2 Beating Live 1-2 Games (Main)](<Part 2 Beating Live 1-2 Games (Main).md>)** — Part 2 overview.
-- **[Skill #2 — Don't Pay People Off](skill2_dont_pay_people_off.md)** — the complementary folding skill.
-- **[1-2 Hand Quizzes](hand_quizzes_1_2.md)** — practice applying all three skills.
+- **[Skill #2 — Don't Pay People Off](<Skill 2 - Don't Pay People Off.md>)** — the complementary folding skill.
+- **[1-2 Hand Quizzes](<Hand Quizzes for 1-2 Games.md>)** — practice applying all three skills.

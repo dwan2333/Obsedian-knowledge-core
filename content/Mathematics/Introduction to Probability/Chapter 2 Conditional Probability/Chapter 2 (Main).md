@@ -345,7 +345,7 @@ The first three alone give only **pairwise independence**. For $n$ events, *ever
 
 ## Related Documents
 
-- **[Chapter 2 — Exercises (2.11)](<chapter2_exercises.md>)** — all 74 chapter-end exercises with NotebookLM solutions and full main-agent verification.
+- **[Chapter 2 — Exercises (2.11)](<Chapter 2 Exercises.md>)** — all 74 chapter-end exercises with NotebookLM solutions and full main-agent verification.
 - **[[Chapter 1 (Main)|Chapter 1 — Probability and Counting]]** — the counting techniques (naive definition, multiplication rule, binomial coefficients) that every conditional-probability calculation in this chapter relies on.
 - **[[Introduction to Probability (Main)|Introduction to Probability (hub)]]** — the book hub.
 

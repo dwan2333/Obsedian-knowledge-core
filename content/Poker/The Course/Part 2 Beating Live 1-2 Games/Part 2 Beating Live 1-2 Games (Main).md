@@ -14,20 +14,20 @@ _Research compiled 2026-04-22 — sourced from Ed Miller, "The Course" (PDF, Par
 
 Part 2 is where the book stops philosophizing and starts teaching specific skills. Miller argues that beating **$1-2 live no-limit** requires exactly three post-flop disciplines layered on top of solid pre-flop play — nothing more, nothing less. Each is framed as a standalone "skill" that an improving player can drill in isolation:
 
-1. **[Skill #1 — Play a Simple and Effective Pre-Flop Strategy](skill1_pre_flop_strategy.md)** — pick hands with equity-when-called, never limp, respect position.
-2. **[Skill #2 — Don't Pay People Off](skill2_dont_pay_people_off.md)** — fold medium-strength hands when opponents commit their stack on turn or river.
-3. **[Skill #3 — Assess Your Hand Value](skill3_assess_hand_value.md)** — extract the maximum from worse hands by counting "streets of value."
+1. **[Skill #1 — Play a Simple and Effective Pre-Flop Strategy](<Skill 1 - Pre-Flop Strategy.md>)** — pick hands with equity-when-called, never limp, respect position.
+2. **[Skill #2 — Don't Pay People Off](<Skill 2 - Don't Pay People Off.md>)** — fold medium-strength hands when opponents commit their stack on turn or river.
+3. **[Skill #3 — Assess Your Hand Value](<Skill 3 - Assess Your Hand Value.md>)** — extract the maximum from worse hands by counting "streets of value."
 
-Part 2 closes with **[12 hand quizzes](hand_quizzes_1_2.md)** that drill all three skills in combination. You should be able to beat a typical 1-2 game with these three skills alone — Parts 3 and 4 only add layers once this foundation is automatic.
+Part 2 closes with **[12 hand quizzes](<Hand Quizzes for 1-2 Games.md>)** that drill all three skills in combination. You should be able to beat a typical 1-2 game with these three skills alone — Parts 3 and 4 only add layers once this foundation is automatic.
 
 ---
 
 ## Branch Notes
 
-- **[Skill #1 — Pre-Flop Strategy](skill1_pre_flop_strategy.md)** — The four hand-selection criteria (suited, big, connected, small pair), position-based opening ranges, and adjustments for loose/multi-way games.
-- **[Skill #2 — Don't Pay People Off](skill2_dont_pay_people_off.md)** — Why folding is the most valuable post-flop skill at 1-2, the 1/3 bluff-frequency math, and the turn-vs-river distinction.
-- **[Skill #3 — Assess Your Hand Value](skill3_assess_hand_value.md)** — Streets of value, bet sizing, the "what weaker hands will call?" heuristic, and why "protection bets" are a leak.
-- **[1-2 Hand Quizzes](hand_quizzes_1_2.md)** — 12 worked quiz hands with collapsed solutions, each tagged to the skill it tests.
+- **[Skill #1 — Pre-Flop Strategy](<Skill 1 - Pre-Flop Strategy.md>)** — The four hand-selection criteria (suited, big, connected, small pair), position-based opening ranges, and adjustments for loose/multi-way games.
+- **[Skill #2 — Don't Pay People Off](<Skill 2 - Don't Pay People Off.md>)** — Why folding is the most valuable post-flop skill at 1-2, the 1/3 bluff-frequency math, and the turn-vs-river distinction.
+- **[Skill #3 — Assess Your Hand Value](<Skill 3 - Assess Your Hand Value.md>)** — Streets of value, bet sizing, the "what weaker hands will call?" heuristic, and why "protection bets" are a leak.
+- **[1-2 Hand Quizzes](<Hand Quizzes for 1-2 Games.md>)** — 12 worked quiz hands with collapsed solutions, each tagged to the skill it tests.
 
 ---
 

@@ -233,7 +233,7 @@ Drop the altitude $D$ from the right angle to the hypotenuse. Then the **recipro
 $$\frac{1}{A^2} + \frac{1}{B^2} = \frac{1}{D^2}$$
 
 > [!info] Deep dive available
-> This exact identity gets its own full proof in the companion note **[The Inverse Pythagorean Theorem](inverse_pythagorean_theorem.md)** (from blackpenredpen). It also shares its central trick — *drop the altitude* — with [Sneaky Proof of the Pythagorean Identity](<../Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md>).
+> This exact identity gets its own full proof in the companion note **[The Inverse Pythagorean Theorem](<Inverse Pythagorean Theorem.md>)** (from blackpenredpen). It also shares its central trick — *drop the altitude* — with [Sneaky Proof of the Pythagorean Identity](<../Trigonometric/Sneaky Proof of Pythagorean Identity (Main).md>).
 
 ### 5.2 Equal-area triangles around any triangle *(at [[16:10]](https://www.youtube.com/watch?v=p-0SOWbzUYI&t=970s))*
 

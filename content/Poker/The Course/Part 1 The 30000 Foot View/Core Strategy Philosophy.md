@@ -63,5 +63,5 @@ The entire strategy reduces to three disciplines that run through the rest of th
 ## Related Documents
 
 - **[Part 1 The 30000 Foot View (Main).md](Part 1 The 30000 Foot View (Main).md)** — Overview of Part 1.
-- **[The Poker Ecosystem](the_poker_ecosystem.md)** — Why live small-stakes games create this opportunity in the first place.
-- **[The Poker Pyramid](the_poker_pyramid.md)** — The structural model that explains *how* opponent ranges weaken as streets progress.
+- **[The Poker Ecosystem](<The Poker Ecosystem.md>)** — Why live small-stakes games create this opportunity in the first place.
+- **[The Poker Pyramid](<The Poker Pyramid.md>)** — The structural model that explains *how* opponent ranges weaken as streets progress.

@@ -96,5 +96,5 @@ Miller's narrative: a loose player opens for $10; with just one caller, a $20 c-
 
 ## Related Documents
 - **[Part 2 Beating Live 1-2 Games (Main)](<Part 2 Beating Live 1-2 Games (Main).md>)** — Part 2 overview.
-- **[Skill #1 — Pre-Flop Strategy](skill1_pre_flop_strategy.md)** — what to do before the flop.
-- **[Skill #3 — Assess Your Hand Value](skill3_assess_hand_value.md)** — the opposite side: when your hand is good enough to bet big.
+- **[Skill #1 — Pre-Flop Strategy](<Skill 1 - Pre-Flop Strategy.md>)** — what to do before the flop.
+- **[Skill #3 — Assess Your Hand Value](<Skill 3 - Assess Your Hand Value.md>)** — the opposite side: when your hand is good enough to bet big.

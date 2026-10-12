@@ -16,8 +16,8 @@ title: "Pascal's Identity via Grid Paths"
 
 ![Mind map of Pascal's Identity via Grid Paths](sp_mindmap.png)
 
-> [!info] What this note is, and why it complements [Exercise 16](chapter1_exercises.md)
-> [Exercise 16 in your notes](chapter1_exercises.md) proves Pascal's identity $\binom{n}{k} + \binom{n}{k-1} = \binom{n+1}{k}$ via the **"Alice on/off the committee"** story. This video proves the same identity through a completely different story — **counting increasing paths on an integer grid**. Same identity, two stories. Together they reveal that Pascal's identity isn't an isolated algebraic curiosity — it's a *structural fact about combinatorial counting* that surfaces wherever you partition a count into two cases.
+> [!info] What this note is, and why it complements [Exercise 16](<Chapter 1 Exercises.md>)
+> [Exercise 16 in your notes](<Chapter 1 Exercises.md>) proves Pascal's identity $\binom{n}{k} + \binom{n}{k-1} = \binom{n+1}{k}$ via the **"Alice on/off the committee"** story. This video proves the same identity through a completely different story — **counting increasing paths on an integer grid**. Same identity, two stories. Together they reveal that Pascal's identity isn't an isolated algebraic curiosity — it's a *structural fact about combinatorial counting* that surfaces wherever you partition a count into two cases.
 
 > [!example] 📂 Interactive walkthrough
 > A clickable 6×6 lattice paired with Pascal's triangle. Click any point $(a, b)$ on the lattice to count the monotone paths from $(0,0)$ — the value $\binom{a+b}{a}$ lights up the corresponding entry in the triangle, and the two predecessor points $(a-1, b)$ and $(a, b-1)$ turn green to reveal Pascal's identity at work. A *Sample paths* control lets you step through every individual path one at a time (e.g. all 924 paths from $(0,0)$ to $(6,6)$):
@@ -156,7 +156,7 @@ The triangle is the *visual embodiment* of Pascal's identity — every entry is 
 ## Key takeaways
 
 - **Counting one quantity two ways is the engine of story proofs.** Recursive count + direct count for $|C(m,n)|$ gives Pascal's identity *for free* — no algebra needed.
-- **Pascal's identity is a structural rule, not a coincidence.** It surfaces whenever you partition a count into two mutually exclusive cases (left vs right step here, Alice in vs out in [Exercise 16](chapter1_exercises.md)).
+- **Pascal's identity is a structural rule, not a coincidence.** It surfaces whenever you partition a count into two mutually exclusive cases (left vs right step here, Alice in vs out in [Exercise 16](<Chapter 1 Exercises.md>)).
 - **The grid and the triangle are the same object.** Rotate the path-count grid 45° and entries align exactly with Pascal's triangle. The recursion that generates the grid (penultimate-step argument) IS the rule that generates the triangle (sum-of-two-above).
 - **Two stories, one identity.** This grid-path proof and Exercise 16's "Alice on/off committee" proof both derive $\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$. Each gives a different intuition; together they triangulate the same truth.
 
@@ -164,7 +164,7 @@ The triangle is the *visual embodiment* of Pascal's identity — every entry is 
 
 ## Related notes
 
-- **[Exercise 16 — Pascal's Identity](chapter1_exercises.md)** — the "Alice on/off the committee" story proof + full algebraic derivation. Pair this note (grid-paths) with that one (committees) for two complementary intuitions.
+- **[Exercise 16 — Pascal's Identity](<Chapter 1 Exercises.md>)** — the "Alice on/off the committee" story proof + full algebraic derivation. Pair this note (grid-paths) with that one (committees) for two complementary intuitions.
 - **[Chapter 1 (Main)](<Chapter 1 (Main).md>)** — Section 1.4 covers binomial coefficients and the broader story-proof apparatus this video sits within.
 
 ---

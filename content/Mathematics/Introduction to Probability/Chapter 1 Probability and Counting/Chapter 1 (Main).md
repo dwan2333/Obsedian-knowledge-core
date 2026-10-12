@@ -242,7 +242,7 @@ Since most naive probabilities reduce to ratios of counts, the chapter spends se
 >
 > Generalizing: an $n$-element set has $n$ independent yes/no decisions, giving $\underbrace{2 \cdot 2 \cdots 2}_n = 2^n$ subsets.
 >
-> **Cross-reference.** This same identity ($2^n$ subsets total) shows up as the right-hand side of [Exercise 15 — Sum of Binomial Coefficients](chapter1_exercises.md), where the story proof uses the binary-encoding count to match $\sum_{k=0}^n \binom{n}{k}$ on the left.
+> **Cross-reference.** This same identity ($2^n$ subsets total) shows up as the right-hand side of [Exercise 15 — Sum of Binomial Coefficients](<Chapter 1 Exercises.md>), where the story proof uses the binary-encoding count to match $\sum_{k=0}^n \binom{n}{k}$ on the left.
 
 ![Figure 1.3 — Chessboard and crossword grid](chapter1_fig_1.3_chessboard_crossword.png)
 
@@ -815,7 +815,7 @@ $$P\!\left(\bigcup_{i=1}^{n} A_i\right) = \sum_{i} P(A_i) - \sum_{i<j} P(A_i \ca
 > [!example] 1.9 Exercises — All 62 Solved & Verified
 > The complete chapter-end exercise set, with NotebookLM-generated solutions independently verified by the main agent (zero discrepancies found).
 >
-> See the companion: **[Chapter 1 — Exercises (1.9)](chapter1_exercises.md)**
+> See the companion: **[Chapter 1 — Exercises (1.9)](<Chapter 1 Exercises.md>)**
 
 ---
 

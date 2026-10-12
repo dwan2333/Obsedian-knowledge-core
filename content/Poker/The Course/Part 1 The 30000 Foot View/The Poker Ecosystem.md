@@ -57,4 +57,4 @@ Miller's recommendation for a player starting out:
 ## Related Documents
 
 - **[Part 1 The 30000 Foot View (Main).md](Part 1 The 30000 Foot View (Main).md)** — Overview of Part 1 and links to all branch notes.
-- **[Core Strategy Philosophy](core_strategy_philosophy.md)** — Why the weak player pools in live cash create the opportunity Miller describes.
+- **[Core Strategy Philosophy](<Core Strategy Philosophy.md>)** — Why the weak player pools in live cash create the opportunity Miller describes.

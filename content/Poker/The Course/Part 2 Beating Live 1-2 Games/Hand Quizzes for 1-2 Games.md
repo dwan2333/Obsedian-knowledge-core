@@ -190,6 +190,6 @@ Each hand presents a scenario — stacks, position, and action up to your decisi
 
 ## Related Documents
 - **[Part 2 Beating Live 1-2 Games (Main)](<Part 2 Beating Live 1-2 Games (Main).md>)** — Part 2 overview.
-- **[Skill #1 — Pre-Flop Strategy](skill1_pre_flop_strategy.md)**
-- **[Skill #2 — Don't Pay People Off](skill2_dont_pay_people_off.md)**
-- **[Skill #3 — Assess Your Hand Value](skill3_assess_hand_value.md)**
+- **[Skill #1 — Pre-Flop Strategy](<Skill 1 - Pre-Flop Strategy.md>)**
+- **[Skill #2 — Don't Pay People Off](<Skill 2 - Don't Pay People Off.md>)**
+- **[Skill #3 — Assess Your Hand Value](<Skill 3 - Assess Your Hand Value.md>)**

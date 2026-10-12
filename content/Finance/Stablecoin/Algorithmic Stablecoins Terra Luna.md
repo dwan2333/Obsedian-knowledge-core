@@ -89,11 +89,11 @@ The mechanism that was supposed to *restore* the peg became the mechanism that *
 
 ## The Core Lesson — Three Trust Models Compared
 
-| Stablecoin | What You Trust | What Backs It | Failure Mode |
-|---|---|---|---|
-| **USDC** | A company (Circle) holding real dollars | Cash, [U.S. Treasuries](<Treasury Bonds (main).md>), repos | Circle goes bankrupt or commits fraud |
-| **DAI** | Code (smart contracts) holding real crypto | Over-collateralized ETH + other assets | Catastrophic multi-asset crash overwhelming all four defense stages |
-| **UST** | Confidence alone — that people will keep valuing LUNA | Nothing tangible — only the swap mechanism | Confidence breaks → death spiral → total collapse |
+| Stablecoin | What You Trust                                        | What Backs It                                              | Failure Mode                                                        |
+| ---------- | ----------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------- |
+| **USDC**   | A company (Circle) holding real dollars               | Cash, [U.S. Treasuries](<Treasury Bonds (main).md>), repos | Circle goes bankrupt or commits fraud                               |
+| **DAI**    | Code (smart contracts) holding real crypto            | Over-collateralized ETH + other assets                     | Catastrophic multi-asset crash overwhelming all four defense stages |
+| **UST**    | Confidence alone — that people will keep valuing LUNA | Nothing tangible — only the swap mechanism                 | Confidence breaks → death spiral → total collapse                   |
 
 **UST trusted that confidence alone could substitute for actual backing — and it couldn't.**
 
@@ -114,6 +114,6 @@ The critical distinction: USDC and DAI have something *outside the system* backi
 
 - **[Stablecoin Deep Dive: Mechanisms, Dollar Impact & AI Agent Markets](Stable%20Coin%20(Main).md)** — Covers all stablecoin types, the dollar dominance feedback loop, ECB sovereignty concerns, and the emerging AI agent payment infrastructure.
 - **[Crypto-Collateralized Stablecoins: MakerDAO's DAI](Crypto-Collateralized%20Stablecoins.md)** — Deep dive into the on-chain collateral model, the three-actor liquidation system, and the four-stage defense cascade.
-- **[Synthetic / Hedged Stablecoins: Ethena's USDe](synthetic_stablecoins_ethena_usde.md)** — Shares Terra's 1:1 capital efficiency but avoids the death spiral by holding real collateral + a derivatives hedge.
+- **[Synthetic / Hedged Stablecoins: Ethena's USDe](<Synthetic Stablecoins Ethena USDe.md>)** — Shares Terra's 1:1 capital efficiency but avoids the death spiral by holding real collateral + a derivatives hedge.
 - **[Hybrid Stablecoins: FRAX & the Fractional-Algorithmic Experiment](Hybrid%20Stablecoins%20Frax.md)** — Terra's collapse directly caused FRAX to abandon its fractional-algorithmic model and move to 100% collateralization.
-- **[Stablecoin AI Agent Payment Infrastructure](ai_agent_payment_infrastructure.md)** — The four-layer agentic payment stack. Terra's collapse is why reserve-backed stablecoins (USDC, USDT) — not algorithmic ones — became the settlement asset of choice.
+- **[Stablecoin AI Agent Payment Infrastructure](<AI Agent Payment Infrastructure.md>)** — The four-layer agentic payment stack. Terra's collapse is why reserve-backed stablecoins (USDC, USDT) — not algorithmic ones — became the settlement asset of choice.

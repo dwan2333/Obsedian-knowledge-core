@@ -200,4 +200,4 @@ Warning: don't reach for these adjustments prematurely. Amateurs chronically ass
 
 ## Related Documents
 - **[Part 2 Beating Live 1-2 Games (Main)](<Part 2 Beating Live 1-2 Games (Main).md>)** — Part 2 overview.
-- **[Skill #2 — Don't Pay People Off](skill2_dont_pay_people_off.md)** — the next skill.
+- **[Skill #2 — Don't Pay People Off](<Skill 2 - Don't Pay People Off.md>)** — the next skill.

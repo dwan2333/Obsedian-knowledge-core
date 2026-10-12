@@ -129,7 +129,7 @@ The same coefficient pattern can be drawn *above* the standard rows and *between
 Row $n = -1$ is $1, -1, 1, -1, \dots$ — the coefficients of $(1+x)^{-1}$. Row $n = -2$ is $1, -2, 3, -4, 5, -6, \dots$. If you ignore the signs, the absolute values are the same numbers as the standard triangle, just *rotated by 120°*. The mechanical pattern that originally only worked for non-negative integers extends in both directions once you allow infinite rows.
 
 > [!tip] Deep dive — the algebra and meaning behind these rows
-> Why does row $n=-1$ come out $1,-1,1,\dots$, and what does a "negative choose" even mean? The companion **[Negative & Fractional Binomial Coefficients](negative_and_fractional_binomial_coefficients.md)** derives the identity $\binom{-n}{k} = (-1)^k\binom{n+k-1}{k}$, proves the equivalence, and gives its stars-and-bars (combinations-with-replacement) interpretation — plus the top-down computation of the $n=\tfrac12$ row used in §3.5.
+> Why does row $n=-1$ come out $1,-1,1,\dots$, and what does a "negative choose" even mean? The companion **[Negative & Fractional Binomial Coefficients](<Negative and Fractional Binomial Coefficients.md>)** derives the identity $\binom{-n}{k} = (-1)^k\binom{n+k-1}{k}$, proves the equivalence, and gives its stars-and-bars (combinations-with-replacement) interpretation — plus the top-down computation of the $n=\tfrac12$ row used in §3.5.
 
 ### 3.5 Worked example — $\sqrt{3}$ from the $n = 1/2$ row *(at [[12:35]](https://www.youtube.com/watch?v=gMlf1ELvRzc&t=755s))*
 
@@ -249,10 +249,10 @@ The deeper point isn't really about $\pi$ — it's about what made the leap poss
 
 ## Related Documents
 
-- **[Negative & Fractional Binomial Coefficients](negative_and_fractional_binomial_coefficients.md)** — the coefficient algebra behind §3: how to compute $\binom{n}{k}$ when $n$ is negative or fractional, the identity $\binom{-n}{k} = (-1)^k\binom{n+k-1}{k}$ with proof, and its combinations-with-replacement (stars-and-bars) meaning.
+- **[Negative & Fractional Binomial Coefficients](<Negative and Fractional Binomial Coefficients.md>)** — the coefficient algebra behind §3: how to compute $\binom{n}{k}$ when $n$ is negative or fractional, the identity $\binom{-n}{k} = (-1)^k\binom{n+k-1}{k}$ with proof, and its combinations-with-replacement (stars-and-bars) meaning.
 - **[Logarithm Fundamentals (Main)](<../Logarithms/Logarithm Fundamentals (Main).md>)** — Another Path-C note where a small algebraic insight (the zero-counting intuition for $\log_{10}$) replaces years of brute-force computation. Same "small move, huge consequence" structure.
 - **[Imaginary Interest and Continuous Rotation (Main)](<../Complex Numbers/Imaginary Interest and Continuous Rotation (Main).md>)** — Connects to §3.3 (extending operations past their stated domain): plugging an imaginary value into compound interest, just as Newton plugged a fraction into the binomial theorem.
-- **[Euler's Formula via exp(x) (Main)](<../Euler 's equation/Euler's Formula via exp(x) (Main).md>)** — Another instance where an infinite series (the polynomial definition of $\exp$) is the bridge between algebra and geometry.
+- **[Euler's Formula via exp(x) (Main)](<Euler's Formula via exp(x) (Main).md>)** — Another instance where an infinite series (the polynomial definition of $\exp$) is the bridge between algebra and geometry.
 - **[Tetration (Main)](<../Tetration/Tetration (Main).md>)** — The same "a tiny insight tames a wild object" structure: a single tangency condition turns a runaway power tower into the exact constant $e^{1/e}$, just as Newton's series turns the circle into π.
 
 ---

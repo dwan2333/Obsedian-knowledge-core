@@ -130,3 +130,10 @@ Sophisticated traders exploit tiny price differences between related instruments
 - **Sell early** = potential profit or loss depending on rate movements.
 - **Traders profit** by predicting rate changes, exploiting yield curves, earning carry, and using futures.
 
+---
+
+## Related Documents
+
+- **[How Treasury Bonds Work](<1 - How Treasury Bonds Work.md>)** — Part 1 of the series below: the four terms that matter, yield to maturity, a fully worked example (the 4.625% bond maturing February 15, 2055), and how buying and selling actually work.
+- **[Treasury Securities and the Interest Rate System](<Treasury Securities and the Interest Rate System (Main).md>)** — The full 7-part series: how the Federal Reserve sets rates, the two overnight markets, the Federal Home Loan Banks, hedge fund Treasury trades (carry and the basis trade), dealers and the clearing house, and what happens when it breaks.
+

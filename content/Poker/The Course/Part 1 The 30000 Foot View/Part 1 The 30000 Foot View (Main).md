@@ -14,8 +14,8 @@ _Research compiled 2026-04-07 — sourced from Ed Miller, "The Course" (PDF, Par
 
 Part 1 establishes the **big picture** before any specific strategy is introduced. Miller answers two foundational questions:
 
-1. **What does the poker landscape actually look like?** — [The Poker Ecosystem](the_poker_ecosystem.md)
-2. **Where does the money come from, and how do you get it?** — [Core Strategy Philosophy](core_strategy_philosophy.md) · [The Poker Pyramid](the_poker_pyramid.md)
+1. **What does the poker landscape actually look like?** — [The Poker Ecosystem](<The Poker Ecosystem.md>)
+2. **Where does the money come from, and how do you get it?** — [Core Strategy Philosophy](<Core Strategy Philosophy.md>) · [The Poker Pyramid](<The Poker Pyramid.md>)
 
 Everything in the later parts of the book is built on the answers to these two questions.
 
@@ -23,9 +23,9 @@ Everything in the later parts of the book is built on the answers to these two q
 
 ## Branch Notes
 
-- **[The Poker Ecosystem](the_poker_ecosystem.md)** — Live cash, online cash, and tournaments: what each format looks like and where to focus.
-- **[Core Strategy Philosophy](core_strategy_philosophy.md)** — Where money comes from in poker and how to position yourself to capture it.
-- **[The Poker Pyramid](the_poker_pyramid.md)** — How hand ranges narrow street by street, and why this shapes every decision.
+- **[The Poker Ecosystem](<The Poker Ecosystem.md>)** — Live cash, online cash, and tournaments: what each format looks like and where to focus.
+- **[Core Strategy Philosophy](<Core Strategy Philosophy.md>)** — Where money comes from in poker and how to position yourself to capture it.
+- **[The Poker Pyramid](<The Poker Pyramid.md>)** — How hand ranges narrow street by street, and why this shapes every decision.
 
 ---
 

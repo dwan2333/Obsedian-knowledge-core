@@ -63,4 +63,4 @@ The pyramid is not a formula — it is a **mental framework** for narrowing the 
 ## Related Documents
 
 - **[Part 1 The 30000 Foot View (Main).md](Part 1 The 30000 Foot View (Main).md)** — Overview of Part 1.
-- **[Core Strategy Philosophy](core_strategy_philosophy.md)** — Why understanding opponent ranges connects to where the money comes from.
+- **[Core Strategy Philosophy](<Core Strategy Philosophy.md>)** — Why understanding opponent ranges connects to where the money comes from.
