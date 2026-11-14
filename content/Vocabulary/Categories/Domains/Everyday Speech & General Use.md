@@ -95,6 +95,7 @@ The workaday register — vivid, useful words you can drop into conversation wit
 - [hampered](<../../Words/hampered.md>) — held back; slowed down
 - [dilapidated](<../../Words/dilapidated.md>) — run-down; falling apart
 - [fret](<../../Words/fret.md>) — to worry; to be anxious over small things
+- [usher](<../../Words/usher.md>) — to show someone the way; to bring in
 
 ## Related categories
 - [Literary & Elevated Prose](<../Domains/Literary & Elevated Prose.md>)

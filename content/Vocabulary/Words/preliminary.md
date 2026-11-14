@@ -17,3 +17,4 @@
 
 ## Related words
 - *introductory, preparatory, provisional, opening* — close in sense (not yet in the vault)
+- [usher](usher.md) — kin; to lead in and introduce what comes next

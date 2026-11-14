@@ -11,6 +11,7 @@ From the named ages of history to the swiftness of change within them.
 - [preliminary](<../../Words/preliminary.md>) — coming before; preparatory
 - [swift](<../../Words/swift.md>) — moving or happening with great speed
 - [antiquated](<../../Words/antiquated.md>) — outdated; kept past its usefulness
+- [usher](<../../Words/usher.md>) — (usher in) to mark the start of a new period
 
 ## Related categories
 - [Change, Reform & Upheaval](<../Themes/Change, Reform & Upheaval.md>)

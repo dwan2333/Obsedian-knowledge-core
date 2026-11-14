@@ -16,3 +16,4 @@
 
 ## Related words
 - *keeper, guardian, caretaker, warden, steward* — close in sense (not yet in the vault)
+- [usher](usher.md) — kin by origin; first a doorkeeper, now one who shows people in

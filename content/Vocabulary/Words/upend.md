@@ -18,3 +18,4 @@
 ## Related words
 - *overturn, topple, capsize; (figurative) disrupt, transform, upset* — close in sense (not yet in the vault)
 - [overhaul](overhaul.md) — kin; a planned, thorough rebuild, where upend is a sudden overturning
+- [usher](usher.md) — kin; to open the door to the new, where upend overturns the old

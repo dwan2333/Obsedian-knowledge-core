@@ -7,6 +7,7 @@ Vocabulary for change of every speed and depth, from a careful, planned overhaul
 ## Words
 - [overhaul](<../../Words/overhaul.md>) — to take apart and rebuild thoroughly; to reform completely
 - [upend](<../../Words/upend.md>) — to turn on end; to overturn or disrupt drastically
+- [usher](<../../Words/usher.md>) — (usher in) to bring in something new
 
 ## Related categories
 - [Time, Eras & Speed](<../Themes/Time, Eras & Speed.md>)
