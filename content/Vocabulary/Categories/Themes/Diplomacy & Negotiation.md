@@ -7,6 +7,7 @@ Vocabulary for the work of reaching agreement between sides, whether nations at 
 ## Words
 - [envoy](<../../Words/envoy.md>) — a representative sent on a diplomatic mission
 - [amicably](<../../Words/amicably.md>) — in a friendly way, especially in settling a dispute
+- [concession](<../../Words/concession.md>) — something given up to reach an agreement
 
 ## Related categories
 - [Discord, Conflict & Disparity](<../Themes/Discord, Conflict & Disparity.md>)

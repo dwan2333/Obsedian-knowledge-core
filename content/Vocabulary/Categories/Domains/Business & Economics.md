@@ -7,6 +7,8 @@ The working vocabulary of money in motion: how firms, markets, and governments s
 ## Words
 - [retrench](<../../Words/retrench.md>) — to cut back spending; to scale down
 - [disincentive](<../../Words/disincentive.md>) — something that discourages an action, especially an economic one
+- [inducement](<../../Words/inducement.md>) — an incentive to act
+- [concession](<../../Words/concession.md>) — a price reduction or business right; ground given in a deal
 
 ## Related categories
 - [Society, History & Politics](<../Domains/Society, History & Politics.md>)

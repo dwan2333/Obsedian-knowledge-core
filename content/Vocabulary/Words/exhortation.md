@@ -19,3 +19,4 @@
 - [admonition](admonition.md) — counterpart; a warning or reproof rather than a spur
 - [beseech](beseech.md) — kin; imploring, where this exhorts and rouses
 - *urging, appeal, encouragement, pep talk* — close in sense (not yet in the vault)
+- [inducement](inducement.md) — kin; persuading with a reward rather than with words

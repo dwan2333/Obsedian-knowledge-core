@@ -12,9 +12,11 @@
 > Formal and neutral, common in economics, policy, and management writing — it names a factor that makes an action less attractive, the mirror image of an *incentive*. Dry and analytical in tone.
 
 ## Categories
+- **Theme** — [Incentives & Motivation](<../Categories/Themes/Incentives & Motivation.md>)
 - **Domain** — [Society, History & Politics](<../Categories/Domains/Society, History & Politics.md>)
 - **Domain** — [Business & Economics](<../Categories/Domains/Business & Economics.md>)
 
 ## Related words
-- *deterrent, discouragement, damper; (opposite) incentive, inducement* — close in sense (not yet in the vault)
+- *deterrent, discouragement, damper; (opposite) incentive* — close in sense (not yet in the vault)
 - [hampered](hampered.md) — kin; a disincentive hampers effort and motivation
+- [inducement](inducement.md) — antonym; something that encourages an action

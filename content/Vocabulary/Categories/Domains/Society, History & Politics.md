@@ -24,6 +24,7 @@ The register of historians, social commentators, and political writers — for n
 - [disincentive](<../../Words/disincentive.md>) — something that discourages action
 - [untenable](<../../Words/untenable.md>) — (of a position or policy) impossible to defend
 - [envoy](<../../Words/envoy.md>) — a diplomatic representative
+- [concession](<../../Words/concession.md>) — ground given up in a political or labour dispute
 
 ## Related categories
 - [Business & Economics](<../Domains/Business & Economics.md>)

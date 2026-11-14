@@ -13,3 +13,4 @@ The vocabulary of pressing speech — begging, urging onward, and warning agains
 ## Related categories
 - [Speech, Frankness & the Unspoken](<../Themes/Speech, Frankness & the Unspoken.md>)
 - [Persistence & Demand](<../Themes/Persistence & Demand.md>)
+- [Incentives & Motivation](<../Themes/Incentives & Motivation.md>)

@@ -18,3 +18,4 @@
 ## Related words
 - [appealing](appealing.md) — kin; pleasing, with less of the active lure
 - *tempting, alluring, inviting, seductive* — close in sense (not yet in the vault)
+- [inducement](inducement.md) — kin; an incentive designed to be enticing
