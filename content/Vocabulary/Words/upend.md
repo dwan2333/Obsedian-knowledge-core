@@ -12,7 +12,9 @@
 > Everyday and neutral — literal in the "turn on end" sense, vivid and increasingly popular in the figurative "disrupt" sense (a favourite of business and tech writing). Stronger and more sudden than "change"; it implies a complete overturning.
 
 ## Categories
+- **Theme** — [Change, Reform & Upheaval](<../Categories/Themes/Change, Reform & Upheaval.md>)
 - **Domain** — [Everyday Speech & General Use](<../Categories/Domains/Everyday Speech & General Use.md>)
 
 ## Related words
 - *overturn, topple, capsize; (figurative) disrupt, transform, upset* — close in sense (not yet in the vault)
+- [overhaul](overhaul.md) — kin; a planned, thorough rebuild, where upend is a sudden overturning

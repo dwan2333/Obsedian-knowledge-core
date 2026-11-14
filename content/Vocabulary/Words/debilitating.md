@@ -18,3 +18,4 @@
 ## Related words
 - [vigorous](vigorous.md) — antonym in effect; strengthening and full of energy
 - *weakening, enfeebling, sapping, enervating* — close in sense (not yet in the vault)
+- [hampered](hampered.md) — kin; held back from outside, where debilitating weakens from within

@@ -11,3 +11,4 @@ The vocabulary of permanence — things that endure without end, resist all brea
 
 ## Related categories
 - [Strength & Weakness](<../Themes/Strength & Weakness.md>)
+- [Change, Reform & Upheaval](<../Themes/Change, Reform & Upheaval.md>)

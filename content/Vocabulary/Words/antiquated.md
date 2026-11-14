@@ -21,3 +21,4 @@
 - [rudimentary](rudimentary.md) — kin dismissal; crude and undeveloped, where antiquated is outdated
 - *outdated, obsolete, archaic, outmoded, antediluvian* — close in sense (not yet in the vault)
 - *modern, up-to-date, cutting-edge* — antonyms (not yet in the vault)
+- [overhaul](overhaul.md) — what an antiquated system usually needs

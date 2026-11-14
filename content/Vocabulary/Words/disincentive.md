@@ -16,3 +16,4 @@
 
 ## Related words
 - *deterrent, discouragement, damper; (opposite) incentive, inducement* — close in sense (not yet in the vault)
+- [hampered](hampered.md) — kin; a disincentive hampers effort and motivation

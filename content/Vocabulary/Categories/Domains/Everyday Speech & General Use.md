@@ -91,6 +91,8 @@ The workaday register — vivid, useful words you can drop into conversation wit
 - [unsettling](<../../Words/unsettling.md>) — quietly disturbing
 - [tangible](<../../Words/tangible.md>) — concrete; perceptible by touch
 - [antiquated](<../../Words/antiquated.md>) — old-fashioned; outdated
+- [overhaul](<../../Words/overhaul.md>) — to rebuild or reform thoroughly
+- [hampered](<../../Words/hampered.md>) — held back; slowed down
 
 ## Related categories
 - [Literary & Elevated Prose](<../Domains/Literary & Elevated Prose.md>)

@@ -18,3 +18,4 @@
 ## Related words
 - *insurmountable, unconquerable* — near-synonyms; *surmountable* is the antonym (not yet in the vault)
 - [ironclad](ironclad.md) — kin; the "you can't get past it" family — insuperable of obstacles, ironclad of guarantees and arguments
+- [hampered](hampered.md) — kin; slowed by an obstacle but not stopped
