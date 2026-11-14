@@ -23,3 +23,7 @@ The register of historians, social commentators, and political writers — for n
 - [custodian](<../../Words/custodian.md>) — a keeper or guardian
 - [disincentive](<../../Words/disincentive.md>) — something that discourages action
 - [untenable](<../../Words/untenable.md>) — (of a position or policy) impossible to defend
+- [envoy](<../../Words/envoy.md>) — a diplomatic representative
+
+## Related categories
+- [Business & Economics](<../Domains/Business & Economics.md>)

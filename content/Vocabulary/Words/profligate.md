@@ -20,3 +20,4 @@
 - [dissipated](dissipated.md) — kin; dissipated stresses the wear of indulgence, profligate the waste of it
 - [debauchery](debauchery.md) — the indulgence a profligate often funds into ruin
 - [idleness](idleness.md) — its frequent companion; the profligate squanders, the idle never earns
+- [retrench](retrench.md) — antonym; to cut back spending

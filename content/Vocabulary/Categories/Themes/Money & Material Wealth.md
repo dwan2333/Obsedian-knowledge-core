@@ -9,6 +9,7 @@ Vocabulary for wealth and the hunger for it — from the small coin counted out 
 - [hoard](<../../Words/hoard.md>) — to amass and hide away a store
 - [rapacious](<../../Words/rapacious.md>) — aggressively greedy and grasping
 - [bourgeois](<../../Words/bourgeois.md>) — of the materialistic, propertied middle class
+- [retrench](<../../Words/retrench.md>) — to cut back spending; to scale down
 
 ## Related categories
 - [Transfer & Distribution](<../Themes/Transfer & Distribution.md>)

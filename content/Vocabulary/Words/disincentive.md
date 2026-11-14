@@ -13,6 +13,7 @@
 
 ## Categories
 - **Domain** — [Society, History & Politics](<../Categories/Domains/Society, History & Politics.md>)
+- **Domain** — [Business & Economics](<../Categories/Domains/Business & Economics.md>)
 
 ## Related words
 - *deterrent, discouragement, damper; (opposite) incentive, inducement* — close in sense (not yet in the vault)

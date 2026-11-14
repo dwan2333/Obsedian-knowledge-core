@@ -13,7 +13,9 @@
 
 ## Categories
 - **Theme** — [Cheer & Geniality](<../Categories/Themes/Cheer & Geniality.md>)
+- **Theme** — [Diplomacy & Negotiation](<../Categories/Themes/Diplomacy & Negotiation.md>)
 - **Domain** — [Everyday Speech & General Use](<../Categories/Domains/Everyday Speech & General Use.md>)
 
 ## Related words
 - *amiable, cordial, peaceably, good-naturedly* — close in sense (not yet in the vault)
+- [envoy](envoy.md) — the representative sent to settle a dispute amicably

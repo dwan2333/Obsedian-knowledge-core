@@ -12,3 +12,4 @@ The vocabulary of things out of harmony — people who quarrel, sounds that clas
 
 ## Related categories
 - [Ill Will, Anger & Resentment](<../Themes/Ill Will, Anger & Resentment.md>)
+- [Diplomacy & Negotiation](<../Themes/Diplomacy & Negotiation.md>)

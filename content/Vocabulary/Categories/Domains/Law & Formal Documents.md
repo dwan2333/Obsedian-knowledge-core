@@ -13,3 +13,6 @@ The precise, often Latin-rooted register of legal and official writing.
 - [installment](<../../Words/installment.md>) — a part-payment in a series
 - [preliminary](<../../Words/preliminary.md>) — preparatory; coming before the main business
 - [malpractice](<../../Words/malpractice.md>) — negligent professional misconduct
+
+## Related categories
+- [Business & Economics](<../Domains/Business & Economics.md>)

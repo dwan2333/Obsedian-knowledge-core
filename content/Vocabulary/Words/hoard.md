@@ -20,3 +20,4 @@
 - [rapacious](rapacious.md) — kin; the grasping greed that drives hoarding
 - [bourgeois](bourgeois.md) — kin; the propertied caution that hoards against risk
 - *amass, stockpile, stash; a miser* — close in sense (not yet in the vault)
+- [retrench](retrench.md) — kin; spending less, where hoarding is piling up

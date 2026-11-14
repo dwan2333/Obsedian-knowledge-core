@@ -20,3 +20,4 @@
 - [antiquated](antiquated.md) — the outdated system that usually calls for an overhaul
 - *revamp, reform, rebuild, refurbish, restructure* — close in sense (not yet in the vault)
 - *patch, tweak* — the small fixes an overhaul goes beyond (not yet in the vault)
+- [retrench](retrench.md) — often paired; cutting back while rebuilding operations
