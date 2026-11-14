@@ -10,3 +10,4 @@ When you're painting a scene — the charm of a view or the drama of its terrain
 - [monastery](<../../Words/monastery.md>) — a community and house of monks
 - [oleander](<../../Words/oleander.md>) — a flowering (poisonous) shrub
 - [dilapidated](<../../Words/dilapidated.md>) — a run-down, crumbling building or place
+- [moat](<../../Words/moat.md>) — the water-filled ditch around a castle

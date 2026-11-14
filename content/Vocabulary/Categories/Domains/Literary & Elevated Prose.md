@@ -96,6 +96,8 @@ The heightened register — words that lend writing dignity, colour, or nuance, 
 - [parlance](<../../Words/parlance.md>) — a particular way of speaking
 - [sacrosanct](<../../Words/sacrosanct.md>) — untouchable; beyond question or change
 - [loathing](<../../Words/loathing.md>) — intense dislike; hatred with disgust
+- [ensconce](<../../Words/ensconce.md>) — to settle snugly and safely
+- [ubiquitous](<../../Words/ubiquitous.md>) — found everywhere
 
 ## Related categories
 - [Everyday Speech & General Use](<../Domains/Everyday Speech & General Use.md>)

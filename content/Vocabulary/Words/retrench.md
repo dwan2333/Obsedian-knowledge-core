@@ -20,3 +20,5 @@
 - [hoard](hoard.md) — kin; holding on to money, where retrench means spending less of it
 - [overhaul](overhaul.md) — often paired; a company retrenches and overhauls its operations together
 - *cut back, scale back, downsize, economize* — close in sense; *expand* — antonym (not yet in the vault)
+- [ensconce](ensconce.md) — fortification kin; from *sconce*, a small fort
+- [moat](moat.md) — fortification kin; the defensive line itself, and in business a lasting advantage

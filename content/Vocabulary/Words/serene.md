@@ -20,3 +20,4 @@
 - [ecstatic](ecstatic.md) — contrast; settled calm against rapturous excitement
 - *tranquil, placid, composed, untroubled, sedate* — close in sense (not yet in the vault)
 - [allay](allay.md) — what brings you to a serene state, by putting worries to rest
+- [ensconce](ensconce.md) — to settle snugly into the kind of comfort that leaves one serene

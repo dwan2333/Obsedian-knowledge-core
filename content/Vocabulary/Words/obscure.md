@@ -18,3 +18,4 @@
 
 ## Related words
 - [enigmatic](enigmatic.md) — kin; both describe what resists easy understanding, though *enigmatic* hints at deliberate mystery
+- [ubiquitous](ubiquitous.md) — antonym; found everywhere, where obscure is little-known

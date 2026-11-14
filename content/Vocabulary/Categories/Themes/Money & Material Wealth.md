@@ -15,3 +15,4 @@ Vocabulary for wealth and the hunger for it — from the small coin counted out 
 - [Transfer & Distribution](<../Themes/Transfer & Distribution.md>)
 - [Vice, Excess & Dissipation](<../Themes/Vice, Excess & Dissipation.md>)
 - [Incentives & Motivation](<../Themes/Incentives & Motivation.md>)
+- [Abundance & Scarcity](<../Themes/Abundance & Scarcity.md>)

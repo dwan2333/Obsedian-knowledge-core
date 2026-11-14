@@ -19,3 +19,4 @@
 - [shrewd](shrewd.md) — kin; the sharp, worldly mind that finds the way around
 - *bypass, evade, sidestep, elude, outwit* — close in sense (not yet in the vault)
 - [hampered](hampered.md) — what you are until you circumvent the obstacle
+- [moat](moat.md) — the defence rivals try to circumvent

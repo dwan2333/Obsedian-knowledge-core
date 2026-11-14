@@ -7,6 +7,7 @@ The settled, quiet end of feeling — the composure that agitation cannot distur
 ## Words
 - [serene](<../../Words/serene.md>) — calm, peaceful, and untroubled
 - [allay](<../../Words/allay.md>) — to put fears or worries to rest
+- [ensconce](<../../Words/ensconce.md>) — to settle snugly and safely
 
 ## Related categories
 - [Passion, Zeal & Frenzy](<../Themes/Passion, Zeal & Frenzy.md>)

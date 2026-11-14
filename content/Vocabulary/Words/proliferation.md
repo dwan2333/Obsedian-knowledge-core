@@ -12,7 +12,9 @@
 > Formal and neutral-to-negative — it names rapid, spreading increase, frequently with a note of concern (weapons, red tape, cells, apps). Cooler and more technical than "explosion"; common in policy, science, and analysis. The verb is *proliferate*.
 
 ## Categories
+- **Theme** — [Abundance & Scarcity](<../Categories/Themes/Abundance & Scarcity.md>)
 - **Domain** — [Literary & Elevated Prose](<../Categories/Domains/Literary & Elevated Prose.md>)
 
 ## Related words
 - *spread, multiplication, surge, mushrooming; (verb) proliferate* — close in sense (not yet in the vault)
+- [ubiquitous](ubiquitous.md) — kin; where proliferation ends up: found everywhere

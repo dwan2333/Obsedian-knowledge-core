@@ -18,3 +18,4 @@
 ## Related words
 - [mystic](mystic.md) — kin; the contemplative who withdraws from the world
 - *monastic, sequestered, sheltered; the cloister of a monastery* — close in sense (not yet in the vault)
+- [ensconce](ensconce.md) — kin; tucked away comfortably by choice, where cloistered is shut away from the world

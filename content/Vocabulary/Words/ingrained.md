@@ -18,3 +18,4 @@
 ## Related words
 - [indissoluble](indissoluble.md) — kin; fixed so deep it cannot be undone
 - *deep-rooted, entrenched, inveterate, fixed* — close in sense (not yet in the vault)
+- [ensconce](ensconce.md) — kin; (figurative) settled in a position too securely to be dislodged

@@ -11,6 +11,7 @@ Things that stand in the way or loom as a hazard — from the impassable to the 
 - [calamity](<../../Words/calamity.md>) — a disaster
 - [unscathed](<../../Words/unscathed.md>) — unharmed; come through safely
 - [hampered](<../../Words/hampered.md>) — held back or slowed by an obstacle
+- [moat](<../../Words/moat.md>) — a defensive ditch; a lasting business advantage
 
 ## Related categories
 - [Strength & Weakness](<../Themes/Strength & Weakness.md>)
