@@ -21,3 +21,4 @@
 - [grievance](grievance.md) — the felt wrong that can sour into malice
 - [spiteful](spiteful.md) — kin; petty, gratuitous ill will, where malice is colder and deeper
 - [nefarious](nefarious.md) — the wicked or criminal acts malice can lead to
+- [loathing](loathing.md) — kin; disgust that turns away, where malice wants to harm

@@ -13,3 +13,4 @@ Vocabulary for the darker social feelings: spite, resentment, and righteous indi
 - [cynicism](<../../Words/cynicism.md>) — sneering distrust of others' motives
 - [seething](<../../Words/seething.md>) — boiling with barely-contained anger
 - [inflict](<../../Words/inflict.md>) — to impose something painful
+- [loathing](<../../Words/loathing.md>) — intense dislike mixed with disgust

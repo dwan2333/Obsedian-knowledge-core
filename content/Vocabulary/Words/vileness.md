@@ -19,3 +19,4 @@
 - [depravity](depravity.md) — kin; deep moral corruption, where this adds disgust
 - *baseness, foulness, turpitude, infamy* — close in sense (not yet in the vault)
 - [nefarious](nefarious.md) — kin; wicked or criminal, of schemes and purposes
+- [loathing](loathing.md) — the response vileness provokes

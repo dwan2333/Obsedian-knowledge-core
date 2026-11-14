@@ -17,3 +17,4 @@
 
 ## Related words
 - *disgusting, repulsive, loathsome, repugnant, sickening* — close in sense (not yet in the vault)
+- [loathing](loathing.md) — the feeling that something revolting stirs

@@ -19,3 +19,4 @@
 ## Related words
 - [malice](malice.md) — indignation reacts to a wrong; malice intends one
 - [grievance](grievance.md) — the wrong itself, which kindles indignation
+- [loathing](loathing.md) — kin; a lasting, personal hatred rather than anger at an injustice
