@@ -93,6 +93,7 @@ The heightened register — words that lend writing dignity, colour, or nuance, 
 - [proliferation](<../../Words/proliferation.md>) — rapid increase or spread
 - [nefarious](<../../Words/nefarious.md>) — wicked or criminal
 - [allay](<../../Words/allay.md>) — to put fears or worries to rest
+- [parlance](<../../Words/parlance.md>) — a particular way of speaking
 
 ## Related categories
 - [Everyday Speech & General Use](<../Domains/Everyday Speech & General Use.md>)

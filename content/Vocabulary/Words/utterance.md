@@ -19,3 +19,4 @@
 - [digress](digress.md) — kin; from the world of speech and discourse
 - [ascribe](ascribe.md) — kin; to attribute an utterance to its speaker
 - *remark, statement, pronouncement, expression* — close in sense (not yet in the vault)
+- [parlance](parlance.md) — kin; a whole way of speaking, where an utterance is one remark

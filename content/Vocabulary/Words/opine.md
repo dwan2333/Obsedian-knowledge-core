@@ -19,3 +19,4 @@
 - [candid](candid.md) — kin; the frank speaking-out of what one thinks
 - [implicit](implicit.md) — contrast; what is left unsaid rather than openly opined
 - *assert, declare, pronounce, remark* — close in sense (not yet in the vault)
+- [parlance](parlance.md) — kin; the way of speaking a word like opine belongs to

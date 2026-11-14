@@ -11,6 +11,7 @@ The vocabulary of expression — from the opinion declared and the truth spoken 
 - [digress](<../../Words/digress.md>) — to wander off the subject
 - [utterance](<../../Words/utterance.md>) — something spoken
 - [ascribe](<../../Words/ascribe.md>) — to attribute to a source
+- [parlance](<../../Words/parlance.md>) — a group's particular way of speaking
 
 ## Related categories
 - [Diplomacy & Negotiation](<../Themes/Diplomacy & Negotiation.md>)
