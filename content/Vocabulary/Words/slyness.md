@@ -18,3 +18,4 @@
 ## Related words
 - [artfulness](artfulness.md) — near-synonym; crafty, manipulative cleverness
 - *craftiness, guile, furtiveness, cunning* — close in sense (not yet in the vault)
+- [espionage](espionage.md) — slyness put to work: secretly gathering secrets

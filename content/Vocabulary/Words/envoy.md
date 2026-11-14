@@ -19,3 +19,4 @@
 - [amicably](amicably.md) — the friendly settlement an envoy is sent to reach
 - *emissary, ambassador, diplomat, delegate, legate* — close in sense (not yet in the vault)
 - [concession](concession.md) — what an envoy offers or wins in the talks
+- [espionage](espionage.md) — contrast; the secret spying that goes on beside open diplomacy

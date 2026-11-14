@@ -10,6 +10,7 @@ The working vocabulary of money in motion: how firms, markets, and governments s
 - [inducement](<../../Words/inducement.md>) — an incentive to act
 - [concession](<../../Words/concession.md>) — a price reduction or business right; ground given in a deal
 - [moat](<../../Words/moat.md>) — a lasting competitive advantage
+- [espionage](<../../Words/espionage.md>) — (industrial espionage) stealing trade secrets
 
 ## Related categories
 - [Society, History & Politics](<../Domains/Society, History & Politics.md>)

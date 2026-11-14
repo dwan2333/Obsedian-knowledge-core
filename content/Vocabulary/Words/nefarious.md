@@ -23,3 +23,4 @@
 - [rogue](rogue.md) — a lighter, sometimes affectionate word for a dishonest person
 - [scrupulous](scrupulous.md) — contrast; carefully principled (*unscrupulous* is a near-synonym of nefarious)
 - *villainous, iniquitous, heinous, sinister* — close in sense (not yet in the vault)
+- [espionage](espionage.md) — a covert activity often carried out for nefarious ends

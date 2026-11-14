@@ -25,6 +25,7 @@ The register of historians, social commentators, and political writers — for n
 - [untenable](<../../Words/untenable.md>) — (of a position or policy) impossible to defend
 - [envoy](<../../Words/envoy.md>) — a diplomatic representative
 - [concession](<../../Words/concession.md>) — ground given up in a political or labour dispute
+- [espionage](<../../Words/espionage.md>) — spying for political or military secrets
 
 ## Related categories
 - [Business & Economics](<../Domains/Business & Economics.md>)

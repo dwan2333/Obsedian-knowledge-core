@@ -18,3 +18,4 @@
 ## Related words
 - [artfulness](artfulness.md) — kin; the cunning that devises a convincing pretext
 - *ruse, ploy, cover, guise, excuse* — close in sense (not yet in the vault)
+- [espionage](espionage.md) — kin; spies work under a pretext, a cover story
