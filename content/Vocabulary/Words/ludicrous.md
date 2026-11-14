@@ -21,3 +21,4 @@
 - [frivolous](frivolous.md) — kin; trivial and not serious
 - [snigger](snigger.md) — kin; the mocking laugh the ludicrous provokes
 - [farce](farce.md) — kin; a farce is a ludicrous spectacle
+- [untenable](untenable.md) — kin dismissal; indefensible rather than laughable

@@ -22,3 +22,4 @@ The register of historians, social commentators, and political writers — for n
 - [persecute](<../../Words/persecute.md>) — to ill-treat for beliefs or identity
 - [custodian](<../../Words/custodian.md>) — a keeper or guardian
 - [disincentive](<../../Words/disincentive.md>) — something that discourages action
+- [untenable](<../../Words/untenable.md>) — (of a position or policy) impossible to defend
