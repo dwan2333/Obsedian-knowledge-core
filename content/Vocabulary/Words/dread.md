@@ -20,3 +20,4 @@
 - [apprehension](apprehension.md) — kin; a quieter, more anxious unease
 - [ominous](ominous.md) — kin; the threatening sign that stirs dread
 - *terror, fear, foreboding, trepidation* — close in sense (not yet in the vault)
+- [allay](allay.md) — what calms fear; dread is the hardest kind to allay

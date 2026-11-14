@@ -19,3 +19,4 @@
 ## Related words
 - [dread](dread.md) — kin; a stronger, more visceral fear of what's coming
 - *anxiety, foreboding, misgiving, trepidation* — close in sense (not yet in the vault)
+- [allay](allay.md) — to put apprehension to rest

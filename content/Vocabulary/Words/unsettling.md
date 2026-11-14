@@ -18,3 +18,4 @@
 ## Related words
 - [ominous](ominous.md) — kin; openly threatening, where this merely disquiets
 - *disturbing, disquieting, disconcerting, eerie* — close in sense (not yet in the vault)
+- [allay](allay.md) — antonym in effect; it calms the unease this stirs

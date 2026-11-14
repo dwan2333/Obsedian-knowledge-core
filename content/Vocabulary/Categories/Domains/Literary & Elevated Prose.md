@@ -92,6 +92,7 @@ The heightened register — words that lend writing dignity, colour, or nuance, 
 - [incarnation](<../../Words/incarnation.md>) — a living embodiment or version
 - [proliferation](<../../Words/proliferation.md>) — rapid increase or spread
 - [nefarious](<../../Words/nefarious.md>) — wicked or criminal
+- [allay](<../../Words/allay.md>) — to put fears or worries to rest
 
 ## Related categories
 - [Everyday Speech & General Use](<../Domains/Everyday Speech & General Use.md>)
