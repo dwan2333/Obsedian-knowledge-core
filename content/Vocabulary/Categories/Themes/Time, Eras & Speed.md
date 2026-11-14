@@ -10,3 +10,4 @@ From the named ages of history to the swiftness of change within them.
 - [hitherto](<../../Words/hitherto.md>) — until now; up to this point
 - [preliminary](<../../Words/preliminary.md>) — coming before; preparatory
 - [swift](<../../Words/swift.md>) — moving or happening with great speed
+- [antiquated](<../../Words/antiquated.md>) — outdated; kept past its usefulness

@@ -17,6 +17,7 @@ When you want to register disapproval with precision — too plain, too small, o
 - [rudimentary](<../../Words/rudimentary.md>) — dismissed as basic
 - [farce](<../../Words/farce.md>) — dismissed as an absurd sham
 - [dud](<../../Words/dud.md>) — dismissed as a flop
+- [antiquated](<../../Words/antiquated.md>) — dismissed as outdated
 
 ## Related categories
 - [Describing a Person](<../Scenarios/Describing a Person.md>)

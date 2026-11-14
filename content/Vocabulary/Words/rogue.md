@@ -19,3 +19,4 @@
 ## Related words
 - [artfulness](artfulness.md) — kin; the sly craft a rogue lives by
 - *scoundrel, knave, rascal, scamp* — close in sense (not yet in the vault)
+- [nefarious](nefarious.md) — the darker word, for genuinely wicked or criminal schemes

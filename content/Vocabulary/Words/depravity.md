@@ -20,3 +20,4 @@
 - [decadent](decadent.md) — kin; moral decline, with a flavour of luxury
 - [sottish](sottish.md) — kin; the degraded state of the habitual drunkard
 - *corruption, vice, turpitude, debasement* — close in sense (not yet in the vault)
+- [nefarious](nefarious.md) — kin; names the wicked deeds that depravity drives

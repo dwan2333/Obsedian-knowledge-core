@@ -15,6 +15,7 @@ Vocabulary for excess and dissipation: the dissolute life and the squandering of
 - [sottish](<../../Words/sottish.md>) — stupefied with drink
 - [harlot](<../../Words/harlot.md>) — (archaic) a prostitute
 - [vileness](<../../Words/vileness.md>) — moral foulness; baseness
+- [nefarious](<../../Words/nefarious.md>) — wicked or criminal; of schemes and purposes
 
 ## Related categories
 - [Beauty, Pleasure & the Senses](<../Themes/Beauty, Pleasure & the Senses.md>)

@@ -17,6 +17,7 @@
 
 ## Related words
 - *era, age, period, eon* — close in sense, varying in scale (not yet in the vault)
+- [antiquated](antiquated.md) — kin; outdated, belonging to an earlier epoch
 
 ## Appears in
 - *"…spirits of that progressive epoch"* — [The Brothers Karamazov — Ch. 1](<../../Quotes/Sources/The Brothers Karamazov/Chapter 1.md>) (p. 11)

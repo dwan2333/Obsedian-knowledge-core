@@ -90,6 +90,7 @@ The workaday register — vivid, useful words you can drop into conversation wit
 - [unsolicited](<../../Words/unsolicited.md>) — not asked for
 - [unsettling](<../../Words/unsettling.md>) — quietly disturbing
 - [tangible](<../../Words/tangible.md>) — concrete; perceptible by touch
+- [antiquated](<../../Words/antiquated.md>) — old-fashioned; outdated
 
 ## Related categories
 - [Literary & Elevated Prose](<../Domains/Literary & Elevated Prose.md>)

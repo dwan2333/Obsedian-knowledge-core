@@ -18,3 +18,4 @@
 
 ## Related words
 - A close kin of *meticulous*, *conscientious*, and *painstaking* — but scrupulous alone carries the added weight of moral care.
+- [nefarious](nefarious.md) — contrast; wicked and unscrupulous

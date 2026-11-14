@@ -19,3 +19,4 @@
 ## Related words
 - [superficial](superficial.md) — kin; shallow, where this is basic and undeveloped
 - *basic, elementary, primitive, embryonic* — close in sense (not yet in the vault)
+- [antiquated](antiquated.md) — kin dismissal; outdated, where rudimentary is crude and undeveloped

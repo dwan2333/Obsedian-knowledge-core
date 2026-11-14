@@ -20,3 +20,4 @@
 - [indignation](indignation.md) — anger at wrongdoing; malice is the wish to inflict it
 - [grievance](grievance.md) — the felt wrong that can sour into malice
 - [spiteful](spiteful.md) — kin; petty, gratuitous ill will, where malice is colder and deeper
+- [nefarious](nefarious.md) — the wicked or criminal acts malice can lead to

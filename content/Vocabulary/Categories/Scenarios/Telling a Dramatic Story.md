@@ -30,3 +30,4 @@ When you're spinning a tale and need the language of suspense, impulse, and high
 - [wail](<../../Words/wail.md>) — to cry out in grief
 - [calamity](<../../Words/calamity.md>) — a disaster
 - [persecute](<../../Words/persecute.md>) — to hound and ill-treat
+- [nefarious](<../../Words/nefarious.md>) — the villain's wicked scheme
