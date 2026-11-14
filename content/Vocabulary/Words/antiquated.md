@@ -22,3 +22,4 @@
 - *outdated, obsolete, archaic, outmoded, antediluvian* — close in sense (not yet in the vault)
 - *modern, up-to-date, cutting-edge* — antonyms (not yet in the vault)
 - [overhaul](overhaul.md) — what an antiquated system usually needs
+- [dilapidated](dilapidated.md) — kin; physically falling apart, where antiquated is merely outdated

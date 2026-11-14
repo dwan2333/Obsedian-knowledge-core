@@ -9,3 +9,4 @@ When you're painting a scene — the charm of a view or the drama of its terrain
 - [precipice](<../../Words/precipice.md>) — a sheer, steep cliff face
 - [monastery](<../../Words/monastery.md>) — a community and house of monks
 - [oleander](<../../Words/oleander.md>) — a flowering (poisonous) shrub
+- [dilapidated](<../../Words/dilapidated.md>) — a run-down, crumbling building or place

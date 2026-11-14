@@ -11,6 +11,7 @@ The spectrum from robust force to feeble inadequacy — of bodies, efforts, and 
 - [debilitating](<../../Words/debilitating.md>) — weakening; sapping strength
 - [grit](<../../Words/grit.md>) — courage and dogged resolve
 - [untenable](<../../Words/untenable.md>) — impossible to defend or keep up
+- [dilapidated](<../../Words/dilapidated.md>) — fallen into disrepair through age and neglect
 
 ## Related categories
 - [Obstacles & Danger](<../Themes/Obstacles & Danger.md>)

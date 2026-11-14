@@ -93,6 +93,7 @@ The workaday register — vivid, useful words you can drop into conversation wit
 - [antiquated](<../../Words/antiquated.md>) — old-fashioned; outdated
 - [overhaul](<../../Words/overhaul.md>) — to rebuild or reform thoroughly
 - [hampered](<../../Words/hampered.md>) — held back; slowed down
+- [dilapidated](<../../Words/dilapidated.md>) — run-down; falling apart
 
 ## Related categories
 - [Literary & Elevated Prose](<../Domains/Literary & Elevated Prose.md>)
