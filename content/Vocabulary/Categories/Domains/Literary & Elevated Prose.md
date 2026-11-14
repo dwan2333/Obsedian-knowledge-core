@@ -94,6 +94,7 @@ The heightened register — words that lend writing dignity, colour, or nuance, 
 - [nefarious](<../../Words/nefarious.md>) — wicked or criminal
 - [allay](<../../Words/allay.md>) — to put fears or worries to rest
 - [parlance](<../../Words/parlance.md>) — a particular way of speaking
+- [sacrosanct](<../../Words/sacrosanct.md>) — untouchable; beyond question or change
 
 ## Related categories
 - [Everyday Speech & General Use](<../Domains/Everyday Speech & General Use.md>)

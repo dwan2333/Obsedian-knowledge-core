@@ -20,3 +20,4 @@
 - [insuperable](insuperable.md) — kin; both insist you can't get past it — an insuperable obstacle, an ironclad guarantee
 - *airtight, watertight, cast-iron* — synonyms; *flimsy, tenuous* the antonyms (not yet in the vault)
 - [untenable](untenable.md) — antonym; a position too weak to hold
+- [sacrosanct](sacrosanct.md) — kin; too revered to touch, where ironclad is too firm to break

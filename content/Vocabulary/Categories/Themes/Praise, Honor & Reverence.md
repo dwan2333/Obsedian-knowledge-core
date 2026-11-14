@@ -8,6 +8,7 @@ The vocabulary of looking up — honouring, glorifying, and commending what we a
 - [homage](<../../Words/homage.md>) — public honour or reverent tribute
 - [exalted](<../../Words/exalted.md>) — raised high in rank, dignity, or worth
 - [laudable](<../../Words/laudable.md>) — deserving of praise
+- [sacrosanct](<../../Words/sacrosanct.md>) — too revered to be changed or questioned
 
 ## Related categories
 - [Religion & the Church](<../Themes/Religion & the Church.md>)

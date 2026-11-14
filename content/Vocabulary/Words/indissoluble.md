@@ -20,3 +20,4 @@
 - [ingrained](ingrained.md) — kin; fixed so deep it cannot be worked loose
 - [ironclad](ironclad.md) — kin; the unbreakable, inescapable family
 - *unbreakable, permanent, binding, inseparable* — close in sense (not yet in the vault)
+- [sacrosanct](sacrosanct.md) — kin; protected from change by reverence rather than by strength

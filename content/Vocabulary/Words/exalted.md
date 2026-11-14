@@ -19,3 +19,4 @@
 - [homage](homage.md) — kin; the reverence paid to the exalted
 - [laudable](laudable.md) — kin; in the family of praise and worth
 - *elevated, lofty, august, glorified* — close in sense (not yet in the vault)
+- [sacrosanct](sacrosanct.md) — kin; so revered it may not be touched or changed
