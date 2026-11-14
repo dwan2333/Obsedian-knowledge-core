@@ -21,3 +21,4 @@
 - [unsettling](unsettling.md) — antonym in effect; it stirs the unease that allaying settles
 - [serene](serene.md) — the calm state once every worry is allayed
 - *ease, assuage, alleviate, soothe, quell* — close in sense; *arouse, stoke, inflame* — antonyms (not yet in the vault)
+- [fret](fret.md) — the restless worrying that allaying calms

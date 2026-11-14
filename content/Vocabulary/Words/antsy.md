@@ -16,3 +16,4 @@
 
 ## Related words
 - *restless, fidgety, jittery, impatient, edgy* — close in sense (not yet in the vault)
+- [fret](fret.md) — kin; restless worry, where antsy is restless impatience

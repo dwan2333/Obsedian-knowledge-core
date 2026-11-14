@@ -9,6 +9,7 @@ The vocabulary of fear before the fact — the anxious wait, the ominous sign, t
 - [dread](<../../Words/dread.md>) — deep fear of something approaching
 - [ominous](<../../Words/ominous.md>) — threatening; giving a sign of coming trouble
 - [unsettling](<../../Words/unsettling.md>) — quietly disturbing one's calm
+- [fret](<../../Words/fret.md>) — to worry in a restless, nagging way
 
 ## Related categories
 - [Sorrow, Gloom & Weeping](<../Themes/Sorrow, Gloom & Weeping.md>)

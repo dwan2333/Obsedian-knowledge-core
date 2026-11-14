@@ -19,3 +19,4 @@
 ## Related words
 - [frenzied](frenzied.md) — near-synonym; wild and uncontrolled, more excited than anxious
 - *frenetic, distraught, hectic, feverish* — close in sense (not yet in the vault)
+- [fret](fret.md) — kin; the quieter, nagging worry that can build into frantic panic

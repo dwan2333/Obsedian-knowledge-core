@@ -94,6 +94,7 @@ The workaday register — vivid, useful words you can drop into conversation wit
 - [overhaul](<../../Words/overhaul.md>) — to rebuild or reform thoroughly
 - [hampered](<../../Words/hampered.md>) — held back; slowed down
 - [dilapidated](<../../Words/dilapidated.md>) — run-down; falling apart
+- [fret](<../../Words/fret.md>) — to worry; to be anxious over small things
 
 ## Related categories
 - [Literary & Elevated Prose](<../Domains/Literary & Elevated Prose.md>)
