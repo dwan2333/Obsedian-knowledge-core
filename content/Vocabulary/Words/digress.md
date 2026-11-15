@@ -18,3 +18,4 @@
 ## Related words
 - [utterance](utterance.md) — kin; from the world of speech and discourse
 - *ramble, stray, deviate, wander; (noun) tangent, aside* — close in sense (not yet in the vault)
+- [veer](veer.md) — kin; a sudden change of direction of any kind, where digress is a wandering in speech

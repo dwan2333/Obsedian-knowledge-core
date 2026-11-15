@@ -9,6 +9,7 @@ Vocabulary for change of every speed and depth, from a careful, planned overhaul
 - [upend](<../../Words/upend.md>) — to turn on end; to overturn or disrupt drastically
 - [usher](<../../Words/usher.md>) — (usher in) to bring in something new
 - [reverberate](<../../Words/reverberate.md>) — (of an event) to send lasting effects far and wide
+- [veer](<../../Words/veer.md>) — to change direction or course suddenly
 
 ## Related categories
 - [Time, Eras & Speed](<../Themes/Time, Eras & Speed.md>)
