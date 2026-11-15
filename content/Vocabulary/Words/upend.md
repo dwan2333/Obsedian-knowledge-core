@@ -21,3 +21,4 @@
 - [usher](usher.md) — kin; to open the door to the new, where upend overturns the old
 - [reverberate](reverberate.md) — kin; what the effects of an upending do: spread and keep sounding
 - [veer](veer.md) — kin; to change direction suddenly, where upend overturns
+- [tumultuous](tumultuous.md) — the kind of period in which plans are upended

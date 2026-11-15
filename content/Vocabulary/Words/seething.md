@@ -19,3 +19,4 @@
 ## Related words
 - [frenzied](frenzied.md) — kin; wild agitation, where seething is contained and simmering
 - *fuming, boiling, smouldering; nearby in the vault, indignation and bitterness* — close in sense (not yet in the vault)
+- [tumultuous](tumultuous.md) — kin; agitation that has broken out into noise and disorder

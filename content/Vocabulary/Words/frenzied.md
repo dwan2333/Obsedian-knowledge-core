@@ -23,3 +23,4 @@
 - [ecstatic](ecstatic.md) — kin; intensity turned to rapture rather than disorder
 - [seething](seething.md) — kin; agitation boiling and contained, where frenzy bursts loose
 - *frantic, frenetic, manic, feverish* — close in sense (not yet in the vault)
+- [tumultuous](tumultuous.md) — kin; loud and disorderly, of a crowd or a period, where frenzied is wildly out of control

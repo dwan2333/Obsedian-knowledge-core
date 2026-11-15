@@ -102,6 +102,7 @@ The heightened register — words that lend writing dignity, colour, or nuance, 
 - [credence](<../../Words/credence.md>) — belief; acceptance of something as true
 - [penitent](<../../Words/penitent.md>) — feeling or showing remorse
 - [idiosyncratic](<../../Words/idiosyncratic.md>) — peculiar to one person or thing; distinctively individual
+- [tumultuous](<../../Words/tumultuous.md>) — turbulent; loud and wildly excited
 
 ## Related categories
 - [Everyday Speech & General Use](<../Domains/Everyday Speech & General Use.md>)

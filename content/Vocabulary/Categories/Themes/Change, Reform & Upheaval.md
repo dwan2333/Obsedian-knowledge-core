@@ -10,6 +10,7 @@ Vocabulary for change of every speed and depth, from a careful, planned overhaul
 - [usher](<../../Words/usher.md>) — (usher in) to bring in something new
 - [reverberate](<../../Words/reverberate.md>) — (of an event) to send lasting effects far and wide
 - [veer](<../../Words/veer.md>) — to change direction or course suddenly
+- [tumultuous](<../../Words/tumultuous.md>) — full of disorder and sudden change
 
 ## Related categories
 - [Time, Eras & Speed](<../Themes/Time, Eras & Speed.md>)
