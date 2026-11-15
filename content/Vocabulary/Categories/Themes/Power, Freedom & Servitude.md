@@ -17,6 +17,7 @@ Vocabulary for the whole arc of power over people — from the tyrant who wields
 - [persecute](<../../Words/persecute.md>) — to ill-treat for beliefs or identity
 - [cede](<../../Words/cede.md>) — to give up power, territory, or control to another
 - [regime](<../../Words/regime.md>) — a government, especially an authoritarian one
+- [subpoena](<../../Words/subpoena.md>) — a legal order compelling someone to testify or hand over documents
 
 ## Related categories
 - [Whim, Inconstancy & Yielding](<../Themes/Whim, Inconstancy & Yielding.md>)

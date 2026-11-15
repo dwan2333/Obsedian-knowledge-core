@@ -35,6 +35,7 @@ The register of historians, social commentators, and political writers — for n
 - [saga](<../../Words/saga.md>) — a long-running public affair; a long story across generations
 - [regime](<../../Words/regime.md>) — a government (often disapproving); a system of rules
 - [castigate](<../../Words/castigate.md>) — to condemn severely, especially in public
+- [subpoena](<../../Words/subpoena.md>) — an order to testify, as issued by courts and legislatures
 
 ## Related categories
 - [Business & Economics](<../Domains/Business & Economics.md>)

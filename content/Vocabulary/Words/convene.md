@@ -20,3 +20,4 @@
 - [bipartisan](bipartisan.md) — the kind of committee or panel that is often convened
 - [flock](flock.md) — contrast; people flock of their own accord, but are convened by a summons
 - *summon, assemble, gather* — close in sense; *adjourn, dissolve, disband* — antonyms (not yet in the vault)
+- [subpoena](subpoena.md) — the order a convened committee or grand jury issues to make witnesses appear

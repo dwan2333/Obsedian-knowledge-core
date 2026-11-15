@@ -16,3 +16,4 @@
 
 ## Related words
 - *negligence, misconduct, malfeasance, dereliction* — close in sense (not yet in the vault)
+- [subpoena](subpoena.md) — the legal order that brings records and witnesses into a malpractice case
