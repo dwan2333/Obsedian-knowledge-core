@@ -13,8 +13,10 @@
 
 ## Categories
 - **Theme** — [Ill Will, Anger & Resentment](<../Categories/Themes/Ill Will, Anger & Resentment.md>)
+- **Theme** — [Belief, Doubt & Proof](<../Categories/Themes/Belief, Doubt & Proof.md>)
 - **Domain** — [Literary & Elevated Prose](<../Categories/Domains/Literary & Elevated Prose.md>)
 
 ## Related words
 - [bitter](bitter.md) — kin; the soured feeling cynicism settles into
 - *distrust, jadedness, pessimism, scorn* — close in sense (not yet in the vault)
+- [credence](credence.md) — contrast; the belief a cynic refuses to give

@@ -15,3 +15,4 @@ The vocabulary of expression — from the opinion declared and the truth spoken 
 
 ## Related categories
 - [Diplomacy & Negotiation](<../Themes/Diplomacy & Negotiation.md>)
+- [Belief, Doubt & Proof](<../Themes/Belief, Doubt & Proof.md>)
