@@ -17,3 +17,4 @@ Vocabulary for the world of faith: its places, ranks, and practices.
 - [martyr](<../../Words/martyr.md>) — one who suffers or dies for a belief
 - [absolution](<../../Words/absolution.md>) — formal release from sin or guilt
 - [abnegation](<../../Words/abnegation.md>) — self-denial; renunciation
+- [penitent](<../../Words/penitent.md>) — sorry for having done wrong; one who repents

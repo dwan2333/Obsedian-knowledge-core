@@ -20,3 +20,4 @@
 - [pliable](pliable.md) — kin; both bend to others, the pliable to pressure, the meek by disposition
 - [obstinate](obstinate.md) — antonym; meekness yields where obstinacy digs in
 - [unruly](unruly.md) — antonym; the meek submit, the unruly refuse all control
+- [penitent](penitent.md) — kin; humbled by remorse, where meekness is humble by temperament

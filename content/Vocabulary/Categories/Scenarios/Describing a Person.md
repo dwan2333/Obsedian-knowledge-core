@@ -53,6 +53,7 @@ When you want to pin down what a person is *like* — sharp or servile, strong o
 - [grit](<../../Words/grit.md>) — courage and resolve
 - [stern](<../../Words/stern.md>) — severe and strict
 - [sedentary](<../../Words/sedentary.md>) — given to much sitting; inactive
+- [penitent](<../../Words/penitent.md>) — humbled and sorry for a wrong
 
 ## Related categories
 - [Critiquing & Dismissing](<../Scenarios/Critiquing & Dismissing.md>)

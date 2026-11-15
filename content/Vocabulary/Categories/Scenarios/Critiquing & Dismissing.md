@@ -19,6 +19,7 @@ When you want to register disapproval with precision — too plain, too small, o
 - [dud](<../../Words/dud.md>) — dismissed as a flop
 - [antiquated](<../../Words/antiquated.md>) — dismissed as outdated
 - [untenable](<../../Words/untenable.md>) — dismissed as indefensible
+- [castigate](<../../Words/castigate.md>) — to criticize harshly
 
 ## Related categories
 - [Describing a Person](<../Scenarios/Describing a Person.md>)

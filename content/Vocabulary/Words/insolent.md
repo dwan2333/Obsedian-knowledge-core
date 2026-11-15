@@ -21,3 +21,4 @@
 - [effrontery](effrontery.md) — kin; the shameless audacity behind insolence
 - [affront](affront.md) — kin; the open insult insolence delivers
 - *impudent, impertinent, insubordinate, brazen* — close in sense (not yet in the vault)
+- [penitent](penitent.md) — contrast; sorry and humbled, where the insolent are brazen and unashamed

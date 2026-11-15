@@ -9,6 +9,7 @@ The vocabulary of pressing speech — begging, urging onward, and warning agains
 - [entreat](<../../Words/entreat.md>) — to ask earnestly; to plead
 - [exhortation](<../../Words/exhortation.md>) — an urgent appeal urging action
 - [admonition](<../../Words/admonition.md>) — a gentle warning or reproof
+- [castigate](<../../Words/castigate.md>) — to scold or criticize severely
 
 ## Related categories
 - [Speech, Frankness & the Unspoken](<../Themes/Speech, Frankness & the Unspoken.md>)

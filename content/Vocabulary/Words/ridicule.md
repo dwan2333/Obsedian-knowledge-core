@@ -19,3 +19,4 @@
 ## Related words
 - [snigger](snigger.md) — kin; the sly, mocking laugh that ridicule is made of
 - *mock, deride, scorn, lampoon* — close in sense (not yet in the vault)
+- [castigate](castigate.md) — kin; to condemn harshly, where ridicule mocks

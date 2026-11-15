@@ -100,6 +100,7 @@ The heightened register — words that lend writing dignity, colour, or nuance, 
 - [ubiquitous](<../../Words/ubiquitous.md>) — found everywhere
 - [reverberate](<../../Words/reverberate.md>) — to echo again and again
 - [credence](<../../Words/credence.md>) — belief; acceptance of something as true
+- [penitent](<../../Words/penitent.md>) — feeling or showing remorse
 
 ## Related categories
 - [Everyday Speech & General Use](<../Domains/Everyday Speech & General Use.md>)

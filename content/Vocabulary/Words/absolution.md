@@ -17,3 +17,4 @@
 
 ## Related words
 - *forgiveness, pardon, penance, remission, exoneration* — close in sense (not yet in the vault)
+- [penitent](penitent.md) — the one who seeks absolution: sorry and ready to make amends

@@ -18,3 +18,4 @@
 ## Related words
 - [exhortation](exhortation.md) — counterpart; urging onward rather than warning
 - *warning, reproof, rebuke, caution, reprimand* — close in sense (not yet in the vault)
+- [castigate](castigate.md) — contrast in force; to scold severely, where an admonition warns gently

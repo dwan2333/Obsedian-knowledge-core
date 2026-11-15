@@ -34,6 +34,7 @@ The register of historians, social commentators, and political writers — for n
 - [convene](<../../Words/convene.md>) — to call or come together for a formal meeting
 - [saga](<../../Words/saga.md>) — a long-running public affair; a long story across generations
 - [regime](<../../Words/regime.md>) — a government (often disapproving); a system of rules
+- [castigate](<../../Words/castigate.md>) — to condemn severely, especially in public
 
 ## Related categories
 - [Business & Economics](<../Domains/Business & Economics.md>)
