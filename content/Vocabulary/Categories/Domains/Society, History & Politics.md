@@ -30,6 +30,8 @@ The register of historians, social commentators, and political writers — for n
 - [embroil](<../../Words/embroil.md>) — to draw into a dispute, scandal, or war
 - [clamp](<../../Words/clamp.md>) — (clamp down on) to suppress or restrict firmly
 - [bipartisan](<../../Words/bipartisan.md>) — supported by both main political parties
+- [extramarital](<../../Words/extramarital.md>) — (of an affair) outside marriage; the formal, newsroom word
+- [convene](<../../Words/convene.md>) — to call or come together for a formal meeting
 
 ## Related categories
 - [Business & Economics](<../Domains/Business & Economics.md>)

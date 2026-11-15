@@ -21,6 +21,7 @@
 - [harem](harem.md) — kin; another institution from the world of marriage and household
 - *abscond, flee* — close in the sense of secret flight (not yet in the vault)
 - [matrimonial](matrimonial.md) — kin; relating to marriage
+- [extramarital](extramarital.md) — kin; love outside the rules of marriage, where an elopement is marriage outside the rules of family
 
 ## Appears in
 - *"…preceded by an elopement…"* — [The Brothers Karamazov — Ch. 1](<../../Quotes/Sources/The Brothers Karamazov/Chapter 1.md>) (p. 11)

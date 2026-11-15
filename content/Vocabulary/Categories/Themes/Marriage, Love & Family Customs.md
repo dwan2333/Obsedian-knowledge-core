@@ -9,3 +9,4 @@ The customs and arrangements surrounding marriage and family life, especially in
 - [elopement](<../../Words/elopement.md>) — running away secretly to marry
 - [harem](<../../Words/harem.md>) — the women's quarters of a traditional Muslim household
 - [matrimonial](<../../Words/matrimonial.md>) — relating to marriage
+- [extramarital](<../../Words/extramarital.md>) — outside a person's marriage

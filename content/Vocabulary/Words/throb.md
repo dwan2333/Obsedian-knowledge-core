@@ -18,3 +18,4 @@
 ## Related words
 - [writhe](writhe.md) — kin; another bodily response to pain or distress
 - *pulse, pound, beat, ache* — close in sense (not yet in the vault)
+- [reverberate](reverberate.md) — kin; sound echoing through a space, where a throb is a beat felt in the body

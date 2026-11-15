@@ -16,3 +16,4 @@
 
 ## Related words
 - *gather, throng, swarm, congregate; (noun) herd, congregation* — close in sense (not yet in the vault)
+- [convene](convene.md) — contrast; to be called together formally, where people flock of their own accord

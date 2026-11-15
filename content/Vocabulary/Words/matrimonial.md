@@ -19,3 +19,4 @@
 - [dowry](dowry.md) — the property a bride brings into the matrimonial union
 - [elopement](elopement.md) — marriage made in haste, outside the usual matrimonial customs
 - [harem](harem.md) — a contrasting domestic arrangement, outside monogamous matrimony
+- [extramarital](extramarital.md) — contrast; outside the marriage, where matrimonial is of the marriage itself

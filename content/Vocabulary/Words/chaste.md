@@ -20,3 +20,4 @@
 - [debauchery](debauchery.md) — antonym; excessive sensual indulgence
 - [harlot](harlot.md) — antonym in a person; the fallen woman to the chaste one
 - *celibate, pure, virtuous, austere* — close in sense (not yet in the vault)
+- [extramarital](extramarital.md) — contrast; a relationship outside one's marriage

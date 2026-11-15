@@ -19,3 +19,4 @@
 ## Related words
 - [unscathed](unscathed.md) — the lucky outcome; to come through a calamity unharmed
 - *disaster, catastrophe, misfortune, cataclysm* — close in sense (not yet in the vault)
+- [reverberate](reverberate.md) — what a calamity's effects do for years afterwards

@@ -21,3 +21,4 @@
 - [concession](concession.md) — what an envoy offers or wins in the talks
 - [espionage](espionage.md) — contrast; the secret spying that goes on beside open diplomacy
 - [cede](cede.md) — what an envoy may be sent to demand or to offer: territory or control given up
+- [convene](convene.md) — what leaders do to bring envoys to the table: call a formal meeting

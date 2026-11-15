@@ -20,3 +20,4 @@
 - [concession](concession.md) — what each party gives up to make a deal bipartisan
 - [wrangle](wrangle.md) — contrast; the partisan wrangling a bipartisan deal rises above
 - *cross-party, bilateral* — close in sense; *partisan, one-sided* — antonyms; *nonpartisan* — tied to no party (not yet in the vault)
+- [convene](convene.md) — what is done to a bipartisan panel or committee: it is called together
