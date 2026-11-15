@@ -17,5 +17,6 @@
 
 ## Related words
 - [preliminary](preliminary.md) — kin; preliminary comes before the main thing, interim fills in until the final one
+- [juncture](juncture.md) — kin; a single point in time, where interim is the stretch between two
 - [perpetual](perpetual.md) — antonym; never-ending, where interim lasts only until it is replaced
 - *temporary, provisional, acting, stopgap, caretaker* — close in sense; *permanent, final* — antonyms (not yet in the vault)

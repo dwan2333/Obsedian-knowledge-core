@@ -17,3 +17,4 @@
 
 ## Related words
 - Often paired *in prose* with *heretofore*, *until now*, and *thus far* — all marking what was true up to the present moment.
+- [juncture](juncture.md) — kin; the present juncture is the point hitherto runs up to

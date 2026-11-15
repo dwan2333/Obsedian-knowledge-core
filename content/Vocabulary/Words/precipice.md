@@ -17,6 +17,7 @@
 - **Scenario** — [Describing Scenery & Places](<../Categories/Scenarios/Describing Scenery & Places.md>) · [Telling a Dramatic Story](<../Categories/Scenarios/Telling a Dramatic Story.md>)
 
 ## Related words
+- [juncture](juncture.md) — kin; a critical point in time, where a precipice is the edge itself
 - *brink, verge, abyss, chasm* — close in sense, literal and figurative (not yet in the vault)
 
 ## Appears in
