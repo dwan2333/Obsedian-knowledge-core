@@ -20,3 +20,4 @@
 - [circumvent](circumvent.md) — what people try to do once the authorities clamp down
 - [hampered](hampered.md) — kin; hampered is slowed and held back, clamped down on is stopped or sharply limited
 - *crack down, curb, rein in, suppress, tighten* — close in sense; *loosen, relax, ease* — antonyms (not yet in the vault)
+- [regime](regime.md) — the kind of government most often said to clamp down

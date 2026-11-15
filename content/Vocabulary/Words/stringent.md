@@ -22,3 +22,4 @@
 - [circumvent](circumvent.md) — what people try to do to stringent rules
 - *strict, rigorous, exacting, tough* — close in sense; *lenient, lax, loose* — antonyms (not yet in the vault)
 - [clamp](clamp.md) — kin; to clamp down is to impose stringent controls
+- [regime](regime.md) — a system of rules, often described as stringent: a stringent regulatory regime

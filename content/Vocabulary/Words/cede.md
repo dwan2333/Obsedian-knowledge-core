@@ -22,3 +22,4 @@
 - [obstinate](obstinate.md) — contrast; the obstinate cede nothing
 - [envoy](envoy.md) — the representative who negotiates what will be ceded
 - *relinquish, surrender, yield, hand over* — close in sense; *seize, annex, retain* — antonyms (not yet in the vault)
+- [regime](regime.md) — the government that is pressed to cede power, and seldom does

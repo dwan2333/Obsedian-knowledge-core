@@ -19,6 +19,7 @@
 - [emancipation](emancipation.md) — antonym in spirit; liberation from exactly this kind of control
 - *tyranny, autocracy, dictatorship, authoritarianism* — close in sense; the ruler is a *despot* (not yet in the vault)
 - [trample](trample.md) — kin; to trample on rights is to oppress
+- [regime](regime.md) — kin; a government, named with a hint of the same disapproval
 
 ## Appears in
 - *"…the despotism of her family"* — [The Brothers Karamazov — Ch. 1](<../../Quotes/Sources/The Brothers Karamazov/Chapter 1.md>) (p. 11)
