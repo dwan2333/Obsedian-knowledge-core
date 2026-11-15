@@ -23,3 +23,4 @@
 - [retrench](retrench.md) — fortification kin; both began as words for digging in behind defences
 - [moat](moat.md) — fortification kin; the ditch that guards whoever is ensconced inside
 - *settle, nestle, install, entrench* — close in sense; *dislodge, oust* — antonyms (not yet in the vault)
+- [whisk](whisk.md) — contrast; to carry off quickly, where ensconce settles snugly in place

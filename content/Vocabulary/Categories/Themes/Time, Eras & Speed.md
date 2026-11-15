@@ -12,6 +12,7 @@ From the named ages of history to the swiftness of change within them.
 - [swift](<../../Words/swift.md>) — moving or happening with great speed
 - [antiquated](<../../Words/antiquated.md>) — outdated; kept past its usefulness
 - [usher](<../../Words/usher.md>) — (usher in) to mark the start of a new period
+- [whisk](<../../Words/whisk.md>) — to move or take away quickly and suddenly
 
 ## Related categories
 - [Change, Reform & Upheaval](<../Themes/Change, Reform & Upheaval.md>)

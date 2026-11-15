@@ -96,6 +96,7 @@ The workaday register — vivid, useful words you can drop into conversation wit
 - [dilapidated](<../../Words/dilapidated.md>) — run-down; falling apart
 - [fret](<../../Words/fret.md>) — to worry; to be anxious over small things
 - [usher](<../../Words/usher.md>) — to show someone the way; to bring in
+- [whisk](<../../Words/whisk.md>) — to take away quickly; to beat eggs or cream
 
 ## Related categories
 - [Literary & Elevated Prose](<../Domains/Literary & Elevated Prose.md>)

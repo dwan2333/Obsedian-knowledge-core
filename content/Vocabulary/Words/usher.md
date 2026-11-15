@@ -22,3 +22,4 @@
 - [upend](upend.md) — kin; a sudden overturning, where ushering in opens the door to the new
 - [custodian](custodian.md) — kin by origin; a keeper, as the first ushers were doorkeepers
 - *escort, guide, herald, inaugurate* — close in sense (not yet in the vault)
+- [whisk](whisk.md) — contrast; to carry off fast, where usher guides in politely

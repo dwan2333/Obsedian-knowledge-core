@@ -18,3 +18,4 @@
 ## Related words
 - [rapidity](rapidity.md) — kin; the noun for the quality of being swift
 - *fast, rapid, fleet, quick, prompt* — close in sense (not yet in the vault)
+- [whisk](whisk.md) — kin; to move someone or something away swiftly
