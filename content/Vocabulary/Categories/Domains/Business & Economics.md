@@ -11,6 +11,8 @@ The working vocabulary of money in motion: how firms, markets, and governments s
 - [concession](<../../Words/concession.md>) — a price reduction or business right; ground given in a deal
 - [moat](<../../Words/moat.md>) — a lasting competitive advantage
 - [espionage](<../../Words/espionage.md>) — (industrial espionage) stealing trade secrets
+- [idiosyncratic](<../../Words/idiosyncratic.md>) — (of risk) specific to one company or asset
+- [interim](<../../Words/interim.md>) — temporary until the permanent one; (of results) for part of the year
 
 ## Related categories
 - [Society, History & Politics](<../Domains/Society, History & Politics.md>)

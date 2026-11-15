@@ -14,6 +14,7 @@ From the named ages of history to the swiftness of change within them.
 - [usher](<../../Words/usher.md>) — (usher in) to mark the start of a new period
 - [whisk](<../../Words/whisk.md>) — to move or take away quickly and suddenly
 - [saga](<../../Words/saga.md>) — a long, drawn-out series of events
+- [interim](<../../Words/interim.md>) — for the time being; the time between
 
 ## Related categories
 - [Change, Reform & Upheaval](<../Themes/Change, Reform & Upheaval.md>)

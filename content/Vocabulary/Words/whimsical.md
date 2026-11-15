@@ -13,9 +13,11 @@
 
 ## Categories
 - **Theme** — [Whim, Inconstancy & Yielding](<../Categories/Themes/Whim, Inconstancy & Yielding.md>)
+- **Theme** — [Oddity & Individuality](<../Categories/Themes/Oddity & Individuality.md>)
 - **Domain** — [Everyday Speech & General Use](<../Categories/Domains/Everyday Speech & General Use.md>)
 - **Scenario** — [Describing a Person](<../Categories/Scenarios/Describing a Person.md>)
 
 ## Related words
 - [caprice](caprice.md) — kin; the sudden whim whimsical behaviour follows
 - *fanciful, capricious, playful, quirky* — close in sense (not yet in the vault)
+- [idiosyncratic](idiosyncratic.md) — kin; individual and unusual, without the playfulness

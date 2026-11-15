@@ -18,3 +18,4 @@
 ## Related words
 - [indissoluble](indissoluble.md) — kin; permanence of a bond rather than of time
 - *everlasting, ceaseless, eternal, incessant* — close in sense (not yet in the vault)
+- [interim](interim.md) — antonym; lasting only until something permanent takes over

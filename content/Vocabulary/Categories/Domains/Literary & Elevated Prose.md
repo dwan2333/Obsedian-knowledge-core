@@ -101,6 +101,7 @@ The heightened register — words that lend writing dignity, colour, or nuance, 
 - [reverberate](<../../Words/reverberate.md>) — to echo again and again
 - [credence](<../../Words/credence.md>) — belief; acceptance of something as true
 - [penitent](<../../Words/penitent.md>) — feeling or showing remorse
+- [idiosyncratic](<../../Words/idiosyncratic.md>) — peculiar to one person or thing; distinctively individual
 
 ## Related categories
 - [Everyday Speech & General Use](<../Domains/Everyday Speech & General Use.md>)

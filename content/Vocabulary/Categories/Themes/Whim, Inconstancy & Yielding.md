@@ -12,3 +12,4 @@ The opposite of firmness — being changeable, impressionable, or too easily swa
 ## Related categories
 - [Power, Freedom & Servitude](<../Themes/Power, Freedom & Servitude.md>)
 - [Persistence & Demand](<../Themes/Persistence & Demand.md>)
+- [Oddity & Individuality](<../Themes/Oddity & Individuality.md>)

@@ -18,3 +18,4 @@
 ## Related words
 - *introductory, preparatory, provisional, opening* — close in sense (not yet in the vault)
 - [usher](usher.md) — kin; to lead in and introduce what comes next
+- [interim](interim.md) — kin; for now, until the final version, where preliminary comes before the main one

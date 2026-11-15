@@ -13,7 +13,9 @@
 
 ## Categories
 - **Theme** — [Mystery & the Unknown](<../Categories/Themes/Mystery & the Unknown.md>)
+- **Theme** — [Oddity & Individuality](<../Categories/Themes/Oddity & Individuality.md>)
 - **Domain** — [Everyday Speech & General Use](<../Categories/Domains/Everyday Speech & General Use.md>)
 
 ## Related words
 - *strange, odd, peculiar, uncanny* — close in sense (not yet in the vault)
+- [idiosyncratic](idiosyncratic.md) — kin; odd in a way that belongs to one person or thing

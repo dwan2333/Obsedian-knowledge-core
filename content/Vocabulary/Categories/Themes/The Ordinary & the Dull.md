@@ -13,3 +13,4 @@ The vocabulary of dullness and the everyday — the opposite of the vivid and th
 
 ## Related categories
 - [Beauty, Pleasure & the Senses](<../Themes/Beauty, Pleasure & the Senses.md>)
+- [Oddity & Individuality](<../Themes/Oddity & Individuality.md>)

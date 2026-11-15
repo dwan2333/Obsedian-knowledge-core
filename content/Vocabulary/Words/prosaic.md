@@ -21,6 +21,7 @@
 - *mundane, banal, pedestrian, humdrum* — close in sense (not yet in the vault)
 - [wearying](wearying.md) — kin; dull to the point of tiring
 - [coarse](coarse.md) — kin; plain and unrefined
+- [idiosyncratic](idiosyncratic.md) — contrast; distinctively individual, where the prosaic is commonplace
 
 ## Appears in
 - *"…a prosaic flat bank in its place…"* — [The Brothers Karamazov — Ch. 1](<../../Quotes/Sources/The Brothers Karamazov/Chapter 1.md>) (p. 11)
