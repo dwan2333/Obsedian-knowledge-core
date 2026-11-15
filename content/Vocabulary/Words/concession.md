@@ -24,3 +24,4 @@
 - [pliable](pliable.md) — kin; the readiness to give way that concessions need, taken too far
 - *compromise, accommodation, admission, allowance* — close in sense (not yet in the vault)
 - [cede](cede.md) — root-kin (Latin *cedere*); to cede is to give up outright what a concession gives up in part
+- [bipartisan](bipartisan.md) — the kind of deal that concessions on both sides make possible

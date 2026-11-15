@@ -21,3 +21,4 @@
 - [envoy](envoy.md) — the representative sent to settle a dispute amicably
 - [concession](concession.md) — the give-and-take that lets a dispute end amicably
 - [embroil](embroil.md) — contrast; to be dragged into a bitter dispute instead of settling it amicably
+- [bipartisan](bipartisan.md) — kin; agreement across party lines, usually reached amicably

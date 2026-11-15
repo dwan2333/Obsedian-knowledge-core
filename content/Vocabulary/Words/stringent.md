@@ -21,3 +21,4 @@
 - [ironclad](ironclad.md) — kin; an ironclad rule can't be broken, a stringent one is hard to satisfy
 - [circumvent](circumvent.md) — what people try to do to stringent rules
 - *strict, rigorous, exacting, tough* — close in sense; *lenient, lax, loose* — antonyms (not yet in the vault)
+- [clamp](clamp.md) — kin; to clamp down is to impose stringent controls

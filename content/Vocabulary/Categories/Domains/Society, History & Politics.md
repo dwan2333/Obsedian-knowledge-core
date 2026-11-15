@@ -28,6 +28,8 @@ The register of historians, social commentators, and political writers — for n
 - [espionage](<../../Words/espionage.md>) — spying for political or military secrets
 - [cede](<../../Words/cede.md>) — to give up territory or power formally
 - [embroil](<../../Words/embroil.md>) — to draw into a dispute, scandal, or war
+- [clamp](<../../Words/clamp.md>) — (clamp down on) to suppress or restrict firmly
+- [bipartisan](<../../Words/bipartisan.md>) — supported by both main political parties
 
 ## Related categories
 - [Business & Economics](<../Domains/Business & Economics.md>)

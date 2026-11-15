@@ -10,6 +10,7 @@ Vocabulary for the work of reaching agreement between sides, whether nations at 
 - [concession](<../../Words/concession.md>) — something given up to reach an agreement
 - [espionage](<../../Words/espionage.md>) — spying between states; the hidden side of diplomacy
 - [cede](<../../Words/cede.md>) — to hand over territory or control, often by treaty
+- [bipartisan](<../../Words/bipartisan.md>) — backed by both of two opposing parties
 
 ## Related categories
 - [Discord, Conflict & Disparity](<../Themes/Discord, Conflict & Disparity.md>)
