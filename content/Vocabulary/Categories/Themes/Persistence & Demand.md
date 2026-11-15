@@ -13,3 +13,4 @@ The vocabulary of relentless asking and dogged pressure.
 
 ## Related categories
 - [Whim, Inconstancy & Yielding](<../Themes/Whim, Inconstancy & Yielding.md>)
+- [Strictness & Rigor](<../Themes/Strictness & Rigor.md>)

@@ -23,3 +23,4 @@
 - [meekness](meekness.md) — antonym; obstinacy stands firm where meekness gives way
 - [perverse](perverse.md) — kin; stubbornness with a wilful, contrary twist
 - [concession](concession.md) — antonym in spirit; the ground an obstinate person won't give
+- [cede](cede.md) — contrast; to give ground, which the obstinate refuse to do

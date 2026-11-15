@@ -14,6 +14,7 @@ The precise, often Latin-rooted register of legal and official writing.
 - [preliminary](<../../Words/preliminary.md>) — preparatory; coming before the main business
 - [malpractice](<../../Words/malpractice.md>) — negligent professional misconduct
 - [inducement](<../../Words/inducement.md>) — an incentive; in law, often a bribe
+- [stringent](<../../Words/stringent.md>) — (of rules and requirements) strict and exacting
 
 ## Related categories
 - [Business & Economics](<../Domains/Business & Economics.md>)

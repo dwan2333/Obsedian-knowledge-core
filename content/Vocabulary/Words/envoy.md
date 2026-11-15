@@ -20,3 +20,4 @@
 - *emissary, ambassador, diplomat, delegate, legate* — close in sense (not yet in the vault)
 - [concession](concession.md) — what an envoy offers or wins in the talks
 - [espionage](espionage.md) — contrast; the secret spying that goes on beside open diplomacy
+- [cede](cede.md) — what an envoy may be sent to demand or to offer: territory or control given up

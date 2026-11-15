@@ -15,3 +15,4 @@ The spectrum from robust force to feeble inadequacy — of bodies, efforts, and 
 
 ## Related categories
 - [Obstacles & Danger](<../Themes/Obstacles & Danger.md>)
+- [Strictness & Rigor](<../Themes/Strictness & Rigor.md>)

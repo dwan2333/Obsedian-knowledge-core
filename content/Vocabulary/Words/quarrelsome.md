@@ -20,3 +20,4 @@
 - [wrangle](wrangle.md) — kin; the noisy disputing a quarrelsome person does
 - [inharmonious](inharmonious.md) — kin; the discord such people create
 - *argumentative, contentious, cantankerous, truculent* — close in sense (not yet in the vault)
+- [embroil](embroil.md) — what a quarrelsome temper does: draws its owner into one dispute after another

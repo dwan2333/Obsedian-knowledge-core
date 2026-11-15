@@ -15,6 +15,7 @@ Vocabulary for the whole arc of power over people — from the tyrant who wields
 - [trample](<../../Words/trample.md>) — to tread underfoot; to crush or oppress
 - [inmate](<../../Words/inmate.md>) — a person confined to prison or asylum
 - [persecute](<../../Words/persecute.md>) — to ill-treat for beliefs or identity
+- [cede](<../../Words/cede.md>) — to give up power, territory, or control to another
 
 ## Related categories
 - [Whim, Inconstancy & Yielding](<../Themes/Whim, Inconstancy & Yielding.md>)

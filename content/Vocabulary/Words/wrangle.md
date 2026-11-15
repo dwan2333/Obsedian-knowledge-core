@@ -19,3 +19,4 @@
 - [quarrelsome](quarrelsome.md) — kin; the disposition that breeds such disputes
 - *bicker, squabble, dispute, haggle* — close in sense (not yet in the vault)
 - [untenable](untenable.md) — what a weak position becomes after a long wrangle
+- [embroil](embroil.md) — kin; to be drawn deep into such a dispute

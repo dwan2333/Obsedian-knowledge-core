@@ -9,6 +9,7 @@ The vocabulary of things out of harmony — people who quarrel, sounds that clas
 - [quarrelsome](<../../Words/quarrelsome.md>) — quick to argue and pick fights
 - [inharmonious](<../../Words/inharmonious.md>) — discordant; lacking harmony
 - [disparity](<../../Words/disparity.md>) — a great or unfair difference
+- [embroil](<../../Words/embroil.md>) — to draw deep into a conflict or scandal
 
 ## Related categories
 - [Ill Will, Anger & Resentment](<../Themes/Ill Will, Anger & Resentment.md>)

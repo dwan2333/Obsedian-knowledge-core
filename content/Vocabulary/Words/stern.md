@@ -12,8 +12,10 @@
 > Everyday and neutral-to-negative — it conveys severity and firmness, sometimes admirably principled, sometimes coldly forbidding. Pairs with looks, warnings, judges, and discipline. Note the unrelated nautical noun (a ship's stern).
 
 ## Categories
+- **Theme** — [Strictness & Rigor](<../Categories/Themes/Strictness & Rigor.md>)
 - **Domain** — [Everyday Speech & General Use](<../Categories/Domains/Everyday Speech & General Use.md>)
 - **Scenario** — [Describing a Person](<../Categories/Scenarios/Describing a Person.md>)
 
 ## Related words
 - *severe, strict, forbidding, austere, unbending* — close in sense (not yet in the vault)
+- [stringent](stringent.md) — kin; the strictness of a rule or standard, where stern is the strictness of a person's manner

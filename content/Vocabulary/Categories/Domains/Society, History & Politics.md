@@ -26,6 +26,8 @@ The register of historians, social commentators, and political writers — for n
 - [envoy](<../../Words/envoy.md>) — a diplomatic representative
 - [concession](<../../Words/concession.md>) — ground given up in a political or labour dispute
 - [espionage](<../../Words/espionage.md>) — spying for political or military secrets
+- [cede](<../../Words/cede.md>) — to give up territory or power formally
+- [embroil](<../../Words/embroil.md>) — to draw into a dispute, scandal, or war
 
 ## Related categories
 - [Business & Economics](<../Domains/Business & Economics.md>)

@@ -20,3 +20,4 @@
 - *amiable, cordial, peaceably, good-naturedly* — close in sense (not yet in the vault)
 - [envoy](envoy.md) — the representative sent to settle a dispute amicably
 - [concession](concession.md) — the give-and-take that lets a dispute end amicably
+- [embroil](embroil.md) — contrast; to be dragged into a bitter dispute instead of settling it amicably

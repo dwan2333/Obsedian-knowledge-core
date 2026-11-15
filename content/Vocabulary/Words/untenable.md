@@ -21,3 +21,4 @@
 - [ludicrous](ludicrous.md) — kin dismissal; laughably absurd, where untenable is calmly indefensible
 - [wrangle](wrangle.md) — the long dispute in which a weak position is shown to be untenable
 - *indefensible, unsustainable, insupportable* — close in sense; *tenable, defensible, sound* — antonyms (not yet in the vault)
+- [cede](cede.md) — what you do with an untenable position: give it up

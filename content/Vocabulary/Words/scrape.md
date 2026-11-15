@@ -17,3 +17,4 @@
 
 ## Related words
 - *predicament, fix, jam, pickle, plight* — close in sense (not yet in the vault)
+- [embroil](embroil.md) — kin; a heavier word: embroiled in a scandal or a lawsuit, where a scrape is a small mess
