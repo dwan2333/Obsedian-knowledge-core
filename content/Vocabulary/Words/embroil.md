@@ -21,3 +21,4 @@
 - [quarrelsome](quarrelsome.md) — the temper that keeps a person embroiled in disputes
 - [amicably](amicably.md) — contrast; a dispute settled amicably embroils no one
 - *entangle, enmesh, mire, drag into* — close in sense; *extricate* — antonym (not yet in the vault)
+- [saga](saga.md) — kin; the long-running affair a person is embroiled in

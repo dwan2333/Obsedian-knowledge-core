@@ -13,6 +13,7 @@ From the named ages of history to the swiftness of change within them.
 - [antiquated](<../../Words/antiquated.md>) — outdated; kept past its usefulness
 - [usher](<../../Words/usher.md>) — (usher in) to mark the start of a new period
 - [whisk](<../../Words/whisk.md>) — to move or take away quickly and suddenly
+- [saga](<../../Words/saga.md>) — a long, drawn-out series of events
 
 ## Related categories
 - [Change, Reform & Upheaval](<../Themes/Change, Reform & Upheaval.md>)

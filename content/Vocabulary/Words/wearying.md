@@ -18,3 +18,4 @@
 ## Related words
 - [prosaic](prosaic.md) — loosely related; both touch tedium, the prosaic dull to behold, the wearying dull to endure
 - *tiresome, wearisome* — close kin; tiresome adds mild irritation, wearisome the same dull fatigue (not yet in the vault)
+- [saga](saga.md) — the kind of long, drawn-out affair that grows wearying

@@ -32,6 +32,7 @@ The register of historians, social commentators, and political writers — for n
 - [bipartisan](<../../Words/bipartisan.md>) — supported by both main political parties
 - [extramarital](<../../Words/extramarital.md>) — (of an affair) outside marriage; the formal, newsroom word
 - [convene](<../../Words/convene.md>) — to call or come together for a formal meeting
+- [saga](<../../Words/saga.md>) — a long-running public affair; a long story across generations
 
 ## Related categories
 - [Business & Economics](<../Domains/Business & Economics.md>)

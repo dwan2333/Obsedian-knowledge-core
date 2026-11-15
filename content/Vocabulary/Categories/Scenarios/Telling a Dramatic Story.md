@@ -32,3 +32,4 @@ When you're spinning a tale and need the language of suspense, impulse, and high
 - [persecute](<../../Words/persecute.md>) — to hound and ill-treat
 - [nefarious](<../../Words/nefarious.md>) — the villain's wicked scheme
 - [reverberate](<../../Words/reverberate.md>) — a shot or a shock that echoes on
+- [saga](<../../Words/saga.md>) — a long story full of twists
