@@ -100,6 +100,7 @@ The workaday register — vivid, useful words you can drop into conversation wit
 - [veer](<../../Words/veer.md>) — to turn suddenly; to shift course
 - [poised](<../../Words/poised.md>) — composed and self-assured; ready to act
 - [parcel](<../../Words/parcel.md>) — something wrapped up and sent by post
+- [blemish](<../../Words/blemish.md>) — a small mark or flaw that spoils something
 
 ## Related categories
 - [Literary & Elevated Prose](<../Domains/Literary & Elevated Prose.md>)

@@ -19,3 +19,4 @@
 ## Related words
 - [rudimentary](rudimentary.md) — kin; basic and undeveloped, where this is shallow
 - *shallow, cursory, perfunctory; (opposite) profound* — close in sense (not yet in the vault)
+- [blemish](blemish.md) — kin; a surface mark, usually superficial rather than deep

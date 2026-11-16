@@ -19,3 +19,4 @@
 ## Related words
 - [aquiline](aquiline.md) — kin; a feature one might note in a countenance
 - *visage, expression, features, mien* — close in sense (not yet in the vault)
+- [blemish](blemish.md) — kin; a mark that can spoil the face

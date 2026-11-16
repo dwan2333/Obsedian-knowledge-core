@@ -13,6 +13,7 @@ The vocabulary of physical description — what the face reveals, the features t
 - [writhe](<../../Words/writhe.md>) — to twist the body in pain
 - [perspiration](<../../Words/perspiration.md>) — sweat
 - [squirm](<../../Words/squirm.md>) — to wriggle from discomfort
+- [blemish](<../../Words/blemish.md>) — a small mark that spoils the skin
 
 ## Related categories
 - [Beauty, Pleasure & the Senses](<../Themes/Beauty, Pleasure & the Senses.md>)
