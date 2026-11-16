@@ -17,3 +17,4 @@
 
 ## Related words
 - *flop, failure, washout, lemon, letdown* — close in sense (not yet in the vault)
+- [efficacy](efficacy.md) — opposite; the power to work that a dud turns out to lack

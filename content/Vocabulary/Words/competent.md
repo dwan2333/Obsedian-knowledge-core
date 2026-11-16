@@ -19,3 +19,4 @@
 ## Related words
 - [wunderkind](wunderkind.md) — contrast; mere competence against dazzling young brilliance
 - *capable, proficient, adept, able; (opposite) inept* — close in sense (not yet in the vault)
+- [efficacy](efficacy.md) — kin; a method's power to do the job, as competence is a person's

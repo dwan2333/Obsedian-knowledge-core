@@ -13,6 +13,7 @@
 
 ## Categories
 - **Domain** — [Law & Formal Documents](<../Categories/Domains/Law & Formal Documents.md>)
+- **Domain** — [Medicine & Science](<../Categories/Domains/Medicine & Science.md>)
 
 ## Related words
 - *negligence, misconduct, malfeasance, dereliction* — close in sense (not yet in the vault)

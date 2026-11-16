@@ -14,6 +14,7 @@
 ## Categories
 - **Theme** — [Cleverness & Cunning](<../Categories/Themes/Cleverness & Cunning.md>)
 - **Domain** — [Literary & Elevated Prose](<../Categories/Domains/Literary & Elevated Prose.md>)
+- **Domain** — [Medicine & Science](<../Categories/Domains/Medicine & Science.md>)
 
 ## Related words
 - [shrewd](shrewd.md) — kin (in the "keen mind" sense); sharp, penetrating judgment

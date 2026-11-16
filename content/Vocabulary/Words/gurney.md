@@ -13,6 +13,7 @@
 
 ## Categories
 - **Domain** — [Everyday Speech & General Use](<../Categories/Domains/Everyday Speech & General Use.md>)
+- **Domain** — [Medicine & Science](<../Categories/Domains/Medicine & Science.md>)
 
 ## Related words
 - *stretcher, trolley, cot, litter* — close in sense (not yet in the vault)

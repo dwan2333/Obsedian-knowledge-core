@@ -19,3 +19,4 @@ The precise, often Latin-rooted register of legal and official writing.
 
 ## Related categories
 - [Business & Economics](<../Domains/Business & Economics.md>)
+- [Medicine & Science](<../Domains/Medicine & Science.md>)

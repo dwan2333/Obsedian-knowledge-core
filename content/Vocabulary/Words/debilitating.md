@@ -14,6 +14,7 @@
 ## Categories
 - **Theme** — [Strength & Weakness](<../Categories/Themes/Strength & Weakness.md>)
 - **Domain** — [Literary & Elevated Prose](<../Categories/Domains/Literary & Elevated Prose.md>)
+- **Domain** — [Medicine & Science](<../Categories/Domains/Medicine & Science.md>)
 
 ## Related words
 - [vigorous](vigorous.md) — antonym in effect; strengthening and full of energy

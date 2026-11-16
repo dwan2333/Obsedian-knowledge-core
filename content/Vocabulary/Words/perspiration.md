@@ -14,6 +14,7 @@
 ## Categories
 - **Theme** — [Face, Body & Features](<../Categories/Themes/Face, Body & Features.md>)
 - **Domain** — [Everyday Speech & General Use](<../Categories/Domains/Everyday Speech & General Use.md>)
+- **Domain** — [Medicine & Science](<../Categories/Domains/Medicine & Science.md>)
 
 ## Related words
 - [squirm](squirm.md) — kin; another sign of bodily discomfort or unease

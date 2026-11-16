@@ -13,6 +13,7 @@
 
 ## Categories
 - **Domain** — [Everyday Speech & General Use](<../Categories/Domains/Everyday Speech & General Use.md>)
+- **Domain** — [Medicine & Science](<../Categories/Domains/Medicine & Science.md>)
 - **Scenario** — [Describing a Person](<../Categories/Scenarios/Describing a Person.md>)
 
 ## Related words
