@@ -19,3 +19,4 @@
 - [conveyance](conveyance.md) — kin; the formal *moving* or *transfer* of things, where this is their division
 - *allot, allocate, distribute, mete out* — close in sense (not yet in the vault)
 - [installment](installment.md) — kin; payment made in measured parts
+- [parcel](parcel.md) — kin; parcel out is the plainer split, with no promise the shares are fair
