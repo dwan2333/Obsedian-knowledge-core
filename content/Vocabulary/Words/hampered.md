@@ -22,3 +22,4 @@
 - [disincentive](disincentive.md) — a hamper on motivation rather than on movement
 - *hindered, impeded, obstructed, encumbered* — close in sense; *unimpeded, facilitated* — antonyms (not yet in the vault)
 - [clamp](clamp.md) — kin, and stronger: what is clamped down on is stopped or sharply limited, where hampered is only slowed
+- [mired](mired.md) — kin; stuck fast, where hampered is only slowed

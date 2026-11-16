@@ -37,6 +37,7 @@ The register of historians, social commentators, and political writers — for n
 - [castigate](<../../Words/castigate.md>) — to condemn severely, especially in public
 - [subpoena](<../../Words/subpoena.md>) — an order to testify, as issued by courts and legislatures
 - [juncture](<../../Words/juncture.md>) — a critical point in history or politics
+- [mired](<../../Words/mired.md>) — stuck in a difficulty, as in mired in scandal or recession
 
 ## Related categories
 - [Business & Economics](<../Domains/Business & Economics.md>)

@@ -21,3 +21,4 @@
 - [puny](puny.md) — antonym; small, weak, and feeble
 - *robust, energetic, dynamic, forceful* — close in sense (not yet in the vault)
 - [grit](grit.md) — kin; the dogged resolve behind vigorous effort
+- [recuperation](recuperation.md) — kin; the recovery that makes one vigorous again

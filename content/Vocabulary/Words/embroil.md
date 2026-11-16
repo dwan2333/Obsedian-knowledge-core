@@ -9,7 +9,7 @@
 > - One careless post **embroiled** the company in a row with its own customers.
 
 > [!info] Register & connotation
-> Formal-leaning and common in news; negative. It pictures a messy, drawn-out entanglement the person is stuck in, often not wholly by choice: stronger and stickier than *involved in*. Its usual partners are *dispute, controversy, scandal, row, lawsuit, conflict,* and *war*. *Entangled* is close; *mired in* stresses being stuck. From French *embrouiller*, "to tangle, to confuse"; a cousin of *imbroglio* (a confused, messy situation).
+> Formal-leaning and common in news; negative. It pictures a messy, drawn-out entanglement the person is stuck in, often not wholly by choice: stronger and stickier than *involved in*. Its usual partners are *dispute, controversy, scandal, row, lawsuit, conflict,* and *war*. *Entangled* is close; [mired](mired.md) *in* stresses being stuck. From French *embrouiller*, "to tangle, to confuse"; a cousin of *imbroglio* (a confused, messy situation).
 
 ## Categories
 - **Theme** — [Discord, Conflict & Disparity](<../Categories/Themes/Discord, Conflict & Disparity.md>)
@@ -20,6 +20,7 @@
 - [scrape](scrape.md) — kin; a small, forgivable mess, where being embroiled is serious and hard to leave
 - [quarrelsome](quarrelsome.md) — the temper that keeps a person embroiled in disputes
 - [amicably](amicably.md) — contrast; a dispute settled amicably embroils no one
-- *entangle, enmesh, mire, drag into* — close in sense; *extricate* — antonym (not yet in the vault)
+- *entangle, enmesh, drag into* — close in sense; *extricate* — antonym (not yet in the vault)
 - [saga](saga.md) — kin; the long-running affair a person is embroiled in
 - [subpoena](subpoena.md) — the legal order that can embroil a bystander in a lawsuit
+- [mired](mired.md) — kin; stuck fast and unable to move forward, where embroiled is dragged in

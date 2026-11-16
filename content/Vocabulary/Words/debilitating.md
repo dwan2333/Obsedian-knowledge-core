@@ -21,3 +21,4 @@
 - *weakening, enfeebling, sapping, enervating* — close in sense (not yet in the vault)
 - [hampered](hampered.md) — kin; held back from outside, where debilitating weakens from within
 - [relapse](relapse.md) — kin; the return of an illness that can bring the weakness back
+- [recuperation](recuperation.md) — kin; winning back the strength a debilitating illness took

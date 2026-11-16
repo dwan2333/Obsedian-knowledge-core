@@ -19,3 +19,4 @@
 - [debilitating](debilitating.md) — kin; a relapse often brings back the illness that wore someone down
 - [sottish](sottish.md) — kin; the drunken state an alcoholic relapses into
 - *lapse, backslide, regress, recurrence, recidivism; recovery, remission* — close in sense or opposite (not yet in the vault)
+- [recuperation](recuperation.md) — antonym; the recovery a relapse interrupts

@@ -14,6 +14,7 @@ The spectrum from robust force to feeble inadequacy — of bodies, efforts, and 
 - [dilapidated](<../../Words/dilapidated.md>) — fallen into disrepair through age and neglect
 - [efficacy](<../../Words/efficacy.md>) — the power to produce the intended result
 - [efficacious](<../../Words/efficacious.md>) — producing the intended result; effective
+- [recuperation](<../../Words/recuperation.md>) — recovery of health and strength after illness or strain
 
 ## Related categories
 - [Obstacles & Danger](<../Themes/Obstacles & Danger.md>)

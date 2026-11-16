@@ -12,6 +12,7 @@ Things that stand in the way or loom as a hazard — from the impassable to the 
 - [unscathed](<../../Words/unscathed.md>) — unharmed; come through safely
 - [hampered](<../../Words/hampered.md>) — held back or slowed by an obstacle
 - [moat](<../../Words/moat.md>) — a defensive ditch; a lasting business advantage
+- [mired](<../../Words/mired.md>) — stuck fast, in mud or in a difficult situation
 
 ## Related categories
 - [Strength & Weakness](<../Themes/Strength & Weakness.md>)
