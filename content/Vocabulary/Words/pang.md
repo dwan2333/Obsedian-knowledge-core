@@ -19,3 +19,4 @@
 ## Related words
 - [inconsolable](inconsolable.md) — kin; the lasting grief a pang can open into
 - *twinge, throe, stab, qualm* — close in sense (not yet in the vault)
+- [yearn](yearn.md) — kin; the long ache of which a pang is one sharp moment

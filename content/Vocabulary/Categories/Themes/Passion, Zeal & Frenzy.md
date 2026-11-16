@@ -13,6 +13,7 @@ The spectrum of fervour — from noble ardour, through unbalanced fanaticism, to
 - [frantic](<../../Words/frantic.md>) — wild with fear or hurry
 - [impassioned](<../../Words/impassioned.md>) — filled with intense feeling
 - [earnestness](<../../Words/earnestness.md>) — sincere, serious conviction
+- [yearn](<../../Words/yearn.md>) — to long deeply for something out of reach
 
 ## Related categories
 - [Religion & the Church](<../Themes/Religion & the Church.md>)

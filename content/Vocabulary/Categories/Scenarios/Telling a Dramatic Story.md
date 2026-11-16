@@ -35,3 +35,4 @@ When you're spinning a tale and need the language of suspense, impulse, and high
 - [saga](<../../Words/saga.md>) — a long story full of twists
 - [tumultuous](<../../Words/tumultuous.md>) — a stormy period or an uproarious crowd
 - [juncture](<../../Words/juncture.md>) — the moment where the story turns
+- [yearn](<../../Words/yearn.md>) — the deep longing that drives a character

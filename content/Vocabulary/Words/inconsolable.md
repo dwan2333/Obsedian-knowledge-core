@@ -20,3 +20,4 @@
 - [morose](morose.md) — kin; a quieter, more sullen low spirits
 - [pang](pang.md) — kin; the sharp stab of the grief that overwhelms here
 - *disconsolate, heartbroken, grief-stricken* — close in sense (not yet in the vault)
+- [yearn](yearn.md) — kin; the longing for what was lost that grief carries

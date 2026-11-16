@@ -103,6 +103,7 @@ The heightened register — words that lend writing dignity, colour, or nuance, 
 - [penitent](<../../Words/penitent.md>) — feeling or showing remorse
 - [idiosyncratic](<../../Words/idiosyncratic.md>) — peculiar to one person or thing; distinctively individual
 - [tumultuous](<../../Words/tumultuous.md>) — turbulent; loud and wildly excited
+- [yearn](<../../Words/yearn.md>) — to long for deeply and achingly
 
 ## Related categories
 - [Everyday Speech & General Use](<../Domains/Everyday Speech & General Use.md>)

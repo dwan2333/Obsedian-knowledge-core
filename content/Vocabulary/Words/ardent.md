@@ -22,3 +22,4 @@
 - [mystic](mystic.md) — kin in spiritual intensity, turned inward
 - [ecstatic](ecstatic.md) — kin; ardour risen to rapturous joy
 - *fervent, fervid, passionate, zealous* — close in sense (not yet in the vault)
+- [yearn](yearn.md) — kin; the ache for what one lacks, beside ardour for what one pursues
