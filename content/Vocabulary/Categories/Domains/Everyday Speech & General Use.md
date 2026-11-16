@@ -98,6 +98,7 @@ The workaday register — vivid, useful words you can drop into conversation wit
 - [usher](<../../Words/usher.md>) — to show someone the way; to bring in
 - [whisk](<../../Words/whisk.md>) — to take away quickly; to beat eggs or cream
 - [veer](<../../Words/veer.md>) — to turn suddenly; to shift course
+- [poised](<../../Words/poised.md>) — composed and self-assured; ready to act
 
 ## Related categories
 - [Literary & Elevated Prose](<../Domains/Literary & Elevated Prose.md>)

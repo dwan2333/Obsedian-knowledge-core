@@ -22,3 +22,4 @@
 - [allay](allay.md) — what brings you to a serene state, by putting worries to rest
 - [ensconce](ensconce.md) — to settle snugly into the kind of comfort that leaves one serene
 - [tumultuous](tumultuous.md) — antonym; full of noise, disorder, and upheaval
+- [poised](poised.md) — kin; the outward composure that goes with inner calm

@@ -17,4 +17,5 @@
 - **Scenario** — [Describing a Person](<../Categories/Scenarios/Describing a Person.md>)
 
 ## Related words
-- *elegant, lithe, willowy, supple, poised* — close in sense (not yet in the vault)
+- *elegant, lithe, willowy, supple* — close in sense (not yet in the vault)
+- [poised](poised.md) — kin; grace that holds steady under pressure

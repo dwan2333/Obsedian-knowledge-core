@@ -55,6 +55,7 @@ When you want to pin down what a person is *like* — sharp or servile, strong o
 - [sedentary](<../../Words/sedentary.md>) — given to much sitting; inactive
 - [penitent](<../../Words/penitent.md>) — humbled and sorry for a wrong
 - [idiosyncratic](<../../Words/idiosyncratic.md>) — individual and unusual in their own way
+- [poised](<../../Words/poised.md>) — calm, self-assured, and graceful in bearing
 
 ## Related categories
 - [Critiquing & Dismissing](<../Scenarios/Critiquing & Dismissing.md>)
