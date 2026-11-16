@@ -18,3 +18,4 @@
 ## Related words
 - *flop, failure, washout, lemon, letdown* — close in sense (not yet in the vault)
 - [efficacy](efficacy.md) — opposite; the power to work that a dud turns out to lack
+- [efficacious](efficacious.md) — opposite; producing the result a dud fails to

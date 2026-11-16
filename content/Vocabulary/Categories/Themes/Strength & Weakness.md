@@ -13,6 +13,7 @@ The spectrum from robust force to feeble inadequacy — of bodies, efforts, and 
 - [untenable](<../../Words/untenable.md>) — impossible to defend or keep up
 - [dilapidated](<../../Words/dilapidated.md>) — fallen into disrepair through age and neglect
 - [efficacy](<../../Words/efficacy.md>) — the power to produce the intended result
+- [efficacious](<../../Words/efficacious.md>) — producing the intended result; effective
 
 ## Related categories
 - [Obstacles & Danger](<../Themes/Obstacles & Danger.md>)

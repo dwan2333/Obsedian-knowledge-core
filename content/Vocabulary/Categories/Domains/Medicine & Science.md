@@ -13,6 +13,7 @@ The register of doctors, researchers, and health journalism — for naming condi
 - [perspiration](<../../Words/perspiration.md>) — sweat
 - [sedentary](<../../Words/sedentary.md>) — involving much sitting and little activity
 - [relapse](<../../Words/relapse.md>) — to fall ill again after improving
+- [efficacious](<../../Words/efficacious.md>) — effective, as of a treatment or remedy
 
 ## Related categories
 - [Law & Formal Documents](<../Domains/Law & Formal Documents.md>)
