@@ -105,6 +105,7 @@ The heightened register — words that lend writing dignity, colour, or nuance, 
 - [tumultuous](<../../Words/tumultuous.md>) — turbulent; loud and wildly excited
 - [yearn](<../../Words/yearn.md>) — to long for deeply and achingly
 - [reticence](<../../Words/reticence.md>) — reserve in speech; reluctance to reveal oneself
+- [salient](<../../Words/salient.md>) — most noticeable or important
 
 ## Related categories
 - [Everyday Speech & General Use](<../Domains/Everyday Speech & General Use.md>)

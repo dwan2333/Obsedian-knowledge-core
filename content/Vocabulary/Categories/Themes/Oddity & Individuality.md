@@ -13,3 +13,4 @@ The vocabulary of standing apart — from the plainly strange to the distinctive
 - [The Ordinary & the Dull](<../Themes/The Ordinary & the Dull.md>)
 - [Mystery & the Unknown](<../Themes/Mystery & the Unknown.md>)
 - [Whim, Inconstancy & Yielding](<../Themes/Whim, Inconstancy & Yielding.md>)
+- [Prominence & Obscurity](<../Themes/Prominence & Obscurity.md>)

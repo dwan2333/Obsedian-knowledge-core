@@ -13,9 +13,11 @@
 
 ## Categories
 - **Theme** — [Mystery & the Unknown](<../Categories/Themes/Mystery & the Unknown.md>)
+- **Theme** — [Prominence & Obscurity](<../Categories/Themes/Prominence & Obscurity.md>)
 - **Scenario** — [Critiquing & Dismissing](<../Categories/Scenarios/Critiquing & Dismissing.md>)
 - **Domain** — [Literary & Elevated Prose](<../Categories/Domains/Literary & Elevated Prose.md>)
 
 ## Related words
 - [enigmatic](enigmatic.md) — kin; both describe what resists easy understanding, though *enigmatic* hints at deliberate mystery
 - [ubiquitous](ubiquitous.md) — antonym; found everywhere, where obscure is little-known
+- [salient](salient.md) — antonym; standing out and important, where obscure is little-known
