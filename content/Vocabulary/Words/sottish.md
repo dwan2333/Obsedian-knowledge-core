@@ -19,3 +19,4 @@
 ## Related words
 - [depravity](depravity.md) — kin; the moral degradation drink can lead to
 - *drunken, besotted, dissolute; a sot* — close in sense (not yet in the vault)
+- [relapse](relapse.md) — kin; the slide back into drink after giving it up

@@ -16,6 +16,7 @@ Vocabulary for excess and dissipation: the dissolute life and the squandering of
 - [harlot](<../../Words/harlot.md>) — (archaic) a prostitute
 - [vileness](<../../Words/vileness.md>) — moral foulness; baseness
 - [nefarious](<../../Words/nefarious.md>) — wicked or criminal; of schemes and purposes
+- [relapse](<../../Words/relapse.md>) — to slip back into a vice or habit one had left
 
 ## Related categories
 - [Beauty, Pleasure & the Senses](<../Themes/Beauty, Pleasure & the Senses.md>)
