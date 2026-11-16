@@ -18,3 +18,4 @@
 ## Related words
 - [importunity](importunity.md) — kin; the formal noun for this persistent, pressing demand
 - *badger, harass, nag, hound* — close in sense (not yet in the vault)
+- [prod](prod.md) — kin; a single push, where pestering is prodding repeated

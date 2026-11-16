@@ -57,6 +57,7 @@ When you want to pin down what a person is *like* — sharp or servile, strong o
 - [idiosyncratic](<../../Words/idiosyncratic.md>) — individual and unusual in their own way
 - [poised](<../../Words/poised.md>) — calm, self-assured, and graceful in bearing
 - [blemish](<../../Words/blemish.md>) — a mark on the skin; a flaw on a record or reputation
+- [reticence](<../../Words/reticence.md>) — reserved; slow to reveal oneself
 
 ## Related categories
 - [Critiquing & Dismissing](<../Scenarios/Critiquing & Dismissing.md>)

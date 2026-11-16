@@ -22,3 +22,4 @@
 - [exhortation](exhortation.md) — kin; persuading with urgent words, where an inducement persuades with a reward
 - *incentive, sweetener, perk, lure, bribe* — close in sense (not yet in the vault)
 - [concession](concession.md) — kin; giving ground to win agreement, where an inducement adds a reward
+- [prod](prod.md) — kin; a push into action, where an inducement pulls with a reward

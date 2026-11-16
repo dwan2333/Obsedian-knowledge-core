@@ -20,3 +20,4 @@
 - [opine](opine.md) — kin; the open stating of a view
 - [implicit](implicit.md) — antonym; left unspoken rather than frankly said
 - *frank, forthright, open, outspoken* — close in sense (not yet in the vault)
+- [reticence](reticence.md) — antonym; the reserve that holds back what candour says openly

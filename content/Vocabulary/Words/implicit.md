@@ -19,3 +19,4 @@
 - [candid](candid.md) — antonym; openly and frankly stated
 - [opine](opine.md) — contrast; a view declared rather than left implied
 - *implied, tacit, unspoken; (sense 2) absolute, unquestioning* — close in sense (not yet in the vault)
+- [reticence](reticence.md) — kin; the holding back that leaves things implied

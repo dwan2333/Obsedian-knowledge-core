@@ -7,6 +7,7 @@ The vocabulary of why people do things: the carrots and sticks of economics, pol
 ## Words
 - [inducement](<../../Words/inducement.md>) — something that persuades someone to act; an incentive
 - [disincentive](<../../Words/disincentive.md>) — something that discourages an action
+- [prod](<../../Words/prod.md>) — to poke; to push someone into acting
 
 ## Related categories
 - [Money & Material Wealth](<../Themes/Money & Material Wealth.md>)

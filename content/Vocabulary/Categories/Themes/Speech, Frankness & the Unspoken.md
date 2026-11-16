@@ -12,6 +12,7 @@ The vocabulary of expression — from the opinion declared and the truth spoken 
 - [utterance](<../../Words/utterance.md>) — something spoken
 - [ascribe](<../../Words/ascribe.md>) — to attribute to a source
 - [parlance](<../../Words/parlance.md>) — a group's particular way of speaking
+- [reticence](<../../Words/reticence.md>) — reluctance to reveal one's thoughts or feelings
 
 ## Related categories
 - [Diplomacy & Negotiation](<../Themes/Diplomacy & Negotiation.md>)
